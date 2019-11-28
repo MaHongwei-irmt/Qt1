@@ -1,0 +1,5 @@
+main.cpp:32: "2019-11-20 13:02:33:514" 
+start
+fsc_mainwindow.cpp:60: "2019-11-20 13:02:33:923" ""
+fsc_mainwindow.cpp:61: "2019-11-20 13:02:33:926" ""
+C:\Qt\Qt5.9.8\5.9.8\mingw53_32\include/QtCore/qvector.h:423: ASSERT failure in QVector<T>::at: "index out of range", file C:\Qt\Qt5.9.8\5.9.8\mingw53_32\include/QtCore/qvector.h, line 423

@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Image/Close.png</file>
+        <file>Image/Open.png</file>
+        <file>Image/Plus.png</file>
+        <file>Image/Start.png</file>
+        <file>Image/Stop.png</file>
+        <file>Image/Substract.png</file>
+        <file>Image/ConnectClose.png</file>
+        <file>Image/ConnectOpen.png</file>
+        <file>Image/ClearWaves.png</file>
+        <file>Image/Reset.png</file>
+        <file>Image/Address.png</file>
+        <file>Image/Cancel.png</file>
+        <file>Image/OK.png</file>
+        <file>Image/Calibration.png</file>
+    </qresource>
+</RCC>

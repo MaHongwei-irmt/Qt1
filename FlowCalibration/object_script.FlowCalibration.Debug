@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\qcustomplot.o
+./debug\fsc_mainwindow.o
+./debug\dialog_checkdev.o
+./debug\dialog_sensoraddr.o
+./debug\qrc_image.o
+./debug\moc_qcustomplot.o
+./debug\moc_fsc_mainwindow.o
+./debug\moc_dialog_checkdev.o
+./debug\moc_dialog_sensoraddr.o
+);

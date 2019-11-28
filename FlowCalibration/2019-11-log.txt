@@ -1,0 +1,2202 @@
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:098" "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:103" "1" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:109" "2" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:113" "3" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:116" "4" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:119" "5" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:128" "6" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:144" "7" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:148" "8" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:152" "9" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:155" "10" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:158" "11" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:162" "12" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:165" "13" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:168" "14" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:01:171" "15" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:112" "info Socket: 2   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:121" "info Socket: 1   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:123" "info Socket: 4   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:126" "info Socket: 3   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:131" "info Socket: 5   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:134" "info Socket: 6   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:149" "info Socket: 7   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:152" "info Socket: 8   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:160" "info Socket: 10   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:163" "info Socket: 9   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:166" "info Socket: 11   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:172" "info Socket: 14   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:175" "info Socket: 15   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:178" "info Socket: 12   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:03:181" "info Socket: 13   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:005" "0" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:009" "1" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:013" "2" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:016" "3" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:025" "4" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:029" "5" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:032" "6" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:036" "7" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:039" "8" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:043" "9" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:047" "10" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:050" "11" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:054" "12" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:060" "13" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:064" "14" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:27:07:067" "15" socket con retry
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:018" "info Socket: 1   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:022" "info Socket: 3   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:025" "info Socket: 2   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:035" "info Socket: 5   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:039" "info Socket: 4   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:043" "info Socket: 8   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:046" "info Socket: 6   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:049" "info Socket: 7   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:053" "info Socket: 9   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:056" "info Socket: 10   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:059" "info Socket: 12   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:063" "info Socket: 13   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:067" "info Socket: 14   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:071" "info Socket: 11   Connection refused"
+Debug: File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:27:09:074" "info Socket: 15   Connection refused"
+File:(main.cpp) Line:(51) "2019-11-20 12:28:00:586" 
+start
+File:(fsc_mainwindow.cpp) Line:(114) "2019-11-20 12:28:01:002" "192.168.0.177"
+File:(fsc_mainwindow.cpp) Line:(115) "2019-11-20 12:28:01:006" "127.0.0.1"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:009" "XY_DD_1"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:012" "XY-DD-2"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:016" "XY-DD-3"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:019" "XY-DD-4"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:023" "XY-DD-5"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:026" "XY-DD-6"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:030" "XY-DD-7"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:033" "XY-DD-FGG-9877"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:036" "XY-DD-FGG-9877-tttttttttt"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:039" "XY-DD-FGG-9877-ttttttttttrr"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:043" "XY-DD-FGG-9877-ttttttttttuuu"
+File:(fsc_mainwindow.cpp) Line:(127) "2019-11-20 12:28:01:046" "XY-DD-FGG-9877-tttttttttt66666"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:083" "info Socket: 1   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:091" "info Socket: 2   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:094" "info Socket: 3   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:098" "info Socket: 8   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:101" "info Socket: 9   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:104" "info Socket: 5   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:107" "info Socket: 11   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:111" "info Socket: 10   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:114" "info Socket: 12   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:118" "info Socket: 7   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:121" "info Socket: 6   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:125" "info Socket: 4   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:128" "info Socket: 13   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:131" "info Socket: 15   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:03:135" "info Socket: 14   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:098" "0" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:102" "1" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:106" "2" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:109" "3" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:113" "4" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:117" "5" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:121" "6" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:125" "7" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:128" "8" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:144" "9" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:148" "10" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:152" "11" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:155" "12" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:158" "13" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:162" "14" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:07:174" "15" socket con retry
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:107" "info Socket: 1   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:120" "info Socket: 2   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:130" "info Socket: 3   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:139" "info Socket: 5   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:147" "info Socket: 7   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:159" "info Socket: 8   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:163" "info Socket: 6   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:166" "info Socket: 4   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:170" "info Socket: 10   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:173" "info Socket: 11   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:177" "info Socket: 12   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:180" "info Socket: 9   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:183" "info Socket: 13   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:187" "info Socket: 14   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:09:190" "info Socket: 15   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:006" "0" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:015" "1" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:018" "2" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:021" "3" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:025" "4" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:029" "5" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:050" "6" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:054" "7" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:058" "8" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:061" "9" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:065" "10" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:068" "11" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:072" "12" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:075" "13" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:079" "14" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:13:083" "15" socket con retry
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:023" "info Socket: 2   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:031" "info Socket: 3   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:034" "info Socket: 4   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:040" "info Socket: 1   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:049" "info Socket: 5   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:065" "info Socket: 6   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:068" "info Socket: 7   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:072" "info Socket: 8   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:075" "info Socket: 10   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:079" "info Socket: 9   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:082" "info Socket: 11   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:086" "info Socket: 12   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:089" "info Socket: 13   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:092" "info Socket: 14   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:15:096" "info Socket: 15   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:025" "0" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:034" "1" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:037" "2" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:041" "3" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:045" "4" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:048" "5" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:052" "6" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:055" "7" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:059" "8" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:063" "9" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:066" "10" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:070" "11" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:073" "12" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:077" "13" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:081" "14" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:19:091" "15" socket con retry
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:036" "info Socket: 1   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:045" "info Socket: 2   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:050" "info Socket: 4   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:066" "info Socket: 3   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:070" "info Socket: 5   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:081" "info Socket: 7   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:084" "info Socket: 8   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:088" "info Socket: 6   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:091" "info Socket: 9   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:094" "info Socket: 10   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:097" "info Socket: 11   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:101" "info Socket: 12   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:104" "info Socket: 13   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:107" "info Socket: 14   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:21:111" "info Socket: 15   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:038" "0" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:046" "1" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:049" "2" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:053" "3" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:057" "4" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:060" "5" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:064" "6" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:067" "7" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:071" "8" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:074" "9" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:082" "10" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:091" "11" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:097" "12" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:100" "13" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:104" "14" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:25:107" "15" socket con retry
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:050" "info Socket: 1   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:065" "info Socket: 3   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:069" "info Socket: 2   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:072" "info Socket: 4   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:075" "info Socket: 5   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:079" "info Socket: 6   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:097" "info Socket: 7   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:100" "info Socket: 8   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:104" "info Socket: 9   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:107" "info Socket: 10   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:110" "info Socket: 11   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:114" "info Socket: 12   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:117" "info Socket: 13   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:121" "info Socket: 14   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:27:124" "info Socket: 15   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:053" "0" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:061" "1" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:065" "2" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:068" "3" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:072" "4" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:075" "5" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:079" "6" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:091" "7" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:094" "8" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:097" "9" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:101" "10" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:112" "11" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:120" "12" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:124" "13" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:127" "14" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:31:131" "15" socket con retry
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:063" "info Socket: 1   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:068" "info Socket: 2   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:072" "info Socket: 3   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:075" "info Socket: 4   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:079" "info Socket: 5   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:082" "info Socket: 6   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:099" "info Socket: 8   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:112" "info Socket: 7   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:115" "info Socket: 9   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:119" "info Socket: 10   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:128" "info Socket: 11   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:132" "info Socket: 12   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:135" "info Socket: 14   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:138" "info Socket: 13   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(237) "2019-11-20 12:28:33:141" "info Socket: 15   Connection refused"
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:019" "0" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:024" "1" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:032" "2" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:037" "3" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:041" "4" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:050" "5" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:061" "6" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:065" "7" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:068" "8" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:072" "9" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:075" "10" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:078" "11" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:082" "12" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:086" "13" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:089" "14" socket con retry
+File:(fsc_mainwindow.cpp) Line:(205) "2019-11-20 12:28:37:093" "15" socket con retry
+main.cpp:51: "2019-11-20 12:29:52:526" 
+start
+fsc_mainwindow.cpp:114: "2019-11-20 12:29:52:988" "192.168.0.177"
+fsc_mainwindow.cpp:115: "2019-11-20 12:29:52:991" "127.0.0.1"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:52:994" "XY_DD_1"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:52:998" "XY-DD-2"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:53:001" "XY-DD-3"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:53:004" "XY-DD-4"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:53:007" "XY-DD-5"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:53:010" "XY-DD-6"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:53:014" "XY-DD-7"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:53:017" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:53:020" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:53:023" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:53:026" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:127: "2019-11-20 12:29:53:029" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:085" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:091" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:095" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:098" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:113" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:117" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:120" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:124" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:144" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:148" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:152" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:156" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:162" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:168" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:29:55:172" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:100" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:104" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:108" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:112" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:115" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:119" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:123" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:127" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:131" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:134" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:138" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:142" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:159" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:163" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:167" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:29:59:171" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:111" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:117" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:121" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:125" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:129" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:132" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:136" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:144" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:148" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:152" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:175" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:179" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:182" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:186" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:01:189" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:005" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:009" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:013" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:016" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:020" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:024" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:027" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:031" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:035" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:039" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:050" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:065" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:069" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:073" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:076" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:05:079" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:014" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:018" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:022" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:031" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:035" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:038" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:041" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:045" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:048" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:053" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:069" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:081" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:085" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:088" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:07:091" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:020" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:024" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:028" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:032" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:037" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:041" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:045" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:050" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:054" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:065" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:069" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:073" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:077" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:081" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:084" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:11:088" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:028" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:036" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:040" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:043" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:046" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:049" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:053" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:068" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:072" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:075" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:078" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:082" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:086" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:089" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:13:092" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:037" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:046" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:050" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:053" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:057" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:061" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:065" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:069" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:078" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:082" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:085" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:089" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:092" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:096" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:100" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:17:103" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:050" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:061" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:066" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:070" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:081" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:084" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:088" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:092" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:095" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:099" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:102" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:106" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:109" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:113" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:19:117" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:054" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:062" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:066" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:069" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:073" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:077" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:080" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:084" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:087" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:091" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:094" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:098" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:101" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:105" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:108" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:23:112" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:066" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:083" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:091" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:094" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:113" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:116" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:120" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:122" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:125" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:128" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:132" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:143" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:146" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:149" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:25:153" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:069" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:077" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:081" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:085" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:088" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:092" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:095" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:099" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:102" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:106" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:109" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:113" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:128" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:132" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:136" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:29:140" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:082" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:091" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:112" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:115" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:118" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:122" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:125" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:129" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:132" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:135" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:139" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:142" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:150" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:153" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:31:156" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:087" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:096" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:099" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:103" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:106" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:110" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:113" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:117" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:128" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:132" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:135" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:139" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:142" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:146" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:150" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:35:153" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:099" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:107" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:110" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:114" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:117" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:121" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:124" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:134" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:137" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:143" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:146" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:149" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:152" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:156" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:37:159" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:099" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:114" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:128" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:134" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:138" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:142" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:146" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:150" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:154" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:160" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:171" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:175" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:179" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:183" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:190" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:41:194" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:118" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:134" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:138" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:143" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:146" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:149" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:153" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:159" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:162" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:173" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:179" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:182" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:186" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:193" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:43:206" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:005" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:009" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:013" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:016" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:020" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:023" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:034" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:038" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:042" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:045" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:049" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:052" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:056" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:066" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:081" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:47:086" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:013" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:019" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:031" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:035" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:038" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:041" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:045" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:048" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:051" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:055" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:060" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:063" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:073" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:086" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:49:089" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:028" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:037" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:050" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:060" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:064" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:067" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:071" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:074" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:078" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:081" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:085" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:088" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:092" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:111" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:115" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:53:118" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:040" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:053" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:062" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:069" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:072" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:075" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:078" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:081" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:090" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:096" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:112" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:120" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:128" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:143" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:30:55:146" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:035" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:039" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:043" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:047" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:050" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:054" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:058" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:066" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:070" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:074" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:077" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:081" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:085" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:097" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:111" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:30:59:115" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:044" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:050" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:053" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:056" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:060" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:063" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:067" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:073" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:076" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:081" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:084" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:088" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:102" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:113" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:01:117" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:053" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:061" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:065" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:068" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:072" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:075" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:079" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:084" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:097" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:101" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:104" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:108" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:111" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:115" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:118" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:05:122" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:063" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:082" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:085" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:089" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:092" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:098" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:101" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:104" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:108" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:112" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:115" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:120" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:123" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:128" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:07:131" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:070" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:079" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:097" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:101" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:104" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:108" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:111" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:115" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:119" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:123" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:128" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:140" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:144" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:147" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:151" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:11:155" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:081" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:101" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:112" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:115" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:119" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:122" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:126" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:130" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:133" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:136" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:143" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:148" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:151" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:155" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:13:158" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:083" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:087" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:092" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:096" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:106" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:110" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:114" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:118" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:122" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:126" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:129" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:133" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:137" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:141" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:144" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:17:148" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:091" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:100" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:103" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:113" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:117" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:120" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:123" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:128" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:131" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:135" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:138" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:141" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:145" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:151" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:19:154" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:098" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:107" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:111" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:114" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:118" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:122" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:125" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:129" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:140" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:144" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:148" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:159" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:163" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:170" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:174" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:23:177" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:116" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:132" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:145" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:156" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:162" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:165" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:169" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:172" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:176" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:179" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:182" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:185" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:188" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:192" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:25:195" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:007" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:014" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:018" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:022" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:025" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:029" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:032" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:036" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:040" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:042" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:046" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:050" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:053" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:057" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:060" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:29:064" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:017" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:026" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:029" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:032" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:036" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:039" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:042" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:050" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:053" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:061" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:065" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:081" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:084" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:091" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:31:097" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:025" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:030" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:033" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:049" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:053" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:057" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:061" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:065" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:068" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:072" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:075" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:079" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:083" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:086" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:090" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:35:093" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:033" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:039" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:052" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:056" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:060" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:066" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:081" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:091" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:094" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:097" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:100" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:104" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:112" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:121" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:37:128" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:036" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:045" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:048" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:052" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:056" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:059" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:062" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:066" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:080" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:084" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:087" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:091" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:094" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:098" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:101" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:41:105" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:049" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:054" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:058" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:066" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:069" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:072" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:076" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:083" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:087" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:091" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:094" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:097" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:101" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:113" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:43:116" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:053" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:066" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:070" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:074" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:078" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:081" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:085" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:088" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:092" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:095" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:099" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:102" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:106" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:109" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:113" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:47:116" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:072" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:082" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:085" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:088" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:092" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:113" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:117" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:120" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:124" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:127" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:130" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:133" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:136" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:140" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:49:143" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:070" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:079" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:085" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:089" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:110" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:114" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:118" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:122" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:126" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:130" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:134" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:141" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:159" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:163" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:167" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:53:171" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:085" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:090" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:094" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:115" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:121" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:124" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:127" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:132" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:144" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:148" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:151" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:164" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:168" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:171" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:31:55:177" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:083" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:091" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:095" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:098" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:102" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:106" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:109" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:128" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:133" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:136" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:140" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:144" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:147" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:151" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:154" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:31:59:158" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:093" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:114" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:117" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:121" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:124" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:127" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:133" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:137" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:141" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:145" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:153" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:158" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:162" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:165" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:01:169" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:100" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:107" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:111" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:116" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:120" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:124" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:127" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:131" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:135" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:138" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:142" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:145" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:149" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:153" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:159" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:05:163" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:112" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:121" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:124" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:129" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:144" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:151" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:154" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:158" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:162" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:166" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:169" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:173" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:180" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:190" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:07:194" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:004" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:008" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:012" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:015" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:019" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:023" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:026" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:030" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:034" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:050" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:065" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:069" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:073" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:076" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:080" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:11:090" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:014" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:021" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:025" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:028" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:031" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:035" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:039" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:042" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:052" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:069" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:082" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:086" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:090" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:093" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:32:13:096" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:023" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:028" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:032" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:050" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:054" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:057" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:061" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:064" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:068" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:072" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:075" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:078" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:082" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:086" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:097" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:32:17:101" "15" socket con retry
+main.cpp:32: "2019-11-20 12:35:54:469" 
+start
+fsc_mainwindow.cpp:114: "2019-11-20 12:35:54:875" "192.168.0.177"
+fsc_mainwindow.cpp:115: "2019-11-20 12:35:54:879" "127.0.0.1"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:882" "XY_DD_1"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:885" "XY-DD-2"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:889" "XY-DD-3"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:892" "XY-DD-4"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:896" "XY-DD-5"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:900" "XY-DD-6"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:903" "XY-DD-7"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:907" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:910" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:914" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:917" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:127: "2019-11-20 12:35:54:920" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:56:958" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:56:976" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:56:990" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:56:999" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:57:005" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:57:010" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:57:015" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:57:018" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:57:022" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:57:035" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:57:041" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:57:050" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:57:054" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:57:057" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:35:57:061" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:097" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:101" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:105" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:109" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:113" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:117" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:120" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:124" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:128" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:131" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:135" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:141" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:145" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:149" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:153" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:00:157" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:105" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:109" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:113" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:117" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:121" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:125" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:129" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:141" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:145" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:159" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:171" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:175" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:179" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:183" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:02:186" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:005" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:010" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:014" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:019" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:023" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:028" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:032" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:037" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:042" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:047" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:051" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:055" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:059" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:063" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:067" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:06:070" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:012" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:016" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:020" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:026" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:031" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:034" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:050" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:053" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:057" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:060" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:063" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:066" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:080" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:083" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:08:086" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:022" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:026" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:029" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:033" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:037" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:041" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:044" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:048" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:051" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:055" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:059" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:065" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:070" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:081" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:085" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:12:089" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:029" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:036" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:040" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:043" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:046" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:050" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:053" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:056" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:060" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:065" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:070" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:074" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:085" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:089" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:14:092" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:040" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:047" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:051" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:055" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:059" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:063" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:066" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:070" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:074" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:078" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:081" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:085" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:089" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:093" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:096" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:18:100" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:072" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:082" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:086" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:089" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:093" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:096" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:100" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:104" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:107" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:111" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:115" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:119" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:123" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:128" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:20:131" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:051" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:054" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:058" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:062" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:065" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:068" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:072" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:076" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:081" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:096" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:100" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:104" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:107" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:111" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:114" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:24:118" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:056" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:064" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:075" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:082" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:086" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:089" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:092" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:096" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:100" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:111" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:128" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:131" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:135" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:138" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:26:141" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:066" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:072" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:078" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:084" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:088" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:093" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:097" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:101" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:104" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:108" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:111" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:115" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:119" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:123" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:128" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:30:132" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:077" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:082" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:097" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:111" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:114" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:118" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:121" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:128" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:131" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:135" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:138" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:141" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:144" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:148" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:32:151" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:082" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:088" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:092" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:095" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:099" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:102" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:106" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:109" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:113" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:128" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:144" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:159" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:163" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:167" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:170" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:36:191" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:094" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:111" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:114" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:118" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:121" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:124" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:128" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:131" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:134" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:149" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:164" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:168" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:171" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:176" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:38:196" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:099" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:106" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:109" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:113" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:116" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:120" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:123" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:127" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:131" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:134" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:138" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:144" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:148" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:151" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:155" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:42:159" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:110" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:118" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:121" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:125" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:129" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:132" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:136" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:139" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:144" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:147" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:151" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:154" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:157" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:161" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:44:171" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:004" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:008" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:011" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:015" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:018" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:022" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:025" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:029" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:032" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:036" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:040" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:044" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:047" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:051" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:065" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:48:069" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:012" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:019" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:023" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:034" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:050" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:066" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:069" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:073" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:076" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:081" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:084" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:087" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:097" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:111" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:50:114" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:020" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:024" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:027" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:031" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:034" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:038" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:050" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:054" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:058" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:061" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:065" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:069" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:072" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:076" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:080" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:36:54:083" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:027" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:031" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:036" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:040" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:043" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:054" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:067" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:070" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:074" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:077" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:080" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:097" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:100" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:104" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:36:56:107" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:036" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:040" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:045" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:050" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:054" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:058" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:065" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:069" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:072" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:076" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:080" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:083" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:087" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:090" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:094" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:00:098" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:045" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:052" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:056" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:059" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:066" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:081" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:084" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:088" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:091" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:094" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:099" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:111" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:114" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:118" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:02:121" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:053" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:059" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:063" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:067" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:071" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:075" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:079" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:082" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:086" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:090" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:097" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:101" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:105" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:108" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:112" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:06:115" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:062" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:068" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:071" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:075" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:081" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:097" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:101" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:104" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:108" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:111" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:115" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:118" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:122" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:125" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:08:128" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:066" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:071" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:076" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:080" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:085" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:090" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:097" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:101" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:106" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:110" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:114" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:118" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:122" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:126" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:131" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:12:136" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:072" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:078" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:082" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:097" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:101" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:104" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:108" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:112" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:115" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:119" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:122" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:126" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:130" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:133" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:14:139" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:082" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:090" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:094" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:097" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:101" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:113" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:117" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:121" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:125" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:129" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:133" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:137" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:140" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:144" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:147" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:18:151" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:094" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:101" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:107" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:110" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:119" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:123" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:126" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:130" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:133" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:138" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:143" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:159" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:162" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:166" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:20:169" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:101" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:110" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:114" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:117" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:121" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:124" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:128" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:132" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:136" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:139" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:143" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:147" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:150" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:154" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:157" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:24:162" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:115" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:119" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:122" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:126" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:130" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:134" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:138" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:143" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:159" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:163" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:166" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:170" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:174" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:177" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:26:180" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:005" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:015" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:034" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:038" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:041" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:045" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:049" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:052" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:056" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:060" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:066" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:070" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:073" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:077" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:080" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:30:084" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:021" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:040" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:050" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:054" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:066" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:069" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:072" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:076" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:079" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:082" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:086" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:089" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:092" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:095" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:32:098" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:023" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:031" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:035" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:039" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:042" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:046" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:049" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:053" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:056" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:066" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:070" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:073" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:077" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:081" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:084" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:36:088" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:034" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:039" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:042" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:048" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:051" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:054" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:058" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:065" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:068" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:072" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:080" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:083" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:086" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:090" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:38:093" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:036" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:044" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:048" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:051" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:055" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:066" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:071" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:075" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:078" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:082" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:085" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:089" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:092" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:096" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:099" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:42:103" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:048" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:051" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:054" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:058" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:069" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:075" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:078" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:081" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:096" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:100" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:103" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:106" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:110" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:113" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:44:116" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:052" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:066" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:078" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:085" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:090" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:095" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:099" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:103" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:106" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:110" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:113" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:117" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:121" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:125" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:128" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:48:132" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:070" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:082" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:092" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:096" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:099" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:102" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:106" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:109" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:113" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:118" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:129" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:133" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:136" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:139" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:50:143" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:068" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:072" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:076" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:080" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:084" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:087" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:091" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:095" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:099" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:103" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:113" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:116" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:120" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:123" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:127" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:37:54:130" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:077" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:080" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:085" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:088" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:092" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:095" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:100" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:105" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:109" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:114" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:118" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:122" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:128" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:132" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:37:56:141" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:084" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:089" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:093" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:097" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:100" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:103" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:107" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:110" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:113" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:117" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:120" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:124" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:128" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:131" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:135" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:00:139" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:092" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:100" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:104" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:108" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:111" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:114" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:118" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:128" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:131" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:135" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:139" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:142" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:145" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:148" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:02:152" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:102" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:110" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:114" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:118" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:122" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:125" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:129" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:133" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:136" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:140" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:144" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:159" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:163" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:167" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:170" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:06:174" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:117" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:128" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:132" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:141" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:144" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:148" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:151" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:154" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:157" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:161" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:164" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:167" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:171" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:174" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:08:178" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:006" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:010" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:013" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:019" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:035" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:039" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:043" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:047" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:050" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:054" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:058" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:062" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:065" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:069" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:073" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:12:077" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:014" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:022" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:025" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:037" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:050" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:053" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:057" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:061" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:065" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:068" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:072" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:081" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:084" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:088" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:14:092" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:025" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:029" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:033" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:037" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:041" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:044" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:048" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:052" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:056" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:059" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:063" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:067" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:071" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:075" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:079" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:18:083" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:033" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:037" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:041" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:044" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:048" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:051" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:055" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:059" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:063" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:068" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:081" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:085" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:088" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:092" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:20:095" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:039" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:048" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:052" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:055" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:059" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:062" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:066" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:070" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:081" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:085" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:089" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:092" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:096" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:099" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:103" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:24:107" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:054" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:059" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:067" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:071" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:075" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:079" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:083" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:097" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:101" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:111" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:115" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:120" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:125" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:128" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:26:132" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:050" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:055" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:060" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:065" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:070" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:081" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:096" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:100" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:104" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:108" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:111" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:115" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:119" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:128" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:132" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:30:136" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:058" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:063" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:068" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:074" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:084" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:100" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:109" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:113" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:117" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:120" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:124" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:128" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:132" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:136" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:32:140" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:066" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:070" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:074" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:078" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:083" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:087" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:091" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:097" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:101" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:105" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:128" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:132" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:136" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:140" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:144" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:36:154" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:073" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:080" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:084" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:087" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:097" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:101" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:104" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:107" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:111" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:130" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:141" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:144" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:148" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:160" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:38:163" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:082" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:086" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:090" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:094" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:097" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:101" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:105" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:109" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:113" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:128" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:132" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:136" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:141" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:145" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:149" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:42:153" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:092" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:098" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:103" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:111" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:116" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:121" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:128" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:131" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:135" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:141" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:144" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:148" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:152" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:159" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:44:163" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:098" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:102" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:107" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:112" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:116" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:120" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:128" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:132" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:136" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:143" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:147" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:151" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:155" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:158" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:163" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:48:175" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:113" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:117" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:128" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:141" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:145" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:148" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:152" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:156" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:161" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:167" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:171" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:177" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:181" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:185" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:50:189" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:004" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:009" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:013" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:017" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:021" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:025" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:029" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:033" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:036" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:041" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:045" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:049" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:053" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:057" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:061" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:38:54:065" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:011" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:015" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:019" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:036" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:039" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:050" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:053" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:057" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:060" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:064" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:068" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:071" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:081" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:085" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:38:56:088" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:022" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:028" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:034" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:039" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:044" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:049" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:059" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:063" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:068" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:072" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:076" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:080" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:084" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:090" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:095" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:00:100" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:033" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:037" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:041" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:045" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:051" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:065" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:081" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:085" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:088" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:092" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:095" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:099" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:102" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:105" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:02:114" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:036" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:040" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:044" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:048" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:052" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:065" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:069" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:073" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:077" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:081" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:085" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:089" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:093" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:097" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:101" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:06:105" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:045" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:050" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:055" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:065" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:070" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:073" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:077" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:080" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:085" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:097" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:101" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:105" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:108" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:112" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:08:116" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:054" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:068" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:076" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:081" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:085" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:096" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:100" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:103" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:107" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:111" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:114" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:118" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:121" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:125" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:128" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:12:136" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:072" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:080" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:085" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:089" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:100" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:111" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:115" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:118" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:121" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:125" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:128" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:131" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:135" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:138" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:14:141" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:066" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:070" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:074" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:081" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:097" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:101" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:105" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:109" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:112" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:116" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:120" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:128" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:144" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:148" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:151" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:18:155" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:073" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:082" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:085" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:101" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:105" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:111" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:114" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:128" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:132" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:141" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:144" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:150" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:160" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:171" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:20:174" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:088" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:096" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:100" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:104" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:107" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:111" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:128" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:132" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:136" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:139" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:143" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:147" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:151" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:154" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:158" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:24:161" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:101" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:105" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:108" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:112" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:116" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:132" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:136" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:140" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:144" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:148" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:151" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:155" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:159" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:163" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:26:167" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:100" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:106" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:110" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:114" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:118" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:121" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:128" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:132" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:144" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:148" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:159" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:163" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:175" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:179" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:183" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:30:186" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:112" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:119" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:122" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:126" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:130" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:141" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:144" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:148" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:151" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:163" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:177" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:181" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:184" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:187" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:32:191" "info Socket: 15   Connection refused"
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:004" "0" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:018" "1" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:026" "2" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:032" "3" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:037" "4" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:041" "5" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:046" "6" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:050" "7" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:054" "8" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:057" "9" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:061" "10" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:065" "11" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:070" "12" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:081" "13" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:085" "14" socket con retry
+fsc_mainwindow.cpp:205: "2019-11-20 12:39:36:089" "15" socket con retry
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:019" "info Socket: 1   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:030" "info Socket: 2   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:038" "info Socket: 3   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:042" "info Socket: 4   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:045" "info Socket: 5   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:049" "info Socket: 6   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:058" "info Socket: 8   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:064" "info Socket: 9   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:068" "info Socket: 10   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:071" "info Socket: 7   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:074" "info Socket: 11   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:077" "info Socket: 12   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:088" "info Socket: 13   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:091" "info Socket: 14   Connection refused"
+fsc_mainwindow.cpp:237: "2019-11-20 12:39:38:095" "info Socket: 15   Connection refused"

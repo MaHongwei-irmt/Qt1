@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\qcustomplot.o
+./release\fsc_mainwindow.o
+./release\dialog_checkdev.o
+./release\dialog_sensoraddr.o
+./release\qrc_image.o
+./release\moc_qcustomplot.o
+./release\moc_fsc_mainwindow.o
+./release\moc_dialog_checkdev.o
+./release\moc_dialog_sensoraddr.o
+);
