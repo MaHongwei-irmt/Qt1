@@ -41,6 +41,12 @@ class FSC_MainWindow;
 
 #define SOCKET_TCP_RETRY_CON_TIMEOUT    5
 
+#define DATA_WRITE_OK   1
+#define DATA_READ_OK    2
+#define DATA_TIMEOUT      3
+#define DATA_READ_TIMEOUT      3
+
+
 #define PLOT_VALUE_NUMBER   60 * 2 * 2  // 2min / 500ms
 
 class FSC_MainWindow : public QMainWindow
@@ -67,9 +73,6 @@ private slots:
 
     void mainLoop();
 
-    void on_lineEdit_setFlowRate_editingFinished();
-
-    void on_lineEdit_setPWM_editingFinished();
 
     void on_lineEdit_setPWM_textChanged(const QString &arg1);
 
@@ -82,6 +85,42 @@ private slots:
     void on_tbnCalTermination_clicked();
 
     void on_tbnPoltClear_clicked();
+
+    void on_pushButton_19_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_3_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_6_clicked();
+
+    void on_pushButton_7_clicked();
+
+    void on_pushButton_8_clicked();
+
+    void on_pushButton_9_clicked();
+
+    void on_pushButton_14_clicked();
+
+    void on_pushButton_10_clicked();
+
+    void on_pushButton_11_clicked();
+
+    void on_pushButton_12_clicked();
+
+    void on_pushButton_15_clicked();
+
+    void on_pushButton_13_clicked();
+
+    void on_pushButton_16_clicked();
+
+    void on_pushButton_17_clicked();
+
+    void on_pushButton_18_clicked();
 
 private:
     Ui::FSC_MainWindow *ui;
@@ -107,14 +146,16 @@ private:
     void showFresh(void);
 
     void plotAddDataAndFresh(void);
-    void plotZero(void);
     void plotFresh(void);
 
     bool        sktConed[SOCKET_NUMBER];
     QByteArray  sktBufSend[SOCKET_NUMBER];
     QByteArray  sktBufRev[SOCKET_NUMBER];
 
+    int         sktDataState[SOCKET_NUMBER];
+    uint        sktDataWriteTime[SOCKET_NUMBER];
 
+    bool        debugSkt[SOCKET_NUMBER];
 
     QSignalMapper * sktConMapper;
     QSignalMapper * sktDisconMapper;
@@ -140,26 +181,22 @@ private:
 
     bool    revdPLC;
 
-//    QVector<int> plotScaleSumTimeX[PLOT_VALUE_NUMBER];
-//    QVector<double> plotScaleSumValueY[PLOT_VALUE_NUMBER];
-
-//    QVector<int> plotScaleFlowTimeX[PLOT_VALUE_NUMBER];
-//    QVector<double> plotScaleFlowValueY[PLOT_VALUE_NUMBER];
-
-//    QVector<int> plotSTDFMSumTimeX[PLOT_VALUE_NUMBER];
-//    QVector<double> plotSTDFMSumValuey[PLOT_VALUE_NUMBER];
-
-//    QVector<int> plotSTDFMFlowTimeX[PLOT_VALUE_NUMBER];
-//    QVector<double> plotSTDFMFlowValueY[PLOT_VALUE_NUMBER];
-
-//    QVector<int> plotFMSumTimeX[PLOT_VALUE_NUMBER];
-//    QVector<double> plotFMSumValueY[PLOT_VALUE_NUMBER];
-
-//    QVector<int> plotFMFlowTimeX[PLOT_VALUE_NUMBER];
-//    QVector<double> plotFMFlowValueY[PLOT_VALUE_NUMBER];
-
     QVector<double> plotScaleSumTimeX;
     QVector<double> plotScaleSumValueY;
+
+    QVector<double> plotSTDFMSumTimeX;
+    QVector<double> plotSTDFMSumValueY;
+
+    QVector<double> plotSTDFMFlowTimeX;
+    QVector<double> plotSTDFMFlowValueY;
+
+    QVector<double> plotFMSumTimeX;
+    QVector<double> plotFMSumValueY;
+
+    QVector<double> plotFMFlowTimeX;
+    QVector<double> plotFMFlowValueY;
+
+
 
     int     plotLoop;
     bool    calOn;

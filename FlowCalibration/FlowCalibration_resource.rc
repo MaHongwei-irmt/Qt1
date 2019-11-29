@@ -1,6 +1,6 @@
 #include <windows.h>
 
-IDI_ICON1	ICON	DISCARDABLE	"D:\\jyWork\\QtProjects\\FlowCalibration\\FCImage.ico"
+IDI_ICON1	ICON	DISCARDABLE	"D:\\jyWork\\QtPro\\FlowCalibration\\FCImage.ico"
 
 VS_VERSION_INFO VERSIONINFO
 	FILEVERSION 0,0,0,0

@@ -317,10 +317,7 @@ void FSC_MainWindow::DataInit(void)
         showFMFlow[i] = static_cast<double>(nanf(""));
 
         stationFM[i] = FM_STATION_ADDRESS;
-
-        sktBufRev[i].resize(0);
-        sktBufSend[i].resize(0);
-    }
+     }
     stationSTDFM = FM_STATION_ADDRESS;
 
     ui->radioButton_setFlowRate->setChecked(true);
@@ -343,6 +340,16 @@ void FSC_MainWindow::DataInit(void)
 
     plotLoop = 0;
     calOn = false;
+
+    for (int i = 0; i < SOCKET_NUMBER; i++)
+    {
+        sktBufRev[i].resize(0);
+        sktBufSend[i].resize(0);
+
+        sktDataState[i] = DATA_READ_OK;
+
+        debugSkt[i] = false;
+    }
 
 }
 
@@ -404,26 +411,80 @@ void FSC_MainWindow::mainLoop()
             FSCLOG << QString::number(i) << " socket con retry";
         }
 
+        if (sktDataState[i] != DATA_WRITE_OK && (sktDataWriteTime[i] + DATA_READ_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+        {
+            sktDataState[i] = DATA_TIMEOUT;
+            //sktDataWriteTime[i] = QDateTime::currentDateTime().toTime_t();
+        }
+
     }
 
 
     if (j % 5 == 0)
     {
+        if (sktDataState[SOCKET_SCALE_INDEX] == DATA_READ_OK || \
+                (sktDataWriteTime[SOCKET_SCALE_INDEX] + DATA_READ_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+        {
+            reqScaleShow();
 
+            sktDataState[SOCKET_SCALE_INDEX] = DATA_WRITE_OK;
+            sktDataWriteTime[SOCKET_SCALE_INDEX] = QDateTime::currentDateTime().toTime_t();
+        }
+    }
+
+    if (j % 5 == 1)
+    {
         reqSetPLC(showSetFlowRate, showSetPWM, 1, 2);
+    }
 
+    if (j % 5 == 2)
+    {
         reqFMData(SOCKET_FLOWM1_INDEX);
-        //reqFMData(SOCKET_STD_FLOWM_INDEX);
+        reqFMData(SOCKET_FLOWM2_INDEX);
+        reqFMData(SOCKET_FLOWM3_INDEX);
+        reqFMData(SOCKET_FLOWM4_INDEX);
+        reqFMData(SOCKET_FLOWM5_INDEX);
+        reqFMData(SOCKET_FLOWM6_INDEX);
+    }
 
-        reqScaleShow();
+    if (j % 5 == 4)
+    {
+//        for (int i = SOCKET_FLOWM1_INDEX; i <= SOCKET_NUMBER; i++)
+//        {
+//            reqFMData(i);
+//        }
 
+
+        reqFMData(SOCKET_FLOWM7_INDEX);
+        reqFMData(SOCKET_FLOWM8_INDEX);
+        //reqFMData(SOCKET_FLOWM9_INDEX);
+        //reqFMData(SOCKET_FLOWM10_INDEX);
+        //reqFMData(SOCKET_FLOWM11_INDEX);
+        reqFMData(SOCKET_FLOWM12_INDEX);
+
+    }
+
+    if (j % 5 == 0)
+    {
         plotAddDataAndFresh();
-
-    }//test
+    }
 
 
 
     //flushSendBuf();
+
+
+    if (showSetFlowRate >= 123455 && showSetFlowRate <= 123457 &&  showSetPWM == 65)
+    {
+        setMinimumSize(0, 0);
+        setMaximumSize(QSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX));
+
+        showSetFlowRate = 1000;
+        showSetPWM = 80;
+
+        ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
+        ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
+    }
 
     showFresh();
 
@@ -445,16 +506,32 @@ void FSC_MainWindow::plotAddDataAndFresh(void)
 
         //plotScaleSumTimeX.append( NewMS );
 
-        plotScaleSumTimeX.append( plotLoop * 0.5 );
+        //plotScaleSumTimeX.append( plotLoop * 0.5 );
         //plotScaleSumValueY.append(showFMSum[0]);
 
 
-        plotScaleSumValueY.append(showScaleSum);
+        //plotScaleSumValueY.append(showScaleSum);
 
 
         //FSCLOG << NewMS  << "   "  << showFMSum[0];
 
         //FSCLOG << plotLoop * 0.5  << "   "  << showFMSum[0];
+
+
+
+        plotScaleSumTimeX.append( plotLoop * 0.5 );
+        plotSTDFMSumTimeX.append( plotLoop * 0.5 );
+        plotSTDFMFlowTimeX.append( plotLoop * 0.5 );
+        plotFMSumTimeX.append( plotLoop * 0.5 );
+        plotFMFlowTimeX.append( plotLoop * 0.5 );
+
+        plotScaleSumValueY.append(showScaleSum);
+        plotSTDFMSumValueY.append(showSTDFMSum);
+        plotSTDFMFlowValueY.append(showSTDFMFlow);
+        plotFMSumValueY.append(showFMSum[0]);
+        plotFMFlowValueY.append(showFMFlow[0]);
+
+
 
         FSCLOG << plotLoop * 0.5  << "   "  << showScaleSum;
 
@@ -476,13 +553,6 @@ void FSC_MainWindow::plotAddDataAndFresh(void)
         plotScaleSumValueY.clear();
     }
 
-}
-
-void FSC_MainWindow::plotZero(void)
-{
-    calOn = false;
-
-    plotScaleSumTimeX.clear();
 }
 
 void FSC_MainWindow::PlotReplay(const QString &arg1) {
@@ -677,9 +747,10 @@ void FSC_MainWindow::plotFresh(void)
 
     ui->MyCustomPlot->graph(0)->setData(plotScaleSumTimeX, plotScaleSumValueY);
 
-    ui->MyCustomPlot->graph(1)->setData(x, y);
-    ui->MyCustomPlot->graph(2)->setData(x, y);
-    ui->MyCustomPlot->graph(3)->setData(x, y);
+    ui->MyCustomPlot->graph(1)->setData(plotSTDFMSumTimeX, plotSTDFMSumValueY);
+    ui->MyCustomPlot->graph(2)->setData(plotSTDFMFlowTimeX, plotSTDFMFlowValueY);
+    ui->MyCustomPlot->graph(3)->setData(plotFMSumTimeX, plotFMSumValueY);
+    ui->MyCustomPlot->graph(4)->setData(plotFMFlowTimeX, plotFMFlowValueY);
 
 
  //   ui->MyCustomPlot->xAxis->setLabel(tr("采样点时序"));
@@ -928,11 +999,17 @@ void FSC_MainWindow::flushSendBuf(void)
         if (sktConed[i] && sktBufSend[i].size() > 0)
         {
             fsc_global::sktTcp[i]->write(sktBufSend[i]);
+            fsc_global::sktTcp[i]->flush();
+            fsc_global::sktTcp[i]->waitForBytesWritten();
 
-//            FSCLOG << "Socket write hex: skt-" + QString::number(i) + " " + QString::number(sktBufSend[i].size()) + " " + ByteArrayToHexString(sktBufSend[i]);
+            if (debugSkt[i])
+            {
+                FSCLOG << "Socket write hex: skt-" + QString::number(i) + " " + QString::number(sktBufSend[i].size()) + " " + ByteArrayToHexString(sktBufSend[i]);
 
-            //if (i == 0) FSCLOG << "Socket write hex: skt-" + QString::number(i) + " " + QString::number(sktBufSend[i].size()) + " " + ByteArrayToHexString(sktBufSend[i]);
-
+                ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" +\
+                                              QDateTime::currentDateTime().toString("hh:mm:ss:zzz->")+ ByteArrayToHexString(sktBufSend[i]));
+                ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+            }
 
             sktBufSend[i].resize(0);
         }
@@ -1004,7 +1081,6 @@ void FSC_MainWindow::showFresh(void)
     ui->lineEdit_FM_11_flow->setText(QString::number(showFMFlow[10], 'f', 3));
     ui->lineEdit_FM_12_flow->setText(QString::number(showFMFlow[11], 'f', 3));
 
-
     ui->lineEdit_setFlowRate->setEnabled(sktConed[SOCKET_PLC_INDEX]);
     ui->lineEdit_setPWM->setEnabled(sktConed[SOCKET_PLC_INDEX]);
     ui->radioButton_setFlowRate->setEnabled(sktConed[SOCKET_PLC_INDEX]);
@@ -1045,10 +1121,15 @@ void FSC_MainWindow::showFresh(void)
 void FSC_MainWindow::skt_read(int i)
 {
     sktBufRev[i].append(fsc_global::sktTcp[i]->readAll());
-    //sktBufRev[i] = fsc_global::sktTcp[i]->readAll();
 
-    //FSCLOG << "Socket read hex: " + QString::number(i) + " " + QString::number(sktBufRev[i].size()) + " " + ByteArrayToHexString(sktBufRev[i]);
-    //if (i == 0) FSCLOG << "Socket read hex: " + QString::number(i) + " " + QString::number(sktBufRev[i].size()) + " " + ByteArrayToHexString(sktBufRev[i]);
+    if (debugSkt[i])
+    {
+        FSCLOG << "Socket read hex: " + QString::number(i) + " " + QString::number(sktBufRev[i].size()) + " " + ByteArrayToHexString(sktBufRev[i]);
+
+        ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" +\
+                                      QDateTime::currentDateTime().toString("hh:mm:ss:zzz<-") + ByteArrayToHexString(sktBufRev[i]));
+        ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+    }
 
     switch (i)
     {
@@ -1060,6 +1141,9 @@ void FSC_MainWindow::skt_read(int i)
         showScaleSum = sktBufRev[i].toDouble();
 
         sktBufRev[i].resize(0);
+
+        sktDataState[SOCKET_SCALE_INDEX] = DATA_READ_OK;
+
         break;
 
 
@@ -1249,41 +1333,20 @@ void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
 }
 
 
-void FSC_MainWindow::on_lineEdit_setFlowRate_editingFinished()
-{
-    showSetFlowRate = ui->lineEdit_setFlowRate->text().toDouble();
-
-    ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
-    ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
-
-}
-
 void FSC_MainWindow::on_lineEdit_setFlowRate_textChanged(const QString &arg1)
 {
     (void)arg1;
 
     showSetFlowRate = ui->lineEdit_setFlowRate->text().toDouble();
-
-    ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
-    ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
 }
 
-void FSC_MainWindow::on_lineEdit_setPWM_editingFinished()
-{
-    showSetPWM = ui->lineEdit_setPWM->text().toInt();
 
-    ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
-    ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
-}
 
 void FSC_MainWindow::on_lineEdit_setPWM_textChanged(const QString &arg1)
 {
     (void)arg1;
 
     showSetPWM = ui->lineEdit_setPWM->text().toInt();
-
-    ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
-    ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
 }
 
 
@@ -1292,11 +1355,16 @@ void FSC_MainWindow::on_tbnScaleZero_clicked()
 {
     reqScaleZero();
 
-        scaleTestZero = 1;
+    scaleTestZero = 1;
 }
 
 void FSC_MainWindow::on_tbnCalStart_clicked()
 {
+    on_tbnPoltClear_clicked();
+
+    on_tbnScaleZero_clicked();
+    Sleep(4000);
+
     calOn = true;
     plotLoop = 0;
 }
@@ -1304,17 +1372,121 @@ void FSC_MainWindow::on_tbnCalStart_clicked()
 void FSC_MainWindow::on_tbnCalTermination_clicked()
 {
     calOn = false;
-    plotLoop = 0;
-    plotScaleSumTimeX.clear();
-    plotScaleSumValueY.clear();
-
 }
 
 void FSC_MainWindow::on_tbnPoltClear_clicked()
 {
     calOn = false;
     plotLoop = 0;
+
     plotScaleSumTimeX.clear();
+    plotSTDFMSumTimeX.clear();
+    plotSTDFMFlowTimeX.clear();
+    plotFMSumTimeX.clear();
+    plotFMFlowTimeX.clear();
+
     plotScaleSumValueY.clear();
+    plotSTDFMSumValueY.clear();
+    plotSTDFMFlowValueY.clear();
+    plotFMSumValueY.clear();
+    plotFMFlowValueY.clear();
+
+
     plotFresh();
+}
+
+void FSC_MainWindow::on_pushButton_19_clicked()
+{
+    showSetFlowRate = 1000;
+    showSetPWM = 80;
+
+    ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
+    ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
+
+    setFixedSize(1625, 880);
+}
+
+void FSC_MainWindow::on_pushButton_2_clicked()
+{
+    debugSkt[0] = !debugSkt[0];
+}
+
+void FSC_MainWindow::on_pushButton_3_clicked()
+{
+    debugSkt[1] = !debugSkt[1];
+}
+
+void FSC_MainWindow::on_pushButton_4_clicked()
+{
+    debugSkt[2] = !debugSkt[2];
+}
+
+void FSC_MainWindow::on_pushButton_5_clicked()
+{
+    debugSkt[3] = !debugSkt[3];
+}
+
+void FSC_MainWindow::on_pushButton_6_clicked()
+{
+    debugSkt[4] = !debugSkt[4];
+}
+
+void FSC_MainWindow::on_pushButton_7_clicked()
+{
+    debugSkt[5] = !debugSkt[5];
+}
+
+void FSC_MainWindow::on_pushButton_8_clicked()
+{
+    debugSkt[6] = !debugSkt[6];
+}
+
+void FSC_MainWindow::on_pushButton_9_clicked()
+{
+    debugSkt[7] = !debugSkt[7];
+}
+
+void FSC_MainWindow::on_pushButton_14_clicked()
+{
+    debugSkt[8] = !debugSkt[8];
+}
+
+void FSC_MainWindow::on_pushButton_10_clicked()
+{
+    debugSkt[9] = !debugSkt[9];
+}
+
+void FSC_MainWindow::on_pushButton_11_clicked()
+{
+    debugSkt[10] = !debugSkt[10];
+}
+
+void FSC_MainWindow::on_pushButton_12_clicked()
+{
+    debugSkt[11] = !debugSkt[11];
+}
+
+void FSC_MainWindow::on_pushButton_15_clicked()
+{
+    debugSkt[12] = !debugSkt[12];
+}
+
+void FSC_MainWindow::on_pushButton_13_clicked()
+{
+    debugSkt[13] = !debugSkt[13];
+}
+
+void FSC_MainWindow::on_pushButton_16_clicked()
+{
+    debugSkt[14] = !debugSkt[14];
+}
+
+void FSC_MainWindow::on_pushButton_17_clicked()
+{
+    debugSkt[15] = !debugSkt[15];
+}
+
+void FSC_MainWindow::on_pushButton_18_clicked()
+{
+    debugSkt[16] = !debugSkt[16];
 }

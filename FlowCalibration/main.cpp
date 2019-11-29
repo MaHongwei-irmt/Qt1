@@ -12,6 +12,8 @@ int main(int argc, char *argv[])
 
     FSC_MainWindow w;
     w.setWindowFlags(Qt::WindowMinimizeButtonHint|Qt::WindowCloseButtonHint);
+    w.setFixedSize(1625, 880);
+
     w.show();
 
     return a.exec();
