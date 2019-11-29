@@ -27720,3 +27720,2238 @@ fsc_mainwindow.cpp:1127: "2019-11-29 14:03:16:339" "Socket read hex: 14 8 04 03 
 fsc_mainwindow.cpp:1007: "2019-11-29 14:03:16:534" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
 fsc_mainwindow.cpp:1127: "2019-11-29 14:03:16:884" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
 fsc_mainwindow.cpp:1007: "2019-11-29 14:03:17:083" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+main.cpp:11: "2019-11-29 14:15:19:668" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:15:20:080" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:15:20:084" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:088" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:091" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:095" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:098" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:102" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:105" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:109" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:113" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:117" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:120" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:124" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:15:20:128" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:306" "10 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:310" "13 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:314" "2 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:318" "5 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:322" "9 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:327" "0 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:330" "16 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:334" "1 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:337" "8 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:341" "12 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:345" "15 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:349" "4 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:353" "7 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:357" "11 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:361" "14 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:365" "3 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:15:20:369" "6 socket con"
+main.cpp:11: "2019-11-29 14:16:46:708" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:16:47:086" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:16:47:090" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:093" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:097" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:100" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:104" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:107" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:111" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:115" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:118" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:122" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:126" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:129" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:16:47:133" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:303" "10 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:307" "6 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:311" "2 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:314" "15 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:318" "11 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:323" "7 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:326" "3 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:330" "16 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:333" "12 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:337" "8 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:341" "4 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:344" "13 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:348" "9 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:364" "5 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:368" "1 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:372" "0 socket con"
+fsc_mainwindow.cpp:1241: "2019-11-29 14:16:47:376" "14 socket con"
+main.cpp:11: "2019-11-29 14:19:40:167" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:19:40:576" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:19:40:580" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:584" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:588" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:592" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:595" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:599" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:602" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:606" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:609" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:612" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:617" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:621" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:19:40:624" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:795" "8 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:800" "0 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:804" "13 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:808" "1 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:811" "5 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:816" "9 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:820" "10 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:823" "14 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:827" "2 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:831" "6 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:835" "11 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:839" "15 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:842" "3 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:846" "7 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:850" "12 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:853" "16 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:19:40:857" "4 socket con"
+main.cpp:11: "2019-11-29 14:20:01:813" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:20:02:239" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:20:02:243" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:246" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:251" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:255" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:258" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:261" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:265" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:269" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:272" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:275" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:279" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:283" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:20:02:286" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:483" "0 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:491" "10 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:495" "14 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:499" "4 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:503" "8 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:507" "9 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:510" "13 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:514" "3 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:517" "7 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:521" "12 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:525" "2 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:528" "16 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:532" "6 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:536" "11 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:540" "1 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:544" "15 socket con"
+fsc_mainwindow.cpp:1242: "2019-11-29 14:20:02:547" "5 socket con"
+fsc_mainwindow.cpp:1013: "2019-11-29 14:20:06:909" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1133: "2019-11-29 14:20:06:918" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1013: "2019-11-29 14:20:07:456" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1133: "2019-11-29 14:20:07:464" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1013: "2019-11-29 14:20:08:003" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1133: "2019-11-29 14:20:08:011" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1013: "2019-11-29 14:20:08:550" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1133: "2019-11-29 14:20:08:558" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1013: "2019-11-29 14:20:09:097" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1133: "2019-11-29 14:20:09:105" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1013: "2019-11-29 14:20:09:645" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1133: "2019-11-29 14:20:09:653" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1013: "2019-11-29 14:20:10:193" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1133: "2019-11-29 14:20:10:203" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+main.cpp:11: "2019-11-29 14:29:45:117" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:29:45:531" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:29:45:535" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:539" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:543" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:547" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:551" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:555" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:559" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:563" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:566" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:569" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:573" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:577" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:29:45:580" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:779" "13 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:783" "3 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:788" "7 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:792" "0 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:796" "12 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:800" "2 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:804" "16 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:809" "6 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:813" "11 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:817" "15 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:820" "5 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:824" "1 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:828" "10 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:831" "14 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:838" "4 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:841" "8 socket con"
+fsc_mainwindow.cpp:1248: "2019-11-29 14:29:45:845" "9 socket con"
+fsc_mainwindow.cpp:1019: "2019-11-29 14:29:55:675" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1139: "2019-11-29 14:29:55:685" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1019: "2019-11-29 14:29:56:223" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1139: "2019-11-29 14:29:56:232" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1019: "2019-11-29 14:29:56:771" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1139: "2019-11-29 14:29:56:778" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+main.cpp:11: "2019-11-29 14:34:08:643" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:34:09:076" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:34:09:080" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:084" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:088" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:091" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:094" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:098" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:102" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:105" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:109" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:112" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:116" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:119" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:34:09:123" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:321" "8 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:325" "4 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:329" "3 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:333" "14 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:337" "16 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:340" "11 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:344" "2 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:347" "7 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:362" "12 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:366" "10 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:370" "1 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:374" "6 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:377" "0 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:382" "9 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:386" "5 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:389" "15 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:34:09:393" "13 socket con"
+fsc_mainwindow.cpp:1018: "2019-11-29 14:34:11:570" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1138: "2019-11-29 14:34:11:579" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1018: "2019-11-29 14:34:12:117" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1138: "2019-11-29 14:34:12:124" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1018: "2019-11-29 14:34:12:662" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1138: "2019-11-29 14:34:12:670" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1018: "2019-11-29 14:34:13:211" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1138: "2019-11-29 14:34:13:226" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1018: "2019-11-29 14:34:13:754" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+fsc_mainwindow.cpp:1138: "2019-11-29 14:34:13:768" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+fsc_mainwindow.cpp:1018: "2019-11-29 14:34:18:239" "Socket write hex: skt-8 8 04 03 00 97 00 6E 34 6F "
+fsc_mainwindow.cpp:1018: "2019-11-29 14:34:18:787" "Socket write hex: skt-8 8 04 03 00 97 00 6E 34 6F "
+fsc_mainwindow.cpp:1018: "2019-11-29 14:34:19:334" "Socket write hex: skt-8 8 04 03 00 97 00 6E 34 6F "
+fsc_mainwindow.cpp:1018: "2019-11-29 14:34:19:881" "Socket write hex: skt-8 8 04 03 00 97 00 6E 34 6F "
+fsc_mainwindow.cpp:1018: "2019-11-29 14:34:20:427" "Socket write hex: skt-8 8 04 03 00 97 00 6E 34 6F "
+main.cpp:11: "2019-11-29 14:38:00:165" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:38:00:543" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:38:00:547" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:551" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:554" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:558" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:562" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:565" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:569" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:573" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:576" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:579" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:583" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:586" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:00:590" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:781" "2 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:785" "15 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:789" "4 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:793" "7 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:796" "11 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:799" "3 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:803" "14 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:807" "6 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:811" "10 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:814" "13 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:817" "5 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:822" "1 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:825" "9 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:829" "16 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:832" "0 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:836" "8 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:00:839" "12 socket con"
+main.cpp:11: "2019-11-29 14:38:26:650" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:38:27:026" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:38:27:030" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:033" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:037" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:041" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:044" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:047" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:051" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:054" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:058" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:061" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:064" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:068" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:27:071" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:234" "11 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:239" "4 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:242" "14 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:246" "10 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:249" "7 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:253" "3 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:257" "13 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:260" "9 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:264" "6 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:267" "2 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:271" "12 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:275" "0 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:278" "8 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:281" "5 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:285" "16 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:289" "1 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:27:292" "15 socket con"
+main.cpp:11: "2019-11-29 14:38:52:475" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:38:52:862" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:38:52:866" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:870" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:874" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:877" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:881" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:884" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:888" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:891" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:894" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:897" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:901" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:904" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:38:52:908" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:064" "10 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:068" "15 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:072" "6 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:076" "14 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:079" "9 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:082" "5 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:086" "1 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:089" "0 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:092" "8 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:095" "13 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:098" "4 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:102" "3 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:106" "16 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:109" "11 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:112" "12 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:116" "7 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:38:53:120" "2 socket con"
+main.cpp:11: "2019-11-29 14:39:11:870" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:39:12:267" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:39:12:271" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:274" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:278" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:281" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:285" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:288" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:292" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:295" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:298" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:307" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:311" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:314" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:12:318" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:488" "5 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:492" "1 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:495" "16 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:499" "12 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:502" "8 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:506" "4 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:510" "15 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:513" "11 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:517" "7 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:520" "3 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:524" "14 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:527" "10 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:530" "6 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:534" "2 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:538" "0 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:542" "13 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:12:545" "9 socket con"
+main.cpp:11: "2019-11-29 14:39:32:436" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:39:32:821" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:39:32:825" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:828" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:831" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:835" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:839" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:842" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:845" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:849" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:854" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:858" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:862" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:866" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:39:32:869" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:036" "2 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:040" "15 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:044" "6 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:047" "10 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:051" "0 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:055" "14 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:059" "1 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:063" "5 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:066" "9 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:070" "13 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:074" "4 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:077" "8 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:080" "12 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:084" "16 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:088" "3 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:092" "7 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:39:33:095" "11 socket con"
+main.cpp:11: "2019-11-29 14:40:07:022" 
+start
+fsc_mainwindow.cpp:67: "2019-11-29 14:40:07:406" "192.168.1.220"
+fsc_mainwindow.cpp:68: "2019-11-29 14:40:07:410" "192.168.1.221"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:413" "XY_DD_1"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:417" "XY-DD-2"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:421" "XY-DD-3"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:425" "XY-DD-4"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:428" "XY-DD-5"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:431" "XY-DD-6"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:435" "XY-DD-7"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:438" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:442" "XY-DD-FGG-9877-tttttttttt"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:445" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:449" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:80: "2019-11-29 14:40:07:452" "XY-DD-FGG-9877-tttttttttt66666"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:639" "7 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:643" "10 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:646" "12 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:650" "2 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:654" "16 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:657" "6 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:660" "0 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:664" "1 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:668" "15 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:671" "5 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:674" "9 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:678" "14 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:681" "4 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:685" "8 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:689" "11 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:692" "13 socket con"
+fsc_mainwindow.cpp:1247: "2019-11-29 14:40:07:696" "3 socket con"
+:0: "2019-11-29 14:41:13:218" 
+start
+:0: "2019-11-29 14:41:13:607" "192.168.1.220"
+:0: "2019-11-29 14:41:13:611" "192.168.1.221"
+:0: "2019-11-29 14:41:13:614" "XY_DD_1"
+:0: "2019-11-29 14:41:13:618" "XY-DD-2"
+:0: "2019-11-29 14:41:13:622" "XY-DD-3"
+:0: "2019-11-29 14:41:13:625" "XY-DD-4"
+:0: "2019-11-29 14:41:13:628" "XY-DD-5"
+:0: "2019-11-29 14:41:13:632" "XY-DD-6"
+:0: "2019-11-29 14:41:13:635" "XY-DD-7"
+:0: "2019-11-29 14:41:13:638" "XY-DD-FGG-9877"
+:0: "2019-11-29 14:41:13:642" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 14:41:13:645" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 14:41:13:649" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 14:41:13:653" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 14:41:13:729" "11 socket con"
+:0: "2019-11-29 14:41:13:732" "0 socket con"
+:0: "2019-11-29 14:41:13:737" "1 socket con"
+:0: "2019-11-29 14:41:13:740" "12 socket con"
+:0: "2019-11-29 14:41:13:743" "16 socket con"
+:0: "2019-11-29 14:41:13:747" "4 socket con"
+:0: "2019-11-29 14:41:13:751" "8 socket con"
+:0: "2019-11-29 14:41:13:754" "2 socket con"
+:0: "2019-11-29 14:41:13:757" "13 socket con"
+:0: "2019-11-29 14:41:13:761" "5 socket con"
+:0: "2019-11-29 14:41:13:765" "9 socket con"
+:0: "2019-11-29 14:41:13:768" "3 socket con"
+:0: "2019-11-29 14:41:13:772" "14 socket con"
+:0: "2019-11-29 14:41:13:775" "6 socket con"
+:0: "2019-11-29 14:41:13:778" "10 socket con"
+:0: "2019-11-29 14:41:13:782" "15 socket con"
+:0: "2019-11-29 14:41:13:786" "7 socket con"
+:0: "2019-11-29 14:41:35:014" 
+start
+:0: "2019-11-29 14:41:35:389" "192.168.1.220"
+:0: "2019-11-29 14:41:35:393" "192.168.1.221"
+:0: "2019-11-29 14:41:35:397" "XY_DD_1"
+:0: "2019-11-29 14:41:35:401" "XY-DD-2"
+:0: "2019-11-29 14:41:35:404" "XY-DD-3"
+:0: "2019-11-29 14:41:35:407" "XY-DD-4"
+:0: "2019-11-29 14:41:35:411" "XY-DD-5"
+:0: "2019-11-29 14:41:35:415" "XY-DD-6"
+:0: "2019-11-29 14:41:35:418" "XY-DD-7"
+:0: "2019-11-29 14:41:35:421" "XY-DD-FGG-9877"
+:0: "2019-11-29 14:41:35:424" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 14:41:35:427" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 14:41:35:431" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 14:41:35:434" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 14:41:35:613" "13 socket con"
+:0: "2019-11-29 14:41:35:617" "9 socket con"
+:0: "2019-11-29 14:41:35:621" "4 socket con"
+:0: "2019-11-29 14:41:35:624" "12 socket con"
+:0: "2019-11-29 14:41:35:626" "3 socket con"
+:0: "2019-11-29 14:41:35:638" "8 socket con"
+:0: "2019-11-29 14:41:35:645" "16 socket con"
+:0: "2019-11-29 14:41:35:650" "11 socket con"
+:0: "2019-11-29 14:41:35:654" "6 socket con"
+:0: "2019-11-29 14:41:35:658" "7 socket con"
+:0: "2019-11-29 14:41:35:662" "2 socket con"
+:0: "2019-11-29 14:41:35:666" "0 socket con"
+:0: "2019-11-29 14:41:35:670" "15 socket con"
+:0: "2019-11-29 14:41:35:673" "14 socket con"
+:0: "2019-11-29 14:41:35:677" "5 socket con"
+:0: "2019-11-29 14:41:35:681" "10 socket con"
+:0: "2019-11-29 14:41:35:684" "1 socket con"
+:0: "2019-11-29 14:41:39:508" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:39:521" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:40:050" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:40:058" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:40:602" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:40:617" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:41:144" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:41:153" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:41:694" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:41:702" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:42:128" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:42:167" "Socket read hex: 1 4 36 2E 36 30 "
+:0: "2019-11-29 14:41:42:237" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:42:245" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:42:676" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:42:713" "Socket read hex: 1 4 37 2E 38 30 "
+:0: "2019-11-29 14:41:42:790" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:42:801" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:43:228" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:43:268" "Socket read hex: 1 4 39 2E 31 30 "
+:0: "2019-11-29 14:41:43:335" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:43:343" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:43:769" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:43:808" "Socket read hex: 1 5 31 30 2E 35 30 "
+:0: "2019-11-29 14:41:43:881" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:43:893" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:44:228" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:44:320" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:44:357" "Socket read hex: 1 5 31 32 2E 30 30 "
+:0: "2019-11-29 14:41:44:425" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:44:434" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:44:536" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:44:778" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:44:865" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:44:902" "Socket read hex: 1 5 31 33 2E 36 30 "
+:0: "2019-11-29 14:41:44:977" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:44:985" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:45:084" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:45:090" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:45:323" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:45:329" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:45:411" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:45:448" "Socket read hex: 1 5 31 35 2E 33 30 "
+:0: "2019-11-29 14:41:45:521" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:45:541" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:45:629" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:45:639" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:45:646" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:45:874" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:45:885" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:45:957" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:45:998" "Socket read hex: 1 5 31 37 2E 31 30 "
+:0: "2019-11-29 14:41:46:068" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:46:084" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:46:175" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:46:182" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:46:189" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:46:196" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:46:418" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:46:426" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:46:503" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:46:543" "Socket read hex: 1 5 31 39 2E 30 30 "
+:0: "2019-11-29 14:41:46:613" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:46:624" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:46:726" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:46:733" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:46:740" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:46:747" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:46:963" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:46:970" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:054" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:47:093" "Socket read hex: 1 5 32 31 2E 30 30 "
+:0: "2019-11-29 14:41:47:160" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:47:183" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:47:268" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:276" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:283" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:291" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:508" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:515" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:601" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:47:633" "Socket read hex: 11 2 1B 70 "
+:0: "2019-11-29 14:41:47:645" "Socket write hex: skt-11 5 32 33 2E 31 30 "
+:0: "2019-11-29 14:41:47:663" "Socket read hex: 1 5 32 33 2E 31 30 "
+:0: "2019-11-29 14:41:47:706" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:47:717" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:47:817" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:826" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:834" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:842" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:852" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:47:860" "Socket write hex: skt-13 225 04 03 DC 6D 5B 42 F6 72 7A 42 F6 77 99 42 F6 7C B8 42 F6 81 D7 42 F6 86 F6 42 F6 8C 15 42 F6 91 34 42 F6 96 53 42 F6 9B 72 42 F6 A0 91 42 F6 A5 B0 42 F6 AA CF 42 F6 AF EE 42 F6 B5 0D 42 F6 BA 2C 42 F6 BF 4B 42 F6 C4 6A 42 F6 C9 89 42 F6 CE A8 42 F6 D3 C7 42 F6 D8 E6 42 F6 DE 05 42 F6 E3 24 42 F6 E8 43 42 F6 ED 62 42 F6 F2 81 42 F6 F7 A0 42 F6 FC BF 42 F6 01 DE 42 F7 06 FD 42 F7 0C 1C 42 F7 11 3B 42 F7 16 5A 42 F7 1B 79 42 F7 20 98 42 F7 25 B7 42 F7 2A D6 42 F7 2F F5 42 F7 35 14 42 F7 3A 33 42 F7 3F 52 42 F7 44 71 42 F7 49 90 42 F7 4E AF 42 F7 53 CE 42 F7 58 ED 42 F7 5E 0C 42 F7 63 2B 42 F7 68 4A 42 F7 6D 69 42 F7 72 88 42 F7 77 A7 42 F7 7C C6 42 F7 81 E5 42 F7 99 BF "
+:0: "2019-11-29 14:41:48:053" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:068" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:145" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:48:165" "Socket read hex: 11 4 1B 70 1B 70 "
+:0: "2019-11-29 14:41:48:175" "Socket write hex: skt-11 5 32 35 2E 33 30 "
+:0: "2019-11-29 14:41:48:193" "Socket read hex: 1 5 32 35 2E 33 30 "
+:0: "2019-11-29 14:41:48:256" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:48:267" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:48:363" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:375" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:384" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:394" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:406" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:416" "Socket write hex: skt-13 225 04 03 DC 87 04 42 F7 8C 23 42 F7 91 42 42 F7 96 61 42 F7 9B 80 42 F7 A0 9F 42 F7 A5 BE 42 F7 AA DD 42 F7 AF FC 42 F7 B5 1B 42 F7 BA 3A 42 F7 BF 59 42 F7 C4 78 42 F7 C9 97 42 F7 CE B6 42 F7 D3 D5 42 F7 D8 F4 42 F7 DE 13 42 F7 E3 32 42 F7 E8 51 42 F7 ED 70 42 F7 F2 8F 42 F7 F7 AE 42 F7 FC CD 42 F7 01 EC 42 F8 07 0B 42 F8 0C 2A 42 F8 11 49 42 F8 16 68 42 F8 1B 87 42 F8 20 A6 42 F8 25 C5 42 F8 2A E4 42 F8 30 03 42 F8 35 22 42 F8 3A 41 42 F8 3F 60 42 F8 44 7F 42 F8 49 9E 42 F8 4E BD 42 F8 53 DC 42 F8 58 FB 42 F8 5E 1A 42 F8 63 39 42 F8 68 58 42 F8 6D 77 42 F8 72 96 42 F8 77 B5 42 F8 7C D4 42 F8 81 F3 42 F8 87 12 42 F8 8C 31 42 F8 91 50 42 F8 96 6F 42 F8 9B 8E 42 F8 FB BA "
+:0: "2019-11-29 14:41:48:428" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:582" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:602" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:614" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:694" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:48:716" "Socket read hex: 11 6 1B 70 1B 70 1B 70 "
+:0: "2019-11-29 14:41:48:727" "Socket write hex: skt-11 5 32 37 2E 36 30 "
+:0: "2019-11-29 14:41:48:748" "Socket read hex: 1 5 32 37 2E 36 30 "
+:0: "2019-11-29 14:41:48:800" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:48:812" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:48:910" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:923" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:934" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:946" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:960" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:48:973" "Socket write hex: skt-13 225 04 03 DC A0 AD 42 F8 A5 CC 42 F8 AA EB 42 F8 B0 0A 42 F8 B5 29 42 F8 BA 48 42 F8 BF 67 42 F8 C4 86 42 F8 C9 A5 42 F8 CE C4 42 F8 D3 E3 42 F8 D9 02 42 F8 DE 21 42 F8 E3 40 42 F8 E8 5F 42 F8 ED 7E 42 F8 F2 9D 42 F8 F7 BC 42 F8 FC DB 42 F8 01 FA 42 F9 07 19 42 F9 0C 38 42 F9 11 57 42 F9 16 76 42 F9 1B 95 42 F9 20 B4 42 F9 25 D3 42 F9 2A F2 42 F9 30 11 42 F9 35 30 42 F9 3A 4F 42 F9 3F 6E 42 F9 44 8D 42 F9 49 AC 42 F9 4E CB 42 F9 53 EA 42 F9 59 09 42 F9 5E 28 42 F9 63 47 42 F9 68 66 42 F9 6D 85 42 F9 72 A4 42 F9 77 C3 42 F9 7C E2 42 F9 82 01 42 F9 87 20 42 F9 8C 3F 42 F9 91 5E 42 F9 96 7D 42 F9 9B 9C 42 F9 A0 BB 42 F9 A5 DA 42 F9 AA F9 42 F9 B0 18 42 F9 B5 37 42 F9 00 5D "
+:0: "2019-11-29 14:41:48:986" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:128" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:162" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:176" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:237" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:49:258" "Socket read hex: 11 2 1B 70 "
+:0: "2019-11-29 14:41:49:271" "Socket write hex: skt-11 5 33 30 2E 30 30 "
+:0: "2019-11-29 14:41:49:293" "Socket read hex: 1 5 33 30 2E 30 30 "
+:0: "2019-11-29 14:41:49:350" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:49:366" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:49:458" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:476" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:490" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:503" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:517" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:544" "Socket write hex: skt-13 225 04 03 DC BA 56 42 F9 BF 75 42 F9 C4 94 42 F9 C9 B3 42 F9 CE D2 42 F9 D3 F1 42 F9 D9 10 42 F9 DE 2F 42 F9 E3 4E 42 F9 E8 6D 42 F9 ED 8C 42 F9 F2 AB 42 F9 F7 CA 42 F9 FC E9 42 F9 02 08 42 FA 07 27 42 FA 0C 46 42 FA 11 65 42 FA 16 84 42 FA 1B A3 42 FA 20 C2 42 FA 25 E1 42 FA 2B 00 42 FA 30 1F 42 FA 35 3E 42 FA 3A 5D 42 FA 3F 7C 42 FA 44 9B 42 FA 49 BA 42 FA 4E D9 42 FA 53 F8 42 FA 59 17 42 FA 5E 36 42 FA 63 55 42 FA 68 74 42 FA 6D 93 42 FA 72 B2 42 FA 77 D1 42 FA 7C F0 42 FA 82 0F 42 FA 87 2E 42 FA 8C 4D 42 FA 91 6C 42 FA 96 8B 42 FA 9B AA 42 FA A0 C9 42 FA A5 E8 42 FA AB 07 42 FA B0 26 42 FA B5 45 42 FA BA 64 42 FA BF 83 42 FA C4 A2 42 FA C9 C1 42 FA CE E0 42 FA 4D 44 "
+:0: "2019-11-29 14:41:49:558" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:785" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:802" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:816" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:49:894" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:49:913" "Socket read hex: 11 4 1B 70 1B 70 "
+:0: "2019-11-29 14:41:49:927" "Socket write hex: skt-11 5 33 32 2E 35 30 "
+:0: "2019-11-29 14:41:49:948" "Socket read hex: 1 5 33 32 2E 35 30 "
+:0: "2019-11-29 14:41:50:004" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:50:024" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:50:113" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:161" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:175" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:189" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:204" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:219" "Socket write hex: skt-13 225 04 03 DC D3 FF 42 FA D9 1E 42 FA DE 3D 42 FA E3 5C 42 FA E8 7B 42 FA ED 9A 42 FA F2 B9 42 FA F7 D8 42 FA FC F7 42 FA 02 16 42 FB 07 35 42 FB 0C 54 42 FB 11 73 42 FB 16 92 42 FB 1B B1 42 FB 20 D0 42 FB 25 EF 42 FB 2B 0E 42 FB 30 2D 42 FB 35 4C 42 FB 3A 6B 42 FB 3F 8A 42 FB 44 A9 42 FB 49 C8 42 FB 4E E7 42 FB 54 06 42 FB 59 25 42 FB 5E 44 42 FB 63 63 42 FB 68 82 42 FB 6D A1 42 FB 72 C0 42 FB 77 DF 42 FB 7C FE 42 FB 82 1D 42 FB 87 3C 42 FB 8C 5B 42 FB 91 7A 42 FB 96 99 42 FB 9B B8 42 FB A0 D7 42 FB A5 F6 42 FB AB 15 42 FB B0 34 42 FB B5 53 42 FB BA 72 42 FB BF 91 42 FB C4 B0 42 FB C9 CF 42 FB CE EE 42 FB D4 0D 42 FB D9 2C 42 FB DE 4B 42 FB E3 6A 42 FB E8 89 42 FB FA C2 "
+:0: "2019-11-29 14:41:50:234" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:444" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:463" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:478" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:551" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:50:573" "Socket read hex: 11 6 1B 70 1B 70 1B 70 "
+:0: "2019-11-29 14:41:50:587" "Socket write hex: skt-11 5 33 35 2E 31 30 "
+:0: "2019-11-29 14:41:50:608" "Socket read hex: 1 5 33 35 2E 31 30 "
+:0: "2019-11-29 14:41:50:660" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:50:677" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:50:771" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:789" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:803" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:816" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:833" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:856" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:50:871" "Socket write hex: skt-13 225 04 03 DC ED A8 42 FB F2 C7 42 FB F7 E6 42 FB FD 05 42 FB 02 24 42 FC 07 43 42 FC 0C 62 42 FC 11 81 42 FC 16 A0 42 FC 1B BF 42 FC 20 DE 42 FC 25 FD 42 FC 2B 1C 42 FC 30 3B 42 FC 35 5A 42 FC 3A 79 42 FC 3F 98 42 FC 44 B7 42 FC 49 D6 42 FC 4E F5 42 FC 54 14 42 FC 59 33 42 FC 5E 52 42 FC 63 71 42 FC 68 90 42 FC 6D AF 42 FC 72 CE 42 FC 77 ED 42 FC 7D 0C 42 FC 82 2B 42 FC 87 4A 42 FC 8C 69 42 FC 91 88 42 FC 96 A7 42 FC 9B C6 42 FC A0 E5 42 FC A6 04 42 FC AB 23 42 FC B0 42 42 FC B5 61 42 FC BA 80 42 FC BF 9F 42 FC C4 BE 42 FC C9 DD 42 FC CE FC 42 FC D4 1B 42 FC D9 3A 42 FC DE 59 42 FC E3 78 42 FC E8 97 42 FC ED B6 42 FC F2 D5 42 FC F7 F4 42 FC FD 13 42 FC 02 32 42 FD 22 16 "
+:0: "2019-11-29 14:41:51:101" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:119" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:133" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:208" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:51:238" "Socket read hex: 11 2 1B 70 "
+:0: "2019-11-29 14:41:51:255" "Socket write hex: skt-11 5 33 37 2E 38 30 "
+:0: "2019-11-29 14:41:51:273" "Socket read hex: 1 5 33 37 2E 38 30 "
+:0: "2019-11-29 14:41:51:317" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:51:333" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:51:426" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:442" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:458" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:474" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:491" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:506" "Socket write hex: skt-13 225 04 03 DC 07 51 42 FD 0C 70 42 FD 11 8F 42 FD 16 AE 42 FD 1B CD 42 FD 20 EC 42 FD 26 0B 42 FD 2B 2A 42 FD 30 49 42 FD 35 68 42 FD 3A 87 42 FD 3F A6 42 FD 44 C5 42 FD 49 E4 42 FD 4F 03 42 FD 54 22 42 FD 59 41 42 FD 5E 60 42 FD 63 7F 42 FD 68 9E 42 FD 6D BD 42 FD 72 DC 42 FD 77 FB 42 FD 7D 1A 42 FD 82 39 42 FD 87 58 42 FD 8C 77 42 FD 91 96 42 FD 96 B5 42 FD 9B D4 42 FD A0 F3 42 FD A6 12 42 FD AB 31 42 FD B0 50 42 FD B5 6F 42 FD BA 8E 42 FD BF AD 42 FD C4 CC 42 FD C9 EB 42 FD CF 0A 42 FD D4 29 42 FD D9 48 42 FD DE 67 42 FD E3 86 42 FD E8 A5 42 FD ED C4 42 FD F2 E3 42 FD F8 02 42 FD FD 21 42 FD 02 40 42 FE 07 5F 42 FE 0C 7E 42 FE 11 9D 42 FE 16 BC 42 FE 1B DB 42 FE 55 09 "
+:0: "2019-11-29 14:41:51:522" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:644" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:666" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:682" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:756" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:51:808" "Socket read hex: 11 4 1B 70 1B 70 "
+:0: "2019-11-29 14:41:51:824" "Socket write hex: skt-11 5 34 30 2E 36 30 "
+:0: "2019-11-29 14:41:51:842" "Socket read hex: 1 5 34 30 2E 36 30 "
+:0: "2019-11-29 14:41:51:865" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:51:883" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:51:975" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:51:991" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:007" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:022" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:040" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:056" "Socket write hex: skt-13 225 04 03 DC 20 FA 42 FE 26 19 42 FE 2B 38 42 FE 30 57 42 FE 35 76 42 FE 3A 95 42 FE 3F B4 42 FE 44 D3 42 FE 49 F2 42 FE 4F 11 42 FE 54 30 42 FE 59 4F 42 FE 5E 6E 42 FE 63 8D 42 FE 68 AC 42 FE 6D CB 42 FE 72 EA 42 FE 78 09 42 FE 7D 28 42 FE 82 47 42 FE 87 66 42 FE 8C 85 42 FE 91 A4 42 FE 96 C3 42 FE 9B E2 42 FE A1 01 42 FE A6 20 42 FE AB 3F 42 FE B0 5E 42 FE B5 7D 42 FE BA 9C 42 FE BF BB 42 FE C4 DA 42 FE C9 F9 42 FE CF 18 42 FE D4 37 42 FE D9 56 42 FE DE 75 42 FE E3 94 42 FE E8 B3 42 FE ED D2 42 FE F2 F1 42 FE F8 10 42 FE FD 2F 42 FE 02 4E 42 FF 07 6D 42 FF 0C 8C 42 FF 11 AB 42 FF 16 CA 42 FF 1B E9 42 FF 21 08 42 FF 26 27 42 FF 2B 46 42 FF 30 65 42 FF 35 84 42 FF F0 F3 "
+:0: "2019-11-29 14:41:52:073" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:300" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:323" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:339" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:410" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:52:432" "Socket read hex: 11 6 1B 70 1B 70 1B 70 "
+:0: "2019-11-29 14:41:52:448" "Socket write hex: skt-11 5 34 33 2E 35 30 "
+:0: "2019-11-29 14:41:52:468" "Socket read hex: 1 5 34 33 2E 35 30 "
+:0: "2019-11-29 14:41:52:520" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:52:542" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:52:632" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:650" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:666" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:682" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:700" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:717" "Socket write hex: skt-13 225 04 03 DC 3A A3 42 FF 3F C2 42 FF 44 E1 42 FF 4A 00 42 FF 4F 1F 42 FF 54 3E 42 FF 59 5D 42 FF 5E 7C 42 FF 63 9B 42 FF 68 BA 42 FF 6D D9 42 FF 72 F8 42 FF 78 17 42 FF 7D 36 42 FF 82 55 42 FF 87 74 42 FF 8C 93 42 FF 91 B2 42 FF 96 D1 42 FF 9B F0 42 FF A1 0F 42 FF A6 2E 42 FF AB 4D 42 FF B0 6C 42 FF B5 8B 42 FF BA AA 42 FF BF C9 42 FF C4 E8 42 FF CA 07 42 FF CF 26 42 FF D4 45 42 FF D9 64 42 FF DE 83 42 FF E3 A2 42 FF E8 C1 42 FF ED E0 42 FF F2 FF 42 FF F8 1E 42 FF FD 3D 42 FF 01 2E 43 00 03 BD 43 00 06 4C 43 00 08 DB 43 00 0B 6A 43 00 0D F9 43 00 10 88 43 00 13 17 43 00 15 A6 43 00 18 35 43 00 1A C4 43 00 1D 53 43 00 1F E2 43 00 22 71 43 00 25 00 43 00 27 8F 43 00 F8 B6 "
+:0: "2019-11-29 14:41:52:734" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:958" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:977" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:52:994" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:067" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:53:087" "Socket read hex: 11 2 1B 70 "
+:0: "2019-11-29 14:41:53:104" "Socket write hex: skt-11 5 34 36 2E 35 30 "
+:0: "2019-11-29 14:41:53:122" "Socket read hex: 1 5 34 36 2E 35 30 "
+:0: "2019-11-29 14:41:53:176" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:53:196" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:53:290" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:307" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:324" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:341" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:360" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:377" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:394" "Socket write hex: skt-13 225 04 03 DC 2A 1E 43 00 2C AD 43 00 2F 3C 43 00 31 CB 43 00 34 5A 43 00 36 E9 43 00 39 78 43 00 3C 07 43 00 3E 96 43 00 41 25 43 00 43 B4 43 00 46 43 43 00 48 D2 43 00 4B 61 43 00 4D F0 43 00 50 7F 43 00 53 0E 43 00 55 9D 43 00 58 2C 43 00 5A BB 43 00 5D 4A 43 00 5F D9 43 00 62 68 43 00 64 F7 43 00 67 86 43 00 6A 15 43 00 6C A4 43 00 6F 33 43 00 71 C2 43 00 74 51 43 00 76 E0 43 00 79 6F 43 00 7B FE 43 00 7E 8D 43 00 81 1C 43 00 83 AB 43 00 86 3A 43 00 88 C9 43 00 8B 58 43 00 8D E7 43 00 90 76 43 00 93 05 43 00 95 94 43 00 98 23 43 00 9A B2 43 00 9D 41 43 00 9F D0 43 00 A2 5F 43 00 A4 EE 43 00 A7 7D 43 00 AA 0C 43 00 AC 9B 43 00 AF 2A 43 00 B1 B9 43 00 B4 48 43 00 13 B8 "
+:0: "2019-11-29 14:41:53:614" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:662" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:681" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:723" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:53:742" "Socket read hex: 11 4 1B 70 1B 70 "
+:0: "2019-11-29 14:41:53:760" "Socket write hex: skt-11 5 34 39 2E 36 30 "
+:0: "2019-11-29 14:41:53:778" "Socket read hex: 1 5 34 39 2E 36 30 "
+:0: "2019-11-29 14:41:53:832" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:53:879" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:53:941" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:960" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:978" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:53:995" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:015" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:032" "Socket write hex: skt-13 225 04 03 DC B6 D7 43 00 B9 66 43 00 BB F5 43 00 BE 84 43 00 C1 13 43 00 C3 A2 43 00 C6 31 43 00 C8 C0 43 00 CB 4F 43 00 CD DE 43 00 D0 6D 43 00 D2 FC 43 00 D5 8B 43 00 D8 1A 43 00 DA A9 43 00 DD 38 43 00 DF C7 43 00 E2 56 43 00 E4 E5 43 00 E7 74 43 00 EA 03 43 00 EC 92 43 00 EF 21 43 00 F1 B0 43 00 F4 3F 43 00 F6 CE 43 00 F9 5D 43 00 FB EC 43 00 FE 7B 43 00 01 0A 43 01 03 99 43 01 06 28 43 01 08 B7 43 01 0B 46 43 01 0D D5 43 01 10 64 43 01 12 F3 43 01 15 82 43 01 18 11 43 01 1A A0 43 01 1D 2F 43 01 1F BE 43 01 22 4D 43 01 24 DC 43 01 27 6B 43 01 29 FA 43 01 2C 89 43 01 2F 18 43 01 31 A7 43 01 34 36 43 01 36 C5 43 01 39 54 43 01 3B E3 43 01 3E 72 43 01 41 01 43 01 9D 3E "
+:0: "2019-11-29 14:41:54:052" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:272" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:293" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:314" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:378" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:54:399" "Socket read hex: 11 6 1B 70 1B 70 1B 70 "
+:0: "2019-11-29 14:41:54:417" "Socket write hex: skt-11 5 35 32 2E 38 30 "
+:0: "2019-11-29 14:41:54:438" "Socket read hex: 1 5 35 32 2E 38 30 "
+:0: "2019-11-29 14:41:54:488" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:54:508" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:54:601" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:643" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:661" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:682" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:702" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:720" "Socket write hex: skt-13 225 04 03 DC 43 90 43 01 46 1F 43 01 48 AE 43 01 4B 3D 43 01 4D CC 43 01 50 5B 43 01 52 EA 43 01 55 79 43 01 58 08 43 01 5A 97 43 01 5D 26 43 01 5F B5 43 01 62 44 43 01 64 D3 43 01 67 62 43 01 69 F1 43 01 6C 80 43 01 6F 0F 43 01 71 9E 43 01 74 2D 43 01 76 BC 43 01 79 4B 43 01 7B DA 43 01 7E 69 43 01 80 F8 43 01 83 87 43 01 86 16 43 01 88 A5 43 01 8B 34 43 01 8D C3 43 01 90 52 43 01 92 E1 43 01 95 70 43 01 97 FF 43 01 9A 8E 43 01 9D 1D 43 01 9F AC 43 01 A2 3B 43 01 A4 CA 43 01 A7 59 43 01 A9 E8 43 01 AC 77 43 01 AF 06 43 01 B1 95 43 01 B4 24 43 01 B6 B3 43 01 B9 42 43 01 BB D1 43 01 BE 60 43 01 C0 EF 43 01 C3 7E 43 01 C6 0D 43 01 C8 9C 43 01 CB 2B 43 01 CD BA 43 01 28 49 "
+:0: "2019-11-29 14:41:54:740" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:927" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:951" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:54:969" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:034" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:55:055" "Socket read hex: 11 2 1B 70 "
+:0: "2019-11-29 14:41:55:074" "Socket write hex: skt-11 5 35 36 2E 31 30 "
+:0: "2019-11-29 14:41:55:093" "Socket read hex: 1 5 35 36 2E 31 30 "
+:0: "2019-11-29 14:41:55:145" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:55:165" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:55:253" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:272" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:290" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:309" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:329" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:348" "Socket write hex: skt-13 225 04 03 DC D0 49 43 01 D2 D8 43 01 D5 67 43 01 D7 F6 43 01 DA 85 43 01 DD 14 43 01 DF A3 43 01 E2 32 43 01 E4 C1 43 01 E7 50 43 01 E9 DF 43 01 EC 6E 43 01 EE FD 43 01 F1 8C 43 01 F4 1B 43 01 F6 AA 43 01 F9 39 43 01 FB C8 43 01 FE 57 43 01 00 E6 43 02 03 75 43 02 06 04 43 02 08 93 43 02 0B 22 43 02 0D B1 43 02 10 40 43 02 12 CF 43 02 15 5E 43 02 17 ED 43 02 1A 7C 43 02 1D 0B 43 02 1F 9A 43 02 22 29 43 02 24 B8 43 02 27 47 43 02 29 D6 43 02 2C 65 43 02 2E F4 43 02 31 83 43 02 34 12 43 02 36 A1 43 02 39 30 43 02 3B BF 43 02 3E 4E 43 02 40 DD 43 02 43 6C 43 02 45 FB 43 02 48 8A 43 02 4B 19 43 02 4D A8 43 02 50 37 43 02 52 C6 43 02 55 55 43 02 57 E4 43 02 5A 73 43 02 84 88 "
+:0: "2019-11-29 14:41:55:373" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:585" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:607" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:626" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:692" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:55:713" "Socket read hex: 11 4 1B 70 1B 70 "
+:0: "2019-11-29 14:41:55:733" "Socket write hex: skt-11 5 35 39 2E 35 30 "
+:0: "2019-11-29 14:41:55:754" "Socket read hex: 1 5 35 39 2E 35 30 "
+:0: "2019-11-29 14:41:55:802" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:55:823" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:55:910" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:948" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:968" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:55:987" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:009" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:029" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:050" "Socket write hex: skt-13 225 04 03 DC 5D 02 43 02 5F 91 43 02 62 20 43 02 64 AF 43 02 67 3E 43 02 69 CD 43 02 6C 5C 43 02 6E EB 43 02 71 7A 43 02 74 09 43 02 76 98 43 02 79 27 43 02 7B B6 43 02 7E 45 43 02 80 D4 43 02 83 63 43 02 85 F2 43 02 88 81 43 02 8B 10 43 02 8D 9F 43 02 90 2E 43 02 92 BD 43 02 95 4C 43 02 97 DB 43 02 9A 6A 43 02 9C F9 43 02 9F 88 43 02 A2 17 43 02 A4 A6 43 02 A7 35 43 02 A9 C4 43 02 AC 53 43 02 AE E2 43 02 B1 71 43 02 B4 00 43 02 B6 8F 43 02 B9 1E 43 02 BB AD 43 02 BE 3C 43 02 C0 CB 43 02 C3 5A 43 02 C5 E9 43 02 C8 78 43 02 CB 07 43 02 CD 96 43 02 D0 25 43 02 D2 B4 43 02 D5 43 43 02 D7 D2 43 02 DA 61 43 02 DC F0 43 02 DF 7F 43 02 E2 0E 43 02 E4 9D 43 02 E7 2C 43 02 C8 47 "
+:0: "2019-11-29 14:41:56:238" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:261" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:281" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:351" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:56:401" "Socket read hex: 11 6 1B 70 1B 70 1B 70 "
+:0: "2019-11-29 14:41:56:421" "Socket write hex: skt-11 5 36 33 2E 30 30 "
+:0: "2019-11-29 14:41:56:442" "Socket read hex: 1 5 36 33 2E 30 30 "
+:0: "2019-11-29 14:41:56:463" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:56:484" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:56:567" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:618" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:638" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:657" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:677" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:705" "Socket write hex: skt-13 225 04 03 DC E9 BB 43 02 EC 4A 43 02 EE D9 43 02 F1 68 43 02 F3 F7 43 02 F6 86 43 02 F9 15 43 02 FB A4 43 02 FE 33 43 02 00 C2 43 03 03 51 43 03 05 E0 43 03 08 6F 43 03 0A FE 43 03 0D 8D 43 03 10 1C 43 03 12 AB 43 03 15 3A 43 03 17 C9 43 03 1A 58 43 03 1C E7 43 03 1F 76 43 03 22 05 43 03 24 94 43 03 27 23 43 03 29 B2 43 03 2C 41 43 03 2E D0 43 03 31 5F 43 03 33 EE 43 03 36 7D 43 03 39 0C 43 03 3B 9B 43 03 3E 2A 43 03 40 B9 43 03 43 48 43 03 45 D7 43 03 48 66 43 03 4A F5 43 03 4D 84 43 03 50 13 43 03 52 A2 43 03 55 31 43 03 57 C0 43 03 5A 4F 43 03 5C DE 43 03 5F 6D 43 03 61 FC 43 03 64 8B 43 03 67 1A 43 03 69 A9 43 03 6C 38 43 03 6E C7 43 03 71 56 43 03 73 E5 43 03 2C 1C "
+:0: "2019-11-29 14:41:56:725" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:895" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:920" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:56:940" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:007" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:57:029" "Socket read hex: 11 2 1B 70 "
+:0: "2019-11-29 14:41:57:050" "Socket write hex: skt-11 5 36 36 2E 36 30 "
+:0: "2019-11-29 14:41:57:071" "Socket read hex: 1 5 36 36 2E 36 30 "
+:0: "2019-11-29 14:41:57:116" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:57:138" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:57:226" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:248" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:268" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:289" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:311" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:332" "Socket write hex: skt-13 225 04 03 DC 76 74 43 03 79 03 43 03 7B 92 43 03 7E 21 43 03 80 B0 43 03 83 3F 43 03 85 CE 43 03 88 5D 43 03 8A EC 43 03 8D 7B 43 03 90 0A 43 03 92 99 43 03 95 28 43 03 97 B7 43 03 9A 46 43 03 9C D5 43 03 9F 64 43 03 A1 F3 43 03 A4 82 43 03 A7 11 43 03 A9 A0 43 03 AC 2F 43 03 AE BE 43 03 B1 4D 43 03 B3 DC 43 03 B6 6B 43 03 B8 FA 43 03 BB 89 43 03 BE 18 43 03 C0 A7 43 03 C3 36 43 03 C5 C5 43 03 C8 54 43 03 CA E3 43 03 CD 72 43 03 D0 01 43 03 D2 90 43 03 D5 1F 43 03 D7 AE 43 03 DA 3D 43 03 DC CC 43 03 DF 5B 43 03 E1 EA 43 03 E4 79 43 03 E7 08 43 03 E9 97 43 03 EC 26 43 03 EE B5 43 03 F1 44 43 03 F3 D3 43 03 F6 62 43 03 F8 F1 43 03 FB 80 43 03 FE 0F 43 03 00 9E 43 04 FC 28 "
+:0: "2019-11-29 14:41:57:354" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:551" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:577" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:598" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:659" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:57:682" "Socket read hex: 11 4 1B 70 1B 70 "
+:0: "2019-11-29 14:41:57:703" "Socket write hex: skt-11 5 37 30 2E 33 30 "
+:0: "2019-11-29 14:41:57:725" "Socket read hex: 1 5 37 30 2E 33 30 "
+:0: "2019-11-29 14:41:57:768" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:57:791" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:57:878" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:905" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:927" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:948" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:970" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:57:992" "Socket write hex: skt-13 225 04 03 DC 03 2D 43 04 05 BC 43 04 08 4B 43 04 0A DA 43 04 0D 69 43 04 0F F8 43 04 12 87 43 04 15 16 43 04 17 A5 43 04 1A 34 43 04 1C C3 43 04 1F 52 43 04 21 E1 43 04 24 70 43 04 26 FF 43 04 29 8E 43 04 2C 1D 43 04 2E AC 43 04 31 3B 43 04 33 CA 43 04 36 59 43 04 38 E8 43 04 3B 77 43 04 3E 06 43 04 40 95 43 04 43 24 43 04 45 B3 43 04 48 42 43 04 4A D1 43 04 4D 60 43 04 4F EF 43 04 52 7E 43 04 55 0D 43 04 57 9C 43 04 5A 2B 43 04 5C BA 43 04 5F 49 43 04 61 D8 43 04 64 67 43 04 66 F6 43 04 69 85 43 04 6C 14 43 04 6E A3 43 04 71 32 43 04 73 C1 43 04 76 50 43 04 78 DF 43 04 7B 6E 43 04 7D FD 43 04 80 8C 43 04 83 1B 43 04 85 AA 43 04 88 39 43 04 8A C8 43 04 8D 57 43 04 0B F7 "
+:0: "2019-11-29 14:41:58:013" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:207" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:237" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:261" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:320" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:58:343" "Socket read hex: 11 6 1B 70 1B 70 1B 70 "
+:0: "2019-11-29 14:41:58:365" "Socket write hex: skt-11 5 37 34 2E 31 30 "
+:0: "2019-11-29 14:41:58:388" "Socket read hex: 1 5 37 34 2E 31 30 "
+:0: "2019-11-29 14:41:58:426" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:58:450" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:58:538" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:561" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:583" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:605" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:629" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:651" "Socket write hex: skt-13 225 04 03 DC 8F E6 43 04 92 75 43 04 95 04 43 04 97 93 43 04 9A 22 43 04 9C B1 43 04 9F 40 43 04 A1 CF 43 04 A4 5E 43 04 A6 ED 43 04 A9 7C 43 04 AC 0B 43 04 AE 9A 43 04 B1 29 43 04 B3 B8 43 04 B6 47 43 04 B8 D6 43 04 BB 65 43 04 BD F4 43 04 C0 83 43 04 C3 12 43 04 C5 A1 43 04 C8 30 43 04 CA BF 43 04 CD 4E 43 04 CF DD 43 04 D2 6C 43 04 D4 FB 43 04 D7 8A 43 04 DA 19 43 04 DC A8 43 04 DF 37 43 04 E1 C6 43 04 E4 55 43 04 E6 E4 43 04 E9 73 43 04 EC 02 43 04 EE 91 43 04 F1 20 43 04 F3 AF 43 04 F6 3E 43 04 F8 CD 43 04 FB 5C 43 04 FD EB 43 04 00 7A 43 05 03 09 43 05 05 98 43 05 08 27 43 05 0A B6 43 05 0D 45 43 05 0F D4 43 05 12 63 43 05 14 F2 43 05 17 81 43 05 1A 10 43 05 49 EF "
+:0: "2019-11-29 14:41:58:674" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:865" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:893" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:915" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:58:976" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:59:001" "Socket read hex: 11 2 1B 70 "
+:0: "2019-11-29 14:41:59:025" "Socket write hex: skt-11 5 37 38 2E 30 30 "
+:0: "2019-11-29 14:41:59:048" "Socket read hex: 1 5 37 38 2E 30 30 "
+:0: "2019-11-29 14:41:59:082" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:59:105" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:59:193" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:220" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:242" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:265" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:289" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:312" "Socket write hex: skt-13 225 04 03 DC 1C 9F 43 05 1F 2E 43 05 21 BD 43 05 24 4C 43 05 26 DB 43 05 29 6A 43 05 2B F9 43 05 2E 88 43 05 31 17 43 05 33 A6 43 05 36 35 43 05 38 C4 43 05 3B 53 43 05 3D E2 43 05 40 71 43 05 43 00 43 05 45 8F 43 05 48 1E 43 05 4A AD 43 05 4D 3C 43 05 4F CB 43 05 52 5A 43 05 54 E9 43 05 57 78 43 05 5A 07 43 05 5C 96 43 05 5F 25 43 05 61 B4 43 05 64 43 43 05 66 D2 43 05 69 61 43 05 6B F0 43 05 6E 7F 43 05 71 0E 43 05 73 9D 43 05 76 2C 43 05 78 BB 43 05 7B 4A 43 05 7D D9 43 05 80 68 43 05 82 F7 43 05 85 86 43 05 88 15 43 05 8A A4 43 05 8D 33 43 05 8F C2 43 05 92 51 43 05 94 E0 43 05 97 6F 43 05 99 FE 43 05 9C 8D 43 05 9F 1C 43 05 A1 AB 43 05 A4 3A 43 05 A6 C9 43 05 94 CF "
+:0: "2019-11-29 14:41:59:335" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:519" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:544" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:568" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:630" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:41:59:658" "Socket read hex: 11 4 1B 70 1B 70 "
+:0: "2019-11-29 14:41:59:681" "Socket write hex: skt-11 5 38 32 2E 30 30 "
+:0: "2019-11-29 14:41:59:705" "Socket read hex: 1 5 38 32 2E 30 30 "
+:0: "2019-11-29 14:41:59:740" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:41:59:766" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:41:59:852" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:877" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:900" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:922" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:947" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:41:59:970" "Socket write hex: skt-13 225 04 03 DC A9 58 43 05 AB E7 43 05 AE 76 43 05 B1 05 43 05 B3 94 43 05 B6 23 43 05 B8 B2 43 05 BB 41 43 05 BD D0 43 05 C0 5F 43 05 C2 EE 43 05 C5 7D 43 05 C8 0C 43 05 CA 9B 43 05 CD 2A 43 05 CF B9 43 05 D2 48 43 05 D4 D7 43 05 D7 66 43 05 D9 F5 43 05 DC 84 43 05 DF 13 43 05 E1 A2 43 05 E4 31 43 05 E6 C0 43 05 E9 4F 43 05 EB DE 43 05 EE 6D 43 05 F0 FC 43 05 F3 8B 43 05 F6 1A 43 05 F8 A9 43 05 FB 38 43 05 FD C7 43 05 00 56 43 06 02 E5 43 06 05 74 43 06 08 03 43 06 0A 92 43 06 0D 21 43 06 0F B0 43 06 12 3F 43 06 14 CE 43 06 17 5D 43 06 19 EC 43 06 1C 7B 43 06 1F 0A 43 06 21 99 43 06 24 28 43 06 26 B7 43 06 29 46 43 06 2B D5 43 06 2E 64 43 06 30 F3 43 06 33 82 43 06 88 6D "
+:0: "2019-11-29 14:41:59:994" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:176" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:204" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:228" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:284" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:42:00:310" "Socket read hex: 11 6 1B 70 1B 70 1B 70 "
+:0: "2019-11-29 14:42:00:334" "Socket write hex: skt-11 5 38 36 2E 31 30 "
+:0: "2019-11-29 14:42:00:359" "Socket read hex: 1 5 38 36 2E 31 30 "
+:0: "2019-11-29 14:42:00:508" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:536" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:564" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:598" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:629" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:653" "Socket write hex: skt-13 225 04 03 DC 36 11 43 06 38 A0 43 06 3B 2F 43 06 3D BE 43 06 40 4D 43 06 42 DC 43 06 45 6B 43 06 47 FA 43 06 4A 89 43 06 4D 18 43 06 4F A7 43 06 52 36 43 06 54 C5 43 06 57 54 43 06 59 E3 43 06 5C 72 43 06 5F 01 43 06 61 90 43 06 64 1F 43 06 66 AE 43 06 69 3D 43 06 6B CC 43 06 6E 5B 43 06 70 EA 43 06 73 79 43 06 76 08 43 06 78 97 43 06 7B 26 43 06 7D B5 43 06 80 44 43 06 82 D3 43 06 85 62 43 06 87 F1 43 06 8A 80 43 06 8D 0F 43 06 8F 9E 43 06 92 2D 43 06 94 BC 43 06 97 4B 43 06 99 DA 43 06 9C 69 43 06 9E F8 43 06 A1 87 43 06 A4 16 43 06 A6 A5 43 06 A9 34 43 06 AB C3 43 06 AE 52 43 06 B0 E1 43 06 B3 70 43 06 B5 FF 43 06 B8 8E 43 06 BB 1D 43 06 BD AC 43 06 C0 3B 43 06 0F 7D "
+:0: "2019-11-29 14:42:00:676" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:832" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:859" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:883" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:00:942" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:42:00:968" "Socket read hex: 11 2 1B 70 "
+:0: "2019-11-29 14:42:00:992" "Socket write hex: skt-11 5 39 30 2E 33 30 "
+:0: "2019-11-29 14:42:01:019" "Socket read hex: 1 5 39 30 2E 33 30 "
+:0: "2019-11-29 14:42:01:159" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:185" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:210" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:235" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:262" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:288" "Socket write hex: skt-13 225 04 03 DC C2 CA 43 06 C5 59 43 06 C7 E8 43 06 CA 77 43 06 CD 06 43 06 CF 95 43 06 D2 24 43 06 D4 B3 43 06 D7 42 43 06 D9 D1 43 06 DC 60 43 06 DE EF 43 06 E1 7E 43 06 E4 0D 43 06 E6 9C 43 06 E9 2B 43 06 EB BA 43 06 EE 49 43 06 F0 D8 43 06 F3 67 43 06 F5 F6 43 06 F8 85 43 06 FB 14 43 06 FD A3 43 06 00 32 43 07 02 C1 43 07 05 50 43 07 07 DF 43 07 0A 6E 43 07 0C FD 43 07 0F 8C 43 07 12 1B 43 07 14 AA 43 07 17 39 43 07 19 C8 43 07 1C 57 43 07 1E E6 43 07 21 75 43 07 24 04 43 07 26 93 43 07 29 22 43 07 2B B1 43 07 2E 40 43 07 30 CF 43 07 33 5E 43 07 35 ED 43 07 38 7C 43 07 3B 0B 43 07 3D 9A 43 07 40 29 43 07 42 B8 43 07 45 47 43 07 47 D6 43 07 4A 65 43 07 4C F4 43 07 ED 74 "
+:0: "2019-11-29 14:42:01:313" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:490" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:530" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:556" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:601" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:42:01:630" "Socket read hex: 11 4 1B 70 1B 70 "
+:0: "2019-11-29 14:42:01:654" "Socket write hex: skt-11 5 39 34 2E 36 30 "
+:0: "2019-11-29 14:42:01:679" "Socket read hex: 1 5 39 34 2E 36 30 "
+:0: "2019-11-29 14:42:01:817" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:851" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:877" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:915" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:941" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:01:966" "Socket write hex: skt-13 225 04 03 DC 4F 83 43 07 52 12 43 07 54 A1 43 07 57 30 43 07 59 BF 43 07 5C 4E 43 07 5E DD 43 07 61 6C 43 07 63 FB 43 07 66 8A 43 07 69 19 43 07 6B A8 43 07 6E 37 43 07 70 C6 43 07 73 55 43 07 75 E4 43 07 78 73 43 07 7B 02 43 07 7D 91 43 07 80 20 43 07 82 AF 43 07 85 3E 43 07 87 CD 43 07 8A 5C 43 07 8C EB 43 07 8F 7A 43 07 92 09 43 07 94 98 43 07 97 27 43 07 99 B6 43 07 9C 45 43 07 9E D4 43 07 A1 63 43 07 A3 F2 43 07 A6 81 43 07 A9 10 43 07 AB 9F 43 07 AE 2E 43 07 B0 BD 43 07 B3 4C 43 07 B5 DB 43 07 B8 6A 43 07 BA F9 43 07 BD 88 43 07 C0 17 43 07 C2 A6 43 07 C5 35 43 07 C7 C4 43 07 CA 53 43 07 CC E2 43 07 CF 71 43 07 D2 00 43 07 D4 8F 43 07 D7 1E 43 07 D9 AD 43 07 C1 0E "
+:0: "2019-11-29 14:42:01:991" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:146" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:176" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:202" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:272" "Socket read hex: 11 6 1B 70 1B 70 1B 70 "
+:0: "2019-11-29 14:42:02:299" "Socket write hex: skt-11 5 39 39 2E 30 30 "
+:0: "2019-11-29 14:42:02:476" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:525" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:550" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:576" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:604" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:629" "Socket write hex: skt-13 225 04 03 DC DC 3C 43 07 DE CB 43 07 E1 5A 43 07 E3 E9 43 07 E6 78 43 07 E9 07 43 07 EB 96 43 07 EE 25 43 07 F0 B4 43 07 F3 43 43 07 F5 D2 43 07 F8 61 43 07 FA F0 43 07 FD 7F 43 07 00 0E 43 08 02 9D 43 08 05 2C 43 08 07 BB 43 08 0A 4A 43 08 0C D9 43 08 0F 68 43 08 11 F7 43 08 14 86 43 08 17 15 43 08 19 A4 43 08 1C 33 43 08 1E C2 43 08 21 51 43 08 23 E0 43 08 26 6F 43 08 28 FE 43 08 2B 8D 43 08 2E 1C 43 08 30 AB 43 08 33 3A 43 08 35 C9 43 08 38 58 43 08 3A E7 43 08 3D 76 43 08 40 05 43 08 42 94 43 08 45 23 43 08 47 B2 43 08 4A 41 43 08 4C D0 43 08 4F 5F 43 08 51 EE 43 08 54 7D 43 08 57 0C 43 08 59 9B 43 08 5C 2A 43 08 5E B9 43 08 61 48 43 08 63 D7 43 08 66 66 43 08 88 FD "
+:0: "2019-11-29 14:42:02:654" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:802" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:840" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:867" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:02:927" "Socket read hex: 11 2 1B 70 "
+:0: "2019-11-29 14:42:02:953" "Socket write hex: skt-11 6 31 30 33 2E 35 30 "
+:0: "2019-11-29 14:42:03:131" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:161" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:192" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:217" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:246" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:274" "Socket write hex: skt-13 225 04 03 DC 68 F5 43 08 6B 84 43 08 6E 13 43 08 70 A2 43 08 73 31 43 08 75 C0 43 08 78 4F 43 08 7A DE 43 08 7D 6D 43 08 7F FC 43 08 82 8B 43 08 85 1A 43 08 87 A9 43 08 8A 38 43 08 8C C7 43 08 8F 56 43 08 91 E5 43 08 94 74 43 08 97 03 43 08 99 92 43 08 9C 21 43 08 9E B0 43 08 A1 3F 43 08 A3 CE 43 08 A6 5D 43 08 A8 EC 43 08 AB 7B 43 08 AE 0A 43 08 B0 99 43 08 B3 28 43 08 B5 B7 43 08 B8 46 43 08 BA D5 43 08 BD 64 43 08 BF F3 43 08 C2 82 43 08 C5 11 43 08 C7 A0 43 08 CA 2F 43 08 CC BE 43 08 CF 4D 43 08 D1 DC 43 08 D4 6B 43 08 D6 FA 43 08 D9 89 43 08 DC 18 43 08 DE A7 43 08 E1 36 43 08 E3 C5 43 08 E6 54 43 08 E8 E3 43 08 EB 72 43 08 EE 01 43 08 F0 90 43 08 F3 1F 43 08 00 B1 "
+:0: "2019-11-29 14:42:03:302" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:457" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:483" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:510" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:588" "Socket read hex: 11 4 1B 70 1B 70 "
+:0: "2019-11-29 14:42:03:615" "Socket write hex: skt-11 6 31 30 38 2E 31 30 "
+:0: "2019-11-29 14:42:03:789" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:819" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:846" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:872" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:900" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:03:926" "Socket write hex: skt-13 225 04 03 DC F5 AE 43 08 F8 3D 43 08 FA CC 43 08 FD 5B 43 08 FF EA 43 08 02 79 43 09 05 08 43 09 07 97 43 09 0A 26 43 09 0C B5 43 09 0F 44 43 09 11 D3 43 09 14 62 43 09 16 F1 43 09 19 80 43 09 1C 0F 43 09 1E 9E 43 09 21 2D 43 09 23 BC 43 09 26 4B 43 09 28 DA 43 09 2B 69 43 09 2D F8 43 09 30 87 43 09 33 16 43 09 35 A5 43 09 38 34 43 09 3A C3 43 09 3D 52 43 09 3F E1 43 09 42 70 43 09 44 FF 43 09 47 8E 43 09 4A 1D 43 09 4C AC 43 09 4F 3B 43 09 51 CA 43 09 54 59 43 09 56 E8 43 09 59 77 43 09 5C 06 43 09 5E 95 43 09 61 24 43 09 63 B3 43 09 66 42 43 09 68 D1 43 09 6B 60 43 09 6D EF 43 09 70 7E 43 09 73 0D 43 09 75 9C 43 09 78 2B 43 09 7A BA 43 09 7D 49 43 09 7F D8 43 09 74 91 "
+:0: "2019-11-29 14:42:03:953" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:115" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:174" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:202" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:352" "Socket read hex: 11 6 1B 70 1B 70 1B 70 "
+:0: "2019-11-29 14:42:04:380" "Socket write hex: skt-11 6 31 31 32 2E 38 30 "
+:0: "2019-11-29 14:42:04:552" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:580" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:620" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:648" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:677" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:705" "Socket write hex: skt-13 225 04 03 DC 82 67 43 09 84 F6 43 09 87 85 43 09 8A 14 43 09 8C A3 43 09 8F 32 43 09 91 C1 43 09 94 50 43 09 96 DF 43 09 99 6E 43 09 9B FD 43 09 9E 8C 43 09 A1 1B 43 09 A3 AA 43 09 A6 39 43 09 A8 C8 43 09 AB 57 43 09 AD E6 43 09 B0 75 43 09 B3 04 43 09 B5 93 43 09 B8 22 43 09 BA B1 43 09 BD 40 43 09 BF CF 43 09 C2 5E 43 09 C4 ED 43 09 C7 7C 43 09 CA 0B 43 09 CC 9A 43 09 CF 29 43 09 D1 B8 43 09 D4 47 43 09 D6 D6 43 09 D9 65 43 09 DB F4 43 09 DE 83 43 09 E1 12 43 09 E3 A1 43 09 E6 30 43 09 E8 BF 43 09 EB 4E 43 09 ED DD 43 09 F0 6C 43 09 F2 FB 43 09 F5 8A 43 09 F8 19 43 09 FA A8 43 09 FD 37 43 09 FF C6 43 09 02 55 43 0A 04 E4 43 0A 07 73 43 0A 0A 02 43 0A 0C 91 43 0A 55 10 "
+:0: "2019-11-29 14:42:04:732" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:879" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:910" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:04:938" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:007" "Socket read hex: 11 2 1B 70 "
+:0: "2019-11-29 14:42:05:035" "Socket write hex: skt-11 6 31 31 37 2E 36 30 "
+:0: "2019-11-29 14:42:05:208" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:240" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:268" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:298" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:330" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:361" "Socket write hex: skt-13 225 04 03 DC 0F 20 43 0A 11 AF 43 0A 14 3E 43 0A 16 CD 43 0A 19 5C 43 0A 1B EB 43 0A 1E 7A 43 0A 21 09 43 0A 23 98 43 0A 26 27 43 0A 28 B6 43 0A 2B 45 43 0A 2D D4 43 0A 30 63 43 0A 32 F2 43 0A 35 81 43 0A 38 10 43 0A 3A 9F 43 0A 3D 2E 43 0A 3F BD 43 0A 42 4C 43 0A 44 DB 43 0A 47 6A 43 0A 49 F9 43 0A 4C 88 43 0A 4F 17 43 0A 51 A6 43 0A 54 35 43 0A 56 C4 43 0A 59 53 43 0A 5B E2 43 0A 5E 71 43 0A 61 00 43 0A 63 8F 43 0A 66 1E 43 0A 68 AD 43 0A 6B 3C 43 0A 6D CB 43 0A 70 5A 43 0A 72 E9 43 0A 75 78 43 0A 78 07 43 0A 7A 96 43 0A 7D 25 43 0A 7F B4 43 0A 82 43 43 0A 84 D2 43 0A 87 61 43 0A 89 F0 43 0A 8C 7F 43 0A 8F 0E 43 0A 91 9D 43 0A 94 2C 43 0A 96 BB 43 0A 99 4A 43 0A B8 BD "
+:0: "2019-11-29 14:42:05:390" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:536" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:569" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:597" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:662" "Socket read hex: 11 4 1B 70 1B 70 "
+:0: "2019-11-29 14:42:05:692" "Socket write hex: skt-11 6 31 32 32 2E 35 30 "
+:0: "2019-11-29 14:42:05:865" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:902" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:931" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:959" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:05:990" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:018" "Socket write hex: skt-13 225 04 03 DC 9B D9 43 0A 9E 68 43 0A A0 F7 43 0A A3 86 43 0A A6 15 43 0A A8 A4 43 0A AB 33 43 0A AD C2 43 0A B0 51 43 0A B2 E0 43 0A B5 6F 43 0A B7 FE 43 0A BA 8D 43 0A BD 1C 43 0A BF AB 43 0A C2 3A 43 0A C4 C9 43 0A C7 58 43 0A C9 E7 43 0A CC 76 43 0A CF 05 43 0A D1 94 43 0A D4 23 43 0A D6 B2 43 0A D9 41 43 0A DB D0 43 0A DE 5F 43 0A E0 EE 43 0A E3 7D 43 0A E6 0C 43 0A E8 9B 43 0A EB 2A 43 0A ED B9 43 0A F0 48 43 0A F2 D7 43 0A F5 66 43 0A F7 F5 43 0A FA 84 43 0A FD 13 43 0A FF A2 43 0A 02 31 43 0B 04 C0 43 0B 07 4F 43 0B 09 DE 43 0B 0C 6D 43 0B 0E FC 43 0B 11 8B 43 0B 14 1A 43 0B 16 A9 43 0B 19 38 43 0B 1B C7 43 0B 1E 56 43 0B 20 E5 43 0B 23 74 43 0B 26 03 43 0B 4C 20 "
+:0: "2019-11-29 14:42:06:047" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:192" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:228" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:257" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:322" "Socket read hex: 11 6 1B 70 1B 70 1B 70 "
+:0: "2019-11-29 14:42:06:352" "Socket write hex: skt-11 6 31 32 37 2E 35 30 "
+:0: "2019-11-29 14:42:06:522" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:556" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:586" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:614" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:653" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:682" "Socket write hex: skt-13 225 04 03 DC 28 92 43 0B 2B 21 43 0B 2D B0 43 0B 30 3F 43 0B 32 CE 43 0B 35 5D 43 0B 37 EC 43 0B 3A 7B 43 0B 3D 0A 43 0B 3F 99 43 0B 42 28 43 0B 44 B7 43 0B 47 46 43 0B 49 D5 43 0B 4C 64 43 0B 4E F3 43 0B 51 82 43 0B 54 11 43 0B 56 A0 43 0B 59 2F 43 0B 5B BE 43 0B 5E 4D 43 0B 60 DC 43 0B 63 6B 43 0B 65 FA 43 0B 68 89 43 0B 6B 18 43 0B 6D A7 43 0B 70 36 43 0B 72 C5 43 0B 75 54 43 0B 77 E3 43 0B 7A 72 43 0B 7D 01 43 0B 7F 90 43 0B 82 1F 43 0B 84 AE 43 0B 87 3D 43 0B 89 CC 43 0B 8C 5B 43 0B 8E EA 43 0B 91 79 43 0B 94 08 43 0B 96 97 43 0B 99 26 43 0B 9B B5 43 0B 9E 44 43 0B A0 D3 43 0B A3 62 43 0B A5 F1 43 0B A8 80 43 0B AB 0F 43 0B AD 9E 43 0B B0 2D 43 0B B2 BC 43 0B 3F 65 "
+:0: "2019-11-29 14:42:06:712" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:853" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:889" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:919" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:06:977" "Socket read hex: 11 2 1B 70 "
+:0: "2019-11-29 14:42:07:007" "Socket write hex: skt-11 6 31 33 32 2E 36 30 "
+:0: "2019-11-29 14:42:07:176" "Socket write hex: skt-4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:07:210" "Socket write hex: skt-5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:07:240" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:07:269" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:07:302" "Socket read hex: 13 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:07:332" "Socket write hex: skt-13 225 04 03 DC B5 4B 43 0B B7 DA 43 0B BA 69 43 0B BC F8 43 0B BF 87 43 0B C2 16 43 0B C4 A5 43 0B C7 34 43 0B C9 C3 43 0B CC 52 43 0B CE E1 43 0B D1 70 43 0B D3 FF 43 0B D6 8E 43 0B D9 1D 43 0B DB AC 43 0B DE 3B 43 0B E0 CA 43 0B E3 59 43 0B E5 E8 43 0B E8 77 43 0B EB 06 43 0B ED 95 43 0B F0 24 43 0B F2 B3 43 0B F5 42 43 0B F7 D1 43 0B FA 60 43 0B FC EF 43 0B FF 7E 43 0B 02 0D 43 0C 04 9C 43 0C 07 2B 43 0C 09 BA 43 0C 0C 49 43 0C 0E D8 43 0C 11 67 43 0C 13 F6 43 0C 16 85 43 0C 19 14 43 0C 1B A3 43 0C 1E 32 43 0C 20 C1 43 0C 23 50 43 0C 25 DF 43 0C 28 6E 43 0C 2A FD 43 0C 2D 8C 43 0C 30 1B 43 0C 32 AA 43 0C 35 39 43 0C 37 C8 43 0C 3A 57 43 0C 3C E6 43 0C 3F 75 43 0C 69 96 "
+:0: "2019-11-29 14:42:07:362" "Socket read hex: 14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:07:503" "Socket write hex: skt-14 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:07:539" "Socket read hex: 4 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:07:570" "Socket read hex: 5 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:42:07:633" "Socket read hex: 11 4 1B 70 1B 70 "
+:0: "2019-11-29 14:42:07:663" "Socket write hex: skt-11 6 31 33 37 2E 38 30 "
+:0: "2019-11-29 14:44:20:293" 
+start
+:0: "2019-11-29 14:44:20:691" "192.168.1.220"
+:0: "2019-11-29 14:44:20:695" "192.168.1.221"
+:0: "2019-11-29 14:44:20:698" "XY_DD_1"
+:0: "2019-11-29 14:44:20:701" "XY-DD-2"
+:0: "2019-11-29 14:44:20:705" "XY-DD-3"
+:0: "2019-11-29 14:44:20:708" "XY-DD-4"
+:0: "2019-11-29 14:44:20:712" "XY-DD-5"
+:0: "2019-11-29 14:44:20:715" "XY-DD-6"
+:0: "2019-11-29 14:44:20:718" "XY-DD-7"
+:0: "2019-11-29 14:44:20:721" "XY-DD-FGG-9877"
+:0: "2019-11-29 14:44:20:725" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 14:44:20:729" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 14:44:20:731" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 14:44:20:734" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 14:44:20:904" "9 socket con"
+:0: "2019-11-29 14:44:20:908" "13 socket con"
+:0: "2019-11-29 14:44:20:912" "1 socket con"
+:0: "2019-11-29 14:44:20:915" "5 socket con"
+:0: "2019-11-29 14:44:20:918" "10 socket con"
+:0: "2019-11-29 14:44:20:921" "0 socket con"
+:0: "2019-11-29 14:44:20:925" "14 socket con"
+:0: "2019-11-29 14:44:20:929" "2 socket con"
+:0: "2019-11-29 14:44:20:932" "6 socket con"
+:0: "2019-11-29 14:44:20:935" "11 socket con"
+:0: "2019-11-29 14:44:20:938" "15 socket con"
+:0: "2019-11-29 14:44:20:942" "3 socket con"
+:0: "2019-11-29 14:44:20:945" "7 socket con"
+:0: "2019-11-29 14:44:20:948" "12 socket con"
+:0: "2019-11-29 14:44:20:951" "16 socket con"
+:0: "2019-11-29 14:44:20:955" "4 socket con"
+:0: "2019-11-29 14:44:20:959" "8 socket con"
+:0: "2019-11-29 14:44:27:991" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:28:002" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:28:535" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:28:543" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:29:740" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:44:30:287" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:44:30:296" "Socket write hex: skt-7 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:44:30:833" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:44:31:379" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:44:31:929" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:44:32:472" "Socket write hex: skt-6 8 04 03 00 97 00 6E 34 6F "
+:0: "2019-11-29 14:44:35:645" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:35:657" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:36:195" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:36:208" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:36:739" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:36:746" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:37:287" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:37:297" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:41:114" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:41:123" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:41:666" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:41:680" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:42:208" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:42:216" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:42:754" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:42:765" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:43:300" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:43:313" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:48:769" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:48:777" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:49:316" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:49:325" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:49:864" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:49:881" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:50:409" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:50:438" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:50:956" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:50:965" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:51:503" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:51:534" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:52:050" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:52:059" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:52:598" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:52:610" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:53:144" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:53:155" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:53:694" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:53:704" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:54:237" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:54:247" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:54:786" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:54:799" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:56:427" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:56:451" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:56:977" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:56:986" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:57:520" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:57:547" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:44:58:065" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:44:58:074" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:45:15:018" 0     0
+:0: "2019-11-29 14:45:15:567" 0.5     0.1
+:0: "2019-11-29 14:45:16:116" 1     0.3
+:0: "2019-11-29 14:45:16:660" 1.5     0.6
+:0: "2019-11-29 14:45:17:207" 2     1
+:0: "2019-11-29 14:45:17:753" 2.5     1.5
+:0: "2019-11-29 14:45:18:301" 3     2.1
+:0: "2019-11-29 14:45:18:851" 3.5     2.8
+:0: "2019-11-29 14:45:19:393" 4     3.6
+:0: "2019-11-29 14:45:19:942" 4.5     4.5
+:0: "2019-11-29 14:45:20:489" 5     5.5
+:0: "2019-11-29 14:45:21:034" 5.5     6.6
+:0: "2019-11-29 14:46:39:981" 
+start
+:0: "2019-11-29 14:46:40:357" "192.168.1.220"
+:0: "2019-11-29 14:46:40:361" "192.168.1.221"
+:0: "2019-11-29 14:46:40:365" "XY_DD_1"
+:0: "2019-11-29 14:46:40:368" "XY-DD-2"
+:0: "2019-11-29 14:46:40:372" "XY-DD-3"
+:0: "2019-11-29 14:46:40:375" "XY-DD-4"
+:0: "2019-11-29 14:46:40:378" "XY-DD-5"
+:0: "2019-11-29 14:46:40:382" "XY-DD-6"
+:0: "2019-11-29 14:46:40:385" "XY-DD-7"
+:0: "2019-11-29 14:46:40:389" "XY-DD-FGG-9877"
+:0: "2019-11-29 14:46:40:392" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 14:46:40:395" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 14:46:40:398" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 14:46:40:402" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 14:46:40:565" "15 socket con"
+:0: "2019-11-29 14:46:40:569" "8 socket con"
+:0: "2019-11-29 14:46:40:573" "11 socket con"
+:0: "2019-11-29 14:46:40:576" "4 socket con"
+:0: "2019-11-29 14:46:40:579" "14 socket con"
+:0: "2019-11-29 14:46:40:585" "10 socket con"
+:0: "2019-11-29 14:46:40:589" "7 socket con"
+:0: "2019-11-29 14:46:40:592" "3 socket con"
+:0: "2019-11-29 14:46:40:595" "16 socket con"
+:0: "2019-11-29 14:46:40:599" "13 socket con"
+:0: "2019-11-29 14:46:40:602" "6 socket con"
+:0: "2019-11-29 14:46:40:606" "2 socket con"
+:0: "2019-11-29 14:46:40:609" "1 socket con"
+:0: "2019-11-29 14:46:40:612" "0 socket con"
+:0: "2019-11-29 14:46:40:615" "12 socket con"
+:0: "2019-11-29 14:46:40:619" "9 socket con"
+:0: "2019-11-29 14:46:40:623" "5 socket con"
+:0: "2019-11-29 14:46:59:040" 0     0
+:0: "2019-11-29 14:46:59:582" 0.5     0.1
+:0: "2019-11-29 14:47:00:128" 1     0.3
+:0: "2019-11-29 14:47:00:676" 1.5     0.6
+:0: "2019-11-29 14:47:01:227" 2     1
+:0: "2019-11-29 14:47:01:769" 2.5     1.5
+:0: "2019-11-29 14:47:02:316" 3     2.1
+:0: "2019-11-29 14:47:02:866" 3.5     2.8
+:0: "2019-11-29 14:47:03:414" 4     3.6
+:0: "2019-11-29 14:47:03:957" 4.5     4.5
+:0: "2019-11-29 14:47:04:503" 5     5.5
+:0: "2019-11-29 14:47:05:051" 5.5     6.6
+:0: "2019-11-29 14:47:05:598" 6     7.8
+:0: "2019-11-29 14:48:18:757" 
+start
+:0: "2019-11-29 14:48:19:133" "192.168.1.220"
+:0: "2019-11-29 14:48:19:137" "192.168.1.221"
+:0: "2019-11-29 14:48:19:140" "XY_DD_1"
+:0: "2019-11-29 14:48:19:144" "XY-DD-2"
+:0: "2019-11-29 14:48:19:147" "XY-DD-3"
+:0: "2019-11-29 14:48:19:151" "XY-DD-4"
+:0: "2019-11-29 14:48:19:154" "XY-DD-5"
+:0: "2019-11-29 14:48:19:158" "XY-DD-6"
+:0: "2019-11-29 14:48:19:161" "XY-DD-7"
+:0: "2019-11-29 14:48:19:165" "XY-DD-FGG-9877"
+:0: "2019-11-29 14:48:19:168" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 14:48:19:171" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 14:48:19:174" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 14:48:19:177" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 14:48:19:325" "5 socket con"
+:0: "2019-11-29 14:48:19:329" "10 socket con"
+:0: "2019-11-29 14:48:19:332" "14 socket con"
+:0: "2019-11-29 14:48:19:336" "2 socket con"
+:0: "2019-11-29 14:48:19:340" "6 socket con"
+:0: "2019-11-29 14:48:19:343" "11 socket con"
+:0: "2019-11-29 14:48:19:346" "15 socket con"
+:0: "2019-11-29 14:48:19:351" "3 socket con"
+:0: "2019-11-29 14:48:19:354" "7 socket con"
+:0: "2019-11-29 14:48:19:357" "0 socket con"
+:0: "2019-11-29 14:48:19:361" "8 socket con"
+:0: "2019-11-29 14:48:19:365" "12 socket con"
+:0: "2019-11-29 14:48:19:368" "4 socket con"
+:0: "2019-11-29 14:48:19:371" "9 socket con"
+:0: "2019-11-29 14:48:19:375" "13 socket con"
+:0: "2019-11-29 14:48:19:379" "1 socket con"
+:0: "2019-11-29 14:48:19:383" "16 socket con"
+:0: "2019-11-29 14:48:33:556" 
+start
+:0: "2019-11-29 14:48:33:929" "192.168.1.220"
+:0: "2019-11-29 14:48:33:933" "192.168.1.221"
+:0: "2019-11-29 14:48:33:936" "XY_DD_1"
+:0: "2019-11-29 14:48:33:939" "XY-DD-2"
+:0: "2019-11-29 14:48:33:941" "XY-DD-3"
+:0: "2019-11-29 14:48:33:945" "XY-DD-4"
+:0: "2019-11-29 14:48:33:948" "XY-DD-5"
+:0: "2019-11-29 14:48:33:951" "XY-DD-6"
+:0: "2019-11-29 14:48:33:955" "XY-DD-7"
+:0: "2019-11-29 14:48:33:958" "XY-DD-FGG-9877"
+:0: "2019-11-29 14:48:33:961" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 14:48:33:964" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 14:48:33:968" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 14:48:33:971" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 14:48:34:155" "4 socket con"
+:0: "2019-11-29 14:48:34:158" "9 socket con"
+:0: "2019-11-29 14:48:34:162" "13 socket con"
+:0: "2019-11-29 14:48:34:165" "2 socket con"
+:0: "2019-11-29 14:48:34:169" "5 socket con"
+:0: "2019-11-29 14:48:34:172" "10 socket con"
+:0: "2019-11-29 14:48:34:174" "0 socket con"
+:0: "2019-11-29 14:48:34:178" "14 socket con"
+:0: "2019-11-29 14:48:34:181" "1 socket con"
+:0: "2019-11-29 14:48:34:185" "15 socket con"
+:0: "2019-11-29 14:48:34:188" "6 socket con"
+:0: "2019-11-29 14:48:34:191" "7 socket con"
+:0: "2019-11-29 14:48:34:194" "11 socket con"
+:0: "2019-11-29 14:48:34:198" "16 socket con"
+:0: "2019-11-29 14:48:34:201" "3 socket con"
+:0: "2019-11-29 14:48:34:204" "8 socket con"
+:0: "2019-11-29 14:48:34:208" "12 socket con"
+:0: "2019-11-29 14:50:55:207" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:50:55:216" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:50:55:646" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:50:55:683" "Socket read hex: 1 7 33 33 34 31 2E 31 30 "
+:0: "2019-11-29 14:50:55:755" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:50:55:768" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:50:56:196" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:50:56:233" "Socket read hex: 1 7 33 33 36 37 2E 30 30 "
+:0: "2019-11-29 14:50:56:304" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:50:56:311" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:50:56:738" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:50:56:777" "Socket read hex: 1 7 33 33 39 33 2E 30 30 "
+:0: "2019-11-29 14:50:56:849" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:50:56:857" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:50:57:289" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:50:57:328" "Socket read hex: 1 7 33 34 31 39 2E 31 30 "
+:0: "2019-11-29 14:50:57:396" "Socket write hex: skt-0 11 01 00 00 7A 44 50 00 01 00 02 00 "
+:0: "2019-11-29 14:50:57:404" "Socket read hex: 0 8 00 00 7A 44 50 00 01 00 "
+:0: "2019-11-29 14:50:57:833" "Socket write hex: skt-1 2 1B 70 "
+:0: "2019-11-29 14:50:57:873" "Socket read hex: 1 7 33 34 34 35 2E 33 30 "
+:0: "2019-11-29 14:51:03:302" 0     0
+:0: "2019-11-29 14:51:03:852" 0.5     0.1
+:0: "2019-11-29 14:51:04:393" 1     0.3
+:0: "2019-11-29 14:51:43:003" 0     0
+:0: "2019-11-29 14:51:43:553" 0.5     0.1
+:0: "2019-11-29 14:51:44:103" 1     0.3
+:0: "2019-11-29 14:51:44:644" 1.5     0.6
+:0: "2019-11-29 14:51:45:194" 2     1
+:0: "2019-11-29 14:51:45:740" 2.5     1.5
+:0: "2019-11-29 14:51:46:286" 3     2.1
+:0: "2019-11-29 14:51:46:832" 3.5     2.8
+:0: "2019-11-29 14:51:47:383" 4     3.6
+:0: "2019-11-29 14:51:47:928" 4.5     4.5
+:0: "2019-11-29 14:51:48:473" 5     5.5
+:0: "2019-11-29 14:51:49:020" 5.5     6.6
+:0: "2019-11-29 14:51:49:568" 6     7.8
+:0: "2019-11-29 14:51:50:114" 6.5     9.1
+:0: "2019-11-29 14:51:50:660" 7     10.5
+:0: "2019-11-29 14:51:51:208" 7.5     12
+:0: "2019-11-29 14:51:51:753" 8     13.6
+:0: "2019-11-29 14:51:52:304" 8.5     15.3
+:0: "2019-11-29 14:51:52:852" 9     17.1
+:0: "2019-11-29 14:51:53:394" 9.5     19
+:0: "2019-11-29 14:51:53:944" 10     21
+:0: "2019-11-29 15:05:19:662" 
+start
+:0: "2019-11-29 15:05:20:071" "192.168.1.220"
+:0: "2019-11-29 15:05:20:074" "192.168.1.221"
+:0: "2019-11-29 15:05:20:077" "XY_DD_1"
+:0: "2019-11-29 15:05:20:081" "XY-DD-2"
+:0: "2019-11-29 15:05:20:085" "XY-DD-3"
+:0: "2019-11-29 15:05:20:088" "XY-DD-4"
+:0: "2019-11-29 15:05:20:092" "XY-DD-5"
+:0: "2019-11-29 15:05:20:095" "XY-DD-6"
+:0: "2019-11-29 15:05:20:099" "XY-DD-7"
+:0: "2019-11-29 15:05:20:102" "XY-DD-FGG-9877"
+:0: "2019-11-29 15:05:20:105" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 15:05:20:108" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 15:05:20:111" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 15:05:20:114" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 15:05:20:267" "9 socket con"
+:0: "2019-11-29 15:05:20:271" "0 socket con"
+:0: "2019-11-29 15:05:20:276" "13 socket con"
+:0: "2019-11-29 15:05:20:280" "3 socket con"
+:0: "2019-11-29 15:05:20:283" "16 socket con"
+:0: "2019-11-29 15:05:20:287" "8 socket con"
+:0: "2019-11-29 15:05:20:290" "12 socket con"
+:0: "2019-11-29 15:05:20:294" "2 socket con"
+:0: "2019-11-29 15:05:20:297" "15 socket con"
+:0: "2019-11-29 15:05:20:300" "6 socket con"
+:0: "2019-11-29 15:05:20:303" "7 socket con"
+:0: "2019-11-29 15:05:20:307" "11 socket con"
+:0: "2019-11-29 15:05:20:310" "5 socket con"
+:0: "2019-11-29 15:05:20:314" "10 socket con"
+:0: "2019-11-29 15:05:20:317" "14 socket con"
+:0: "2019-11-29 15:05:20:320" "1 socket con"
+:0: "2019-11-29 15:05:20:323" "4 socket con"
+:0: "2019-11-29 15:06:17:019" 0     0
+:0: "2019-11-29 15:06:17:568" 0.5     0.1
+:0: "2019-11-29 15:06:18:115" 1     0.3
+:0: "2019-11-29 15:06:18:660" 1.5     0.6
+:0: "2019-11-29 15:06:19:209" 2     1
+:0: "2019-11-29 15:06:19:753" 2.5     1.5
+:0: "2019-11-29 15:06:20:302" 3     2.1
+:0: "2019-11-29 15:06:20:848" 3.5     2.8
+:0: "2019-11-29 15:06:21:396" 4     3.6
+:0: "2019-11-29 15:06:21:945" 4.5     4.5
+:0: "2019-11-29 15:08:09:727" 
+start
+:0: "2019-11-29 15:08:10:120" "192.168.1.220"
+:0: "2019-11-29 15:08:10:124" "192.168.1.221"
+:0: "2019-11-29 15:08:10:127" "XY_DD_1"
+:0: "2019-11-29 15:08:10:139" "XY-DD-2"
+:0: "2019-11-29 15:08:10:143" "XY-DD-3"
+:0: "2019-11-29 15:08:10:146" "XY-DD-4"
+:0: "2019-11-29 15:08:10:150" "XY-DD-5"
+:0: "2019-11-29 15:08:10:153" "XY-DD-6"
+:0: "2019-11-29 15:08:10:157" "XY-DD-7"
+:0: "2019-11-29 15:08:10:160" "XY-DD-FGG-9877"
+:0: "2019-11-29 15:08:10:164" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 15:08:10:167" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 15:08:10:171" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 15:08:10:174" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 15:08:10:342" "10 socket con"
+:0: "2019-11-29 15:08:10:347" "14 socket con"
+:0: "2019-11-29 15:08:10:351" "0 socket con"
+:0: "2019-11-29 15:08:10:355" "6 socket con"
+:0: "2019-11-29 15:08:10:358" "1 socket con"
+:0: "2019-11-29 15:08:10:361" "9 socket con"
+:0: "2019-11-29 15:08:10:365" "13 socket con"
+:0: "2019-11-29 15:08:10:378" "2 socket con"
+:0: "2019-11-29 15:08:10:381" "5 socket con"
+:0: "2019-11-29 15:08:10:385" "12 socket con"
+:0: "2019-11-29 15:08:10:391" "16 socket con"
+:0: "2019-11-29 15:08:10:395" "4 socket con"
+:0: "2019-11-29 15:08:10:399" "8 socket con"
+:0: "2019-11-29 15:08:10:410" "11 socket con"
+:0: "2019-11-29 15:08:10:413" "15 socket con"
+:0: "2019-11-29 15:08:10:417" "3 socket con"
+:0: "2019-11-29 15:08:10:421" "7 socket con"
+:0: "2019-11-29 15:08:19:178" 0     0
+:0: "2019-11-29 15:08:19:724" 0.5     0.1
+:0: "2019-11-29 15:08:20:269" 1     0.3
+:0: "2019-11-29 15:08:20:821" 1.5     0.6
+:0: "2019-11-29 15:08:21:364" 2     1
+:0: "2019-11-29 15:08:21:910" 2.5     1.5
+:0: "2019-11-29 15:08:22:459" 3     2.1
+:0: "2019-11-29 15:08:23:005" 3.5     2.8
+:0: "2019-11-29 15:08:23:553" 4     3.6
+:0: "2019-11-29 15:08:24:099" 4.5     4.5
+:0: "2019-11-29 15:08:24:647" 5     5.5
+:0: "2019-11-29 15:08:25:194" 5.5     6.6
+:0: "2019-11-29 15:08:25:739" 6     7.8
+:0: "2019-11-29 15:08:26:290" 6.5     9.1
+:0: "2019-11-29 15:08:26:834" 7     10.5
+:0: "2019-11-29 15:08:27:381" 7.5     12
+:0: "2019-11-29 15:08:27:927" 8     13.6
+:0: "2019-11-29 15:08:28:472" 8.5     15.3
+:0: "2019-11-29 15:08:29:020" 9     17.1
+:0: "2019-11-29 15:08:29:571" 9.5     19
+:0: "2019-11-29 15:08:30:114" 10     21
+:0: "2019-11-29 15:08:30:661" 10.5     23.1
+:0: "2019-11-29 15:08:31:210" 11     25.3
+:0: "2019-11-29 15:08:31:755" 11.5     27.6
+:0: "2019-11-29 15:08:32:308" 12     30
+:0: "2019-11-29 15:08:32:854" 12.5     32.5
+:0: "2019-11-29 15:08:33:396" 13     35.1
+:0: "2019-11-29 15:08:33:941" 13.5     37.8
+:0: "2019-11-29 15:09:23:820" 
+start
+:0: "2019-11-29 15:09:24:196" "192.168.1.220"
+:0: "2019-11-29 15:09:24:200" "192.168.1.221"
+:0: "2019-11-29 15:09:24:203" "XY_DD_1"
+:0: "2019-11-29 15:09:24:206" "XY-DD-2"
+:0: "2019-11-29 15:09:24:210" "XY-DD-3"
+:0: "2019-11-29 15:09:24:213" "XY-DD-4"
+:0: "2019-11-29 15:09:24:216" "XY-DD-5"
+:0: "2019-11-29 15:09:24:219" "XY-DD-6"
+:0: "2019-11-29 15:09:24:223" "XY-DD-7"
+:0: "2019-11-29 15:09:24:226" "XY-DD-FGG-9877"
+:0: "2019-11-29 15:09:24:229" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 15:09:24:232" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 15:09:24:235" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 15:09:24:239" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 15:09:24:396" "12 socket con"
+:0: "2019-11-29 15:09:24:400" "16 socket con"
+:0: "2019-11-29 15:09:24:403" "6 socket con"
+:0: "2019-11-29 15:09:24:406" "10 socket con"
+:0: "2019-11-29 15:09:24:410" "11 socket con"
+:0: "2019-11-29 15:09:24:413" "15 socket con"
+:0: "2019-11-29 15:09:24:417" "2 socket con"
+:0: "2019-11-29 15:09:24:420" "5 socket con"
+:0: "2019-11-29 15:09:24:423" "9 socket con"
+:0: "2019-11-29 15:09:24:427" "0 socket con"
+:0: "2019-11-29 15:09:24:430" "14 socket con"
+:0: "2019-11-29 15:09:24:434" "1 socket con"
+:0: "2019-11-29 15:09:24:437" "4 socket con"
+:0: "2019-11-29 15:09:24:440" "8 socket con"
+:0: "2019-11-29 15:09:24:443" "13 socket con"
+:0: "2019-11-29 15:09:24:447" "3 socket con"
+:0: "2019-11-29 15:09:24:450" "7 socket con"
+:0: "2019-11-29 15:09:30:289" 0     0
+:0: "2019-11-29 15:09:30:832" 0.5     0.1
+:0: "2019-11-29 15:09:31:379" 1     0.3
+:0: "2019-11-29 15:09:31:928" 1.5     0.6
+:0: "2019-11-29 15:09:32:472" 2     1
+:0: "2019-11-29 15:09:33:020" 2.5     1.5
+:0: "2019-11-29 15:09:33:569" 3     2.1
+:0: "2019-11-29 15:09:34:117" 3.5     2.8
+:0: "2019-11-29 15:09:34:661" 4     3.6
+:0: "2019-11-29 15:09:35:207" 4.5     4.5
+:0: "2019-11-29 15:09:35:756" 5     5.5
+:0: "2019-11-29 15:09:36:302" 5.5     6.6
+:0: "2019-11-29 15:09:36:848" 6     7.8
+:0: "2019-11-29 15:09:37:396" 6.5     9.1
+:0: "2019-11-29 15:09:37:943" 7     10.5
+:0: "2019-11-29 15:09:38:491" 7.5     12
+:0: "2019-11-29 15:09:39:035" 8     13.6
+:0: "2019-11-29 15:09:39:582" 8.5     15.3
+:0: "2019-11-29 15:09:40:128" 9     17.1
+:0: "2019-11-29 15:09:40:676" 9.5     19
+:0: "2019-11-29 15:09:41:222" 10     21
+:0: "2019-11-29 15:09:41:770" 10.5     23.1
+:0: "2019-11-29 15:09:42:317" 11     25.3
+:0: "2019-11-29 15:09:42:866" 11.5     27.6
+:0: "2019-11-29 15:09:43:409" 12     30
+:0: "2019-11-29 15:09:43:958" 12.5     32.5
+:0: "2019-11-29 15:09:44:503" 13     35.1
+:0: "2019-11-29 15:09:45:051" 13.5     37.8
+:0: "2019-11-29 15:09:45:598" 14     40.6
+:0: "2019-11-29 15:09:46:145" 14.5     43.5
+:0: "2019-11-29 15:09:46:690" 15     46.5
+:0: "2019-11-29 15:09:47:240" 15.5     49.6
+:0: "2019-11-29 15:09:47:785" 16     52.8
+:0: "2019-11-29 15:46:30:581" 
+start
+:0: "2019-11-29 15:46:31:082" "192.168.1.220"
+:0: "2019-11-29 15:46:31:085" "192.168.1.221"
+:0: "2019-11-29 15:46:31:089" "XY_DD_1"
+:0: "2019-11-29 15:46:31:092" "XY-DD-2"
+:0: "2019-11-29 15:46:31:096" "XY-DD-3"
+:0: "2019-11-29 15:46:31:099" "XY-DD-4"
+:0: "2019-11-29 15:46:31:102" "XY-DD-5"
+:0: "2019-11-29 15:46:31:106" "XY-DD-6"
+:0: "2019-11-29 15:46:31:109" "XY-DD-7"
+:0: "2019-11-29 15:46:31:112" "XY-DD-FGG-9877"
+:0: "2019-11-29 15:46:31:116" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 15:46:31:119" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 15:46:31:123" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 15:46:31:126" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 15:46:31:304" "12 socket con"
+:0: "2019-11-29 15:46:31:308" "8 socket con"
+:0: "2019-11-29 15:46:31:312" "4 socket con"
+:0: "2019-11-29 15:46:31:315" "15 socket con"
+:0: "2019-11-29 15:46:31:319" "11 socket con"
+:0: "2019-11-29 15:46:31:323" "7 socket con"
+:0: "2019-11-29 15:46:31:327" "3 socket con"
+:0: "2019-11-29 15:46:31:330" "14 socket con"
+:0: "2019-11-29 15:46:31:334" "10 socket con"
+:0: "2019-11-29 15:46:31:337" "6 socket con"
+:0: "2019-11-29 15:46:31:340" "2 socket con"
+:0: "2019-11-29 15:46:31:343" "13 socket con"
+:0: "2019-11-29 15:46:31:347" "9 socket con"
+:0: "2019-11-29 15:46:31:351" "5 socket con"
+:0: "2019-11-29 15:46:31:355" "1 socket con"
+:0: "2019-11-29 15:46:31:358" "0 socket con"
+:0: "2019-11-29 15:46:31:362" "16 socket con"
+:0: "2019-11-29 15:46:51:411" 0     6.6
+:0: "2019-11-29 15:46:51:959" 0.5     7.8
+:0: "2019-11-29 15:46:52:504" 1     9.1
+:0: "2019-11-29 15:46:53:052" 1.5     10.5
+:0: "2019-11-29 15:46:53:597" 2     12
+:0: "2019-11-29 15:46:54:144" 2.5     13.6
+:0: "2019-11-29 15:46:54:695" 3     15.3
+:0: "2019-11-29 15:46:55:238" 3.5     17.1
+:0: "2019-11-29 15:46:55:787" 4     19
+:0: "2019-11-29 15:46:56:331" 4.5     21
+:0: "2019-11-29 15:46:56:880" 5     23.1
+:0: "2019-11-29 15:46:57:428" 5.5     25.3
+:0: "2019-11-29 15:47:08:363" 0     6.6
+:0: "2019-11-29 15:47:08:912" 0.5     7.8
+:0: "2019-11-29 15:47:09:459" 1     9.1
+:0: "2019-11-29 15:47:10:003" 1.5     10.5
+:0: "2019-11-29 15:47:10:551" 2     12
+:0: "2019-11-29 15:47:11:103" 2.5     13.6
+:0: "2019-11-29 15:47:11:646" 3     15.3
+:0: "2019-11-29 15:47:12:194" 3.5     17.1
+:0: "2019-11-29 15:47:12:741" 4     19
+:0: "2019-11-29 15:47:13:287" 4.5     21
+:0: "2019-11-29 15:47:13:833" 5     23.1
+:0: "2019-11-29 15:47:14:382" 5.5     25.3
+:0: "2019-11-29 15:47:14:925" 6     27.6
+:0: "2019-11-29 15:47:15:473" 6.5     30
+:0: "2019-11-29 15:47:16:020" 7     32.5
+:0: "2019-11-29 15:47:16:566" 7.5     35.1
+:0: "2019-11-29 15:47:17:113" 8     37.8
+:0: "2019-11-29 15:47:17:660" 8.5     40.6
+:0: "2019-11-29 15:47:18:208" 9     43.5
+:0: "2019-11-29 15:47:18:754" 9.5     46.5
+:0: "2019-11-29 15:47:19:300" 10     49.6
+:0: "2019-11-29 15:47:19:850" 10.5     52.8
+:0: "2019-11-29 15:47:20:396" 11     56.1
+:0: "2019-11-29 15:47:20:947" 11.5     59.5
+:0: "2019-11-29 15:47:21:490" 12     63
+:0: "2019-11-29 15:47:22:036" 12.5     66.6
+:0: "2019-11-29 15:47:22:583" 13     70.3
+:0: "2019-11-29 15:47:23:133" 13.5     74.1
+:0: "2019-11-29 15:47:23:678" 14     78
+:0: "2019-11-29 15:47:24:221" 14.5     82
+:0: "2019-11-29 15:47:24:770" 15     86.1
+:0: "2019-11-29 15:47:25:318" 15.5     90.3
+:0: "2019-11-29 15:47:25:863" 16     94.6
+:0: "2019-11-29 15:47:26:414" 16.5     99
+:0: "2019-11-29 15:47:26:956" 17     103.5
+:0: "2019-11-29 15:47:27:503" 17.5     108.1
+:0: "2019-11-29 15:47:28:051" 18     112.8
+:0: "2019-11-29 15:47:28:602" 18.5     117.6
+:0: "2019-11-29 15:47:29:145" 19     122.5
+:0: "2019-11-29 15:47:29:692" 19.5     127.5
+:0: "2019-11-29 15:47:30:241" 20     132.6
+:0: "2019-11-29 15:47:30:786" 20.5     137.8
+:0: "2019-11-29 15:47:31:332" 21     143.1
+:0: "2019-11-29 15:47:31:878" 21.5     148.5
+:0: "2019-11-29 15:47:32:427" 22     154
+:0: "2019-11-29 15:47:32:977" 22.5     159.6
+:0: "2019-11-29 15:47:33:518" 23     165.3
+:0: "2019-11-29 15:47:34:068" 23.5     171.1
+:0: "2019-11-29 15:47:34:612" 24     177
+:0: "2019-11-29 15:47:35:164" 24.5     183
+:0: "2019-11-29 15:47:35:707" 25     189.1
+:0: "2019-11-29 15:47:36:253" 25.5     195.3
+:0: "2019-11-29 15:47:36:800" 26     201.6
+:0: "2019-11-29 15:47:37:348" 26.5     208
+:0: "2019-11-29 15:47:37:896" 27     214.5
+:0: "2019-11-29 15:47:38:443" 27.5     221.1
+:0: "2019-11-29 15:47:38:990" 28     227.8
+:0: "2019-11-29 15:47:39:535" 28.5     234.6
+:0: "2019-11-29 15:47:40:081" 29     241.5
+:0: "2019-11-29 15:47:40:632" 29.5     248.5
+:0: "2019-11-29 15:47:41:177" 30     255.6
+:0: "2019-11-29 15:47:41:724" 30.5     262.8
+:0: "2019-11-29 15:47:42:269" 31     270.1
+:0: "2019-11-29 15:47:42:851" 31.5     277.5
+:0: "2019-11-29 15:51:14:833" 
+start
+:0: "2019-11-29 15:51:15:269" "192.168.1.220"
+:0: "2019-11-29 15:51:15:273" "192.168.1.221"
+:0: "2019-11-29 15:51:15:276" "XY_DD_1"
+:0: "2019-11-29 15:51:15:279" "XY-DD-2"
+:0: "2019-11-29 15:51:15:282" "XY-DD-3"
+:0: "2019-11-29 15:51:15:286" "XY-DD-4"
+:0: "2019-11-29 15:51:15:289" "XY-DD-5"
+:0: "2019-11-29 15:51:15:293" "XY-DD-6"
+:0: "2019-11-29 15:51:15:296" "XY-DD-7"
+:0: "2019-11-29 15:51:15:299" "XY-DD-FGG-9877"
+:0: "2019-11-29 15:51:15:302" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 15:51:15:306" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 15:51:15:309" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 15:51:15:312" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 15:51:15:475" "10 socket con"
+:0: "2019-11-29 15:51:15:479" "15 socket con"
+:0: "2019-11-29 15:51:15:483" "2 socket con"
+:0: "2019-11-29 15:51:15:486" "7 socket con"
+:0: "2019-11-29 15:51:15:489" "11 socket con"
+:0: "2019-11-29 15:51:15:493" "16 socket con"
+:0: "2019-11-29 15:51:15:496" "3 socket con"
+:0: "2019-11-29 15:51:15:499" "8 socket con"
+:0: "2019-11-29 15:51:15:502" "12 socket con"
+:0: "2019-11-29 15:51:15:506" "4 socket con"
+:0: "2019-11-29 15:51:15:509" "13 socket con"
+:0: "2019-11-29 15:51:15:512" "5 socket con"
+:0: "2019-11-29 15:51:15:515" "9 socket con"
+:0: "2019-11-29 15:51:15:519" "0 socket con"
+:0: "2019-11-29 15:51:15:522" "14 socket con"
+:0: "2019-11-29 15:51:15:525" "1 socket con"
+:0: "2019-11-29 15:51:15:529" "6 socket con"
+:0: "2019-11-29 15:51:29:569" 0     6.6
+:0: "2019-11-29 15:51:30:114" 0.5     7.8
+:0: "2019-11-29 15:51:30:660" 1     9.1
+:0: "2019-11-29 15:51:31:208" 1.5     10.5
+:0: "2019-11-29 15:51:31:755" 2     12
+:0: "2019-11-29 15:51:32:303" 2.5     13.6
+:0: "2019-11-29 15:51:32:852" 3     15.3
+:0: "2019-11-29 15:51:33:394" 3.5     17.1
+:0: "2019-11-29 15:51:33:941" 4     19
+:0: "2019-11-29 15:51:34:488" 4.5     21
+:0: "2019-11-29 15:51:35:040" 5     23.1
+:0: "2019-11-29 15:51:35:583" 5.5     25.3
+:0: "2019-11-29 15:51:36:129" 6     27.6
+:0: "2019-11-29 15:51:36:676" 6.5     30
+:0: "2019-11-29 15:51:37:222" 7     32.5
+:0: "2019-11-29 15:51:37:769" 7.5     35.1
+:0: "2019-11-29 15:51:38:317" 8     37.8
+:0: "2019-11-29 15:51:38:866" 8.5     40.6
+:0: "2019-11-29 15:51:39:415" 9     43.5
+:0: "2019-11-29 15:51:39:958" 9.5     46.5
+:0: "2019-11-29 15:51:40:507" 10     49.6
+:0: "2019-11-29 15:51:41:052" 10.5     52.8
+:0: "2019-11-29 15:51:41:598" 11     56.1
+:0: "2019-11-29 15:51:42:145" 11.5     59.5
+:0: "2019-11-29 15:51:42:693" 12     63
+:0: "2019-11-29 15:51:43:237" 12.5     66.6
+:0: "2019-11-29 15:51:43:788" 13     70.3
+:0: "2019-11-29 15:51:44:333" 13.5     74.1
+:0: "2019-11-29 15:51:44:884" 14     78
+:0: "2019-11-29 15:51:45:425" 14.5     82
+:0: "2019-11-29 15:51:45:974" 15     86.1
+:0: "2019-11-29 15:51:46:518" 15.5     90.3
+:0: "2019-11-29 15:51:47:071" 16     94.6
+:0: "2019-11-29 15:52:10:266" 
+start
+:0: "2019-11-29 15:52:10:632" "192.168.1.220"
+:0: "2019-11-29 15:52:10:636" "192.168.1.221"
+:0: "2019-11-29 15:52:10:639" "XY_DD_1"
+:0: "2019-11-29 15:52:10:642" "XY-DD-2"
+:0: "2019-11-29 15:52:10:645" "XY-DD-3"
+:0: "2019-11-29 15:52:10:649" "XY-DD-4"
+:0: "2019-11-29 15:52:10:652" "XY-DD-5"
+:0: "2019-11-29 15:52:10:655" "XY-DD-6"
+:0: "2019-11-29 15:52:10:658" "XY-DD-7"
+:0: "2019-11-29 15:52:10:662" "XY-DD-FGG-9877"
+:0: "2019-11-29 15:52:10:665" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 15:52:10:668" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 15:52:10:671" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 15:52:10:674" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 15:52:10:842" "4 socket con"
+:0: "2019-11-29 15:52:10:846" "8 socket con"
+:0: "2019-11-29 15:52:10:850" "12 socket con"
+:0: "2019-11-29 15:52:10:853" "16 socket con"
+:0: "2019-11-29 15:52:10:856" "3 socket con"
+:0: "2019-11-29 15:52:10:859" "7 socket con"
+:0: "2019-11-29 15:52:10:862" "11 socket con"
+:0: "2019-11-29 15:52:10:866" "15 socket con"
+:0: "2019-11-29 15:52:10:869" "2 socket con"
+:0: "2019-11-29 15:52:10:872" "6 socket con"
+:0: "2019-11-29 15:52:10:875" "10 socket con"
+:0: "2019-11-29 15:52:10:878" "0 socket con"
+:0: "2019-11-29 15:52:10:881" "14 socket con"
+:0: "2019-11-29 15:52:10:885" "1 socket con"
+:0: "2019-11-29 15:52:10:888" "5 socket con"
+:0: "2019-11-29 15:52:10:891" "9 socket con"
+:0: "2019-11-29 15:52:10:894" "13 socket con"
+:0: "2019-11-29 15:52:21:114" 0     5.5
+:0: "2019-11-29 15:52:21:665" 0.5     6.6
+:0: "2019-11-29 15:52:22:207" 1     7.8
+:0: "2019-11-29 15:52:22:757" 1.5     9.1
+:0: "2019-11-29 15:52:23:300" 2     10.5
+:0: "2019-11-29 15:52:23:849" 2.5     12
+:0: "2019-11-29 15:52:24:396" 3     13.6
+:0: "2019-11-29 15:52:24:941" 3.5     15.3
+:0: "2019-11-29 15:52:25:487" 4     17.1
+:0: "2019-11-29 15:52:26:038" 4.5     19
+:0: "2019-11-29 15:52:26:584" 5     21
+:0: "2019-11-29 15:52:27:132" 5.5     23.1
+:0: "2019-11-29 15:52:27:677" 6     25.3
+:0: "2019-11-29 15:52:28:221" 6.5     27.6
+:0: "2019-11-29 15:52:28:768" 7     30
+:0: "2019-11-29 15:52:29:322" 7.5     32.5
+:0: "2019-11-29 15:52:29:866" 8     35.1
+:0: "2019-11-29 15:52:30:415" 8.5     37.8
+:0: "2019-11-29 15:52:30:957" 9     40.6
+:0: "2019-11-29 15:52:31:504" 9.5     43.5
+:0: "2019-11-29 15:52:32:054" 10     46.5
+:0: "2019-11-29 15:52:32:600" 10.5     49.6
+:0: "2019-11-29 15:52:33:144" 11     52.8
+:0: "2019-11-29 15:52:33:692" 11.5     56.1
+:0: "2019-11-29 15:52:34:238" 12     59.5
+:0: "2019-11-29 15:52:43:538" 0     6.6
+:0: "2019-11-29 15:52:44:084" 0.5     7.8
+:0: "2019-11-29 15:52:44:630" 1     9.1
+:0: "2019-11-29 15:52:45:177" 1.5     10.5
+:0: "2019-11-29 15:52:45:723" 2     12
+:0: "2019-11-29 15:52:46:271" 2.5     13.6
+:0: "2019-11-29 15:52:46:815" 3     15.3
+:0: "2019-11-29 15:52:47:366" 3.5     17.1
+:0: "2019-11-29 15:52:47:915" 4     19
+:0: "2019-11-29 15:52:48:456" 4.5     21
+:0: "2019-11-29 15:52:49:006" 5     23.1
+:0: "2019-11-29 15:52:49:550" 5.5     25.3
+:0: "2019-11-29 15:52:50:099" 6     27.6
+:0: "2019-11-29 15:52:50:647" 6.5     30
+:0: "2019-11-29 15:55:14:547" 
+start
+:0: "2019-11-29 15:55:14:922" "192.168.1.220"
+:0: "2019-11-29 15:55:14:926" "192.168.1.221"
+:0: "2019-11-29 15:55:14:929" "XY_DD_1"
+:0: "2019-11-29 15:55:14:932" "XY-DD-2"
+:0: "2019-11-29 15:55:14:935" "XY-DD-3"
+:0: "2019-11-29 15:55:14:938" "XY-DD-4"
+:0: "2019-11-29 15:55:14:942" "XY-DD-5"
+:0: "2019-11-29 15:55:14:945" "XY-DD-6"
+:0: "2019-11-29 15:55:14:948" "XY-DD-7"
+:0: "2019-11-29 15:55:14:951" "XY-DD-FGG-9877"
+:0: "2019-11-29 15:55:14:954" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 15:55:14:957" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 15:55:14:961" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 15:55:14:964" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 15:55:15:119" "2 socket con"
+:0: "2019-11-29 15:55:15:123" "6 socket con"
+:0: "2019-11-29 15:55:15:127" "10 socket con"
+:0: "2019-11-29 15:55:15:130" "16 socket con"
+:0: "2019-11-29 15:55:15:133" "3 socket con"
+:0: "2019-11-29 15:55:15:136" "7 socket con"
+:0: "2019-11-29 15:55:15:140" "11 socket con"
+:0: "2019-11-29 15:55:15:143" "13 socket con"
+:0: "2019-11-29 15:55:15:147" "4 socket con"
+:0: "2019-11-29 15:55:15:150" "8 socket con"
+:0: "2019-11-29 15:55:15:153" "12 socket con"
+:0: "2019-11-29 15:55:15:156" "14 socket con"
+:0: "2019-11-29 15:55:15:160" "0 socket con"
+:0: "2019-11-29 15:55:15:163" "1 socket con"
+:0: "2019-11-29 15:55:15:166" "5 socket con"
+:0: "2019-11-29 15:55:15:169" "9 socket con"
+:0: "2019-11-29 15:55:15:172" "15 socket con"
+:0: "2019-11-29 15:55:25:380" 0     6.6
+:0: "2019-11-29 15:55:25:925" 0.5     7.8
+:0: "2019-11-29 15:55:26:475" 1     9.1
+:0: "2019-11-29 15:55:27:021" 1.5     10.5
+:0: "2019-11-29 15:55:27:568" 2     12
+:0: "2019-11-29 15:55:28:115" 2.5     13.6
+:0: "2019-11-29 15:55:28:664" 3     15.3
+:0: "2019-11-29 15:55:29:207" 3.5     17.1
+:0: "2019-11-29 15:55:29:753" 4     19
+:0: "2019-11-29 15:55:30:299" 4.5     21
+:0: "2019-11-29 15:55:30:849" 5     23.1
+:0: "2019-11-29 15:57:41:170" 
+start
+:0: "2019-11-29 15:57:41:576" "192.168.1.220"
+:0: "2019-11-29 15:57:41:579" "192.168.1.221"
+:0: "2019-11-29 15:57:41:582" "XY_DD_1"
+:0: "2019-11-29 15:57:41:586" "XY-DD-2"
+:0: "2019-11-29 15:57:41:589" "XY-DD-3"
+:0: "2019-11-29 15:57:41:592" "XY-DD-4"
+:0: "2019-11-29 15:57:41:595" "XY-DD-5"
+:0: "2019-11-29 15:57:41:598" "XY-DD-6"
+:0: "2019-11-29 15:57:41:602" "XY-DD-7"
+:0: "2019-11-29 15:57:41:605" "XY-DD-FGG-9877"
+:0: "2019-11-29 15:57:41:608" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 15:57:41:611" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 15:57:41:615" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 15:57:41:618" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 15:57:41:778" "10 socket con"
+:0: "2019-11-29 15:57:41:782" "14 socket con"
+:0: "2019-11-29 15:57:41:798" "3 socket con"
+:0: "2019-11-29 15:57:41:802" "7 socket con"
+:0: "2019-11-29 15:57:41:805" "11 socket con"
+:0: "2019-11-29 15:57:41:808" "4 socket con"
+:0: "2019-11-29 15:57:41:811" "15 socket con"
+:0: "2019-11-29 15:57:41:814" "8 socket con"
+:0: "2019-11-29 15:57:41:817" "0 socket con"
+:0: "2019-11-29 15:57:41:820" "12 socket con"
+:0: "2019-11-29 15:57:41:824" "1 socket con"
+:0: "2019-11-29 15:57:41:826" "16 socket con"
+:0: "2019-11-29 15:57:41:829" "5 socket con"
+:0: "2019-11-29 15:57:41:833" "9 socket con"
+:0: "2019-11-29 15:57:41:837" "2 socket con"
+:0: "2019-11-29 15:57:41:841" "13 socket con"
+:0: "2019-11-29 15:57:41:844" "6 socket con"
+:0: "2019-11-29 15:57:50:508" 0     2.1
+:0: "2019-11-29 15:57:51:051" 0.5     2.8
+:0: "2019-11-29 15:57:51:597" 1     3.6
+:0: "2019-11-29 15:57:52:144" 1.5     4.5
+:0: "2019-11-29 15:57:52:692" 2     5.5
+:0: "2019-11-29 15:57:53:239" 2.5     6.6
+:0: "2019-11-29 15:57:53:784" 3     7.8
+:0: "2019-11-29 15:57:54:333" 3.5     9.1
+:0: "2019-11-29 15:57:54:882" 4     10.5
+:0: "2019-11-29 15:57:55:427" 4.5     12
+:0: "2019-11-29 15:57:55:977" 5     13.6
+:0: "2019-11-29 15:57:56:519" 5.5     15.3
+:0: "2019-11-29 15:57:57:068" 6     17.1
+:0: "2019-11-29 15:57:57:614" 6.5     19
+:0: "2019-11-29 15:57:58:161" 7     21
+:0: "2019-11-29 15:57:58:707" 7.5     23.1
+:0: "2019-11-29 15:57:59:256" 8     25.3
+:0: "2019-11-29 15:57:59:800" 8.5     27.6
+:0: "2019-11-29 15:58:00:347" 9     30
+:0: "2019-11-29 15:58:00:894" 9.5     32.5
+:0: "2019-11-29 15:58:01:443" 10     35.1
+:0: "2019-11-29 15:58:01:991" 10.5     37.8
+:0: "2019-11-29 15:58:02:539" 11     40.6
+:0: "2019-11-29 15:58:03:084" 11.5     43.5
+:0: "2019-11-29 15:58:03:633" 12     46.5
+:0: "2019-11-29 15:58:04:178" 12.5     49.6
+:0: "2019-11-29 15:58:04:724" 13     52.8
+:0: "2019-11-29 15:58:05:271" 13.5     56.1
+:0: "2019-11-29 15:58:05:819" 14     59.5
+:0: "2019-11-29 15:58:06:363" 14.5     63
+:0: "2019-11-29 15:58:06:910" 15     66.6
+:0: "2019-11-29 15:58:07:459" 15.5     70.3
+:0: "2019-11-29 15:58:08:008" 16     74.1
+:0: "2019-11-29 15:58:08:552" 16.5     78
+:0: "2019-11-29 15:58:09:102" 17     82
+:0: "2019-11-29 15:58:09:644" 17.5     86.1
+:0: "2019-11-29 15:58:10:193" 18     90.3
+:0: "2019-11-29 15:58:10:738" 18.5     94.6
+:0: "2019-11-29 15:58:11:285" 19     99
+:0: "2019-11-29 15:58:11:833" 19.5     103.5
+:0: "2019-11-29 15:58:12:381" 20     108.1
+:0: "2019-11-29 15:58:12:926" 20.5     112.8
+:0: "2019-11-29 15:58:13:477" 21     117.6
+:0: "2019-11-29 15:58:14:020" 21.5     122.5
+:0: "2019-11-29 15:58:14:569" 22     127.5
+:0: "2019-11-29 15:58:15:114" 22.5     132.6
+:0: "2019-11-29 15:58:15:660" 23     137.8
+:0: "2019-11-29 15:58:16:207" 23.5     143.1
+:0: "2019-11-29 15:58:16:754" 24     148.5
+:0: "2019-11-29 15:58:17:301" 24.5     154
+:0: "2019-11-29 16:04:29:385" 
+start
+:0: "2019-11-29 16:04:29:770" "192.168.1.220"
+:0: "2019-11-29 16:04:29:774" "192.168.1.221"
+:0: "2019-11-29 16:04:29:777" "XY_DD_1"
+:0: "2019-11-29 16:04:29:781" "XY-DD-2"
+:0: "2019-11-29 16:04:29:784" "XY-DD-3"
+:0: "2019-11-29 16:04:29:787" "XY-DD-4"
+:0: "2019-11-29 16:04:29:790" "XY-DD-5"
+:0: "2019-11-29 16:04:29:793" "XY-DD-6"
+:0: "2019-11-29 16:04:29:796" "XY-DD-7"
+:0: "2019-11-29 16:04:29:800" "XY-DD-FGG-9877"
+:0: "2019-11-29 16:04:29:803" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 16:04:29:807" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 16:04:29:810" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 16:04:29:813" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 16:04:29:962" "1 socket con"
+:0: "2019-11-29 16:04:29:966" "10 socket con"
+:0: "2019-11-29 16:04:29:969" "14 socket con"
+:0: "2019-11-29 16:04:29:972" "2 socket con"
+:0: "2019-11-29 16:04:29:975" "6 socket con"
+:0: "2019-11-29 16:04:29:979" "11 socket con"
+:0: "2019-11-29 16:04:29:982" "15 socket con"
+:0: "2019-11-29 16:04:29:986" "3 socket con"
+:0: "2019-11-29 16:04:29:989" "7 socket con"
+:0: "2019-11-29 16:04:29:992" "12 socket con"
+:0: "2019-11-29 16:04:29:996" "16 socket con"
+:0: "2019-11-29 16:04:29:999" "4 socket con"
+:0: "2019-11-29 16:04:30:002" "8 socket con"
+:0: "2019-11-29 16:04:30:005" "13 socket con"
+:0: "2019-11-29 16:04:30:009" "5 socket con"
+:0: "2019-11-29 16:04:30:012" "9 socket con"
+:0: "2019-11-29 16:04:30:015" "0 socket con"
+:0: "2019-11-29 16:05:18:521" 0     2.1
+:0: "2019-11-29 16:05:19:067" 0.5     2.8
+:0: "2019-11-29 16:05:19:613" 1     3.6
+:0: "2019-11-29 16:05:20:159" 1.5     4.5
+:0: "2019-11-29 16:05:20:708" 2     5.5
+:0: "2019-11-29 16:05:21:254" 2.5     6.6
+:0: "2019-11-29 16:05:21:803" 3     7.8
+:0: "2019-11-29 16:05:22:347" 3.5     9.1
+:0: "2019-11-29 16:05:22:894" 4     10.5
+:0: "2019-11-29 16:05:23:443" 4.5     12
+:0: "2019-11-29 16:05:23:990" 5     13.6
+:0: "2019-11-29 16:05:24:539" 5.5     15.3
+:0: "2019-11-29 16:05:25:085" 6     17.1
+:0: "2019-11-29 16:05:25:634" 6.5     19
+:0: "2019-11-29 16:05:26:175" 7     21
+:0: "2019-11-29 16:05:26:726" 7.5     23.1
+:0: "2019-11-29 16:08:08:298" 
+start
+:0: "2019-11-29 16:08:08:717" "192.168.1.220"
+:0: "2019-11-29 16:08:08:720" "192.168.1.221"
+:0: "2019-11-29 16:08:08:724" "XY_DD_1"
+:0: "2019-11-29 16:08:08:727" "XY-DD-2"
+:0: "2019-11-29 16:08:08:730" "XY-DD-3"
+:0: "2019-11-29 16:08:08:734" "XY-DD-4"
+:0: "2019-11-29 16:08:08:737" "XY-DD-5"
+:0: "2019-11-29 16:08:08:740" "XY-DD-6"
+:0: "2019-11-29 16:08:08:744" "XY-DD-7"
+:0: "2019-11-29 16:08:08:747" "XY-DD-FGG-9877"
+:0: "2019-11-29 16:08:08:750" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 16:08:08:754" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 16:08:08:757" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 16:08:08:761" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 16:08:08:920" "7 socket con"
+:0: "2019-11-29 16:08:08:924" "3 socket con"
+:0: "2019-11-29 16:08:08:927" "2 socket con"
+:0: "2019-11-29 16:08:08:931" "13 socket con"
+:0: "2019-11-29 16:08:08:934" "10 socket con"
+:0: "2019-11-29 16:08:08:937" "6 socket con"
+:0: "2019-11-29 16:08:08:940" "1 socket con"
+:0: "2019-11-29 16:08:08:944" "16 socket con"
+:0: "2019-11-29 16:08:08:947" "0 socket con"
+:0: "2019-11-29 16:08:08:950" "12 socket con"
+:0: "2019-11-29 16:08:08:954" "9 socket con"
+:0: "2019-11-29 16:08:08:957" "5 socket con"
+:0: "2019-11-29 16:08:08:960" "15 socket con"
+:0: "2019-11-29 16:08:08:964" "11 socket con"
+:0: "2019-11-29 16:08:08:967" "8 socket con"
+:0: "2019-11-29 16:08:08:970" "4 socket con"
+:0: "2019-11-29 16:08:08:974" "14 socket con"
+:0: "2019-11-29 16:14:36:968" 
+start
+:0: "2019-11-29 16:14:37:422" "192.168.1.220"
+:0: "2019-11-29 16:14:37:426" "192.168.1.221"
+:0: "2019-11-29 16:14:37:429" "XY_DD_1"
+:0: "2019-11-29 16:14:37:433" "XY-DD-2"
+:0: "2019-11-29 16:14:37:436" "XY-DD-3"
+:0: "2019-11-29 16:14:37:439" "XY-DD-4"
+:0: "2019-11-29 16:14:37:442" "XY-DD-5"
+:0: "2019-11-29 16:14:37:444" "XY-DD-6"
+:0: "2019-11-29 16:14:37:448" "XY-DD-7"
+:0: "2019-11-29 16:14:37:450" "XY-DD-FGG-9877"
+:0: "2019-11-29 16:14:37:454" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 16:14:37:457" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 16:14:37:460" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 16:14:37:463" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 16:14:37:610" "13 socket con"
+:0: "2019-11-29 16:14:37:614" "2 socket con"
+:0: "2019-11-29 16:14:37:618" "6 socket con"
+:0: "2019-11-29 16:14:37:621" "10 socket con"
+:0: "2019-11-29 16:14:37:625" "14 socket con"
+:0: "2019-11-29 16:14:37:628" "3 socket con"
+:0: "2019-11-29 16:14:37:632" "7 socket con"
+:0: "2019-11-29 16:14:37:636" "11 socket con"
+:0: "2019-11-29 16:14:37:639" "15 socket con"
+:0: "2019-11-29 16:14:37:642" "4 socket con"
+:0: "2019-11-29 16:14:37:646" "8 socket con"
+:0: "2019-11-29 16:14:37:649" "0 socket con"
+:0: "2019-11-29 16:14:37:653" "12 socket con"
+:0: "2019-11-29 16:14:37:656" "1 socket con"
+:0: "2019-11-29 16:14:37:660" "16 socket con"
+:0: "2019-11-29 16:14:37:665" "5 socket con"
+:0: "2019-11-29 16:14:37:668" "9 socket con"
+:0: "2019-11-29 16:14:47:333" 0     1.5
+:0: "2019-11-29 16:14:47:880" 0.5     2.1
+:0: "2019-11-29 16:14:48:429" 1     2.8
+:0: "2019-11-29 16:14:48:972" 1.5     3.6
+:0: "2019-11-29 16:14:49:521" 2     4.5
+:0: "2019-11-29 16:14:50:069" 2.5     5.5
+:0: "2019-11-29 16:14:50:619" 3     6.6
+:0: "2019-11-29 16:14:51:159" 3.5     7.8
+:0: "2019-11-29 16:14:51:708" 4     9.1
+:0: "2019-11-29 16:14:52:253" 4.5     10.5
+:0: "2019-11-29 16:14:52:802" 5     12
+:0: "2019-11-29 16:14:53:349" 5.5     13.6
+:0: "2019-11-29 16:14:53:896" 6     15.3
+:0: "2019-11-29 16:14:54:444" 6.5     17.1
+:0: "2019-11-29 16:14:54:994" 7     19
+:0: "2019-11-29 16:14:55:537" 7.5     21
+:0: "2019-11-29 16:14:56:084" 8     23.1
+:0: "2019-11-29 16:14:56:631" 8.5     25.3
+:0: "2019-11-29 16:14:57:176" 9     27.6
+:0: "2019-11-29 16:14:57:724" 9.5     30
+:0: "2019-11-29 16:14:58:269" 10     32.5
+:0: "2019-11-29 16:14:58:816" 10.5     35.1
+:0: "2019-11-29 16:14:59:367" 11     37.8
+:0: "2019-11-29 16:14:59:913" 11.5     40.6
+:0: "2019-11-29 16:15:00:458" 12     43.5
+:0: "2019-11-29 16:15:01:004" 12.5     46.5
+:0: "2019-11-29 16:15:01:555" 13     49.6
+:0: "2019-11-29 16:15:02:099" 13.5     52.8
+:0: "2019-11-29 16:15:02:647" 14     56.1
+:0: "2019-11-29 16:15:03:194" 14.5     59.5
+:0: "2019-11-29 16:15:03:742" 15     63
+:0: "2019-11-29 16:15:04:284" 15.5     66.6
+:0: "2019-11-29 16:15:04:833" 16     70.3
+:0: "2019-11-29 16:15:05:381" 16.5     74.1
+:0: "2019-11-29 16:15:30:412" 
+start
+:0: "2019-11-29 16:15:30:818" "192.168.1.220"
+:0: "2019-11-29 16:15:30:822" "192.168.1.221"
+:0: "2019-11-29 16:15:30:825" "XY_DD_1"
+:0: "2019-11-29 16:15:30:829" "XY-DD-2"
+:0: "2019-11-29 16:15:30:832" "XY-DD-3"
+:0: "2019-11-29 16:15:30:835" "XY-DD-4"
+:0: "2019-11-29 16:15:30:838" "XY-DD-5"
+:0: "2019-11-29 16:15:30:841" "XY-DD-6"
+:0: "2019-11-29 16:15:30:845" "XY-DD-7"
+:0: "2019-11-29 16:15:30:848" "XY-DD-FGG-9877"
+:0: "2019-11-29 16:15:30:851" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 16:15:30:854" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 16:15:30:857" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 16:15:30:860" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 16:15:31:006" "3 socket con"
+:0: "2019-11-29 16:15:31:010" "9 socket con"
+:0: "2019-11-29 16:15:31:013" "13 socket con"
+:0: "2019-11-29 16:15:31:016" "16 socket con"
+:0: "2019-11-29 16:15:31:019" "4 socket con"
+:0: "2019-11-29 16:15:31:022" "10 socket con"
+:0: "2019-11-29 16:15:31:025" "0 socket con"
+:0: "2019-11-29 16:15:31:029" "1 socket con"
+:0: "2019-11-29 16:15:31:032" "5 socket con"
+:0: "2019-11-29 16:15:31:035" "7 socket con"
+:0: "2019-11-29 16:15:31:039" "11 socket con"
+:0: "2019-11-29 16:15:31:042" "2 socket con"
+:0: "2019-11-29 16:15:31:046" "14 socket con"
+:0: "2019-11-29 16:15:31:049" "6 socket con"
+:0: "2019-11-29 16:15:31:053" "8 socket con"
+:0: "2019-11-29 16:15:31:056" "12 socket con"
+:0: "2019-11-29 16:15:31:060" "15 socket con"
+:0: "2019-11-29 16:15:38:550" 0     2.1
+:0: "2019-11-29 16:15:39:100" 0.5     2.8
+:0: "2019-11-29 16:15:39:644" 1     3.6
+:0: "2019-11-29 16:15:40:192" 1.5     4.5
+:0: "2019-11-29 16:15:40:742" 2     5.5
+:0: "2019-11-29 16:15:41:284" 2.5     6.6
+:0: "2019-11-29 16:15:41:832" 3     7.8
+:0: "2019-11-29 16:15:42:409" 3.5     9.1
+:0: "2019-11-29 16:15:57:683" 
+start
+:0: "2019-11-29 16:15:58:091" "192.168.1.220"
+:0: "2019-11-29 16:15:58:095" "192.168.1.221"
+:0: "2019-11-29 16:15:58:098" "XY_DD_1"
+:0: "2019-11-29 16:15:58:101" "XY-DD-2"
+:0: "2019-11-29 16:15:58:105" "XY-DD-3"
+:0: "2019-11-29 16:15:58:108" "XY-DD-4"
+:0: "2019-11-29 16:15:58:112" "XY-DD-5"
+:0: "2019-11-29 16:15:58:115" "XY-DD-6"
+:0: "2019-11-29 16:15:58:118" "XY-DD-7"
+:0: "2019-11-29 16:15:58:122" "XY-DD-FGG-9877"
+:0: "2019-11-29 16:15:58:125" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 16:15:58:128" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 16:15:58:132" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 16:15:58:135" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 16:15:58:306" "0 socket con"
+:0: "2019-11-29 16:15:58:310" "12 socket con"
+:0: "2019-11-29 16:15:58:314" "8 socket con"
+:0: "2019-11-29 16:15:58:319" "6 socket con"
+:0: "2019-11-29 16:15:58:323" "2 socket con"
+:0: "2019-11-29 16:15:58:326" "13 socket con"
+:0: "2019-11-29 16:15:58:330" "9 socket con"
+:0: "2019-11-29 16:15:58:334" "3 socket con"
+:0: "2019-11-29 16:15:58:337" "14 socket con"
+:0: "2019-11-29 16:15:58:340" "10 socket con"
+:0: "2019-11-29 16:15:58:344" "4 socket con"
+:0: "2019-11-29 16:15:58:347" "15 socket con"
+:0: "2019-11-29 16:15:58:351" "11 socket con"
+:0: "2019-11-29 16:15:58:355" "7 socket con"
+:0: "2019-11-29 16:15:58:359" "5 socket con"
+:0: "2019-11-29 16:15:58:363" "1 socket con"
+:0: "2019-11-29 16:15:58:366" "16 socket con"
+:0: "2019-11-29 16:16:30:230" 
+start
+:0: "2019-11-29 16:16:30:644" "192.168.1.220"
+:0: "2019-11-29 16:16:30:648" "192.168.1.221"
+:0: "2019-11-29 16:16:30:651" "XY_DD_1"
+:0: "2019-11-29 16:16:30:655" "XY-DD-2"
+:0: "2019-11-29 16:16:30:659" "XY-DD-3"
+:0: "2019-11-29 16:16:30:662" "XY-DD-4"
+:0: "2019-11-29 16:16:30:665" "XY-DD-5"
+:0: "2019-11-29 16:16:30:668" "XY-DD-6"
+:0: "2019-11-29 16:16:30:672" "XY-DD-7"
+:0: "2019-11-29 16:16:30:675" "XY-DD-FGG-9877"
+:0: "2019-11-29 16:16:30:678" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 16:16:30:682" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 16:16:30:685" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 16:16:30:688" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 16:16:30:833" "3 socket con"
+:0: "2019-11-29 16:16:30:837" "7 socket con"
+:0: "2019-11-29 16:16:30:842" "9 socket con"
+:0: "2019-11-29 16:16:30:845" "12 socket con"
+:0: "2019-11-29 16:16:30:849" "4 socket con"
+:0: "2019-11-29 16:16:30:852" "15 socket con"
+:0: "2019-11-29 16:16:30:855" "8 socket con"
+:0: "2019-11-29 16:16:30:859" "10 socket con"
+:0: "2019-11-29 16:16:30:862" "0 socket con"
+:0: "2019-11-29 16:16:30:865" "16 socket con"
+:0: "2019-11-29 16:16:30:869" "1 socket con"
+:0: "2019-11-29 16:16:30:872" "5 socket con"
+:0: "2019-11-29 16:16:30:875" "13 socket con"
+:0: "2019-11-29 16:16:30:879" "2 socket con"
+:0: "2019-11-29 16:16:30:882" "6 socket con"
+:0: "2019-11-29 16:16:30:885" "11 socket con"
+:0: "2019-11-29 16:16:30:888" "14 socket con"
+:0: "2019-11-29 16:16:38:378" 0     1.5
+:0: "2019-11-29 16:16:38:926" 0.5     2.1
+:0: "2019-11-29 16:16:39:473" 1     2.8
+:0: "2019-11-29 16:16:40:021" 1.5     3.6
+:0: "2019-11-29 16:16:40:566" 2     4.5
+:0: "2019-11-29 16:16:41:112" 2.5     5.5
+:0: "2019-11-29 16:16:41:661" 3     6.6
+:0: "2019-11-29 16:16:42:208" 3.5     7.8
+:0: "2019-11-29 16:16:42:754" 4     9.1
+:0: "2019-11-29 16:16:43:302" 4.5     10.5
+:0: "2019-11-29 16:16:43:848" 5     12
+:0: "2019-11-29 16:16:44:394" 5.5     13.6
+:0: "2019-11-29 16:16:44:941" 6     15.3
+:0: "2019-11-29 16:16:45:490" 6.5     17.1
+:0: "2019-11-29 16:16:46:038" 7     19
+:0: "2019-11-29 16:16:46:583" 7.5     21
+:0: "2019-11-29 16:16:47:130" 8     23.1
+:0: "2019-11-29 16:16:47:680" 8.5     25.3
+:0: "2019-11-29 16:16:48:222" 9     27.6
+:0: "2019-11-29 16:16:48:772" 9.5     30
+:0: "2019-11-29 16:16:49:378" 10     32.5
+:0: "2019-11-29 16:28:36:284" 
+start
+:0: "2019-11-29 16:28:36:685" "192.168.1.220"
+:0: "2019-11-29 16:28:36:688" "192.168.1.221"
+:0: "2019-11-29 16:28:36:691" "XY_DD_1"
+:0: "2019-11-29 16:28:36:695" "XY-DD-2"
+:0: "2019-11-29 16:28:36:698" "XY-DD-3"
+:0: "2019-11-29 16:28:36:701" "XY-DD-4"
+:0: "2019-11-29 16:28:36:704" "XY-DD-5"
+:0: "2019-11-29 16:28:36:708" "XY-DD-6"
+:0: "2019-11-29 16:28:36:711" "XY-DD-7"
+:0: "2019-11-29 16:28:36:714" "XY-DD-FGG-9877"
+:0: "2019-11-29 16:28:36:717" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 16:28:36:720" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 16:28:36:723" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 16:28:36:727" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 16:28:36:890" "3 socket con"
+:0: "2019-11-29 16:28:36:893" "14 socket con"
+:0: "2019-11-29 16:28:36:897" "10 socket con"
+:0: "2019-11-29 16:28:36:900" "6 socket con"
+:0: "2019-11-29 16:28:36:903" "2 socket con"
+:0: "2019-11-29 16:28:36:906" "13 socket con"
+:0: "2019-11-29 16:28:36:909" "9 socket con"
+:0: "2019-11-29 16:28:36:913" "5 socket con"
+:0: "2019-11-29 16:28:36:916" "1 socket con"
+:0: "2019-11-29 16:28:36:920" "0 socket con"
+:0: "2019-11-29 16:28:36:923" "16 socket con"
+:0: "2019-11-29 16:28:36:926" "12 socket con"
+:0: "2019-11-29 16:28:36:929" "8 socket con"
+:0: "2019-11-29 16:28:36:933" "4 socket con"
+:0: "2019-11-29 16:28:36:936" "15 socket con"
+:0: "2019-11-29 16:28:36:939" "11 socket con"
+:0: "2019-11-29 16:28:36:942" "7 socket con"
+:0: "2019-11-29 16:28:46:599" 0     2.1
+:0: "2019-11-29 16:28:47:145" 0.5     2.8
+:0: "2019-11-29 16:28:47:694" 1     3.6
+:0: "2019-11-29 16:28:48:239" 1.5     4.5
+:0: "2019-11-29 16:28:48:785" 2     5.5
+:0: "2019-11-29 16:28:49:333" 2.5     6.6
+:0: "2019-11-29 16:28:49:879" 3     7.8
+:0: "2019-11-29 16:28:50:426" 3.5     9.1
+:0: "2019-11-29 16:28:50:976" 4     10.5
+:0: "2019-11-29 16:28:51:521" 4.5     12
+:0: "2019-11-29 16:28:52:069" 5     13.6
+:0: "2019-11-29 16:28:52:613" 5.5     15.3
+:0: "2019-11-29 16:28:53:159" 6     17.1
+:0: "2019-11-29 16:28:53:706" 6.5     19
+:0: "2019-11-29 16:30:21:201" 
+start
+:0: "2019-11-29 16:30:21:594" "192.168.1.220"
+:0: "2019-11-29 16:30:21:597" "192.168.1.221"
+:0: "2019-11-29 16:30:21:601" "XY_DD_1"
+:0: "2019-11-29 16:30:21:604" "XY-DD-2"
+:0: "2019-11-29 16:30:21:607" "XY-DD-3"
+:0: "2019-11-29 16:30:21:610" "XY-DD-4"
+:0: "2019-11-29 16:30:21:614" "XY-DD-5"
+:0: "2019-11-29 16:30:21:617" "XY-DD-6"
+:0: "2019-11-29 16:30:21:620" "XY-DD-7"
+:0: "2019-11-29 16:30:21:623" "XY-DD-FGG-9877"
+:0: "2019-11-29 16:30:21:628" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-11-29 16:30:21:631" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-11-29 16:30:21:634" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-11-29 16:30:21:637" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-11-29 16:30:21:786" "5 socket con"
+:0: "2019-11-29 16:30:21:790" "9 socket con"
+:0: "2019-11-29 16:30:21:793" "0 socket con"
+:0: "2019-11-29 16:30:21:796" "10 socket con"
+:0: "2019-11-29 16:30:21:800" "1 socket con"
+:0: "2019-11-29 16:30:21:803" "14 socket con"
+:0: "2019-11-29 16:30:21:806" "2 socket con"
+:0: "2019-11-29 16:30:21:810" "6 socket con"
+:0: "2019-11-29 16:30:21:813" "11 socket con"
+:0: "2019-11-29 16:30:21:816" "15 socket con"
+:0: "2019-11-29 16:30:21:819" "3 socket con"
+:0: "2019-11-29 16:30:21:822" "7 socket con"
+:0: "2019-11-29 16:30:21:826" "12 socket con"
+:0: "2019-11-29 16:30:21:829" "16 socket con"
+:0: "2019-11-29 16:30:21:832" "4 socket con"
+:0: "2019-11-29 16:30:21:836" "8 socket con"
+:0: "2019-11-29 16:30:21:839" "13 socket con"
+:0: "2019-11-29 16:30:32:598" 0     2.1
+:0: "2019-11-29 16:30:33:145" 0.5     2.8
+:0: "2019-11-29 16:30:33:694" 1     3.6
+:0: "2019-11-29 16:30:34:240" 1.5     4.5
+:0: "2019-11-29 16:30:34:785" 2     5.5
+:0: "2019-11-29 16:30:35:332" 2.5     6.6
+:0: "2019-11-29 16:30:35:879" 3     7.8
+:0: "2019-11-29 16:30:36:431" 3.5     9.1
+:0: "2019-11-29 16:30:36:973" 4     10.5
+:0: "2019-11-29 16:30:37:520" 4.5     12
+:0: "2019-11-29 16:30:38:066" 5     13.6
+:0: "2019-11-29 16:30:38:612" 5.5     15.3
+:0: "2019-11-29 16:30:39:162" 6     17.1
+:0: "2019-11-29 16:30:39:706" 6.5     19
+:0: "2019-11-29 16:30:40:257" 7     21
+:0: "2019-11-29 16:30:40:799" 7.5     23.1
+:0: "2019-11-29 16:30:41:349" 8     25.3
+:0: "2019-11-29 16:30:41:895" 8.5     27.6
+:0: "2019-11-29 16:30:42:445" 9     30
+:0: "2019-11-29 16:30:42:987" 9.5     32.5
+:0: "2019-11-29 16:30:43:537" 10     35.1
+:0: "2019-11-29 16:30:44:082" 10.5     37.8
+:0: "2019-11-29 16:30:44:628" 11     40.6
+:0: "2019-11-29 16:30:45:175" 11.5     43.5
+:0: "2019-11-29 16:30:45:723" 12     46.5
+:0: "2019-11-29 16:30:46:269" 12.5     49.6
+:0: "2019-11-29 16:30:46:815" 13     52.8
+:0: "2019-11-29 16:30:47:365" 13.5     56.1
+:0: "2019-11-29 16:30:47:909" 14     59.5
+:0: "2019-11-29 16:30:48:456" 14.5     63
+:0: "2019-11-29 16:30:49:003" 15     66.6
+:0: "2019-11-29 16:30:49:556" 15.5     70.3
+:0: "2019-11-29 16:30:50:100" 16     74.1
+:0: "2019-11-29 16:30:50:643" 16.5     78
+:0: "2019-11-29 16:30:51:191" 17     82
+:0: "2019-11-29 16:30:51:742" 17.5     86.1
+:0: "2019-11-29 16:30:52:288" 18     90.3

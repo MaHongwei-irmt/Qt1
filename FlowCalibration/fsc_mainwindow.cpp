@@ -339,8 +339,12 @@ void FSC_MainWindow::DataInit(void)
     revdPLC = false;
 
     plotLoop = 0;
-    calOn = false;
+    calOn = CAL_STATE_STOP;
+    ui->textBrow_calInfo->setText(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: "));
 
+
+
+    buttonDebugMapper = new QSignalMapper();
     for (int i = 0; i < SOCKET_NUMBER; i++)
     {
         sktBufRev[i].resize(0);
@@ -349,7 +353,19 @@ void FSC_MainWindow::DataInit(void)
         sktDataState[i] = DATA_READ_OK;
 
         debugSkt[i] = false;
+
+        buttonDebug[i] = new QPushButton(this);
+        buttonDebug[i]->setText(QString::number(i));
+        buttonDebug[i]->setFixedSize(75,23);
+        buttonDebug[i]->move(1660, 80 + i * 29);
+        buttonDebug[i]->show();
+
+        connect(buttonDebug[i], SIGNAL(clicked()), buttonDebugMapper, SLOT(map()));
+        buttonDebugMapper->setMapping(buttonDebug[i], i);
     }
+    connect(buttonDebugMapper, SIGNAL(mapped(int)), this, SLOT(buttonDebug_clicked(int)));
+
+
 
 }
 
@@ -488,6 +504,86 @@ void FSC_MainWindow::mainLoop()
 
     showFresh();
 
+    switch (calOn)
+    {
+    case CAL_START:
+
+        {
+            ui->textBrow_calInfo->clear();
+            on_tbnPoltClear_clicked();
+
+
+            ui->textBrow_calInfo->setText(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: "));
+            ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "启动标定->");
+            ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "清空曲线图->");
+            ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "关闭所有阀门->");
+            ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "稳定3秒...\r\n");
+
+            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
+            calOn = CAL_START_BALANCE;
+            calOnTime = QDateTime::currentDateTime().toTime_t();
+        }
+
+        break;
+
+    case CAL_START_BALANCE:
+
+        if(QDateTime::currentDateTime().toTime_t()- calOnTime > 2)
+        {
+
+            on_tbnScaleZero_clicked();
+
+            ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + \
+                                          QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: "));
+            ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "天平清零->");
+            ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "稳定3秒...\r\n");
+            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
+            calOn = CAL_SCALE_ZERO;
+            calOnTime = QDateTime::currentDateTime().toTime_t();
+        }
+
+        break;
+
+    case CAL_SCALE_ZERO:
+
+        if(QDateTime::currentDateTime().toTime_t()- calOnTime > 2)
+        {
+
+            calOn = CAL_SCALE_ZERO_BALANCE;
+            calOnTime = QDateTime::currentDateTime().toTime_t();
+
+        }
+
+        break;
+
+    case CAL_SCALE_ZERO_BALANCE:
+
+        {
+
+            ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + \
+                                          QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: "));
+            ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "打开正向进水阀->");
+            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
+            ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "启动水泵->");
+            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
+            ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "开始绘图...\r\n");
+            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
+            calOn = CAL_PLOT_START;
+            calOnTime = QDateTime::currentDateTime().toTime_t();
+
+        }
+
+        break;
+
+
+
+    }
+
 }
 
 void FSC_MainWindow::plotAddDataAndFresh(void)
@@ -495,7 +591,7 @@ void FSC_MainWindow::plotAddDataAndFresh(void)
     //static uint poltNew = QDateTime::currentDateTime().toTime_t();
     //uint16_t newMS;
 
-    if (calOn)
+    if (calOn == CAL_PLOT_START)
     {
 //        if (plotLoop == 0)
 //        {
@@ -539,7 +635,7 @@ void FSC_MainWindow::plotAddDataAndFresh(void)
 
         if (plotLoop++ > PLOT_VALUE_NUMBER)
         {
-            calOn = false;
+            calOn = CAL_STATE_STOP;
             //plotLoop = 0;
             //plotScaleSumTimeX.clear();
 
@@ -1360,23 +1456,17 @@ void FSC_MainWindow::on_tbnScaleZero_clicked()
 
 void FSC_MainWindow::on_tbnCalStart_clicked()
 {
-    on_tbnPoltClear_clicked();
-
-    on_tbnScaleZero_clicked();
-    Sleep(4000);
-
-    calOn = true;
-    plotLoop = 0;
+    calOn = CAL_START;
 }
 
 void FSC_MainWindow::on_tbnCalTermination_clicked()
 {
-    calOn = false;
+    calOn = CAL_STATE_STOP;
 }
 
 void FSC_MainWindow::on_tbnPoltClear_clicked()
 {
-    calOn = false;
+    calOn = CAL_STATE_STOP;
     plotLoop = 0;
 
     plotScaleSumTimeX.clear();
@@ -1406,87 +1496,15 @@ void FSC_MainWindow::on_pushButton_19_clicked()
     setFixedSize(1625, 880);
 }
 
-void FSC_MainWindow::on_pushButton_2_clicked()
+void FSC_MainWindow::buttonDebug_clicked(int i)
 {
-    debugSkt[0] = !debugSkt[0];
+     debugSkt[i] = !debugSkt[i];
 }
 
-void FSC_MainWindow::on_pushButton_3_clicked()
+void FSC_MainWindow::on_pushButton_debugOff_clicked()
 {
-    debugSkt[1] = !debugSkt[1];
-}
-
-void FSC_MainWindow::on_pushButton_4_clicked()
-{
-    debugSkt[2] = !debugSkt[2];
-}
-
-void FSC_MainWindow::on_pushButton_5_clicked()
-{
-    debugSkt[3] = !debugSkt[3];
-}
-
-void FSC_MainWindow::on_pushButton_6_clicked()
-{
-    debugSkt[4] = !debugSkt[4];
-}
-
-void FSC_MainWindow::on_pushButton_7_clicked()
-{
-    debugSkt[5] = !debugSkt[5];
-}
-
-void FSC_MainWindow::on_pushButton_8_clicked()
-{
-    debugSkt[6] = !debugSkt[6];
-}
-
-void FSC_MainWindow::on_pushButton_9_clicked()
-{
-    debugSkt[7] = !debugSkt[7];
-}
-
-void FSC_MainWindow::on_pushButton_14_clicked()
-{
-    debugSkt[8] = !debugSkt[8];
-}
-
-void FSC_MainWindow::on_pushButton_10_clicked()
-{
-    debugSkt[9] = !debugSkt[9];
-}
-
-void FSC_MainWindow::on_pushButton_11_clicked()
-{
-    debugSkt[10] = !debugSkt[10];
-}
-
-void FSC_MainWindow::on_pushButton_12_clicked()
-{
-    debugSkt[11] = !debugSkt[11];
-}
-
-void FSC_MainWindow::on_pushButton_15_clicked()
-{
-    debugSkt[12] = !debugSkt[12];
-}
-
-void FSC_MainWindow::on_pushButton_13_clicked()
-{
-    debugSkt[13] = !debugSkt[13];
-}
-
-void FSC_MainWindow::on_pushButton_16_clicked()
-{
-    debugSkt[14] = !debugSkt[14];
-}
-
-void FSC_MainWindow::on_pushButton_17_clicked()
-{
-    debugSkt[15] = !debugSkt[15];
-}
-
-void FSC_MainWindow::on_pushButton_18_clicked()
-{
-    debugSkt[16] = !debugSkt[16];
+    for (int i = 0; i < SOCKET_NUMBER; i++)
+    {
+        debugSkt[i] = false;
+    }
 }

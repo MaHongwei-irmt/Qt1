@@ -46,6 +46,20 @@ class FSC_MainWindow;
 #define DATA_TIMEOUT      3
 #define DATA_READ_TIMEOUT      3
 
+#define CAL_STATE_STOP          0
+#define CAL_START               1
+#define CAL_START_BALANCE       2
+#define CAL_SCALE_ZERO          3
+#define CAL_SCALE_ZERO_BALANCE  4
+#define CAL_PLOT_START          5
+
+
+
+
+
+
+
+
 
 #define PLOT_VALUE_NUMBER   60 * 2 * 2  // 2min / 500ms
 
@@ -88,39 +102,9 @@ private slots:
 
     void on_pushButton_19_clicked();
 
-    void on_pushButton_2_clicked();
+    void buttonDebug_clicked(int i);
 
-    void on_pushButton_3_clicked();
-
-    void on_pushButton_4_clicked();
-
-    void on_pushButton_5_clicked();
-
-    void on_pushButton_6_clicked();
-
-    void on_pushButton_7_clicked();
-
-    void on_pushButton_8_clicked();
-
-    void on_pushButton_9_clicked();
-
-    void on_pushButton_14_clicked();
-
-    void on_pushButton_10_clicked();
-
-    void on_pushButton_11_clicked();
-
-    void on_pushButton_12_clicked();
-
-    void on_pushButton_15_clicked();
-
-    void on_pushButton_13_clicked();
-
-    void on_pushButton_16_clicked();
-
-    void on_pushButton_17_clicked();
-
-    void on_pushButton_18_clicked();
+    void on_pushButton_debugOff_clicked();
 
 private:
     Ui::FSC_MainWindow *ui;
@@ -155,7 +139,9 @@ private:
     int         sktDataState[SOCKET_NUMBER];
     uint        sktDataWriteTime[SOCKET_NUMBER];
 
-    bool        debugSkt[SOCKET_NUMBER];
+    bool            debugSkt[SOCKET_NUMBER];
+    QPushButton     *buttonDebug[SOCKET_NUMBER];
+    QSignalMapper   *buttonDebugMapper;
 
     QSignalMapper * sktConMapper;
     QSignalMapper * sktDisconMapper;
@@ -199,7 +185,8 @@ private:
 
 
     int     plotLoop;
-    bool    calOn;
+    int     calOn;
+    uint    calOnTime;
 
     bool    scaleTestZero;
 
