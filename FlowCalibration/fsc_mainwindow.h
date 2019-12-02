@@ -54,14 +54,51 @@ class FSC_MainWindow;
 #define CAL_PLOT_START          5
 
 
-
-
-
-
-
-
-
 #define PLOT_VALUE_NUMBER   60 * 2 * 2  // 2min / 500ms
+
+
+#define CAL_CURRENT_STAT_NEED_EXECUTE   1
+#define CAL_CURRENT_STAT_DOING          2
+#define CAL_CURRENT_STAT_DONE           4
+
+#define CAL_INFO_MAX_STR_NUM            50000
+
+#define START_CAL_DIRECT_FORWARD        1
+#define START_CAL_DIRECT_REVERSE        2
+#define START_CAL_TYPE_CAL          1
+#define START_CAL_TYPE_CORRECT      2
+#define START_CAL_TYPE_CHECK        3
+
+
+class calStep
+{
+
+public:
+
+    QString type_name;
+
+    double  span_ml_per_min;
+
+    int     span10_cal[10];
+    int     span10_check[10];
+    int     span10_correct[10];
+
+    int     span10Reverse_cal[10];
+    int     span10Reverse_check[10];
+    int     span10Reverse_correct[10];
+
+    bool    calForward;
+    bool    calReverse;
+
+    int     stepTotal;
+    int     stepCurrent;
+
+    int     startDirect;
+    int     startType;
+    int     spanPercent;
+    double  startSpan;
+
+};
 
 class FSC_MainWindow : public QMainWindow
 {
@@ -100,19 +137,29 @@ private slots:
 
     void on_tbnPoltClear_clicked();
 
-    void on_pushButton_19_clicked();
+    void on_pushButton_debugReturn_clicked();
 
     void buttonDebug_clicked(int i);
 
     void on_pushButton_debugOff_clicked();
+
+    void on_tbnCalStepNext_clicked();
+
+    void on_tbnModifyFMTypePara_clicked();
+
+    void on_tbnCalStepPre_clicked();
 
 private:
     Ui::FSC_MainWindow *ui;
 
     void ParaInit(void);
     void PlotInit(void);
-    void DataInit(void);
     void SocketInit(void);
+    void DataInit(void);
+    void dataInit_calStepInit(void);
+    void calStepInfoFresh(void);
+
+    int  startCal_dir_type_span(int *dir, int *type, int *spanPercent, double *span);
 
     void PlotReplay(const QString &arg1);
 
@@ -187,6 +234,8 @@ private:
     int     plotLoop;
     int     calOn;
     uint    calOnTime;
+
+    calStep currentStep;
 
     bool    scaleTestZero;
 
