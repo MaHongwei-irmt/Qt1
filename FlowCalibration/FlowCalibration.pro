@@ -29,7 +29,8 @@ SOURCES += \
     qcustomplot.cpp \
     fsc_mainwindow.cpp \
     dialog_checkdev.cpp \
-    dialog_sensoraddr.cpp
+    dialog_sensoraddr.cpp \
+    fsc_mainwindow_plc.cpp
 
 HEADERS += \
     qcustomplot.h \

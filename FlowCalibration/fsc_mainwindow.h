@@ -151,7 +151,35 @@ private slots:
 
     void on_tbnCalStepPre_clicked();
 
-    void on_tbnCaPause_clicked();
+    void on_tbnCalPause_clicked();
+
+    void on_tbnVOutOpen_clicked();
+
+    void on_tbnVForwardIn1Open_clicked();
+
+    void on_tbnVForwardIn2Open_clicked();
+
+    void on_tbnVReverseIn1Open_clicked();
+
+    void on_tbnVReverseIn2Open_clicked();
+
+    void on_tbnPumpForwardOn_clicked();
+
+    void on_tbnPumpReverseOn_clicked();
+
+    void on_tbnVOutClose_clicked();
+
+    void on_tbnVForwardIn1Close_clicked();
+
+    void on_tbnVForwardIn2Close_clicked();
+
+    void on_tbnVReverseIn1Close_clicked();
+
+    void on_tbnVReverseIn2Close_clicked();
+
+    void on_tbnPumpForwardOff_clicked();
+
+    void on_tbnPumpReverseOff_clicked();
 
 private:
     Ui::FSC_MainWindow *ui;
@@ -183,6 +211,25 @@ private:
 
     void plotAddDataAndFresh(void);
     void plotFresh(void);
+
+
+    void openForwardValveAll(void);
+    void openReverseValveAll(void);
+    void openForwardValve1(void);
+    void openForwardValve2(void);
+    void openReverseValve1(void);
+    void openReverseValve2(void);
+    void openOutValve(void);
+    void closeForwardValveAll(void);
+    void closeReverseValveAll(void);
+    void closeForwardValve1(void);
+    void closeForwardValve2(void);
+    void closeReverseValve1(void);
+    void closeReverseValve2(void);
+    void closeOutValve(void);
+    void pumpOn(void);
+    void pumpOff(void);
+
 
     bool        sktConed[SOCKET_NUMBER];
     QByteArray  sktBufSend[SOCKET_NUMBER];
@@ -254,6 +301,9 @@ private:
     QLineEdit   *lineEdit_FMSum[FLOWMETER_NUMBER];
     QLineEdit   *lineEdit_FMFlow[FLOWMETER_NUMBER];
 
+
+    uint8_t    plcStateWrite;   // 泵一 泵二 bit6 放水阀 反向进水阀2 反向进水阀1 正向进水阀2 正向进水阀1 靠近泵为1#阀
+    uint8_t    plcStateRead;    // 泵一 泵二 bit6 放水阀 反向进水阀2 反向进水阀1 正向进水阀2 正向进水阀1 靠近泵为1#阀
 };
 
 class fsc_para_ini

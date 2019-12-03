@@ -1543,7 +1543,7 @@ void FSC_MainWindow::on_tbnCalStepPre_clicked()
     calStepInfoFresh();
 }
 
-void FSC_MainWindow::on_tbnCaPause_clicked()
+void FSC_MainWindow::on_tbnCalPause_clicked()
 {
     calOn = CAL_STATE_STOP;
 
@@ -1552,3 +1552,4 @@ void FSC_MainWindow::on_tbnCaPause_clicked()
 
     ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 }
+

@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_FSC_MainWindow_t {
-    QByteArrayData data[27];
-    char stringdata0[590];
+    QByteArrayData data[41];
+    char stringdata0[996];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -57,7 +57,21 @@ QT_MOC_LITERAL(22, 455, 30), // "on_pushButton_debugOff_clicked"
 QT_MOC_LITERAL(23, 486, 25), // "on_tbnCalStepNext_clicked"
 QT_MOC_LITERAL(24, 512, 30), // "on_tbnModifyFMTypePara_clicked"
 QT_MOC_LITERAL(25, 543, 24), // "on_tbnCalStepPre_clicked"
-QT_MOC_LITERAL(26, 568, 21) // "on_tbnCaPause_clicked"
+QT_MOC_LITERAL(26, 568, 22), // "on_tbnCalPause_clicked"
+QT_MOC_LITERAL(27, 591, 22), // "on_tbnVOutOpen_clicked"
+QT_MOC_LITERAL(28, 614, 29), // "on_tbnVForwardIn1Open_clicked"
+QT_MOC_LITERAL(29, 644, 29), // "on_tbnVForwardIn2Open_clicked"
+QT_MOC_LITERAL(30, 674, 29), // "on_tbnVReverseIn1Open_clicked"
+QT_MOC_LITERAL(31, 704, 29), // "on_tbnVReverseIn2Open_clicked"
+QT_MOC_LITERAL(32, 734, 27), // "on_tbnPumpForwardOn_clicked"
+QT_MOC_LITERAL(33, 762, 27), // "on_tbnPumpReverseOn_clicked"
+QT_MOC_LITERAL(34, 790, 23), // "on_tbnVOutClose_clicked"
+QT_MOC_LITERAL(35, 814, 30), // "on_tbnVForwardIn1Close_clicked"
+QT_MOC_LITERAL(36, 845, 30), // "on_tbnVForwardIn2Close_clicked"
+QT_MOC_LITERAL(37, 876, 30), // "on_tbnVReverseIn1Close_clicked"
+QT_MOC_LITERAL(38, 907, 30), // "on_tbnVReverseIn2Close_clicked"
+QT_MOC_LITERAL(39, 938, 28), // "on_tbnPumpForwardOff_clicked"
+QT_MOC_LITERAL(40, 967, 28) // "on_tbnPumpReverseOff_clicked"
 
     },
     "FSC_MainWindow\0on_tbnSysDevCheck_clicked\0"
@@ -75,7 +89,21 @@ QT_MOC_LITERAL(26, 568, 21) // "on_tbnCaPause_clicked"
     "buttonDebug_clicked\0on_pushButton_debugOff_clicked\0"
     "on_tbnCalStepNext_clicked\0"
     "on_tbnModifyFMTypePara_clicked\0"
-    "on_tbnCalStepPre_clicked\0on_tbnCaPause_clicked"
+    "on_tbnCalStepPre_clicked\0"
+    "on_tbnCalPause_clicked\0on_tbnVOutOpen_clicked\0"
+    "on_tbnVForwardIn1Open_clicked\0"
+    "on_tbnVForwardIn2Open_clicked\0"
+    "on_tbnVReverseIn1Open_clicked\0"
+    "on_tbnVReverseIn2Open_clicked\0"
+    "on_tbnPumpForwardOn_clicked\0"
+    "on_tbnPumpReverseOn_clicked\0"
+    "on_tbnVOutClose_clicked\0"
+    "on_tbnVForwardIn1Close_clicked\0"
+    "on_tbnVForwardIn2Close_clicked\0"
+    "on_tbnVReverseIn1Close_clicked\0"
+    "on_tbnVReverseIn2Close_clicked\0"
+    "on_tbnPumpForwardOff_clicked\0"
+    "on_tbnPumpReverseOff_clicked"
 };
 #undef QT_MOC_LITERAL
 
@@ -85,7 +113,7 @@ static const uint qt_meta_data_FSC_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      22,   14, // methods
+      36,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -93,28 +121,42 @@ static const uint qt_meta_data_FSC_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,  124,    2, 0x08 /* Private */,
-       3,    0,  125,    2, 0x08 /* Private */,
-       4,    1,  126,    2, 0x08 /* Private */,
-       6,    1,  129,    2, 0x08 /* Private */,
-       8,    1,  132,    2, 0x08 /* Private */,
-      10,    1,  135,    2, 0x08 /* Private */,
-      11,    1,  138,    2, 0x08 /* Private */,
-      12,    1,  141,    2, 0x08 /* Private */,
-      13,    0,  144,    2, 0x08 /* Private */,
-      14,    1,  145,    2, 0x08 /* Private */,
-      15,    1,  148,    2, 0x08 /* Private */,
-      16,    0,  151,    2, 0x08 /* Private */,
-      17,    0,  152,    2, 0x08 /* Private */,
-      18,    0,  153,    2, 0x08 /* Private */,
-      19,    0,  154,    2, 0x08 /* Private */,
-      20,    0,  155,    2, 0x08 /* Private */,
-      21,    1,  156,    2, 0x08 /* Private */,
-      22,    0,  159,    2, 0x08 /* Private */,
-      23,    0,  160,    2, 0x08 /* Private */,
-      24,    0,  161,    2, 0x08 /* Private */,
-      25,    0,  162,    2, 0x08 /* Private */,
-      26,    0,  163,    2, 0x08 /* Private */,
+       1,    0,  194,    2, 0x08 /* Private */,
+       3,    0,  195,    2, 0x08 /* Private */,
+       4,    1,  196,    2, 0x08 /* Private */,
+       6,    1,  199,    2, 0x08 /* Private */,
+       8,    1,  202,    2, 0x08 /* Private */,
+      10,    1,  205,    2, 0x08 /* Private */,
+      11,    1,  208,    2, 0x08 /* Private */,
+      12,    1,  211,    2, 0x08 /* Private */,
+      13,    0,  214,    2, 0x08 /* Private */,
+      14,    1,  215,    2, 0x08 /* Private */,
+      15,    1,  218,    2, 0x08 /* Private */,
+      16,    0,  221,    2, 0x08 /* Private */,
+      17,    0,  222,    2, 0x08 /* Private */,
+      18,    0,  223,    2, 0x08 /* Private */,
+      19,    0,  224,    2, 0x08 /* Private */,
+      20,    0,  225,    2, 0x08 /* Private */,
+      21,    1,  226,    2, 0x08 /* Private */,
+      22,    0,  229,    2, 0x08 /* Private */,
+      23,    0,  230,    2, 0x08 /* Private */,
+      24,    0,  231,    2, 0x08 /* Private */,
+      25,    0,  232,    2, 0x08 /* Private */,
+      26,    0,  233,    2, 0x08 /* Private */,
+      27,    0,  234,    2, 0x08 /* Private */,
+      28,    0,  235,    2, 0x08 /* Private */,
+      29,    0,  236,    2, 0x08 /* Private */,
+      30,    0,  237,    2, 0x08 /* Private */,
+      31,    0,  238,    2, 0x08 /* Private */,
+      32,    0,  239,    2, 0x08 /* Private */,
+      33,    0,  240,    2, 0x08 /* Private */,
+      34,    0,  241,    2, 0x08 /* Private */,
+      35,    0,  242,    2, 0x08 /* Private */,
+      36,    0,  243,    2, 0x08 /* Private */,
+      37,    0,  244,    2, 0x08 /* Private */,
+      38,    0,  245,    2, 0x08 /* Private */,
+      39,    0,  246,    2, 0x08 /* Private */,
+      40,    0,  247,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
@@ -134,6 +176,20 @@ static const uint qt_meta_data_FSC_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,    9,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -170,7 +226,21 @@ void FSC_MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 18: _t->on_tbnCalStepNext_clicked(); break;
         case 19: _t->on_tbnModifyFMTypePara_clicked(); break;
         case 20: _t->on_tbnCalStepPre_clicked(); break;
-        case 21: _t->on_tbnCaPause_clicked(); break;
+        case 21: _t->on_tbnCalPause_clicked(); break;
+        case 22: _t->on_tbnVOutOpen_clicked(); break;
+        case 23: _t->on_tbnVForwardIn1Open_clicked(); break;
+        case 24: _t->on_tbnVForwardIn2Open_clicked(); break;
+        case 25: _t->on_tbnVReverseIn1Open_clicked(); break;
+        case 26: _t->on_tbnVReverseIn2Open_clicked(); break;
+        case 27: _t->on_tbnPumpForwardOn_clicked(); break;
+        case 28: _t->on_tbnPumpReverseOn_clicked(); break;
+        case 29: _t->on_tbnVOutClose_clicked(); break;
+        case 30: _t->on_tbnVForwardIn1Close_clicked(); break;
+        case 31: _t->on_tbnVForwardIn2Close_clicked(); break;
+        case 32: _t->on_tbnVReverseIn1Close_clicked(); break;
+        case 33: _t->on_tbnVReverseIn2Close_clicked(); break;
+        case 34: _t->on_tbnPumpForwardOff_clicked(); break;
+        case 35: _t->on_tbnPumpReverseOff_clicked(); break;
         default: ;
         }
     }
@@ -201,13 +271,13 @@ int FSC_MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 22)
+        if (_id < 36)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 22;
+        _id -= 36;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 22)
+        if (_id < 36)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 22;
+        _id -= 36;
     }
     return _id;
 }
