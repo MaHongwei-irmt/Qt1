@@ -194,6 +194,7 @@ public:
     QCheckBox *checkBox_calReverse;
     QToolButton *tbnCalStepNext;
     QToolButton *tbnCalStepPre;
+    QToolButton *tbnCaPause;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -886,10 +887,13 @@ public:
         checkBox_calReverse->setChecked(true);
         tbnCalStepNext = new QToolButton(centralwidget);
         tbnCalStepNext->setObjectName(QStringLiteral("tbnCalStepNext"));
-        tbnCalStepNext->setGeometry(QRect(1240, 53, 51, 81));
+        tbnCalStepNext->setGeometry(QRect(1300, 54, 51, 81));
         tbnCalStepPre = new QToolButton(centralwidget);
         tbnCalStepPre->setObjectName(QStringLiteral("tbnCalStepPre"));
-        tbnCalStepPre->setGeometry(QRect(1298, 53, 51, 81));
+        tbnCalStepPre->setGeometry(QRect(1354, 54, 51, 81));
+        tbnCaPause = new QToolButton(centralwidget);
+        tbnCaPause->setObjectName(QStringLiteral("tbnCaPause"));
+        tbnCaPause->setGeometry(QRect(1237, 54, 51, 81));
         FSC_MainWindow->setCentralWidget(centralwidget);
         groupBox_2->raise();
         line_4->raise();
@@ -1001,6 +1005,7 @@ public:
         checkBox_calReverse->raise();
         tbnCalStepNext->raise();
         tbnCalStepPre->raise();
+        tbnCaPause->raise();
         menubar = new QMenuBar(FSC_MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
         menubar->setGeometry(QRect(0, 0, 1801, 23));
@@ -1263,8 +1268,9 @@ public:
         pushButton_debugOff->setText(QApplication::translate("FSC_MainWindow", "stop all", Q_NULLPTR));
         checkBox_calForward->setText(QString());
         checkBox_calReverse->setText(QString());
-        tbnCalStepNext->setText(QApplication::translate("FSC_MainWindow", "\350\267\263\350\277\207", Q_NULLPTR));
-        tbnCalStepPre->setText(QApplication::translate("FSC_MainWindow", "\345\233\236\345\244\215", Q_NULLPTR));
+        tbnCalStepNext->setText(QApplication::translate("FSC_MainWindow", "\344\270\213\344\270\200\346\255\245", Q_NULLPTR));
+        tbnCalStepPre->setText(QApplication::translate("FSC_MainWindow", "\344\270\212\344\270\200\346\255\245", Q_NULLPTR));
+        tbnCaPause->setText(QApplication::translate("FSC_MainWindow", "\346\232\202\345\201\234", Q_NULLPTR));
     } // retranslateUi
 
 };

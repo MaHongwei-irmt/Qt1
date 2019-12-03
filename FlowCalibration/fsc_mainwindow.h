@@ -69,6 +69,7 @@ class FSC_MainWindow;
 #define START_CAL_TYPE_CORRECT      2
 #define START_CAL_TYPE_CHECK        3
 
+#define SPAN_NUMBER                 10
 
 class calStep
 {
@@ -79,13 +80,13 @@ public:
 
     double  span_ml_per_min;
 
-    int     span10_cal[10];
-    int     span10_check[10];
-    int     span10_correct[10];
+    int     span10_cal[SPAN_NUMBER];
+    int     span10_check[SPAN_NUMBER];
+    int     span10_correct[SPAN_NUMBER];
 
-    int     span10Reverse_cal[10];
-    int     span10Reverse_check[10];
-    int     span10Reverse_correct[10];
+    int     span10Reverse_cal[SPAN_NUMBER];
+    int     span10Reverse_check[SPAN_NUMBER];
+    int     span10Reverse_correct[SPAN_NUMBER];
 
     bool    calForward;
     bool    calReverse;
@@ -95,7 +96,7 @@ public:
 
     int     startDirect;
     int     startType;
-    int     spanPercent;
+    int     startSpanPercent;
     double  startSpan;
 
 };
@@ -149,6 +150,8 @@ private slots:
 
     void on_tbnCalStepPre_clicked();
 
+    void on_tbnCaPause_clicked();
+
 private:
     Ui::FSC_MainWindow *ui;
 
@@ -159,7 +162,7 @@ private:
     void dataInit_calStepInit(void);
     void calStepInfoFresh(void);
 
-    int  startCal_dir_type_span(int *dir, int *type, int *spanPercent, double *span);
+    int  startCal_dir_type_span(int *dir, int *type, int *spanPercent, double *spanCal);
 
     void PlotReplay(const QString &arg1);
 

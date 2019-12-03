@@ -2624,27 +2624,40 @@ p, li { white-space: pre-wrap; }
    <widget class="QToolButton" name="tbnCalStepNext">
     <property name="geometry">
      <rect>
-      <x>1240</x>
-      <y>53</y>
+      <x>1300</x>
+      <y>54</y>
       <width>51</width>
       <height>81</height>
      </rect>
     </property>
     <property name="text">
-     <string>跳过</string>
+     <string>下一步</string>
     </property>
    </widget>
    <widget class="QToolButton" name="tbnCalStepPre">
     <property name="geometry">
      <rect>
-      <x>1298</x>
-      <y>53</y>
+      <x>1354</x>
+      <y>54</y>
       <width>51</width>
       <height>81</height>
      </rect>
     </property>
     <property name="text">
-     <string>回复</string>
+     <string>上一步</string>
+    </property>
+   </widget>
+   <widget class="QToolButton" name="tbnCaPause">
+    <property name="geometry">
+     <rect>
+      <x>1237</x>
+      <y>54</y>
+      <width>51</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>暂停</string>
     </property>
    </widget>
    <zorder>groupBox_2</zorder>
@@ -2757,6 +2770,7 @@ p, li { white-space: pre-wrap; }
    <zorder>checkBox_calReverse</zorder>
    <zorder>tbnCalStepNext</zorder>
    <zorder>tbnCalStepPre</zorder>
+   <zorder>tbnCaPause</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

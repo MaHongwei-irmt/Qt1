@@ -47,22 +47,10 @@ void FSC_MainWindow::ParaInit(void)
     }
 
     fsc_global::port_number[0] = 2100;
-    fsc_global::port_number[1] = 4001;
-    fsc_global::port_number[2] = 4002;
-    fsc_global::port_number[3] = 4003;
-    fsc_global::port_number[4] = 4004;
-    fsc_global::port_number[5] = 4005;
-    fsc_global::port_number[6] = 4006;
-    fsc_global::port_number[7] = 4007;
-    fsc_global::port_number[8] = 4008;
-    fsc_global::port_number[9] = 4009;
-    fsc_global::port_number[10] = 4010;
-    fsc_global::port_number[11] = 4011;
-    fsc_global::port_number[12] = 4012;
-    fsc_global::port_number[13] = 4013;
-    fsc_global::port_number[14] = 4014;
-    fsc_global::port_number[15] = 4015;
-    fsc_global::port_number[16] = 4016;
+    for(quint16 i = 1; i <= 16; i++)
+    {
+        fsc_global::port_number[i] = 4000 + i;
+    }
 
     FSCLOG << fsc_global::ip_PLC;
     FSCLOG << fsc_global::ip_RS_Server;
@@ -81,38 +69,24 @@ void FSC_MainWindow::ParaInit(void)
 
         tmp.span_ml_per_min = configIni->value( "sensor_type_" + QString::number(i) +"/span_ml_per_min" ).toDouble();
 
-        tmp.span10_cal[0] = configIni->value( "sensor_type_" + QString::number(i) +"/10_percent_span_to_be_calibrate" ).toBool();
-        tmp.span10_cal[1] = configIni->value( "sensor_type_" + QString::number(i) +"/20_percent_span_to_be_calibrate" ).toBool();
-        tmp.span10_cal[2] = configIni->value( "sensor_type_" + QString::number(i) +"/30_percent_span_to_be_calibrate" ).toBool();
-        tmp.span10_cal[3] = configIni->value( "sensor_type_" + QString::number(i) +"/40_percent_span_to_be_calibrate" ).toBool();
-        tmp.span10_cal[4] = configIni->value( "sensor_type_" + QString::number(i) +"/50_percent_span_to_be_calibrate" ).toBool();
-        tmp.span10_cal[5] = configIni->value( "sensor_type_" + QString::number(i) +"/60_percent_span_to_be_calibrate" ).toBool();
-        tmp.span10_cal[6] = configIni->value( "sensor_type_" + QString::number(i) +"/70_percent_span_to_be_calibrate" ).toBool();
-        tmp.span10_cal[7] = configIni->value( "sensor_type_" + QString::number(i) +"/80_percent_span_to_be_calibrate" ).toBool();
-        tmp.span10_cal[8] = configIni->value( "sensor_type_" + QString::number(i) +"/90_percent_span_to_be_calibrate" ).toBool();
-        tmp.span10_cal[9] = configIni->value( "sensor_type_" + QString::number(i) +"/100_percent_span_to_be_calibrate" ).toBool();
+        QString str;
+        for (int k = 0; k < SPAN_NUMBER; k++)
+        {
+            str = QString().sprintf("/%d_percent_span_to_be_calibrate", (k + 1) * 10 );
+            tmp.span10_cal[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
+        }
 
-        tmp.span10_check[0] = configIni->value( "sensor_type_" + QString::number(i) +"/10_percent_span_to_be_verify" ).toBool();
-        tmp.span10_check[1] = configIni->value( "sensor_type_" + QString::number(i) +"/20_percent_span_to_be_verify" ).toBool();
-        tmp.span10_check[2] = configIni->value( "sensor_type_" + QString::number(i) +"/30_percent_span_to_be_verify" ).toBool();
-        tmp.span10_check[3] = configIni->value( "sensor_type_" + QString::number(i) +"/40_percent_span_to_be_verify" ).toBool();
-        tmp.span10_check[4] = configIni->value( "sensor_type_" + QString::number(i) +"/50_percent_span_to_be_verify" ).toBool();
-        tmp.span10_check[5] = configIni->value( "sensor_type_" + QString::number(i) +"/60_percent_span_to_be_verify" ).toBool();
-        tmp.span10_check[6] = configIni->value( "sensor_type_" + QString::number(i) +"/70_percent_span_to_be_verify" ).toBool();
-        tmp.span10_check[7] = configIni->value( "sensor_type_" + QString::number(i) +"/80_percent_span_to_be_verify" ).toBool();
-        tmp.span10_check[8] = configIni->value( "sensor_type_" + QString::number(i) +"/90_percent_span_to_be_verify" ).toBool();
-        tmp.span10_check[9] = configIni->value( "sensor_type_" + QString::number(i) +"/100_percent_span_to_be_verify" ).toBool();
+        for (int k = 0; k < SPAN_NUMBER; k++)
+        {
+            str = QString().sprintf("/%d_percent_span_to_be_verify", (k + 1) * 10 );
+            tmp.span10_check[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
+        }
 
-        tmp.span10_correct[0] = configIni->value( "sensor_type_" + QString::number(i) +"/10_percent_span_to_be_correct" ).toBool();
-        tmp.span10_correct[1] = configIni->value( "sensor_type_" + QString::number(i) +"/20_percent_span_to_be_correct" ).toBool();
-        tmp.span10_correct[3] = configIni->value( "sensor_type_" + QString::number(i) +"/30_percent_span_to_be_correct" ).toBool();
-        tmp.span10_correct[3] = configIni->value( "sensor_type_" + QString::number(i) +"/40_percent_span_to_be_correct" ).toBool();
-        tmp.span10_correct[4] = configIni->value( "sensor_type_" + QString::number(i) +"/50_percent_span_to_be_correct" ).toBool();
-        tmp.span10_correct[5] = configIni->value( "sensor_type_" + QString::number(i) +"/60_percent_span_to_be_correct" ).toBool();
-        tmp.span10_correct[6] = configIni->value( "sensor_type_" + QString::number(i) +"/70_percent_span_to_be_correct" ).toBool();
-        tmp.span10_correct[7] = configIni->value( "sensor_type_" + QString::number(i) +"/80_percent_span_to_be_correct" ).toBool();
-        tmp.span10_correct[8] = configIni->value( "sensor_type_" + QString::number(i) +"/90_percent_span_to_be_correct" ).toBool();
-        tmp.span10_correct[9] = configIni->value( "sensor_type_" + QString::number(i) +"/100_percent_span_to_be_correct" ).toBool();
+        for (int k = 0; k < SPAN_NUMBER; k++)
+        {
+            str = QString().sprintf("/%d_percent_span_to_be_correct", (k + 1) * 10 );
+            tmp.span10_correct[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
+        }
 
         fsc_global::para_ini.append(tmp);
 
@@ -408,6 +382,8 @@ void FSC_MainWindow::DataInit(void)
 
 void FSC_MainWindow::dataInit_calStepInit(void)
 {
+    currentStep.span_ml_per_min = ui->leFlowSpeed_SensorSpan->text().toDouble();
+
     currentStep.calForward = ui->checkBox_calForward->checkState();
     currentStep.calReverse = ui->checkBox_calReverse->checkState();
 
@@ -736,7 +712,7 @@ void FSC_MainWindow::calStepInfoFresh(void)
     if (currentStep.calForward)
     {
 
-        for (int i = 9; i >= 0; i--)
+        for (int i = SPAN_NUMBER - 1; i >= 0; i--)
         {
             if (currentStep.span10_cal[i])
             {
@@ -776,7 +752,7 @@ void FSC_MainWindow::calStepInfoFresh(void)
     if (currentStep.calReverse)
     {
 
-        for (int i = 9; i >= 0; i--)
+        for (int i = SPAN_NUMBER - 1; i >= 0; i--)
         {
             if (currentStep.span10Reverse_cal[i])
             {
@@ -985,10 +961,39 @@ void FSC_MainWindow::mainLoop()
 
         {
             startCal_dir_type_span(&currentStep.startDirect, &currentStep.startType, \
-                                   &currentStep.spanPercent, &currentStep.startSpan);
+                                   &currentStep.startSpanPercent, &currentStep.startSpan);
 
             str += QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: ");
-            str += "打开正向进水阀->";
+
+            str += QString().sprintf("(%d)->", currentStep.stepCurrent + 1);
+
+            if (currentStep.startDirect == START_CAL_DIRECT_FORWARD)
+            {
+                str += "打开正向进水阀->";
+            }
+            else if (currentStep.startDirect == START_CAL_DIRECT_REVERSE)
+            {
+                str += "打开反向进水阀->";
+            }
+
+            if (currentStep.startType == START_CAL_TYPE_CAL)
+            {
+                str += "标定->";
+            }
+            else if (currentStep.startType == START_CAL_TYPE_CORRECT)
+            {
+                str += "修正->";
+            }
+            else if (currentStep.startType == START_CAL_TYPE_CHECK)
+            {
+                 str += "验证->";
+            }
+
+            str += QString().sprintf("%d", currentStep.startSpanPercent);
+            str += "%量程->";
+            str += QString().sprintf("%0.3fml/min->", currentStep.startSpan);
+
+
             str += "启动水泵->";
             str += "开始绘图...\r\n";
 
@@ -1012,13 +1017,11 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
 {
     int step = 0;
 
-    for(int i = 0; i < 100 / 10; i++)
+    for(int i = SPAN_NUMBER - 1; i >= 0; i--)
     {
         if (currentStep.span10_cal[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
         {
-            step++;
-
-            if ((currentStep.stepCurrent + 1) == step)
+            if (currentStep.stepCurrent == step)
             {
                *dir     =   START_CAL_DIRECT_FORWARD;
                *type    =   START_CAL_TYPE_CAL;
@@ -1027,42 +1030,86 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
 
                 return true;
             }
+            step++;
+
          }
 
+        if (currentStep.span10_correct[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        {
+            if (currentStep.stepCurrent == step)
+            {
+               *dir     =   START_CAL_DIRECT_FORWARD;
+               *type    =   START_CAL_TYPE_CORRECT;
+               *spanPercent    =   (i + 1) * 10;
+               *span    =   currentStep.span_ml_per_min * (*spanPercent) / 100;
 
+                return true;
+            }
+            step++;
+         }
+
+        if (currentStep.span10_check[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        {
+            if (currentStep.stepCurrent == step)
+            {
+               *dir     =   START_CAL_DIRECT_FORWARD;
+               *type    =   START_CAL_TYPE_CHECK;
+               *spanPercent    =   (i + 1) * 10;
+               *span    =   currentStep.span_ml_per_min * (*spanPercent) / 100;
+
+                return true;
+            }
+            step++;
+         }
+    }
+
+    for(int i = SPAN_NUMBER - 1; i >= 0; i--)
+    {
+        if (currentStep.span10Reverse_cal[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        {
+            if (currentStep.stepCurrent  == step)
+            {
+               *dir     =   START_CAL_DIRECT_REVERSE;
+               *type    =   START_CAL_TYPE_CAL;
+               *spanPercent    =   (i + 1) * 10;
+               *span    =   currentStep.span_ml_per_min * (*spanPercent) / 100;
+
+                return true;
+            }
+            step++;
+         }
+
+        if (currentStep.span10_correct[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        {
+            if (currentStep.stepCurrent == step)
+            {
+               *dir     =   START_CAL_DIRECT_REVERSE;
+               *type    =   START_CAL_TYPE_CORRECT;
+               *spanPercent    =   (i + 1) * 10;
+               *span    =   currentStep.span_ml_per_min * (*spanPercent) / 100;
+
+                return true;
+            }
+            step++;
+         }
+
+        if (currentStep.span10_check[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        {
+            if (currentStep.stepCurrent == step)
+            {
+               *dir     =   START_CAL_DIRECT_REVERSE;
+               *type    =   START_CAL_TYPE_CHECK;
+               *spanPercent    =   (i + 1) * 10;
+               *span    =   currentStep.span_ml_per_min * (*spanPercent) / 100;
+
+                return true;
+            }
+            step++;
+         }
 
     }
 
     return false;
-
-
-
-//        currentStep.span10_cal[i] = 0;
-//        currentStep.span10_check[i] = 0;
-//        currentStep.span10_correct[i] = 0;
-
-//        currentStep.span10Reverse_cal[i] = 0;
-//        currentStep.span10Reverse_check[i] = 0;
-//        currentStep.span10Reverse_correct[i] = 0;
-//    }
-
-//    if (currentStep.calForward)
-//    {
-
-//        if (ui->checkBox_100SpanCal->checkState())
-//        {
-//            currentStep.span10_cal[9] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-//        }
-//        if (ui->checkBox_100SpanModify->checkState())
-//        {
-//            currentStep.span10_correct[9] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-//        }
-//        if (ui->checkBox_100SpanCheck->checkState())
-//        {
-//            currentStep.span10_check[9] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-//        }
-
-
 }
 
 void FSC_MainWindow::plotAddDataAndFresh(void)
@@ -1669,21 +1716,21 @@ void FSC_MainWindow::showFresh(void)
         ui->lineEdit_setPWM->setEnabled(false);
     }
 
-    ui->tbnVOutOpen->setEnabled(revdPLC);
-    ui->tbnVOutClose->setEnabled(revdPLC);
-    ui->tbnVForwardIn1Open->setEnabled(revdPLC);
-    ui->tbnVForwardIn1Close->setEnabled(revdPLC);
-    ui->tbnVForwardIn2Open->setEnabled(revdPLC);
-    ui->tbnVForwardIn2Close->setEnabled(revdPLC);
-    ui->tbnVReverseIn1Open->setEnabled(revdPLC);
-    ui->tbnVReverseIn1Close->setEnabled(revdPLC);
-    ui->tbnVReverseIn2Open->setEnabled(revdPLC);
-    ui->tbnVReverseIn2Close->setEnabled(revdPLC);
+    ui->tbnVOutOpen->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnVOutClose->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn1Open->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn1Close->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn2Open->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn2Close->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn1Open->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn1Close->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn2Open->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn2Close->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
 
-    ui->tbnPumpForwardOn->setEnabled(revdPLC);
-    ui->tbnPumpForwardOff->setEnabled(revdPLC);
-    ui->tbnPumpReverseOn->setEnabled(revdPLC);
-    ui->tbnPumpReverseOff->setEnabled(revdPLC);
+    ui->tbnPumpForwardOn->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnPumpForwardOff->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnPumpReverseOn->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnPumpReverseOff->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
 
 
     ui->lineEdit_plotTime->setText(QString::number(plotLoop * 0.5, 'f', 1) + "s");
@@ -1947,7 +1994,7 @@ void FSC_MainWindow::on_tbnCalStart_clicked()
 
     on_tbnPoltClear_clicked();
 
-    on_tbnModifyFMTypePara_clicked();
+    calStepInfoFresh();
     if (currentStep.stepTotal > 0)
     {
         calOn = CAL_START;
@@ -1963,9 +2010,7 @@ void FSC_MainWindow::on_tbnCalTermination_clicked()
 
     ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 
-    //on_tbnPoltClear_clicked();
-
-
+    currentStep.stepCurrent = 0;
 }
 
 void FSC_MainWindow::on_tbnPoltClear_clicked()
@@ -2048,4 +2093,14 @@ void FSC_MainWindow::on_tbnCalStepPre_clicked()
     }
 
     calStepInfoFresh();
+}
+
+void FSC_MainWindow::on_tbnCaPause_clicked()
+{
+    calOn = CAL_STATE_STOP;
+
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n\r\n" + \
+                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 暂停"));
+
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 }
