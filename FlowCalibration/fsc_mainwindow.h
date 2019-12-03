@@ -5,6 +5,8 @@
 #include "dialog_checkdev.h"
 #include <QtNetwork>
 #include <QSignalMapper>
+#include <QCheckBox>
+#include <QLineEdit>
 
 QByteArray  HexStringToByteArray(QString HexString);
 QString     ByteArrayToHexString(QByteArray &ba);
@@ -51,7 +53,9 @@ class FSC_MainWindow;
 #define CAL_START_BALANCE       2
 #define CAL_SCALE_ZERO          3
 #define CAL_SCALE_ZERO_BALANCE  4
-#define CAL_PLOT_START          5
+#define CAL_OPEN_VALVE          5
+#define CAL_OPEN_PUMP           6
+#define CAL_PLOT_START          7
 
 
 #define PLOT_VALUE_NUMBER   60 * 2 * 2  // 2min / 500ms
@@ -80,16 +84,13 @@ public:
 
     double  span_ml_per_min;
 
-    int     span10_cal[SPAN_NUMBER];
-    int     span10_check[SPAN_NUMBER];
-    int     span10_correct[SPAN_NUMBER];
+    int     spanCal[SPAN_NUMBER];
+    int     spanCheck[SPAN_NUMBER];
+    int     spanCorrect[SPAN_NUMBER];
 
-    int     span10Reverse_cal[SPAN_NUMBER];
-    int     span10Reverse_check[SPAN_NUMBER];
-    int     span10Reverse_correct[SPAN_NUMBER];
-
-    bool    calForward;
-    bool    calReverse;
+    int     spanCalReverse[SPAN_NUMBER];
+    int     spanCheckReverse[SPAN_NUMBER];
+    int     spanCorrectReverse[SPAN_NUMBER];
 
     int     stepTotal;
     int     stepCurrent;
@@ -155,6 +156,7 @@ private slots:
 private:
     Ui::FSC_MainWindow *ui;
 
+    void uiReInit(void);
     void ParaInit(void);
     void PlotInit(void);
     void SocketInit(void);
@@ -242,6 +244,16 @@ private:
 
     bool    scaleTestZero;
 
+    QCheckBox   *checkBox_spanCal[SPAN_NUMBER];
+    QCheckBox   *checkBox_spanCheck[SPAN_NUMBER];
+    QCheckBox   *checkBox_spanCorrect[SPAN_NUMBER];
+    QCheckBox   *checkBox_spanCalReverse[SPAN_NUMBER];
+    QCheckBox   *checkBox_spanCheckReverse[SPAN_NUMBER];
+    QCheckBox   *checkBox_spanCorrectReverse[SPAN_NUMBER];
+
+    QLineEdit   *lineEdit_FMSum[FLOWMETER_NUMBER];
+    QLineEdit   *lineEdit_FMFlow[FLOWMETER_NUMBER];
+
 };
 
 class fsc_para_ini
@@ -253,9 +265,12 @@ public:
 
     double span_ml_per_min;
 
-    bool    span10_cal[10];
-    bool    span10_check[10];
-    bool    span10_correct[10];
+    bool    spanCal[SPAN_NUMBER];
+    bool    spanCheck[SPAN_NUMBER];
+    bool    spanCorrect[SPAN_NUMBER];
+    bool    spanCalReverse[SPAN_NUMBER];
+    bool    spanCheckReverse[SPAN_NUMBER];
+    bool    spanCorrectReverse[SPAN_NUMBER];
 
     QVector <uint> new_cal_pos;
     QVector <uint> new_check_pos;

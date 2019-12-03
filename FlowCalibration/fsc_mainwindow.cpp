@@ -19,6 +19,7 @@ FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui
 {
     ui->setupUi(this);
 
+    uiReInit();
     ParaInit();
     PlotInit();
     DataInit();
@@ -31,6 +32,89 @@ FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui
 FSC_MainWindow::~FSC_MainWindow()
 {
     delete ui;
+}
+
+void FSC_MainWindow::uiReInit(void)
+{
+    int x = 97;
+
+    for (int i = 0; i < SPAN_NUMBER; i++)
+    {
+
+        checkBox_spanCal[i] =  new QCheckBox(this);
+        checkBox_spanCal[i]->move(x, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCal[i]->show();
+
+        checkBox_spanCheck[i] =  new QCheckBox(this);
+        checkBox_spanCheck[i]->move(x + 20, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCheck[i]->show();
+
+        checkBox_spanCorrect[i] =  new QCheckBox(this);
+        checkBox_spanCorrect[i]->move(x + 40, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCorrect[i]->show();
+
+
+        checkBox_spanCalReverse[i] =  new QCheckBox(this);
+        checkBox_spanCalReverse[i]->move(x + 80, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCalReverse[i]->show();
+
+        checkBox_spanCheckReverse[i] =  new QCheckBox(this);
+        checkBox_spanCheckReverse[i]->move(x + 100, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCheckReverse[i]->show();
+
+        checkBox_spanCorrectReverse[i] =  new QCheckBox(this);
+        checkBox_spanCorrectReverse[i]->move(x + 120, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCorrectReverse[i]->show();
+     }
+
+
+    lineEdit_FMSum[0] = ui->lineEdit_FM_1;
+    lineEdit_FMSum[1] = ui->lineEdit_FM_2;
+    lineEdit_FMSum[2] = ui->lineEdit_FM_3;
+    lineEdit_FMSum[3] = ui->lineEdit_FM_4;
+    lineEdit_FMSum[4] = ui->lineEdit_FM_5;
+    lineEdit_FMSum[5] = ui->lineEdit_FM_6;
+    lineEdit_FMSum[6] = ui->lineEdit_FM_7;
+    lineEdit_FMSum[7] = ui->lineEdit_FM_8;
+    lineEdit_FMSum[8] = ui->lineEdit_FM_9;
+    lineEdit_FMSum[9] = ui->lineEdit_FM_10;
+    lineEdit_FMSum[10] = ui->lineEdit_FM_11;
+    lineEdit_FMSum[11] = ui->lineEdit_FM_12;
+
+    lineEdit_FMFlow[0] = ui->lineEdit_FM_1_flow;
+    lineEdit_FMFlow[1] = ui->lineEdit_FM_2_flow;
+    lineEdit_FMFlow[2] = ui->lineEdit_FM_3_flow;
+    lineEdit_FMFlow[3] = ui->lineEdit_FM_4_flow;
+    lineEdit_FMFlow[4] = ui->lineEdit_FM_5_flow;
+    lineEdit_FMFlow[5] = ui->lineEdit_FM_6_flow;
+    lineEdit_FMFlow[6] = ui->lineEdit_FM_7_flow;
+    lineEdit_FMFlow[7] = ui->lineEdit_FM_8_flow;
+    lineEdit_FMFlow[8] = ui->lineEdit_FM_9_flow;
+    lineEdit_FMFlow[9] = ui->lineEdit_FM_10_flow;
+    lineEdit_FMFlow[10] = ui->lineEdit_FM_11_flow;
+    lineEdit_FMFlow[11] = ui->lineEdit_FM_12_flow;
+
+    buttonDebugMapper = new QSignalMapper();
+    for (int i = 0; i < SOCKET_NUMBER; i++)
+    {
+        sktBufRev[i].resize(0);
+        sktBufSend[i].resize(0);
+
+        sktDataState[i] = DATA_READ_OK;
+
+        debugSkt[i] = false;
+
+        buttonDebug[i] = new QPushButton(this);
+        buttonDebug[i]->setText(QString::number(i));
+        buttonDebug[i]->setFixedSize(75,23);
+        buttonDebug[i]->move(1660, 80 + i * 29);
+        buttonDebug[i]->show();
+
+        connect(buttonDebug[i], SIGNAL(clicked()), buttonDebugMapper, SLOT(map()));
+        buttonDebugMapper->setMapping(buttonDebug[i], i);
+    }
+    connect(buttonDebugMapper, SIGNAL(mapped(int)), this, SLOT(buttonDebug_clicked(int)));
+
 }
 
 void FSC_MainWindow::ParaInit(void)
@@ -73,19 +157,23 @@ void FSC_MainWindow::ParaInit(void)
         for (int k = 0; k < SPAN_NUMBER; k++)
         {
             str = QString().sprintf("/%d_percent_span_to_be_calibrate", (k + 1) * 10 );
-            tmp.span10_cal[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
-        }
+            tmp.spanCal[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
 
-        for (int k = 0; k < SPAN_NUMBER; k++)
-        {
             str = QString().sprintf("/%d_percent_span_to_be_verify", (k + 1) * 10 );
-            tmp.span10_check[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
-        }
+            tmp.spanCheck[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
 
-        for (int k = 0; k < SPAN_NUMBER; k++)
-        {
             str = QString().sprintf("/%d_percent_span_to_be_correct", (k + 1) * 10 );
-            tmp.span10_correct[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
+            tmp.spanCorrect[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
+
+
+            str = QString().sprintf("/%d_percent_span_to_be_calibrate_reverse", (k + 1) * 10 );
+            tmp.spanCalReverse[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
+
+            str = QString().sprintf("/%d_percent_span_to_be_verify_reverse", (k + 1) * 10 );
+            tmp.spanCheckReverse[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
+
+            str = QString().sprintf("/%d_percent_span_to_be_correct_reverse", (k + 1) * 10 );
+            tmp.spanCorrectReverse[k] = configIni->value( "sensor_type_" + QString::number(i) + str ).toBool();
         }
 
         fsc_global::para_ini.append(tmp);
@@ -103,179 +191,36 @@ void FSC_MainWindow::ParaInit(void)
 
 void FSC_MainWindow::PlotInit(void)
 {
-    int iGraphIndex = 0;
-
-    //ui->widget->setBackground(QBrush(Qt::black));
-
-    //设定右上角图形标注可见
     ui->MyCustomPlot->legend->setVisible(true);
-
-    //设定右上角图形标注的字体
     ui->MyCustomPlot->legend->setFont(QFont("Helvetica", 8));
 
-    QVector<double> x(101),y(101);
-
-    //图形为y=x^3
-    for(int i=0; i<101; i++)
-    {
-        x[i] = i/5.0-10;
-        y[i] = x[i]*x[i]*x[i] * x[i] * x[i];//qPow(x[i],3)
-    }
-
-    //添加图形
     ui->MyCustomPlot->addGraph();
-
-    //设置画笔
     ui->MyCustomPlot->graph(0)->setPen(QPen(Qt::red));
-
-    //设置画刷,曲线和X轴围成面积的颜色
-    //ui->MyCustomPlot->graph(0)->setBrush(QBrush(QColor(255,255,0)));
-
-    //设置右上角图形标注名称
     ui->MyCustomPlot->graph(0)->setName("天平");
 
-    //传入数据，setData的两个参数类型为double
-    ui->MyCustomPlot->graph(0)->setData(x,y);
 
-    QVector<double> temp(20);
-    QVector<double> temp1(20);
-
-    //图形为y = 100*x;
-    for(int i=0;i<20;i++)
-    {
-        temp[i] = i;
-        temp1[i] = 1000*i+10;
-    }
-
-    //添加图形
     ui->MyCustomPlot->addGraph();
-
-    //设置画笔
     ui->MyCustomPlot->graph(1)->setPen(QPen(Qt::blue));
-
-    //设置画刷,曲线和X轴围成面积的颜色
-    //ui->widget->graph(1)->setBrush(QBrush(QColor(0,255,0)));
-
-    //传入数据
-    ui->MyCustomPlot->graph(1)->setData(temp,temp1);
-
-    /*-------------------------------------------*/
-    //画动态曲线时，传入数据采用addData，通过定时器多次调用，并在之后调用ui->widget->replot();
-    //动态曲线可以通过另一种设置坐标的方法解决坐标问题：
-    //setRange ( double position, double size, Qt::AlignmentFlag alignment )
-    //参数分别为：原点，偏移量，对其方式，有兴趣的读者可自行尝试，欢迎垂询
-    /*-------------------------------------------*/
-
-    //设置右上角图形标注名称
     ui->MyCustomPlot->graph(1)->setName("标准流量");
+    ui->MyCustomPlot->addGraph();
+    ui->MyCustomPlot->graph(2)->setPen(QPen(Qt::blue));
+    ui->MyCustomPlot->graph(2)->setName("标准流速");
 
+    ui->MyCustomPlot->addGraph();
+    ui->MyCustomPlot->graph(3)->setPen(QPen(Qt::black));
+    ui->MyCustomPlot->graph(3)->setName("流量");
+    ui->MyCustomPlot->addGraph();
+    ui->MyCustomPlot->graph(4)->setPen(QPen(Qt::black));
+    ui->MyCustomPlot->graph(4)->setName("流速");
 
-
-
-
-
-
-
-
-
-
-
-    iGraphIndex = 2;
-
-
-    QVector<double> t(1);
-    QVector<double> tl(1);
-
-
-    for (iGraphIndex = 2; iGraphIndex <= 4; iGraphIndex++)
-    {
-
-        t[0] = 30;
-        tl[0] = 0;
-
-        //添加图形
-        ui->MyCustomPlot->addGraph();
-
-        //设置画笔
-        ui->MyCustomPlot->graph(iGraphIndex)->setPen(QPen(Qt::black));
-
-        //设置画刷,曲线和X轴围成面积的颜色
-        //ui->widget->graph(1)->setBrush(QBrush(QColor(0,255,0)));
-
-        //传入数据：
-        ui->MyCustomPlot->graph(iGraphIndex)->setData(t,tl);
-
-        /*-------------------------------------------*/
-        //画动态曲线时，传入数据采用addData，通过定时器多次调用，并在之后调用ui->widget->replot();
-        //动态曲线可以通过另一种设置坐标的方法解决坐标问题：
-        //setRange ( double position, double size, Qt::AlignmentFlag alignment )
-        //参数分别为：原点，偏移量，对其方式，有兴趣的读者可自行尝试，欢迎垂询
-        /*-------------------------------------------*/
-
-        //设置右上角图形标注名称
-        //ui->MyCustomPlot->graph(iGraphIndex)->setName(QString::number(iGraphIndex,10));
-
-
-        if(iGraphIndex == 3) ui->MyCustomPlot->graph(iGraphIndex)->setName(ui->comboBox_PlotSenSel->currentText() + "流量");
-        if(iGraphIndex == 4) ui->MyCustomPlot->graph(iGraphIndex)->setName(ui->comboBox_PlotSenSel->currentText() + "流速");
-
-        if(iGraphIndex == 2)
-        {
-
-            ui->MyCustomPlot->graph(iGraphIndex)->setName("标准流速");
-            ui->MyCustomPlot->graph(iGraphIndex)->setPen(QPen(Qt::blue));
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //设置X轴文字标注
-    ui->MyCustomPlot->xAxis->setLabel("time");
-
-
-    //设置Y轴文字标注
-    ui->MyCustomPlot->yAxis->setLabel("temp/shidu");
-
-    //设置X轴坐标范围
-    //ui->MyCustomPlot->xAxis->setRange(-20,20);
-
-    //设置Y轴坐标范围
-    // ui->MyCustomPlot->yAxis->setRange(-1100,1100);
-
-    //在坐标轴右侧和上方画线，和X/Y轴一起形成一个矩形
     ui->MyCustomPlot->axisRect()->setupFullAxesBox();
-
-
-    //QFont Ft("Microsoft YaHei");
-    //Ft.setPointSize(12);
-
-    //ui->MyCustomPlot->addGraph();
-    //ui->MyCustomPlot->graph(0)->setName(tr("Name"));
 
     ui->MyCustomPlot->xAxis->setLabel(tr("采样点时序"));
     ui->MyCustomPlot->yAxis->setLabel(tr("天平质量/流量/流速"));
     ui->MyCustomPlot->rescaleAxes(true);
     ui->MyCustomPlot->setInteractions(QCP::iRangeDrag|QCP::iRangeZoom);
 
-
-
     ui->MyCustomPlot->replot();
-
-    //-------------------------------------------------------------------
 }
 
 
@@ -353,27 +298,6 @@ void FSC_MainWindow::DataInit(void)
     plotLoop = 0;
     calOn = CAL_STATE_STOP;
 
-    buttonDebugMapper = new QSignalMapper();
-    for (int i = 0; i < SOCKET_NUMBER; i++)
-    {
-        sktBufRev[i].resize(0);
-        sktBufSend[i].resize(0);
-
-        sktDataState[i] = DATA_READ_OK;
-
-        debugSkt[i] = false;
-
-        buttonDebug[i] = new QPushButton(this);
-        buttonDebug[i]->setText(QString::number(i));
-        buttonDebug[i]->setFixedSize(75,23);
-        buttonDebug[i]->move(1660, 80 + i * 29);
-        buttonDebug[i]->show();
-
-        connect(buttonDebug[i], SIGNAL(clicked()), buttonDebugMapper, SLOT(map()));
-        buttonDebugMapper->setMapping(buttonDebug[i], i);
-    }
-    connect(buttonDebugMapper, SIGNAL(mapped(int)), this, SLOT(buttonDebug_clicked(int)));
-
     ui->textBrow_calInfo->setText(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 程序启动"));
 
     dataInit_calStepInit();
@@ -384,314 +308,47 @@ void FSC_MainWindow::dataInit_calStepInit(void)
 {
     currentStep.span_ml_per_min = ui->leFlowSpeed_SensorSpan->text().toDouble();
 
-    currentStep.calForward = ui->checkBox_calForward->checkState();
-    currentStep.calReverse = ui->checkBox_calReverse->checkState();
-
-    for(int i = 0; i < 100 / 10; i++)
+    for(int i = 0; i < SPAN_NUMBER; i++)
     {
-        currentStep.span10_cal[i] = 0;
-        currentStep.span10_check[i] = 0;
-        currentStep.span10_correct[i] = 0;
+        currentStep.spanCal[i] = 0;
+        currentStep.spanCheck[i] = 0;
+        currentStep.spanCorrect[i] = 0;
 
-        currentStep.span10Reverse_cal[i] = 0;
-        currentStep.span10Reverse_check[i] = 0;
-        currentStep.span10Reverse_correct[i] = 0;
+        currentStep.spanCalReverse[i] = 0;
+        currentStep.spanCheckReverse[i] = 0;
+        currentStep.spanCorrectReverse[i] = 0;
     }
 
-    if (currentStep.calForward)
+    for (int i = 0; i < SPAN_NUMBER; i++)
     {
-
-        if (ui->checkBox_100SpanCal->checkState())
+        if (checkBox_spanCal[i]->checkState())
         {
-            currentStep.span10_cal[9] =  CAL_CURRENT_STAT_NEED_EXECUTE;
+            currentStep.spanCal[i] =  CAL_CURRENT_STAT_NEED_EXECUTE;
         }
-        if (ui->checkBox_100SpanModify->checkState())
+        if (checkBox_spanCorrect[i]->checkState())
         {
-            currentStep.span10_correct[9] =  CAL_CURRENT_STAT_NEED_EXECUTE;
+            currentStep.spanCorrect[i] =  CAL_CURRENT_STAT_NEED_EXECUTE;
         }
-        if (ui->checkBox_100SpanCheck->checkState())
+        if (checkBox_spanCheck[i]->checkState())
         {
-            currentStep.span10_check[9] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_90SpanCal->checkState())
-        {
-            currentStep.span10_cal[8] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_90SpanModify->checkState())
-        {
-            currentStep.span10_correct[8] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_90SpanCheck->checkState())
-        {
-            currentStep.span10_check[8] =  CAL_CURRENT_STAT_NEED_EXECUTE;
+            currentStep.spanCheck[i] =  CAL_CURRENT_STAT_NEED_EXECUTE;
         }
 
-
-        if (ui->checkBox_80SpanCal->checkState())
+        if (checkBox_spanCalReverse[i]->checkState())
         {
-            currentStep.span10_cal[7] =  CAL_CURRENT_STAT_NEED_EXECUTE;
+            currentStep.spanCalReverse[i] =  CAL_CURRENT_STAT_NEED_EXECUTE;
         }
-        if (ui->checkBox_80SpanModify->checkState())
+        if (checkBox_spanCorrectReverse[i]->checkState())
         {
-            currentStep.span10_correct[7] =  CAL_CURRENT_STAT_NEED_EXECUTE;
+            currentStep.spanCorrectReverse[i] =  CAL_CURRENT_STAT_NEED_EXECUTE;
         }
-        if (ui->checkBox_80SpanCheck->checkState())
+        if (checkBox_spanCheckReverse[i]->checkState())
         {
-            currentStep.span10_check[7] =  CAL_CURRENT_STAT_NEED_EXECUTE;
+            currentStep.spanCheckReverse[i] =  CAL_CURRENT_STAT_NEED_EXECUTE;
         }
-
-
-        if (ui->checkBox_70SpanCal->checkState())
-        {
-            currentStep.span10_cal[6] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_70SpanModify->checkState())
-        {
-            currentStep.span10_correct[6] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_70SpanCheck->checkState())
-        {
-            currentStep.span10_check[6] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_60SpanCal->checkState())
-        {
-            currentStep.span10_cal[5] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_60SpanModify->checkState())
-        {
-            currentStep.span10_correct[5] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_60SpanCheck->checkState())
-        {
-            currentStep.span10_check[5] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_50SpanCal->checkState())
-        {
-            currentStep.span10_cal[4] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_50SpanModify->checkState())
-        {
-            currentStep.span10_correct[4] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_50SpanCheck->checkState())
-        {
-            currentStep.span10_check[4] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_40SpanCal->checkState())
-        {
-            currentStep.span10_cal[3] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_40SpanModify->checkState())
-        {
-            currentStep.span10_correct[3] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_40SpanCheck->checkState())
-        {
-            currentStep.span10_check[3] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_30SpanCal->checkState())
-        {
-            currentStep.span10_cal[2] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_30SpanModify->checkState())
-        {
-            currentStep.span10_correct[2] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_30SpanCheck->checkState())
-        {
-            currentStep.span10_check[2] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_20SpanCal->checkState())
-        {
-            currentStep.span10_cal[1] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_20SpanModify->checkState())
-        {
-            currentStep.span10_correct[1] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_20SpanCheck->checkState())
-        {
-            currentStep.span10_check[1] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_10SpanCal->checkState())
-        {
-            currentStep.span10_cal[0] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_10SpanModify->checkState())
-        {
-            currentStep.span10_correct[0] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_10SpanCheck->checkState())
-        {
-            currentStep.span10_check[0] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-    }
-
-    if (currentStep.calReverse)
-    {
-
-        if (ui->checkBox_100SpanCal->checkState())
-        {
-            currentStep.span10Reverse_cal[9] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_100SpanModify->checkState())
-        {
-            currentStep.span10Reverse_correct[9] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_100SpanCheck->checkState())
-        {
-            currentStep.span10Reverse_check[9] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_90SpanCal->checkState())
-        {
-            currentStep.span10Reverse_cal[8] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_90SpanModify->checkState())
-        {
-            currentStep.span10Reverse_correct[8] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_90SpanCheck->checkState())
-        {
-            currentStep.span10Reverse_check[8] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_80SpanCal->checkState())
-        {
-            currentStep.span10Reverse_cal[7] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_80SpanModify->checkState())
-        {
-            currentStep.span10Reverse_correct[7] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_80SpanCheck->checkState())
-        {
-            currentStep.span10Reverse_check[7] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_70SpanCal->checkState())
-        {
-            currentStep.span10Reverse_cal[6] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_70SpanModify->checkState())
-        {
-            currentStep.span10Reverse_correct[6] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_70SpanCheck->checkState())
-        {
-            currentStep.span10Reverse_check[6] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_60SpanCal->checkState())
-        {
-            currentStep.span10Reverse_cal[5] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_60SpanModify->checkState())
-        {
-            currentStep.span10Reverse_correct[5] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_60SpanCheck->checkState())
-        {
-            currentStep.span10Reverse_check[5] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_50SpanCal->checkState())
-        {
-            currentStep.span10Reverse_cal[4] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_50SpanModify->checkState())
-        {
-             currentStep.span10Reverse_correct[4] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_50SpanCheck->checkState())
-        {
-            currentStep.span10Reverse_check[4] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_40SpanCal->checkState())
-        {
-            currentStep.span10Reverse_cal[3] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_40SpanModify->checkState())
-        {
-            currentStep.span10Reverse_correct[3] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_40SpanCheck->checkState())
-        {
-
-            currentStep.span10Reverse_check[3] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_30SpanCal->checkState())
-        {
-
-            currentStep.span10Reverse_cal[2] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_30SpanModify->checkState())
-        {
-            currentStep.span10Reverse_correct[2] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_30SpanCheck->checkState())
-        {
-            currentStep.span10Reverse_check[2] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_20SpanCal->checkState())
-        {
-            currentStep.span10Reverse_cal[1] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_20SpanModify->checkState())
-        {
-            currentStep.span10Reverse_correct[1] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_20SpanCheck->checkState())
-        {
-            currentStep.span10Reverse_check[1] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
-
-        if (ui->checkBox_10SpanCal->checkState())
-        {
-            currentStep.span10Reverse_cal[0] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_10SpanModify->checkState())
-        {
-            currentStep.span10Reverse_correct[0] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-        if (ui->checkBox_10SpanCheck->checkState())
-        {
-            currentStep.span10Reverse_check[0] =  CAL_CURRENT_STAT_NEED_EXECUTE;
-        }
-
     }
 
     currentStep.stepCurrent = 0;
-
-
-
 }
 
 void FSC_MainWindow::calStepInfoFresh(void)
@@ -709,83 +366,77 @@ void FSC_MainWindow::calStepInfoFresh(void)
 
     currentStep.stepTotal = 0;
 
-    if (currentStep.calForward)
+
+    for (int i = SPAN_NUMBER - 1; i >= 0; i--)
     {
-
-        for (int i = SPAN_NUMBER - 1; i >= 0; i--)
+        if (currentStep.spanCal[i])
         {
-            if (currentStep.span10_cal[i])
-            {
-                currentStep.stepTotal++;
+            currentStep.stepTotal++;
 
-                if (currentStep.stepTotal > currentStep.stepCurrent)
-                {
-                    str += "(" + QString::number(currentStep.stepTotal) + ")";
-                    str += QString::number((i + 1) * 10) + "%量程标定-> ";
-                }
+            if (currentStep.stepTotal > currentStep.stepCurrent)
+            {
+                str += "(" + QString::number(currentStep.stepTotal) + ")";
+                str += QString::number((i + 1) * 10) + "%量程标定-> ";
             }
-            if (currentStep.span10_correct[i])
-            {
-                currentStep.stepTotal++;
+        }
+        if (currentStep.spanCorrect[i])
+        {
+            currentStep.stepTotal++;
 
-                if (currentStep.stepTotal > currentStep.stepCurrent)
-                {
-                    str += "(" + QString::number(currentStep.stepTotal) + ")";
-                    str += QString::number((i + 1) * 10) + "%量程修正-> ";
-                }
+            if (currentStep.stepTotal > currentStep.stepCurrent)
+            {
+                str += "(" + QString::number(currentStep.stepTotal) + ")";
+                str += QString::number((i + 1) * 10) + "%量程修正-> ";
             }
-            if (currentStep.span10_check[i])
+        }
+        if (currentStep.spanCheck[i])
+        {
+            currentStep.stepTotal++;
+
+            if (currentStep.stepTotal > currentStep.stepCurrent)
             {
-                currentStep.stepTotal++;
 
-                if (currentStep.stepTotal > currentStep.stepCurrent)
-                {
+                str += "(" + QString::number(currentStep.stepTotal) + ")";
+                str += QString::number((i + 1) * 10) + "%量程验证-> ";
+            }
 
-                    str += "(" + QString::number(currentStep.stepTotal) + ")";
-                    str += QString::number((i + 1) * 10) + "%量程验证-> ";
-                }
+        }
+    }
 
+    for (int i = SPAN_NUMBER - 1; i >= 0; i--)
+    {
+        if (currentStep.spanCalReverse[i])
+        {
+            currentStep.stepTotal++;
+
+            if (currentStep.stepTotal > currentStep.stepCurrent)
+            {
+                str += "(" + QString::number(currentStep.stepTotal) + ")";
+                str += "反向" + QString::number((i + 1) * 10) + "%量程标定-> ";
+            }
+        }
+        if (currentStep.spanCorrectReverse[i])
+        {
+            currentStep.stepTotal++;
+
+            if (currentStep.stepTotal > currentStep.stepCurrent)
+            {
+                str += "(" + QString::number(currentStep.stepTotal) + ")";
+                str += "反向" + QString::number((i + 1) * 10) + "%量程修正-> ";
+            }
+        }
+        if (currentStep.spanCheckReverse[i])
+        {
+            currentStep.stepTotal++;
+
+            if (currentStep.stepTotal > currentStep.stepCurrent)
+            {
+                str += "(" + QString::number(currentStep.stepTotal) + ")";
+                str += "反向" + QString::number((i + 1) * 10) + "%量程验证-> ";
             }
         }
     }
 
-    if (currentStep.calReverse)
-    {
-
-        for (int i = SPAN_NUMBER - 1; i >= 0; i--)
-        {
-            if (currentStep.span10Reverse_cal[i])
-            {
-                currentStep.stepTotal++;
-
-                if (currentStep.stepTotal > currentStep.stepCurrent)
-                {
-                    str += "(" + QString::number(currentStep.stepTotal) + ")";
-                    str += "反向" + QString::number((i + 1) * 10) + "%量程标定-> ";
-                }
-            }
-            if (currentStep.span10Reverse_correct[i])
-            {
-                currentStep.stepTotal++;
-
-                if (currentStep.stepTotal > currentStep.stepCurrent)
-                {
-                    str += "(" + QString::number(currentStep.stepTotal) + ")";
-                    str += "反向" + QString::number((i + 1) * 10) + "%量程修正-> ";
-                }
-            }
-            if (currentStep.span10Reverse_check[i])
-            {
-                currentStep.stepTotal++;
-
-                if (currentStep.stepTotal > currentStep.stepCurrent)
-                {
-                    str += "(" + QString::number(currentStep.stepTotal) + ")";
-                    str += "反向" + QString::number((i + 1) * 10) + "%量程验证-> ";
-                }
-            }
-        }
-    }
 
     str += "|\r\n";
     ui->textBrow_calInfo->setText(str);
@@ -899,7 +550,6 @@ void FSC_MainWindow::mainLoop()
 
     showFresh();
 
-    str = ui->textBrow_calInfo->toPlainText();
     switch (calOn)
     {
     case CAL_START:
@@ -907,6 +557,7 @@ void FSC_MainWindow::mainLoop()
         {
             on_tbnPoltClear_clicked();
 
+            str = ui->textBrow_calInfo->toPlainText();
             str += "\r\n" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: ");
             str += "启动标定->";
             str += "清空曲线图->";
@@ -930,6 +581,7 @@ void FSC_MainWindow::mainLoop()
 
             on_tbnScaleZero_clicked();
 
+            str = ui->textBrow_calInfo->toPlainText();
             str += QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: ");
             str += "天平清零->";
             str += "稳定3秒...\r\n";
@@ -963,6 +615,7 @@ void FSC_MainWindow::mainLoop()
             startCal_dir_type_span(&currentStep.startDirect, &currentStep.startType, \
                                    &currentStep.startSpanPercent, &currentStep.startSpan);
 
+            str = ui->textBrow_calInfo->toPlainText();
             str += QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: ");
 
             str += QString().sprintf("(%d)->", currentStep.stepCurrent + 1);
@@ -993,17 +646,51 @@ void FSC_MainWindow::mainLoop()
             str += "%量程->";
             str += QString().sprintf("%0.3fml/min->", currentStep.startSpan);
 
+            ui->textBrow_calInfo->setText(str);
 
+            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
+            calOn = CAL_OPEN_VALVE;
+            calOnTime = QDateTime::currentDateTime().toTime_t();
+
+            break;
+
+    }
+
+    case CAL_OPEN_VALVE:
+
+        if(QDateTime::currentDateTime().toTime_t()- calOnTime > 1)
+        {
+
+            str = ui->textBrow_calInfo->toPlainText();
             str += "启动水泵->";
-            str += "开始绘图...\r\n";
 
             ui->textBrow_calInfo->setText(str);
 
+            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
+            calOn = CAL_OPEN_PUMP;
+            calOnTime = QDateTime::currentDateTime().toTime_t();
+
+        }
+
+        break;
+
+
+    case CAL_OPEN_PUMP:
+
+        {
+            str = ui->textBrow_calInfo->toPlainText();
+            str += "开始绘图...\r\n";
+
+            ui->textBrow_calInfo->setText(str);
 
             ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 
             calOn = CAL_PLOT_START;
             calOnTime = QDateTime::currentDateTime().toTime_t();
+
+            PlotReplay(ui->comboBox_PlotSenSel->currentText());
 
         }
 
@@ -1019,7 +706,7 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
 
     for(int i = SPAN_NUMBER - 1; i >= 0; i--)
     {
-        if (currentStep.span10_cal[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        if (currentStep.spanCal[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
         {
             if (currentStep.stepCurrent == step)
             {
@@ -1034,7 +721,7 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
 
          }
 
-        if (currentStep.span10_correct[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        if (currentStep.spanCorrect[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
         {
             if (currentStep.stepCurrent == step)
             {
@@ -1048,7 +735,7 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
             step++;
          }
 
-        if (currentStep.span10_check[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        if (currentStep.spanCheck[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
         {
             if (currentStep.stepCurrent == step)
             {
@@ -1065,7 +752,7 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
 
     for(int i = SPAN_NUMBER - 1; i >= 0; i--)
     {
-        if (currentStep.span10Reverse_cal[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        if (currentStep.spanCalReverse[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
         {
             if (currentStep.stepCurrent  == step)
             {
@@ -1079,7 +766,7 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
             step++;
          }
 
-        if (currentStep.span10_correct[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        if (currentStep.spanCorrect[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
         {
             if (currentStep.stepCurrent == step)
             {
@@ -1093,7 +780,7 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
             step++;
          }
 
-        if (currentStep.span10_check[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        if (currentStep.spanCheck[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
         {
             if (currentStep.stepCurrent == step)
             {
@@ -1177,184 +864,14 @@ void FSC_MainWindow::plotAddDataAndFresh(void)
 
 }
 
-void FSC_MainWindow::PlotReplay(const QString &arg1) {
-    //---------------------------曲线-----------------------------
+void FSC_MainWindow::PlotReplay(const QString &arg1)
+{
     FSCLOG  << arg1;
 
-    int iGraphIndex = 0;
-
-
-    //ui->widget->setBackground(QBrush(Qt::black));
-
-    //设定右上角图形标注可见
-    ui->MyCustomPlot->legend->setVisible(true);
-
-    //设定右上角图形标注的字体
-    ui->MyCustomPlot->legend->setFont(QFont("Helvetica", 8));
-
-    QVector<double> x(101),y(101);
-
-    //图形为y=x^3
-    for(int i=0; i<101; i++)
-    {
-        x[i] = i/5.0-10;
-        y[i] = x[i]*x[i]*x[i] * x[i] * x[i];//qPow(x[i],3)
-    }
-
-    //添加图形
-    //ui->MyCustomPlot->addGraph();
-
-    //设置画笔
-    ui->MyCustomPlot->graph(0)->setPen(QPen(Qt::red));
-
-    //设置画刷,曲线和X轴围成面积的颜色
-    //ui->MyCustomPlot->graph(0)->setBrush(QBrush(QColor(255,255,0)));
-
-    //设置右上角图形标注名称
-    ui->MyCustomPlot->graph(0)->setName("天平");
-
-    //传入数据，setData的两个参数类型为double
-    ui->MyCustomPlot->graph(0)->setData(x,y);
-
-    QVector<double> temp(20);
-    QVector<double> temp1(20);
-
-    //图形为y = 100*x;
-    for(int i=0;i<20;i++)
-    {
-        temp[i] = i;
-        temp1[i] = 1000*i+10;
-    }
-
-    //添加图形
-    //ui->MyCustomPlot->addGraph();
-
-    //设置画笔
-    ui->MyCustomPlot->graph(1)->setPen(QPen(Qt::blue));
-
-    //设置画刷,曲线和X轴围成面积的颜色
-    //ui->widget->graph(1)->setBrush(QBrush(QColor(0,255,0)));
-
-    //传入数据
-    ui->MyCustomPlot->graph(1)->setData(temp,temp1);
-
-    /*-------------------------------------------*/
-    //画动态曲线时，传入数据采用addData，通过定时器多次调用，并在之后调用ui->widget->replot();
-    //动态曲线可以通过另一种设置坐标的方法解决坐标问题：
-    //setRange ( double position, double size, Qt::AlignmentFlag alignment )
-    //参数分别为：原点，偏移量，对其方式，有兴趣的读者可自行尝试，欢迎垂询
-    /*-------------------------------------------*/
-
-    //设置右上角图形标注名称
-    ui->MyCustomPlot->graph(1)->setName("标准流量");
-
-
-
-
-
-
-
-
-
-
-
-
-    iGraphIndex = 2;
-
-
-    QVector<double> t(1);
-    QVector<double> tl(1);
-
-
-    for (iGraphIndex = 2; iGraphIndex <= 4; iGraphIndex++)
-    {
-
-        t[0] = 30;
-        tl[0] = 0;
-
-        //添加图形
-        //ui->MyCustomPlot->addGraph();
-
-        //设置画笔
-        ui->MyCustomPlot->graph(iGraphIndex)->setPen(QPen(Qt::black));
-
-        //设置画刷,曲线和X轴围成面积的颜色
-        //ui->widget->graph(1)->setBrush(QBrush(QColor(0,255,0)));
-
-        //传入数据：
-        ui->MyCustomPlot->graph(iGraphIndex)->setData(t,tl);
-
-        /*-------------------------------------------*/
-        //画动态曲线时，传入数据采用addData，通过定时器多次调用，并在之后调用ui->widget->replot();
-        //动态曲线可以通过另一种设置坐标的方法解决坐标问题：
-        //setRange ( double position, double size, Qt::AlignmentFlag alignment )
-        //参数分别为：原点，偏移量，对其方式，有兴趣的读者可自行尝试，欢迎垂询
-        /*-------------------------------------------*/
-
-        //设置右上角图形标注名称
-        //ui->MyCustomPlot->graph(iGraphIndex)->setName(QString::number(iGraphIndex,10));
-
-
-        if(iGraphIndex == 3) ui->MyCustomPlot->graph(iGraphIndex)->setName(ui->comboBox_PlotSenSel->currentText() + "流量");
-        if(iGraphIndex == 4) ui->MyCustomPlot->graph(iGraphIndex)->setName(ui->comboBox_PlotSenSel->currentText() + "流速");
-
-        if(iGraphIndex == 2)
-        {
-
-            ui->MyCustomPlot->graph(iGraphIndex)->setName("标准流速");
-            ui->MyCustomPlot->graph(iGraphIndex)->setPen(QPen(Qt::blue));
-        }
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //设置X轴文字标注
-    ui->MyCustomPlot->xAxis->setLabel("time");
-
-
-    //设置Y轴文字标注
-    ui->MyCustomPlot->yAxis->setLabel("temp/shidu");
-
-    //设置X轴坐标范围
-    //ui->MyCustomPlot->xAxis->setRange(-20,20);
-
-    //设置Y轴坐标范围
-    // ui->MyCustomPlot->yAxis->setRange(-1100,1100);
-
-    //在坐标轴右侧和上方画线，和X/Y轴一起形成一个矩形
-    ui->MyCustomPlot->axisRect()->setupFullAxesBox();
-
-
-    //QFont Ft("Microsoft YaHei");
-    //Ft.setPointSize(12);
-
-    //ui->MyCustomPlot->addGraph();
-    //ui->MyCustomPlot->graph(0)->setName(tr("Name"));
-
-    ui->MyCustomPlot->xAxis->setLabel(tr("采样点时序"));
-    ui->MyCustomPlot->yAxis->setLabel(tr("天平质量/流量/流速"));
-    ui->MyCustomPlot->rescaleAxes(true);
-    ui->MyCustomPlot->setInteractions(QCP::iRangeDrag|QCP::iRangeZoom);
-
-
+    ui->MyCustomPlot->graph(3)->setName(ui->comboBox_PlotSenSel->currentText() + "流量");
+    ui->MyCustomPlot->graph(4)->setName(ui->comboBox_PlotSenSel->currentText() + "流速");
 
     ui->MyCustomPlot->replot();
-
-    //-------------------------------------------------------------------
 }
 
 void FSC_MainWindow::plotFresh(void)
@@ -1642,78 +1159,21 @@ void FSC_MainWindow::showFresh(void)
 {
     ui->lineEdit_scale_show->setEnabled(sktConed[SOCKET_SCALE_INDEX]);
     ui->lineEdit_scale_flow->setEnabled(sktConed[SOCKET_SCALE_INDEX]);
+    ui->lineEdit_scale_show->setText(QString::number(showScaleSum, 'f', 3));
+    ui->lineEdit_scale_flow->setText(QString::number(showScaleFlow, 'f', 3));
 
     ui->lineEdit_stdFM_sum->setEnabled(sktConed[SOCKET_PLC_INDEX]);
     ui->lineEdit_stdFM_flow->setEnabled(sktConed[SOCKET_PLC_INDEX]);
-
-    ui->lineEdit_FM_1->setEnabled(sktConed[SOCKET_FLOWM1_INDEX]);
-    ui->lineEdit_FM_2->setEnabled(sktConed[SOCKET_FLOWM2_INDEX]);
-    ui->lineEdit_FM_3->setEnabled(sktConed[SOCKET_FLOWM3_INDEX]);
-    ui->lineEdit_FM_4->setEnabled(sktConed[SOCKET_FLOWM4_INDEX]);
-    ui->lineEdit_FM_5->setEnabled(sktConed[SOCKET_FLOWM5_INDEX]);
-    ui->lineEdit_FM_6->setEnabled(sktConed[SOCKET_FLOWM6_INDEX]);
-    ui->lineEdit_FM_7->setEnabled(sktConed[SOCKET_FLOWM7_INDEX]);
-    ui->lineEdit_FM_8->setEnabled(sktConed[SOCKET_FLOWM8_INDEX]);
-    ui->lineEdit_FM_9->setEnabled(sktConed[SOCKET_FLOWM9_INDEX]);
-    ui->lineEdit_FM_10->setEnabled(sktConed[SOCKET_FLOWM10_INDEX]);
-    ui->lineEdit_FM_11->setEnabled(sktConed[SOCKET_FLOWM11_INDEX]);
-    ui->lineEdit_FM_12->setEnabled(sktConed[SOCKET_FLOWM12_INDEX]);
-
-    ui->lineEdit_FM_1_flow->setEnabled(sktConed[SOCKET_FLOWM1_INDEX]);
-    ui->lineEdit_FM_2_flow->setEnabled(sktConed[SOCKET_FLOWM2_INDEX]);
-    ui->lineEdit_FM_3_flow->setEnabled(sktConed[SOCKET_FLOWM3_INDEX]);
-    ui->lineEdit_FM_4_flow->setEnabled(sktConed[SOCKET_FLOWM4_INDEX]);
-    ui->lineEdit_FM_5_flow->setEnabled(sktConed[SOCKET_FLOWM5_INDEX]);
-    ui->lineEdit_FM_6_flow->setEnabled(sktConed[SOCKET_FLOWM6_INDEX]);
-    ui->lineEdit_FM_7_flow->setEnabled(sktConed[SOCKET_FLOWM7_INDEX]);
-    ui->lineEdit_FM_8_flow->setEnabled(sktConed[SOCKET_FLOWM8_INDEX]);
-    ui->lineEdit_FM_9_flow->setEnabled(sktConed[SOCKET_FLOWM9_INDEX]);
-    ui->lineEdit_FM_10_flow->setEnabled(sktConed[SOCKET_FLOWM10_INDEX]);
-    ui->lineEdit_FM_11_flow->setEnabled(sktConed[SOCKET_FLOWM11_INDEX]);
-    ui->lineEdit_FM_12_flow->setEnabled(sktConed[SOCKET_FLOWM12_INDEX]);
-
-    ui->lineEdit_scale_show->setText(QString::number(showScaleSum, 'f', 3));
-    ui->lineEdit_scale_flow->setText(QString::number(showScaleFlow, 'f', 3));
     ui->lineEdit_stdFM_sum->setText(QString::number(showSTDFMSum, 'f', 3));
     ui->lineEdit_stdFM_flow->setText(QString::number(showSTDFMFlow, 'f', 3));
 
-    ui->lineEdit_FM_1->setText(QString::number(showFMSum[0], 'f', 3));
-    ui->lineEdit_FM_2->setText(QString::number(showFMSum[1], 'f', 3));
-    ui->lineEdit_FM_3->setText(QString::number(showFMSum[2], 'f', 3));
-    ui->lineEdit_FM_4->setText(QString::number(showFMSum[3], 'f', 3));
-    ui->lineEdit_FM_5->setText(QString::number(showFMSum[4], 'f', 3));
-    ui->lineEdit_FM_6->setText(QString::number(showFMSum[5], 'f', 3));
-    ui->lineEdit_FM_7->setText(QString::number(showFMSum[6], 'f', 3));
-    ui->lineEdit_FM_8->setText(QString::number(showFMSum[7], 'f', 3));
-    ui->lineEdit_FM_9->setText(QString::number(showFMSum[8], 'f', 3));
-    ui->lineEdit_FM_10->setText(QString::number(showFMSum[9], 'f', 3));
-    ui->lineEdit_FM_11->setText(QString::number(showFMSum[10], 'f', 3));
-    ui->lineEdit_FM_12->setText(QString::number(showFMSum[11], 'f', 3));
-
-    ui->lineEdit_FM_1_flow->setText(QString::number(showFMFlow[0], 'f', 3));
-    ui->lineEdit_FM_2_flow->setText(QString::number(showFMFlow[1], 'f', 3));
-    ui->lineEdit_FM_3_flow->setText(QString::number(showFMFlow[2], 'f', 3));
-    ui->lineEdit_FM_4_flow->setText(QString::number(showFMFlow[3], 'f', 3));
-    ui->lineEdit_FM_5_flow->setText(QString::number(showFMFlow[4], 'f', 3));
-    ui->lineEdit_FM_6_flow->setText(QString::number(showFMFlow[5], 'f', 3));
-    ui->lineEdit_FM_7_flow->setText(QString::number(showFMFlow[6], 'f', 3));
-    ui->lineEdit_FM_8_flow->setText(QString::number(showFMFlow[7], 'f', 3));
-    ui->lineEdit_FM_9_flow->setText(QString::number(showFMFlow[8], 'f', 3));
-    ui->lineEdit_FM_10_flow->setText(QString::number(showFMFlow[9], 'f', 3));
-    ui->lineEdit_FM_11_flow->setText(QString::number(showFMFlow[10], 'f', 3));
-    ui->lineEdit_FM_12_flow->setText(QString::number(showFMFlow[11], 'f', 3));
-
-    ui->lineEdit_setFlowRate->setEnabled(sktConed[SOCKET_PLC_INDEX]);
-    ui->lineEdit_setPWM->setEnabled(sktConed[SOCKET_PLC_INDEX]);
-    ui->radioButton_setFlowRate->setEnabled(sktConed[SOCKET_PLC_INDEX]);
-    ui->radioButton_setPWM->setEnabled(sktConed[SOCKET_PLC_INDEX]);
-    if (!ui->radioButton_setFlowRate->isChecked())
+    for (int i = 0; i  < FLOWMETER_NUMBER; i++)
     {
-        ui->lineEdit_setFlowRate->setEnabled(false);
-    }
-    if (!ui->radioButton_setPWM->isChecked())
-    {
-        ui->lineEdit_setPWM->setEnabled(false);
+        lineEdit_FMSum[i]->setEnabled(sktConed[i + SOCKET_FLOWM1_INDEX]);
+        lineEdit_FMFlow[i]->setEnabled(sktConed[i + SOCKET_FLOWM1_INDEX]);
+
+        lineEdit_FMSum[i]->setText(QString::number(showFMSum[i], 'f', 3));
+        lineEdit_FMFlow[i]->setText(QString::number(showFMFlow[i], 'f', 3));
     }
 
     ui->tbnVOutOpen->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
@@ -1732,9 +1192,20 @@ void FSC_MainWindow::showFresh(void)
     ui->tbnPumpReverseOn->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
     ui->tbnPumpReverseOff->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
 
+    ui->lineEdit_setFlowRate->setEnabled(sktConed[SOCKET_PLC_INDEX]);
+    ui->lineEdit_setPWM->setEnabled(sktConed[SOCKET_PLC_INDEX]);
+    ui->radioButton_setFlowRate->setEnabled(sktConed[SOCKET_PLC_INDEX]);
+    ui->radioButton_setPWM->setEnabled(sktConed[SOCKET_PLC_INDEX]);
+    if (!ui->radioButton_setFlowRate->isChecked())
+    {
+        ui->lineEdit_setFlowRate->setEnabled(false);
+    }
+    if (!ui->radioButton_setPWM->isChecked())
+    {
+        ui->lineEdit_setPWM->setEnabled(false);
+    }
 
     ui->lineEdit_plotTime->setText(QString::number(plotLoop * 0.5, 'f', 1) + "s");
-    ui->lineEdit_plotTime->raise();
 
     ui->tbnSysDevCheck->setVisible(false);
     ui->tbnManualCheckDev->setVisible(false);
@@ -1919,39 +1390,16 @@ void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
 
     ui->leFlowSpeed_SensorSpan->setText(QString::number(fsc_global::para_ini.at(index).span_ml_per_min));
 
-    ui->checkBox_100SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[9]);
-    ui->checkBox_90SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[8]);
-    ui->checkBox_80SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[7]);
-    ui->checkBox_70SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[6]);
-    ui->checkBox_60SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[5]);
-    ui->checkBox_50SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[4]);
-    ui->checkBox_40SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[3]);
-    ui->checkBox_30SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[2]);
-    ui->checkBox_20SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[1]);
-    ui->checkBox_10SpanCal->setChecked(fsc_global::para_ini.at(index).span10_cal[0]);
+    for (int i = 0; i < SPAN_NUMBER; i++)
+    {
+        checkBox_spanCal[i]->setChecked(fsc_global::para_ini.at(index).spanCal[i]);
+        checkBox_spanCheck[i]->setChecked(fsc_global::para_ini.at(index).spanCheck[i]);
+        checkBox_spanCorrect[i]->setChecked(fsc_global::para_ini.at(index).spanCorrect[i]);
 
-    ui->checkBox_100SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[9]);
-    ui->checkBox_90SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[8]);
-    ui->checkBox_80SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[7]);
-    ui->checkBox_70SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[6]);
-    ui->checkBox_60SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[5]);
-    ui->checkBox_50SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[4]);
-    ui->checkBox_40SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[3]);
-    ui->checkBox_30SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[2]);
-    ui->checkBox_20SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[1]);
-    ui->checkBox_10SpanCheck->setChecked(fsc_global::para_ini.at(index).span10_check[0]);
-
-    ui->checkBox_100SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[9]);
-    ui->checkBox_90SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[8]);
-    ui->checkBox_80SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[7]);
-    ui->checkBox_70SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[6]);
-    ui->checkBox_60SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[5]);
-    ui->checkBox_50SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[4]);
-    ui->checkBox_40SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[3]);
-    ui->checkBox_30SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[2]);
-    ui->checkBox_20SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[1]);
-    ui->checkBox_10SpanModify->setChecked(fsc_global::para_ini.at(index).span10_correct[0]);
-
+        checkBox_spanCalReverse[i]->setChecked(fsc_global::para_ini.at(index).spanCalReverse[i]);
+        checkBox_spanCheckReverse[i]->setChecked(fsc_global::para_ini.at(index).spanCheckReverse[i]);
+        checkBox_spanCorrectReverse[i]->setChecked(fsc_global::para_ini.at(index).spanCorrectReverse[i]);
+    }
 }
 
 
