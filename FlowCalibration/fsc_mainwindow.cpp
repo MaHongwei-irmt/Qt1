@@ -24,6 +24,7 @@ FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui
     PlotInit();
     DataInit();
     SocketInit();
+    plcDataInit();
 
     connect(mainLoopTimer, SIGNAL(timeout()), this, SLOT(mainLoop()));
     mainLoopTimer->start(100);
@@ -37,33 +38,34 @@ FSC_MainWindow::~FSC_MainWindow()
 void FSC_MainWindow::uiReInit(void)
 {
     int x = 97;
+    int y = 153;
 
     for (int i = 0; i < SPAN_NUMBER; i++)
     {
 
         checkBox_spanCal[i] =  new QCheckBox(this);
-        checkBox_spanCal[i]->move(x, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCal[i]->move(x, y + (SPAN_NUMBER - i - 1) * 19);
         checkBox_spanCal[i]->show();
 
         checkBox_spanCheck[i] =  new QCheckBox(this);
-        checkBox_spanCheck[i]->move(x + 20, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCheck[i]->move(x + 20, y + (SPAN_NUMBER - i - 1) * 19);
         checkBox_spanCheck[i]->show();
 
         checkBox_spanCorrect[i] =  new QCheckBox(this);
-        checkBox_spanCorrect[i]->move(x + 40, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCorrect[i]->move(x + 40, y + (SPAN_NUMBER - i - 1) * 19);
         checkBox_spanCorrect[i]->show();
 
 
         checkBox_spanCalReverse[i] =  new QCheckBox(this);
-        checkBox_spanCalReverse[i]->move(x + 80, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCalReverse[i]->move(x + 80, y + (SPAN_NUMBER - i - 1) * 19);
         checkBox_spanCalReverse[i]->show();
 
         checkBox_spanCheckReverse[i] =  new QCheckBox(this);
-        checkBox_spanCheckReverse[i]->move(x + 100, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCheckReverse[i]->move(x + 100, y + (SPAN_NUMBER - i - 1) * 19);
         checkBox_spanCheckReverse[i]->show();
 
         checkBox_spanCorrectReverse[i] =  new QCheckBox(this);
-        checkBox_spanCorrectReverse[i]->move(x + 120, 182 + (SPAN_NUMBER - i - 1) * 19);
+        checkBox_spanCorrectReverse[i]->move(x + 120, y + (SPAN_NUMBER - i - 1) * 19);
         checkBox_spanCorrectReverse[i]->show();
      }
 
@@ -131,7 +133,7 @@ void FSC_MainWindow::ParaInit(void)
     }
 
     fsc_global::port_number[0] = 2100;
-    for(quint16 i = 1; i <= 16; i++)
+    for(quint16 i = 1; i < SOCKET_NUMBER; i++)
     {
         fsc_global::port_number[i] = 4000 + i;
     }
@@ -144,6 +146,10 @@ void FSC_MainWindow::ParaInit(void)
     fsc_para_ini tmp;
 
     ui->comboBox_SensorTypeName->clear();
+    fsc_global::para_ini.clear();
+    fsc_global::para_ini.swap(fsc_global::para_ini);
+    ui->leFlowSpeed_SensorSpan->setText("");
+    ui->leFMTypeName->setText("");
 
     while (configIni->value( "sensor_type_" + QString::number(i) +"/type_name" ).toString() != "")
     {
@@ -183,7 +189,10 @@ void FSC_MainWindow::ParaInit(void)
         i++;
     }
 
-    on_comboBox_SensorTypeName_currentIndexChanged(0);
+    if(fsc_global::para_ini.size() > 0)
+    {
+        on_comboBox_SensorTypeName_currentIndexChanged(0);
+    }
 
     delete configIni;
 
@@ -293,7 +302,7 @@ void FSC_MainWindow::DataInit(void)
     ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
     ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
 
-    revdPLC = false;
+    revdSketPLC = false;
 
     plotLoop = 0;
     calOn = CAL_STATE_STOP;
@@ -307,6 +316,22 @@ void FSC_MainWindow::DataInit(void)
 void FSC_MainWindow::dataInit_calStepInit(void)
 {
     currentStep.span_ml_per_min = ui->leFlowSpeed_SensorSpan->text().toDouble();
+
+    if (currentStep.span_ml_per_min < 1)
+    {
+        QString str;
+
+        str = ui->textBrow_calInfo->toPlainText() + "\r\n\r\n" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss:");
+
+        str += " 型号：";
+        str += ui->comboBox_SensorTypeName->currentText();
+        str += "  ";
+        str += "量程：";
+        str += ui->leFlowSpeed_SensorSpan->text();
+        str += " |-> |";
+
+        return;
+    }
 
     for(int i = 0; i < SPAN_NUMBER; i++)
     {
@@ -538,6 +563,7 @@ void FSC_MainWindow::mainLoop()
 
     if (showSetFlowRate >= 123455 && showSetFlowRate <= 123457 &&  showSetPWM == 65)
     {
+        setFixedSize(1780, 880);
         setMinimumSize(0, 0);
         setMaximumSize(QSize(QWIDGETSIZE_MAX, QWIDGETSIZE_MAX));
 
@@ -936,7 +962,7 @@ bool FSC_MainWindow::parsePLC(int indexSkt)
         return false;
     }
 
-    revdPLC = true;
+    revdSketPLC = true;
 
     if (sktBufRev[0].size() < 4)
     {
@@ -1176,26 +1202,32 @@ void FSC_MainWindow::showFresh(void)
         lineEdit_FMFlow[i]->setText(QString::number(showFMFlow[i], 'f', 3));
     }
 
-    ui->tbnVOutOpen->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnVOutClose->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnVForwardIn1Open->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnVForwardIn1Close->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnVForwardIn2Open->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnVForwardIn2Close->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnVReverseIn1Open->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnVReverseIn1Close->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnVReverseIn2Open->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnVReverseIn2Close->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnVOutOpen->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVOutClose->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn1Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn1Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn2Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn2Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn1Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn1Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn2Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn2Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
 
-    ui->tbnPumpForwardOn->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnPumpForwardOff->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnPumpReverseOn->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
-    ui->tbnPumpReverseOff->setEnabled(revdPLC & (calOn == CAL_STATE_STOP) );
+    ui->tbnPump1ForwardOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump1ForwardOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump1ReverseOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump1ReverseOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
 
-    ui->lineEdit_setFlowRate->setEnabled(sktConed[SOCKET_PLC_INDEX]);
-    ui->lineEdit_setPWM->setEnabled(sktConed[SOCKET_PLC_INDEX]);
-    ui->radioButton_setFlowRate->setEnabled(sktConed[SOCKET_PLC_INDEX]);
-    ui->radioButton_setPWM->setEnabled(sktConed[SOCKET_PLC_INDEX]);
+    ui->tbnPump2ForwardOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump2ForwardOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump2ReverseOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump2ReverseOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+
+
+    ui->lineEdit_setFlowRate->setEnabled(revdSketPLC);
+    ui->lineEdit_setPWM->setEnabled(revdSketPLC);
+    ui->radioButton_setFlowRate->setEnabled(revdSketPLC);
+    ui->radioButton_setPWM->setEnabled(revdSketPLC);
     if (!ui->radioButton_setFlowRate->isChecked())
     {
         ui->lineEdit_setFlowRate->setEnabled(false);
@@ -1206,6 +1238,8 @@ void FSC_MainWindow::showFresh(void)
     }
 
     ui->lineEdit_plotTime->setText(QString::number(plotLoop * 0.5, 'f', 1) + "s");
+
+    ui->labelplcState->setText(PRINT_PLC_STATE);
 
     ui->tbnSysDevCheck->setVisible(false);
     ui->tbnManualCheckDev->setVisible(false);
@@ -1387,6 +1421,10 @@ void FSC_MainWindow::on_comboBox_PlotSenSel_currentIndexChanged(const QString &a
 
 void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
 {
+    if (fsc_global::para_ini.size() <= index || index < 0)
+    {
+        return;
+    }
 
     ui->leFlowSpeed_SensorSpan->setText(QString::number(fsc_global::para_ini.at(index).span_ml_per_min));
 
@@ -1400,6 +1438,8 @@ void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
         checkBox_spanCheckReverse[i]->setChecked(fsc_global::para_ini.at(index).spanCheckReverse[i]);
         checkBox_spanCorrectReverse[i]->setChecked(fsc_global::para_ini.at(index).spanCorrectReverse[i]);
     }
+
+    ui->leFMTypeName->setText(fsc_global::para_ini.at(index).type_name);
 }
 
 
@@ -1551,5 +1591,174 @@ void FSC_MainWindow::on_tbnCalPause_clicked()
                                   QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 暂停"));
 
     ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+}
+
+void FSC_MainWindow::paraWrite(void)
+{
+    QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
+
+    if (fsc_global::ip_PLC.size() == 0)
+    {
+        configIni->setValue("IP_ADDRESS/PLC",  "192.168.1.220");
+    }
+    else
+    {
+        configIni->setValue("IP_ADDRESS/PLC",  fsc_global::ip_PLC);
+    }
+
+    if (fsc_global::ip_PLC.size() == 0)
+    {
+        configIni->setValue("IP_ADDRESS/RS_SERVER",  "192.168.1.221");
+    }
+    else
+    {
+        configIni->setValue("IP_ADDRESS/RS_SERVER",  fsc_global::ip_RS_Server);
+    }
+
+    for (int i = 0; i < fsc_global::para_ini.size(); i++)
+    {
+        configIni->setValue( "sensor_type_" + QString::number(i + 1) +"/type_name" ,  fsc_global::para_ini[i].type_name);
+        configIni->setValue( "sensor_type_" + QString::number(i + 1) +"/span_ml_per_min",  fsc_global::para_ini[i].span_ml_per_min);
+
+        QString str;
+        for (int k = 0; k < SPAN_NUMBER; k++)
+        {
+            str = QString().sprintf("/%d_percent_span_to_be_calibrate", (k + 1) * 10 );
+            configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, fsc_global::para_ini[i].spanCal[k]);
+
+            str = QString().sprintf("/%d_percent_span_to_be_verify", (k + 1) * 10 );
+            configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, fsc_global::para_ini[i].spanCheck[k]);
+
+            str = QString().sprintf("/%d_percent_span_to_be_correct", (k + 1) * 10 );
+            configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, fsc_global::para_ini[i].spanCorrect[k]);
+
+
+            str = QString().sprintf("/%d_percent_span_to_be_calibrate_reverse", (k + 1) * 10 );
+            configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, fsc_global::para_ini[i].spanCalReverse[k]);
+
+            str = QString().sprintf("/%d_percent_span_to_be_verify_reverse", (k + 1) * 10 );
+            configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, fsc_global::para_ini[i].spanCheckReverse[k]);
+
+            str = QString().sprintf("/%d_percent_span_to_be_correct_reverse", (k + 1) * 10 );
+            configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, fsc_global::para_ini[i].spanCorrectReverse[k]);
+
+        }
+
+    }
+
+    delete configIni;
+}
+
+void FSC_MainWindow::on_tbnParaAdd_clicked()
+{
+    QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
+
+    if (fsc_global::ip_PLC.size() == 0)
+    {
+        configIni->setValue("IP_ADDRESS/PLC",  "192.168.1.220");
+    }
+    else
+    {
+        configIni->setValue("IP_ADDRESS/PLC",  fsc_global::ip_PLC);
+    }
+
+    if (fsc_global::ip_PLC.size() == 0)
+    {
+        configIni->setValue("IP_ADDRESS/RS_SERVER",  "192.168.1.221");
+    }
+    else
+    {
+        configIni->setValue("IP_ADDRESS/RS_SERVER",  fsc_global::ip_RS_Server);
+    }
+
+    if (ui->leFMTypeName->text().trimmed().size() > 0)
+    {
+        int i;
+
+        for (i = 0; i < fsc_global::para_ini.size(); i++)
+        {
+            if (QString::compare(fsc_global::para_ini[i].type_name, ui->leFMTypeName->text().trimmed()) == 0)
+            {
+
+                configIni->setValue( "sensor_type_" + QString::number(i + 1) +"/type_name" ,  fsc_global::para_ini[i].type_name);
+                configIni->setValue( "sensor_type_" + QString::number(i + 1) +"/span_ml_per_min",  fsc_global::para_ini[i].span_ml_per_min);
+
+                QString str;
+                for (int k = 0; k < SPAN_NUMBER; k++)
+                {
+                    str = QString().sprintf("/%d_percent_span_to_be_calibrate", (k + 1) * 10 );
+                    configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, checkBox_spanCal[k]->checkState());
+
+                    str = QString().sprintf("/%d_percent_span_to_be_verify", (k + 1) * 10 );
+                    configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, checkBox_spanCheck[k]->checkState());
+
+                    str = QString().sprintf("/%d_percent_span_to_be_correct", (k + 1) * 10 );
+                    configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, checkBox_spanCorrect[k]->checkState());
+
+
+                    str = QString().sprintf("/%d_percent_span_to_be_calibrate_reverse", (k + 1) * 10 );
+                    configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, checkBox_spanCalReverse[k]->checkState());
+
+                    str = QString().sprintf("/%d_percent_span_to_be_verify_reverse", (k + 1) * 10 );
+                    configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, checkBox_spanCheckReverse[k]->checkState());
+
+                    str = QString().sprintf("/%d_percent_span_to_be_correct_reverse", (k + 1) * 10 );
+                    configIni->setValue( "sensor_type_" + QString::number(i + 1) + str, checkBox_spanCorrectReverse[k]->checkState());
+
+                }
+
+                goto end_return;
+            }
+
+        }
+
+        fsc_para_ini tmp;
+
+        tmp.type_name = ui->leFMTypeName->text().trimmed();
+        tmp.span_ml_per_min = ui->leFlowSpeed_SensorSpan->text().toDouble();
+
+        for (int k = 0; k < SPAN_NUMBER; k++)
+        {
+            tmp.spanCal[k] = checkBox_spanCal[k]->checkState();
+            tmp.spanCheck[k] = checkBox_spanCheck[k]->checkState();
+            tmp.spanCorrect[k] = checkBox_spanCorrect[k]->checkState();
+
+            tmp.spanCalReverse[k] = checkBox_spanCalReverse[k]->checkState();
+            tmp.spanCheckReverse[k] = checkBox_spanCheckReverse[k]->checkState();
+            tmp.spanCorrectReverse[k] = checkBox_spanCorrectReverse[k]->checkState();
+
+        }
+
+        fsc_global::para_ini.append(tmp);
+
+        paraWrite();
+
+    }
+
+end_return:
+
+    delete configIni;
+
+    ParaInit();
+}
+
+void FSC_MainWindow::on_tbnParaErase_clicked()
+{
+    for (int i = 0; i < fsc_global::para_ini.size(); i++)
+    {
+        if (QString::compare(fsc_global::para_ini[i].type_name, ui->leFMTypeName->text().trimmed()) == 0)
+        {
+            fsc_global::para_ini.remove(i);
+
+            //fsc_global::para_ini.resize(fsc_global::para_ini.size() - 1);
+
+            QFile::remove("para.ini");
+
+            paraWrite();
+            ParaInit();
+
+            return;
+        }
+    }
 }
 

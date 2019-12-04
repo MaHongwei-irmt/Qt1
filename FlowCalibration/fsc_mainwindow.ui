@@ -17,7 +17,7 @@
    <widget class="QToolButton" name="tbnSysDevCheck">
     <property name="geometry">
      <rect>
-      <x>44</x>
+      <x>530</x>
       <y>830</y>
       <width>121</width>
       <height>21</height>
@@ -31,7 +31,7 @@
     <property name="geometry">
      <rect>
       <x>55</x>
-      <y>61</y>
+      <y>48</y>
       <width>141</width>
       <height>16</height>
      </rect>
@@ -46,8 +46,8 @@
     </property>
     <property name="geometry">
      <rect>
-      <x>55</x>
-      <y>81</y>
+      <x>54</x>
+      <y>68</y>
       <width>171</width>
       <height>22</height>
      </rect>
@@ -56,8 +56,8 @@
    <widget class="QWidget" name="layoutWidget_2">
     <property name="geometry">
      <rect>
-      <x>55</x>
-      <y>111</y>
+      <x>54</x>
+      <y>97</y>
       <width>171</width>
       <height>34</height>
      </rect>
@@ -132,7 +132,7 @@
     <property name="geometry">
      <rect>
       <x>53</x>
-      <y>189</y>
+      <y>161</y>
       <width>31</width>
       <height>16</height>
      </rect>
@@ -145,7 +145,7 @@
     <property name="geometry">
      <rect>
       <x>54</x>
-      <y>229</y>
+      <y>201</y>
       <width>41</width>
       <height>16</height>
      </rect>
@@ -158,7 +158,7 @@
     <property name="geometry">
      <rect>
       <x>54</x>
-      <y>265</y>
+      <y>237</y>
       <width>41</width>
       <height>16</height>
      </rect>
@@ -171,7 +171,7 @@
     <property name="geometry">
      <rect>
       <x>54</x>
-      <y>302</y>
+      <y>274</y>
       <width>41</width>
       <height>16</height>
      </rect>
@@ -184,7 +184,7 @@
     <property name="geometry">
      <rect>
       <x>54</x>
-      <y>339</y>
+      <y>311</y>
       <width>41</width>
       <height>16</height>
      </rect>
@@ -197,7 +197,7 @@
     <property name="geometry">
      <rect>
       <x>54</x>
-      <y>359</y>
+      <y>331</y>
       <width>41</width>
       <height>16</height>
      </rect>
@@ -210,7 +210,7 @@
     <property name="geometry">
      <rect>
       <x>54</x>
-      <y>208</y>
+      <y>180</y>
       <width>41</width>
       <height>16</height>
      </rect>
@@ -223,7 +223,7 @@
     <property name="geometry">
      <rect>
       <x>54</x>
-      <y>247</y>
+      <y>219</y>
       <width>41</width>
       <height>16</height>
      </rect>
@@ -236,7 +236,7 @@
     <property name="geometry">
      <rect>
       <x>54</x>
-      <y>283</y>
+      <y>255</y>
       <width>41</width>
       <height>16</height>
      </rect>
@@ -249,7 +249,7 @@
     <property name="geometry">
      <rect>
       <x>54</x>
-      <y>320</y>
+      <y>292</y>
       <width>41</width>
       <height>16</height>
      </rect>
@@ -261,7 +261,7 @@
    <widget class="QToolButton" name="tbnManualCheckDev">
     <property name="geometry">
      <rect>
-      <x>174</x>
+      <x>660</x>
       <y>830</y>
       <width>71</width>
       <height>21</height>
@@ -1046,7 +1046,7 @@ p, li { white-space: pre-wrap; }
       <x>25</x>
       <y>30</y>
       <width>231</width>
-      <height>431</height>
+      <height>446</height>
      </rect>
     </property>
     <property name="title">
@@ -1055,8 +1055,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_13">
      <property name="geometry">
       <rect>
-       <x>59</x>
-       <y>136</y>
+       <x>58</x>
+       <y>108</y>
        <width>31</width>
        <height>16</height>
       </rect>
@@ -1068,8 +1068,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_31">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>136</y>
+       <x>29</x>
+       <y>108</y>
        <width>31</width>
        <height>16</height>
       </rect>
@@ -1082,7 +1082,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>72</x>
-       <y>350</y>
+       <y>322</y>
        <width>51</width>
        <height>16</height>
       </rect>
@@ -1095,7 +1095,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>154</x>
-       <y>350</y>
+       <y>322</y>
        <width>51</width>
        <height>16</height>
       </rect>
@@ -1108,7 +1108,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>29</x>
-       <y>380</y>
+       <y>341</y>
        <width>171</width>
        <height>21</height>
       </rect>
@@ -1120,8 +1120,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_29">
      <property name="geometry">
       <rect>
-       <x>86</x>
-       <y>136</y>
+       <x>85</x>
+       <y>108</y>
        <width>31</width>
        <height>16</height>
       </rect>
@@ -1133,8 +1133,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_30">
      <property name="geometry">
       <rect>
-       <x>112</x>
-       <y>136</y>
+       <x>111</x>
+       <y>108</y>
        <width>31</width>
        <height>16</height>
       </rect>
@@ -1146,8 +1146,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_54">
      <property name="geometry">
       <rect>
-       <x>194</x>
-       <y>136</y>
+       <x>193</x>
+       <y>108</y>
        <width>31</width>
        <height>16</height>
       </rect>
@@ -1159,8 +1159,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_55">
      <property name="geometry">
       <rect>
-       <x>141</x>
-       <y>136</y>
+       <x>140</x>
+       <y>108</y>
        <width>31</width>
        <height>16</height>
       </rect>
@@ -1172,14 +1172,56 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_56">
      <property name="geometry">
       <rect>
-       <x>168</x>
-       <y>136</y>
+       <x>167</x>
+       <y>108</y>
        <width>31</width>
        <height>16</height>
       </rect>
      </property>
      <property name="text">
       <string>验证</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="leFMTypeName">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>70</x>
+       <y>381</y>
+       <width>131</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tbnParaAdd">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>402</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>添加</string>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tbnParaErase">
+     <property name="geometry">
+      <rect>
+       <x>120</x>
+       <y>402</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>删除</string>
      </property>
     </widget>
    </widget>
@@ -1746,7 +1788,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QToolButton" name="tbnCalStepNext">
     <property name="geometry">
      <rect>
-      <x>1300</x>
+      <x>1299</x>
       <y>54</y>
       <width>51</width>
       <height>81</height>
@@ -1759,7 +1801,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QToolButton" name="tbnCalStepPre">
     <property name="geometry">
      <rect>
-      <x>1354</x>
+      <x>1353</x>
       <y>54</y>
       <width>51</width>
       <height>81</height>
@@ -1772,7 +1814,7 @@ p, li { white-space: pre-wrap; }
    <widget class="QToolButton" name="tbnCaPause">
     <property name="geometry">
      <rect>
-      <x>1237</x>
+      <x>1236</x>
       <y>54</y>
       <width>51</width>
       <height>81</height>
@@ -1786,9 +1828,9 @@ p, li { white-space: pre-wrap; }
     <property name="geometry">
      <rect>
       <x>25</x>
-      <y>480</y>
+      <y>490</y>
       <width>231</width>
-      <height>361</height>
+      <height>351</height>
      </rect>
     </property>
     <property name="title">
@@ -1797,8 +1839,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QToolButton" name="tbnVOutClose">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>30</y>
+       <x>124</x>
+       <y>24</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -1807,24 +1849,24 @@ p, li { white-space: pre-wrap; }
       <string>放水阀关</string>
      </property>
     </widget>
-    <widget class="QToolButton" name="tbnPumpForwardOff">
+    <widget class="QToolButton" name="tbnPump1ForwardOff">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>280</y>
+       <x>124</x>
+       <y>227</y>
        <width>91</width>
        <height>21</height>
       </rect>
      </property>
      <property name="text">
-      <string>正向进水停止</string>
+      <string>1#泵正进水停止</string>
      </property>
     </widget>
     <widget class="QToolButton" name="tbnVForwardIn1Close">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>60</y>
+       <x>124</x>
+       <y>59</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -1833,17 +1875,17 @@ p, li { white-space: pre-wrap; }
       <string>正向进水阀1关</string>
      </property>
     </widget>
-    <widget class="QToolButton" name="tbnPumpForwardOn">
+    <widget class="QToolButton" name="tbnPump1ForwardOn">
      <property name="geometry">
       <rect>
        <x>16</x>
-       <y>280</y>
+       <y>227</y>
        <width>91</width>
        <height>21</height>
       </rect>
      </property>
      <property name="text">
-      <string>正向进水启动</string>
+      <string>1#泵正进水启动</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_setPWM">
@@ -1852,8 +1894,8 @@ p, li { white-space: pre-wrap; }
      </property>
      <property name="geometry">
       <rect>
-       <x>137</x>
-       <y>210</y>
+       <x>133</x>
+       <y>178</y>
        <width>61</width>
        <height>20</height>
       </rect>
@@ -1874,8 +1916,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QToolButton" name="tbnVReverseIn1Open">
      <property name="geometry">
       <rect>
-       <x>16</x>
-       <y>120</y>
+       <x>18</x>
+       <y>117</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -1887,8 +1929,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QToolButton" name="tbnVReverseIn2Open">
      <property name="geometry">
       <rect>
-       <x>16</x>
-       <y>150</y>
+       <x>18</x>
+       <y>139</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -1900,8 +1942,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QToolButton" name="tbnVForwardIn2Close">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>90</y>
+       <x>124</x>
+       <y>82</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -1913,8 +1955,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QToolButton" name="tbnVForwardIn2Open">
      <property name="geometry">
       <rect>
-       <x>16</x>
-       <y>90</y>
+       <x>18</x>
+       <y>82</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -1926,8 +1968,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QToolButton" name="tbnVReverseIn1Close">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>120</y>
+       <x>124</x>
+       <y>117</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -1939,8 +1981,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_26">
      <property name="geometry">
       <rect>
-       <x>203</x>
-       <y>208</y>
+       <x>197</x>
+       <y>176</y>
        <width>36</width>
        <height>20</height>
       </rect>
@@ -1958,8 +2000,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QToolButton" name="tbnVReverseIn2Close">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>150</y>
+       <x>124</x>
+       <y>139</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -1971,8 +2013,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QLabel" name="label_21">
      <property name="geometry">
       <rect>
-       <x>88</x>
-       <y>210</y>
+       <x>87</x>
+       <y>177</y>
        <width>36</width>
        <height>20</height>
       </rect>
@@ -1985,7 +2027,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>23</x>
-       <y>240</y>
+       <y>204</y>
        <width>89</width>
        <height>16</height>
       </rect>
@@ -2000,8 +2042,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QRadioButton" name="radioButton_setPWM">
      <property name="geometry">
       <rect>
-       <x>137</x>
-       <y>240</y>
+       <x>133</x>
+       <y>204</y>
        <width>89</width>
        <height>16</height>
       </rect>
@@ -2013,8 +2055,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QToolButton" name="tbnVOutOpen">
      <property name="geometry">
       <rect>
-       <x>16</x>
-       <y>30</y>
+       <x>18</x>
+       <y>24</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -2023,30 +2065,30 @@ p, li { white-space: pre-wrap; }
       <string>放水阀开</string>
      </property>
     </widget>
-    <widget class="QToolButton" name="tbnPumpReverseOff">
+    <widget class="QToolButton" name="tbnPump1ReverseOff">
      <property name="geometry">
       <rect>
-       <x>130</x>
-       <y>310</y>
+       <x>124</x>
+       <y>249</y>
        <width>91</width>
        <height>21</height>
       </rect>
      </property>
      <property name="text">
-      <string>反向进水停止</string>
+      <string>1#泵反进水停止</string>
      </property>
     </widget>
-    <widget class="QToolButton" name="tbnPumpReverseOn">
+    <widget class="QToolButton" name="tbnPump1ReverseOn">
      <property name="geometry">
       <rect>
        <x>16</x>
-       <y>310</y>
+       <y>249</y>
        <width>91</width>
        <height>21</height>
       </rect>
      </property>
      <property name="text">
-      <string>反向进水启动</string>
+      <string>1#泵反进水启动</string>
      </property>
     </widget>
     <widget class="QLineEdit" name="lineEdit_setFlowRate">
@@ -2056,7 +2098,7 @@ p, li { white-space: pre-wrap; }
      <property name="geometry">
       <rect>
        <x>23</x>
-       <y>210</y>
+       <y>178</y>
        <width>61</width>
        <height>20</height>
       </rect>
@@ -2077,8 +2119,8 @@ p, li { white-space: pre-wrap; }
     <widget class="QToolButton" name="tbnVForwardIn1Open">
      <property name="geometry">
       <rect>
-       <x>16</x>
-       <y>60</y>
+       <x>18</x>
+       <y>59</y>
        <width>91</width>
        <height>21</height>
       </rect>
@@ -2087,6 +2129,84 @@ p, li { white-space: pre-wrap; }
       <string>正向进水阀1开</string>
      </property>
     </widget>
+    <widget class="QToolButton" name="tbnPump2ReverseOn">
+     <property name="geometry">
+      <rect>
+       <x>16</x>
+       <y>307</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>2#泵反进水启动</string>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tbnPump2ForwardOn">
+     <property name="geometry">
+      <rect>
+       <x>16</x>
+       <y>285</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>2#泵正进水启动</string>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tbnPump2ForwardOff">
+     <property name="geometry">
+      <rect>
+       <x>124</x>
+       <y>285</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>2#泵正进水停止</string>
+     </property>
+    </widget>
+    <widget class="QToolButton" name="tbnPump2ReverseOff">
+     <property name="geometry">
+      <rect>
+       <x>124</x>
+       <y>307</y>
+       <width>91</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>2#泵反进水停止</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_90">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>412</y>
+      <width>41</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>型号：</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelplcState">
+    <property name="geometry">
+     <rect>
+      <x>1670</x>
+      <y>60</y>
+      <width>101</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TextLabel</string>
+    </property>
    </widget>
    <zorder>groupBox_2</zorder>
    <zorder>line_4</zorder>
@@ -2176,6 +2296,8 @@ p, li { white-space: pre-wrap; }
    <zorder>tbnCalStepPre</zorder>
    <zorder>tbnCaPause</zorder>
    <zorder>groupBox_3</zorder>
+   <zorder>label_90</zorder>
+   <zorder>labelplcState</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
@@ -2226,11 +2348,11 @@ p, li { white-space: pre-wrap; }
   <tabstop>tbnPoltClear</tabstop>
   <tabstop>comboBox_PlotSenSel</tabstop>
   <tabstop>tbnVOutOpen</tabstop>
-  <tabstop>tbnPumpForwardOn</tabstop>
-  <tabstop>tbnPumpReverseOn</tabstop>
-  <tabstop>tbnPumpForwardOff</tabstop>
+  <tabstop>tbnPump1ForwardOn</tabstop>
+  <tabstop>tbnPump1ReverseOn</tabstop>
+  <tabstop>tbnPump1ForwardOff</tabstop>
   <tabstop>tbnVOutClose</tabstop>
-  <tabstop>tbnPumpReverseOff</tabstop>
+  <tabstop>tbnPump1ReverseOff</tabstop>
   <tabstop>tbnVForwardIn2Open</tabstop>
   <tabstop>tbnVForwardIn1Open</tabstop>
   <tabstop>tbnVReverseIn1Open</tabstop>

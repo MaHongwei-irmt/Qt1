@@ -75,6 +75,8 @@ class FSC_MainWindow;
 
 #define SPAN_NUMBER                 10
 
+#define PRINT_PLC_STATE             QString::number(plcStateWrite, 16) + " " + QString::number(plcStateWrite, 2)
+
 class calStep
 {
 
@@ -163,9 +165,9 @@ private slots:
 
     void on_tbnVReverseIn2Open_clicked();
 
-    void on_tbnPumpForwardOn_clicked();
+    void on_tbnPump1ForwardOn_clicked();
 
-    void on_tbnPumpReverseOn_clicked();
+    void on_tbnPump1ReverseOn_clicked();
 
     void on_tbnVOutClose_clicked();
 
@@ -177,15 +179,28 @@ private slots:
 
     void on_tbnVReverseIn2Close_clicked();
 
-    void on_tbnPumpForwardOff_clicked();
+    void on_tbnPump1ForwardOff_clicked();
 
-    void on_tbnPumpReverseOff_clicked();
+    void on_tbnPump1ReverseOff_clicked();
+
+    void on_tbnParaAdd_clicked();
+
+    void on_tbnParaErase_clicked();
+
+    void on_tbnPump2ForwardOn_clicked();
+
+    void on_tbnPump2ReverseOn_clicked();
+
+    void on_tbnPump2ForwardOff_clicked();
+
+    void on_tbnPump2ReverseOff_clicked();
 
 private:
     Ui::FSC_MainWindow *ui;
 
     void uiReInit(void);
     void ParaInit(void);
+    void paraWrite(void);
     void PlotInit(void);
     void SocketInit(void);
     void DataInit(void);
@@ -213,6 +228,7 @@ private:
     void plotFresh(void);
 
 
+    void plcDataInit(void);
     void openForwardValveAll(void);
     void openReverseValveAll(void);
     void openForwardValve1(void);
@@ -227,9 +243,10 @@ private:
     void closeReverseValve1(void);
     void closeReverseValve2(void);
     void closeOutValve(void);
-    void pumpOn(void);
-    void pumpOff(void);
-
+    void pump1On(void);
+    void pump1Off(void);
+    void pump2On(void);
+    void pump2Off(void);
 
     bool        sktConed[SOCKET_NUMBER];
     QByteArray  sktBufSend[SOCKET_NUMBER];
@@ -264,7 +281,7 @@ private:
     double  showSetFlowRate;
     int     showSetPWM;
 
-    bool    revdPLC;
+    bool    revdSketPLC;
 
     QVector<double> plotScaleSumTimeX;
     QVector<double> plotScaleSumValueY;
@@ -302,8 +319,8 @@ private:
     QLineEdit   *lineEdit_FMFlow[FLOWMETER_NUMBER];
 
 
-    uint8_t    plcStateWrite;   // 泵一 泵二 bit6 放水阀 反向进水阀2 反向进水阀1 正向进水阀2 正向进水阀1 靠近泵为1#阀
-    uint8_t    plcStateRead;    // 泵一 泵二 bit6 放水阀 反向进水阀2 反向进水阀1 正向进水阀2 正向进水阀1 靠近泵为1#阀
+    uint8_t    plcStateWrite;   // 泵一 泵二 bit6 放水阀 反向进水阀2 反向进水阀1 正向进水阀2 正向进水阀1 :靠近泵为1#阀
+    uint8_t    plcStateRead;
 };
 
 class fsc_para_ini
