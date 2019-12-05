@@ -1,0 +1,2129 @@
+:0: "2019-12-05 09:41:18:552" 
+start
+:0: 1920 1040
+:0: "2019-12-05 09:41:18:966" "192.168.1.220"
+:0: "2019-12-05 09:41:18:969" "192.168.1.221"
+:0: "2019-12-05 09:41:18:972" "XY_DD_1"
+:0: "2019-12-05 09:41:18:976" "XY-DD-2"
+:0: "2019-12-05 09:41:18:979" "XY-DD-3"
+:0: "2019-12-05 09:41:18:982" "XY-DD-4"
+:0: "2019-12-05 09:41:18:986" "XY-DD-5"
+:0: "2019-12-05 09:41:18:989" "XY-DD-6"
+:0: "2019-12-05 09:41:18:992" "XY-DD-7"
+:0: "2019-12-05 09:41:18:995" "XY-DD-FGG-9877"
+:0: "2019-12-05 09:41:18:999" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-12-05 09:41:19:002" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-05 09:41:19:018" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-05 09:41:19:027" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-12-05 09:41:19:183" "13 socket con"
+:0: "2019-12-05 09:41:19:187" "7 socket con"
+:0: "2019-12-05 09:41:19:191" "3 socket con"
+:0: "2019-12-05 09:41:19:195" "16 socket con"
+:0: "2019-12-05 09:41:19:198" "10 socket con"
+:0: "2019-12-05 09:41:19:211" "12 socket con"
+:0: "2019-12-05 09:41:19:217" "6 socket con"
+:0: "2019-12-05 09:41:19:224" "2 socket con"
+:0: "2019-12-05 09:41:19:228" "15 socket con"
+:0: "2019-12-05 09:41:19:231" "9 socket con"
+:0: "2019-12-05 09:41:19:234" "11 socket con"
+:0: "2019-12-05 09:41:19:238" "5 socket con"
+:0: "2019-12-05 09:41:19:241" "1 socket con"
+:0: "2019-12-05 09:41:19:244" "0 socket con"
+:0: "2019-12-05 09:41:19:247" "14 socket con"
+:0: "2019-12-05 09:41:19:250" "8 socket con"
+:0: "2019-12-05 09:41:19:254" "4 socket con"
+:0: "2019-12-05 10:13:35:958" 
+start
+:0: 1920 1040
+:0: "2019-12-05 10:13:36:434" "192.168.1.220"
+:0: "2019-12-05 10:13:36:438" "192.168.1.221"
+:0: "2019-12-05 10:13:36:442" "XY_DD_1"
+:0: "2019-12-05 10:13:36:447" "XY-DD-2"
+:0: "2019-12-05 10:13:36:450" "XY-DD-3"
+:0: "2019-12-05 10:13:36:454" "XY-DD-4"
+:0: "2019-12-05 10:13:36:457" "XY-DD-5"
+:0: "2019-12-05 10:13:36:461" "XY-DD-6"
+:0: "2019-12-05 10:13:36:464" "XY-DD-7"
+:0: "2019-12-05 10:13:36:468" "XY-DD-FGG-9877"
+:0: "2019-12-05 10:13:36:471" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-12-05 10:13:36:475" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-05 10:13:36:479" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-05 10:13:36:483" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-12-05 10:13:36:688" "3 socket con"
+:0: "2019-12-05 10:13:36:693" "7 socket con"
+:0: "2019-12-05 10:13:36:697" "11 socket con"
+:0: "2019-12-05 10:13:36:700" "15 socket con"
+:0: "2019-12-05 10:13:36:704" "4 socket con"
+:0: "2019-12-05 10:13:36:707" "8 socket con"
+:0: "2019-12-05 10:13:36:716" "0 socket con"
+:0: "2019-12-05 10:13:36:720" "12 socket con"
+:0: "2019-12-05 10:13:36:723" "1 socket con"
+:0: "2019-12-05 10:13:36:727" "16 socket con"
+:0: "2019-12-05 10:13:36:730" "5 socket con"
+:0: "2019-12-05 10:13:36:734" "9 socket con"
+:0: "2019-12-05 10:13:36:737" "13 socket con"
+:0: "2019-12-05 10:13:36:740" "2 socket con"
+:0: "2019-12-05 10:13:36:744" "6 socket con"
+:0: "2019-12-05 10:13:36:748" "10 socket con"
+:0: "2019-12-05 10:13:36:752" "14 socket con"
+:0: "2019-12-05 10:21:55:025" 
+start
+:0: 1920 1040
+:0: "2019-12-05 10:21:55:439" "192.168.1.220"
+:0: "2019-12-05 10:21:55:443" "192.168.1.221"
+:0: "2019-12-05 10:21:55:447" "XY_DD_1"
+:0: "2019-12-05 10:21:55:451" "XY-DD-2"
+:0: "2019-12-05 10:21:55:455" "XY-DD-3"
+:0: "2019-12-05 10:21:55:459" "XY-DD-4"
+:0: "2019-12-05 10:21:55:463" "XY-DD-5"
+:0: "2019-12-05 10:21:55:466" "XY-DD-6"
+:0: "2019-12-05 10:21:55:470" "XY-DD-7"
+:0: "2019-12-05 10:21:55:473" "XY-DD-FGG-9877"
+:0: "2019-12-05 10:21:55:477" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-12-05 10:21:55:481" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-05 10:21:55:484" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-05 10:21:55:488" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-12-05 10:21:55:672" "11 socket con"
+:0: "2019-12-05 10:21:55:676" "2 socket con"
+:0: "2019-12-05 10:21:55:686" "15 socket con"
+:0: "2019-12-05 10:21:55:689" "3 socket con"
+:0: "2019-12-05 10:21:55:693" "7 socket con"
+:0: "2019-12-05 10:21:55:697" "12 socket con"
+:0: "2019-12-05 10:21:55:700" "16 socket con"
+:0: "2019-12-05 10:21:55:703" "4 socket con"
+:0: "2019-12-05 10:21:55:709" "8 socket con"
+:0: "2019-12-05 10:21:55:713" "13 socket con"
+:0: "2019-12-05 10:21:55:716" "5 socket con"
+:0: "2019-12-05 10:21:55:720" "9 socket con"
+:0: "2019-12-05 10:21:55:724" "0 socket con"
+:0: "2019-12-05 10:21:55:727" "14 socket con"
+:0: "2019-12-05 10:21:55:731" "1 socket con"
+:0: "2019-12-05 10:21:55:734" "6 socket con"
+:0: "2019-12-05 10:21:55:738" "10 socket con"
+:0: "2019-12-05 10:36:02:902" 
+start
+:0: 1920 1040
+:0: "2019-12-05 10:36:03:315" "192.168.1.220"
+:0: "2019-12-05 10:36:03:318" "192.168.1.221"
+:0: "2019-12-05 10:36:03:322" "XY_DD_1"
+:0: "2019-12-05 10:36:03:326" "XY-DD-2"
+:0: "2019-12-05 10:36:03:330" "XY-DD-3"
+:0: "2019-12-05 10:36:03:333" "XY-DD-4"
+:0: "2019-12-05 10:36:03:337" "XY-DD-5"
+:0: "2019-12-05 10:36:03:341" "XY-DD-6"
+:0: "2019-12-05 10:36:03:344" "XY-DD-7"
+:0: "2019-12-05 10:36:03:348" "XY-DD-FGG-9877"
+:0: "2019-12-05 10:36:03:351" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-12-05 10:36:03:355" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-05 10:36:03:359" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-05 10:36:03:363" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-12-05 10:36:03:521" "10 socket con"
+:0: "2019-12-05 10:36:03:526" "0 socket con"
+:0: "2019-12-05 10:36:03:529" "1 socket con"
+:0: "2019-12-05 10:36:03:533" "14 socket con"
+:0: "2019-12-05 10:36:03:536" "5 socket con"
+:0: "2019-12-05 10:36:03:540" "9 socket con"
+:0: "2019-12-05 10:36:03:544" "13 socket con"
+:0: "2019-12-05 10:36:03:547" "4 socket con"
+:0: "2019-12-05 10:36:03:551" "8 socket con"
+:0: "2019-12-05 10:36:03:555" "12 socket con"
+:0: "2019-12-05 10:36:03:558" "3 socket con"
+:0: "2019-12-05 10:36:03:562" "16 socket con"
+:0: "2019-12-05 10:36:03:566" "7 socket con"
+:0: "2019-12-05 10:36:03:569" "2 socket con"
+:0: "2019-12-05 10:36:03:573" "11 socket con"
+:0: "2019-12-05 10:36:03:577" "6 socket con"
+:0: "2019-12-05 10:36:03:581" "15 socket con"
+:0: "2019-12-05 10:51:12:716" 
+start
+:0: 1920 1040
+:0: "2019-12-05 10:51:13:151" "192.168.1.220"
+:0: "2019-12-05 10:51:13:155" "192.168.1.221"
+:0: "2019-12-05 10:51:13:159" "XY_DD_1"
+:0: "2019-12-05 10:51:13:163" "XY-DD-2"
+:0: "2019-12-05 10:51:13:166" "XY-DD-3"
+:0: "2019-12-05 10:51:13:170" "XY-DD-4"
+:0: "2019-12-05 10:51:13:174" "XY-DD-5"
+:0: "2019-12-05 10:51:13:178" "XY-DD-6"
+:0: "2019-12-05 10:51:13:182" "XY-DD-7"
+:0: "2019-12-05 10:51:13:186" "XY-DD-FGG-9877"
+:0: "2019-12-05 10:51:13:190" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-12-05 10:51:13:195" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-05 10:51:13:199" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-05 10:51:13:203" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-12-05 10:51:13:360" "5 socket con"
+:0: "2019-12-05 10:51:13:370" "1 socket con"
+:0: "2019-12-05 10:51:13:374" "0 socket con"
+:0: "2019-12-05 10:51:13:378" "14 socket con"
+:0: "2019-12-05 10:51:13:381" "10 socket con"
+:0: "2019-12-05 10:51:13:385" "6 socket con"
+:0: "2019-12-05 10:51:13:389" "2 socket con"
+:0: "2019-12-05 10:51:13:393" "15 socket con"
+:0: "2019-12-05 10:51:13:397" "11 socket con"
+:0: "2019-12-05 10:51:13:400" "7 socket con"
+:0: "2019-12-05 10:51:13:404" "3 socket con"
+:0: "2019-12-05 10:51:13:408" "16 socket con"
+:0: "2019-12-05 10:51:13:412" "12 socket con"
+:0: "2019-12-05 10:51:13:415" "8 socket con"
+:0: "2019-12-05 10:51:13:419" "4 socket con"
+:0: "2019-12-05 10:51:13:423" "13 socket con"
+:0: "2019-12-05 10:51:13:427" "9 socket con"
+:0: "2019-12-05 10:56:54:244" 
+start
+:0: 1920 1040
+:0: "2019-12-05 10:56:54:668" "192.168.1.220"
+:0: "2019-12-05 10:56:54:672" "192.168.1.221"
+:0: "2019-12-05 10:56:54:676" "XY_DD_1"
+:0: "2019-12-05 10:56:54:681" "XY-DD-2"
+:0: "2019-12-05 10:56:54:685" "XY-DD-3"
+:0: "2019-12-05 10:56:54:689" "XY-DD-4"
+:0: "2019-12-05 10:56:54:693" "XY-DD-5"
+:0: "2019-12-05 10:56:54:697" "XY-DD-6"
+:0: "2019-12-05 10:56:54:700" "XY-DD-7"
+:0: "2019-12-05 10:56:54:704" "XY-DD-FGG-9877"
+:0: "2019-12-05 10:56:54:708" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-12-05 10:56:54:712" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-05 10:56:54:720" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-05 10:56:54:724" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-12-05 10:56:54:913" "2 socket con"
+:0: "2019-12-05 10:56:54:918" "6 socket con"
+:0: "2019-12-05 10:56:54:922" "10 socket con"
+:0: "2019-12-05 10:56:54:926" "0 socket con"
+:0: "2019-12-05 10:56:54:930" "12 socket con"
+:0: "2019-12-05 10:56:54:934" "1 socket con"
+:0: "2019-12-05 10:56:54:937" "16 socket con"
+:0: "2019-12-05 10:56:54:942" "5 socket con"
+:0: "2019-12-05 10:56:54:946" "9 socket con"
+:0: "2019-12-05 10:56:54:950" "11 socket con"
+:0: "2019-12-05 10:56:54:954" "15 socket con"
+:0: "2019-12-05 10:56:54:958" "4 socket con"
+:0: "2019-12-05 10:56:54:962" "8 socket con"
+:0: "2019-12-05 10:56:54:966" "14 socket con"
+:0: "2019-12-05 10:56:54:969" "3 socket con"
+:0: "2019-12-05 10:56:54:973" "7 socket con"
+:0: "2019-12-05 10:56:54:977" "13 socket con"
+:0: "2019-12-05 13:07:22:883" 
+start
+:0: 1920 1040
+:0: "2019-12-05 13:07:23:289" "192.168.1.220"
+:0: "2019-12-05 13:07:23:289" "192.168.1.221"
+:0: "2019-12-05 13:07:23:289" "XY_DD_1"
+:0: "2019-12-05 13:07:23:305" "XY-DD-2"
+:0: "2019-12-05 13:07:23:305" "XY-DD-3"
+:0: "2019-12-05 13:07:23:305" "XY-DD-4"
+:0: "2019-12-05 13:07:23:305" "XY-DD-5"
+:0: "2019-12-05 13:07:23:321" "XY-DD-6"
+:0: "2019-12-05 13:07:23:321" "XY-DD-7"
+:0: "2019-12-05 13:07:23:321" "XY-DD-FGG-9877"
+:0: "2019-12-05 13:07:23:321" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-12-05 13:07:23:336" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-05 13:07:23:336" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-05 13:07:23:336" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-12-05 13:07:23:492" "0 socket con"
+:0: "2019-12-05 13:07:23:508" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:508" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:524" "0 socket con"
+:0: "2019-12-05 13:07:23:524" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:23:524" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:539" "0 socket con"
+:0: "2019-12-05 13:07:23:539" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:539" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:555" "0 socket con"
+:0: "2019-12-05 13:07:23:555" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:555" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:555" "0 socket con"
+:0: "2019-12-05 13:07:23:570" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:570" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:570" "0 socket con"
+:0: "2019-12-05 13:07:23:586" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:586" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:602" "0 socket con"
+:0: "2019-12-05 13:07:23:602" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:602" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:602" "0 socket con"
+:0: "2019-12-05 13:07:23:617" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:617" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:617" "0 socket con"
+:0: "2019-12-05 13:07:23:617" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:633" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:633" "0 socket con"
+:0: "2019-12-05 13:07:23:633" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:664" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:664" "0 socket con"
+:0: "2019-12-05 13:07:23:664" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:664" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:680" "0 socket con"
+:0: "2019-12-05 13:07:23:680" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:680" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:680" "0 socket con"
+:0: "2019-12-05 13:07:23:695" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:695" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:711" "0 socket con"
+:0: "2019-12-05 13:07:23:711" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:711" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:711" "0 socket con"
+:0: "2019-12-05 13:07:23:727" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:727" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:727" "0 socket con"
+:0: "2019-12-05 13:07:23:727" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:742" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:742" "0 socket con"
+:0: "2019-12-05 13:07:23:742" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:742" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:758" "0 socket con"
+:0: "2019-12-05 13:07:23:758" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:758" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:758" "0 socket con"
+:0: "2019-12-05 13:07:23:774" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:774" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:774" "0 socket con"
+:0: "2019-12-05 13:07:23:774" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:789" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:789" "0 socket con"
+:0: "2019-12-05 13:07:23:789" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:789" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:805" "0 socket con"
+:0: "2019-12-05 13:07:23:805" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:805" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:820" "0 socket con"
+:0: "2019-12-05 13:07:23:820" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:820" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:820" "0 socket con"
+:0: "2019-12-05 13:07:23:836" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:836" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:836" "0 socket con"
+:0: "2019-12-05 13:07:23:836" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:852" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:852" "0 socket con"
+:0: "2019-12-05 13:07:23:852" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:852" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:867" "0 socket con"
+:0: "2019-12-05 13:07:23:867" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:867" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:867" "0 socket con"
+:0: "2019-12-05 13:07:23:883" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:883" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:883" "0 socket con"
+:0: "2019-12-05 13:07:23:883" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:899" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:899" "0 socket con"
+:0: "2019-12-05 13:07:23:899" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:914" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:914" "0 socket con"
+:0: "2019-12-05 13:07:23:914" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:914" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:930" "0 socket con"
+:0: "2019-12-05 13:07:23:930" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:930" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:930" "0 socket con"
+:0: "2019-12-05 13:07:23:945" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:945" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:945" "0 socket con"
+:0: "2019-12-05 13:07:23:945" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:961" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:961" "0 socket con"
+:0: "2019-12-05 13:07:23:961" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:977" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:977" "0 socket con"
+:0: "2019-12-05 13:07:23:977" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:992" "0"  socket discon - recon
+:0: "2019-12-05 13:07:23:992" "0 socket con"
+:0: "2019-12-05 13:07:23:992" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:23:992" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:008" "0 socket con"
+:0: "2019-12-05 13:07:24:008" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:008" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:023" "0 socket con"
+:0: "2019-12-05 13:07:24:023" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:023" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:039" "0 socket con"
+:0: "2019-12-05 13:07:24:039" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:039" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:055" "0 socket con"
+:0: "2019-12-05 13:07:24:055" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:055" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:070" "0 socket con"
+:0: "2019-12-05 13:07:24:070" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:070" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:070" "0 socket con"
+:0: "2019-12-05 13:07:24:086" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:086" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:086" "0 socket con"
+:0: "2019-12-05 13:07:24:102" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:102" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:102" "0 socket con"
+:0: "2019-12-05 13:07:24:102" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:117" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:117" "0 socket con"
+:0: "2019-12-05 13:07:24:117" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:117" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:133" "0 socket con"
+:0: "2019-12-05 13:07:24:133" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:133" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:133" "0 socket con"
+:0: "2019-12-05 13:07:24:164" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:164" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:164" "0 socket con"
+:0: "2019-12-05 13:07:24:164" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:180" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:180" "0 socket con"
+:0: "2019-12-05 13:07:24:180" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:180" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:195" "0 socket con"
+:0: "2019-12-05 13:07:24:195" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:195" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:195" "0 socket con"
+:0: "2019-12-05 13:07:24:227" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:227" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:227" "0 socket con"
+:0: "2019-12-05 13:07:24:227" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:242" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:242" "0 socket con"
+:0: "2019-12-05 13:07:24:242" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:242" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:258" "0 socket con"
+:0: "2019-12-05 13:07:24:258" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:258" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:273" "0 socket con"
+:0: "2019-12-05 13:07:24:273" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:273" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:289" "0 socket con"
+:0: "2019-12-05 13:07:24:289" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:289" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:289" "0 socket con"
+:0: "2019-12-05 13:07:24:320" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:320" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:320" "0 socket con"
+:0: "2019-12-05 13:07:24:320" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:336" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:336" "0 socket con"
+:0: "2019-12-05 13:07:24:336" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:336" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:352" "0 socket con"
+:0: "2019-12-05 13:07:24:352" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:24:352" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:352" "0 socket con"
+:0: "2019-12-05 13:07:24:367" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:367" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:383" "0 socket con"
+:0: "2019-12-05 13:07:24:383" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:383" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:383" "0 socket con"
+:0: "2019-12-05 13:07:24:398" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:398" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:398" "0 socket con"
+:0: "2019-12-05 13:07:24:414" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:414" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:414" "0 socket con"
+:0: "2019-12-05 13:07:24:414" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:430" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:430" "0 socket con"
+:0: "2019-12-05 13:07:24:430" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:445" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:445" "0 socket con"
+:0: "2019-12-05 13:07:24:445" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:445" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:461" "0 socket con"
+:0: "2019-12-05 13:07:24:461" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:461" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:477" "0 socket con"
+:0: "2019-12-05 13:07:24:477" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:477" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:477" "0 socket con"
+:0: "2019-12-05 13:07:24:492" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:492" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:492" "0 socket con"
+:0: "2019-12-05 13:07:24:508" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:508" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:508" "0 socket con"
+:0: "2019-12-05 13:07:24:523" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:523" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:523" "0 socket con"
+:0: "2019-12-05 13:07:24:539" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:539" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:539" "0 socket con"
+:0: "2019-12-05 13:07:24:539" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:555" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:555" "0 socket con"
+:0: "2019-12-05 13:07:24:555" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:570" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:570" "0 socket con"
+:0: "2019-12-05 13:07:24:570" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:570" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:586" "0 socket con"
+:0: "2019-12-05 13:07:24:586" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:586" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:586" "0 socket con"
+:0: "2019-12-05 13:07:24:602" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:24:602" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:602" "0 socket con"
+:0: "2019-12-05 13:07:24:617" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:617" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:617" "0 socket con"
+:0: "2019-12-05 13:07:24:617" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:633" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:633" "0 socket con"
+:0: "2019-12-05 13:07:24:633" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:648" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:648" "0 socket con"
+:0: "2019-12-05 13:07:24:648" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:648" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:664" "0 socket con"
+:0: "2019-12-05 13:07:24:664" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:664" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:680" "0 socket con"
+:0: "2019-12-05 13:07:24:680" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:680" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:695" "0 socket con"
+:0: "2019-12-05 13:07:24:695" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:695" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:695" "0 socket con"
+:0: "2019-12-05 13:07:24:711" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:711" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:711" "0 socket con"
+:0: "2019-12-05 13:07:24:711" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:742" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:742" "0 socket con"
+:0: "2019-12-05 13:07:24:742" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:742" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:758" "0 socket con"
+:0: "2019-12-05 13:07:24:758" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:758" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:758" "0 socket con"
+:0: "2019-12-05 13:07:24:758" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:773" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:773" "0 socket con"
+:0: "2019-12-05 13:07:24:773" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:773" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:789" "0 socket con"
+:0: "2019-12-05 13:07:24:789" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:789" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:805" "0 socket con"
+:0: "2019-12-05 13:07:24:805" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:805" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:820" "0 socket con"
+:0: "2019-12-05 13:07:24:820" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:820" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:820" "0 socket con"
+:0: "2019-12-05 13:07:24:836" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:836" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:836" "0 socket con"
+:0: "2019-12-05 13:07:24:836" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:851" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:851" "0 socket con"
+:0: "2019-12-05 13:07:24:851" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:851" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:851" "0 socket con"
+:0: "2019-12-05 13:07:24:867" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:867" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:867" "0 socket con"
+:0: "2019-12-05 13:07:24:867" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:883" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:883" "0 socket con"
+:0: "2019-12-05 13:07:24:883" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:883" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:898" "0 socket con"
+:0: "2019-12-05 13:07:24:898" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:898" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:898" "0 socket con"
+:0: "2019-12-05 13:07:24:914" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:914" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:914" "0 socket con"
+:0: "2019-12-05 13:07:24:914" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:930" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:930" "0 socket con"
+:0: "2019-12-05 13:07:24:930" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:930" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:945" "0 socket con"
+:0: "2019-12-05 13:07:24:945" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:945" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:945" "0 socket con"
+:0: "2019-12-05 13:07:24:961" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:961" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:961" "0 socket con"
+:0: "2019-12-05 13:07:24:976" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:976" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:976" "0 socket con"
+:0: "2019-12-05 13:07:24:976" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:24:992" "0"  socket discon - recon
+:0: "2019-12-05 13:07:24:992" "0 socket con"
+:0: "2019-12-05 13:07:24:992" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:008" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:008" "0 socket con"
+:0: "2019-12-05 13:07:25:008" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:023" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:023" "0 socket con"
+:0: "2019-12-05 13:07:25:023" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:023" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:039" "0 socket con"
+:0: "2019-12-05 13:07:25:039" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:039" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:055" "0 socket con"
+:0: "2019-12-05 13:07:25:055" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:070" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:070" "0 socket con"
+:0: "2019-12-05 13:07:25:070" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:070" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:086" "0 socket con"
+:0: "2019-12-05 13:07:25:086" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:086" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:101" "0 socket con"
+:0: "2019-12-05 13:07:25:101" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:101" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:101" "0 socket con"
+:0: "2019-12-05 13:07:25:117" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:25:117" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:117" "0 socket con"
+:0: "2019-12-05 13:07:25:133" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:133" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:133" "0 socket con"
+:0: "2019-12-05 13:07:25:164" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:164" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:164" "0 socket con"
+:0: "2019-12-05 13:07:25:164" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:180" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:180" "0 socket con"
+:0: "2019-12-05 13:07:25:180" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:180" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:195" "0 socket con"
+:0: "2019-12-05 13:07:25:195" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:195" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:195" "0 socket con"
+:0: "2019-12-05 13:07:25:211" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:211" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:211" "0 socket con"
+:0: "2019-12-05 13:07:25:226" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:226" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:242" "0 socket con"
+:0: "2019-12-05 13:07:25:242" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:242" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:242" "0 socket con"
+:0: "2019-12-05 13:07:25:258" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:258" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:258" "0 socket con"
+:0: "2019-12-05 13:07:25:273" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:273" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:273" "0 socket con"
+:0: "2019-12-05 13:07:25:289" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:289" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:289" "0 socket con"
+:0: "2019-12-05 13:07:25:304" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:304" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:304" "0 socket con"
+:0: "2019-12-05 13:07:25:320" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:320" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:320" "0 socket con"
+:0: "2019-12-05 13:07:25:336" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:336" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:336" "0 socket con"
+:0: "2019-12-05 13:07:25:351" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:351" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:367" "0 socket con"
+:0: "2019-12-05 13:07:25:367" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:367" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:383" "0 socket con"
+:0: "2019-12-05 13:07:25:383" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:383" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:383" "0 socket con"
+:0: "2019-12-05 13:07:25:398" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:398" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:398" "0 socket con"
+:0: "2019-12-05 13:07:25:398" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:414" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:414" "0 socket con"
+:0: "2019-12-05 13:07:25:414" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:429" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:429" "info Socket: 9   Connection refused"
+:0: "2019-12-05 13:07:25:429" "info Socket: 14   Connection refused"
+:0: "2019-12-05 13:07:25:429" "info Socket: 8   Connection refused"
+:0: "2019-12-05 13:07:25:445" "info Socket: 16   Connection refused"
+:0: "2019-12-05 13:07:25:445" "info Socket: 3   Connection refused"
+:0: "2019-12-05 13:07:25:445" "info Socket: 1   Connection refused"
+:0: "2019-12-05 13:07:25:461" "info Socket: 12   Connection refused"
+:0: "2019-12-05 13:07:25:461" "info Socket: 11   Connection refused"
+:0: "2019-12-05 13:07:25:461" "info Socket: 10   Connection refused"
+:0: "2019-12-05 13:07:25:461" "info Socket: 7   Connection refused"
+:0: "2019-12-05 13:07:25:476" "info Socket: 13   Connection refused"
+:0: "2019-12-05 13:07:25:476" "info Socket: 15   Connection refused"
+:0: "2019-12-05 13:07:25:476" "info Socket: 2   Connection refused"
+:0: "2019-12-05 13:07:25:492" "info Socket: 5   Connection refused"
+:0: "2019-12-05 13:07:25:492" "info Socket: 4   Connection refused"
+:0: "2019-12-05 13:07:25:492" "info Socket: 6   Connection refused"
+:0: "2019-12-05 13:07:25:492" "0 socket con"
+:0: "2019-12-05 13:07:25:508" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:508" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:508" "0 socket con"
+:0: "2019-12-05 13:07:25:523" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:523" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:539" "0 socket con"
+:0: "2019-12-05 13:07:25:539" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:539" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:554" "0 socket con"
+:0: "2019-12-05 13:07:25:554" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:554" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:554" "0 socket con"
+:0: "2019-12-05 13:07:25:570" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:570" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:570" "0 socket con"
+:0: "2019-12-05 13:07:25:586" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:586" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:586" "0 socket con"
+:0: "2019-12-05 13:07:25:586" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:601" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:601" "0 socket con"
+:0: "2019-12-05 13:07:25:601" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:617" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:617" "0 socket con"
+:0: "2019-12-05 13:07:25:617" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:632" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:632" "0 socket con"
+:0: "2019-12-05 13:07:25:632" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:648" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:648" "0 socket con"
+:0: "2019-12-05 13:07:25:648" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:664" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:664" "0 socket con"
+:0: "2019-12-05 13:07:25:664" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:679" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:679" "0 socket con"
+:0: "2019-12-05 13:07:25:679" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:679" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:695" "0 socket con"
+:0: "2019-12-05 13:07:25:695" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:695" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:695" "0 socket con"
+:0: "2019-12-05 13:07:25:711" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:25:711" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:711" "0 socket con"
+:0: "2019-12-05 13:07:25:726" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:726" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:742" "0 socket con"
+:0: "2019-12-05 13:07:25:742" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:742" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:742" "0 socket con"
+:0: "2019-12-05 13:07:25:757" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:757" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:757" "0 socket con"
+:0: "2019-12-05 13:07:25:773" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:773" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:773" "0 socket con"
+:0: "2019-12-05 13:07:25:789" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:789" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:789" "0 socket con"
+:0: "2019-12-05 13:07:25:804" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:804" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:804" "0 socket con"
+:0: "2019-12-05 13:07:25:820" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:820" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:820" "0 socket con"
+:0: "2019-12-05 13:07:25:836" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:836" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:836" "0 socket con"
+:0: "2019-12-05 13:07:25:836" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:851" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:860" "0 socket con"
+:0: "2019-12-05 13:07:25:864" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:869" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:874" "0 socket con"
+:0: "2019-12-05 13:07:25:878" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:886" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:891" "0 socket con"
+:0: "2019-12-05 13:07:25:895" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:899" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:904" "0 socket con"
+:0: "2019-12-05 13:07:25:909" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:913" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:918" "0 socket con"
+:0: "2019-12-05 13:07:25:923" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:928" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:933" "0 socket con"
+:0: "2019-12-05 13:07:25:941" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:945" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:953" "0 socket con"
+:0: "2019-12-05 13:07:25:961" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:972" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:977" "0 socket con"
+:0: "2019-12-05 13:07:25:982" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:25:987" "0"  socket discon - recon
+:0: "2019-12-05 13:07:25:992" "0 socket con"
+:0: "2019-12-05 13:07:26:000" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:005" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:010" "0 socket con"
+:0: "2019-12-05 13:07:26:014" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:020" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:024" "0 socket con"
+:0: "2019-12-05 13:07:26:029" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:034" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:039" "0 socket con"
+:0: "2019-12-05 13:07:26:044" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:050" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:055" "0 socket con"
+:0: "2019-12-05 13:07:26:062" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:070" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:076" "0 socket con"
+:0: "2019-12-05 13:07:26:080" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:085" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:090" "0 socket con"
+:0: "2019-12-05 13:07:26:094" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:098" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:111" "0 socket con"
+:0: "2019-12-05 13:07:26:115" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:120" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:124" "0 socket con"
+:0: "2019-12-05 13:07:26:132" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:137" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:142" "0 socket con"
+:0: "2019-12-05 13:07:26:147" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:151" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:156" "0 socket con"
+:0: "2019-12-05 13:07:26:160" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:166" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:170" "0 socket con"
+:0: "2019-12-05 13:07:26:175" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:180" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:185" "0 socket con"
+:0: "2019-12-05 13:07:26:191" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:195" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:200" "0 socket con"
+:0: "2019-12-05 13:07:26:205" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:210" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:215" "0 socket con"
+:0: "2019-12-05 13:07:26:221" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:226" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:230" "0 socket con"
+:0: "2019-12-05 13:07:26:235" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:240" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:245" "0 socket con"
+:0: "2019-12-05 13:07:26:250" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:255" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:260" "0 socket con"
+:0: "2019-12-05 13:07:26:265" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:270" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:275" "0 socket con"
+:0: "2019-12-05 13:07:26:279" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:284" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:289" "0 socket con"
+:0: "2019-12-05 13:07:26:294" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:299" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:304" "0 socket con"
+:0: "2019-12-05 13:07:26:309" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:26:313" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:318" "0 socket con"
+:0: "2019-12-05 13:07:26:327" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:332" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:337" "0 socket con"
+:0: "2019-12-05 13:07:26:342" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:347" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:352" "0 socket con"
+:0: "2019-12-05 13:07:26:357" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:362" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:366" "0 socket con"
+:0: "2019-12-05 13:07:26:371" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:376" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:381" "0 socket con"
+:0: "2019-12-05 13:07:26:386" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:391" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:396" "0 socket con"
+:0: "2019-12-05 13:07:26:401" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:406" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:421" "0 socket con"
+:0: "2019-12-05 13:07:26:427" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:432" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:437" "0 socket con"
+:0: "2019-12-05 13:07:26:442" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:447" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:453" "0 socket con"
+:0: "2019-12-05 13:07:26:457" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:463" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:468" "0 socket con"
+:0: "2019-12-05 13:07:26:477" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:482" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:488" "0 socket con"
+:0: "2019-12-05 13:07:26:493" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:499" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:504" "0 socket con"
+:0: "2019-12-05 13:07:26:509" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:514" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:520" "0 socket con"
+:0: "2019-12-05 13:07:26:525" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:530" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:535" "0 socket con"
+:0: "2019-12-05 13:07:26:541" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:546" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:551" "0 socket con"
+:0: "2019-12-05 13:07:26:556" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:561" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:566" "0 socket con"
+:0: "2019-12-05 13:07:26:571" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:576" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:580" "0 socket con"
+:0: "2019-12-05 13:07:26:585" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:590" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:595" "0 socket con"
+:0: "2019-12-05 13:07:26:601" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:606" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:611" "0 socket con"
+:0: "2019-12-05 13:07:26:616" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:621" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:626" "0 socket con"
+:0: "2019-12-05 13:07:26:630" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:635" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:640" "0 socket con"
+:0: "2019-12-05 13:07:26:645" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:650" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:655" "0 socket con"
+:0: "2019-12-05 13:07:26:659" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:664" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:669" "0 socket con"
+:0: "2019-12-05 13:07:26:674" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:679" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:684" "0 socket con"
+:0: "2019-12-05 13:07:26:689" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:694" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:699" "0 socket con"
+:0: "2019-12-05 13:07:26:704" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:709" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:714" "0 socket con"
+:0: "2019-12-05 13:07:26:719" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:724" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:729" "0 socket con"
+:0: "2019-12-05 13:07:26:736" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:740" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:745" "0 socket con"
+:0: "2019-12-05 13:07:26:750" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:755" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:760" "0 socket con"
+:0: "2019-12-05 13:07:26:765" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:770" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:774" "0 socket con"
+:0: "2019-12-05 13:07:26:779" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:784" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:789" "0 socket con"
+:0: "2019-12-05 13:07:26:793" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:798" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:802" "0 socket con"
+:0: "2019-12-05 13:07:26:807" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:815" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:820" "0 socket con"
+:0: "2019-12-05 13:07:26:824" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:829" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:834" "0 socket con"
+:0: "2019-12-05 13:07:26:839" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:844" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:849" "0 socket con"
+:0: "2019-12-05 13:07:26:853" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:858" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:862" "0 socket con"
+:0: "2019-12-05 13:07:26:867" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:872" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:877" "0 socket con"
+:0: "2019-12-05 13:07:26:881" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:886" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:891" "0 socket con"
+:0: "2019-12-05 13:07:26:899" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:904" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:909" "0 socket con"
+:0: "2019-12-05 13:07:26:913" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:918" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:923" "0 socket con"
+:0: "2019-12-05 13:07:26:928" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:932" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:937" "0 socket con"
+:0: "2019-12-05 13:07:26:942" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:947" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:951" "0 socket con"
+:0: "2019-12-05 13:07:26:956" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:961" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:967" "0 socket con"
+:0: "2019-12-05 13:07:26:971" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:976" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:981" "0 socket con"
+:0: "2019-12-05 13:07:26:985" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:26:990" "0"  socket discon - recon
+:0: "2019-12-05 13:07:26:996" "0 socket con"
+:0: "2019-12-05 13:07:27:003" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:009" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:013" "0 socket con"
+:0: "2019-12-05 13:07:27:020" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:025" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:030" "0 socket con"
+:0: "2019-12-05 13:07:27:035" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:040" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:045" "0 socket con"
+:0: "2019-12-05 13:07:27:051" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:056" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:061" "0 socket con"
+:0: "2019-12-05 13:07:27:066" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:071" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:076" "0 socket con"
+:0: "2019-12-05 13:07:27:080" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:085" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:090" "0 socket con"
+:0: "2019-12-05 13:07:27:095" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:099" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:105" "0 socket con"
+:0: "2019-12-05 13:07:27:112" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:118" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:122" "0 socket con"
+:0: "2019-12-05 13:07:27:128" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:132" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:138" "0 socket con"
+:0: "2019-12-05 13:07:27:142" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:147" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:152" "0 socket con"
+:0: "2019-12-05 13:07:27:157" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:162" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:166" "0 socket con"
+:0: "2019-12-05 13:07:27:171" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:176" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:181" "0 socket con"
+:0: "2019-12-05 13:07:27:186" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:191" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:196" "0 socket con"
+:0: "2019-12-05 13:07:27:196" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:27:196" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:196" "0 socket con"
+:0: "2019-12-05 13:07:27:211" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:227" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:227" "0 socket con"
+:0: "2019-12-05 13:07:27:227" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:227" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:242" "0 socket con"
+:0: "2019-12-05 13:07:27:242" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:242" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:258" "0 socket con"
+:0: "2019-12-05 13:07:27:258" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:258" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:274" "0 socket con"
+:0: "2019-12-05 13:07:27:274" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:274" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:289" "0 socket con"
+:0: "2019-12-05 13:07:27:289" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:289" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:305" "0 socket con"
+:0: "2019-12-05 13:07:27:305" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:305" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:321" "0 socket con"
+:0: "2019-12-05 13:07:27:321" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:336" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:336" "0 socket con"
+:0: "2019-12-05 13:07:27:336" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:336" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:352" "0 socket con"
+:0: "2019-12-05 13:07:27:352" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:352" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:367" "0 socket con"
+:0: "2019-12-05 13:07:27:367" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:367" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:383" "0 socket con"
+:0: "2019-12-05 13:07:27:383" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:383" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:399" "0 socket con"
+:0: "2019-12-05 13:07:27:399" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:399" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:414" "0 socket con"
+:0: "2019-12-05 13:07:27:414" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:425" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:425" "0 socket con"
+:0: "2019-12-05 13:07:27:425" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:440" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:440" "0 socket con"
+:0: "2019-12-05 13:07:27:440" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:440" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:456" "0 socket con"
+:0: "2019-12-05 13:07:27:456" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:456" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:472" "0 socket con"
+:0: "2019-12-05 13:07:27:472" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:472" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:487" "0 socket con"
+:0: "2019-12-05 13:07:27:487" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:487" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:503" "0 socket con"
+:0: "2019-12-05 13:07:27:503" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:512" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:512" "0 socket con"
+:0: "2019-12-05 13:07:27:523" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:27:523" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:523" "0 socket con"
+:0: "2019-12-05 13:07:27:538" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:538" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:538" "0 socket con"
+:0: "2019-12-05 13:07:27:554" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:554" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:554" "0 socket con"
+:0: "2019-12-05 13:07:27:554" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:569" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:569" "0 socket con"
+:0: "2019-12-05 13:07:27:569" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:569" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:585" "0 socket con"
+:0: "2019-12-05 13:07:27:585" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:585" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:585" "0 socket con"
+:0: "2019-12-05 13:07:27:601" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:601" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:601" "0 socket con"
+:0: "2019-12-05 13:07:27:616" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:616" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:616" "0 socket con"
+:0: "2019-12-05 13:07:27:616" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:632" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:632" "0 socket con"
+:0: "2019-12-05 13:07:27:632" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:647" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:647" "0 socket con"
+:0: "2019-12-05 13:07:27:647" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:647" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:663" "0 socket con"
+:0: "2019-12-05 13:07:27:663" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:663" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:663" "0 socket con"
+:0: "2019-12-05 13:07:27:679" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:679" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:679" "0 socket con"
+:0: "2019-12-05 13:07:27:679" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:694" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:694" "0 socket con"
+:0: "2019-12-05 13:07:27:694" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:694" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:710" "0 socket con"
+:0: "2019-12-05 13:07:27:710" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:710" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:710" "0 socket con"
+:0: "2019-12-05 13:07:27:726" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:726" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:726" "0 socket con"
+:0: "2019-12-05 13:07:27:726" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:741" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:741" "0 socket con"
+:0: "2019-12-05 13:07:27:741" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:741" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:757" "0 socket con"
+:0: "2019-12-05 13:07:27:757" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:757" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:772" "0 socket con"
+:0: "2019-12-05 13:07:27:772" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:772" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:772" "0 socket con"
+:0: "2019-12-05 13:07:27:788" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:788" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:788" "0 socket con"
+:0: "2019-12-05 13:07:27:788" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:804" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:804" "0 socket con"
+:0: "2019-12-05 13:07:27:804" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:804" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:819" "0 socket con"
+:0: "2019-12-05 13:07:27:819" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:819" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:819" "0 socket con"
+:0: "2019-12-05 13:07:27:835" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:835" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:835" "0 socket con"
+:0: "2019-12-05 13:07:27:835" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:851" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:851" "0 socket con"
+:0: "2019-12-05 13:07:27:851" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:851" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:866" "0 socket con"
+:0: "2019-12-05 13:07:27:866" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:866" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:866" "0 socket con"
+:0: "2019-12-05 13:07:27:882" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:882" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:882" "0 socket con"
+:0: "2019-12-05 13:07:27:882" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:897" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:897" "0 socket con"
+:0: "2019-12-05 13:07:27:897" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:897" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:913" "0 socket con"
+:0: "2019-12-05 13:07:27:913" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:913" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:913" "0 socket con"
+:0: "2019-12-05 13:07:27:929" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:929" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:929" "0 socket con"
+:0: "2019-12-05 13:07:27:929" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:944" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:944" "0 socket con"
+:0: "2019-12-05 13:07:27:944" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:944" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:960" "0 socket con"
+:0: "2019-12-05 13:07:27:960" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:960" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:960" "0 socket con"
+:0: "2019-12-05 13:07:27:976" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:27:976" "0"  socket discon - recon
+:0: "2019-12-05 13:07:27:976" "0 socket con"
+:0: "2019-12-05 13:07:27:991" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:007" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:007" "0 socket con"
+:0: "2019-12-05 13:07:28:007" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:007" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:022" "0 socket con"
+:0: "2019-12-05 13:07:28:022" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:022" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:038" "0 socket con"
+:0: "2019-12-05 13:07:28:038" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:038" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:038" "0 socket con"
+:0: "2019-12-05 13:07:28:054" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:054" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:054" "0 socket con"
+:0: "2019-12-05 13:07:28:054" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:069" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:069" "0 socket con"
+:0: "2019-12-05 13:07:28:069" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:085" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:085" "0 socket con"
+:0: "2019-12-05 13:07:28:085" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:085" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:101" "0 socket con"
+:0: "2019-12-05 13:07:28:101" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:101" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:101" "0 socket con"
+:0: "2019-12-05 13:07:28:116" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:116" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:116" "0 socket con"
+:0: "2019-12-05 13:07:28:116" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:132" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:132" "0 socket con"
+:0: "2019-12-05 13:07:28:132" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:147" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:147" "0 socket con"
+:0: "2019-12-05 13:07:28:147" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:147" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:163" "0 socket con"
+:0: "2019-12-05 13:07:28:163" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:163" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:163" "0 socket con"
+:0: "2019-12-05 13:07:28:179" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:179" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:179" "0 socket con"
+:0: "2019-12-05 13:07:28:194" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:194" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:194" "0 socket con"
+:0: "2019-12-05 13:07:28:194" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:210" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:210" "0 socket con"
+:0: "2019-12-05 13:07:28:210" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:210" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:225" "0 socket con"
+:0: "2019-12-05 13:07:28:225" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:225" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:225" "0 socket con"
+:0: "2019-12-05 13:07:28:241" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:241" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:241" "0 socket con"
+:0: "2019-12-05 13:07:28:257" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:257" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:257" "0 socket con"
+:0: "2019-12-05 13:07:28:257" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:272" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:272" "0 socket con"
+:0: "2019-12-05 13:07:28:272" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:272" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:288" "0 socket con"
+:0: "2019-12-05 13:07:28:288" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:28:288" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:304" "0 socket con"
+:0: "2019-12-05 13:07:28:304" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:304" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:319" "0 socket con"
+:0: "2019-12-05 13:07:28:319" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:319" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:319" "0 socket con"
+:0: "2019-12-05 13:07:28:335" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:335" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:335" "0 socket con"
+:0: "2019-12-05 13:07:28:350" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:350" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:350" "0 socket con"
+:0: "2019-12-05 13:07:28:350" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:366" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:366" "0 socket con"
+:0: "2019-12-05 13:07:28:366" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:366" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:382" "0 socket con"
+:0: "2019-12-05 13:07:28:382" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:382" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:397" "0 socket con"
+:0: "2019-12-05 13:07:28:397" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:397" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:397" "0 socket con"
+:0: "2019-12-05 13:07:28:413" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:413" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:413" "0 socket con"
+:0: "2019-12-05 13:07:28:413" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:429" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:429" "0 socket con"
+:0: "2019-12-05 13:07:28:429" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:444" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:444" "0 socket con"
+:0: "2019-12-05 13:07:28:444" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:444" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:460" "0 socket con"
+:0: "2019-12-05 13:07:28:460" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:460" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:460" "0 socket con"
+:0: "2019-12-05 13:07:28:475" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:475" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:475" "0 socket con"
+:0: "2019-12-05 13:07:28:491" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:491" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:491" "0 socket con"
+:0: "2019-12-05 13:07:28:507" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:507" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:507" "0 socket con"
+:0: "2019-12-05 13:07:28:507" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:522" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:522" "0 socket con"
+:0: "2019-12-05 13:07:28:522" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:538" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:538" "0 socket con"
+:0: "2019-12-05 13:07:28:538" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:538" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:554" "0 socket con"
+:0: "2019-12-05 13:07:28:554" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:554" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:569" "0 socket con"
+:0: "2019-12-05 13:07:28:569" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:569" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:569" "0 socket con"
+:0: "2019-12-05 13:07:28:585" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:585" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:585" "0 socket con"
+:0: "2019-12-05 13:07:28:585" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:600" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:600" "0 socket con"
+:0: "2019-12-05 13:07:28:600" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:616" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:616" "0 socket con"
+:0: "2019-12-05 13:07:28:616" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:28:616" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:632" "0 socket con"
+:0: "2019-12-05 13:07:28:632" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:632" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:647" "0 socket con"
+:0: "2019-12-05 13:07:28:647" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:647" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:647" "0 socket con"
+:0: "2019-12-05 13:07:28:663" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:663" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:663" "0 socket con"
+:0: "2019-12-05 13:07:28:663" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:678" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:678" "0 socket con"
+:0: "2019-12-05 13:07:28:678" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:678" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:694" "0 socket con"
+:0: "2019-12-05 13:07:28:694" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:694" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:694" "0 socket con"
+:0: "2019-12-05 13:07:28:710" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:710" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:710" "0 socket con"
+:0: "2019-12-05 13:07:28:725" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:725" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:725" "0 socket con"
+:0: "2019-12-05 13:07:28:741" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:741" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:741" "0 socket con"
+:0: "2019-12-05 13:07:28:741" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:757" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:757" "0 socket con"
+:0: "2019-12-05 13:07:28:757" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:757" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:772" "0 socket con"
+:0: "2019-12-05 13:07:28:772" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:772" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:772" "0 socket con"
+:0: "2019-12-05 13:07:28:788" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:788" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:788" "0 socket con"
+:0: "2019-12-05 13:07:28:788" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:803" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:803" "0 socket con"
+:0: "2019-12-05 13:07:28:803" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:803" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:819" "0 socket con"
+:0: "2019-12-05 13:07:28:819" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:819" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:819" "0 socket con"
+:0: "2019-12-05 13:07:28:835" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:835" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:835" "0 socket con"
+:0: "2019-12-05 13:07:28:850" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:850" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:850" "0 socket con"
+:0: "2019-12-05 13:07:28:866" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:866" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:866" "0 socket con"
+:0: "2019-12-05 13:07:28:882" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:882" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:882" "0 socket con"
+:0: "2019-12-05 13:07:28:882" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:897" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:897" "0 socket con"
+:0: "2019-12-05 13:07:28:897" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:897" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:913" "0 socket con"
+:0: "2019-12-05 13:07:28:913" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:913" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:913" "0 socket con"
+:0: "2019-12-05 13:07:28:928" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:928" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:928" "0 socket con"
+:0: "2019-12-05 13:07:28:928" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:944" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:944" "0 socket con"
+:0: "2019-12-05 13:07:28:944" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:960" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:960" "0 socket con"
+:0: "2019-12-05 13:07:28:960" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:960" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:975" "0 socket con"
+:0: "2019-12-05 13:07:28:975" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:975" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:991" "0 socket con"
+:0: "2019-12-05 13:07:28:991" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:28:991" "0"  socket discon - recon
+:0: "2019-12-05 13:07:28:991" "0 socket con"
+:0: "2019-12-05 13:07:29:007" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:007" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:007" "0 socket con"
+:0: "2019-12-05 13:07:29:007" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:022" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:022" "0 socket con"
+:0: "2019-12-05 13:07:29:022" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:038" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:038" "0 socket con"
+:0: "2019-12-05 13:07:29:038" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:038" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:053" "1"  socket con retry
+:0: "2019-12-05 13:07:29:053" "2"  socket con retry
+:0: "2019-12-05 13:07:29:053" "3"  socket con retry
+:0: "2019-12-05 13:07:29:069" "4"  socket con retry
+:0: "2019-12-05 13:07:29:069" "5"  socket con retry
+:0: "2019-12-05 13:07:29:069" "6"  socket con retry
+:0: "2019-12-05 13:07:29:085" "7"  socket con retry
+:0: "2019-12-05 13:07:29:085" "8"  socket con retry
+:0: "2019-12-05 13:07:29:085" "9"  socket con retry
+:0: "2019-12-05 13:07:29:085" "10"  socket con retry
+:0: "2019-12-05 13:07:29:100" "11"  socket con retry
+:0: "2019-12-05 13:07:29:100" "12"  socket con retry
+:0: "2019-12-05 13:07:29:100" "13"  socket con retry
+:0: "2019-12-05 13:07:29:116" "14"  socket con retry
+:0: "2019-12-05 13:07:29:116" "15"  socket con retry
+:0: "2019-12-05 13:07:29:116" "16"  socket con retry
+:0: "2019-12-05 13:07:29:116" "0 socket con"
+:0: "2019-12-05 13:07:29:132" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:132" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:132" "0 socket con"
+:0: "2019-12-05 13:07:29:147" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:147" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:147" "0 socket con"
+:0: "2019-12-05 13:07:29:147" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:163" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:163" "0 socket con"
+:0: "2019-12-05 13:07:29:163" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:163" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:178" "0 socket con"
+:0: "2019-12-05 13:07:29:178" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:178" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:178" "0 socket con"
+:0: "2019-12-05 13:07:29:194" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:194" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:194" "0 socket con"
+:0: "2019-12-05 13:07:29:194" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:210" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:210" "0 socket con"
+:0: "2019-12-05 13:07:29:210" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:210" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:225" "0 socket con"
+:0: "2019-12-05 13:07:29:225" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:225" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:241" "0 socket con"
+:0: "2019-12-05 13:07:29:241" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:241" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:241" "0 socket con"
+:0: "2019-12-05 13:07:29:257" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:257" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:257" "0 socket con"
+:0: "2019-12-05 13:07:29:257" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:272" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:272" "0 socket con"
+:0: "2019-12-05 13:07:29:272" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:272" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:288" "0 socket con"
+:0: "2019-12-05 13:07:29:288" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:288" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:288" "0 socket con"
+:0: "2019-12-05 13:07:29:303" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:303" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:303" "0 socket con"
+:0: "2019-12-05 13:07:29:303" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:319" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:319" "0 socket con"
+:0: "2019-12-05 13:07:29:319" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:319" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:335" "0 socket con"
+:0: "2019-12-05 13:07:29:335" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:335" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:335" "0 socket con"
+:0: "2019-12-05 13:07:29:350" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:350" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:350" "0 socket con"
+:0: "2019-12-05 13:07:29:350" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:366" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:366" "0 socket con"
+:0: "2019-12-05 13:07:29:366" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:366" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:381" "0 socket con"
+:0: "2019-12-05 13:07:29:381" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:29:381" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:381" "0 socket con"
+:0: "2019-12-05 13:07:29:397" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:397" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:397" "0 socket con"
+:0: "2019-12-05 13:07:29:413" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:413" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:413" "0 socket con"
+:0: "2019-12-05 13:07:29:413" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:428" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:428" "0 socket con"
+:0: "2019-12-05 13:07:29:428" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:428" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:444" "0 socket con"
+:0: "2019-12-05 13:07:29:444" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:444" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:444" "0 socket con"
+:0: "2019-12-05 13:07:29:460" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:460" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:460" "0 socket con"
+:0: "2019-12-05 13:07:29:460" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:475" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:475" "0 socket con"
+:0: "2019-12-05 13:07:29:475" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:475" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:491" "0 socket con"
+:0: "2019-12-05 13:07:29:491" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:491" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:506" "0 socket con"
+:0: "2019-12-05 13:07:29:506" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:506" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:506" "0 socket con"
+:0: "2019-12-05 13:07:29:522" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:522" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:522" "0 socket con"
+:0: "2019-12-05 13:07:29:538" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:538" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:538" "0 socket con"
+:0: "2019-12-05 13:07:29:538" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:553" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:553" "0 socket con"
+:0: "2019-12-05 13:07:29:553" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:569" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:569" "0 socket con"
+:0: "2019-12-05 13:07:29:569" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:569" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:585" "0 socket con"
+:0: "2019-12-05 13:07:29:585" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:585" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:585" "0 socket con"
+:0: "2019-12-05 13:07:29:600" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:29:600" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:600" "0 socket con"
+:0: "2019-12-05 13:07:29:616" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:616" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:616" "0 socket con"
+:0: "2019-12-05 13:07:29:616" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:631" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:631" "0 socket con"
+:0: "2019-12-05 13:07:29:631" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:631" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:647" "0 socket con"
+:0: "2019-12-05 13:07:29:647" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:647" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:663" "0 socket con"
+:0: "2019-12-05 13:07:29:663" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:663" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:663" "0 socket con"
+:0: "2019-12-05 13:07:29:678" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:678" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:678" "0 socket con"
+:0: "2019-12-05 13:07:29:678" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:694" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:694" "0 socket con"
+:0: "2019-12-05 13:07:29:694" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:710" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:710" "0 socket con"
+:0: "2019-12-05 13:07:29:710" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:710" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:725" "0 socket con"
+:0: "2019-12-05 13:07:29:725" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:725" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:725" "0 socket con"
+:0: "2019-12-05 13:07:29:741" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:741" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:741" "0 socket con"
+:0: "2019-12-05 13:07:29:741" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:756" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:756" "0 socket con"
+:0: "2019-12-05 13:07:29:756" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:756" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:772" "0 socket con"
+:0: "2019-12-05 13:07:29:772" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:772" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:772" "0 socket con"
+:0: "2019-12-05 13:07:29:788" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:788" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:788" "0 socket con"
+:0: "2019-12-05 13:07:29:788" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:803" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:803" "0 socket con"
+:0: "2019-12-05 13:07:29:803" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:803" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:819" "0 socket con"
+:0: "2019-12-05 13:07:29:819" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:819" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:834" "0 socket con"
+:0: "2019-12-05 13:07:29:834" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:834" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:834" "0 socket con"
+:0: "2019-12-05 13:07:29:850" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:850" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:850" "0 socket con"
+:0: "2019-12-05 13:07:29:850" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:866" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:866" "0 socket con"
+:0: "2019-12-05 13:07:29:866" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:881" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:881" "0 socket con"
+:0: "2019-12-05 13:07:29:881" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:881" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:897" "0 socket con"
+:0: "2019-12-05 13:07:29:897" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:897" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:897" "0 socket con"
+:0: "2019-12-05 13:07:29:913" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:913" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:913" "0 socket con"
+:0: "2019-12-05 13:07:29:928" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:928" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:928" "0 socket con"
+:0: "2019-12-05 13:07:29:928" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:944" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:944" "0 socket con"
+:0: "2019-12-05 13:07:29:944" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:959" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:959" "0 socket con"
+:0: "2019-12-05 13:07:29:959" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:959" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:975" "0 socket con"
+:0: "2019-12-05 13:07:29:975" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:975" "0"  socket discon - recon
+:0: "2019-12-05 13:07:29:991" "0 socket con"
+:0: "2019-12-05 13:07:29:991" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:29:991" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:006" "0 socket con"
+:0: "2019-12-05 13:07:30:006" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:006" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:022" "0 socket con"
+:0: "2019-12-05 13:07:30:022" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:022" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:038" "0 socket con"
+:0: "2019-12-05 13:07:30:038" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:038" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:053" "0 socket con"
+:0: "2019-12-05 13:07:30:053" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:053" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:053" "0 socket con"
+:0: "2019-12-05 13:07:30:069" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:069" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:069" "0 socket con"
+:0: "2019-12-05 13:07:30:084" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:084" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:084" "0 socket con"
+:0: "2019-12-05 13:07:30:084" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:100" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:100" "0 socket con"
+:0: "2019-12-05 13:07:30:100" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:116" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:116" "0 socket con"
+:0: "2019-12-05 13:07:30:116" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:131" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:131" "0 socket con"
+:0: "2019-12-05 13:07:30:131" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:147" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:147" "0 socket con"
+:0: "2019-12-05 13:07:30:147" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:163" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:163" "0 socket con"
+:0: "2019-12-05 13:07:30:163" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:163" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:178" "0 socket con"
+:0: "2019-12-05 13:07:30:178" "info Socket: 0 192.168.1.220  Unable to write"
+:0: "2019-12-05 13:07:30:178" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:194" "0 socket con"
+:0: "2019-12-05 13:07:30:194" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:194" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:209" "0 socket con"
+:0: "2019-12-05 13:07:30:209" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:209" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:209" "0 socket con"
+:0: "2019-12-05 13:07:30:225" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:225" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:225" "0 socket con"
+:0: "2019-12-05 13:07:30:241" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:241" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:241" "0 socket con"
+:0: "2019-12-05 13:07:30:241" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:256" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:256" "0 socket con"
+:0: "2019-12-05 13:07:30:287" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:287" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:287" "0 socket con"
+:0: "2019-12-05 13:07:30:303" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:303" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:303" "0 socket con"
+:0: "2019-12-05 13:07:30:303" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:319" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:319" "0 socket con"
+:0: "2019-12-05 13:07:30:319" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:334" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:334" "0 socket con"
+:0: "2019-12-05 13:07:30:334" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:334" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:350" "0 socket con"
+:0: "2019-12-05 13:07:30:350" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:350" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:350" "0 socket con"
+:0: "2019-12-05 13:07:30:366" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:366" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:366" "0 socket con"
+:0: "2019-12-05 13:07:30:381" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:381" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:381" "0 socket con"
+:0: "2019-12-05 13:07:30:381" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:397" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:397" "0 socket con"
+:0: "2019-12-05 13:07:30:397" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:397" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:522" "0 socket con"
+:0: "2019-12-05 13:07:30:522" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:537" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:537" "0 socket con"
+:0: "2019-12-05 13:07:30:537" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 13:07:30:553" "0"  socket discon - recon
+:0: "2019-12-05 13:07:30:553" "0 socket con"
+:0: "2019-12-05 15:59:42:825"   start
+:0: "2019-12-05 15:59:43:269" 1920 1040
+:0: "2019-12-05 15:59:43:381" w.show()
+:0: "2019-12-05 15:59:43:480" startUp
+:0: "2019-12-05 15:59:43:488" "192.168.1.220"
+:0: "2019-12-05 15:59:43:492" "192.168.1.221"
+:0: "2019-12-05 15:59:43:496" "XY_DD_1"
+:0: "2019-12-05 15:59:43:501" "XY-DD-2"
+:0: "2019-12-05 15:59:43:506" "XY-DD-3"
+:0: "2019-12-05 15:59:43:510" "XY-DD-4"
+:0: "2019-12-05 15:59:43:515" "XY-DD-5"
+:0: "2019-12-05 15:59:43:519" "XY-DD-6"
+:0: "2019-12-05 15:59:43:523" "XY-DD-7"
+:0: "2019-12-05 15:59:43:527" "XY-DD-FGG-9877"
+:0: "2019-12-05 15:59:43:531" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-12-05 15:59:43:535" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-05 15:59:43:540" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-05 15:59:43:544" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-12-05 15:59:43:548" ParaInit
+:0: "2019-12-05 15:59:43:572" PlotInit
+:0: "2019-12-05 15:59:43:577" DataInit
+:0: "2019-12-05 15:59:43:591" SocketInit
+:0: "2019-12-05 15:59:43:596" plcDataInit
+:0: "2019-12-05 15:59:43:604" "1 socket con"
+:0: "2019-12-05 15:59:43:608" "2"  socket con retry
+:0: "2019-12-05 15:59:43:613" "3"  socket con retry
+:0: "2019-12-05 15:59:43:617" "4"  socket con retry
+:0: "2019-12-05 15:59:43:622" "5"  socket con retry
+:0: "2019-12-05 15:59:43:626" "6"  socket con retry
+:0: "2019-12-05 15:59:43:631" "7"  socket con retry
+:0: "2019-12-05 15:59:43:635" "8"  socket con retry
+:0: "2019-12-05 15:59:43:640" "9"  socket con retry
+:0: "2019-12-05 15:59:43:644" "10"  socket con retry
+:0: "2019-12-05 15:59:43:649" "11"  socket con retry
+:0: "2019-12-05 15:59:43:654" "12"  socket con retry
+:0: "2019-12-05 15:59:43:658" "13"  socket con retry
+:0: "2019-12-05 15:59:43:663" "14"  socket con retry
+:0: "2019-12-05 15:59:43:667" "15"  socket con retry
+:0: "2019-12-05 15:59:43:683" "16"  socket con retry
+:0: "2019-12-05 15:59:43:687" "0 socket con"
+:0: "2019-12-05 15:59:43:691" "11 socket con"
+:0: "2019-12-05 15:59:43:695" "16 socket con"
+:0: "2019-12-05 15:59:43:699" "2 socket con"
+:0: "2019-12-05 15:59:43:703" "5 socket con"
+:0: "2019-12-05 15:59:43:707" "9 socket con"
+:0: "2019-12-05 15:59:43:710" "12 socket con"
+:0: "2019-12-05 15:59:43:714" "3 socket con"
+:0: "2019-12-05 15:59:43:718" "6 socket con"
+:0: "2019-12-05 15:59:43:722" "10 socket con"
+:0: "2019-12-05 15:59:43:725" "14 socket con"
+:0: "2019-12-05 15:59:43:729" "4 socket con"
+:0: "2019-12-05 15:59:43:733" "7 socket con"
+:0: "2019-12-05 15:59:43:737" "13 socket con"
+:0: "2019-12-05 15:59:43:741" "15 socket con"
+:0: "2019-12-05 15:59:43:746" "8 socket con"
+:0: "2019-12-05 16:00:40:653"   start
+:0: "2019-12-05 16:00:41:060" 1920 1040
+:0: "2019-12-05 16:00:41:167" w.show()
+:0: "2019-12-05 16:00:41:269" startUp
+:0: "2019-12-05 16:00:41:283" "192.168.1.220"
+:0: "2019-12-05 16:00:41:289" "192.168.1.221"
+:0: "2019-12-05 16:00:41:293" "XY_DD_1"
+:0: "2019-12-05 16:00:41:297" "XY-DD-2"
+:0: "2019-12-05 16:00:41:302" "XY-DD-3"
+:0: "2019-12-05 16:00:41:305" "XY-DD-4"
+:0: "2019-12-05 16:00:41:309" "XY-DD-5"
+:0: "2019-12-05 16:00:41:313" "XY-DD-6"
+:0: "2019-12-05 16:00:41:317" "XY-DD-7"
+:0: "2019-12-05 16:00:41:321" "XY-DD-FGG-9877"
+:0: "2019-12-05 16:00:41:325" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-12-05 16:00:41:329" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-05 16:00:41:333" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-05 16:00:41:337" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-12-05 16:00:41:341" ParaInit
+:0: "2019-12-05 16:00:41:363" PlotInit
+:0: "2019-12-05 16:00:41:369" DataInit
+:0: "2019-12-05 16:00:41:382" SocketInit
+:0: "2019-12-05 16:00:41:386" plcDataInit
+:0: "2019-12-05 16:00:41:394" "1 socket con"
+:0: "2019-12-05 16:00:41:402" "2"  socket con retry
+:0: "2019-12-05 16:00:41:407" "3"  socket con retry
+:0: "2019-12-05 16:00:41:411" "4"  socket con retry
+:0: "2019-12-05 16:00:41:418" "5"  socket con retry
+:0: "2019-12-05 16:00:41:426" "6"  socket con retry
+:0: "2019-12-05 16:00:41:431" "7"  socket con retry
+:0: "2019-12-05 16:00:41:436" "8"  socket con retry
+:0: "2019-12-05 16:00:41:440" "9"  socket con retry
+:0: "2019-12-05 16:00:41:444" "10"  socket con retry
+:0: "2019-12-05 16:00:41:448" "11"  socket con retry
+:0: "2019-12-05 16:00:41:452" "12"  socket con retry
+:0: "2019-12-05 16:00:41:456" "13"  socket con retry
+:0: "2019-12-05 16:00:41:461" "14"  socket con retry
+:0: "2019-12-05 16:00:41:465" "15"  socket con retry
+:0: "2019-12-05 16:00:41:480" "16"  socket con retry
+:0: "2019-12-05 16:00:41:483" "0 socket con"
+:0: "2019-12-05 16:00:41:487" "5 socket con"
+:0: "2019-12-05 16:00:41:491" "13 socket con"
+:0: "2019-12-05 16:00:41:495" "9 socket con"
+:0: "2019-12-05 16:00:41:511" "6 socket con"
+:0: "2019-12-05 16:00:41:515" "2 socket con"
+:0: "2019-12-05 16:00:41:518" "14 socket con"
+:0: "2019-12-05 16:00:41:522" "10 socket con"
+:0: "2019-12-05 16:00:41:526" "7 socket con"
+:0: "2019-12-05 16:00:41:529" "3 socket con"
+:0: "2019-12-05 16:00:41:533" "16 socket con"
+:0: "2019-12-05 16:00:41:537" "15 socket con"
+:0: "2019-12-05 16:00:41:541" "11 socket con"
+:0: "2019-12-05 16:00:41:545" "4 socket con"
+:0: "2019-12-05 16:00:41:548" "12 socket con"
+:0: "2019-12-05 16:00:41:552" "8 socket con"
+:0: "2019-12-05 16:49:03:336"   start
+:0: "2019-12-05 16:49:03:760" 1920 1040
+:0: "2019-12-05 16:49:03:811" w.show()
+:0: "2019-12-05 16:49:03:965" startUp
+:0: "2019-12-05 16:49:03:971" "192.168.1.220"
+:0: "2019-12-05 16:49:03:976" "192.168.1.221"
+:0: "2019-12-05 16:49:03:980" "XY_DD_1"
+:0: "2019-12-05 16:49:03:985" "XY-DD-2"
+:0: "2019-12-05 16:49:03:990" "XY-DD-3"
+:0: "2019-12-05 16:49:03:994" "XY-DD-4"
+:0: "2019-12-05 16:49:03:998" "XY-DD-5"
+:0: "2019-12-05 16:49:04:002" "XY-DD-6"
+:0: "2019-12-05 16:49:04:007" "XY-DD-7"
+:0: "2019-12-05 16:49:04:011" "XY-DD-FGG-9877"
+:0: "2019-12-05 16:49:04:016" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-12-05 16:49:04:020" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-05 16:49:04:025" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-05 16:49:04:029" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-12-05 16:49:04:033" ParaInit
+:0: "2019-12-05 16:49:04:059" PlotInit
+:0: "2019-12-05 16:49:04:074" DataInit->QDoubleValidator
+:0: "2019-12-05 16:49:04:080" DataInit
+:0: "2019-12-05 16:49:04:084" SocketInit->connectToHost...
+:0: "2019-12-05 16:49:04:098" SocketInit->connectToHost
+:0: "2019-12-05 16:49:04:103" SocketInit->connectToHost...
+:0: "2019-12-05 16:49:04:108" SocketInit->connectToHost
+:0: "2019-12-05 16:49:04:112" SocketInit
+:0: "2019-12-05 16:49:04:116" plcDataInit
+:0: "2019-12-05 16:49:04:124" "0 socket con"
+:0: "2019-12-05 16:49:04:129" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 16:49:04:355" mainLoop
+:0: "2019-12-05 16:49:04:606" mainLoop
+:0: "2019-12-05 16:49:04:856" mainLoop
+:0: "2019-12-05 16:49:05:106" mainLoop
+:0: "2019-12-05 16:49:05:356" mainLoop
+:0: "2019-12-05 16:49:05:605" mainLoop
+:0: "2019-12-05 16:49:05:855" mainLoop
+:0: "2019-12-05 16:49:06:105" mainLoop
+:0: "2019-12-05 16:49:06:125" "info Socket: 1   Connection refused"
+:0: "2019-12-05 16:49:06:355" mainLoop
+:0: "2019-12-05 16:49:06:606" mainLoop
+:0: "2019-12-05 16:49:06:856" mainLoop
+:0: "2019-12-05 16:49:07:106" mainLoop
+:0: "2019-12-05 16:49:07:355" mainLoop
+:0: "2019-12-05 16:49:07:605" mainLoop
+:0: "2019-12-05 16:49:07:858" mainLoop
+:0: "2019-12-05 16:49:08:132" mainLoop
+:0: "2019-12-05 16:49:08:357" mainLoop
+:0: "2019-12-05 16:49:08:605" mainLoop
+:0: "2019-12-05 16:49:08:855" mainLoop
+:0: "2019-12-05 16:49:09:106" mainLoop
+:0: "2019-12-05 16:49:09:355" mainLoop
+:0: "2019-12-05 16:49:09:605" mainLoop
+:0: "2019-12-05 16:49:09:856" mainLoop
+:0: "2019-12-05 16:49:10:106" mainLoop
+:0: "2019-12-05 16:49:10:111" "0"  socket con retry
+:0: "2019-12-05 16:49:10:116" "1"  socket con retry
+:0: "2019-12-05 16:49:10:120" "0 socket con"
+:0: "2019-12-05 16:49:10:125" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 16:49:10:355" mainLoop
+:0: "2019-12-05 16:49:10:606" mainLoop
+:0: "2019-12-05 16:49:10:857" mainLoop
+:0: "2019-12-05 16:49:11:105" mainLoop
+:0: "2019-12-05 16:49:11:358" mainLoop
+:0: "2019-12-05 16:49:11:605" mainLoop
+:0: "2019-12-05 16:49:11:856" mainLoop
+:0: "2019-12-05 16:49:12:106" mainLoop
+:0: "2019-12-05 16:49:12:123" "info Socket: 1   Connection refused"
+:0: "2019-12-05 16:49:12:355" mainLoop
+:0: "2019-12-05 16:49:12:606" mainLoop
+:0: "2019-12-05 16:49:12:855" mainLoop
+:0: "2019-12-05 16:49:13:105" mainLoop
+:0: "2019-12-05 16:49:13:355" mainLoop
+:0: "2019-12-05 16:49:13:604" mainLoop
+:0: "2019-12-05 16:49:13:855" mainLoop
+:0: "2019-12-05 16:49:14:105" mainLoop
+:0: "2019-12-05 16:49:14:355" mainLoop
+:0: "2019-12-05 16:49:14:605" mainLoop
+:0: "2019-12-05 16:49:14:855" mainLoop
+:0: "2019-12-05 16:49:15:105" mainLoop
+:0: "2019-12-05 16:49:15:356" mainLoop
+:0: "2019-12-05 16:49:15:605" mainLoop
+:0: "2019-12-05 16:49:15:855" mainLoop
+:0: "2019-12-05 16:49:16:105" mainLoop
+:0: "2019-12-05 16:49:16:111" "0"  socket con retry
+:0: "2019-12-05 16:49:16:116" "1"  socket con retry
+:0: "2019-12-05 16:49:16:121" "0 socket con"
+:0: "2019-12-05 16:49:16:126" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 16:49:16:356" mainLoop
+:0: "2019-12-05 16:49:16:606" mainLoop
+:0: "2019-12-05 16:49:16:855" mainLoop
+:0: "2019-12-05 16:49:17:106" mainLoop
+:0: "2019-12-05 16:49:17:355" mainLoop
+:0: "2019-12-05 16:49:17:605" mainLoop
+:0: "2019-12-05 16:49:17:855" mainLoop
+:0: "2019-12-05 16:49:18:105" mainLoop
+:0: "2019-12-05 16:49:18:122" "info Socket: 1   Connection refused"
+:0: "2019-12-05 16:49:18:355" mainLoop
+:0: "2019-12-05 16:49:18:605" mainLoop
+:0: "2019-12-05 16:49:18:855" mainLoop
+:0: "2019-12-05 16:49:19:106" mainLoop
+:0: "2019-12-05 16:49:19:355" mainLoop
+:0: "2019-12-05 16:49:19:605" mainLoop
+:0: "2019-12-05 16:49:19:855" mainLoop
+:0: "2019-12-05 16:49:20:105" mainLoop
+:0: "2019-12-05 16:49:20:355" mainLoop
+:0: "2019-12-05 16:49:20:605" mainLoop
+:0: "2019-12-05 16:49:20:856" mainLoop
+:0: "2019-12-05 16:49:21:104" mainLoop
+:0: "2019-12-05 16:49:21:355" mainLoop
+:0: "2019-12-05 16:49:21:605" mainLoop
+:0: "2019-12-05 16:49:21:854" mainLoop
+:0: "2019-12-05 16:49:22:105" mainLoop
+:0: "2019-12-05 16:49:22:110" "0"  socket con retry
+:0: "2019-12-05 16:49:22:115" "1"  socket con retry
+:0: "2019-12-05 16:49:22:119" "0 socket con"
+:0: "2019-12-05 16:49:22:124" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 16:49:22:355" mainLoop
+:0: "2019-12-05 16:49:22:605" mainLoop
+:0: "2019-12-05 16:49:22:855" mainLoop
+:0: "2019-12-05 16:49:23:105" mainLoop
+:0: "2019-12-05 16:49:23:354" mainLoop
+:0: "2019-12-05 16:49:23:605" mainLoop
+:0: "2019-12-05 16:49:23:855" mainLoop
+:0: "2019-12-05 16:49:24:105" mainLoop
+:0: "2019-12-05 16:49:24:137" "info Socket: 1   Connection refused"
+:0: "2019-12-05 16:49:24:355" mainLoop
+:0: "2019-12-05 16:49:24:606" mainLoop
+:0: "2019-12-05 16:49:24:854" mainLoop
+:0: "2019-12-05 16:49:25:106" mainLoop
+:0: "2019-12-05 16:49:25:355" mainLoop
+:0: "2019-12-05 16:49:25:608" mainLoop
+:0: "2019-12-05 16:49:25:856" mainLoop
+:0: "2019-12-05 16:49:26:107" mainLoop
+:0: "2019-12-05 16:49:26:356" mainLoop
+:0: "2019-12-05 16:49:26:608" mainLoop
+:0: "2019-12-05 16:49:26:856" mainLoop
+:0: "2019-12-05 16:49:27:105" mainLoop
+:0: "2019-12-05 16:49:27:357" mainLoop
+:0: "2019-12-05 16:49:27:605" mainLoop
+:0: "2019-12-05 16:49:27:855" mainLoop
+:0: "2019-12-05 16:49:28:106" mainLoop
+:0: "2019-12-05 16:49:28:110" "0"  socket con retry
+:0: "2019-12-05 16:49:28:115" "1"  socket con retry
+:0: "2019-12-05 16:49:28:119" "0 socket con"
+:0: "2019-12-05 16:49:28:124" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 16:49:28:356" mainLoop
+:0: "2019-12-05 16:49:28:605" mainLoop
+:0: "2019-12-05 16:49:28:855" mainLoop
+:0: "2019-12-05 16:49:29:106" mainLoop
+:0: "2019-12-05 16:49:29:357" mainLoop
+:0: "2019-12-05 16:49:29:605" mainLoop
+:0: "2019-12-05 16:49:29:857" mainLoop
+:0: "2019-12-05 16:49:30:106" mainLoop
+:0: "2019-12-05 16:49:30:121" "info Socket: 1   Connection refused"
+:0: "2019-12-05 16:49:30:356" mainLoop
+:0: "2019-12-05 16:49:30:606" mainLoop
+:0: "2019-12-05 16:49:30:858" mainLoop
+:0: "2019-12-05 16:49:31:106" mainLoop
+:0: "2019-12-05 16:49:31:356" mainLoop
+:0: "2019-12-05 16:49:31:605" mainLoop
+:0: "2019-12-05 16:49:31:857" mainLoop
+:0: "2019-12-05 16:49:32:105" mainLoop
+:0: "2019-12-05 16:49:32:355" mainLoop
+:0: "2019-12-05 16:49:32:605" mainLoop
+:0: "2019-12-05 16:49:32:855" mainLoop
+:0: "2019-12-05 16:49:33:106" mainLoop
+:0: "2019-12-05 16:49:33:356" mainLoop
+:0: "2019-12-05 16:49:33:608" mainLoop
+:0: "2019-12-05 16:49:33:857" mainLoop
+:0: "2019-12-05 16:49:34:105" mainLoop
+:0: "2019-12-05 16:49:34:110" "0"  socket con retry
+:0: "2019-12-05 16:49:34:115" "1"  socket con retry
+:0: "2019-12-05 16:49:34:119" "0 socket con"
+:0: "2019-12-05 16:49:34:123" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 16:49:34:357" mainLoop
+:0: "2019-12-05 16:49:34:605" mainLoop
+:0: "2019-12-05 16:49:34:858" mainLoop
+:0: "2019-12-05 16:49:35:107" mainLoop
+:0: "2019-12-05 16:49:35:357" mainLoop
+:0: "2019-12-05 16:49:35:605" mainLoop
+:0: "2019-12-05 16:49:35:857" mainLoop
+:0: "2019-12-05 16:49:36:106" mainLoop
+:0: "2019-12-05 16:49:36:121" "info Socket: 1   Connection refused"
+:0: "2019-12-05 16:49:36:357" mainLoop
+:0: "2019-12-05 16:49:36:607" mainLoop
+:0: "2019-12-05 16:49:36:856" mainLoop
+:0: "2019-12-05 16:49:37:107" mainLoop
+:0: "2019-12-05 16:49:37:357" mainLoop
+:0: "2019-12-05 16:49:37:607" mainLoop
+:0: "2019-12-05 16:49:37:855" mainLoop
+:0: "2019-12-05 16:49:38:105" mainLoop
+:0: "2019-12-05 16:49:38:355" mainLoop
+:0: "2019-12-05 16:49:38:608" mainLoop
+:0: "2019-12-05 16:49:38:856" mainLoop
+:0: "2019-12-05 16:49:39:106" mainLoop
+:0: "2019-12-05 16:49:39:356" mainLoop
+:0: "2019-12-05 16:49:39:605" mainLoop
+:0: "2019-12-05 16:49:39:856" mainLoop
+:0: "2019-12-05 16:49:40:105" mainLoop
+:0: "2019-12-05 16:49:40:110" "0"  socket con retry
+:0: "2019-12-05 16:49:40:115" "1"  socket con retry
+:0: "2019-12-05 16:49:40:119" "0 socket con"
+:0: "2019-12-05 16:49:40:124" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-05 16:49:40:357" mainLoop
+:0: "2019-12-05 16:49:40:608" mainLoop
+:0: "2019-12-05 16:49:40:855" mainLoop
+:0: "2019-12-05 16:49:41:106" mainLoop
+:0: "2019-12-05 16:49:41:356" mainLoop
+:0: "2019-12-05 16:49:41:605" mainLoop
+:0: "2019-12-05 16:49:41:856" mainLoop
+:0: "2019-12-05 16:49:42:104" mainLoop
+:0: "2019-12-05 16:49:42:120" "info Socket: 1   Connection refused"
+:0: "2019-12-05 16:49:42:358" mainLoop
+:0: "2019-12-05 16:49:42:605" mainLoop
+:0: "2019-12-05 16:49:42:855" mainLoop
+:0: "2019-12-05 16:49:43:107" mainLoop
+:0: "2019-12-05 16:49:43:356" mainLoop
+:0: "2019-12-05 16:49:43:607" mainLoop
+:0: "2019-12-05 16:49:43:855" mainLoop
+:0: "2019-12-05 16:49:44:108" mainLoop
+:0: "2019-12-05 17:09:44:231"   start
+:0: "2019-12-05 17:09:44:651" 1920 1040
+:0: "2019-12-05 17:09:44:767" w.show()
+:0: "2019-12-05 17:09:44:855" startUp
+:0: "2019-12-05 17:09:44:860" "192.168.1.220"
+:0: "2019-12-05 17:09:44:864" "192.168.1.221"
+:0: "2019-12-05 17:09:44:868" "XY_DD_1"
+:0: "2019-12-05 17:09:44:873" "XY-DD-2"
+:0: "2019-12-05 17:09:44:876" "XY-DD-3"
+:0: "2019-12-05 17:09:44:881" "XY-DD-4"
+:0: "2019-12-05 17:09:44:885" "XY-DD-5"
+:0: "2019-12-05 17:09:44:889" "XY-DD-6"
+:0: "2019-12-05 17:09:44:893" "XY-DD-7"
+:0: "2019-12-05 17:09:44:897" "XY-DD-FGG-9877"
+:0: "2019-12-05 17:09:44:901" "XY-DD-FGG-9877-tttttttttt"
+:0: "2019-12-05 17:09:44:905" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-05 17:09:44:910" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-05 17:09:44:914" "XY-DD-FGG-9877-tttttttttt66666"
+:0: "2019-12-05 17:09:44:918" ParaInit
+:0: "2019-12-05 17:09:44:943" PlotInit
+:0: "2019-12-05 17:09:44:949" DataInit
+:0: "2019-12-05 17:09:44:954" plcDataInit
+:0: "2019-12-05 17:09:45:199" mainLoop
+:0: "2019-12-05 17:09:45:449" SocketInit...
+:0: "2019-12-05 17:09:45:454" SocketInit->connectToHost...
+:0: "2019-12-05 17:09:45:468" SocketInit->connectToHost
+:0: "2019-12-05 17:09:45:473" SocketInit->connectToHost...
+:0: "2019-12-05 17:09:45:477" SocketInit->connectToHost
+:0: "2019-12-05 17:09:45:481" SocketInit
+:0: "2019-12-05 17:09:45:486" "1 socket con"
+:0: "2019-12-05 17:09:45:490" "2"  socket con retry
+:0: "2019-12-05 17:09:45:495" "3"  socket con retry
+:0: "2019-12-05 17:09:45:499" "4"  socket con retry
+:0: "2019-12-05 17:09:45:504" "5"  socket con retry
+:0: "2019-12-05 17:09:45:511" "6"  socket con retry
+:0: "2019-12-05 17:09:45:516" "7"  socket con retry
+:0: "2019-12-05 17:09:45:520" "8"  socket con retry
+:0: "2019-12-05 17:09:45:525" "9"  socket con retry
+:0: "2019-12-05 17:09:45:530" "10"  socket con retry
+:0: "2019-12-05 17:09:45:534" "11"  socket con retry
+:0: "2019-12-05 17:09:45:538" "12"  socket con retry
+:0: "2019-12-05 17:09:45:543" "13"  socket con retry
+:0: "2019-12-05 17:09:45:547" "14"  socket con retry
+:0: "2019-12-05 17:09:45:552" "15"  socket con retry
+:0: "2019-12-05 17:09:45:556" "16"  socket con retry
+:0: "2019-12-05 17:09:45:561" "0 socket con"
+:0: "2019-12-05 17:09:45:566" "8 socket con"
+:0: "2019-12-05 17:09:45:570" "4 socket con"
+:0: "2019-12-05 17:09:45:575" "15 socket con"
+:0: "2019-12-05 17:09:45:579" "11 socket con"
+:0: "2019-12-05 17:09:45:583" "7 socket con"
+:0: "2019-12-05 17:09:45:587" "14 socket con"
+:0: "2019-12-05 17:09:45:591" "10 socket con"
+:0: "2019-12-05 17:09:45:595" "6 socket con"
+:0: "2019-12-05 17:09:45:599" "2 socket con"
+:0: "2019-12-05 17:09:45:603" "13 socket con"
+:0: "2019-12-05 17:09:45:607" "9 socket con"
+:0: "2019-12-05 17:09:45:611" "5 socket con"
+:0: "2019-12-05 17:09:45:616" "3 socket con"
+:0: "2019-12-05 17:09:45:619" "16 socket con"
+:0: "2019-12-05 17:09:45:623" "12 socket con"
+:0: "2019-12-05 17:09:45:627" mainLoop
+:0: "2019-12-05 17:09:45:702" mainLoop
+:0: "2019-12-05 17:09:45:949" mainLoop
+:0: "2019-12-05 17:09:46:199" mainLoop
+:0: "2019-12-05 17:09:46:453" mainLoop
+:0: "2019-12-05 17:09:46:701" mainLoop
+:0: "2019-12-05 17:09:46:948" mainLoop
+:0: "2019-12-05 17:09:47:199" mainLoop
+:0: "2019-12-05 17:09:47:453" mainLoop
+:0: "2019-12-05 17:09:47:699" mainLoop
+:0: "2019-12-05 17:09:47:953" mainLoop
+:0: "2019-12-05 17:09:48:202" mainLoop
+:0: "2019-12-05 17:09:48:449" mainLoop
+:0: "2019-12-05 17:09:48:700" mainLoop
+:0: "2019-12-05 17:09:48:949" mainLoop
+:0: "2019-12-05 17:09:49:205" mainLoop

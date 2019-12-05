@@ -328,3 +328,61 @@ void FSC_MainWindow::on_tbnPump2ReverseOff_clicked()
     ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 }
 
+void FSC_MainWindow::reqSetPLC(double flowRate, int PWM, int devOn, int devOff)
+{
+    float f = QString::number(flowRate, 'f', 0).toFloat();
+    QByteArray* baSnd= &sktBufSend[SOCKET_PLC_INDEX];
+
+    sktBufSend[SOCKET_PLC_INDEX].resize(1 + sizeof(float) + 3 *  sizeof(uint16_t));
+
+    sktBufSend[SOCKET_PLC_INDEX][0]=0x01;
+    memcpy(&(baSnd->data()[1]), &f, sizeof(float));
+    memcpy(&(baSnd->data()[1 + sizeof(float)]), &PWM, sizeof(uint16_t));
+    memcpy(&(baSnd->data()[1 + sizeof(float) + sizeof(uint16_t)]), &devOn, sizeof(uint16_t));
+    memcpy(&(baSnd->data()[1 + sizeof(float) + 2 * sizeof(uint16_t)]), &devOff, sizeof(uint16_t));
+
+    flushSendBuf();
+}
+
+bool FSC_MainWindow::parsePLC(int indexSkt)
+{
+    QByteArray ba;
+    float f;
+
+    if (indexSkt != 0 )
+    {
+        return false;
+    }
+
+    revdSketPLC = true;
+
+    if (sktBufRev[0].size() < 4)
+    {
+        return false;
+    }
+
+    showSTDFMSum = 0;
+    //showSTDFMFlow = 0;
+
+    ba.resize(4);
+    ba[0] = sktBufRev[0][0];
+    ba[1] = sktBufRev[0][1];
+    ba[2] = sktBufRev[0][2];
+    ba[3] = sktBufRev[0][3];
+    memcpy(&f, ba.data(), 4);
+    showSTDFMSum = static_cast<double>(f);
+
+//    ba[0] = sktBufRev[0][4];
+//    ba[1] = sktBufRev[0][5];
+//    ba[2] = sktBufRev[0][6];
+//    ba[3] = sktBufRev[0][7];
+//    memcpy(&f, ba.data(), 4);
+//    showSTDFMFlow = static_cast<double>(f);
+
+    showSTDFMFlow = sktBufRev[0][4];
+
+    sktBufRev[0].resize(0);
+
+    return true;
+
+}

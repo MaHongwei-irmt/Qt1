@@ -77,6 +77,17 @@ class FSC_MainWindow;
 
 #define PRINT_PLC_STATE             QString::number(plcStateWrite, 16) + " " + QString::number(plcStateWrite, 2)
 
+#define MAIN_LOOP_CYCLE             250
+
+#define POLL_SCALE_CYCLE            (MAIN_LOOP_CYCLE * 3)
+
+#define POLL_FM_CYCLE               (MAIN_LOOP_CYCLE * 2)
+
+#define POLL_PLC_CYCLE              (MAIN_LOOP_CYCLE * 2)
+
+
+
+
 class calStep
 {
 
@@ -127,7 +138,8 @@ private slots:
     void skt_read(int i);
 
     void mainLoop();
-
+    void startUp();
+    void startSocket();
 
     void on_lineEdit_setPWM_textChanged(const QString &arg1);
 
@@ -265,6 +277,8 @@ private:
     QSignalMapper * sktReadMapper;
 
     QTimer  *mainLoopTimer = nullptr;
+    QTimer  *startUpTimer = nullptr;
+    QTimer  *startSocketTimer = nullptr;
 
     uint sktConCommandTime[SOCKET_NUMBER];
 

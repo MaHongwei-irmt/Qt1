@@ -8,13 +8,15 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
 
     qInstallMessageHandler(outputMessage);
-    FSCLOG << "\r\nstart";
+    FSCLOG << "  start";
 
     FSC_MainWindow w;
-    w.setWindowFlags(Qt::WindowMinimizeButtonHint|Qt::WindowCloseButtonHint);
-    w.setFixedSize(1625, 880);
+    //w.setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint| Qt::WindowMaximizeButtonHint);
+    w.setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 
     w.show();
+
+    FSCLOG << "w.show()";
 
     return a.exec();
 }

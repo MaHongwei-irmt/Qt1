@@ -5,6 +5,8 @@ INPUT(
 ./debug\dialog_checkdev.o
 ./debug\dialog_sensoraddr.o
 ./debug\fsc_mainwindow_plc.o
+./debug\fsc_mainwindow_scale.o
+./debug\fsc_mainwindow_socket.o
 ./debug\moc_qcustomplot.o
 ./debug\moc_fsc_mainwindow.o
 ./debug\moc_dialog_checkdev.o

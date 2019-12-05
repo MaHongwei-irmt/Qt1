@@ -15,19 +15,14 @@ quint16                 fsc_global::port_number[SOCKET_NUMBER];
 QString                 fsc_global::ip[SOCKET_NUMBER];
 
 FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::FSC_MainWindow),
-    mainLoopTimer(new QTimer(this))
+    mainLoopTimer(new QTimer(this)), startUpTimer(new QTimer(this)), startSocketTimer(new QTimer(this))
 {
     ui->setupUi(this);
 
     uiReInit();
-    ParaInit();
-    PlotInit();
-    DataInit();
-    SocketInit();
-    plcDataInit();
 
-    connect(mainLoopTimer, SIGNAL(timeout()), this, SLOT(mainLoop()));
-    mainLoopTimer->start(100);
+    connect(startUpTimer, SIGNAL(timeout()), this, SLOT(startUp()));
+    startUpTimer->start(200);
 }
 
 FSC_MainWindow::~FSC_MainWindow()
@@ -35,8 +30,71 @@ FSC_MainWindow::~FSC_MainWindow()
     delete ui;
 }
 
+void FSC_MainWindow::startUp()
+{
+    startUpTimer->stop();
+
+    FSCLOG << "startUp";
+
+    ParaInit();
+    FSCLOG << "ParaInit";
+
+    PlotInit();
+    FSCLOG << "PlotInit";
+
+    DataInit();
+    FSCLOG << "DataInit";
+
+    plcDataInit();
+    FSCLOG << "plcDataInit";
+
+    showFresh();
+
+    connect(mainLoopTimer, SIGNAL(timeout()), this, SLOT(mainLoop()));
+    mainLoopTimer->start(MAIN_LOOP_CYCLE);
+
+    //connect(startSocketTimer, SIGNAL(timeout()), this, SLOT(startSocket()));
+    //startSocketTimer->start(MAIN_LOOP_CYCLE * 2);
+}
+
+void FSC_MainWindow::startSocket()
+{
+    startSocketTimer->stop();
+
+    FSCLOG << "SocketInit...";
+
+    SocketInit();
+    FSCLOG << "SocketInit";
+}
+
 void FSC_MainWindow::uiReInit(void)
 {
+    QScreen *screen=QGuiApplication::primaryScreen ();
+    QRect mm=screen->availableGeometry() ;
+    int screen_width = mm.width();
+    int screen_height = mm.height();
+    FSCLOG << screen_width << screen_height;
+
+
+    int fixedWidth = 1625;
+    int fixedHeight = 880;
+
+    int fontSize = 12;
+    int btnW = 120;
+    int btnH = 20;
+
+    this->setFixedSize(fixedWidth, fixedHeight);
+
+    QString qss = tr("QWidget { font-size: %0px; } #btnWbTest{ width: %1px; height: %2px; }").arg(fontSize).arg(btnW).arg(btnH);
+    this->setStyleSheet(qss);
+
+//    QFont Ft("Microsoft YaHei");
+//    Ft.setPointSize(6);
+
+//    ui->label_13->setFont(Ft);
+//    ui->label_29->setFont(Ft);
+//    ui->label_30->setFont(Ft);
+
     int x = 97;
     int y = 153;
 
@@ -116,6 +174,10 @@ void FSC_MainWindow::uiReInit(void)
         buttonDebugMapper->setMapping(buttonDebug[i], i);
     }
     connect(buttonDebugMapper, SIGNAL(mapped(int)), this, SLOT(buttonDebug_clicked(int)));
+
+
+    ui->tbnSysDevCheck->setVisible(false);
+    ui->tbnManualCheckDev->setVisible(false);
 
 }
 
@@ -232,44 +294,6 @@ void FSC_MainWindow::PlotInit(void)
     ui->MyCustomPlot->replot();
 }
 
-
-void FSC_MainWindow::SocketInit(void)
-{
-    sktConMapper = new QSignalMapper();
-    sktDisconMapper = new QSignalMapper();
-    sktErrMapper = new QSignalMapper();
-    sktReadMapper = new QSignalMapper();
-
-    for( int i = 0; i < SOCKET_NUMBER; i++)
-    {
-        fsc_global::sktTcp[i] = new QTcpSocket();
-
-        connect(fsc_global::sktTcp[i], SIGNAL(connected()), sktConMapper, SLOT(map()));
-        sktConMapper->setMapping(fsc_global::sktTcp[i], i);
-
-        connect(fsc_global::sktTcp[i], SIGNAL(disconnected()), sktDisconMapper, SLOT(map()));
-        sktDisconMapper->setMapping(fsc_global::sktTcp[i], i);
-
-        connect(fsc_global::sktTcp[i], SIGNAL(error(QAbstractSocket::SocketError)), sktErrMapper, SLOT(map()));
-        sktErrMapper->setMapping(fsc_global::sktTcp[i], i);
-
-        connect(fsc_global::sktTcp[i], SIGNAL(readyRead()), sktReadMapper, SLOT(map()));
-        sktReadMapper->setMapping(fsc_global::sktTcp[i], i);
-    }
-
-    connect(sktConMapper, SIGNAL(mapped(int)), this, SLOT(skt_connect_suc(int)));
-    connect(sktDisconMapper, SIGNAL(mapped(int)), this, SLOT(skt_connect_dis(int)));
-    connect(sktErrMapper, SIGNAL(mapped(int)), this, SLOT(skt_error(int)));
-    connect(sktReadMapper, SIGNAL(mapped(int)), this, SLOT(skt_read(int)));
-
-    for (int i = 0; i < SOCKET_NUMBER; i++)
-    {
-        sktConed[i] = false;
-        fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
-        sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
-    }
-}
-
 void FSC_MainWindow::DataInit(void)
 {
     showScaleSum = static_cast<double>(nanf(""));
@@ -308,7 +332,6 @@ void FSC_MainWindow::DataInit(void)
     calOn = CAL_STATE_STOP;
 
     ui->textBrow_calInfo->setText(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 程序启动"));
-
     dataInit_calStepInit();
     calStepInfoFresh();
 }
@@ -478,31 +501,71 @@ void FSC_MainWindow::mainLoop()
 
     j++;
 
+    FSCLOG << "mainLoop";
 
-    for (int i = 0; i < SOCKET_NUMBER; i++)
+    if ( j == 1)
     {
-        if (! sktConed[i] &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+        SocketInit();
+    }
+    else
+    {
+
+        for (int i = 0; i <= SOCKET_SCALE_INDEX; i++)
         {
+            if (! sktConed[i] &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+            {
 
-            fsc_global::sktTcp[i]->abort();
+                fsc_global::sktTcp[i]->abort();
 
-            fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
-            sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
+                fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
+                sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
 
 
-            FSCLOG << QString::number(i) << " socket con retry";
+                FSCLOG << QString::number(i) << " socket con retry";
+            }
+
+            if (sktDataState[i] != DATA_WRITE_OK && (sktDataWriteTime[i] + DATA_READ_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+            {
+                sktDataState[i] = DATA_TIMEOUT;
+                //sktDataWriteTime[i] = QDateTime::currentDateTime().toTime_t();
+            }
+
         }
 
-        if (sktDataState[i] != DATA_WRITE_OK && (sktDataWriteTime[i] + DATA_READ_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+        if (sktConed[SOCKET_SCALE_INDEX])
         {
-            sktDataState[i] = DATA_TIMEOUT;
-            //sktDataWriteTime[i] = QDateTime::currentDateTime().toTime_t();
+            for (int i = SOCKET_SCALE_INDEX + 1; i < SOCKET_NUMBER; i++)
+            {
+                if (! sktConed[i] &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+                {
+
+                    fsc_global::sktTcp[i]->abort();
+
+                    fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
+                    sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
+
+
+                    FSCLOG << QString::number(i) << " socket con retry";
+                }
+
+                if (sktDataState[i] != DATA_WRITE_OK && (sktDataWriteTime[i] + DATA_READ_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+                {
+                    sktDataState[i] = DATA_TIMEOUT;
+                    //sktDataWriteTime[i] = QDateTime::currentDateTime().toTime_t();
+                }
+
+            }
+
         }
 
     }
 
+    if ( sktConed[SOCKET_PLC_INDEX] && ( (j % (POLL_PLC_CYCLE / MAIN_LOOP_CYCLE)) == 0) )
+    {
+        reqSetPLC(showSetFlowRate, showSetPWM, 1, 2);
+    }
 
-    if (j % 5 == 0)
+    if ( sktConed[SOCKET_SCALE_INDEX] && ( (j % (POLL_SCALE_CYCLE / MAIN_LOOP_CYCLE)) == 0) )
     {
         if (sktDataState[SOCKET_SCALE_INDEX] == DATA_READ_OK || \
                 (sktDataWriteTime[SOCKET_SCALE_INDEX] + DATA_READ_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
@@ -514,12 +577,7 @@ void FSC_MainWindow::mainLoop()
         }
     }
 
-    if (j % 5 == 1)
-    {
-        reqSetPLC(showSetFlowRate, showSetPWM, 1, 2);
-    }
-
-    if (j % 5 == 2)
+    if ( sktConed[SOCKET_SCALE_INDEX] && ( (j % (POLL_FM_CYCLE / MAIN_LOOP_CYCLE)) == 0) )
     {
         reqFMData(SOCKET_FLOWM1_INDEX);
         reqFMData(SOCKET_FLOWM2_INDEX);
@@ -529,7 +587,7 @@ void FSC_MainWindow::mainLoop()
         reqFMData(SOCKET_FLOWM6_INDEX);
     }
 
-    if (j % 5 == 4)
+    if ( sktConed[SOCKET_SCALE_INDEX] && ( (j % (POLL_FM_CYCLE / MAIN_LOOP_CYCLE)) == 0) )
     {
 //        for (int i = SOCKET_FLOWM1_INDEX; i <= SOCKET_NUMBER; i++)
 //        {
@@ -546,7 +604,7 @@ void FSC_MainWindow::mainLoop()
 
     }
 
-    if (j % 5 == 0)
+    if ( (j % (POLL_FM_CYCLE / MAIN_LOOP_CYCLE)) == 0 )
     {
         plotAddDataAndFresh();
 
@@ -574,7 +632,10 @@ void FSC_MainWindow::mainLoop()
         ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
     }
 
-    showFresh();
+    //if (j % (POLL_SCALE_CYCLE / MAIN_LOOP_CYCLE) == 0)
+    {
+         showFresh();
+    }
 
     switch (calOn)
     {
@@ -930,232 +991,6 @@ void FSC_MainWindow::plotFresh(void)
     //-------------------------------------------------------------------
 }
 
-//ststcon + fun code(read: 0x03) + register address(0x97) + register number(flow sum + systime + up ATOF + down ATOF + DTOF + 1~50 flow rate) +crc
-void FSC_MainWindow::reqFMSumRateMsg(QByteArray *buf, int station)
-{
-    uint16_t crc = 0;
-
-    buf->resize(8);
-
-    (*buf)[0] = static_cast<char>(station);
-    (*buf)[1] = 0x3;
-    (*buf)[2] = 0;
-    (*buf)[3] = static_cast<char>(0x97);
-    (*buf)[4] = 0;
-    (*buf)[5] = (5 + 50) * 2 ;
-
-    crc = Checksum_computeChecksum( buf->data(), buf->size() - 2);
-
-    (*buf)[6]= static_cast<char>(crc) ;
-    (*buf)[7]= static_cast<char>(crc >> 8);
-
-}
-
-
-bool FSC_MainWindow::parsePLC(int indexSkt)
-{
-    QByteArray ba;
-    float f;
-
-    if (indexSkt != 0 )
-    {
-        return false;
-    }
-
-    revdSketPLC = true;
-
-    if (sktBufRev[0].size() < 4)
-    {
-        return false;
-    }
-
-    showSTDFMSum = 0;
-    //showSTDFMFlow = 0;
-
-    ba.resize(4);
-    ba[0] = sktBufRev[0][0];
-    ba[1] = sktBufRev[0][1];
-    ba[2] = sktBufRev[0][2];
-    ba[3] = sktBufRev[0][3];
-    memcpy(&f, ba.data(), 4);
-    showSTDFMSum = static_cast<double>(f);
-
-//    ba[0] = sktBufRev[0][4];
-//    ba[1] = sktBufRev[0][5];
-//    ba[2] = sktBufRev[0][6];
-//    ba[3] = sktBufRev[0][7];
-//    memcpy(&f, ba.data(), 4);
-//    showSTDFMFlow = static_cast<double>(f);
-
-    showSTDFMFlow = sktBufRev[0][4];
-
-    sktBufRev[0].resize(0);
-
-    return true;
-
-}
-
-
-bool FSC_MainWindow::preParseFMMsg(int indexSkt)
-{
-    uint16_t crc = 0;
-    uint16_t crcRev = 0;
-    uint8_t len;
-
-    if (indexSkt < SOCKET_STD_FLOWM_INDEX || (sktBufRev[indexSkt].size() < 5))
-    {
-        return false;
-    }
-
-    if (indexSkt == SOCKET_STD_FLOWM_INDEX)
-    {
-        if (std::isnan(showSTDFMSum))
-        {
-            showSTDFMSum = 0;
-            showSTDFMFlow = 0;
-        }
-
-        if ( (sktBufRev[indexSkt][0] != stationSTDFM )  || (sktBufRev[indexSkt].size() > 255))
-        {
-            sktBufRev[indexSkt].resize(0);
-            return false;
-        }
-    }
-    else
-    {
-        if (std::isnan(showFMSum[indexSkt - SOCKET_FLOWM1_INDEX]))
-        {
-            showFMSum[indexSkt - SOCKET_FLOWM1_INDEX] = 0;
-            showFMFlow[indexSkt - SOCKET_FLOWM1_INDEX] = 0;
-        }
-
-        if ( (sktBufRev[indexSkt][0] != stationFM[indexSkt - SOCKET_FLOWM1_INDEX] )  || (sktBufRev[indexSkt].size() > 255))
-        {
-            sktBufRev[indexSkt].resize(0);
-            return false;
-        }
-    }
-
-    memcpy(&len, &sktBufRev[indexSkt].data()[2], 1);
-    if ( (len + 5) !=  sktBufRev[indexSkt].size() )
-    {
-        if (sktBufRev[indexSkt].size() > (len + 5))
-        {
-            sktBufRev[indexSkt].resize(0);
-        }
-
-        return false;
-    }
-
-    crc = Checksum_computeChecksum( sktBufRev[indexSkt].data(), sktBufRev[indexSkt].size() - 2);
-    memcpy(&crcRev, &(sktBufRev[indexSkt].data())[sktBufRev[indexSkt].size() - 2], 2);
-    if ( crcRev != crc    )
-    {
-        sktBufRev[indexSkt].resize(0);
-        return false;
-    }
-    
-    return true;
-
-}
-
-bool FSC_MainWindow::parseFMSumRateMsg(int indexSkt)
-{
-
-    QByteArray ba;
-    float f;
-    float f1;
-
-    if ( (sktBufRev[indexSkt].size() < 25) )
-    {
-        return false;
-    }
-
-    ba.resize(4);
-
-    ba[0] = sktBufRev[indexSkt][1 + 3];
-    ba[1] = sktBufRev[indexSkt][0 + 3];
-    ba[2] = sktBufRev[indexSkt][3 + 3];
-    ba[3] = sktBufRev[indexSkt][2 + 3];
-
-    memcpy(&f, ba.data(), 4);
-
-    ba[0] = sktBufRev[indexSkt][1 + 16 + 3];
-    ba[1] = sktBufRev[indexSkt][0 + 16 + 3];
-    ba[2] = sktBufRev[indexSkt][3 + 16 + 3];
-    ba[3] = sktBufRev[indexSkt][2 + 16 + 3];
-
-    memcpy(&f1, ba.data(), 4);
-
-
-    sktBufRev[indexSkt].resize(0);
-
-
-    if (indexSkt == SOCKET_STD_FLOWM_INDEX)
-    {
-        showSTDFMSum = static_cast<double>(f);
-        showSTDFMFlow = static_cast<double>(f1);
-    }
-    else
-    {
-         showFMSum[indexSkt - SOCKET_FLOWM1_INDEX] = static_cast<double>(f);
-         showFMFlow[indexSkt - SOCKET_FLOWM1_INDEX] = static_cast<double>(f1);
-
-
-    }
-
-    return true;
-
-}
-
-
-void FSC_MainWindow::reqSetPLC(double flowRate, int PWM, int devOn, int devOff)
-{
-    float f = QString::number(flowRate, 'f', 0).toFloat();
-    QByteArray* baSnd= &sktBufSend[SOCKET_PLC_INDEX];
-
-    sktBufSend[SOCKET_PLC_INDEX].resize(1 + sizeof(float) + 3 *  sizeof(uint16_t));
-
-    sktBufSend[SOCKET_PLC_INDEX][0]=0x01;
-    memcpy(&(baSnd->data()[1]), &f, sizeof(float));
-    memcpy(&(baSnd->data()[1 + sizeof(float)]), &PWM, sizeof(uint16_t));
-    memcpy(&(baSnd->data()[1 + sizeof(float) + sizeof(uint16_t)]), &devOn, sizeof(uint16_t));
-    memcpy(&(baSnd->data()[1 + sizeof(float) + 2 * sizeof(uint16_t)]), &devOff, sizeof(uint16_t));
-
-    flushSendBuf();
-}
-
-
-void FSC_MainWindow::reqScaleShow(void)
-{
-    sktBufSend[SOCKET_SCALE_INDEX].resize(2);
-    sktBufSend[SOCKET_SCALE_INDEX][0]=0x1B;
-    sktBufSend[SOCKET_SCALE_INDEX][1]=0x70;
-
-    flushSendBuf();
-}
-
-void FSC_MainWindow::reqScaleZero(void)
-{
-    sktBufSend[SOCKET_SCALE_INDEX].resize(2);
-    sktBufSend[SOCKET_SCALE_INDEX][0]=0x1B;
-    sktBufSend[SOCKET_SCALE_INDEX][1]=0x74;
-
-    flushSendBuf();
-}
-
-
-void FSC_MainWindow::reqFMData(int indexFM)
-{
-    if (indexFM < SOCKET_STD_FLOWM_INDEX)
-    {
-        return;
-    }
-
-    reqFMSumRateMsg(&sktBufSend[indexFM], FM_STATION_ADDRESS);
-    flushSendBuf();
-}
-
 void FSC_MainWindow::flushSendBuf(void)
 {
     for (int i = 0; i < SOCKET_NUMBER; i++)
@@ -1240,167 +1075,6 @@ void FSC_MainWindow::showFresh(void)
     ui->lineEdit_plotTime->setText(QString::number(plotLoop * 0.5, 'f', 1) + "s");
 
     ui->labelplcState->setText(PRINT_PLC_STATE);
-
-    ui->tbnSysDevCheck->setVisible(false);
-    ui->tbnManualCheckDev->setVisible(false);
-}
-
-void FSC_MainWindow::skt_read(int i)
-{
-    sktBufRev[i].append(fsc_global::sktTcp[i]->readAll());
-
-    if (debugSkt[i])
-    {
-        FSCLOG << "Socket read hex: " + QString::number(i) + " " + QString::number(sktBufRev[i].size()) + " " + ByteArrayToHexString(sktBufRev[i]);
-
-        ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" +\
-                                      QDateTime::currentDateTime().toString("hh:mm:ss:zzz<-") + ByteArrayToHexString(sktBufRev[i]));
-        ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
-    }
-
-    switch (i)
-    {
-    case SOCKET_SCALE_INDEX:
-
-        //FSCLOG << "Socket read string: " + QString::number(i) + " " + QString::number(sktBufRev[i].size()) + " " + sktBufRev[i];
-
-        showScaleFlow = sktBufRev[i].toDouble() - showScaleSum;
-        showScaleSum = sktBufRev[i].toDouble();
-
-        sktBufRev[i].resize(0);
-
-        sktDataState[SOCKET_SCALE_INDEX] = DATA_READ_OK;
-
-        break;
-
-
-    case SOCKET_FLOWM9_INDEX:
-        showFMSum[8] = 0;
-        showFMFlow[8] = 0;
-
-        if (fsc_global::sktTcp[SOCKET_FLOWM9_INDEX])
-        {
-            static double scale_test = 1.1;
-            static int j = 1;
-
-            if (scaleTestZero)
-            {
-                scale_test = 0;
-                j = 0;
-
-                scaleTestZero = 0;
-            }
-
-            scale_test += 0.1 * j++;
-
-            sktBufSend[SOCKET_FLOWM9_INDEX] = QByteArray::number(scale_test, 'f', 2 );
-
-            flushSendBuf();
-        }
-
-        break;
-
-    case SOCKET_FLOWM10_INDEX:
-    case SOCKET_FLOWM11_INDEX:
-
-         QByteArray * baSend = &sktBufSend[i];
-
-        {
-            baSend->resize(3 + 220 +2);
-
-
-            (*baSend)[0] = 4;
-            (*baSend)[1] = 3;
-            (*baSend)[2] = static_cast<char>(220);
-
-            QByteArray ba;
-            static float f = static_cast<float>(111.111);
-
-            ba.resize(4);
-
-
-            for (int i = 0; i < 55; i++)
-            {
-                memcpy(ba.data(), &f, sizeof (f));
-
-                (*baSend)[3 + i * 4] = ba[1];
-                (*baSend)[4 + i * 4] = ba[0];
-                (*baSend)[5 + i * 4] = ba[3];
-                (*baSend)[6 + i * 4] = ba[2];
-
-                f +=  static_cast<float>(0.01);
-
-            }
-
-
-
-            uint16_t crc = 0;
-
-            crc = Checksum_computeChecksum( baSend->data(), 3 + 220);
-
-            (*baSend)[223] = static_cast<char>(crc) ;
-            (*baSend)[224] = static_cast<char>(crc >> 8);
-
-            flushSendBuf();
-
-        }
-
-            break;
-
-
-
-    }
-
-    parsePLC(i);
-    preParseFMMsg(i);
-    parseFMSumRateMsg(i);
-
-}
-
-void FSC_MainWindow::skt_connect_suc(int i)
-{
-    sktConed[i] = true;
-    FSCLOG << QString::number(i) + " socket con";
-}
-
-void FSC_MainWindow::skt_connect_dis(int i)
-{
-    fsc_global::sktTcp[i]->abort();
-
-    sktConed[i] = false;
-    fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
-    sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
-
-    FSCLOG << QString::number(i) << " socket discon - recon";
-
-    switch (i)
-    {
-    case SOCKET_SCALE_INDEX:
-
-        showScaleSum = static_cast<double>(nanf(""));
-        showScaleFlow = static_cast<double>(nanf(""));
-
-        break;
-
-    case SOCKET_STD_FLOWM_INDEX:
-
-        showSTDFMSum = static_cast<double>(nanf(""));
-        showSTDFMFlow = static_cast<double>(nanf(""));
-
-        break;
-    }
-
-    if (i >= SOCKET_FLOWM1_INDEX)
-    {
-        showFMSum[i - SOCKET_FLOWM1_INDEX] = static_cast<double>(nanf(""));
-        showFMFlow[i - SOCKET_FLOWM1_INDEX] = static_cast<double>(nanf(""));
-    }
-}
-
-void FSC_MainWindow::skt_error(int i)
-{
-    FSCLOG << "info Socket: " + QString::number(i) + " " + fsc_global::sktTcp[i]->QAbstractSocket::peerAddress().toString()\
-              + "  " + fsc_global::sktTcp[i]->errorString();
 }
 
 void FSC_MainWindow::on_tbnSysDevCheck_clicked()
@@ -1761,4 +1435,3 @@ void FSC_MainWindow::on_tbnParaErase_clicked()
         }
     }
 }
-
