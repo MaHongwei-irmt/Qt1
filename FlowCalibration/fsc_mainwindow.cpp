@@ -296,6 +296,12 @@ void FSC_MainWindow::PlotInit(void)
 
 void FSC_MainWindow::DataInit(void)
 {
+    for (int i = 0; i < SOCKET_NUMBER; i++)
+    {
+        sktConed[i] = false;
+        sktConCommandTime[i] = 0;
+    }
+
     showScaleSum = static_cast<double>(nanf(""));
     showScaleFlow = static_cast<double>(nanf(""));
     showSTDFMSum = static_cast<double>(nanf(""));
@@ -334,6 +340,7 @@ void FSC_MainWindow::DataInit(void)
     ui->textBrow_calInfo->setText(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 程序启动"));
     dataInit_calStepInit();
     calStepInfoFresh();
+
 }
 
 void FSC_MainWindow::dataInit_calStepInit(void)

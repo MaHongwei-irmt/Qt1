@@ -32,8 +32,6 @@ void FSC_MainWindow::SocketInit(void)
 
     for (int i = 0; i < SOCKET_NUMBER; i++)
     {
-        sktConed[i] = false;
-
         if ( i == SOCKET_PLC_INDEX || i == SOCKET_SCALE_INDEX )
         {
 
@@ -45,11 +43,6 @@ void FSC_MainWindow::SocketInit(void)
 
             sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
         }
-        else
-        {
-            sktConCommandTime[i] = 0;
-        }
-
     }
 }
 

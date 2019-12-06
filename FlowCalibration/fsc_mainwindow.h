@@ -240,6 +240,10 @@ private:
     void plotFresh(void);
 
 
+    void delayMSec(int msec);
+    void printInfo(QString str);
+    void printInfoWithTime(QString str);
+
     void plcDataInit(void);
     void openForwardValveAll(void);
     void openReverseValveAll(void);

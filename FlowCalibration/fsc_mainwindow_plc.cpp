@@ -12,6 +12,28 @@
 #define VALVE_EXCHANGE_DELAY        500
 #define PUMP_START_DELAY            1500
 
+void FSC_MainWindow::delayMSec(int msec)
+{
+    QTime _Timer = QTime::currentTime().addMSecs(msec);
+    while( QTime::currentTime() < _Timer )
+        QCoreApplication::processEvents(QEventLoop::AllEvents, 100);
+}
+
+void FSC_MainWindow::printInfo(QString str)
+{
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + str);
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
+}
+
+void FSC_MainWindow::printInfoWithTime(QString str)
+{
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
+                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: ") + str );
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
+}
+
 void FSC_MainWindow::plcDataInit(void)
 {
     plcStateWrite = 0;
@@ -217,115 +239,134 @@ void FSC_MainWindow::on_tbnVReverseIn2Close_clicked()
 
 void FSC_MainWindow::on_tbnPump1ForwardOn_clicked()
 {
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
+                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 打开正向进水阀"));
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
     openForwardValveAll();
-    Sleep(VALVE_EXCHANGE_DELAY);
+    delayMSec(VALVE_EXCHANGE_DELAY);
+
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "->关闭反向进水阀");
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 
     closeReverseValveAll();
-    Sleep(PUMP_START_DELAY);
+    delayMSec(PUMP_START_DELAY);
+
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "->启动1#泵");
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 
     pump1On();
-
-    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
-                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 正向进水阀打开->反向进水阀关闭->1#泵启动") );
-    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 }
 
 void FSC_MainWindow::on_tbnPump1ReverseOn_clicked()
 {
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
+                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 打开反向进水阀"));
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
     openReverseValveAll();
     reqSetPLC(showSetFlowRate, showSetPWM, 3, 4);
+    delayMSec(VALVE_EXCHANGE_DELAY);
 
-    Sleep(VALVE_EXCHANGE_DELAY);
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "->关闭正向进水阀");
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 
     closeForwardValveAll();
     reqSetPLC(showSetFlowRate, showSetPWM, 5, 6);
+    delayMSec(PUMP_START_DELAY);
 
-    Sleep(PUMP_START_DELAY);
 
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "->启动1#泵");
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
     pump1On();
     reqSetPLC(showSetFlowRate, showSetPWM, 7, 8);
 
-    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
-                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 反向进水阀打开->正向进水阀关闭->1#泵启动") );
-    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 }
 
 void FSC_MainWindow::on_tbnPump1ForwardOff_clicked()
 {
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
+                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 停止1#泵"));
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
     pump1Off();
-    Sleep(PUMP_START_DELAY);
+    delayMSec(PUMP_START_DELAY);
+
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "->关闭正向进水阀");
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 
     closeForwardValveAll();
-    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
-                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 1#泵停止->正向进水阀关闭 ") );
-    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
 }
 
 void FSC_MainWindow::on_tbnPump1ReverseOff_clicked()
 {
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
+                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 停止1#泵"));
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
     pump1Off();
-    Sleep(PUMP_START_DELAY);
+    delayMSec(PUMP_START_DELAY);
+
+    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "->关闭反向进水阀");
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 
     closeReverseValveAll();
 
-    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
-                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 1#泵停止->反向进水阀关闭") );
-    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 }
 
 
 void FSC_MainWindow::on_tbnPump2ForwardOn_clicked()
 {
+
+    printInfoWithTime("打开正向进水阀");
     openForwardValveAll();
-    Sleep(VALVE_EXCHANGE_DELAY);
+    delayMSec(VALVE_EXCHANGE_DELAY);
 
+    printInfo("->关闭反向进水阀");
     closeReverseValveAll();
-    Sleep(PUMP_START_DELAY);
+    delayMSec(PUMP_START_DELAY);
 
+    printInfo("->启动2#泵");
     pump2On();
 
-    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
-                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 正向进水阀打开->反向进水阀关闭->2#泵启动") );
-    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 }
 
 void FSC_MainWindow::on_tbnPump2ReverseOn_clicked()
 {
+    printInfoWithTime("打开反向进水阀");
     openReverseValveAll();
-    Sleep(VALVE_EXCHANGE_DELAY);
+    delayMSec(VALVE_EXCHANGE_DELAY);
 
+    printInfo("->关闭正向进水阀");
     closeForwardValveAll();
-    Sleep(PUMP_START_DELAY);
+    delayMSec(PUMP_START_DELAY);
 
+    printInfo("->启动2#泵");
     pump2On();
 
-    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
-                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 反向进水阀打开->正向进水阀关闭->2#泵启动") );
-    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 }
 
 void FSC_MainWindow::on_tbnPump2ForwardOff_clicked()
 {
+    printInfoWithTime("停止2#泵");
     pump2Off();
-    Sleep(PUMP_START_DELAY);
+    delayMSec(PUMP_START_DELAY);
 
+    printInfo("->关闭正向进水阀");
     closeForwardValveAll();
 
-    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
-                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 2#泵停止->正向进水阀关闭") );
-    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 }
 
 void FSC_MainWindow::on_tbnPump2ReverseOff_clicked()
 {
+    printInfoWithTime("停止2#泵");
     pump2Off();
-    Sleep(PUMP_START_DELAY);
+    delayMSec(PUMP_START_DELAY);
 
+    printInfo("->关闭反向进水阀");
     closeForwardValveAll();
 
-    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" + \
-                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 2#泵停止->反向进水阀关闭") );
-    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 }
 
 void FSC_MainWindow::reqSetPLC(double flowRate, int PWM, int devOn, int devOff)
