@@ -15,7 +15,8 @@ quint16                 fsc_global::port_number[SOCKET_NUMBER];
 QString                 fsc_global::ip[SOCKET_NUMBER];
 
 FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::FSC_MainWindow),
-    mainLoopTimer(new QTimer(this)), startUpTimer(new QTimer(this)), startSocketTimer(new QTimer(this))
+    mainLoopTimer(new QTimer(this)),
+    startUpTimer(new QTimer(this))
 {
     ui->setupUi(this);
 
@@ -34,13 +35,11 @@ void FSC_MainWindow::startUp()
 {
     startUpTimer->stop();
 
-    FSCLOG << "startUp";
+    FSCLOG << "SocketDataInit";
+    SocketDataInit();
 
     ParaInit();
     FSCLOG << "ParaInit";
-
-    PlotInit();
-    FSCLOG << "PlotInit";
 
     DataInit();
     FSCLOG << "DataInit";
@@ -48,23 +47,53 @@ void FSC_MainWindow::startUp()
     plcDataInit();
     FSCLOG << "plcDataInit";
 
+    PlotInit();
+    FSCLOG << "PlotInit";
+
     showFresh();
 
     connect(mainLoopTimer, SIGNAL(timeout()), this, SLOT(mainLoop()));
     mainLoopTimer->start(MAIN_LOOP_CYCLE);
-
-    //connect(startSocketTimer, SIGNAL(timeout()), this, SLOT(startSocket()));
-    //startSocketTimer->start(MAIN_LOOP_CYCLE * 2);
 }
 
-void FSC_MainWindow::startSocket()
+
+void FSC_MainWindow::SocketDataInit(void)
 {
-    startSocketTimer->stop();
 
-    FSCLOG << "SocketInit...";
+    for (int i = 0; i < SOCKET_NUMBER; i++)
+    {
+        sktConed[i] = false;
+        sktConCommandTime[i] = 0;
+    }
 
-    SocketInit();
-    FSCLOG << "SocketInit";
+    sktConMapper = new QSignalMapper();
+    sktDisconMapper = new QSignalMapper();
+    sktErrMapper = new QSignalMapper();
+    sktReadMapper = new QSignalMapper();
+
+    for( int i = 0; i < SOCKET_NUMBER; i++)
+    {
+        fsc_global::sktTcp[i] = new QTcpSocket();
+
+        connect(fsc_global::sktTcp[i], SIGNAL(connected()), sktConMapper, SLOT(map()));
+        sktConMapper->setMapping(fsc_global::sktTcp[i], i);
+
+        connect(fsc_global::sktTcp[i], SIGNAL(disconnected()), sktDisconMapper, SLOT(map()));
+        sktDisconMapper->setMapping(fsc_global::sktTcp[i], i);
+
+        connect(fsc_global::sktTcp[i], SIGNAL(error(QAbstractSocket::SocketError)), sktErrMapper, SLOT(map()));
+        sktErrMapper->setMapping(fsc_global::sktTcp[i], i);
+
+        connect(fsc_global::sktTcp[i], SIGNAL(readyRead()), sktReadMapper, SLOT(map()));
+        sktReadMapper->setMapping(fsc_global::sktTcp[i], i);
+    }
+
+    connect(sktConMapper, SIGNAL(mapped(int)), this, SLOT(skt_connect_suc(int)));
+    connect(sktDisconMapper, SIGNAL(mapped(int)), this, SLOT(skt_connect_dis(int)));
+    connect(sktErrMapper, SIGNAL(mapped(int)), this, SLOT(skt_error(int)));
+    connect(sktReadMapper, SIGNAL(mapped(int)), this, SLOT(skt_read(int)));
+
+
 }
 
 void FSC_MainWindow::uiReInit(void)
@@ -76,14 +105,16 @@ void FSC_MainWindow::uiReInit(void)
     FSCLOG << screen_width << screen_height;
 
 
-    int fixedWidth = 1625;
-    int fixedHeight = 880;
+    int fixedWidth = 1600;
+    int fixedHeight = 870;
 
     int fontSize = 12;
     int btnW = 120;
     int btnH = 20;
 
     this->setFixedSize(fixedWidth, fixedHeight);
+    //setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint| Qt::WindowMaximizeButtonHint);
+    setWindowFlags( Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint| Qt::WindowMaximizeButtonHint);
 
     QString qss = tr("QWidget { font-size: %0px; } #btnWbTest{ width: %1px; height: %2px; }").arg(fontSize).arg(btnW).arg(btnH);
     this->setStyleSheet(qss);
@@ -95,8 +126,8 @@ void FSC_MainWindow::uiReInit(void)
 //    ui->label_29->setFont(Ft);
 //    ui->label_30->setFont(Ft);
 
-    int x = 97;
-    int y = 153;
+    int x = 85;
+    int y = 143;
 
     for (int i = 0; i < SPAN_NUMBER; i++)
     {
@@ -167,7 +198,7 @@ void FSC_MainWindow::uiReInit(void)
         buttonDebug[i] = new QPushButton(this);
         buttonDebug[i]->setText(QString::number(i));
         buttonDebug[i]->setFixedSize(75,23);
-        buttonDebug[i]->move(1660, 80 + i * 29);
+        buttonDebug[i]->move(1645, 70 + i * 29);
         buttonDebug[i]->show();
 
         connect(buttonDebug[i], SIGNAL(clicked()), buttonDebugMapper, SLOT(map()));
@@ -179,9 +210,11 @@ void FSC_MainWindow::uiReInit(void)
     ui->tbnSysDevCheck->setVisible(false);
     ui->tbnManualCheckDev->setVisible(false);
 
+    ui->tbnPump1ReverseOff->setVisible(false);
+    ui->tbnPump2ReverseOff->setVisible(false);
 }
 
-void FSC_MainWindow::ParaInit(void)
+void FSC_MainWindow::socketParaInit(void)
 {
     QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
 
@@ -202,7 +235,11 @@ void FSC_MainWindow::ParaInit(void)
 
     FSCLOG << fsc_global::ip_PLC;
     FSCLOG << fsc_global::ip_RS_Server;
+}
 
+void FSC_MainWindow::ParaInit(void)
+{
+    QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
 
     int i = 1;
     fsc_para_ini tmp;
@@ -296,12 +333,6 @@ void FSC_MainWindow::PlotInit(void)
 
 void FSC_MainWindow::DataInit(void)
 {
-    for (int i = 0; i < SOCKET_NUMBER; i++)
-    {
-        sktConed[i] = false;
-        sktConCommandTime[i] = 0;
-    }
-
     showScaleSum = static_cast<double>(nanf(""));
     showScaleFlow = static_cast<double>(nanf(""));
     showSTDFMSum = static_cast<double>(nanf(""));
@@ -508,68 +539,11 @@ void FSC_MainWindow::mainLoop()
 
     j++;
 
-    FSCLOG << "mainLoop";
-
-    if ( j == 1)
-    {
-        SocketInit();
-    }
-    else
-    {
-
-        for (int i = 0; i <= SOCKET_SCALE_INDEX; i++)
-        {
-            if (! sktConed[i] &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
-            {
-
-                fsc_global::sktTcp[i]->abort();
-
-                fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
-                sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
-
-
-                FSCLOG << QString::number(i) << " socket con retry";
-            }
-
-            if (sktDataState[i] != DATA_WRITE_OK && (sktDataWriteTime[i] + DATA_READ_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
-            {
-                sktDataState[i] = DATA_TIMEOUT;
-                //sktDataWriteTime[i] = QDateTime::currentDateTime().toTime_t();
-            }
-
-        }
-
-        if (sktConed[SOCKET_SCALE_INDEX])
-        {
-            for (int i = SOCKET_SCALE_INDEX + 1; i < SOCKET_NUMBER; i++)
-            {
-                if (! sktConed[i] &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
-                {
-
-                    fsc_global::sktTcp[i]->abort();
-
-                    fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
-                    sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
-
-
-                    FSCLOG << QString::number(i) << " socket con retry";
-                }
-
-                if (sktDataState[i] != DATA_WRITE_OK && (sktDataWriteTime[i] + DATA_READ_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
-                {
-                    sktDataState[i] = DATA_TIMEOUT;
-                    //sktDataWriteTime[i] = QDateTime::currentDateTime().toTime_t();
-                }
-
-            }
-
-        }
-
-    }
+    socketCommunication();
 
     if ( sktConed[SOCKET_PLC_INDEX] && ( (j % (POLL_PLC_CYCLE / MAIN_LOOP_CYCLE)) == 0) )
     {
-        reqSetPLC(showSetFlowRate, showSetPWM, 1, 2);
+        reqSetPLC();
     }
 
     if ( sktConed[SOCKET_SCALE_INDEX] && ( (j % (POLL_SCALE_CYCLE / MAIN_LOOP_CYCLE)) == 0) )
@@ -637,6 +611,11 @@ void FSC_MainWindow::mainLoop()
 
         ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
         ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
+
+        //setWindowState(Qt::WindowMaximized);
+        //setWindowFlags(Qt::Window);
+        //setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint| Qt::WindowMaximizeButtonHint);
+
     }
 
     //if (j % (POLL_SCALE_CYCLE / MAIN_LOOP_CYCLE) == 0)
@@ -1081,7 +1060,8 @@ void FSC_MainWindow::showFresh(void)
 
     ui->lineEdit_plotTime->setText(QString::number(plotLoop * 0.5, 'f', 1) + "s");
 
-    ui->labelplcState->setText(PRINT_PLC_STATE);
+    showPlcFresh();
+
 }
 
 void FSC_MainWindow::on_tbnSysDevCheck_clicked()

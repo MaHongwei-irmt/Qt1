@@ -1,5 +1,6 @@
 #include "FSC_MainWindow.h"
 #include <QApplication>
+#include "FSC_Thread.h"
 
 void outputMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg);
 
@@ -11,12 +12,22 @@ int main(int argc, char *argv[])
     FSCLOG << "  start";
 
     FSC_MainWindow w;
-    //w.setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint| Qt::WindowMaximizeButtonHint);
-    w.setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
+    w.setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint| Qt::WindowMaximizeButtonHint);
+    //w.setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint);
 
     w.show();
 
     FSCLOG << "w.show()";
+
+    w.socketParaInit();
+
+    //w.delayMSec(2000);
+    FSC_Thread*   socketInitThread;
+
+    socketInitThread = new FSC_Thread(nullptr);
+    QObject::connect(socketInitThread, SIGNAL(signal_startScketInit(int)), &w, SLOT(startSocketConnect(int)));
+
+    socketInitThread->start();
 
     return a.exec();
 }

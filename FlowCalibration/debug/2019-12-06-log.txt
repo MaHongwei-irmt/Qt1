@@ -1,0 +1,781 @@
+main.cpp:12: "2019-12-06 16:19:06:192"   start
+fsc_mainwindow.cpp:115: "2019-12-06 16:19:06:602" 1920 1040
+main.cpp:20: "2019-12-06 16:19:06:723" w.show()
+fsc_mainwindow.cpp:248: "2019-12-06 16:19:06:740" ""
+fsc_mainwindow.cpp:249: "2019-12-06 16:19:06:743" ""
+fsc_mainwindow.cpp:38: "2019-12-06 16:19:06:808" startUp
+fsc_mainwindow.cpp:41: "2019-12-06 16:19:06:812" ParaInit
+fsc_mainwindow.cpp:44: "2019-12-06 16:19:06:830" PlotInit
+fsc_mainwindow.cpp:47: "2019-12-06 16:19:06:834" DataInit
+fsc_mainwindow.cpp:50: "2019-12-06 16:19:06:837" plcDataInit
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:07:092" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:07:095" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:07:349" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:07:353" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:07:599" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:07:603" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:07:840" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:07:843" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:08:094" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:08:098" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:08:341" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:08:344" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:08:590" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:08:593" mainLoop
+fsc_thread.cpp:16: "2019-12-06 16:19:08:746" startScketInit...
+fsc_mainwindow_socket.cpp:50: "2019-12-06 16:19:08:750" SocketInit->connectToHost...1... "" 2100
+fsc_mainwindow_socket.cpp:58: "2019-12-06 16:19:08:763" SocketInit->connectToHost...1 "" 2100
+fsc_mainwindow_socket.cpp:63: "2019-12-06 16:19:08:767" SocketInit->connectToHost...2... "" 4001
+fsc_mainwindow_socket.cpp:11: "2019-12-06 16:19:08:771" socketIninWellDoneTry...1...
+fsc_mainwindow.cpp:557: "2019-12-06 16:19:08:844" SocketInit->connectToHost...
+fsc_mainwindow.cpp:561: "2019-12-06 16:19:08:848" SocketInit->connectToHost
+fsc_mainwindow.cpp:557: "2019-12-06 16:19:08:852" SocketInit->connectToHost...
+fsc_mainwindow.cpp:561: "2019-12-06 16:19:08:855" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:08:859" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:08:863" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:08:867" mainLoop
+fsc_mainwindow_socket.cpp:178: "2019-12-06 16:19:08:871" "info Socket: 0   Host not found"
+fsc_mainwindow_socket.cpp:178: "2019-12-06 16:19:08:874" "info Socket: 1   Host not found"
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:09:093" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:09:097" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:09:100" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:09:343" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:09:348" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:09:351" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:09:598" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:09:604" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:09:608" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:09:845" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:09:849" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:09:852" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:10:089" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:10:094" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:10:098" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:10:348" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:10:353" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:10:357" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:10:591" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:10:596" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:10:599" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:10:839" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:10:844" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:10:847" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:11:091" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:11:095" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:11:099" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:11:350" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:11:354" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:11:359" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:11:595" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:11:599" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:11:603" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:11:844" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:11:849" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:11:853" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:12:092" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:12:097" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:12:101" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:12:342" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:12:347" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:12:350" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:12:598" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:12:607" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:12:611" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:12:849" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:12:862" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:12:866" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:13:091" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:13:099" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:13:103" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:13:341" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:13:344" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:13:348" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:13:591" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:13:596" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:13:600" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:13:848" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:13:853" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:13:857" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:14:090" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:14:095" socketCommunication
+fsc_mainwindow_socket.cpp:314: "2019-12-06 16:19:14:099" "0"  socket con retry
+fsc_mainwindow_socket.cpp:314: "2019-12-06 16:19:14:104" "1"  socket con retry
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:14:109" mainLoop
+fsc_mainwindow_socket.cpp:178: "2019-12-06 16:19:14:113" "info Socket: 0   Host not found"
+fsc_mainwindow_socket.cpp:178: "2019-12-06 16:19:14:117" "info Socket: 1   Host not found"
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:14:341" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:14:346" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:14:350" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:14:598" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:14:604" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:14:609" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:14:848" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:14:853" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:14:859" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:15:090" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:15:095" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:15:099" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:15:340" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:15:349" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:15:353" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:15:589" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:15:594" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:15:598" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:15:839" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:15:844" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:15:848" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:16:098" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:16:104" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:16:110" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:16:340" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:16:344" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:16:348" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:16:597" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:16:604" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:16:608" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:16:845" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:16:849" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:16:853" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:17:095" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:17:112" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:17:116" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:17:346" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:17:351" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:17:355" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:17:592" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:17:597" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:17:602" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:17:847" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:17:852" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:17:857" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:18:093" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:18:099" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:18:103" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:18:347" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:18:352" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:18:358" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:18:595" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:18:600" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:18:604" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:18:842" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:18:847" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:18:852" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:19:090" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:19:095" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:19:099" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:19:345" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:19:364" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:19:379" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:19:598" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:19:604" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:19:610" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:19:842" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:19:852" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:19:856" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:20:093" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:20:098" socketCommunication
+fsc_mainwindow_socket.cpp:314: "2019-12-06 16:19:20:103" "0"  socket con retry
+fsc_mainwindow_socket.cpp:314: "2019-12-06 16:19:20:107" "1"  socket con retry
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:20:112" mainLoop
+fsc_mainwindow_socket.cpp:178: "2019-12-06 16:19:20:116" "info Socket: 0   Host not found"
+fsc_mainwindow_socket.cpp:178: "2019-12-06 16:19:20:121" "info Socket: 1   Host not found"
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:20:344" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:20:349" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:20:353" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:20:594" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:20:600" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:20:607" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:20:843" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:20:848" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:20:853" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:21:094" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:21:099" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:21:104" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:21:346" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:21:350" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:21:355" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:21:591" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:21:596" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:21:600" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:21:844" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:21:849" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:21:853" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:22:095" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:22:100" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:22:104" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:22:340" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:22:345" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:22:349" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:22:599" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:22:616" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:22:626" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:22:844" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:22:849" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:22:854" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:23:091" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:23:096" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:23:100" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:23:341" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:23:350" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:23:355" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:23:590" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:23:595" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:23:600" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:23:845" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:23:850" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:23:854" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:24:092" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:24:097" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:24:102" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:24:339" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:24:345" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:24:350" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:24:591" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:24:596" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:24:601" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:24:843" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:24:848" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:24:853" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:25:098" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:25:117" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:25:127" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:25:345" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:25:350" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:25:355" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:25:595" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:25:600" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:25:604" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:25:844" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:25:850" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:25:855" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:26:099" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:26:104" socketCommunication
+fsc_mainwindow_socket.cpp:314: "2019-12-06 16:19:26:109" "0"  socket con retry
+fsc_mainwindow_socket.cpp:314: "2019-12-06 16:19:26:114" "1"  socket con retry
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:26:118" mainLoop
+fsc_mainwindow_socket.cpp:178: "2019-12-06 16:19:26:123" "info Socket: 0   Host not found"
+fsc_mainwindow_socket.cpp:178: "2019-12-06 16:19:26:127" "info Socket: 1   Host not found"
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:26:343" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:26:349" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:26:353" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:26:596" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:26:601" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:26:605" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:26:841" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:26:853" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:26:857" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:27:097" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:27:101" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:27:106" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:27:341" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:27:346" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:27:351" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:27:594" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:27:599" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:27:604" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:27:844" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:27:849" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:27:854" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:28:091" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:28:095" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:28:100" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:28:341" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:28:346" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:28:350" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:28:598" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:28:606" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:28:612" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:28:844" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:28:850" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:28:854" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:29:092" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:29:097" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:29:101" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:29:340" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:29:346" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:29:350" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:29:599" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:29:605" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:29:610" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:29:842" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:29:847" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:29:851" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:30:093" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:30:103" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:30:108" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:30:341" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:30:346" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:30:351" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:30:591" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:30:596" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:30:601" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:30:843" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:30:848" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:30:853" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:31:093" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:31:098" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:31:103" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:31:340" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:31:346" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:31:351" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:31:593" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:31:598" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:31:603" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:31:841" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:31:846" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:31:851" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:32:090" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:32:109" socketCommunication
+fsc_mainwindow_socket.cpp:314: "2019-12-06 16:19:32:125" "0"  socket con retry
+fsc_mainwindow_socket.cpp:314: "2019-12-06 16:19:32:130" "1"  socket con retry
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:32:135" mainLoop
+fsc_mainwindow_socket.cpp:178: "2019-12-06 16:19:32:140" "info Socket: 0   Host not found"
+fsc_mainwindow_socket.cpp:178: "2019-12-06 16:19:32:144" "info Socket: 1   Host not found"
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:32:342" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:32:351" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:32:355" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:32:592" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:32:597" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:32:601" mainLoop
+main.cpp:12: "2019-12-06 16:19:45:883"   start
+fsc_mainwindow.cpp:115: "2019-12-06 16:19:46:278" 1920 1040
+main.cpp:20: "2019-12-06 16:19:46:401" w.show()
+fsc_mainwindow.cpp:248: "2019-12-06 16:19:46:411" "192.168.1.220"
+fsc_mainwindow.cpp:249: "2019-12-06 16:19:46:416" "192.168.1.221"
+fsc_mainwindow.cpp:265: "2019-12-06 16:19:46:422" "XY_DD_1"
+fsc_mainwindow.cpp:265: "2019-12-06 16:19:46:428" "XY-DD-2"
+fsc_mainwindow.cpp:265: "2019-12-06 16:19:46:433" "XY-DD-3"
+fsc_mainwindow.cpp:265: "2019-12-06 16:19:46:438" "XY-DD-4"
+fsc_mainwindow.cpp:265: "2019-12-06 16:19:46:443" "XY-DD-5"
+fsc_mainwindow.cpp:265: "2019-12-06 16:19:46:448" "XY-DD-7"
+fsc_mainwindow.cpp:265: "2019-12-06 16:19:46:453" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:265: "2019-12-06 16:19:46:458" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:265: "2019-12-06 16:19:46:463" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:265: "2019-12-06 16:19:46:468" "8"
+fsc_mainwindow.cpp:38: "2019-12-06 16:19:46:522" startUp
+fsc_mainwindow.cpp:41: "2019-12-06 16:19:46:527" ParaInit
+fsc_mainwindow.cpp:44: "2019-12-06 16:19:46:548" PlotInit
+fsc_mainwindow.cpp:47: "2019-12-06 16:19:46:554" DataInit
+fsc_mainwindow.cpp:50: "2019-12-06 16:19:46:559" plcDataInit
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:46:810" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:46:815" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:47:060" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:47:065" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:47:309" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:47:314" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:47:562" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:47:567" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:47:809" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:47:814" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:48:062" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:48:066" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:48:309" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:48:314" mainLoop
+fsc_thread.cpp:16: "2019-12-06 16:19:48:473" startScketInit...
+fsc_mainwindow_socket.cpp:50: "2019-12-06 16:19:48:478" SocketInit->connectToHost...1... "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:58: "2019-12-06 16:19:48:504" SocketInit->connectToHost...1 "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:63: "2019-12-06 16:19:48:509" SocketInit->connectToHost...2... "192.168.1.221" 4001
+socket\qabstractsocket.cpp:1663: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+fsc_mainwindow_socket.cpp:11: "2019-12-06 16:19:48:519" socketIninWellDoneTry...1...
+fsc_mainwindow.cpp:557: "2019-12-06 16:19:48:559" SocketInit->connectToHost...
+fsc_mainwindow.cpp:561: "2019-12-06 16:19:48:565" SocketInit->connectToHost
+fsc_mainwindow.cpp:557: "2019-12-06 16:19:48:570" SocketInit->connectToHost...
+fsc_mainwindow.cpp:561: "2019-12-06 16:19:48:575" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:48:580" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:48:585" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:48:590" mainLoop
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:602" "0 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:607" "1 socket con"
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:613" "2"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:618" "3"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:624" "4"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:629" "5"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:635" "6"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:640" "7"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:652" "8"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:658" "9"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:663" "10"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:669" "11"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:674" "12"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:680" "13"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:692" "14"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:699" "15"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:19:48:714" "16"  socket con retry
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:720" "8 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:725" "9 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:730" "4 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:735" "14 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:740" "10 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:744" "5 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:749" "11 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:754" "15 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:759" "6 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:764" "3 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:769" "2 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:774" "16 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:780" "12 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:785" "7 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:19:48:790" "13 socket con"
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:48:811" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:48:828" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:48:842" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:49:058" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:49:063" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:49:068" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:49:309" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:49:315" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:49:320" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:49:562" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:49:567" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:49:572" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:49:810" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:49:815" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:49:820" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:50:060" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:50:067" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:50:071" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:50:309" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:50:314" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:50:319" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:50:559" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:50:569" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:50:574" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:50:811" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:50:816" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:50:821" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:51:058" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:51:064" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:51:069" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:51:311" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:51:316" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:51:322" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:51:561" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:51:567" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:51:572" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:51:811" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:51:816" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:51:821" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:52:061" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:52:066" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:52:071" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:52:311" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:52:316" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:52:321" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:52:560" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:52:565" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:52:570" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:19:52:810" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:19:52:816" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:19:52:821" mainLoop
+main.cpp:12: "2019-12-06 16:25:47:143"   start
+fsc_mainwindow.cpp:115: "2019-12-06 16:25:47:576" 1920 1040
+main.cpp:20: "2019-12-06 16:25:47:702" w.show()
+fsc_mainwindow.cpp:248: "2019-12-06 16:25:47:708" "192.168.1.220"
+fsc_mainwindow.cpp:249: "2019-12-06 16:25:47:713" "192.168.1.221"
+fsc_mainwindow.cpp:265: "2019-12-06 16:25:47:719" "XY_DD_1"
+fsc_mainwindow.cpp:265: "2019-12-06 16:25:47:725" "XY-DD-2"
+fsc_mainwindow.cpp:265: "2019-12-06 16:25:47:730" "XY-DD-3"
+fsc_mainwindow.cpp:265: "2019-12-06 16:25:47:736" "XY-DD-4"
+fsc_mainwindow.cpp:265: "2019-12-06 16:25:47:741" "XY-DD-5"
+fsc_mainwindow.cpp:265: "2019-12-06 16:25:47:747" "XY-DD-7"
+fsc_mainwindow.cpp:265: "2019-12-06 16:25:47:751" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:265: "2019-12-06 16:25:47:757" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:265: "2019-12-06 16:25:47:762" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:265: "2019-12-06 16:25:47:768" "8"
+fsc_mainwindow.cpp:38: "2019-12-06 16:25:47:827" startUp
+fsc_mainwindow.cpp:41: "2019-12-06 16:25:47:832" ParaInit
+fsc_mainwindow.cpp:44: "2019-12-06 16:25:47:853" PlotInit
+fsc_mainwindow.cpp:47: "2019-12-06 16:25:47:860" DataInit
+fsc_mainwindow.cpp:50: "2019-12-06 16:25:47:865" plcDataInit
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:48:121" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:48:126" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:48:371" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:48:376" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:48:620" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:48:626" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:48:871" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:48:877" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:49:121" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:49:127" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:49:370" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:49:376" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:49:624" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:49:629" mainLoop
+fsc_thread.cpp:16: "2019-12-06 16:25:49:773" startScketInit...
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:49:871" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:49:877" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:50:121" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:50:127" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:50:372" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:50:377" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:50:621" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:50:626" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:50:870" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:50:878" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:51:121" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:51:126" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:51:370" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:51:376" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:51:621" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:51:627" mainLoop
+fsc_mainwindow_socket.cpp:50: "2019-12-06 16:25:51:779" SocketInit->connectToHost...1... "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:58: "2019-12-06 16:25:51:806" SocketInit->connectToHost...1 "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:63: "2019-12-06 16:25:51:811" SocketInit->connectToHost...2... "192.168.1.221" 4001
+socket\qabstractsocket.cpp:1663: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+fsc_mainwindow_socket.cpp:11: "2019-12-06 16:25:51:822" socketIninWellDoneTry...1...
+fsc_mainwindow.cpp:557: "2019-12-06 16:25:51:871" SocketInit->connectToHost...
+fsc_mainwindow.cpp:561: "2019-12-06 16:25:51:877" SocketInit->connectToHost
+fsc_mainwindow.cpp:557: "2019-12-06 16:25:51:883" SocketInit->connectToHost...
+fsc_mainwindow.cpp:561: "2019-12-06 16:25:51:889" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:51:895" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:25:51:902" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:51:907" mainLoop
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:51:919" "0 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:51:924" "1 socket con"
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:930" "2"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:935" "3"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:941" "4"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:946" "5"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:952" "6"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:958" "7"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:963" "8"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:969" "9"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:974" "10"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:980" "11"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:985" "12"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:991" "13"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:51:997" "14"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:52:002" "15"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:25:52:008" "16"  socket con retry
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:022" "2 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:027" "14 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:032" "15 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:037" "10 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:043" "7 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:048" "3 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:053" "11 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:059" "8 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:064" "4 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:069" "16 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:074" "12 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:079" "9 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:084" "5 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:090" "13 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:25:52:095" "6 socket con"
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:52:122" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:25:52:140" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:52:153" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:52:372" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:25:52:378" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:52:383" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:52:621" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:25:52:627" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:52:633" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:52:873" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:25:52:880" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:52:886" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:53:122" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:25:53:128" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:53:133" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:53:372" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:25:53:378" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:53:383" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:25:53:622" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:25:53:627" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:25:53:633" mainLoop
+main.cpp:12: "2019-12-06 16:27:45:798"   start
+fsc_mainwindow.cpp:115: "2019-12-06 16:27:46:230" 1920 1040
+main.cpp:20: "2019-12-06 16:27:46:355" w.show()
+fsc_mainwindow.cpp:248: "2019-12-06 16:27:46:362" "192.168.1.220"
+fsc_mainwindow.cpp:249: "2019-12-06 16:27:46:367" "192.168.1.221"
+fsc_mainwindow.cpp:265: "2019-12-06 16:27:46:372" "XY_DD_1"
+fsc_mainwindow.cpp:265: "2019-12-06 16:27:46:379" "XY-DD-2"
+fsc_mainwindow.cpp:265: "2019-12-06 16:27:46:384" "XY-DD-3"
+fsc_mainwindow.cpp:265: "2019-12-06 16:27:46:390" "XY-DD-4"
+fsc_mainwindow.cpp:265: "2019-12-06 16:27:46:395" "XY-DD-5"
+fsc_mainwindow.cpp:265: "2019-12-06 16:27:46:401" "XY-DD-7"
+fsc_mainwindow.cpp:265: "2019-12-06 16:27:46:406" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:265: "2019-12-06 16:27:46:412" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:265: "2019-12-06 16:27:46:417" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:265: "2019-12-06 16:27:46:423" "8"
+fsc_mainwindow.cpp:38: "2019-12-06 16:27:46:487" startUp
+fsc_mainwindow.cpp:41: "2019-12-06 16:27:46:492" ParaInit
+fsc_mainwindow.cpp:44: "2019-12-06 16:27:46:515" PlotInit
+fsc_mainwindow.cpp:47: "2019-12-06 16:27:46:523" DataInit
+fsc_mainwindow.cpp:50: "2019-12-06 16:27:46:528" plcDataInit
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:46:779" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:46:785" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:47:028" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:47:033" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:47:282" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:47:287" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:47:527" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:47:533" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:47:778" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:47:784" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:48:027" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:48:032" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:48:281" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:48:287" mainLoop
+fsc_thread.cpp:16: "2019-12-06 16:27:48:429" startScketInit...
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:48:531" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:48:537" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:48:777" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:48:783" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:49:031" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:49:038" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:49:277" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:49:283" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:49:526" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:49:532" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:49:779" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:49:788" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:50:032" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:50:037" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:50:278" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:50:284" mainLoop
+fsc_mainwindow_socket.cpp:50: "2019-12-06 16:27:50:435" SocketInit->connectToHost...1... "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:58: "2019-12-06 16:27:50:452" SocketInit->connectToHost...1 "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:63: "2019-12-06 16:27:50:457" SocketInit->connectToHost...2... "192.168.1.221" 4001
+socket\qabstractsocket.cpp:1663: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+fsc_mainwindow_socket.cpp:11: "2019-12-06 16:27:50:469" socketIninWellDoneTry...1...
+fsc_mainwindow.cpp:557: "2019-12-06 16:27:50:528" SocketInit->connectToHost...
+fsc_mainwindow.cpp:561: "2019-12-06 16:27:50:535" SocketInit->connectToHost
+fsc_mainwindow.cpp:557: "2019-12-06 16:27:50:542" SocketInit->connectToHost...
+fsc_mainwindow.cpp:561: "2019-12-06 16:27:50:549" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:50:556" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:50:563" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:50:568" mainLoop
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:577" "1 socket con"
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:583" "2"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:589" "3"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:595" "4"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:601" "5"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:607" "6"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:613" "7"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:619" "8"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:625" "9"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:636" "10"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:642" "11"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:652" "12"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:658" "13"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:667" "14"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:673" "15"  socket con retry
+fsc_mainwindow_socket.cpp:120: "2019-12-06 16:27:50:679" "16"  socket con retry
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:685" "0 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:691" "14 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:697" "10 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:702" "6 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:708" "13 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:713" "9 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:719" "5 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:724" "15 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:730" "11 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:735" "8 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:741" "4 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:746" "16 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:752" "2 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:757" "12 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:763" "7 socket con"
+fsc_mainwindow_socket.cpp:102: "2019-12-06 16:27:50:769" "3 socket con"
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:50:778" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:50:784" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:50:789" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:51:029" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:51:035" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:51:041" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:51:278" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:51:297" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:51:302" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:51:530" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:51:536" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:51:542" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:51:783" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:51:789" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:51:795" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:52:032" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:52:040" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:52:047" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:52:278" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:52:284" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:52:290" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:52:533" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:52:543" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:52:549" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:52:782" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:52:788" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:52:794" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:53:029" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:53:036" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:53:043" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:53:278" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:53:284" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:53:290" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:53:529" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:53:535" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:53:541" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:53:780" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:53:787" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:53:793" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:54:032" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:54:038" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:54:044" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:54:282" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:54:289" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:54:294" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:54:533" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:54:555" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:54:567" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:54:779" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:54:786" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:54:793" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:27:55:029" socketCommunication...
+fsc_mainwindow_socket.cpp:301: "2019-12-06 16:27:55:035" socketCommunication
+fsc_mainwindow.cpp:572: "2019-12-06 16:27:55:041" mainLoop
+main.cpp:12: "2019-12-06 16:31:28:588"   start
+fsc_mainwindow.cpp:115: "2019-12-06 16:31:29:024" 1920 1040
+main.cpp:20: "2019-12-06 16:31:29:154" w.show()
+fsc_mainwindow.cpp:248: "2019-12-06 16:31:29:161" "192.168.1.220"
+fsc_mainwindow.cpp:249: "2019-12-06 16:31:29:167" "192.168.1.221"
+fsc_mainwindow.cpp:265: "2019-12-06 16:31:29:173" "XY_DD_1"
+fsc_mainwindow.cpp:265: "2019-12-06 16:31:29:180" "XY-DD-2"
+fsc_mainwindow.cpp:265: "2019-12-06 16:31:29:186" "XY-DD-3"
+fsc_mainwindow.cpp:265: "2019-12-06 16:31:29:193" "XY-DD-4"
+fsc_mainwindow.cpp:265: "2019-12-06 16:31:29:199" "XY-DD-5"
+fsc_mainwindow.cpp:265: "2019-12-06 16:31:29:205" "XY-DD-7"
+fsc_mainwindow.cpp:265: "2019-12-06 16:31:29:211" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:265: "2019-12-06 16:31:29:218" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:265: "2019-12-06 16:31:29:224" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:265: "2019-12-06 16:31:29:230" "8"
+fsc_mainwindow.cpp:38: "2019-12-06 16:31:29:267" startUp
+fsc_mainwindow.cpp:41: "2019-12-06 16:31:29:273" ParaInit
+fsc_mainwindow.cpp:44: "2019-12-06 16:31:29:321" PlotInit
+fsc_mainwindow.cpp:47: "2019-12-06 16:31:29:329" DataInit
+fsc_mainwindow.cpp:50: "2019-12-06 16:31:29:334" plcDataInit
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:29:589" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:29:595" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:29:839" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:29:845" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:30:090" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:30:097" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:30:341" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:30:347" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:30:589" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:30:595" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:30:841" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:30:847" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:31:090" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:31:096" mainLoop
+fsc_thread.cpp:16: "2019-12-06 16:31:31:236" startScketInit...
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:31:340" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:31:346" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:31:590" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:31:596" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:31:841" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:31:847" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:32:091" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:32:102" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:32:341" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:32:346" mainLoop
+fsc_mainwindow_socket.cpp:297: "2019-12-06 16:31:32:624" socketCommunication...
+fsc_mainwindow.cpp:572: "2019-12-06 16:31:32:631" mainLoop

@@ -75,7 +75,8 @@ class FSC_MainWindow;
 
 #define SPAN_NUMBER                 10
 
-#define PRINT_PLC_STATE             QString::number(plcStateWrite, 16) + " " + QString::number(plcStateWrite, 2)
+#define PRINT_PLC_STATE_WRITE       QString::number(plcStateWrite, 16) + " " + QString::number(plcStateWrite, 2)
+#define PRINT_PLC_STATE_READ        QString::number(plcStateRead, 16) + " " + QString::number(plcStateRead, 2)
 
 #define MAIN_LOOP_CYCLE             250
 
@@ -123,6 +124,11 @@ public:
     explicit FSC_MainWindow(QWidget *parent = nullptr);
     ~FSC_MainWindow();
 
+    void socketParaInit(void);
+    void ParaInit(void);
+    void delayMSec(int msec);
+    void SocketConnectTry(void);
+
 private slots:
     void on_tbnSysDevCheck_clicked();
 
@@ -139,7 +145,7 @@ private slots:
 
     void mainLoop();
     void startUp();
-    void startSocket();
+    void startSocketConnect(int i);
 
     void on_lineEdit_setPWM_textChanged(const QString &arg1);
 
@@ -211,18 +217,22 @@ private:
     Ui::FSC_MainWindow *ui;
 
     void uiReInit(void);
-    void ParaInit(void);
+
     void paraWrite(void);
     void PlotInit(void);
-    void SocketInit(void);
     void DataInit(void);
     void dataInit_calStepInit(void);
     void calStepInfoFresh(void);
+
+
+    void SocketDataInit(void);
+    void SocketConnect(void);
 
     int  startCal_dir_type_span(int *dir, int *type, int *spanPercent, double *spanCal);
 
     void PlotReplay(const QString &arg1);
 
+    void socketCommunication(void);
     void reqFMSumRateMsg(QByteArray *buf, int station);
     bool preParseFMMsg(int indexSkt);
     bool parseFMSumRateMsg(int indexSkt);
@@ -231,16 +241,18 @@ private:
     void reqScaleShow(void);
     void reqScaleZero(void);
     void reqFMData(int indexFM);
-    void reqSetPLC(double flowRate, int PWM, int devOn, int devOff);
+    void reqSetPLC(void);
+    void writePLC(void);
 
     void flushSendBuf(void);
     void showFresh(void);
+    void showPlcFresh(void);
 
     void plotAddDataAndFresh(void);
     void plotFresh(void);
 
 
-    void delayMSec(int msec);
+
     void printInfo(QString str);
     void printInfoWithTime(QString str);
 
@@ -263,6 +275,12 @@ private:
     void pump1Off(void);
     void pump2On(void);
     void pump2Off(void);
+    bool statePump1(void);
+    bool statePump2(void);
+    bool stateForwardV1(void);
+    bool stateForwardV2(void);
+    bool stateReverseV1(void);
+    bool stateReverseV2(void);
 
     bool        sktConed[SOCKET_NUMBER];
     QByteArray  sktBufSend[SOCKET_NUMBER];
@@ -282,7 +300,8 @@ private:
 
     QTimer  *mainLoopTimer = nullptr;
     QTimer  *startUpTimer = nullptr;
-    QTimer  *startSocketTimer = nullptr;
+
+    bool    socketWellDone  =   false;
 
     uint sktConCommandTime[SOCKET_NUMBER];
 
@@ -337,8 +356,10 @@ private:
     QLineEdit   *lineEdit_FMFlow[FLOWMETER_NUMBER];
 
 
-    uint8_t    plcStateWrite;   // 泵一 泵二 bit6 放水阀 反向进水阀2 反向进水阀1 正向进水阀2 正向进水阀1 :靠近泵为1#阀
-    uint8_t    plcStateRead;
+    uint16_t    plcStateWrite = 0;   // 泵一 泵二 bit6 放水阀 反向进水阀2 反向进水阀1 正向进水阀2 正向进水阀1 :靠近泵为1#阀
+    uint16_t    plcStateRead = 0;
+    double      plcRevFlowRate;
+    uint16_t    plcRevPWM;
 };
 
 class fsc_para_ini

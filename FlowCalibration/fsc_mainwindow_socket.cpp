@@ -1,41 +1,52 @@
 #include "fsc_mainwindow.h"
 #include "ui_fsc_mainwindow.h"
 
-void FSC_MainWindow::SocketInit(void)
+void FSC_MainWindow::SocketConnectTry(void)
 {
-    sktConMapper = new QSignalMapper();
-    sktDisconMapper = new QSignalMapper();
-    sktErrMapper = new QSignalMapper();
-    sktReadMapper = new QSignalMapper();
 
-    for( int i = 0; i < SOCKET_NUMBER; i++)
+    FSCLOG << "SocketInit->connectToHostTry1..." << fsc_global::ip[0] << fsc_global::port_number[0];
+
+    QTcpSocket socket;
+    socket.connectToHost(QHostAddress(fsc_global::ip[0]), fsc_global::port_number[0]);
+    if (socket.waitForConnected(3000))
     {
-        fsc_global::sktTcp[i] = new QTcpSocket();
+        socket.disconnect();
+        socket.waitForDisconnected(200);
 
-        connect(fsc_global::sktTcp[i], SIGNAL(connected()), sktConMapper, SLOT(map()));
-        sktConMapper->setMapping(fsc_global::sktTcp[i], i);
+    }
+    FSCLOG << "SocketInit->connectToHostTry1" << fsc_global::ip[0] << fsc_global::port_number[0];
 
-        connect(fsc_global::sktTcp[i], SIGNAL(disconnected()), sktDisconMapper, SLOT(map()));
-        sktDisconMapper->setMapping(fsc_global::sktTcp[i], i);
 
-        connect(fsc_global::sktTcp[i], SIGNAL(error(QAbstractSocket::SocketError)), sktErrMapper, SLOT(map()));
-        sktErrMapper->setMapping(fsc_global::sktTcp[i], i);
+    FSCLOG << "SocketInit->connectToHostTry2..." << fsc_global::ip[1] << fsc_global::port_number[1];
 
-        connect(fsc_global::sktTcp[i], SIGNAL(readyRead()), sktReadMapper, SLOT(map()));
-        sktReadMapper->setMapping(fsc_global::sktTcp[i], i);
+    socket.connectToHost(QHostAddress(fsc_global::ip[1]), fsc_global::port_number[1]);
+    if (socket.waitForConnected(3000))
+    {
+        socket.disconnect();
+        socket.waitForDisconnected(300);
     }
 
-    connect(sktConMapper, SIGNAL(mapped(int)), this, SLOT(skt_connect_suc(int)));
-    connect(sktDisconMapper, SIGNAL(mapped(int)), this, SLOT(skt_connect_dis(int)));
-    connect(sktErrMapper, SIGNAL(mapped(int)), this, SLOT(skt_error(int)));
-    connect(sktReadMapper, SIGNAL(mapped(int)), this, SLOT(skt_read(int)));
+    FSCLOG << "SocketInit->connectToHostTry2" << fsc_global::ip[1] << fsc_global::port_number[1];
+
+}
+
+void FSC_MainWindow::startSocketConnect(int i)
+{
+    (void)i;
+
+    SocketConnect();
+    socketWellDone = true;
+}
+
+void FSC_MainWindow::SocketConnect(void)
+{
 
     for (int i = 0; i < SOCKET_NUMBER; i++)
     {
         if ( i == SOCKET_PLC_INDEX || i == SOCKET_SCALE_INDEX )
         {
 
-            FSCLOG << "SocketInit->connectToHost...";
+            FSCLOG << "SocketInit->connectToHost..." << fsc_global::ip[i] << fsc_global::port_number[i];;
 
             fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
 
@@ -44,6 +55,7 @@ void FSC_MainWindow::SocketInit(void)
             sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
         }
     }
+
 }
 
 void FSC_MainWindow::skt_connect_suc(int i)
@@ -240,4 +252,61 @@ void FSC_MainWindow::skt_read(int i)
     preParseFMMsg(i);
     parseFMSumRateMsg(i);
 
+}
+
+void FSC_MainWindow::socketCommunication(void)
+{
+    if (!socketWellDone)
+    {
+        FSCLOG << "wait socket start up ...";
+        return;
+    }
+
+    for (int i = 0; i <= SOCKET_SCALE_INDEX; i++)
+    {
+        if (! sktConed[i] &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+        {
+
+            fsc_global::sktTcp[i]->abort();
+
+            fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
+            sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
+
+
+            FSCLOG << QString::number(i) << " socket con retry";
+        }
+
+        if (sktDataState[i] != DATA_WRITE_OK && (sktDataWriteTime[i] + DATA_READ_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+        {
+            sktDataState[i] = DATA_TIMEOUT;
+            //sktDataWriteTime[i] = QDateTime::currentDateTime().toTime_t();
+        }
+
+    }
+
+    if (sktConed[SOCKET_SCALE_INDEX])
+    {
+        for (int i = SOCKET_SCALE_INDEX + 1; i < SOCKET_NUMBER; i++)
+        {
+            if (! sktConed[i] &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+            {
+
+                fsc_global::sktTcp[i]->abort();
+
+                fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
+                sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
+
+
+                FSCLOG << QString::number(i) << " socket con retry";
+            }
+
+            if (sktDataState[i] != DATA_WRITE_OK && (sktDataWriteTime[i] + DATA_READ_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
+            {
+                sktDataState[i] = DATA_TIMEOUT;
+                //sktDataWriteTime[i] = QDateTime::currentDateTime().toTime_t();
+            }
+
+        }
+
+    }
 }
