@@ -16,7 +16,8 @@ QString                 fsc_global::ip[SOCKET_NUMBER];
 
 FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::FSC_MainWindow),
     mainLoopTimer(new QTimer(this)),
-    startUpTimer(new QTimer(this))
+    startUpTimer(new QTimer(this)),
+    calTimer(new QTimer(this))
 {
     ui->setupUi(this);
 
@@ -52,6 +53,7 @@ void FSC_MainWindow::startUp()
 
     showFresh();
 
+    connect(calTimer, SIGNAL(timeout()), this, SLOT(startCal()));
     connect(mainLoopTimer, SIGNAL(timeout()), this, SLOT(mainLoop()));
     mainLoopTimer->start(MAIN_LOOP_CYCLE);
 }
@@ -623,154 +625,10 @@ void FSC_MainWindow::mainLoop()
          showFresh();
     }
 
-    switch (calOn)
+    if (calOn && !calTimer->isActive())
     {
-    case CAL_START:
-
-        {
-            on_tbnPoltClear_clicked();
-
-            str = ui->textBrow_calInfo->toPlainText();
-            str += "\r\n" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: ");
-            str += "启动标定->";
-            str += "清空曲线图->";
-            str += "关闭所有阀门->";
-            str += "稳定3秒...\r\n";
-
-            ui->textBrow_calInfo->setText(str);
-
-            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
-
-            calOn = CAL_START_BALANCE;
-            calOnTime = QDateTime::currentDateTime().toTime_t();
-        }
-
-        break;
-
-    case CAL_START_BALANCE:
-
-        if(QDateTime::currentDateTime().toTime_t()- calOnTime > 2)
-        {
-
-            on_tbnScaleZero_clicked();
-
-            str = ui->textBrow_calInfo->toPlainText();
-            str += QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: ");
-            str += "天平清零->";
-            str += "稳定3秒...\r\n";
-
-            ui->textBrow_calInfo->setText(str);
-
-
-            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
-
-            calOn = CAL_SCALE_ZERO;
-            calOnTime = QDateTime::currentDateTime().toTime_t();
-        }
-
-        break;
-
-    case CAL_SCALE_ZERO:
-
-        if(QDateTime::currentDateTime().toTime_t()- calOnTime > 2)
-        {
-
-            calOn = CAL_SCALE_ZERO_BALANCE;
-            calOnTime = QDateTime::currentDateTime().toTime_t();
-
-        }
-
-        break;
-
-    case CAL_SCALE_ZERO_BALANCE:
-
-        {
-            startCal_dir_type_span(&currentStep.startDirect, &currentStep.startType, \
-                                   &currentStep.startSpanPercent, &currentStep.startSpan);
-
-            str = ui->textBrow_calInfo->toPlainText();
-            str += QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: ");
-
-            str += QString().sprintf("(%d)->", currentStep.stepCurrent + 1);
-
-            if (currentStep.startDirect == START_CAL_DIRECT_FORWARD)
-            {
-                str += "打开正向进水阀->";
-            }
-            else if (currentStep.startDirect == START_CAL_DIRECT_REVERSE)
-            {
-                str += "打开反向进水阀->";
-            }
-
-            if (currentStep.startType == START_CAL_TYPE_CAL)
-            {
-                str += "标定->";
-            }
-            else if (currentStep.startType == START_CAL_TYPE_CORRECT)
-            {
-                str += "修正->";
-            }
-            else if (currentStep.startType == START_CAL_TYPE_CHECK)
-            {
-                 str += "验证->";
-            }
-
-            str += QString().sprintf("%d", currentStep.startSpanPercent);
-            str += "%量程->";
-            str += QString().sprintf("%0.3fml/min->", currentStep.startSpan);
-
-            ui->textBrow_calInfo->setText(str);
-
-            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
-
-            calOn = CAL_OPEN_VALVE;
-            calOnTime = QDateTime::currentDateTime().toTime_t();
-
-            break;
-
+        calTimer->start(MAIN_LOOP_CYCLE);
     }
-
-    case CAL_OPEN_VALVE:
-
-        if(QDateTime::currentDateTime().toTime_t()- calOnTime > 1)
-        {
-
-            str = ui->textBrow_calInfo->toPlainText();
-            str += "启动水泵->";
-
-            ui->textBrow_calInfo->setText(str);
-
-            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
-
-            calOn = CAL_OPEN_PUMP;
-            calOnTime = QDateTime::currentDateTime().toTime_t();
-
-        }
-
-        break;
-
-
-    case CAL_OPEN_PUMP:
-
-        {
-            str = ui->textBrow_calInfo->toPlainText();
-            str += "开始绘图...\r\n";
-
-            ui->textBrow_calInfo->setText(str);
-
-            ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
-
-            calOn = CAL_PLOT_START;
-            calOnTime = QDateTime::currentDateTime().toTime_t();
-
-            PlotReplay(ui->comboBox_PlotSenSel->currentText());
-
-        }
-
-        break;
-
-    }
-
 }
 
 int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent, double *span)

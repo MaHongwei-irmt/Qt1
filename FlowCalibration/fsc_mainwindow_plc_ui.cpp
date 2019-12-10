@@ -367,27 +367,29 @@ void FSC_MainWindow::on_tbnPump2ReverseOff_clicked()
 void FSC_MainWindow::on_lineEdit_setFlowRate_textChanged(const QString &arg1)
 {
     (void)arg1;
-
     showSetFlowRate = ui->lineEdit_setFlowRate->text().toDouble();
-
     writePLC();
 }
 
 void FSC_MainWindow::on_lineEdit_setPWM_textChanged(const QString &arg1)
 {
     (void)arg1;
-
     showSetPWM = ui->lineEdit_setPWM->text().toInt();
-
     writePLC();
 }
 
 void FSC_MainWindow::on_radioButton_setFlowRate_clicked()
 {
+    flowRateOrPWM = true;
+    ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
+    ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
     writePLC();
 }
 
 void FSC_MainWindow::on_radioButton_setPWM_clicked()
 {
+    flowRateOrPWM = false;
+    ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
+    ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
     writePLC();
 }

@@ -181,13 +181,20 @@ void FSC_MainWindow::reqSetPLC(void)
 
 void FSC_MainWindow::writePLC(void)
 {
-    float f = QString::number(showSetFlowRate, 'f', 0).toFloat();
+    QByteArray ba;
     QByteArray* baSnd= &sktBufSend[SOCKET_PLC_INDEX];
+    float f = QString::number(showSetFlowRate, 'f', 0).toFloat();
 
-    sktBufSend[SOCKET_PLC_INDEX].resize(1 + sizeof(float) + sizeof(uint16_t) * 2);
+    baSnd->resize(1 + sizeof(float) + sizeof(uint16_t) * 2);
 
-    sktBufSend[SOCKET_PLC_INDEX][0]=0x01;
-    memcpy(&(baSnd->data()[1]), &f, sizeof(float));
+    baSnd->data()[0]=0x01;
+
+    ba.resize(sizeof(float));
+    memcpy(ba.data(), &f, sizeof(float));
+    baSnd->data()[1] = ba[3];
+    baSnd->data()[2] = ba[2];
+    baSnd->data()[3] = ba[1];
+    baSnd->data()[4] = ba[0];
 
     if (ui->radioButton_setFlowRate->isChecked())
     {
@@ -197,7 +204,10 @@ void FSC_MainWindow::writePLC(void)
     }
     else
     {
-        memcpy(&(baSnd->data()[1 + sizeof(float)]), &showSetPWM, sizeof(uint16_t));
+        memcpy(ba.data(), &showSetPWM, sizeof(uint16_t));
+        baSnd->data()[5] = ba[1];
+        baSnd->data()[6] = ba[0];
+
     }
 
     memcpy(&(baSnd->data()[1 + sizeof(float) + sizeof(uint16_t)]), &plcStateWrite, sizeof(uint16_t));
@@ -224,15 +234,15 @@ bool FSC_MainWindow::parsePLC(int indexSkt)
     }
 
     ba.resize(sizeof(float));
-    ba[0] = (*rev)[0];
-    ba[1] = (*rev)[1];
-    ba[2] = (*rev)[2];
-    ba[3] = (*rev)[3];
+    ba[0] = (*rev)[3];
+    ba[1] = (*rev)[2];
+    ba[2] = (*rev)[1];
+    ba[3] = (*rev)[0];
     memcpy(&f, ba.data(), sizeof (f));
     plcRevFlowRate = static_cast<double>(f);
 
-    ba[0] = (*rev)[4];
-    ba[1] = (*rev)[5];
+    ba[0] = (*rev)[5];
+    ba[1] = (*rev)[4];
     memcpy(&plcRevPWM, ba.data(), sizeof (uint16_t));
 
     ba[0] = (*rev)[6];
@@ -297,6 +307,12 @@ void FSC_MainWindow::showPlcFresh(void)
     {
         ui->lineEdit_setPWM->setEnabled(false);
     }
+
+    //ui->lineEdit_setPWM->setText(QString::number(showSetPWM));
+    //ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
+
+    ui->radioButton_setFlowRate->setChecked(flowRateOrPWM);
+    ui->radioButton_setPWM->setChecked(!flowRateOrPWM);
 
     if( (statePump1() || statePump2()))
     {

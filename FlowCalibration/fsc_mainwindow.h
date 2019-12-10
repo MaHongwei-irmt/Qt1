@@ -57,6 +57,11 @@ class FSC_MainWindow;
 #define CAL_OPEN_PUMP           6
 #define CAL_PLOT_START          7
 
+#define CAL_START_OUT_VALVE_OPEN                11
+#define CAL_START_FIRST_FORWARD_FILL_WATER      12
+#define CAL_START_FIRST_REVERSE_FILL_WATER      13
+#define CAL_START_FIRST_REVERSE_FILL_WATER_END  14
+
 
 #define PLOT_VALUE_NUMBER   60 * 2 * 2  // 2min / 500ms
 
@@ -119,6 +124,24 @@ public:
 
 };
 
+class autoCal
+{
+public:
+
+    int autoIn = 0;
+
+    int openEmptyValveOut = 0;
+
+    int firstForwardOnOut = 0;
+
+    int firstReverseOnOut = 0;
+
+
+
+
+
+};
+
 class FSC_MainWindow : public QMainWindow
 {
     Q_OBJECT
@@ -146,8 +169,9 @@ private slots:
     void skt_error(int i);
     void skt_read(int i);
 
-    void mainLoop();
     void startUp();
+    void mainLoop();
+    void startCal(void);
     void startSocketConnect(int i);
 
     void on_lineEdit_setPWM_textChanged(const QString &arg1);
@@ -258,8 +282,6 @@ private:
     void plotAddDataAndFresh(void);
     void plotFresh(void);
 
-
-
     void printInfo(QString str);
     void printInfoWithTime(QString str);
 
@@ -307,6 +329,7 @@ private:
 
     QTimer  *mainLoopTimer = nullptr;
     QTimer  *startUpTimer = nullptr;
+    QTimer  *calTimer = nullptr;
 
     bool    socketWellDone  =   false;
 
@@ -324,6 +347,7 @@ private:
 
     double  showSetFlowRate;
     int     showSetPWM;
+    bool    flowRateOrPWM = true;
 
     bool    revdSketPLC;
 

@@ -38,7 +38,8 @@ SOURCES += \
     fsc_mainwindow_scale.cpp \
     fsc_mainwindow_socket.cpp \
     fsc_thread.cpp \
-    fsc_mainwindow_plc_ui.cpp
+    fsc_mainwindow_plc_ui.cpp \
+    fsc_mainwindow_cal.cpp
 
 HEADERS += \
     qcustomplot.h \
