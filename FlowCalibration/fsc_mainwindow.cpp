@@ -973,8 +973,6 @@ void FSC_MainWindow::plotFresh(void)
 
 
     ui->MyCustomPlot->replot();
-
-    //-------------------------------------------------------------------
 }
 
 void FSC_MainWindow::flushSendBuf(void)
@@ -1023,41 +1021,6 @@ void FSC_MainWindow::showFresh(void)
         lineEdit_FMFlow[i]->setText(QString::number(showFMFlow[i], 'f', 3));
     }
 
-    ui->tbnVOutOpen->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnVOutClose->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnVForwardIn1Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnVForwardIn1Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnVForwardIn2Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnVForwardIn2Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnVReverseIn1Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnVReverseIn1Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnVReverseIn2Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnVReverseIn2Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-
-    ui->tbnPump1ForwardOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnPump1ForwardOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnPump1ReverseOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnPump1ReverseOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-
-    ui->tbnPump2ForwardOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnPump2ForwardOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnPump2ReverseOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-    ui->tbnPump2ReverseOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
-
-
-    ui->lineEdit_setFlowRate->setEnabled(revdSketPLC);
-    ui->lineEdit_setPWM->setEnabled(revdSketPLC);
-    ui->radioButton_setFlowRate->setEnabled(revdSketPLC);
-    ui->radioButton_setPWM->setEnabled(revdSketPLC);
-    if (!ui->radioButton_setFlowRate->isChecked())
-    {
-        ui->lineEdit_setFlowRate->setEnabled(false);
-    }
-    if (!ui->radioButton_setPWM->isChecked())
-    {
-        ui->lineEdit_setPWM->setEnabled(false);
-    }
-
     ui->lineEdit_plotTime->setText(QString::number(plotLoop * 0.5, 'f', 1) + "s");
 
     showPlcFresh();
@@ -1102,25 +1065,6 @@ void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
 
     ui->leFMTypeName->setText(fsc_global::para_ini.at(index).type_name);
 }
-
-
-void FSC_MainWindow::on_lineEdit_setFlowRate_textChanged(const QString &arg1)
-{
-    (void)arg1;
-
-    showSetFlowRate = ui->lineEdit_setFlowRate->text().toDouble();
-}
-
-
-
-void FSC_MainWindow::on_lineEdit_setPWM_textChanged(const QString &arg1)
-{
-    (void)arg1;
-
-    showSetPWM = ui->lineEdit_setPWM->text().toInt();
-}
-
-
 
 void FSC_MainWindow::on_tbnScaleZero_clicked()
 {

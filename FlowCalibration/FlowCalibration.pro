@@ -37,14 +37,16 @@ SOURCES += \
     fsc_mainwindow_plc.cpp \
     fsc_mainwindow_scale.cpp \
     fsc_mainwindow_socket.cpp \
-    fsc_thread.cpp
+    fsc_thread.cpp \
+    fsc_mainwindow_plc_ui.cpp
 
 HEADERS += \
     qcustomplot.h \
     fsc_mainwindow.h \
     dialog_checkdev.h \
     dialog_sensoraddr.h \
-    fsc_thread.h
+    fsc_thread.h \
+    fsc_plc.h
 
 FORMS += \
     fsc_mainwindow.ui \

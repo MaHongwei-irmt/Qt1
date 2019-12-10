@@ -87,6 +87,9 @@ class FSC_MainWindow;
 #define POLL_PLC_CYCLE              (MAIN_LOOP_CYCLE * 2)
 
 
+#define VALVE_EXCHANGE_DELAY        1500
+#define PUMP_START_DELAY            2000
+
 
 
 class calStep
@@ -212,6 +215,10 @@ private slots:
     void on_tbnPump2ForwardOff_clicked();
 
     void on_tbnPump2ReverseOff_clicked();
+
+    void on_radioButton_setFlowRate_clicked();
+
+    void on_radioButton_setPWM_clicked();
 
 private:
     Ui::FSC_MainWindow *ui;

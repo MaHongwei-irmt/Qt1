@@ -8,6 +8,7 @@ INPUT(
 ./release\fsc_mainwindow_scale.o
 ./release\fsc_mainwindow_socket.o
 ./release\fsc_thread.o
+./release\fsc_mainwindow_plc_ui.o
 ./release\moc_qcustomplot.o
 ./release\moc_fsc_mainwindow.o
 ./release\moc_dialog_checkdev.o
