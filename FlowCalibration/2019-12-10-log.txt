@@ -21207,3 +21207,310 @@ fsc_mainwindow_socket.cpp:64: "2019-12-10 17:11:04:630" "12 socket con"
 fsc_mainwindow_socket.cpp:64: "2019-12-10 17:11:04:633" "13 socket con"
 fsc_mainwindow_socket.cpp:64: "2019-12-10 17:11:04:637" "2 socket con"
 fsc_mainwindow_socket.cpp:64: "2019-12-10 17:11:04:641" "6 socket con"
+main.cpp:12: "2019-12-10 17:31:12:270"   start
+fsc_mainwindow.cpp:107: "2019-12-10 17:31:12:686" 1920 1040
+main.cpp:20: "2019-12-10 17:31:12:813" w.show()
+fsc_mainwindow.cpp:238: "2019-12-10 17:31:12:818" "192.168.1.220"
+fsc_mainwindow.cpp:239: "2019-12-10 17:31:12:822" "192.168.1.221"
+fsc_thread.cpp:16: "2019-12-10 17:31:12:825" thread start ...
+fsc_mainwindow_socket.cpp:7: "2019-12-10 17:31:12:830" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+fsc_mainwindow.cpp:39: "2019-12-10 17:31:12:894" SocketDataInit
+fsc_mainwindow.cpp:259: "2019-12-10 17:31:12:898" "XY_DD_1"
+fsc_mainwindow.cpp:259: "2019-12-10 17:31:12:902" "XY-DD-2"
+fsc_mainwindow.cpp:259: "2019-12-10 17:31:12:906" "XY-DD-3"
+fsc_mainwindow.cpp:259: "2019-12-10 17:31:12:910" "XY-DD-4"
+fsc_mainwindow.cpp:259: "2019-12-10 17:31:12:914" "XY-DD-5"
+fsc_mainwindow.cpp:259: "2019-12-10 17:31:12:918" "XY-DD-7"
+fsc_mainwindow.cpp:259: "2019-12-10 17:31:12:921" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:259: "2019-12-10 17:31:12:925" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:259: "2019-12-10 17:31:12:929" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:259: "2019-12-10 17:31:12:933" "11"
+fsc_mainwindow.cpp:43: "2019-12-10 17:31:12:937" ParaInit
+fsc_mainwindow.cpp:46: "2019-12-10 17:31:12:942" DataInit
+fsc_mainwindow.cpp:49: "2019-12-10 17:31:12:946" plcDataInit
+fsc_mainwindow.cpp:52: "2019-12-10 17:31:12:971" PlotInit
+fsc_mainwindow_socket.cpp:17: "2019-12-10 17:31:13:046" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:20: "2019-12-10 17:31:13:053" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+socket\qabstractsocket.cpp:1663: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+fsc_mainwindow_socket.cpp:261: "2019-12-10 17:31:13:223" wait socket start up ...
+fsc_mainwindow_socket.cpp:29: "2019-12-10 17:31:13:366" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+fsc_thread.cpp:23: "2019-12-10 17:31:13:373" signal_startScketInit
+fsc_mainwindow_socket.cpp:49: "2019-12-10 17:31:13:373" SocketInit->connectToHost... "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:53: "2019-12-10 17:31:13:382" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:49: "2019-12-10 17:31:13:386" SocketInit->connectToHost... "192.168.1.221" 4001
+fsc_mainwindow_socket.cpp:53: "2019-12-10 17:31:13:390" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:394" "1 socket con"
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:399" "2"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:403" "3"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:406" "4"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:410" "5"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:415" "6"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:419" "7"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:423" "8"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:437" "9"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:441" "10"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:446" "11"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:453" "12"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:457" "13"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:461" "14"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:465" "15"  socket con retry
+fsc_mainwindow_socket.cpp:82: "2019-12-10 17:31:13:469" "16"  socket con retry
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:473" "0 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:477" "7 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:481" "3 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:485" "14 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:488" "12 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:492" "8 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:495" "10 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:498" "15 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:503" "5 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:506" "2 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:510" "9 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:513" "16 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:517" "6 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:521" "4 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:524" "13 socket con"
+fsc_mainwindow_socket.cpp:64: "2019-12-10 17:31:13:528" "11 socket con"
+fsc_mainwindow.cpp:800: "2019-12-10 17:31:52:482" "´«¸ÐÆ÷1"
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:52:494" 0     132.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:52:976" 0.5     137.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:53:472" 1     137.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:53:971" 1.5     143.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:54:472" 2     148.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:54:971" 2.5     148.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:55:474" 3     154
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:55:976" 3.5     159.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:56:471" 4     159.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:56:977" 4.5     165.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:57:475" 5     171.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:57:971" 5.5     171.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:58:471" 6     177
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:58:972" 6.5     183
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:59:475" 7     183
+fsc_mainwindow.cpp:776: "2019-12-10 17:31:59:971" 7.5     189.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:00:471" 8     195.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:00:975" 8.5     195.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:01:473" 9     201.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:01:970" 9.5     208
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:02:469" 10     208
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:02:969" 10.5     214.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:03:473" 11     221.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:03:977" 11.5     221.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:04:471" 12     227.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:04:975" 12.5     234.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:05:472" 13     234.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:05:976" 13.5     241.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:06:475" 14     248.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:06:973" 14.5     248.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:07:476" 15     255.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:07:970" 15.5     262.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:08:474" 16     262.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:08:971" 16.5     270.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:09:471" 17     277.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:09:971" 17.5     277.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:10:469" 18     285
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:10:977" 18.5     292.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:11:470" 19     292.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:11:973" 19.5     300.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:12:469" 20     308.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:12:970" 20.5     308.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:13:469" 21     316
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:13:971" 21.5     324
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:14:475" 22     324
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:14:971" 22.5     332.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:15:469" 23     340.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:15:969" 23.5     340.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:16:471" 24     348.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:16:975" 24.5     357
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:17:471" 25     357
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:17:974" 25.5     365.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:18:469" 26     374.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:18:972" 26.5     374.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:19:470" 27     382.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:19:969" 27.5     391.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:20:470" 28     391.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:20:976" 28.5     400.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:21:474" 29     409.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:21:969" 29.5     409.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:22:469" 30     418.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:22:976" 30.5     427.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:23:474" 31     427.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:23:969" 31.5     437.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:24:470" 32     446.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:24:971" 32.5     446.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:25:472" 33     456
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:25:970" 33.5     465.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:26:471" 34     465.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:26:970" 34.5     475.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:27:471" 35     485.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:27:970" 35.5     485.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:28:475" 36     495
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:28:974" 36.5     505
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:29:475" 37     505
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:29:973" 37.5     515.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:30:472" 38     525.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:30:975" 38.5     525.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:31:469" 39     535.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:31:972" 39.5     546
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:32:470" 40     546
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:32:972" 40.5     556.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:33:475" 41     567.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:33:972" 41.5     567.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:34:472" 42     577.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:34:970" 42.5     588.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:35:472" 43     588.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:35:972" 43.5     599.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:36:469" 44     610.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:36:970" 44.5     610.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:37:469" 45     621.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:37:974" 45.5     632.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:38:474" 46     632.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:38:975" 46.5     644.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:39:474" 47     655.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:39:974" 47.5     655.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:40:470" 48     667
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:40:968" 48.5     678.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:41:469" 49     678.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:41:970" 49.5     690.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:42:472" 50     702.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:42:973" 50.5     702.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:43:469" 51     714
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:43:975" 51.5     726
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:44:471" 52     726
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:44:971" 52.5     738.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:45:473" 53     750.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:45:975" 53.5     750.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:46:473" 54     762.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:46:973" 54.5     775
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:47:470" 55     775
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:47:973" 55.5     787.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:48:473" 56     800.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:48:974" 56.5     800.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:49:475" 57     812.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:49:971" 57.5     825.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:50:470" 58     825.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:50:973" 58.5     838.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:51:474" 59     851.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:51:969" 59.5     851.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:52:472" 60     864.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:52:973" 60.5     877.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:53:472" 61     877.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:53:974" 61.5     891.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:54:474" 62     904.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:54:974" 62.5     904.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:55:470" 63     918
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:55:972" 63.5     931.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:56:474" 64     931.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:56:973" 64.5     945.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:57:469" 65     959.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:57:972" 65.5     959.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:58:469" 66     973
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:58:973" 66.5     987
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:59:474" 67     987
+fsc_mainwindow.cpp:776: "2019-12-10 17:32:59:973" 67.5     1001.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:00:473" 68     1015.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:00:974" 68.5     1015.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:01:473" 69     1029.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:01:968" 69.5     1044
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:02:472" 70     1044
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:02:972" 70.5     1058.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:03:472" 71     1073.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:03:973" 71.5     1073.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:04:473" 72     1087.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:04:972" 72.5     1102.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:05:473" 73     1102.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:05:971" 73.5     1117.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:06:471" 74     1132.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:06:970" 74.5     1132.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:07:473" 75     1147.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:07:971" 75.5     1162.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:08:468" 76     1162.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:08:970" 76.5     1178.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:09:470" 77     1193.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:09:972" 77.5     1193.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:10:475" 78     1209
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:10:972" 78.5     1224.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:11:472" 79     1224.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:11:972" 79.5     1240.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:12:470" 80     1256.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:12:969" 80.5     1256.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:13:474" 81     1272
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:13:973" 81.5     1288
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:14:469" 82     1288
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:14:972" 82.5     1304.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:15:468" 83     1320.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:15:969" 83.5     1320.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:16:472" 84     1336.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:16:971" 84.5     1353
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:17:473" 85     1353
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:17:970" 85.5     1369.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:18:472" 86     1386.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:18:970" 86.5     1386.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:19:469" 87     1402.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:19:973" 87.5     1419.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:20:470" 88     1419.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:20:971" 88.5     1436.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:21:472" 89     1453.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:21:971" 89.5     1453.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:22:471" 90     1470.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:22:969" 90.5     1487.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:23:469" 91     1487.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:23:972" 91.5     1505.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:24:474" 92     1522.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:24:973" 92.5     1522.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:25:469" 93     1540
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:25:970" 93.5     1557.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:26:472" 94     1557.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:26:972" 94.5     1575.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:27:472" 95     1593.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:27:973" 95.5     1593.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:28:471" 96     1611
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:28:972" 96.5     1629
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:29:472" 97     1629
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:29:972" 97.5     1647.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:30:469" 98     1665.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:30:971" 98.5     1665.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:31:474" 99     1683.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:31:971" 99.5     1702
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:32:471" 100     1702
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:32:971" 100.5     1720.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:33:470" 101     1739.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:33:969" 101.5     1739.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:34:471" 102     1757.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:34:975" 102.5     1776.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:35:472" 103     1776.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:35:971" 103.5     1795.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:36:469" 104     1814.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:36:972" 104.5     1814.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:37:472" 105     1833.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:37:970" 105.5     1852.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:38:473" 106     1852.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:38:972" 106.5     1872.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:39:468" 107     1891.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:39:971" 107.5     1891.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:40:469" 108     1911
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:40:970" 108.5     1930.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:41:471" 109     1930.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:41:975" 109.5     1950.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:42:472" 110     1970.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:42:972" 110.5     1970.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:43:470" 111     1990
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:43:974" 111.5     2010
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:44:472" 112     2010
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:44:972" 112.5     2030.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:45:472" 113     2050.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:45:972" 113.5     2050.3
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:46:474" 114     2070.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:46:973" 114.5     2091
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:47:471" 115     2091
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:47:973" 115.5     2111.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:48:473" 116     2132.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:48:974" 116.5     2132.1
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:49:471" 117     2152.8
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:49:971" 117.5     2173.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:50:472" 118     2173.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:50:970" 118.5     2194.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:51:470" 119     2215.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:51:971" 119.5     2215.5
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:52:473" 120     2236.6
+fsc_mainwindow.cpp:776: "2019-12-10 17:33:52:970" 120.5     2257.8

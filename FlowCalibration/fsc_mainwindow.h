@@ -60,11 +60,22 @@ class FSC_MainWindow;
 #define CAL_START_OUT_VALVE_OPEN                11
 #define CAL_START_FIRST_FORWARD_FILL_WATER      12
 #define CAL_START_FIRST_REVERSE_FILL_WATER      13
-#define CAL_START_FIRST_REVERSE_FILL_WATER_END  14
+#define CAL_PROCESS                             14
+#define CAL_PROCESS_END                         15
+#define CAL_WAIT_WATER_EMPTY                    16
+
+#define ONE_CAL_EMPTY                       0
+#define ONE_CAL_START                       1
+#define ONE_CAL_START_END                   2
+#define ONE_CAL_GOING                       3
+#define ONE_CAL_POST_PROCESS                4
 
 
-#define PLOT_VALUE_NUMBER   60 * 2 * 2  // 2min / 500ms
+#define MAX_SPAN            10000
+#define MIN_SPAN            5000
 
+//#define PLOT_VALUE_NUMBER   60 * 2 * 2  // 2min / 500ms
+#define PLOT_VALUE_NUMBER   20 * 2  // 2min / 500ms
 
 #define CAL_CURRENT_STAT_NEED_EXECUTE   1
 #define CAL_CURRENT_STAT_DOING          2
@@ -84,6 +95,8 @@ class FSC_MainWindow;
 #define PRINT_PLC_STATE_READ        QString::number(plcStateRead, 16) + " " + QString::number(plcStateRead, 2)
 
 #define MAIN_LOOP_CYCLE             250
+#define MS_500                      500
+#define MS_1S                       1000
 
 #define POLL_SCALE_CYCLE            (MAIN_LOOP_CYCLE * 3)
 
@@ -95,7 +108,7 @@ class FSC_MainWindow;
 #define VALVE_EXCHANGE_DELAY        1500
 #define PUMP_START_DELAY            2000
 
-
+#define CAL_MAX_STEP                60
 
 class calStep
 {
@@ -124,22 +137,37 @@ public:
 
 };
 
-class autoCal
+class oneCalTag
 {
 public:
 
-    int autoIn = 0;
+    int     state = ONE_CAL_EMPTY;
+    int     step = 0;
 
-    int openEmptyValveOut = 0;
+    double  calSpan = 0;
+    int     calSpanPercent = 0;
+    int     calDirect = 0;
+    int     calTpye = 0;
+    uint    calTime = 0;
 
-    int firstForwardOnOut = 0;
+    int     plotPos = 0;
+    int     plotSelectedFMIndex = 0;
+    QString plotSelectedFMStr = "";
 
-    int firstReverseOnOut = 0;
+    QVector<double> plotTimeX;
+    QVector<double> plotScaleSumValue;
+    QVector<double> plotSTDFMSumValue;
+    QVector<double> plotSTDFMRateValue;
+    QVector<double> plotFMSumValue[FLOWMETER_NUMBER];
+    QVector<double> plotFMRateValue[FLOWMETER_NUMBER];
 
+    int     xxxx = 0;
 
-
-
-
+    double  finalScaleSumValue;
+    double  finalSTDFMSumValue;
+    double  finalSTDFMRateValue;
+    double  finalFMSumValue[FLOWMETER_NUMBER];
+    double  finalFMRateValue[FLOWMETER_NUMBER];
 };
 
 class FSC_MainWindow : public QMainWindow
@@ -170,9 +198,14 @@ private slots:
     void skt_read(int i);
 
     void startUp();
+
     void mainLoop();
+
     void startCal(void);
+
     void startSocketConnect(int i);
+
+
 
     void on_lineEdit_setPWM_textChanged(const QString &arg1);
 
@@ -277,10 +310,21 @@ private:
 
     void flushSendBuf(void);
     void showFresh(void);
+    void showPlotFresh(void);
     void showPlcFresh(void);
+
+    bool checkWaterEmpty(void);
+    bool calProc(void);
+    bool fillOneCal(oneCalTag *calTag);
+    void calSingle(oneCalTag *calTag);
+    void calGoing(oneCalTag *calTag);
+    void calPlot(oneCalTag *calTag);
+    void calDoing(oneCalTag *calTag);
+    void makeCalRecordPrint(oneCalTag *calTag);
 
     void plotAddDataAndFresh(void);
     void plotFresh(void);
+
 
     void printInfo(QString str);
     void printInfoWithTime(QString str);
@@ -366,8 +410,6 @@ private:
     QVector<double> plotFMFlowTimeX;
     QVector<double> plotFMFlowValueY;
 
-
-
     int     plotLoop;
     int     calOn;
     uint    calOnTime;
@@ -375,6 +417,9 @@ private:
     calStep currentStep;
 
     bool    scaleTestZero;
+
+    oneCalTag  oneCal;
+    oneCalTag  allCal[CAL_MAX_STEP];
 
     QCheckBox   *checkBox_spanCal[SPAN_NUMBER];
     QCheckBox   *checkBox_spanCheck[SPAN_NUMBER];
@@ -387,7 +432,7 @@ private:
     QLineEdit   *lineEdit_FMFlow[FLOWMETER_NUMBER];
 
 
-    uint16_t    plcStateWrite = 0;   // 泵一 泵二 bit6 放水阀 反向进水阀2 反向进水阀1 正向进水阀2 正向进水阀1 :靠近泵为1#阀
+    uint16_t    plcStateWrite = 0xffff;   // 泵一 泵二 bit6 放水阀 反向进水阀2 反向进水阀1 正向进水阀2 正向进水阀1 :靠近泵为1#阀
     uint16_t    plcStateRead = 0;
     double      plcRevFlowRate;
     uint16_t    plcRevPWM;

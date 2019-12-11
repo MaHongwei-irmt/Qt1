@@ -2,6 +2,126 @@
 #include "ui_fsc_mainwindow.h"
 #include "fsc_plc.h"
 
+void FSC_MainWindow::showPlcFresh(void)
+{
+    ui->tbnVOutOpen->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVOutClose->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn1Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn1Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn2Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVForwardIn2Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn1Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn1Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn2Open->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnVReverseIn2Close->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+
+    ui->tbnPump1ForwardOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump1ForwardOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump1ReverseOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump1ReverseOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+
+    ui->tbnPump2ForwardOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump2ForwardOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump2ReverseOn->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+    ui->tbnPump2ReverseOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
+
+
+    ui->lineEdit_setFlowRate->setEnabled(revdSketPLC);
+    ui->lineEdit_setPWM->setEnabled(revdSketPLC);
+    ui->radioButton_setFlowRate->setEnabled(revdSketPLC);
+    ui->radioButton_setPWM->setEnabled(revdSketPLC);
+    if (!ui->radioButton_setFlowRate->isChecked())
+    {
+        ui->lineEdit_setFlowRate->setEnabled(false);
+    }
+    if (!ui->radioButton_setPWM->isChecked())
+    {
+        ui->lineEdit_setPWM->setEnabled(false);
+    }
+
+    ui->radioButton_setFlowRate->setChecked(flowRateOrPWM);
+    ui->radioButton_setPWM->setChecked(!flowRateOrPWM);
+
+    if( (statePump1() || statePump2()))
+    {
+        ui->tbnVForwardIn1Open->setEnabled(false);
+        ui->tbnVForwardIn1Close->setEnabled(false);
+        ui->tbnVForwardIn2Open->setEnabled(false);
+        ui->tbnVForwardIn2Close->setEnabled(false);
+        ui->tbnVReverseIn1Open->setEnabled(false);
+        ui->tbnVReverseIn1Close->setEnabled(false);
+        ui->tbnVReverseIn2Open->setEnabled(false);
+        ui->tbnVReverseIn2Close->setEnabled(false);
+    }
+
+
+    if ( statePump1() && stateForwardV1() && stateForwardV2() && !stateReverseV1() && !stateReverseV2())
+    {
+        ui->label_pump1State->setText("1#泵正向进水");
+
+    }
+    if ( statePump1() && stateReverseV1() && stateReverseV2() && !stateForwardV1() && !stateForwardV2())
+    {
+        ui->label_pump1State->setText("1#泵反向进水");
+    }
+
+    if ( statePump2() && stateForwardV1() && stateForwardV2() && !stateReverseV1() && !stateReverseV2())
+    {
+        ui->label_pump2State->setText("2#泵正向进水");
+    }
+    if ( statePump2() && stateReverseV1() && stateReverseV2() && !stateForwardV1() && !stateForwardV2())
+    {
+        ui->label_pump2State->setText("2#泵反向进水");
+    }
+
+    if (!statePump1())
+    {
+        ui->label_pump1State->setText("1#泵停止");
+    }
+    if (!statePump2())
+    {
+        ui->label_pump2State->setText("2#泵停止");
+    }
+
+
+    if( (statePump1() || statePump2()) && ( stateForwardV1() || stateForwardV2()) \
+            && (stateReverseV1() || stateReverseV2()) )
+    {
+        printInfoWithTime("报警：阀位不对，关闭泵！");
+        pump1Off();
+        pump2Off();
+    }
+
+    if( (statePump1() || statePump2()) && ( !stateForwardV1() || !stateForwardV2()) \
+            && (!stateReverseV1() || !stateReverseV2()) )
+    {
+        printInfoWithTime("报警：阀位不对，关闭泵！");
+        pump1Off();
+        pump2Off();
+    }
+
+    ui->revFlowRate->setText(QString::number(static_cast<double>(plcRevFlowRate), 'f', 0));
+    ui->revPWM->setText(QString::number(plcRevPWM));
+    ui->labelplcState->setText(PRINT_PLC_STATE_WRITE);
+    ui->labelplcStateRead->setText(PRINT_PLC_STATE_READ);
+
+    ui->label_stateVOutOn->setVisible( (plcStateRead >> PLC_OUT_VALVE1_OFFSET) & 0x01);
+    ui->label_stateVOutOff->setVisible( !((plcStateRead >> PLC_OUT_VALVE1_OFFSET) & 0x01));
+
+    ui->label_stateVFInOn1->setVisible(stateForwardV1());
+    ui->label_stateVFInOff1->setVisible(!stateForwardV1());
+
+    ui->label_stateVFInOn2->setVisible(stateForwardV2());
+    ui->label_stateVFInOff2->setVisible(!stateForwardV2());
+
+    ui->label_stateVRInOn1->setVisible(stateReverseV1());
+    ui->label_stateVRInOff1->setVisible(!stateReverseV1());
+
+    ui->label_stateVRInOn2->setVisible(stateReverseV2());
+    ui->label_stateVRInOff2->setVisible(!stateReverseV2());
+
+}
+
 void FSC_MainWindow::on_tbnVOutOpen_clicked()
 {
     printInfoWithTime("放水阀打开");
@@ -393,3 +513,5 @@ void FSC_MainWindow::on_radioButton_setPWM_clicked()
     ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
     writePLC();
 }
+
+

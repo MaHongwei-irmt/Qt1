@@ -533,7 +533,7 @@ void FSC_MainWindow::calStepInfoFresh(void)
 
 }
 
-void FSC_MainWindow::mainLoop()
+void FSC_MainWindow::mainLoop(void)
 {
     QString str;
 
@@ -627,13 +627,18 @@ void FSC_MainWindow::mainLoop()
 
     if (calOn && !calTimer->isActive())
     {
-        calTimer->start(MAIN_LOOP_CYCLE);
+        calTimer->start(MS_500);
     }
 }
 
 int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent, double *span)
 {
     int step = 0;
+
+    if (dir == nullptr || type == nullptr || spanPercent == nullptr || span == nullptr )
+    {
+        FSCLOG << "err:" << "startCal_dir_type_span" << "nullptr";
+    }
 
     for(int i = SPAN_NUMBER - 1; i >= 0; i--)
     {
@@ -768,7 +773,7 @@ void FSC_MainWindow::plotAddDataAndFresh(void)
         plotScaleSumValueY.append(showScaleSum);
         plotSTDFMSumValueY.append(showSTDFMSum);
         plotSTDFMFlowValueY.append(showSTDFMFlow);
-        plotFMSumValueY.append(showFMSum[0]);
+        plotFMSumValueY.append(showFMSum[0] + 100);
         plotFMFlowValueY.append(showFMFlow[0]);
 
 
@@ -789,48 +794,26 @@ void FSC_MainWindow::plotAddDataAndFresh(void)
     else
     {
 
-        plotScaleSumTimeX.clear();
-        plotScaleSumValueY.clear();
+//        plotScaleSumTimeX.clear();
+//        plotScaleSumValueY.clear();
     }
 
 }
 
-void FSC_MainWindow::PlotReplay(const QString &arg1)
-{
-    FSCLOG  << arg1;
-
-    ui->MyCustomPlot->graph(3)->setName(ui->comboBox_PlotSenSel->currentText() + "流量");
-    ui->MyCustomPlot->graph(4)->setName(ui->comboBox_PlotSenSel->currentText() + "流速");
-
-    ui->MyCustomPlot->replot();
-}
-
 void FSC_MainWindow::plotFresh(void)
 {
-
     ui->MyCustomPlot->legend->setVisible(true);
-
-    //设定右上角图形标注的字体
     ui->MyCustomPlot->legend->setFont(QFont("Helvetica", 8));
 
-    QVector<double> x(0),y(0);
-
     ui->MyCustomPlot->graph(0)->setData(plotScaleSumTimeX, plotScaleSumValueY);
-
     ui->MyCustomPlot->graph(1)->setData(plotSTDFMSumTimeX, plotSTDFMSumValueY);
     ui->MyCustomPlot->graph(2)->setData(plotSTDFMFlowTimeX, plotSTDFMFlowValueY);
     ui->MyCustomPlot->graph(3)->setData(plotFMSumTimeX, plotFMSumValueY);
     ui->MyCustomPlot->graph(4)->setData(plotFMFlowTimeX, plotFMFlowValueY);
 
-
- //   ui->MyCustomPlot->xAxis->setLabel(tr("采样点时序"));
- //   ui->MyCustomPlot->yAxis->setLabel(tr("天平质量/流量/流速"));
     ui->MyCustomPlot->rescaleAxes(true);
-   // ui->MyCustomPlot->setInteractions(QCP::iRangeDrag|QCP::iRangeZoom);
-
-
-
     ui->MyCustomPlot->replot();
+
 }
 
 void FSC_MainWindow::flushSendBuf(void)
@@ -879,10 +862,9 @@ void FSC_MainWindow::showFresh(void)
         lineEdit_FMFlow[i]->setText(QString::number(showFMFlow[i], 'f', 3));
     }
 
-    ui->lineEdit_plotTime->setText(QString::number(plotLoop * 0.5, 'f', 1) + "s");
 
+    showPlotFresh();
     showPlcFresh();
-
 }
 
 void FSC_MainWindow::on_tbnSysDevCheck_clicked()
@@ -894,11 +876,6 @@ void FSC_MainWindow::on_tbnManualCheckDev_clicked()
 {
     Dialog_CheckDev *ChkDev = new Dialog_CheckDev();
     ChkDev->exec();
-}
-
-void FSC_MainWindow::on_comboBox_PlotSenSel_currentIndexChanged(const QString &arg1)
-{
-    PlotReplay(arg1);
 }
 
 void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
