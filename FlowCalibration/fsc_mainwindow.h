@@ -141,8 +141,14 @@ class oneCalTag
 {
 public:
 
+    bool    pause = false;
+
+    char m_padding [3];
+
     int     state = ONE_CAL_EMPTY;
     int     step = 0;
+
+    char m_padding1 [4];
 
     double  calSpan = 0;
     int     calSpanPercent = 0;
@@ -161,13 +167,14 @@ public:
     QVector<double> plotFMSumValue[FLOWMETER_NUMBER];
     QVector<double> plotFMRateValue[FLOWMETER_NUMBER];
 
-    int     xxxx = 0;
+    char m_padding2 [4];
 
     double  finalScaleSumValue;
     double  finalSTDFMSumValue;
     double  finalSTDFMRateValue;
     double  finalFMSumValue[FLOWMETER_NUMBER];
     double  finalFMRateValue[FLOWMETER_NUMBER];
+
 };
 
 class FSC_MainWindow : public QMainWindow
@@ -320,6 +327,8 @@ private:
     void calGoing(oneCalTag *calTag);
     void calPlot(oneCalTag *calTag);
     void calDoing(oneCalTag *calTag);
+    void calStop(oneCalTag *calTag);
+
     void makeCalRecordPrint(oneCalTag *calTag);
 
     void plotAddDataAndFresh(void);
@@ -420,6 +429,8 @@ private:
 
     oneCalTag  oneCal;
     oneCalTag  allCal[CAL_MAX_STEP];
+    bool       allCalNeedToReport = false;
+    bool       allCalAvailable[CAL_MAX_STEP];
 
     QCheckBox   *checkBox_spanCal[SPAN_NUMBER];
     QCheckBox   *checkBox_spanCheck[SPAN_NUMBER];

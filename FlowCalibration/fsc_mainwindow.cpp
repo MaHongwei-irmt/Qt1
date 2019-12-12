@@ -378,6 +378,7 @@ void FSC_MainWindow::DataInit(void)
 
 void FSC_MainWindow::dataInit_calStepInit(void)
 {
+    currentStep.type_name = ui->comboBox_SensorTypeName->currentText();
     currentStep.span_ml_per_min = ui->leFlowSpeed_SensorSpan->text().toDouble();
 
     if (currentStep.span_ml_per_min < 1)
@@ -446,10 +447,10 @@ void FSC_MainWindow::calStepInfoFresh(void)
     str = ui->textBrow_calInfo->toPlainText() + "\r\n\r\n" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss:");
 
     str += " 型号：";
-    str += ui->comboBox_SensorTypeName->currentText();
+    str += currentStep.type_name;
     str += "  ";
     str += "量程：";
-    str += ui->leFlowSpeed_SensorSpan->text();
+    str += QString::number(currentStep.span_ml_per_min, 'f', 3);;
     str += " |-> ";
 
     currentStep.stepTotal = 0;
@@ -862,6 +863,41 @@ void FSC_MainWindow::showFresh(void)
         lineEdit_FMFlow[i]->setText(QString::number(showFMFlow[i], 'f', 3));
     }
 
+    if (calOn == CAL_STATE_STOP)
+    {
+        ui->tbnModifyFMTypePara->setEnabled(true);
+        ui->tbnCalStart->setEnabled(true);
+
+        ui->lineEdit_setFlowRate->setEnabled(revdSketPLC);
+        ui->lineEdit_setPWM->setEnabled(revdSketPLC);
+        ui->radioButton_setFlowRate->setEnabled(revdSketPLC);
+        ui->radioButton_setPWM->setEnabled(revdSketPLC);
+
+        ui->tbnScaleZero->setEnabled(true);
+        ui->tbnPoltClear->setEnabled(true);
+        ui->tbnCalManual->setEnabled(true);
+        ui->lineEdit_calParameter->setEnabled(true);
+        ui->tbnCalManualWrite->setEnabled(true);
+        ui->tbnCalManualCorrectWrite->setEnabled(true);
+
+    }
+    else
+    {
+        ui->tbnModifyFMTypePara->setEnabled(false);
+        ui->tbnCalStart->setEnabled(false);
+
+        ui->lineEdit_setFlowRate->setEnabled(false);
+        ui->lineEdit_setPWM->setEnabled(false);
+        ui->radioButton_setFlowRate->setEnabled(false);
+        ui->radioButton_setPWM->setEnabled(false);
+
+        ui->tbnScaleZero->setEnabled(false);
+        ui->tbnPoltClear->setEnabled(false);
+        ui->tbnCalManual->setEnabled(false);
+        ui->lineEdit_calParameter->setEnabled(false);
+        ui->tbnCalManualWrite->setEnabled(false);
+        ui->tbnCalManualCorrectWrite->setEnabled(false);
+    }
 
     showPlotFresh();
     showPlcFresh();
@@ -899,6 +935,9 @@ void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
     }
 
     ui->leFMTypeName->setText(fsc_global::para_ini.at(index).type_name);
+
+    oneCal.step = 0;
+    currentStep.stepCurrent = 0;
 }
 
 void FSC_MainWindow::on_tbnScaleZero_clicked()
@@ -938,7 +977,10 @@ void FSC_MainWindow::on_tbnCalTermination_clicked()
 
     ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 
-    currentStep.stepCurrent = 0;
+    //currentStep.stepCurrent = 0;
+
+    calStop(&oneCal);
+
 }
 
 void FSC_MainWindow::on_tbnPoltClear_clicked()
@@ -992,9 +1034,9 @@ void FSC_MainWindow::on_tbnCalStepNext_clicked()
 {
     currentStep.stepCurrent++;
 
-    if (currentStep.stepCurrent == currentStep.stepTotal)
+    if (currentStep.stepCurrent > currentStep.stepTotal)
     {
-        currentStep.stepCurrent--;
+        currentStep.stepCurrent = currentStep.stepTotal;
     }
 
     calStepInfoFresh();
@@ -1011,6 +1053,10 @@ void FSC_MainWindow::on_tbnModifyFMTypePara_clicked()
     }
 
     calStepInfoFresh();
+
+    allCalNeedToReport = false;
+    oneCal.step = 0;
+    currentStep.stepCurrent = 0;
 }
 
 void FSC_MainWindow::on_tbnCalStepPre_clicked()
@@ -1025,12 +1071,12 @@ void FSC_MainWindow::on_tbnCalStepPre_clicked()
 
 void FSC_MainWindow::on_tbnCalPause_clicked()
 {
-    calOn = CAL_STATE_STOP;
-
     ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n\r\n" + \
-                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 暂停"));
+                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 即将暂停"));
 
     ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+
+    oneCal.pause = true;
 }
 
 void FSC_MainWindow::paraWrite(void)

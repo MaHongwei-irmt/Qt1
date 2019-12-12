@@ -121,9 +121,11 @@ void FSC_MainWindow::startCal(void)
 
         if(checkWaterEmpty())
         {
-            printInfoWithTime("->天平上容器水放空->关闭放水阀");
+            printInfoWithTime("->天平上容器水放空->关闭放水阀->天平清零");
             closeOutValve();
             writePLC();
+            delayMSec(VALVE_EXCHANGE_DELAY);
+            reqScaleZero();
             delayMSec(VALVE_EXCHANGE_DELAY);
 
             if(calOn)
@@ -150,6 +152,7 @@ void FSC_MainWindow::startCal(void)
     case CAL_PROCESS_END:
 
         makeCalRecordPrint(&oneCal);
+        printInfoWithTime("本次全部结束.");
 
         calOn = CAL_STATE_STOP;
 
@@ -176,10 +179,22 @@ bool FSC_MainWindow::fillOneCal(oneCalTag *calTag)
 {
     if (calTag->state == ONE_CAL_EMPTY)
     {
-        if ( currentStep.stepTotal == 0)
+        if ( currentStep.stepTotal == 0 || currentStep.stepCurrent == currentStep.stepTotal)
         {
+            if(allCalNeedToReport)
+            {
+                makeCalRecordPrint(calTag);
+            }
+            else
+            {
+                printInfoWithTime("无数据生成报表");
+            }
+
+            printInfoWithTime("本次全部结束");
+            calOn = CAL_STATE_STOP;
             return false;
         }
+
 
         if ((calTag->step + 1)  > currentStep.stepTotal)
         {
@@ -327,7 +342,7 @@ void FSC_MainWindow::calGoing(oneCalTag *calTag)
 {
     (void) *calTag;
 
-    calTag->plotTimeX.append( calTag->plotPos * (MS_1S / MS_500));
+    calTag->plotTimeX.append(calTag->plotPos * 0.5);
 
     calTag->plotScaleSumValue.append(showScaleSum);
     calTag->plotSTDFMSumValue.append(showSTDFMSum);
@@ -345,7 +360,7 @@ void FSC_MainWindow::calGoing(oneCalTag *calTag)
     {
         calTag->state = ONE_CAL_POST_PROCESS;
 
-        printInfoWithTime("本步结束->停泵->关闭进水阀->打开放水阀");
+        printInfoWithTime("本步结束->停泵->关闭进水阀");
 
         openOutValve();
         pump1Off();
@@ -368,8 +383,8 @@ void FSC_MainWindow::calGoing(oneCalTag *calTag)
             calTag->finalFMRateValue[i] = showFMFlow[i];
         }
 
-        on_tbnPoltClear_clicked();
     }
+
 }
 
 void FSC_MainWindow::calPlot(oneCalTag *calTag)
@@ -400,8 +415,24 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
 
     allCal[calTag->step - 1] = *calTag;
 
+    allCalNeedToReport = true;
+    allCalAvailable[calTag->step - 1]  = true;
 
+    printInfoWithTime("->打开放水阀");
+    on_tbnPoltClear_clicked();
+    openOutValve();
+    pump1Off();
+    pump2Off();
+    writePLC();
+    delayMSec(PUMP_START_DELAY);
 
+    if(checkWaterEmpty())
+    {
+        printInfoWithTime("->天平上容器水放空->关闭放水阀");
+        closeOutValve();
+        writePLC();
+        delayMSec(VALVE_EXCHANGE_DELAY);
+    }
 
     calTag->state = ONE_CAL_EMPTY;
     calTag->plotPos = 0;
@@ -416,11 +447,53 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
         calTag->plotFMRateValue[i].clear();
     }
 
+    if (calTag->pause)
+    {
+        calOn = CAL_STATE_STOP;
+        calTag->pause = false;
+    }
+
+}
+
+void FSC_MainWindow::calStop(oneCalTag *calTag)
+{
+    calTag->state = ONE_CAL_EMPTY;
+    calTag->plotPos = 0;
+    calTag->plotTimeX.clear();
+    calTag->plotScaleSumValue.clear();
+    calTag->plotSTDFMSumValue.clear();
+    calTag->plotSTDFMRateValue.clear();
+
+    for (int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        calTag->plotFMSumValue[i].clear();
+        calTag->plotFMRateValue[i].clear();
+    }
+
+    calTag->step = 0;
+    currentStep.stepCurrent = 0;
+
+    pump1Off();
+    pump2Off();
+    writePLC();
+    delayMSec(PUMP_START_DELAY);
+
+    closeForwardValveAll();
+    closeReverseValveAll();
+    writePLC();
 }
 
 void FSC_MainWindow::makeCalRecordPrint(oneCalTag *calTag)
 {
     if (!calTag) return;
+
+    allCalNeedToReport = false;
+    for(int i = 0; i < CAL_MAX_STEP; i++)
+    {
+        allCalAvailable[i]  = false;
+    }
+
+
     printInfoWithTime("生成报表");
 }
 

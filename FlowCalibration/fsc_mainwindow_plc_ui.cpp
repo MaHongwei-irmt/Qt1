@@ -26,10 +26,11 @@ void FSC_MainWindow::showPlcFresh(void)
     ui->tbnPump2ReverseOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
 
 
-    ui->lineEdit_setFlowRate->setEnabled(revdSketPLC);
-    ui->lineEdit_setPWM->setEnabled(revdSketPLC);
-    ui->radioButton_setFlowRate->setEnabled(revdSketPLC);
-    ui->radioButton_setPWM->setEnabled(revdSketPLC);
+//    ui->lineEdit_setFlowRate->setEnabled(revdSketPLC);
+//    ui->lineEdit_setPWM->setEnabled(revdSketPLC);
+//    ui->radioButton_setFlowRate->setEnabled(revdSketPLC);
+//    ui->radioButton_setPWM->setEnabled(revdSketPLC);
+
     if (!ui->radioButton_setFlowRate->isChecked())
     {
         ui->lineEdit_setFlowRate->setEnabled(false);
