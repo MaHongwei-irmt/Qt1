@@ -26,11 +26,6 @@ void FSC_MainWindow::showPlcFresh(void)
     ui->tbnPump2ReverseOff->setEnabled(sktConed[SOCKET_PLC_INDEX] && (calOn == CAL_STATE_STOP) );
 
 
-//    ui->lineEdit_setFlowRate->setEnabled(revdSketPLC);
-//    ui->lineEdit_setPWM->setEnabled(revdSketPLC);
-//    ui->radioButton_setFlowRate->setEnabled(revdSketPLC);
-//    ui->radioButton_setPWM->setEnabled(revdSketPLC);
-
     if (!ui->radioButton_setFlowRate->isChecked())
     {
         ui->lineEdit_setFlowRate->setEnabled(false);
@@ -91,6 +86,8 @@ void FSC_MainWindow::showPlcFresh(void)
         printInfoWithTime("报警：阀位不对，关闭泵！");
         pump1Off();
         pump2Off();
+        writePLC();
+        delayMSec(100);
     }
 
     if( (statePump1() || statePump2()) && ( !stateForwardV1() || !stateForwardV2()) \
@@ -99,6 +96,8 @@ void FSC_MainWindow::showPlcFresh(void)
         printInfoWithTime("报警：阀位不对，关闭泵！");
         pump1Off();
         pump2Off();
+        writePLC();
+        delayMSec(100);
     }
 
     ui->revFlowRate->setText(QString::number(static_cast<double>(plcRevFlowRate), 'f', 0));
@@ -120,6 +119,26 @@ void FSC_MainWindow::showPlcFresh(void)
 
     ui->label_stateVRInOn2->setVisible(stateReverseV2());
     ui->label_stateVRInOff2->setVisible(!stateReverseV2());
+
+    if ( (statePump1() ||  statePump2()) && calManualDoing)
+    {
+        calManualDoing = false;
+        calOn = CAL_PLOT_START;
+
+        plotLoop = 0;
+
+        plotScaleSumTimeX.clear();
+        plotSTDFMSumTimeX.clear();
+        plotSTDFMFlowTimeX.clear();
+        plotFMSumTimeX.clear();
+        plotFMFlowTimeX.clear();
+
+        plotScaleSumValueY.clear();
+        plotSTDFMSumValueY.clear();
+        plotSTDFMFlowValueY.clear();
+        plotFMSumValueY.clear();
+        plotFMFlowValueY.clear();
+    }
 
 }
 
@@ -255,9 +274,9 @@ void FSC_MainWindow::on_tbnPump1ForwardOn_clicked()
         printInfoWithTime("->关闭反向进水阀");
         closeReverseValveAll();
         writePLC();
-        delayMSec(PUMP_START_DELAY);
+        delayMSec(VALVE_EXCHANGE_DELAY);
 
-        printInfoWithTime("打开正向进水阀");
+        printInfo("->打开正向进水阀");
         openForwardValveAll();
         writePLC();
         delayMSec(VALVE_EXCHANGE_DELAY);
@@ -304,9 +323,9 @@ void FSC_MainWindow::on_tbnPump1ReverseOn_clicked()
         printInfoWithTime("->关闭正向进水阀");
         closeForwardValveAll();
         writePLC();
-        delayMSec(PUMP_START_DELAY);
+        delayMSec(VALVE_EXCHANGE_DELAY);
 
-        printInfoWithTime("->打开反向进水阀");
+        printInfo("->打开反向进水阀");
         openReverseValveAll();
         writePLC();
         delayMSec(VALVE_EXCHANGE_DELAY);
@@ -352,7 +371,6 @@ void FSC_MainWindow::on_tbnPump1ReverseOff_clicked()
 
 }
 
-
 void FSC_MainWindow::on_tbnPump2ForwardOn_clicked()
 {
     if (statePump1() && (stateForwardV1() || stateForwardV2()))
@@ -389,9 +407,9 @@ void FSC_MainWindow::on_tbnPump2ForwardOn_clicked()
         printInfoWithTime("->关闭反向进水阀");
         closeReverseValveAll();
         writePLC();
-        delayMSec(PUMP_START_DELAY);
+        delayMSec(VALVE_EXCHANGE_DELAY);
 
-        printInfoWithTime("打开正向进水阀");
+        printInfo("->打开正向进水阀");
         openForwardValveAll();
         writePLC();
         delayMSec(VALVE_EXCHANGE_DELAY);
@@ -439,9 +457,9 @@ void FSC_MainWindow::on_tbnPump2ReverseOn_clicked()
         printInfoWithTime("->关闭正向进水阀");
         closeForwardValveAll();
         writePLC();
-        delayMSec(PUMP_START_DELAY);
+        delayMSec(VALVE_EXCHANGE_DELAY);
 
-        printInfoWithTime("打开反向进水阀");
+        printInfo("->打开反向进水阀");
         openReverseValveAll();
         writePLC();
         delayMSec(VALVE_EXCHANGE_DELAY);
@@ -484,7 +502,6 @@ void FSC_MainWindow::on_tbnPump2ReverseOff_clicked()
     }
 }
 
-
 void FSC_MainWindow::on_lineEdit_setFlowRate_textChanged(const QString &arg1)
 {
     (void)arg1;
@@ -514,5 +531,3 @@ void FSC_MainWindow::on_radioButton_setPWM_clicked()
     ui->lineEdit_setFlowRate->setText(QString::number(showSetFlowRate, 'f', 0));
     writePLC();
 }
-
-

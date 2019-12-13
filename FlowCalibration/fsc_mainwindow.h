@@ -70,12 +70,10 @@ class FSC_MainWindow;
 #define ONE_CAL_GOING                       3
 #define ONE_CAL_POST_PROCESS                4
 
-
 #define MAX_SPAN            10000
 #define MIN_SPAN            5000
 
-//#define PLOT_VALUE_NUMBER   60 * 2 * 2  // 2min / 500ms
-#define PLOT_VALUE_NUMBER   20 * 2  // 2min / 500ms
+#define PLOT_VALUE_NUMBER   60 * 2 * 2  // 2min / 500ms
 
 #define CAL_CURRENT_STAT_NEED_EXECUTE   1
 #define CAL_CURRENT_STAT_DOING          2
@@ -99,11 +97,8 @@ class FSC_MainWindow;
 #define MS_1S                       1000
 
 #define POLL_SCALE_CYCLE            (MAIN_LOOP_CYCLE * 3)
-
 #define POLL_FM_CYCLE               (MAIN_LOOP_CYCLE * 2)
-
 #define POLL_PLC_CYCLE              (MAIN_LOOP_CYCLE * 2)
-
 
 #define VALVE_EXCHANGE_DELAY        1500
 #define PUMP_START_DELAY            2000
@@ -148,7 +143,7 @@ public:
     int     state = ONE_CAL_EMPTY;
     int     step = 0;
 
-    char m_padding1 [4];
+    int     stepRecord = 0;
 
     double  calSpan = 0;
     int     calSpanPercent = 0;
@@ -191,6 +186,15 @@ public:
     void SocketConnectTry(void);
 
 private slots:
+    void skt_connect_suc(int i);
+    void skt_connect_dis(int i);
+    void skt_error(int i);
+    void skt_read(int i);
+    void startUp();
+    void mainLoop();
+    void startCal(void);
+    void startSocketConnect(int i);
+
     void on_tbnSysDevCheck_clicked();
 
     void on_tbnManualCheckDev_clicked();
@@ -198,21 +202,6 @@ private slots:
     void on_comboBox_PlotSenSel_currentIndexChanged(const QString &arg1);
 
     void on_comboBox_SensorTypeName_currentIndexChanged(int index);
-
-    void skt_connect_suc(int i);
-    void skt_connect_dis(int i);
-    void skt_error(int i);
-    void skt_read(int i);
-
-    void startUp();
-
-    void mainLoop();
-
-    void startCal(void);
-
-    void startSocketConnect(int i);
-
-
 
     void on_lineEdit_setPWM_textChanged(const QString &arg1);
 
@@ -284,6 +273,8 @@ private slots:
 
     void on_radioButton_setPWM_clicked();
 
+    void on_tbnCalManual_clicked();
+
 private:
     Ui::FSC_MainWindow *ui;
 
@@ -294,7 +285,7 @@ private:
     void DataInit(void);
     void dataInit_calStepInit(void);
     void calStepInfoFresh(void);
-
+    void calStepInfoFreshOnUI(void);
 
     void SocketDataInit(void);
     void SocketConnect(void);
@@ -314,6 +305,7 @@ private:
     void reqFMData(int indexFM);
     void reqSetPLC(void);
     void writePLC(void);
+    bool checkPlc(void);
 
     void flushSendBuf(void);
     void showFresh(void);
@@ -328,12 +320,15 @@ private:
     void calPlot(oneCalTag *calTag);
     void calDoing(oneCalTag *calTag);
     void calStop(oneCalTag *calTag);
+    void calFaultStop(oneCalTag *calTag);
+
+    void calGoingInfoLab(oneCalTag *calTag);
+    void calGoingInfoLabRemove(void);
 
     void makeCalRecordPrint(oneCalTag *calTag);
 
     void plotAddDataAndFresh(void);
     void plotFresh(void);
-
 
     void printInfo(QString str);
     void printInfoWithTime(QString str);
@@ -419,6 +414,7 @@ private:
     QVector<double> plotFMFlowTimeX;
     QVector<double> plotFMFlowValueY;
 
+    int     plotPosNumber = PLOT_VALUE_NUMBER;
     int     plotLoop;
     int     calOn;
     uint    calOnTime;
@@ -427,10 +423,13 @@ private:
 
     bool    scaleTestZero;
 
-    oneCalTag  oneCal;
-    oneCalTag  allCal[CAL_MAX_STEP];
-    bool       allCalNeedToReport = false;
-    bool       allCalAvailable[CAL_MAX_STEP];
+    bool        firstCal = true;
+    oneCalTag   oneCal;
+    oneCalTag   allCal[CAL_MAX_STEP];
+    bool        allCalNeedToReport = false;
+    bool        allCalAvailable[CAL_MAX_STEP];
+
+    bool        calManualDoing   =   false;
 
     QCheckBox   *checkBox_spanCal[SPAN_NUMBER];
     QCheckBox   *checkBox_spanCheck[SPAN_NUMBER];
@@ -442,16 +441,15 @@ private:
     QLineEdit   *lineEdit_FMSum[FLOWMETER_NUMBER];
     QLineEdit   *lineEdit_FMFlow[FLOWMETER_NUMBER];
 
-
     uint16_t    plcStateWrite = 0xffff;   // 泵一 泵二 bit6 放水阀 反向进水阀2 反向进水阀1 正向进水阀2 正向进水阀1 :靠近泵为1#阀
     uint16_t    plcStateRead = 0;
+    int         plcRWErr = 0;
     double      plcRevFlowRate;
     uint16_t    plcRevPWM;
 };
 
 class fsc_para_ini
 {
-
 public:
 
     QString type_name;
@@ -473,7 +471,6 @@ public:
 
 class fsc_global
 {
-
 public:
 
     static QVector <fsc_para_ini> para_ini;
@@ -484,7 +481,5 @@ public:
     static quint16 port_number[SOCKET_NUMBER];
     static QString ip[SOCKET_NUMBER];
 };
-
-
 
 #endif // FSC_MAINWINDOW_H

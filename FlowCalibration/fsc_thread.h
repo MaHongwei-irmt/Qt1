@@ -7,7 +7,6 @@
 
 #include "fsc_mainwindow.h"
 
-
 class FSC_Thread : public QThread
 {
     Q_OBJECT
@@ -20,34 +19,8 @@ public:
 protected:
     void run();
 
-    bool stop=false;
-
-
-
 signals:
     void signal_startScketInit(int i);
-
 };
-
-
-//#include <QObject>
-//#include<QThread>
-//#include<QtCore>
-
-//class MyThread : public QThread
-//{
-//    Q_OBJECT
-//public:
-//   explicit MyThread(QObject *parent = 0);
-//    ~MyThread();
-
-//public:
-//    void run();
-//    bool stop=false;
-//signals:
-//    void NumberChanged(int number);
-
-//};
-
 
 #endif // FSC_Thread_H

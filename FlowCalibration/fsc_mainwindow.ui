@@ -929,6 +929,19 @@ p, li { white-space: pre-wrap; }
       <string>参数：</string>
      </property>
     </widget>
+    <widget class="QLabel" name="label_calInfo">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>513</y>
+       <width>531</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>天平计算流速：</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox">
     <property name="geometry">
@@ -2430,7 +2443,7 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>1640</x>
       <y>30</y>
-      <width>101</width>
+      <width>151</width>
       <height>16</height>
      </rect>
     </property>
@@ -2495,7 +2508,7 @@ p, li { white-space: pre-wrap; }
      <rect>
       <x>1640</x>
       <y>40</y>
-      <width>101</width>
+      <width>151</width>
       <height>16</height>
      </rect>
     </property>

@@ -34,6 +34,7 @@ void FSC_MainWindow::startSocketConnect(int i)
 {
     (void)i;
 
+    delayMSec(200);
     SocketConnect();
     socketWellDone = true;
 }
@@ -46,7 +47,7 @@ void FSC_MainWindow::SocketConnect(void)
         if ( i == SOCKET_PLC_INDEX || i == SOCKET_SCALE_INDEX )
         {
 
-            FSCLOG << "SocketInit->connectToHost..." << fsc_global::ip[i] << fsc_global::port_number[i];;
+            FSCLOG << "SocketInit->connectToHost..." << fsc_global::ip[i] << fsc_global::port_number[i];
 
             fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
 
@@ -205,7 +206,6 @@ void FSC_MainWindow::skt_read(int i)
         {
             baSend->resize(3 + 220 +2);
 
-
             (*baSend)[0] = 4;
             (*baSend)[1] = 3;
             (*baSend)[2] = static_cast<char>(220);
@@ -214,7 +214,6 @@ void FSC_MainWindow::skt_read(int i)
             static float f = static_cast<float>(111.111);
 
             ba.resize(4);
-
 
             for (int i = 0; i < 55; i++)
             {
@@ -229,8 +228,6 @@ void FSC_MainWindow::skt_read(int i)
 
             }
 
-
-
             uint16_t crc = 0;
 
             crc = Checksum_computeChecksum( baSend->data(), 3 + 220);
@@ -243,8 +240,6 @@ void FSC_MainWindow::skt_read(int i)
         }
 
             break;
-
-
 
     }
 

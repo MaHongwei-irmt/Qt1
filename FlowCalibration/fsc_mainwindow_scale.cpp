@@ -1,7 +1,6 @@
 #include "fsc_mainwindow.h"
 #include "ui_fsc_mainwindow.h"
 
-
 //ststcon + fun code(read: 0x03) + register address(0x97) + register number(flow sum + systime + up ATOF + down ATOF + DTOF + 1~50 flow rate) +crc
 void FSC_MainWindow::reqFMSumRateMsg(QByteArray *buf, int station)
 {

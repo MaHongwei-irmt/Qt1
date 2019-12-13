@@ -181,6 +181,8 @@ void FSC_MainWindow::reqSetPLC(void)
 
 void FSC_MainWindow::writePLC(void)
 {
+    if (!revdSketPLC) return;
+
     QByteArray ba;
     QByteArray* baSnd= &sktBufSend[SOCKET_PLC_INDEX];
     float f = QString::number(showSetFlowRate, 'f', 0).toFloat();
@@ -255,7 +257,12 @@ bool FSC_MainWindow::parsePLC(int indexSkt)
     }
     if (plcStateWrite != plcStateRead)
     {
+        plcRWErr++;
         writePLC();
+    }
+    else
+    {
+        plcRWErr = 0;
     }
 
     ba[0] = (*rev)[11];
@@ -276,5 +283,11 @@ bool FSC_MainWindow::parsePLC(int indexSkt)
 
     showPlcFresh();
 
+    return true;
+}
+
+bool FSC_MainWindow::checkPlc(void)
+{
+    if (plcRWErr > 2) return false;
     return true;
 }

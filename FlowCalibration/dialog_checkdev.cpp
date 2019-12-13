@@ -4,7 +4,6 @@
 #include "ui_dialog_checkdev.h"
 #include "dialog_sensoraddr.h"
 
-
 Dialog_CheckDev::Dialog_CheckDev(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::Dialog_CheckDev)
@@ -26,7 +25,5 @@ void Dialog_CheckDev::on_pushButton_12_clicked()
 
 void Dialog_CheckDev::on_pushButton_4_clicked()
 {
-
-
 
 }

@@ -2265,7 +2265,7 @@ release/main.o: main.cpp FSC_MainWindow.h \
 		C:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/qdesktopwidget.h \
 		C:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtGui/qguiapplication.h \
 		C:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtGui/qinputmethod.h \
-		FSC_Thread.h \
+		fsc_thread.h \
 		C:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore/QThread \
 		fsc_mainwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\main.o main.cpp

@@ -3,14 +3,12 @@
 
 void FSC_MainWindow::startCal(void)
 {
-    //static bool firstCal = true;
-    static bool firstCal = false;
     QString str;
-
 
     switch (calOn)
     {
     case CAL_START:
+        calGoingInfoLabRemove();
 
         printInfoWithTime("启动标定->清空曲线图->打开放水阀");
         on_tbnPoltClear_clicked();
@@ -195,7 +193,6 @@ bool FSC_MainWindow::fillOneCal(oneCalTag *calTag)
             return false;
         }
 
-
         if ((calTag->step + 1)  > currentStep.stepTotal)
         {
             calTag->step = 0;
@@ -207,11 +204,25 @@ bool FSC_MainWindow::fillOneCal(oneCalTag *calTag)
         if (calTag->step > 0)
         {
             currentStep.stepCurrent++;
+            if (currentStep.stepCurrent > currentStep.stepTotal)
+            {
+                currentStep.stepCurrent = currentStep.stepTotal;
+            }
         }
 
         startCal_dir_type_span(&(calTag->calDirect), &(calTag->calTpye), &(calTag->calSpanPercent), &(calTag->calSpan) );
 
         calTag->step = currentStep.stepCurrent + 1;
+
+        if (calTag->step  > currentStep.stepTotal)
+        {
+            printInfoWithTime("步数错误，重新选择");
+
+            calTag->step = 0;
+            currentStep.stepCurrent = 0;
+
+            return false;
+        }
 
         calTag->state = ONE_CAL_START;
 
@@ -231,11 +242,11 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
 
         if (calTag->calDirect == START_CAL_DIRECT_FORWARD)
         {
-            str += "打开正向进水阀->";
+            str += "正向->";
         }
         else if (calTag->calDirect == START_CAL_DIRECT_REVERSE)
         {
-            str += "打开反向进水阀->";
+            str += "反向->";
         }
 
         if (calTag->calTpye == START_CAL_TYPE_CAL)
@@ -280,12 +291,28 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
                 showSetFlowRate = calTag->calSpan;
                 on_radioButton_setFlowRate_clicked();
 
+                calTag->stepRecord = calTag->step;
+                calGoingInfoLab(calTag);
+
                 if (calTag->calDirect == START_CAL_DIRECT_FORWARD)
                 {
                     if (showSetFlowRate > MAX_SPAN)
                     {
-                        on_tbnPump1ForwardOn_clicked();
-                        on_tbnPump2ForwardOn_clicked();
+                        printInfoWithTime("->关闭反向进水阀");
+                        closeReverseValveAll();
+                        writePLC();
+                        delayMSec(VALVE_EXCHANGE_DELAY);
+
+                        printInfo("->打开正向进水阀");
+                        openForwardValveAll();
+                        writePLC();
+                        delayMSec(VALVE_EXCHANGE_DELAY);
+
+                        printInfoWithTime("->启动1#泵->启动2#泵");
+                        pump1On();
+                        pump2On();
+                        writePLC();
+
                     }
                     else if (showSetFlowRate > MIN_SPAN)
                     {
@@ -301,8 +328,21 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
                 {
                     if (showSetFlowRate > MAX_SPAN)
                     {
-                        on_tbnPump1ReverseOn_clicked();
-                        on_tbnPump2ReverseOn_clicked();
+                        printInfoWithTime("->关闭正向进水阀");
+                        closeForwardValveAll();
+                        writePLC();
+                        delayMSec(VALVE_EXCHANGE_DELAY);
+
+                        printInfo("->打开反向进水阀");
+                        openReverseValveAll();
+                        writePLC();
+                        delayMSec(VALVE_EXCHANGE_DELAY);
+
+                        printInfoWithTime("->启动1#泵->启动2#泵");
+                        pump1On();
+                        pump2On();
+                        writePLC();
+
                     }
                     else if (showSetFlowRate > MIN_SPAN)
                     {
@@ -316,7 +356,6 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
 
                 calTag->state = ONE_CAL_GOING;
 
-                //calOn = CAL_PLOT_START;
                 oneCal.plotSelectedFMIndex  = ui->comboBox_PlotSenSel->currentIndex();
                 oneCal.plotSelectedFMStr  = ui->comboBox_PlotSenSel->currentText();
 
@@ -356,7 +395,7 @@ void FSC_MainWindow::calGoing(oneCalTag *calTag)
 
     calPlot(calTag);
 
-    if (calTag->plotPos++ > PLOT_VALUE_NUMBER)
+    if (calTag->plotPos++ > plotPosNumber)
     {
         calTag->state = ONE_CAL_POST_PROCESS;
 
@@ -413,7 +452,10 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
 
     if (calTag->step < 1) return;
 
-    allCal[calTag->step - 1] = *calTag;
+    if (calTag->stepRecord >= 0 && calTag->stepRecord < CAL_MAX_STEP)
+    {
+        allCal[calTag->stepRecord] = *calTag;
+    }
 
     allCalNeedToReport = true;
     allCalAvailable[calTag->step - 1]  = true;
@@ -499,7 +541,15 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *calTag)
 
 void FSC_MainWindow::showPlotFresh(void)
 {
-    ui->lineEdit_plotTime->setText(QString::number(oneCal.plotPos * 0.5, 'f', 1) + "s");
+    if(calOn == CAL_PLOT_START)
+    {
+        ui->lineEdit_plotTime->setText(QString::number(plotLoop * 0.5, 'f', 1) + "s");
+    }
+    else
+    {
+        ui->lineEdit_plotTime->setText(QString::number(oneCal.plotPos * 0.5, 'f', 1) + "s");
+    }
+
 }
 
 bool FSC_MainWindow::checkWaterEmpty(void)
@@ -514,3 +564,163 @@ void FSC_MainWindow::on_comboBox_PlotSenSel_currentIndexChanged(const QString &a
 
     calPlot(&oneCal);
 }
+
+void FSC_MainWindow::on_tbnCalManual_clicked()
+{
+    calGoingInfoLabRemove();
+
+    if (!calManualDoing)
+    {
+        pump1Off();
+        pump2Off();
+        writePLC();
+        delayMSec(1000);
+
+        printInfoWithTime("请放空天平上容器->关闭放水阀->天平去皮清零->在手动控制区设定流量或设定占空比->正向或反向进水启动水泵");
+
+        calManualDoing = true;
+
+    }
+}
+
+void FSC_MainWindow::plotAddDataAndFresh(void)
+{
+
+    if (calOn == CAL_PLOT_START)
+    {
+
+        plotScaleSumTimeX.append( plotLoop * 0.5 );
+        plotSTDFMSumTimeX.append( plotLoop * 0.5 );
+        plotSTDFMFlowTimeX.append( plotLoop * 0.5 );
+        plotFMSumTimeX.append( plotLoop * 0.5 );
+        plotFMFlowTimeX.append( plotLoop * 0.5 );
+
+        plotScaleSumValueY.append(showScaleSum);
+        plotSTDFMSumValueY.append(showSTDFMSum);
+        plotSTDFMFlowValueY.append(showSTDFMFlow);
+        plotFMSumValueY.append(showFMSum[0] + 100);
+        plotFMFlowValueY.append(showFMFlow[0]);
+
+        plotFresh();
+
+        if (plotLoop++ > plotPosNumber)
+        {
+            calOn = CAL_STATE_STOP;
+
+            pump1Off();
+            pump2Off();
+            writePLC();
+            delayMSec(1000);
+            printInfoWithTime("进水过程结束，请手动填入并写入参数值");
+        }
+    }
+}
+
+
+void FSC_MainWindow::plotFresh(void)
+{
+    ui->MyCustomPlot->legend->setVisible(true);
+    ui->MyCustomPlot->legend->setFont(QFont("Helvetica", 8));
+
+    ui->MyCustomPlot->graph(0)->setData(plotScaleSumTimeX, plotScaleSumValueY);
+    ui->MyCustomPlot->graph(1)->setData(plotSTDFMSumTimeX, plotSTDFMSumValueY);
+    ui->MyCustomPlot->graph(2)->setData(plotSTDFMFlowTimeX, plotSTDFMFlowValueY);
+    ui->MyCustomPlot->graph(3)->setData(plotFMSumTimeX, plotFMSumValueY);
+    ui->MyCustomPlot->graph(4)->setData(plotFMFlowTimeX, plotFMFlowValueY);
+
+    ui->MyCustomPlot->rescaleAxes(true);
+    ui->MyCustomPlot->replot();
+
+}
+
+void FSC_MainWindow::calFaultStop(oneCalTag *calTag)
+{
+    calOn = CAL_STATE_STOP;
+    printInfoWithTime(" 故障！标定暂停");
+
+    calTag->state = ONE_CAL_EMPTY;
+    calTag->plotPos = 0;
+    calTag->plotTimeX.clear();
+    calTag->plotScaleSumValue.clear();
+    calTag->plotSTDFMSumValue.clear();
+    calTag->plotSTDFMRateValue.clear();
+
+    for (int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        calTag->plotFMSumValue[i].clear();
+        calTag->plotFMRateValue[i].clear();
+    }
+
+    if (calTag->step > 0)
+    {
+        calTag->step--;
+    }
+    if (currentStep.stepCurrent)
+    {
+        currentStep.stepCurrent--;;
+    }
+
+    pump1Off();
+    pump2Off();
+    writePLC();
+    delayMSec(PUMP_START_DELAY);
+
+    closeForwardValveAll();
+    closeReverseValveAll();
+    writePLC();
+}
+
+void FSC_MainWindow::calGoingInfoLab(oneCalTag *calTag)
+{
+    QString str;
+
+    str = "型号:";
+    str += currentStep.type_name;
+    str += " 量程：";
+    str += QString::number(currentStep.span_ml_per_min, 'f', 1);
+    str += "  第(";
+    if(calTag->stepRecord > 0)
+    {
+        str += QString::number(calTag->stepRecord);
+    }
+    else
+    {
+        str +="1";
+    }
+    str += ")步 ";
+    str += QString::number(calTag->calSpanPercent);
+    str += "%量程:";
+    str += QString::number(calTag->calSpan, 'f', 1);
+
+    if (calTag->calDirect == START_CAL_DIRECT_FORWARD)
+    {
+        str += " 正向";
+    }
+    else if (calTag->calDirect == START_CAL_DIRECT_REVERSE)
+    {
+        str += " 反向";
+    }
+
+    if (calTag->calTpye == START_CAL_TYPE_CAL)
+    {
+        str += " 标定";
+    }
+    else if (calTag->calTpye == START_CAL_TYPE_CORRECT)
+    {
+        str += " 修正";
+    }
+    else if (calTag->calTpye == START_CAL_TYPE_CHECK)
+    {
+         str += " 验证";
+    }
+
+    ui->label_calInfo->setText(str);
+    ui->label_calInfo->setVisible(true);
+}
+
+void FSC_MainWindow::calGoingInfoLabRemove(void)
+{
+    ui->label_calInfo->setVisible(false);;
+}
+
+

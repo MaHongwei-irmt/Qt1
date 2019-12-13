@@ -93,6 +93,7 @@ public:
     QToolButton *tbnPoltClear;
     QLineEdit *lineEdit_calParameter;
     QLabel *label_46;
+    QLabel *label_calInfo;
     QGroupBox *groupBox;
     QComboBox *comboBox_PlotSenSel;
     QLabel *label_25;
@@ -469,6 +470,9 @@ public:
         label_46 = new QLabel(MyCustomPlot);
         label_46->setObjectName(QStringLiteral("label_46"));
         label_46->setGeometry(QRect(816, 513, 31, 16));
+        label_calInfo = new QLabel(MyCustomPlot);
+        label_calInfo->setObjectName(QStringLiteral("label_calInfo"));
+        label_calInfo->setGeometry(QRect(160, 513, 531, 16));
         groupBox = new QGroupBox(centralwidget);
         groupBox->setObjectName(QStringLiteral("groupBox"));
         groupBox->setGeometry(QRect(277, 260, 1291, 561));
@@ -831,7 +835,7 @@ public:
         label_90->setGeometry(QRect(45, 402, 41, 16));
         labelplcState = new QLabel(centralwidget);
         labelplcState->setObjectName(QStringLiteral("labelplcState"));
-        labelplcState->setGeometry(QRect(1640, 30, 101, 16));
+        labelplcState->setGeometry(QRect(1640, 30, 151, 16));
         tbnPump1ReverseOff = new QToolButton(centralwidget);
         tbnPump1ReverseOff->setObjectName(QStringLiteral("tbnPump1ReverseOff"));
         tbnPump1ReverseOff->setGeometry(QRect(280, 830, 91, 21));
@@ -846,7 +850,7 @@ public:
         revPWM->setGeometry(QRect(1710, 20, 54, 12));
         labelplcStateRead = new QLabel(centralwidget);
         labelplcStateRead->setObjectName(QStringLiteral("labelplcStateRead"));
-        labelplcStateRead->setGeometry(QRect(1640, 40, 101, 16));
+        labelplcStateRead->setGeometry(QRect(1640, 40, 151, 16));
         tbnCalManual = new QToolButton(centralwidget);
         tbnCalManual->setObjectName(QStringLiteral("tbnCalManual"));
         tbnCalManual->setGeometry(QRect(1020, 790, 71, 21));
@@ -1126,6 +1130,7 @@ public:
         tbnPoltClear->setText(QApplication::translate("FSC_MainWindow", "\346\270\205\347\251\272", Q_NULLPTR));
         lineEdit_calParameter->setText(QApplication::translate("FSC_MainWindow", "0.1", Q_NULLPTR));
         label_46->setText(QApplication::translate("FSC_MainWindow", "\345\217\202\346\225\260\357\274\232", Q_NULLPTR));
+        label_calInfo->setText(QApplication::translate("FSC_MainWindow", "\345\244\251\345\271\263\350\256\241\347\256\227\346\265\201\351\200\237\357\274\232", Q_NULLPTR));
         groupBox->setTitle(QApplication::translate("FSC_MainWindow", "\345\217\230\345\214\226\346\233\262\347\272\277", Q_NULLPTR));
         comboBox_PlotSenSel->clear();
         comboBox_PlotSenSel->insertItems(0, QStringList()

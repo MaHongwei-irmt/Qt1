@@ -58,10 +58,8 @@ void FSC_MainWindow::startUp()
     mainLoopTimer->start(MAIN_LOOP_CYCLE);
 }
 
-
 void FSC_MainWindow::SocketDataInit(void)
 {
-
     for (int i = 0; i < SOCKET_NUMBER; i++)
     {
         sktConed[i] = false;
@@ -94,8 +92,6 @@ void FSC_MainWindow::SocketDataInit(void)
     connect(sktDisconMapper, SIGNAL(mapped(int)), this, SLOT(skt_connect_dis(int)));
     connect(sktErrMapper, SIGNAL(mapped(int)), this, SLOT(skt_error(int)));
     connect(sktReadMapper, SIGNAL(mapped(int)), this, SLOT(skt_read(int)));
-
-
 }
 
 void FSC_MainWindow::uiReInit(void)
@@ -106,7 +102,6 @@ void FSC_MainWindow::uiReInit(void)
     int screen_height = mm.height();
     FSCLOG << screen_width << screen_height;
 
-
     int fixedWidth = 1600;
     int fixedHeight = 870;
 
@@ -115,22 +110,13 @@ void FSC_MainWindow::uiReInit(void)
     int btnH = 20;
 
     this->setFixedSize(fixedWidth, fixedHeight);
-    //setWindowFlags(Qt::CustomizeWindowHint | Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint| Qt::WindowMaximizeButtonHint);
     setWindowFlags( Qt::WindowMinimizeButtonHint | Qt::WindowCloseButtonHint| Qt::WindowMaximizeButtonHint);
 
     QString qss = tr("QWidget { font-size: %0px; } #btnWbTest{ width: %1px; height: %2px; }").arg(fontSize).arg(btnW).arg(btnH);
     this->setStyleSheet(qss);
 
-//    QFont Ft("Microsoft YaHei");
-//    Ft.setPointSize(6);
-
-//    ui->label_13->setFont(Ft);
-//    ui->label_29->setFont(Ft);
-//    ui->label_30->setFont(Ft);
-
     int x = 85;
     int y = 143;
-
     for (int i = 0; i < SPAN_NUMBER; i++)
     {
 
@@ -159,7 +145,6 @@ void FSC_MainWindow::uiReInit(void)
         checkBox_spanCorrectReverse[i]->move(x + 120, y + (SPAN_NUMBER - i - 1) * 19);
         checkBox_spanCorrectReverse[i]->show();
      }
-
 
     lineEdit_FMSum[0] = ui->lineEdit_FM_1;
     lineEdit_FMSum[1] = ui->lineEdit_FM_2;
@@ -208,12 +193,13 @@ void FSC_MainWindow::uiReInit(void)
     }
     connect(buttonDebugMapper, SIGNAL(mapped(int)), this, SLOT(buttonDebug_clicked(int)));
 
-
     ui->tbnSysDevCheck->setVisible(false);
     ui->tbnManualCheckDev->setVisible(false);
 
     ui->tbnPump1ReverseOff->setVisible(false);
     ui->tbnPump2ReverseOff->setVisible(false);
+
+    calGoingInfoLabRemove();
 }
 
 void FSC_MainWindow::socketParaInit(void)
@@ -222,6 +208,16 @@ void FSC_MainWindow::socketParaInit(void)
 
     fsc_global::ip_PLC = configIni->value("IP_ADDRESS/PLC" ).toString();
     fsc_global::ip_RS_Server = configIni->value("IP_ADDRESS/RS_SERVER" ).toString();
+
+    if (fsc_global::ip_PLC.size() == 0)
+    {
+        fsc_global::ip_PLC = "192.168.1.220";
+    }
+    if (fsc_global::ip_RS_Server.size() == 0)
+    {
+        fsc_global::ip_RS_Server = "192.168.1.221";
+    }
+
 
     fsc_global::ip[0] = fsc_global::ip_PLC;
     for (int i = 1; i < SOCKET_NUMBER; i++)
@@ -237,6 +233,17 @@ void FSC_MainWindow::socketParaInit(void)
 
     FSCLOG << fsc_global::ip_PLC;
     FSCLOG << fsc_global::ip_RS_Server;
+
+    if (configIni->value("IP_ADDRESS/DEBUG_NON_FIRST" ).toString() != "")
+    {
+        firstCal = ! configIni->value("IP_ADDRESS/DEBUG_NON_FIRST" ).toBool();
+    }
+    if (configIni->value("IP_ADDRESS/DEBUG_PLOT_POS_NUMBER" ).toString() != "")
+    {
+        plotPosNumber = configIni->value("IP_ADDRESS/DEBUG_PLOT_POS_NUMBER" ).toInt();
+    }
+
+    delete configIni;
 }
 
 void FSC_MainWindow::ParaInit(void)
@@ -296,7 +303,6 @@ void FSC_MainWindow::ParaInit(void)
     }
 
     delete configIni;
-
 }
 
 void FSC_MainWindow::PlotInit(void)
@@ -370,6 +376,18 @@ void FSC_MainWindow::DataInit(void)
     plotLoop = 0;
     calOn = CAL_STATE_STOP;
 
+    plotScaleSumTimeX.clear();
+    plotSTDFMSumTimeX.clear();
+    plotSTDFMFlowTimeX.clear();
+    plotFMSumTimeX.clear();
+    plotFMFlowTimeX.clear();
+
+    plotScaleSumValueY.clear();
+    plotSTDFMSumValueY.clear();
+    plotSTDFMFlowValueY.clear();
+    plotFMSumValueY.clear();
+    plotFMFlowValueY.clear();
+
     ui->textBrow_calInfo->setText(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 程序启动"));
     dataInit_calStepInit();
     calStepInfoFresh();
@@ -440,6 +458,102 @@ void FSC_MainWindow::dataInit_calStepInit(void)
     currentStep.stepCurrent = 0;
 }
 
+void FSC_MainWindow::calStepInfoFreshOnUI(void)
+{
+    QString str;
+    int stepShow = currentStep.stepCurrent;
+    int stepTotalShow = 0;
+
+    printInfoWithTime(" 型号：");
+    printInfo(currentStep.type_name);
+    printInfo("量程：");
+    printInfo(QString::number(currentStep.span_ml_per_min, 'f', 3));
+    printInfo(" |-> ");
+
+    if (oneCal.step != 0)
+    {
+        stepShow++;
+        if (stepShow > currentStep.stepTotal)
+        {
+            stepShow = currentStep.stepTotal;
+        }
+    }
+
+    for (int i = SPAN_NUMBER - 1; i >= 0; i--)
+    {
+        if (currentStep.spanCal[i])
+        {
+            stepTotalShow++;
+
+            if (stepTotalShow > stepShow)
+            {
+                str += "(" + QString::number(stepTotalShow) + ")";
+                str += QString::number((i + 1) * 10) + "%量程标定-> ";
+            }
+        }
+        if (currentStep.spanCorrect[i])
+        {
+            stepTotalShow++;
+
+            if (stepTotalShow > stepShow)
+            {
+                str += "(" + QString::number(stepTotalShow) + ")";
+                str += QString::number((i + 1) * 10) + "%量程修正-> ";
+            }
+        }
+        if (currentStep.spanCheck[i])
+        {
+            stepTotalShow++;
+
+            if (stepTotalShow > stepShow)
+            {
+
+                str += "(" + QString::number(stepTotalShow) + ")";
+                str += QString::number((i + 1) * 10) + "%量程验证-> ";
+            }
+
+        }
+    }
+
+
+    for (int i = SPAN_NUMBER - 1; i >= 0; i--)
+    {
+        if (currentStep.spanCalReverse[i])
+        {
+            stepTotalShow++;
+
+            if (stepTotalShow > stepShow)
+            {
+                str += "(" + QString::number(stepTotalShow) + ")";
+                str += "反向" + QString::number((i + 1) * 10) + "%量程标定-> ";
+            }
+        }
+        if (currentStep.spanCorrectReverse[i])
+        {
+            stepTotalShow++;
+
+            if (stepTotalShow > stepShow)
+            {
+                str += "(" + QString::number(stepTotalShow) + ")";
+                str += "反向" + QString::number((i + 1) * 10) + "%量程修正-> ";
+            }
+        }
+        if (currentStep.spanCheckReverse[i])
+        {
+            stepTotalShow++;
+
+            if (stepTotalShow > stepShow)
+            {
+                str += "(" + QString::number(stepTotalShow) + ")";
+                str += "反向" + QString::number((i + 1) * 10) + "%量程验证-> ";
+            }
+        }
+    }
+
+    str += "|\r\n";
+    printInfo(str);
+}
+
 void FSC_MainWindow::calStepInfoFresh(void)
 {
     QString str;
@@ -450,7 +564,7 @@ void FSC_MainWindow::calStepInfoFresh(void)
     str += currentStep.type_name;
     str += "  ";
     str += "量程：";
-    str += QString::number(currentStep.span_ml_per_min, 'f', 3);;
+    str += QString::number(currentStep.span_ml_per_min, 'f', 3);
     str += " |-> ";
 
     currentStep.stepTotal = 0;
@@ -736,87 +850,6 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
     return false;
 }
 
-void FSC_MainWindow::plotAddDataAndFresh(void)
-{
-    //static uint poltNew = QDateTime::currentDateTime().toTime_t();
-    //uint16_t newMS;
-
-    if (calOn == CAL_PLOT_START)
-    {
-//        if (plotLoop == 0)
-//        {
-//            poltNew = QDateTime::currentDateTime().toTime_t();
-//        }
-
-        //NewMS = (QDateTime::currentDateTime().toTime_t() - poltNew) * 1000 + static_cast<uint>( QTime::currentTime().msec());
-
-        //plotScaleSumTimeX.append( NewMS );
-
-        //plotScaleSumTimeX.append( plotLoop * 0.5 );
-        //plotScaleSumValueY.append(showFMSum[0]);
-
-
-        //plotScaleSumValueY.append(showScaleSum);
-
-
-        //FSCLOG << NewMS  << "   "  << showFMSum[0];
-
-        //FSCLOG << plotLoop * 0.5  << "   "  << showFMSum[0];
-
-
-
-        plotScaleSumTimeX.append( plotLoop * 0.5 );
-        plotSTDFMSumTimeX.append( plotLoop * 0.5 );
-        plotSTDFMFlowTimeX.append( plotLoop * 0.5 );
-        plotFMSumTimeX.append( plotLoop * 0.5 );
-        plotFMFlowTimeX.append( plotLoop * 0.5 );
-
-        plotScaleSumValueY.append(showScaleSum);
-        plotSTDFMSumValueY.append(showSTDFMSum);
-        plotSTDFMFlowValueY.append(showSTDFMFlow);
-        plotFMSumValueY.append(showFMSum[0] + 100);
-        plotFMFlowValueY.append(showFMFlow[0]);
-
-
-
-        FSCLOG << plotLoop * 0.5  << "   "  << showScaleSum;
-
-        plotFresh();
-
-        if (plotLoop++ > PLOT_VALUE_NUMBER)
-        {
-            calOn = CAL_STATE_STOP;
-            //plotLoop = 0;
-            //plotScaleSumTimeX.clear();
-
-        }
-
-    }
-    else
-    {
-
-//        plotScaleSumTimeX.clear();
-//        plotScaleSumValueY.clear();
-    }
-
-}
-
-void FSC_MainWindow::plotFresh(void)
-{
-    ui->MyCustomPlot->legend->setVisible(true);
-    ui->MyCustomPlot->legend->setFont(QFont("Helvetica", 8));
-
-    ui->MyCustomPlot->graph(0)->setData(plotScaleSumTimeX, plotScaleSumValueY);
-    ui->MyCustomPlot->graph(1)->setData(plotSTDFMSumTimeX, plotSTDFMSumValueY);
-    ui->MyCustomPlot->graph(2)->setData(plotSTDFMFlowTimeX, plotSTDFMFlowValueY);
-    ui->MyCustomPlot->graph(3)->setData(plotFMSumTimeX, plotFMSumValueY);
-    ui->MyCustomPlot->graph(4)->setData(plotFMFlowTimeX, plotFMFlowValueY);
-
-    ui->MyCustomPlot->rescaleAxes(true);
-    ui->MyCustomPlot->replot();
-
-}
-
 void FSC_MainWindow::flushSendBuf(void)
 {
     for (int i = 0; i < SOCKET_NUMBER; i++)
@@ -866,7 +899,7 @@ void FSC_MainWindow::showFresh(void)
     if (calOn == CAL_STATE_STOP)
     {
         ui->tbnModifyFMTypePara->setEnabled(true);
-        ui->tbnCalStart->setEnabled(true);
+        ui->tbnCalStart->setEnabled(sktConed[SOCKET_PLC_INDEX] && revdSketPLC && !std::isnan(showScaleSum));
 
         ui->lineEdit_setFlowRate->setEnabled(revdSketPLC);
         ui->lineEdit_setPWM->setEnabled(revdSketPLC);
@@ -897,6 +930,15 @@ void FSC_MainWindow::showFresh(void)
         ui->lineEdit_calParameter->setEnabled(false);
         ui->tbnCalManualWrite->setEnabled(false);
         ui->tbnCalManualCorrectWrite->setEnabled(false);
+
+    }
+
+    if (calOn != CAL_STATE_STOP)
+    {
+        if (!sktConed[SOCKET_PLC_INDEX] || !revdSketPLC || (std::isnan(showScaleSum) && !sktConed[SOCKET_SCALE_INDEX])|| !checkPlc() )
+        {
+            calFaultStop(&oneCal);
+        }
     }
 
     showPlotFresh();
@@ -971,16 +1013,8 @@ void FSC_MainWindow::on_tbnCalStart_clicked()
 void FSC_MainWindow::on_tbnCalTermination_clicked()
 {
     calOn = CAL_STATE_STOP;
-
-    ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n\r\n" + \
-                                  QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 终止"));
-
-    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
-
-    //currentStep.stepCurrent = 0;
-
+    printInfoWithTime(" 终止");
     calStop(&oneCal);
-
 }
 
 void FSC_MainWindow::on_tbnPoltClear_clicked()
@@ -1039,8 +1073,42 @@ void FSC_MainWindow::on_tbnCalStepNext_clicked()
         currentStep.stepCurrent = currentStep.stepTotal;
     }
 
-    calStepInfoFresh();
+    if (calOn == CAL_STATE_STOP ||calOn == CAL_PLOT_START)
+    {
+        calStepInfoFresh();
+    }
+    else
+    {
+        calStepInfoFreshOnUI();
+    }
+}
 
+void FSC_MainWindow::on_tbnCalStepPre_clicked()
+{
+
+    if (currentStep.stepCurrent > 0)
+    {
+        currentStep.stepCurrent--;
+    }
+    else
+    {
+        oneCal.step = 0;
+    }
+
+
+    if (oneCal.step >= currentStep.stepTotal)
+    {
+        oneCal.step--;
+    }
+
+    if (calOn == CAL_STATE_STOP ||calOn == CAL_PLOT_START)
+    {
+        calStepInfoFresh();
+    }
+    else
+    {
+        calStepInfoFreshOnUI();
+    }
 }
 
 void FSC_MainWindow::on_tbnModifyFMTypePara_clicked()
@@ -1057,16 +1125,6 @@ void FSC_MainWindow::on_tbnModifyFMTypePara_clicked()
     allCalNeedToReport = false;
     oneCal.step = 0;
     currentStep.stepCurrent = 0;
-}
-
-void FSC_MainWindow::on_tbnCalStepPre_clicked()
-{
-    if (currentStep.stepCurrent > 0)
-    {
-       currentStep.stepCurrent--;
-    }
-
-    calStepInfoFresh();
 }
 
 void FSC_MainWindow::on_tbnCalPause_clicked()

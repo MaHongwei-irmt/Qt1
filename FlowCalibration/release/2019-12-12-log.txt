@@ -1,0 +1,563 @@
+:0: "2019-12-12 15:45:17:259"   start
+:0: "2019-12-12 15:45:17:708" 1920 1040
+:0: "2019-12-12 15:45:17:831" w.show()
+:0: "2019-12-12 15:45:17:836" "192.168.1.220"
+:0: "2019-12-12 15:45:17:839" "192.168.1.221"
+:0: "2019-12-12 15:45:17:842" thread start ...
+:0: "2019-12-12 15:45:17:847" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-12 15:45:17:912" SocketDataInit
+:0: "2019-12-12 15:45:17:916" "XY_DD_1"
+:0: "2019-12-12 15:45:17:925" "XY-DD-2"
+:0: "2019-12-12 15:45:17:929" "XY-DD-3"
+:0: "2019-12-12 15:45:17:933" "XY-DD-4"
+:0: "2019-12-12 15:45:17:936" "XY-DD-5"
+:0: "2019-12-12 15:45:17:940" "XY-DD-7"
+:0: "2019-12-12 15:45:17:943" "XY-DD-FGG-9877"
+:0: "2019-12-12 15:45:17:947" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-12 15:45:17:956" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-12 15:45:17:960" "8"
+:0: "2019-12-12 15:45:17:963" ParaInit
+:0: "2019-12-12 15:45:17:968" DataInit
+:0: "2019-12-12 15:45:17:971" plcDataInit
+:0: "2019-12-12 15:45:17:996" PlotInit
+:0: "2019-12-12 15:45:18:078" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-12 15:45:18:081" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-12 15:45:18:259" wait socket start up ...
+:0: "2019-12-12 15:45:18:396" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-12 15:45:18:399" signal_startScketInit
+:0: "2019-12-12 15:45:18:399" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-12 15:45:18:410" SocketInit->connectToHost
+:0: "2019-12-12 15:45:18:414" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-12 15:45:18:418" SocketInit->connectToHost
+:0: "2019-12-12 15:45:18:423" "0 socket con"
+:0: "2019-12-12 15:45:18:427" "1 socket con"
+:0: "2019-12-12 15:45:18:431" "2"  socket con retry
+:0: "2019-12-12 15:45:18:435" "3"  socket con retry
+:0: "2019-12-12 15:45:18:439" "4"  socket con retry
+:0: "2019-12-12 15:45:18:444" "5"  socket con retry
+:0: "2019-12-12 15:45:18:448" "6"  socket con retry
+:0: "2019-12-12 15:45:18:452" "7"  socket con retry
+:0: "2019-12-12 15:45:18:456" "8"  socket con retry
+:0: "2019-12-12 15:45:18:460" "9"  socket con retry
+:0: "2019-12-12 15:45:18:471" "10"  socket con retry
+:0: "2019-12-12 15:45:18:477" "11"  socket con retry
+:0: "2019-12-12 15:45:18:481" "12"  socket con retry
+:0: "2019-12-12 15:45:18:485" "13"  socket con retry
+:0: "2019-12-12 15:45:18:490" "14"  socket con retry
+:0: "2019-12-12 15:45:18:494" "15"  socket con retry
+:0: "2019-12-12 15:45:18:499" "16"  socket con retry
+:0: "2019-12-12 15:45:18:503" "2 socket con"
+:0: "2019-12-12 15:45:18:507" "14 socket con"
+:0: "2019-12-12 15:45:18:511" "8 socket con"
+:0: "2019-12-12 15:45:18:514" "4 socket con"
+:0: "2019-12-12 15:45:18:534" "9 socket con"
+:0: "2019-12-12 15:45:18:538" "11 socket con"
+:0: "2019-12-12 15:45:18:542" "12 socket con"
+:0: "2019-12-12 15:45:18:546" "5 socket con"
+:0: "2019-12-12 15:45:18:549" "3 socket con"
+:0: "2019-12-12 15:45:18:553" "16 socket con"
+:0: "2019-12-12 15:45:18:557" "7 socket con"
+:0: "2019-12-12 15:45:18:561" "6 socket con"
+:0: "2019-12-12 15:45:18:565" "15 socket con"
+:0: "2019-12-12 15:45:18:569" "10 socket con"
+:0: "2019-12-12 15:45:18:573" "13 socket con"
+:0: "2019-12-12 15:45:30:578"   start
+:0: "2019-12-12 15:45:31:017" 1920 1040
+:0: "2019-12-12 15:45:31:156" w.show()
+:0: "2019-12-12 15:45:31:161" ""
+:0: "2019-12-12 15:45:31:171" ""
+:0: "2019-12-12 15:45:31:175" thread start ...
+:0: "2019-12-12 15:45:31:190" SocketInit->connectToHostTry1... "" 2100
+:0: "2019-12-12 15:45:31:207" SocketInit->connectToHostTry1 "" 2100
+:0: "2019-12-12 15:45:31:211" SocketInit->connectToHostTry2... "" 4001
+:0: "2019-12-12 15:45:31:215" SocketInit->connectToHostTry2 "" 4001
+:0: "2019-12-12 15:45:31:220" signal_startScketInit
+:0: "2019-12-12 15:45:31:232" SocketInit->connectToHost... "" 2100
+:0: "2019-12-12 15:47:03:164"   start
+:0: "2019-12-12 15:47:03:650" 1920 1040
+:0: "2019-12-12 15:47:03:788" w.show()
+:0: "2019-12-12 15:47:03:792" ""
+:0: "2019-12-12 15:47:03:796" ""
+:0: "2019-12-12 15:47:03:800" thread start ...
+:0: "2019-12-12 15:47:03:805" SocketInit->connectToHostTry1... "" 2100
+:0: "2019-12-12 15:47:03:817" SocketInit->connectToHostTry1 "" 2100
+:0: "2019-12-12 15:47:03:830" SocketInit->connectToHostTry2... "" 4001
+:0: "2019-12-12 15:47:03:836" SocketInit->connectToHostTry2 "" 4001
+:0: "2019-12-12 15:47:03:840" signal_startScketInit
+:0: "2019-12-12 15:47:03:853" SocketInit->connectToHost... "" 2100
+:0: "2019-12-12 15:48:46:679"   start
+:0: "2019-12-12 15:48:47:081" 1920 1040
+:0: "2019-12-12 15:48:47:209" w.show()
+:0: "2019-12-12 15:48:47:214" ""
+:0: "2019-12-12 15:48:47:217" ""
+:0: "2019-12-12 15:48:47:221" thread start ...
+:0: "2019-12-12 15:48:47:227" SocketInit->connectToHostTry1... "" 2100
+:0: "2019-12-12 15:48:47:244" SocketInit->connectToHostTry1 "" 2100
+:0: "2019-12-12 15:48:47:249" SocketInit->connectToHostTry2... "" 4001
+:0: "2019-12-12 15:48:47:254" SocketInit->connectToHostTry2 "" 4001
+:0: "2019-12-12 15:48:47:258" signal_startScketInit
+:0: "2019-12-12 15:48:47:275" SocketInit->connectToHost... "" 2100
+:0: "2019-12-12 15:52:43:697"   start
+:0: "2019-12-12 15:52:44:156" 1920 1040
+:0: "2019-12-12 15:52:44:281" w.show()
+:0: "2019-12-12 15:52:44:286" ""
+:0: "2019-12-12 15:52:44:300" ""
+:0: "2019-12-12 15:52:44:304" thread start ...
+:0: "2019-12-12 15:52:44:309" SocketInit->connectToHostTry1... "" 2100
+:0: "2019-12-12 15:52:44:321" SocketInit->connectToHostTry1 "" 2100
+:0: "2019-12-12 15:52:44:325" SocketInit->connectToHostTry2... "" 4001
+:0: "2019-12-12 15:52:44:330" SocketInit->connectToHostTry2 "" 4001
+:0: "2019-12-12 15:52:44:336" signal_startScketInit
+:0: "2019-12-12 15:52:44:366" SocketDataInit
+:0: "2019-12-12 15:52:44:370" ParaInit
+:0: "2019-12-12 15:52:44:375" DataInit
+:0: "2019-12-12 15:52:44:379" plcDataInit
+:0: "2019-12-12 15:52:44:401" PlotInit
+:0: "2019-12-12 15:52:44:554" SocketInit->connectToHost... "" 2100
+:0: "2019-12-12 15:52:44:559" SocketInit->connectToHost
+:0: "2019-12-12 15:52:44:565" SocketInit->connectToHost... "" 4001
+:0: "2019-12-12 15:52:44:568" SocketInit->connectToHost
+:0: "2019-12-12 15:52:44:572" "info Socket: 0   Host not found"
+:0: "2019-12-12 15:52:44:576" "info Socket: 1   Host not found"
+:0: "2019-12-12 15:52:50:145" "0"  socket con retry
+:0: "2019-12-12 15:52:50:157" "1"  socket con retry
+:0: "2019-12-12 15:52:50:174" "info Socket: 0   Host not found"
+:0: "2019-12-12 15:52:50:178" "info Socket: 1   Host not found"
+:0: "2019-12-12 15:52:56:145" "0"  socket con retry
+:0: "2019-12-12 15:52:56:157" "1"  socket con retry
+:0: "2019-12-12 15:52:56:162" "info Socket: 0   Host not found"
+:0: "2019-12-12 15:52:56:174" "info Socket: 1   Host not found"
+:0: "2019-12-12 15:53:04:385"   start
+:0: "2019-12-12 15:53:04:795" 1920 1040
+:0: "2019-12-12 15:53:04:933" w.show()
+:0: "2019-12-12 15:53:04:938" ""
+:0: "2019-12-12 15:53:04:942" ""
+:0: "2019-12-12 15:53:04:946" thread start ...
+:0: "2019-12-12 15:53:04:951" SocketInit->connectToHostTry1... "" 2100
+:0: "2019-12-12 15:53:04:980" SocketInit->connectToHostTry1 "" 2100
+:0: "2019-12-12 15:53:04:984" SocketInit->connectToHostTry2... "" 4001
+:0: "2019-12-12 15:53:04:988" SocketInit->connectToHostTry2 "" 4001
+:0: "2019-12-12 15:53:04:992" signal_startScketInit
+:0: "2019-12-12 15:53:05:008" SocketDataInit
+:0: "2019-12-12 15:53:05:012" ParaInit
+:0: "2019-12-12 15:53:05:017" DataInit
+:0: "2019-12-12 15:53:05:021" plcDataInit
+:0: "2019-12-12 15:53:05:042" PlotInit
+:0: "2019-12-12 15:53:05:198" SocketInit->connectToHost... "" 2100
+:0: "2019-12-12 15:53:05:203" SocketInit->connectToHost
+:0: "2019-12-12 15:53:05:207" SocketInit->connectToHost... "" 4001
+:0: "2019-12-12 15:53:05:217" SocketInit->connectToHost
+:0: "2019-12-12 15:53:05:221" "info Socket: 0   Host not found"
+:0: "2019-12-12 15:53:05:224" "info Socket: 1   Host not found"
+:0: "2019-12-12 15:53:11:136"   start
+:0: "2019-12-12 15:53:11:561" 1920 1040
+:0: "2019-12-12 15:53:11:695" w.show()
+:0: "2019-12-12 15:53:11:706" "192.168.1.220"
+:0: "2019-12-12 15:53:11:711" "192.168.1.221"
+:0: "2019-12-12 15:53:11:722" thread start ...
+:0: "2019-12-12 15:53:11:727" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-12 15:53:11:771" SocketDataInit
+:0: "2019-12-12 15:53:11:775" ParaInit
+:0: "2019-12-12 15:53:11:785" DataInit
+:0: "2019-12-12 15:53:11:789" plcDataInit
+:0: "2019-12-12 15:53:11:811" PlotInit
+:0: "2019-12-12 15:53:11:944" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-12 15:53:11:948" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-12 15:53:12:065" wait socket start up ...
+:0: "2019-12-12 15:53:12:255" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-12 15:53:12:259" signal_startScketInit
+:0: "2019-12-12 15:53:12:315" wait socket start up ...
+:0: "2019-12-12 15:53:12:459" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-12 15:53:12:467" SocketInit->connectToHost
+:0: "2019-12-12 15:53:12:471" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-12 15:53:12:477" SocketInit->connectToHost
+:0: "2019-12-12 15:53:12:482" "0 socket con"
+:0: "2019-12-12 15:53:12:487" "1 socket con"
+:0: "2019-12-12 15:53:12:493" "2"  socket con retry
+:0: "2019-12-12 15:53:12:499" "3"  socket con retry
+:0: "2019-12-12 15:53:12:506" "4"  socket con retry
+:0: "2019-12-12 15:53:12:512" "5"  socket con retry
+:0: "2019-12-12 15:53:12:518" "6"  socket con retry
+:0: "2019-12-12 15:53:12:527" "7"  socket con retry
+:0: "2019-12-12 15:53:12:536" "8"  socket con retry
+:0: "2019-12-12 15:53:12:542" "9"  socket con retry
+:0: "2019-12-12 15:53:12:549" "10"  socket con retry
+:0: "2019-12-12 15:53:12:555" "11"  socket con retry
+:0: "2019-12-12 15:53:12:562" "12"  socket con retry
+:0: "2019-12-12 15:53:12:568" "13"  socket con retry
+:0: "2019-12-12 15:53:12:575" "14"  socket con retry
+:0: "2019-12-12 15:53:12:581" "15"  socket con retry
+:0: "2019-12-12 15:53:12:587" "16"  socket con retry
+:0: "2019-12-12 15:53:12:591" "10 socket con"
+:0: "2019-12-12 15:53:12:596" "15 socket con"
+:0: "2019-12-12 15:53:12:600" "4 socket con"
+:0: "2019-12-12 15:53:12:604" "8 socket con"
+:0: "2019-12-12 15:53:12:608" "12 socket con"
+:0: "2019-12-12 15:53:12:612" "16 socket con"
+:0: "2019-12-12 15:53:12:617" "5 socket con"
+:0: "2019-12-12 15:53:12:621" "9 socket con"
+:0: "2019-12-12 15:53:12:625" "13 socket con"
+:0: "2019-12-12 15:53:12:630" "6 socket con"
+:0: "2019-12-12 15:53:12:634" "11 socket con"
+:0: "2019-12-12 15:53:12:638" "2 socket con"
+:0: "2019-12-12 15:53:12:643" "14 socket con"
+:0: "2019-12-12 15:53:12:647" "3 socket con"
+:0: "2019-12-12 15:53:12:652" "7 socket con"
+:0: "2019-12-12 15:53:17:911"   start
+:0: "2019-12-12 15:53:18:399" 1920 1040
+:0: "2019-12-12 15:53:18:532" w.show()
+:0: "2019-12-12 15:53:18:537" "192.168.1.220"
+:0: "2019-12-12 15:53:18:541" "192.168.1.221"
+:0: "2019-12-12 15:53:18:550" thread start ...
+:0: "2019-12-12 15:53:18:555" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-12 15:53:18:619" SocketDataInit
+:0: "2019-12-12 15:53:18:623" ParaInit
+:0: "2019-12-12 15:53:18:629" DataInit
+:0: "2019-12-12 15:53:18:634" plcDataInit
+:0: "2019-12-12 15:53:18:655" PlotInit
+:0: "2019-12-12 15:53:18:784" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-12 15:53:18:788" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-12 15:53:18:909" wait socket start up ...
+:0: "2019-12-12 15:53:19:097" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-12 15:53:19:102" signal_startScketInit
+:0: "2019-12-12 15:53:19:159" wait socket start up ...
+:0: "2019-12-12 15:53:19:302" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-12 15:53:19:309" SocketInit->connectToHost
+:0: "2019-12-12 15:53:19:313" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-12 15:53:19:318" SocketInit->connectToHost
+:0: "2019-12-12 15:53:19:323" "0 socket con"
+:0: "2019-12-12 15:53:19:327" "1 socket con"
+:0: "2019-12-12 15:53:19:332" "2"  socket con retry
+:0: "2019-12-12 15:53:19:346" "3"  socket con retry
+:0: "2019-12-12 15:53:19:362" "4"  socket con retry
+:0: "2019-12-12 15:53:19:367" "5"  socket con retry
+:0: "2019-12-12 15:53:19:372" "6"  socket con retry
+:0: "2019-12-12 15:53:19:377" "7"  socket con retry
+:0: "2019-12-12 15:53:19:382" "8"  socket con retry
+:0: "2019-12-12 15:53:19:387" "9"  socket con retry
+:0: "2019-12-12 15:53:19:392" "10"  socket con retry
+:0: "2019-12-12 15:53:19:397" "11"  socket con retry
+:0: "2019-12-12 15:53:19:402" "12"  socket con retry
+:0: "2019-12-12 15:53:19:407" "13"  socket con retry
+:0: "2019-12-12 15:53:19:412" "14"  socket con retry
+:0: "2019-12-12 15:53:19:423" "15"  socket con retry
+:0: "2019-12-12 15:53:19:437" "16"  socket con retry
+:0: "2019-12-12 15:53:19:443" "4 socket con"
+:0: "2019-12-12 15:53:19:449" "8 socket con"
+:0: "2019-12-12 15:53:19:453" "16 socket con"
+:0: "2019-12-12 15:53:19:458" "11 socket con"
+:0: "2019-12-12 15:53:19:464" "2 socket con"
+:0: "2019-12-12 15:53:19:469" "13 socket con"
+:0: "2019-12-12 15:53:19:474" "3 socket con"
+:0: "2019-12-12 15:53:19:479" "7 socket con"
+:0: "2019-12-12 15:53:19:484" "15 socket con"
+:0: "2019-12-12 15:53:19:489" "10 socket con"
+:0: "2019-12-12 15:53:19:494" "14 socket con"
+:0: "2019-12-12 15:53:19:499" "6 socket con"
+:0: "2019-12-12 15:53:19:503" "5 socket con"
+:0: "2019-12-12 15:53:19:508" "12 socket con"
+:0: "2019-12-12 15:53:19:518" "9 socket con"
+:0: "2019-12-12 16:01:30:261"   start
+:0: "2019-12-12 16:01:30:712" 1920 1040
+:0: "2019-12-12 16:01:30:838" w.show()
+:0: "2019-12-12 16:01:30:847" "192.168.1.220"
+:0: "2019-12-12 16:01:30:851" ""
+:0: "2019-12-12 16:01:30:856" thread start ...
+:0: "2019-12-12 16:01:30:863" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-12 16:01:30:927" SocketDataInit
+:0: "2019-12-12 16:01:30:932" ParaInit
+:0: "2019-12-12 16:01:30:938" DataInit
+:0: "2019-12-12 16:01:30:943" plcDataInit
+:0: "2019-12-12 16:01:30:965" PlotInit
+:0: "2019-12-12 16:01:31:080" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-12 16:01:31:084" SocketInit->connectToHostTry2... "" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to ""
+:0: "2019-12-12 16:01:31:222" wait socket start up ...
+:0: "2019-12-12 16:01:31:393" SocketInit->connectToHostTry2 "" 4001
+:0: "2019-12-12 16:01:31:398" signal_startScketInit
+:0: "2019-12-12 16:01:31:475" wait socket start up ...
+:0: "2019-12-12 16:01:31:598" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-12 16:01:31:606" SocketInit->connectToHost
+:0: "2019-12-12 16:01:31:613" SocketInit->connectToHost... "" 4001
+:0: "2019-12-12 16:01:31:617" SocketInit->connectToHost
+:0: "2019-12-12 16:01:31:621" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:01:31:626" "0 socket con"
+:0: "2019-12-12 16:01:37:223" "1"  socket con retry
+:0: "2019-12-12 16:01:37:227" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:01:43:223" "1"  socket con retry
+:0: "2019-12-12 16:01:43:228" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:01:49:225" "1"  socket con retry
+:0: "2019-12-12 16:01:49:237" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:01:55:230" "1"  socket con retry
+:0: "2019-12-12 16:01:55:235" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:02:01:236" "1"  socket con retry
+:0: "2019-12-12 16:02:01:241" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:02:07:226" "1"  socket con retry
+:0: "2019-12-12 16:02:07:231" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:02:10:063"   start
+:0: "2019-12-12 16:02:10:566" 1920 1040
+:0: "2019-12-12 16:02:10:693" w.show()
+:0: "2019-12-12 16:02:10:699" "192.168.1.220"
+:0: "2019-12-12 16:02:10:704" ""
+:0: "2019-12-12 16:02:10:709" thread start ...
+:0: "2019-12-12 16:02:10:715" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-12 16:02:10:734" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-12 16:02:10:740" SocketInit->connectToHostTry2... "" 4001
+:0: "2019-12-12 16:02:10:746" SocketInit->connectToHostTry2 "" 4001
+:0: "2019-12-12 16:02:10:751" signal_startScketInit
+:0: "2019-12-12 16:02:10:769" SocketDataInit
+:0: "2019-12-12 16:02:10:774" ParaInit
+:0: "2019-12-12 16:02:10:779" DataInit
+:0: "2019-12-12 16:02:10:784" plcDataInit
+:0: "2019-12-12 16:02:10:807" PlotInit
+:0: "2019-12-12 16:02:10:962" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-12 16:02:10:969" SocketInit->connectToHost
+:0: "2019-12-12 16:02:10:974" SocketInit->connectToHost... "" 4001
+:0: "2019-12-12 16:02:10:987" SocketInit->connectToHost
+:0: "2019-12-12 16:02:10:992" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:02:10:997" "0 socket con"
+:0: "2019-12-12 16:02:11:002" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-12 16:02:13:221" "1"  socket con retry
+:0: "2019-12-12 16:02:13:226" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:02:16:051" "0"  socket con retry
+:0: "2019-12-12 16:02:16:056" "1"  socket con retry
+:0: "2019-12-12 16:02:16:061" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:02:16:066" "0 socket con"
+:0: "2019-12-12 16:02:16:071" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-12 16:02:19:225" "1"  socket con retry
+:0: "2019-12-12 16:02:19:230" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:02:22:054" "0"  socket con retry
+:0: "2019-12-12 16:02:22:066" "1"  socket con retry
+:0: "2019-12-12 16:02:22:078" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:02:22:086" "0 socket con"
+:0: "2019-12-12 16:02:22:091" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-12 16:02:25:222" "1"  socket con retry
+:0: "2019-12-12 16:02:25:227" "info Socket: 1   Host not found"
+:0: "2019-12-12 16:03:22:830"   start
+:0: "2019-12-12 16:03:23:326" 1920 1040
+:0: "2019-12-12 16:03:23:458" w.show()
+:0: "2019-12-12 16:03:23:464" "192.168.1.220"
+:0: "2019-12-12 16:03:23:469" "192.168.1.221"
+:0: "2019-12-12 16:03:23:474" thread start ...
+:0: "2019-12-12 16:03:23:481" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-12 16:03:23:536" SocketDataInit
+:0: "2019-12-12 16:03:23:542" ParaInit
+:0: "2019-12-12 16:03:23:547" DataInit
+:0: "2019-12-12 16:03:23:551" plcDataInit
+:0: "2019-12-12 16:03:23:574" PlotInit
+:0: "2019-12-12 16:03:23:698" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-12 16:03:23:702" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-12 16:03:23:817" wait socket start up ...
+:0: "2019-12-12 16:03:24:012" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-12 16:03:24:016" signal_startScketInit
+:0: "2019-12-12 16:03:24:066" wait socket start up ...
+:0: "2019-12-12 16:03:24:217" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-12 16:03:24:224" SocketInit->connectToHost
+:0: "2019-12-12 16:03:24:238" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-12 16:03:24:243" SocketInit->connectToHost
+:0: "2019-12-12 16:03:24:248" "1 socket con"
+:0: "2019-12-12 16:03:24:252" "2"  socket con retry
+:0: "2019-12-12 16:03:24:257" "3"  socket con retry
+:0: "2019-12-12 16:03:24:263" "4"  socket con retry
+:0: "2019-12-12 16:03:24:268" "5"  socket con retry
+:0: "2019-12-12 16:03:24:274" "6"  socket con retry
+:0: "2019-12-12 16:03:24:280" "7"  socket con retry
+:0: "2019-12-12 16:03:24:285" "8"  socket con retry
+:0: "2019-12-12 16:03:24:291" "9"  socket con retry
+:0: "2019-12-12 16:03:24:296" "10"  socket con retry
+:0: "2019-12-12 16:03:24:301" "11"  socket con retry
+:0: "2019-12-12 16:03:24:307" "12"  socket con retry
+:0: "2019-12-12 16:03:24:312" "13"  socket con retry
+:0: "2019-12-12 16:03:24:317" "14"  socket con retry
+:0: "2019-12-12 16:03:24:322" "15"  socket con retry
+:0: "2019-12-12 16:03:24:328" "16"  socket con retry
+:0: "2019-12-12 16:03:24:333" "0 socket con"
+:0: "2019-12-12 16:03:24:338" "13 socket con"
+:0: "2019-12-12 16:03:24:343" "4 socket con"
+:0: "2019-12-12 16:03:24:348" "14 socket con"
+:0: "2019-12-12 16:03:24:352" "3 socket con"
+:0: "2019-12-12 16:03:24:357" "5 socket con"
+:0: "2019-12-12 16:03:24:362" "8 socket con"
+:0: "2019-12-12 16:03:24:368" "7 socket con"
+:0: "2019-12-12 16:03:24:373" "11 socket con"
+:0: "2019-12-12 16:03:24:378" "16 socket con"
+:0: "2019-12-12 16:03:24:383" "15 socket con"
+:0: "2019-12-12 16:03:24:388" "9 socket con"
+:0: "2019-12-12 16:03:24:392" "10 socket con"
+:0: "2019-12-12 16:03:24:398" "12 socket con"
+:0: "2019-12-12 16:03:24:402" "2 socket con"
+:0: "2019-12-12 16:03:24:407" "6 socket con"
+:0: "2019-12-12 16:49:22:673"   start
+:0: "2019-12-12 16:49:23:167" 1920 1040
+:0: "2019-12-12 16:49:23:294" w.show()
+:0: "2019-12-12 16:49:23:300" "192.168.1.220"
+:0: "2019-12-12 16:49:23:305" "192.168.1.221"
+:0: "2019-12-12 16:49:23:315" thread start ...
+:0: "2019-12-12 16:49:23:323" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-12 16:49:23:378" SocketDataInit
+:0: "2019-12-12 16:49:23:383" ParaInit
+:0: "2019-12-12 16:49:23:390" DataInit
+:0: "2019-12-12 16:49:23:395" plcDataInit
+:0: "2019-12-12 16:49:23:418" PlotInit
+:0: "2019-12-12 16:49:23:544" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-12 16:49:23:548" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-12 16:49:23:678" wait socket start up ...
+:0: "2019-12-12 16:49:23:859" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-12 16:49:23:864" signal_startScketInit
+:0: "2019-12-12 16:49:23:925" wait socket start up ...
+:0: "2019-12-12 16:49:24:064" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-12 16:49:24:071" SocketInit->connectToHost
+:0: "2019-12-12 16:49:24:077" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-12 16:49:24:083" SocketInit->connectToHost
+:0: "2019-12-12 16:49:24:090" "0 socket con"
+:0: "2019-12-12 16:49:24:107" "1 socket con"
+:0: "2019-12-12 16:49:24:112" "2"  socket con retry
+:0: "2019-12-12 16:49:24:118" "3"  socket con retry
+:0: "2019-12-12 16:49:24:124" "4"  socket con retry
+:0: "2019-12-12 16:49:24:130" "5"  socket con retry
+:0: "2019-12-12 16:49:24:135" "6"  socket con retry
+:0: "2019-12-12 16:49:24:144" "7"  socket con retry
+:0: "2019-12-12 16:49:24:150" "8"  socket con retry
+:0: "2019-12-12 16:49:24:175" "9"  socket con retry
+:0: "2019-12-12 16:49:24:181" "10"  socket con retry
+:0: "2019-12-12 16:49:24:187" "11"  socket con retry
+:0: "2019-12-12 16:49:24:192" "12"  socket con retry
+:0: "2019-12-12 16:49:24:198" "13"  socket con retry
+:0: "2019-12-12 16:49:24:204" "14"  socket con retry
+:0: "2019-12-12 16:49:24:209" "15"  socket con retry
+:0: "2019-12-12 16:49:24:215" "16"  socket con retry
+:0: "2019-12-12 16:49:24:221" "16 socket con"
+:0: "2019-12-12 16:49:24:227" "2 socket con"
+:0: "2019-12-12 16:49:24:235" "3 socket con"
+:0: "2019-12-12 16:49:24:241" "13 socket con"
+:0: "2019-12-12 16:49:24:246" "14 socket con"
+:0: "2019-12-12 16:49:24:253" "9 socket con"
+:0: "2019-12-12 16:49:24:259" "5 socket con"
+:0: "2019-12-12 16:49:24:265" "7 socket con"
+:0: "2019-12-12 16:49:24:270" "11 socket con"
+:0: "2019-12-12 16:49:24:276" "15 socket con"
+:0: "2019-12-12 16:49:24:281" "8 socket con"
+:0: "2019-12-12 16:49:24:287" "12 socket con"
+:0: "2019-12-12 16:49:24:292" "6 socket con"
+:0: "2019-12-12 16:49:24:297" "10 socket con"
+:0: "2019-12-12 16:49:24:315" "4 socket con"
+:0: "2019-12-12 16:49:31:157"   start
+:0: "2019-12-12 16:49:31:639" 1920 1040
+:0: "2019-12-12 16:49:31:769" w.show()
+:0: "2019-12-12 16:49:31:775" "192.168.1.220"
+:0: "2019-12-12 16:49:31:780" "192.168.1.221"
+:0: "2019-12-12 16:49:31:786" thread start ...
+:0: "2019-12-12 16:49:31:792" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-12 16:49:31:851" SocketDataInit
+:0: "2019-12-12 16:49:31:857" ParaInit
+:0: "2019-12-12 16:49:31:864" DataInit
+:0: "2019-12-12 16:49:31:870" plcDataInit
+:0: "2019-12-12 16:49:31:894" PlotInit
+:0: "2019-12-12 16:49:32:022" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-12 16:49:32:032" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-12 16:49:32:146" wait socket start up ...
+:0: "2019-12-12 16:49:32:350" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-12 16:49:32:355" signal_startScketInit
+:0: "2019-12-12 16:49:32:394" wait socket start up ...
+:0: "2019-12-12 16:49:32:555" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-12 16:49:32:563" SocketInit->connectToHost
+:0: "2019-12-12 16:49:32:568" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-12 16:49:32:573" SocketInit->connectToHost
+:0: "2019-12-12 16:49:32:579" "0 socket con"
+:0: "2019-12-12 16:49:32:584" "1 socket con"
+:0: "2019-12-12 16:49:32:596" "2"  socket con retry
+:0: "2019-12-12 16:49:32:602" "3"  socket con retry
+:0: "2019-12-12 16:49:32:607" "4"  socket con retry
+:0: "2019-12-12 16:49:32:613" "5"  socket con retry
+:0: "2019-12-12 16:49:32:619" "6"  socket con retry
+:0: "2019-12-12 16:49:32:625" "7"  socket con retry
+:0: "2019-12-12 16:49:32:631" "8"  socket con retry
+:0: "2019-12-12 16:49:32:637" "9"  socket con retry
+:0: "2019-12-12 16:49:32:642" "10"  socket con retry
+:0: "2019-12-12 16:49:32:648" "11"  socket con retry
+:0: "2019-12-12 16:49:32:654" "12"  socket con retry
+:0: "2019-12-12 16:49:32:659" "13"  socket con retry
+:0: "2019-12-12 16:49:32:665" "14"  socket con retry
+:0: "2019-12-12 16:49:32:671" "15"  socket con retry
+:0: "2019-12-12 16:49:32:676" "16"  socket con retry
+:0: "2019-12-12 16:49:32:682" "12 socket con"
+:0: "2019-12-12 16:49:32:687" "14 socket con"
+:0: "2019-12-12 16:49:32:693" "7 socket con"
+:0: "2019-12-12 16:49:32:698" "11 socket con"
+:0: "2019-12-12 16:49:32:704" "4 socket con"
+:0: "2019-12-12 16:49:32:709" "8 socket con"
+:0: "2019-12-12 16:49:32:715" "15 socket con"
+:0: "2019-12-12 16:49:32:720" "2 socket con"
+:0: "2019-12-12 16:49:32:726" "6 socket con"
+:0: "2019-12-12 16:49:32:732" "5 socket con"
+:0: "2019-12-12 16:49:32:738" "9 socket con"
+:0: "2019-12-12 16:49:32:744" "10 socket con"
+:0: "2019-12-12 16:49:32:749" "16 socket con"
+:0: "2019-12-12 16:49:32:755" "3 socket con"
+:0: "2019-12-12 16:49:32:761" "13 socket con"
+:0: "2019-12-12 16:49:33:840"   start
+:0: "2019-12-12 16:49:34:296" 1920 1040
+:0: "2019-12-12 16:49:34:436" w.show()
+:0: "2019-12-12 16:49:34:441" "192.168.1.220"
+:0: "2019-12-12 16:49:34:447" "192.168.1.221"
+:0: "2019-12-12 16:49:34:452" thread start ...
+:0: "2019-12-12 16:49:34:459" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-12 16:49:34:479" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-12 16:49:34:487" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: "2019-12-12 16:49:34:505" SocketDataInit
+:0: "2019-12-12 16:49:34:518" ParaInit
+:0: "2019-12-12 16:49:34:525" DataInit
+:0: "2019-12-12 16:49:34:530" plcDataInit
+:0: "2019-12-12 16:49:34:554" PlotInit
+:0: "2019-12-12 16:49:34:802" wait socket start up ...
+:0: "2019-12-12 16:49:35:056" wait socket start up ...
+:0: "2019-12-12 16:49:35:304" wait socket start up ...
+:0: "2019-12-12 16:49:35:549" wait socket start up ...
+:0: "2019-12-12 16:49:35:806" wait socket start up ...
+:0: "2019-12-12 16:49:36:053" wait socket start up ...
+:0: "2019-12-12 16:49:36:299" wait socket start up ...
+:0: "2019-12-12 16:49:36:550" wait socket start up ...
+:0: "2019-12-12 16:49:36:803" wait socket start up ...
+:0: "2019-12-12 16:49:37:054" wait socket start up ...
+:0: "2019-12-12 16:49:37:301" wait socket start up ...
+:0: "2019-12-12 16:49:37:496" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-12 16:49:37:501" signal_startScketInit
+:0: "2019-12-12 16:49:37:551" wait socket start up ...
+:0: "2019-12-12 16:49:37:702" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-12 16:49:37:710" SocketInit->connectToHost
+:0: "2019-12-12 16:49:37:718" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-12 16:49:37:735" SocketInit->connectToHost
+:0: "2019-12-12 16:49:37:741" "0 socket con"
+:0: "2019-12-12 16:49:37:747" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-12 16:49:42:146" "info Socket: 1   Connection refused"
+:0: "2019-12-12 16:49:43:051" "0"  socket con retry
+:0: "2019-12-12 16:49:43:057" "1"  socket con retry
+:0: "2019-12-12 16:49:43:065" "0 socket con"
+:0: "2019-12-12 16:49:43:071" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-12 16:49:47:455" "info Socket: 1   Connection refused"
+:0: "2019-12-12 16:49:49:051" "0"  socket con retry
+:0: "2019-12-12 16:49:49:056" "1"  socket con retry
+:0: "2019-12-12 16:49:49:065" "0 socket con"
+:0: "2019-12-12 16:49:49:071" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-12 16:49:53:454" "info Socket: 1   Connection refused"
+:0: "2019-12-12 16:49:55:054" "0"  socket con retry
+:0: "2019-12-12 16:49:55:061" "1"  socket con retry
+:0: "2019-12-12 16:49:55:066" "0 socket con"
+:0: "2019-12-12 16:49:55:077" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-12 16:49:59:458" "info Socket: 1   Connection refused"
+:0: "2019-12-12 16:50:01:055" "0"  socket con retry
+:0: "2019-12-12 16:50:01:068" "1"  socket con retry
+:0: "2019-12-12 16:50:01:073" "0 socket con"
+:0: "2019-12-12 16:50:01:078" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-12 16:50:05:459" "info Socket: 1   Connection refused"
+:0: "2019-12-12 16:50:07:053" "0"  socket con retry
+:0: "2019-12-12 16:50:07:061" "1"  socket con retry
+:0: "2019-12-12 16:50:07:066" "0 socket con"
+:0: "2019-12-12 16:50:07:074" "info Socket: 0 192.168.1.220  The remote host closed the connection"
+:0: "2019-12-12 16:50:11:454" "info Socket: 1   Connection refused"
