@@ -28,7 +28,7 @@ void FSC_MainWindow::printInfoWithTime(QString str)
 
 void FSC_MainWindow::plcDataInit(void)
 {
-    //plcStateWrite = 0;
+
 }
 
 void FSC_MainWindow::openForwardValve1(void)
@@ -179,6 +179,25 @@ void FSC_MainWindow::reqSetPLC(void)
     flushSendBuf();
 }
 
+void FSC_MainWindow::reqSetPLCWithSTFM(void)
+{
+    QByteArray ba;
+    QByteArray* baSnd= &sktBufSend[SOCKET_PLC_INDEX];
+
+    baSnd->resize(3);
+
+    baSnd->data()[0]=0x10;
+
+    ba.resize(sizeof(uint16_t));
+    uint16_t i = static_cast<uint16_t>(showSTDFMFlow);
+    memcpy(ba.data(), &i, sizeof(uint16_t));
+
+    baSnd->data()[1] = ba[1];
+    baSnd->data()[2] = ba[0];
+
+    flushSendBuf();
+}
+
 void FSC_MainWindow::writePLC(void)
 {
     if (!revdSketPLC) return;
@@ -217,13 +236,69 @@ void FSC_MainWindow::writePLC(void)
     flushSendBuf();
 }
 
-bool FSC_MainWindow::parsePLC(int indexSkt)
+bool FSC_MainWindow::parsePLCNoSTFM(int indexSkt)
 {
     QByteArray *rev = &sktBufRev[indexSkt];
     QByteArray ba;
     float f;
 
     if (indexSkt != 0 )
+    {
+        return false;
+    }
+
+    revdSketPLC = true;
+
+    if (sktBufRev[0].size() < 4)
+    {
+        return false;
+    }
+
+    ba.resize(sizeof(float));
+    ba[0] = (*rev)[3];
+    ba[1] = (*rev)[2];
+    ba[2] = (*rev)[1];
+    ba[3] = (*rev)[0];
+    memcpy(&f, ba.data(), sizeof (f));
+    plcRevFlowRate = static_cast<double>(f);
+
+    ba[0] = (*rev)[5];
+    ba[1] = (*rev)[4];
+    memcpy(&plcRevPWM, ba.data(), sizeof (uint16_t));
+
+    ba[0] = (*rev)[6];
+    ba[1] = (*rev)[7];
+    memcpy(&plcStateRead, ba.data(), sizeof (uint16_t));
+
+    if (plcStateWrite == 0xffff)
+    {
+        plcStateWrite = plcStateRead;
+        writePLC();
+    }
+    if (plcStateWrite != plcStateRead)
+    {
+        plcRWErr++;
+        writePLC();
+    }
+    else
+    {
+        plcRWErr = 0;
+    }
+
+    (*rev).resize(0);
+
+    showPlcFresh();
+
+    return true;
+}
+
+bool FSC_MainWindow::parsePLC(int indexSkt)
+{
+    QByteArray *rev = &sktBufRev[indexSkt];
+    QByteArray ba;
+    float f;
+
+    if (indexSkt != SOCKET_PLC_INDEX )
     {
         return false;
     }

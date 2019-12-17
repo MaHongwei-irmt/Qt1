@@ -71,6 +71,7 @@ void FSC_MainWindow::skt_connect_suc(int i)
 
     for (int i = SOCKET_SCALE_INDEX; i < SOCKET_NUMBER; i++)
     {
+
         if (! sktConed[i] &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
         {
 
@@ -199,6 +200,9 @@ void FSC_MainWindow::skt_read(int i)
         break;
 
     case SOCKET_FLOWM10_INDEX:
+
+        //break;
+
     case SOCKET_FLOWM11_INDEX:
 
          QByteArray * baSend = &sktBufSend[i];
@@ -243,7 +247,7 @@ void FSC_MainWindow::skt_read(int i)
 
     }
 
-    parsePLC(i);
+    parsePLCNoSTFM(i);
     preParseFMMsg(i);
     parseFMSumRateMsg(i);
 

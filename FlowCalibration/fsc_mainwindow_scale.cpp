@@ -1,6 +1,25 @@
 #include "fsc_mainwindow.h"
 #include "ui_fsc_mainwindow.h"
 
+void FSC_MainWindow::reqFMData(int indexFM)
+{
+    if (indexFM < SOCKET_STD_FLOWM_INDEX)
+    {
+        return;
+    }
+
+    if (sktRespondOk[indexFM] || (sktReqTime[indexFM] + FM_REQ_TIMEOUT) < QDateTime::currentDateTime().toTime_t())
+    {
+        reqFMSumRateMsg(&sktBufSend[indexFM], FM_STATION_ADDRESS);
+        flushSendBuf();
+
+        sktRespondOk[indexFM] = false;
+        sktReqTime[indexFM] = QDateTime::currentDateTime().toTime_t();
+
+    }
+
+}
+
 //ststcon + fun code(read: 0x03) + register address(0x97) + register number(flow sum + systime + up ATOF + down ATOF + DTOF + 1~50 flow rate) +crc
 void FSC_MainWindow::reqFMSumRateMsg(QByteArray *buf, int station)
 {
@@ -121,6 +140,8 @@ bool FSC_MainWindow::parseFMSumRateMsg(int indexSkt)
     {
         showSTDFMSum = static_cast<double>(f);
         showSTDFMFlow = static_cast<double>(f1);
+
+        reqSetPLCWithSTFM();
     }
     else
     {
@@ -129,6 +150,8 @@ bool FSC_MainWindow::parseFMSumRateMsg(int indexSkt)
 
 
     }
+
+    sktRespondOk[indexSkt] = true;
 
     return true;
 
@@ -149,17 +172,5 @@ void FSC_MainWindow::reqScaleZero(void)
     sktBufSend[SOCKET_SCALE_INDEX][0]=0x1B;
     sktBufSend[SOCKET_SCALE_INDEX][1]=0x74;
 
-    flushSendBuf();
-}
-
-
-void FSC_MainWindow::reqFMData(int indexFM)
-{
-    if (indexFM < SOCKET_STD_FLOWM_INDEX)
-    {
-        return;
-    }
-
-    reqFMSumRateMsg(&sktBufSend[indexFM], FM_STATION_ADDRESS);
     flushSendBuf();
 }

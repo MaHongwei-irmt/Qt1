@@ -17,7 +17,8 @@ QString                 fsc_global::ip[SOCKET_NUMBER];
 FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::FSC_MainWindow),
     mainLoopTimer(new QTimer(this)),
     startUpTimer(new QTimer(this)),
-    calTimer(new QTimer(this))
+    calTimer(new QTimer(this)),
+    STFMTimer(new QTimer(this))
 {
     ui->setupUi(this);
 
@@ -25,6 +26,8 @@ FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui
 
     connect(startUpTimer, SIGNAL(timeout()), this, SLOT(startUp()));
     startUpTimer->start(200);
+
+    connect(STFMTimer, SIGNAL(timeout()), this, SLOT(startSTFM()));
 }
 
 FSC_MainWindow::~FSC_MainWindow()
@@ -177,6 +180,7 @@ void FSC_MainWindow::uiReInit(void)
     {
         sktBufRev[i].resize(0);
         sktBufSend[i].resize(0);
+        sktRespondOk[i] = true;
 
         sktDataState[i] = DATA_READ_OK;
 
@@ -204,6 +208,7 @@ void FSC_MainWindow::uiReInit(void)
 
 void FSC_MainWindow::socketParaInit(void)
 {
+    quint16 i = 0;
     QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
 
     fsc_global::ip_PLC = configIni->value("IP_ADDRESS/PLC" ).toString();
@@ -220,16 +225,14 @@ void FSC_MainWindow::socketParaInit(void)
 
 
     fsc_global::ip[0] = fsc_global::ip_PLC;
-    for (int i = 1; i < SOCKET_NUMBER; i++)
+    fsc_global::port_number[0] = 2100;
+
+    for (i = 1; i < SOCKET_NUMBER; i++)
     {
         fsc_global::ip[i] = fsc_global::ip_RS_Server;
-    }
-
-    fsc_global::port_number[0] = 2100;
-    for(quint16 i = 1; i < SOCKET_NUMBER; i++)
-    {
         fsc_global::port_number[i] = 4000 + i;
     }
+
 
     FSCLOG << fsc_global::ip_PLC;
     FSCLOG << fsc_global::ip_RS_Server;
@@ -242,6 +245,19 @@ void FSC_MainWindow::socketParaInit(void)
     {
         plotPosNumber = configIni->value("IP_ADDRESS/DEBUG_PLOT_POS_NUMBER" ).toInt();
     }
+    for(i = 0; i < SOCKET_NUMBER; i++)
+    {
+        if (configIni->value("IP_ADDRESS/DEBUG_SOCKET_" +  QString::number(i)).toString() != "")
+        {
+            debugSkt[i] =  configIni->value("IP_ADDRESS/DEBUG_SOCKET_" +  QString::number(i)).toBool();
+        }
+    }
+    if (configIni->value("IP_ADDRESS/POLL_CYCLE_STFM" ).toString() != "")
+    {
+        pollCycleSTFM = configIni->value("IP_ADDRESS/POLL_CYCLE_STFM" ).toInt();
+        FSCLOG << "pollCycleSTFM=" << pollCycleSTFM;
+    }
+
 
     delete configIni;
 }
@@ -660,7 +676,7 @@ void FSC_MainWindow::mainLoop(void)
 
     if ( sktConed[SOCKET_PLC_INDEX] && ( (j % (POLL_PLC_CYCLE / MAIN_LOOP_CYCLE)) == 0) )
     {
-        reqSetPLC();
+        reqSetPLCWithSTFM();
     }
 
     if ( sktConed[SOCKET_SCALE_INDEX] && ( (j % (POLL_SCALE_CYCLE / MAIN_LOOP_CYCLE)) == 0) )
@@ -677,6 +693,11 @@ void FSC_MainWindow::mainLoop(void)
 
     if ( sktConed[SOCKET_SCALE_INDEX] && ( (j % (POLL_FM_CYCLE / MAIN_LOOP_CYCLE)) == 0) )
     {
+        if (!STFMTimer->isActive())
+        {
+            STFMTimer->start(pollCycleSTFM);
+        }
+
         reqFMData(SOCKET_FLOWM1_INDEX);
         reqFMData(SOCKET_FLOWM2_INDEX);
         reqFMData(SOCKET_FLOWM3_INDEX);
@@ -744,6 +765,18 @@ void FSC_MainWindow::mainLoop(void)
     {
         calTimer->start(MS_500);
     }
+}
+
+
+void FSC_MainWindow::startSTFM(void)
+{
+    if ( sktConed[SOCKET_SCALE_INDEX]  )
+    {
+
+        reqFMData(SOCKET_STD_FLOWM_INDEX);
+
+    }
+
 }
 
 int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent, double *span)
@@ -857,9 +890,7 @@ void FSC_MainWindow::flushSendBuf(void)
 
         if (sktConed[i] && sktBufSend[i].size() > 0)
         {
-            fsc_global::sktTcp[i]->write(sktBufSend[i]);
-            fsc_global::sktTcp[i]->flush();
-            fsc_global::sktTcp[i]->waitForBytesWritten();
+
 
             if (debugSkt[i])
             {
@@ -869,6 +900,11 @@ void FSC_MainWindow::flushSendBuf(void)
                                               QDateTime::currentDateTime().toString("hh:mm:ss:zzz->")+ ByteArrayToHexString(sktBufSend[i]));
                 ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
             }
+
+
+            fsc_global::sktTcp[i]->write(sktBufSend[i]);
+            fsc_global::sktTcp[i]->flush();
+            fsc_global::sktTcp[i]->waitForBytesWritten();
 
             sktBufSend[i].resize(0);
         }

@@ -48,6 +48,8 @@ class FSC_MainWindow;
 #define DATA_TIMEOUT      3
 #define DATA_READ_TIMEOUT      3
 
+#define FM_REQ_TIMEOUT      3
+
 #define CAL_STATE_STOP          0
 #define CAL_START               1
 #define CAL_START_BALANCE       2
@@ -193,6 +195,7 @@ private slots:
     void startUp();
     void mainLoop();
     void startCal(void);
+    void startSTFM(void);
     void startSocketConnect(int i);
 
     void on_tbnSysDevCheck_clicked();
@@ -299,11 +302,13 @@ private:
     bool preParseFMMsg(int indexSkt);
     bool parseFMSumRateMsg(int indexSkt);
     bool parsePLC(int indexSkt);
+    bool parsePLCNoSTFM(int indexSkt);
 
     void reqScaleShow(void);
     void reqScaleZero(void);
     void reqFMData(int indexFM);
     void reqSetPLC(void);
+    void reqSetPLCWithSTFM(void);
     void writePLC(void);
     bool checkPlc(void);
 
@@ -362,6 +367,8 @@ private:
     bool        sktConed[SOCKET_NUMBER];
     QByteArray  sktBufSend[SOCKET_NUMBER];
     QByteArray  sktBufRev[SOCKET_NUMBER];
+    bool        sktRespondOk[SOCKET_NUMBER];
+    uint        sktReqTime[SOCKET_NUMBER];
 
     int         sktDataState[SOCKET_NUMBER];
     uint        sktDataWriteTime[SOCKET_NUMBER];
@@ -378,6 +385,8 @@ private:
     QTimer  *mainLoopTimer = nullptr;
     QTimer  *startUpTimer = nullptr;
     QTimer  *calTimer = nullptr;
+    QTimer  *STFMTimer = nullptr;
+    int    pollCycleSTFM = 250;
 
     bool    socketWellDone  =   false;
 
