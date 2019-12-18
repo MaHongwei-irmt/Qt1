@@ -28,6 +28,12 @@ void FSC_MainWindow::startCal(void)
         }
         calOnTime = QDateTime::currentDateTime().toTime_t();
 
+        allCalNeedToReport = false;
+        for(int i = 0; i < CAL_MAX_STEP; i++)
+        {
+            allCalAvailable[i]  = false;
+        }
+
         break;
 
     case CAL_START_OUT_VALVE_OPEN:
@@ -360,6 +366,8 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
                 oneCal.plotSelectedFMStr  = ui->comboBox_PlotSenSel->currentText();
 
                 calTag->calTime = QDateTime::currentDateTime().toTime_t();
+                calTag->calProcStartTime = QDateTime::currentDateTime().toTime_t();
+
             }
         }
     }
@@ -395,7 +403,7 @@ void FSC_MainWindow::calGoing(oneCalTag *calTag)
 
     calPlot(calTag);
 
-    if (calTag->plotPos++ > plotPosNumber)
+    if (calTag->plotPos++ > plotPosNumber || showScaleSum > SCALE_MAX_LIMITED)
     {
         calTag->state = ONE_CAL_POST_PROCESS;
 
@@ -405,7 +413,10 @@ void FSC_MainWindow::calGoing(oneCalTag *calTag)
         pump1Off();
         pump2Off();
         writePLC();
-        delayMSec(PUMP_START_DELAY);
+        delayMSec(PUMP_START_DELAY / 2);
+
+        calTag->calProcEndTime = QDateTime::currentDateTime().toTime_t();
+        delayMSec(PUMP_START_DELAY / 2);
 
         closeForwardValveAll();
         closeReverseValveAll();
@@ -454,7 +465,13 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
 
     if (calTag->stepRecord >= 0 && calTag->stepRecord < CAL_MAX_STEP)
     {
-        allCal[calTag->stepRecord] = *calTag;
+        calTag->stepBak = currentStep;
+
+        if (calTag->stepRecord < 1) return;
+
+        calTag->calDateTime = QDateTime::currentDateTime();
+        allCal[calTag->stepRecord - 1] = *calTag;
+
     }
 
     allCalNeedToReport = true;
@@ -527,14 +544,123 @@ void FSC_MainWindow::calStop(oneCalTag *calTag)
 
 void FSC_MainWindow::makeCalRecordPrint(oneCalTag *calTag)
 {
-    if (!calTag) return;
+    if (calTag == nullptr) return;
+    if (!allCalNeedToReport) return;
 
-    allCalNeedToReport = false;
-    for(int i = 0; i < CAL_MAX_STEP; i++)
+    QString fileName = "流量标定报表" + QDateTime::currentDateTime().toString("yyyyMMddhhmmss") + ".txt";
+    QFile file(fileName);
+    if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
     {
-        allCalAvailable[i]  = false;
+        return;
     }
 
+    QTextStream stream(&file);
+
+    QString str =  "报表生成时间：" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "\n";
+
+    str += "型号：" + calTag->stepBak.type_name + "   量程：" + QString::number(calTag->stepBak.span_ml_per_min) + "ml/min   水温：25°C\n" ;
+    str += "\n";
+
+    oneCalTag *calTagTmp;
+    for(int i = 0; i < CAL_MAX_STEP; i++)
+    {
+        calTagTmp = calTag + i;
+        if (allCalAvailable[i])
+        {
+            str += "第(" + QString::number(i + 1) + ")步" + "   " + \
+                    QString::number(calTagTmp->calSpanPercent) + "%量程("\
+                    + QString::number((calTagTmp->calSpanPercent * calTag->stepBak.span_ml_per_min / 100), 'f',3) \
+                    + "ml/min) ";
+
+
+            if (calTagTmp->calDirect == START_CAL_DIRECT_FORWARD)
+            {
+                str += "正向 ";
+            }
+            else if (calTagTmp->calDirect == START_CAL_DIRECT_REVERSE)
+            {
+                str += "反向 ";
+            }
+
+            if (calTagTmp->calTpye == START_CAL_TYPE_CAL)
+            {
+                str += "标定 ";
+            }
+            else if (calTagTmp->calTpye == START_CAL_TYPE_CORRECT)
+            {
+                str += "修正 ";
+            }
+            else if (calTagTmp->calTpye == START_CAL_TYPE_CHECK)
+            {
+                str += "验证 ";
+            }
+
+            str += "时间：" + calTagTmp->calDateTime.toString("yyyy-MM-dd hh:mm:ss   ");
+
+            str += "用时：" + QString::number(calTagTmp->calProcEndTime - calTagTmp->calProcStartTime);
+
+            str += "s\n";
+
+            str += "天平称重：" + QString::number(calTagTmp->finalScaleSumValue, 'f', 3) + "g\n";
+            str += "标准流量计累计流量：" + QString::number(calTagTmp->finalSTDFMSumValue, 'f', 3) + "ml\n";
+            str += "标准流量计最后流速：" + QString::number(calTagTmp->finalSTDFMRateValue, 'f', 3) + "ml/min\n";
+
+            double d = 0;
+            for (int i = 0; i < calTagTmp->plotSTDFMRateValue.size(); i++)
+            {
+                d += calTagTmp->plotSTDFMRateValue[i];
+            }
+            d /= calTagTmp->plotSTDFMRateValue.size();
+
+            str += "标准流量计平均流速：" + QString::number(d, 'f', 3) + "ml/min\n";
+            str += "\n";
+
+            for (int i = 0; i < FLOWMETER_NUMBER; i++)
+            {
+                if (calTagTmp->finalFMSumValue[i] < 1.0 ||  std::isnan(calTagTmp->finalFMSumValue[i])) continue;
+
+                str += QString::number(i + 1) + "#待检流量计累计流量：" + QString::number(calTagTmp->finalFMSumValue[i], 'f', 3) + "ml\n";
+                str += QString::number(i + 1) + "#待检流量计最后流速：" + QString::number(calTagTmp->finalFMSumValue[i], 'f', 3) + "ml/min\n";
+
+                d = 0;
+                for (int j = 0; j < calTagTmp->plotFMRateValue[i].size(); j++)
+                {
+                    d += calTagTmp->plotFMRateValue[i][j];
+                }
+                d /= calTagTmp->plotFMRateValue[i].size();
+
+                str += QString::number(i + 1) + "#待检流量计平均流速：" + QString::number(d, 'f', 3) + "ml/min\n";
+
+                d = calTagTmp->finalFMSumValue[i] - calTagTmp->finalScaleSumValue;
+                str += "与天平误差：" + QString::number(d, 'f', 3) + "ml/min\n";
+                str += "误差百分比：" + QString::number(d / calTagTmp->finalScaleSumValue * 100, 'f', 3) + "% 已";
+
+                if (calTagTmp->calTpye == START_CAL_TYPE_CAL)
+                {
+                    str += "标定";
+                }
+                else if (calTagTmp->calTpye == START_CAL_TYPE_CORRECT)
+                {
+                    str += "修正";
+                }
+                else if (calTagTmp->calTpye == START_CAL_TYPE_CHECK)
+                {
+                    str += "验证";
+                }
+
+                str += "完成\n\n";
+            }
+
+        }
+    }
+
+    str += "结束";
+
+    QByteArray bUtf8 = str.toUtf8();
+
+    stream << bUtf8;
+
+    file.close();
 
     printInfoWithTime("生成报表");
 }

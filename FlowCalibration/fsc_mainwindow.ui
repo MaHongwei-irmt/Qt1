@@ -840,7 +840,7 @@ p, li { white-space: pre-wrap; }
       <height>531</height>
      </rect>
     </property>
-    <widget class="QToolButton" name="tbnSensorType_5">
+    <widget class="QToolButton" name="tbnFMCalTable">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -2865,7 +2865,7 @@ p, li { white-space: pre-wrap; }
   <tabstop>lineEdit_stdFM_sum</tabstop>
   <tabstop>lineEdit_scale_flow</tabstop>
   <tabstop>lineEdit_stdFM_flow</tabstop>
-  <tabstop>tbnSensorType_5</tabstop>
+  <tabstop>tbnFMCalTable</tabstop>
   <tabstop>lineEdit_plotTime</tabstop>
   <tabstop>tbnPoltClear</tabstop>
   <tabstop>comboBox_PlotSenSel</tabstop>

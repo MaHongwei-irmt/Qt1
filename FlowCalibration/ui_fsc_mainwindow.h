@@ -88,7 +88,7 @@ public:
     QLabel *label_23;
     QLabel *label_24;
     QCustomPlot *MyCustomPlot;
-    QToolButton *tbnSensorType_5;
+    QToolButton *tbnFMCalTable;
     QLineEdit *lineEdit_plotTime;
     QToolButton *tbnPoltClear;
     QLineEdit *lineEdit_calParameter;
@@ -447,9 +447,9 @@ public:
         MyCustomPlot = new QCustomPlot(centralwidget);
         MyCustomPlot->setObjectName(QStringLiteral("MyCustomPlot"));
         MyCustomPlot->setGeometry(QRect(287, 280, 1271, 531));
-        tbnSensorType_5 = new QToolButton(MyCustomPlot);
-        tbnSensorType_5->setObjectName(QStringLiteral("tbnSensorType_5"));
-        tbnSensorType_5->setGeometry(QRect(0, 510, 111, 21));
+        tbnFMCalTable = new QToolButton(MyCustomPlot);
+        tbnFMCalTable->setObjectName(QStringLiteral("tbnFMCalTable"));
+        tbnFMCalTable->setGeometry(QRect(0, 510, 111, 21));
         lineEdit_plotTime = new QLineEdit(MyCustomPlot);
         lineEdit_plotTime->setObjectName(QStringLiteral("lineEdit_plotTime"));
         lineEdit_plotTime->setEnabled(true);
@@ -1035,8 +1035,8 @@ public:
         QWidget::setTabOrder(lineEdit_scale_show, lineEdit_stdFM_sum);
         QWidget::setTabOrder(lineEdit_stdFM_sum, lineEdit_scale_flow);
         QWidget::setTabOrder(lineEdit_scale_flow, lineEdit_stdFM_flow);
-        QWidget::setTabOrder(lineEdit_stdFM_flow, tbnSensorType_5);
-        QWidget::setTabOrder(tbnSensorType_5, lineEdit_plotTime);
+        QWidget::setTabOrder(lineEdit_stdFM_flow, tbnFMCalTable);
+        QWidget::setTabOrder(tbnFMCalTable, lineEdit_plotTime);
         QWidget::setTabOrder(lineEdit_plotTime, tbnPoltClear);
         QWidget::setTabOrder(tbnPoltClear, comboBox_PlotSenSel);
         QWidget::setTabOrder(comboBox_PlotSenSel, tbnVOutOpen);
@@ -1125,7 +1125,7 @@ public:
         lineEdit_stdFM_flow->setText(QApplication::translate("FSC_MainWindow", "0.1", Q_NULLPTR));
         label_23->setText(QApplication::translate("FSC_MainWindow", "ml", Q_NULLPTR));
         label_24->setText(QApplication::translate("FSC_MainWindow", "\346\240\207\345\207\206\346\265\201\351\207\217\350\256\241\347\264\257\350\256\241\357\274\232", Q_NULLPTR));
-        tbnSensorType_5->setText(QApplication::translate("FSC_MainWindow", "\346\237\245\347\234\213\346\240\207\345\256\232\346\212\245\345\221\212", Q_NULLPTR));
+        tbnFMCalTable->setText(QApplication::translate("FSC_MainWindow", "\346\237\245\347\234\213\346\240\207\345\256\232\346\212\245\345\221\212", Q_NULLPTR));
         lineEdit_plotTime->setText(QApplication::translate("FSC_MainWindow", "0.1", Q_NULLPTR));
         tbnPoltClear->setText(QApplication::translate("FSC_MainWindow", "\346\270\205\347\251\272", Q_NULLPTR));
         lineEdit_calParameter->setText(QApplication::translate("FSC_MainWindow", "0.1", Q_NULLPTR));

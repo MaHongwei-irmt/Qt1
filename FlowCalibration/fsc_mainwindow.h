@@ -18,6 +18,8 @@ class FSC_MainWindow;
 
 #define FSCLOG  qDebug() << QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss:zzz")
 
+#define SCALE_MAX_LIMITED  4000
+
 #define FLOWMETER_NUMBER    12
 
 #define SOCKET_NUMBER   17
@@ -172,6 +174,10 @@ public:
     double  finalFMSumValue[FLOWMETER_NUMBER];
     double  finalFMRateValue[FLOWMETER_NUMBER];
 
+    calStep     stepBak;
+    QDateTime   calDateTime;
+    uint        calProcStartTime = 0;
+    uint        calProcEndTime = 0;
 };
 
 class FSC_MainWindow : public QMainWindow
@@ -277,6 +283,8 @@ private slots:
     void on_radioButton_setPWM_clicked();
 
     void on_tbnCalManual_clicked();
+
+    void on_tbnFMCalTable_clicked();
 
 private:
     Ui::FSC_MainWindow *ui;

@@ -404,6 +404,12 @@ void FSC_MainWindow::DataInit(void)
     plotFMSumValueY.clear();
     plotFMFlowValueY.clear();
 
+    allCalNeedToReport = false;
+    for(int i = 0; i < CAL_MAX_STEP; i++)
+    {
+        allCalAvailable[i]  = false;
+    }
+
     ui->textBrow_calInfo->setText(QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss: 程序启动"));
     dataInit_calStepInit();
     calStepInfoFresh();
@@ -1340,4 +1346,9 @@ void FSC_MainWindow::on_tbnParaErase_clicked()
             return;
         }
     }
+}
+
+void FSC_MainWindow::on_tbnFMCalTable_clicked()
+{
+    makeCalRecordPrint(allCal);
 }
