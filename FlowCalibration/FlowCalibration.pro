@@ -39,7 +39,8 @@ SOURCES += \
     fsc_mainwindow_socket.cpp \
     fsc_thread.cpp \
     fsc_mainwindow_plc_ui.cpp \
-    fsc_mainwindow_cal.cpp
+    fsc_mainwindow_cal.cpp \
+    dialog_showinfo.cpp
 
 HEADERS += \
     qcustomplot.h \
@@ -47,13 +48,19 @@ HEADERS += \
     dialog_checkdev.h \
     dialog_sensoraddr.h \
     fsc_thread.h \
-    fsc_plc.h
+    fsc_plc.h \
+    dialog_showinfo.h \
+    dialog_showinfo.h
 
 FORMS += \
     fsc_mainwindow.ui \
     dialog_checkdev.ui \
-    dialog_sensoraddr.ui
+    dialog_sensoraddr.ui \
+    dialog_showinfo.ui \
+    dialog_showinfo.ui
 
 RC_ICONS = FCImage.ico
 
 RESOURCES +=
+
+DISTFILES +=

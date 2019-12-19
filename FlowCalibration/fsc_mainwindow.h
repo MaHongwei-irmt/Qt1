@@ -7,6 +7,8 @@
 #include <QSignalMapper>
 #include <QCheckBox>
 #include <QLineEdit>
+#include <QTextBrowser>
+#include <QPrinter>
 
 QByteArray  HexStringToByteArray(QString HexString);
 QString     ByteArrayToHexString(QByteArray &ba);
@@ -193,6 +195,14 @@ public:
     void delayMSec(int msec);
     void SocketConnectTry(void);
 
+    bool            showInfoUpdata = true;
+    QTextBrowser    *txtBrow_showInfo = nullptr;
+    bool            showCalTable = false;
+    QString         calTableName = "";
+    QPrinter        *printer = nullptr;
+    QPrinterInfo    *infoPrinter = nullptr;
+    Qt::CheckState  autoPrinter = Qt::Unchecked;
+
 private slots:
     void skt_connect_suc(int i);
     void skt_connect_dis(int i);
@@ -285,6 +295,10 @@ private slots:
     void on_tbnCalManual_clicked();
 
     void on_tbnFMCalTable_clicked();
+
+    void on_pushButton_showInfo_clicked();
+
+    void on_textBrow_calInfo_textChanged();
 
 private:
     Ui::FSC_MainWindow *ui;
@@ -445,6 +459,7 @@ private:
     oneCalTag   allCal[CAL_MAX_STEP];
     bool        allCalNeedToReport = false;
     bool        allCalAvailable[CAL_MAX_STEP];
+    bool        allCalEnd = false;
 
     bool        calManualDoing   =   false;
 

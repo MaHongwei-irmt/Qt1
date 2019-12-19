@@ -206,6 +206,7 @@ public:
     QLabel *label_59;
     QLabel *label_60;
     QLabel *label_61;
+    QPushButton *pushButton_showInfo;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -896,6 +897,9 @@ public:
         label_61 = new QLabel(centralwidget);
         label_61->setObjectName(QStringLiteral("label_61"));
         label_61->setGeometry(QRect(1030, 193, 61, 16));
+        pushButton_showInfo = new QPushButton(centralwidget);
+        pushButton_showInfo->setObjectName(QStringLiteral("pushButton_showInfo"));
+        pushButton_showInfo->setGeometry(QRect(1067, 42, 75, 23));
         FSC_MainWindow->setCentralWidget(centralwidget);
         groupBox_2->raise();
         line_4->raise();
@@ -1006,6 +1010,7 @@ public:
         label_59->raise();
         label_60->raise();
         label_61->raise();
+        pushButton_showInfo->raise();
         menubar = new QMenuBar(FSC_MainWindow);
         menubar->setObjectName(QStringLiteral("menubar"));
         menubar->setGeometry(QRect(0, 0, 1801, 23));
@@ -1252,6 +1257,7 @@ public:
         label_59->setText(QApplication::translate("FSC_MainWindow", "10#", Q_NULLPTR));
         label_60->setText(QApplication::translate("FSC_MainWindow", "12#", Q_NULLPTR));
         label_61->setText(QApplication::translate("FSC_MainWindow", "7#", Q_NULLPTR));
+        pushButton_showInfo->setText(QApplication::translate("FSC_MainWindow", "\346\224\276\345\244\247", Q_NULLPTR));
     } // retranslateUi
 
 };

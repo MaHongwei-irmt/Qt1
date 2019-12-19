@@ -1,5 +1,6 @@
 #include "fsc_mainwindow.h"
 #include "ui_fsc_mainwindow.h"
+#include "dialog_showinfo.h"
 
 #include <QFile>
 #include <QtCore/QCoreApplication>
@@ -174,6 +175,8 @@ void FSC_MainWindow::uiReInit(void)
     lineEdit_FMFlow[9] = ui->lineEdit_FM_10_flow;
     lineEdit_FMFlow[10] = ui->lineEdit_FM_11_flow;
     lineEdit_FMFlow[11] = ui->lineEdit_FM_12_flow;
+
+    txtBrow_showInfo = ui->textBrow_calInfo;
 
     buttonDebugMapper = new QSignalMapper();
     for (int i = 0; i < SOCKET_NUMBER; i++)
@@ -1054,9 +1057,11 @@ void FSC_MainWindow::on_tbnCalStart_clicked()
 
 void FSC_MainWindow::on_tbnCalTermination_clicked()
 {
-    calOn = CAL_STATE_STOP;
     printInfoWithTime(" 终止");
     calStop(&oneCal);
+
+    allCalEnd = true;
+    makeCalRecordPrint(&oneCal);
 }
 
 void FSC_MainWindow::on_tbnPoltClear_clicked()
@@ -1336,8 +1341,6 @@ void FSC_MainWindow::on_tbnParaErase_clicked()
         {
             fsc_global::para_ini.remove(i);
 
-            //fsc_global::para_ini.resize(fsc_global::para_ini.size() - 1);
-
             QFile::remove("para.ini");
 
             paraWrite();
@@ -1350,5 +1353,23 @@ void FSC_MainWindow::on_tbnParaErase_clicked()
 
 void FSC_MainWindow::on_tbnFMCalTable_clicked()
 {
-    makeCalRecordPrint(allCal);
+    if (!allCalEnd)
+    {
+        makeCalRecordPrint(allCal);
+    }
+
+    showCalTable = true;
+    Dialog_showinfo *showInfo = new Dialog_showinfo(this);
+    showInfo->show();
+}
+
+void FSC_MainWindow::on_pushButton_showInfo_clicked()
+{
+    Dialog_showinfo *showInfo = new Dialog_showinfo(this);
+    showInfo->show();
+}
+
+void FSC_MainWindow::on_textBrow_calInfo_textChanged()
+{
+    showInfoUpdata = true;
 }

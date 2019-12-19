@@ -43,11 +43,21 @@ void FSC_MainWindow::startCal(void)
             showSetPWM = 30;
             on_radioButton_setPWM_clicked();
             printInfoWithTime("->正向进水管路充水");
-            on_tbnPump1ForwardOn_clicked();
+
+            if (calOn != CAL_STATE_STOP)
+            {
+                on_tbnPump1ForwardOn_clicked();
+            }
+
             calOnTime = QDateTime::currentDateTime().toTime_t();
 
             delayMSec(PUMP_START_DELAY);
-            on_tbnPump2ForwardOn_clicked();
+
+            if (calOn != CAL_STATE_STOP)
+            {
+                on_tbnPump2ForwardOn_clicked();
+            }
+
             printInfoWithTime("->充水10秒...");
             if(calOn)
             {
@@ -81,11 +91,22 @@ void FSC_MainWindow::startCal(void)
             writePLC();
 
             delayMSec(PUMP_START_DELAY);
-            on_tbnPump1ReverseOn_clicked();
+
+
+            if (calOn != CAL_STATE_STOP)
+            {
+                on_tbnPump1ReverseOn_clicked();
+            }
+
             calOnTime = QDateTime::currentDateTime().toTime_t();
 
             delayMSec(PUMP_START_DELAY);
-            on_tbnPump2ReverseOn_clicked();
+
+            if (calOn != CAL_STATE_STOP)
+            {
+                on_tbnPump2ReverseOn_clicked();
+            }
+
             printInfoWithTime("->充水10秒...");
             if(calOn)
             {
@@ -155,7 +176,9 @@ void FSC_MainWindow::startCal(void)
 
     case CAL_PROCESS_END:
 
+        allCalEnd = true;
         makeCalRecordPrint(&oneCal);
+
         printInfoWithTime("本次全部结束.");
 
         calOn = CAL_STATE_STOP;
@@ -185,6 +208,8 @@ bool FSC_MainWindow::fillOneCal(oneCalTag *calTag)
     {
         if ( currentStep.stepTotal == 0 || currentStep.stepCurrent == currentStep.stepTotal)
         {
+            allCalEnd = true;
+
             if(allCalNeedToReport)
             {
                 makeCalRecordPrint(calTag);
@@ -315,18 +340,28 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
                         delayMSec(VALVE_EXCHANGE_DELAY);
 
                         printInfoWithTime("->启动1#泵->启动2#泵");
-                        pump1On();
-                        pump2On();
-                        writePLC();
 
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            pump1On();
+                            pump2On();
+                            writePLC();
+                        }
                     }
                     else if (showSetFlowRate > MIN_SPAN)
                     {
-                         on_tbnPump2ForwardOn_clicked();
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            on_tbnPump2ForwardOn_clicked();
+                        }
+
                     }
                     else
                     {
-                        on_tbnPump1ForwardOn_clicked();
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            on_tbnPump1ForwardOn_clicked();
+                        }
                     }
 
                 }
@@ -345,18 +380,27 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
                         delayMSec(VALVE_EXCHANGE_DELAY);
 
                         printInfoWithTime("->启动1#泵->启动2#泵");
-                        pump1On();
-                        pump2On();
-                        writePLC();
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            pump1On();
+                            pump2On();
+                            writePLC();
+                        }
 
                     }
                     else if (showSetFlowRate > MIN_SPAN)
                     {
-                         on_tbnPump2ReverseOn_clicked();
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            on_tbnPump2ReverseOn_clicked();
+                        }
                     }
                     else
                     {
-                        on_tbnPump1ReverseOn_clicked();
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            on_tbnPump1ReverseOn_clicked();
+                        }
                     }
                 }
 
@@ -476,6 +520,7 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
 
     allCalNeedToReport = true;
     allCalAvailable[calTag->step - 1]  = true;
+    allCalEnd = false;
 
     printInfoWithTime("->打开放水阀");
     on_tbnPoltClear_clicked();
@@ -537,6 +582,8 @@ void FSC_MainWindow::calStop(oneCalTag *calTag)
     writePLC();
     delayMSec(PUMP_START_DELAY);
 
+    calOn = CAL_STATE_STOP;
+
     closeForwardValveAll();
     closeReverseValveAll();
     writePLC();
@@ -553,6 +600,8 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *calTag)
     {
         return;
     }
+
+    calTableName = fileName;
 
     QTextStream stream(&file);
 
@@ -654,7 +703,14 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *calTag)
         }
     }
 
-    str += "结束";
+    if (allCalEnd)
+    {
+        str += "结束";
+    }
+    else
+    {
+        str += "未完. 后续步骤进行中...";
+    }
 
     QByteArray bUtf8 = str.toUtf8();
 
