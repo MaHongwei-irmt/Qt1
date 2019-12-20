@@ -31,9 +31,9 @@ private:
     Ui::Dialog_showinfo *ui;
 
     QTimer          *freshTimer = nullptr;
-    QPrinter        *printer = nullptr;
-    QPrinterInfo    *infoPrinter = nullptr;
     Qt::CheckState  autoPrinter = Qt::Unchecked;
+    bool            autoPrinterBool = false;
+    QString         printerName = "";
 
     void showCalTable(void);
 

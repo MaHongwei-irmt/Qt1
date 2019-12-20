@@ -8,7 +8,7 @@
 #include <QPrintDialog>
 #include <QPrinter>
 #include <QPrinterInfo>
-
+#include <QMessageBox>
 
 
 Dialog_showinfo::Dialog_showinfo(QWidget *parent) :
@@ -26,21 +26,17 @@ Dialog_showinfo::Dialog_showinfo(QWidget *parent) :
 
     if (mainWin->showCalTable)
     {
-        this->setWindowTitle("查看报表");
+        this->setWindowTitle("报表窗");
 
         ui->groupBox->setVisible(true);
 
         autoPrinter = mainWin->autoPrinter;
         ui->checkBox_printer->setCheckState(autoPrinter);
 
-        if (mainWin->infoPrinter != nullptr)
-        {
-            printer = mainWin->printer;
-            infoPrinter = mainWin->infoPrinter;
+        printerName = mainWin->printerName;
+        ui->lineEdit_printer->setText(printerName);
 
-
-            ui->lineEdit_printer->setText(infoPrinter->printerName());
-        }
+        autoPrinterBool = mainWin->autoPrinterBool;
 
         mainWin->showCalTable = false;
         showCalTable();
@@ -90,6 +86,11 @@ void Dialog_showinfo::showCalTable(void)
         ui->textBrow_calInfo->setText(codec->toUnicode(t));
 
         file.close();
+
+        if (ui->textBrow_calInfo->toPlainText().contains(RECORD_FILE_TO_BE_CONTINUE))
+        {
+            QFile::remove(mainWin->calTableName);
+        }
     }
 }
 
@@ -117,62 +118,23 @@ void Dialog_showinfo::on_pushButton_showCalTable_clicked()
 
 void Dialog_showinfo::on_pushButton_print_clicked()
 {
-//    if (printer == nullptr)
-//    {
-//        on_pushButton_printerSelect_clicked();
-//    }
+    if (printerName.size() > 0)
+    {
+        QPrinter ptr;
+        ptr.setPrinterName(printerName);
 
-//    if (printer)
-//    {
-//        QTextDocument td;
-//        td.setPlainText(ui->textBrow_calInfo->toPlainText());
-//        if (td.toPlainText().size() > 0)
-//        {
-//            td.print(printer);
-//        }
-//    }
+        QTextDocument td;
+        td.setPlainText(ui->textBrow_calInfo->toPlainText());
 
-
-//    FSC_MainWindow *mainWin = static_cast<FSC_MainWindow*>(parentWidget());
-
-//    QPrintDialog printDialog;
-//    if (printDialog.exec() == QDialog::Accepted)
-//    {
-//        printer = printDialog.printer();
-//        infoPrinter = new QPrinterInfo(*printer);
-
-//        mainWin->printer = printer;
-//        mainWin->infoPrinter = infoPrinter;
-
-//        ui->lineEdit_printer->setText(infoPrinter->printerName());
-
-
-//                QTextDocument td;
-//                td.setPlainText(ui->textBrow_calInfo->toPlainText());
-//                if (td.toPlainText().size() > 0)
-//                {
-//                    td.print(printer);
-//                }
-//    }
-
-    printer = new QPrinter();
-
-
-        if (printer)
+        if (td.toPlainText().size() > 0)
         {
-
-            QString str = infoPrinter->printerName();
-
-            printer->setPrinterName(str);
-            QTextDocument td;
-            td.setPlainText(ui->textBrow_calInfo->toPlainText());
-            if (td.toPlainText().size() > 0)
-            {
-                td.print(printer);
-            }
+            td.print(&ptr);
         }
-
-
+    }
+    else
+    {
+        QMessageBox::information(nullptr, "打印", "请先选择打印机.", QMessageBox::Yes);
+    }
 }
 
 void Dialog_showinfo::on_checkBox_printer_stateChanged(int arg1)
@@ -181,7 +143,21 @@ void Dialog_showinfo::on_checkBox_printer_stateChanged(int arg1)
     FSC_MainWindow *mainWin = static_cast<FSC_MainWindow*>(parentWidget());
 
     autoPrinter = ui->checkBox_printer->checkState();
+    if (autoPrinter == Qt::Unchecked)
+    {
+        autoPrinterBool = false;
+    }
+    else
+    {
+        autoPrinterBool = true;
+    }
+
     mainWin->autoPrinter = ui->checkBox_printer->checkState();
+    mainWin->autoPrinterBool = autoPrinterBool;
+
+    QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
+    configIni->setValue("IP_ADDRESS/PRINTER_AUTO",  autoPrinterBool);
+    delete configIni;
 }
 
 void Dialog_showinfo::on_pushButton_printerSelect_clicked()
@@ -191,12 +167,21 @@ void Dialog_showinfo::on_pushButton_printerSelect_clicked()
     QPrintDialog printDialog;
     if (printDialog.exec() == QDialog::Accepted)
     {
+
+        QPrinter        *printer = nullptr;
+        QPrinterInfo    *infoPrinter = nullptr;
+
         printer = printDialog.printer();
         infoPrinter = new QPrinterInfo(*printer);
+        printerName = infoPrinter->printerName();
 
-        mainWin->printer = printer;
-        mainWin->infoPrinter = infoPrinter;
+        mainWin->printerName = infoPrinter->printerName();
 
         ui->lineEdit_printer->setText(infoPrinter->printerName());
+
+        QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
+        configIni->setValue("IP_ADDRESS/PRINTER_NAME",  printerName);
+        delete configIni;
     }
+
 }

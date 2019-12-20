@@ -668,8 +668,8 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *calTag)
             {
                 if (calTagTmp->finalFMSumValue[i] < 1.0 ||  std::isnan(calTagTmp->finalFMSumValue[i])) continue;
 
-                str += QString::number(i + 1) + "#待检流量计累计流量：" + QString::number(calTagTmp->finalFMSumValue[i], 'f', 3) + "ml\n";
-                str += QString::number(i + 1) + "#待检流量计最后流速：" + QString::number(calTagTmp->finalFMSumValue[i], 'f', 3) + "ml/min\n";
+                str += QString::number(i + 1) + "#流量计累计流量：" + QString::number(calTagTmp->finalFMSumValue[i], 'f', 3) + "ml\n";
+                str += QString::number(i + 1) + "#流量计最后流速：" + QString::number(calTagTmp->finalFMSumValue[i], 'f', 3) + "ml/min\n";
 
                 d = 0;
                 for (int j = 0; j < calTagTmp->plotFMRateValue[i].size(); j++)
@@ -678,11 +678,11 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *calTag)
                 }
                 d /= calTagTmp->plotFMRateValue[i].size();
 
-                str += QString::number(i + 1) + "#待检流量计平均流速：" + QString::number(d, 'f', 3) + "ml/min\n";
+                str += QString::number(i + 1) + "#流量计平均流速：" + QString::number(d, 'f', 3) + "ml/min\n";
 
                 d = calTagTmp->finalFMSumValue[i] - calTagTmp->finalScaleSumValue;
-                str += "与天平误差：" + QString::number(d, 'f', 3) + "ml/min\n";
-                str += "误差百分比：" + QString::number(d / calTagTmp->finalScaleSumValue * 100, 'f', 3) + "% 已";
+                str += "累计流量与天平误差：" + QString::number(d, 'f', 3) + "ml(g)\n";
+                str += "误差百分比：" + QString::number(d / calTagTmp->finalScaleSumValue * 100, 'f', 3) + "%  已";
 
                 if (calTagTmp->calTpye == START_CAL_TYPE_CAL)
                 {
@@ -699,17 +699,24 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *calTag)
 
                 str += "完成\n\n";
             }
-
         }
     }
 
     if (allCalEnd)
     {
         str += "结束";
+
+        QString pdfFileName = "流量标定报表" + QDateTime::currentDateTime().toString("yyyyMMddhhmmss") + ".pdf";
+        QPrinter ptr;
+        ptr.setOutputFileName(pdfFileName);
+
+        QTextDocument td;
+        td.setPlainText(str);
+        td.print(&ptr);
     }
     else
     {
-        str += "未完. 后续步骤进行中...";
+        str += RECORD_FILE_TO_BE_CONTINUE;
     }
 
     QByteArray bUtf8 = str.toUtf8();
@@ -717,6 +724,16 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *calTag)
     stream << bUtf8;
 
     file.close();
+
+    if (allCalEnd && printerName.size() > 0 && autoPrinter)
+    {
+        QPrinter ptr;
+        ptr.setPrinterName(printerName);
+
+        QTextDocument td;
+        td.setPlainText(str);
+        td.print(&ptr);
+    }
 
     printInfoWithTime("生成报表");
 }

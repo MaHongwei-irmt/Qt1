@@ -111,6 +111,8 @@ class FSC_MainWindow;
 
 #define CAL_MAX_STEP                60
 
+#define RECORD_FILE_TO_BE_CONTINUE  "未完. 后续步骤进行中..."
+
 class calStep
 {
 
@@ -202,6 +204,8 @@ public:
     QPrinter        *printer = nullptr;
     QPrinterInfo    *infoPrinter = nullptr;
     Qt::CheckState  autoPrinter = Qt::Unchecked;
+    bool            autoPrinterBool = false;
+    QString         printerName = "";
 
 private slots:
     void skt_connect_suc(int i);

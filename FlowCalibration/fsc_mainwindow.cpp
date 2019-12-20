@@ -236,7 +236,6 @@ void FSC_MainWindow::socketParaInit(void)
         fsc_global::port_number[i] = 4000 + i;
     }
 
-
     FSCLOG << fsc_global::ip_PLC;
     FSCLOG << fsc_global::ip_RS_Server;
 
@@ -255,12 +254,31 @@ void FSC_MainWindow::socketParaInit(void)
             debugSkt[i] =  configIni->value("IP_ADDRESS/DEBUG_SOCKET_" +  QString::number(i)).toBool();
         }
     }
+
     if (configIni->value("IP_ADDRESS/POLL_CYCLE_STFM" ).toString() != "")
     {
         pollCycleSTFM = configIni->value("IP_ADDRESS/POLL_CYCLE_STFM" ).toInt();
         FSCLOG << "pollCycleSTFM=" << pollCycleSTFM;
     }
+    if (configIni->value("IP_ADDRESS/PRINTER_NAME" ).toString() != "")
+    {
+        printerName = configIni->value("IP_ADDRESS/PRINTER_NAME" ).toString();
+        FSCLOG << "printerName=" << printerName;
+    }
+    if (configIni->value("IP_ADDRESS/PRINTER_AUTO" ).toString() != "")
+    {
+        autoPrinterBool = configIni->value("IP_ADDRESS/PRINTER_AUTO" ).toBool();
+        FSCLOG << "printerName=" << autoPrinterBool;
 
+        if (autoPrinterBool)
+        {
+            autoPrinter = Qt::Checked;
+        }
+        else
+        {
+            autoPrinter = Qt::Unchecked;
+        }
+    }
 
     delete configIni;
 }
