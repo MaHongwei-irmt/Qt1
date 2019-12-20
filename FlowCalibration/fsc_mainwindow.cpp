@@ -435,6 +435,9 @@ void FSC_MainWindow::DataInit(void)
     dataInit_calStepInit();
     calStepInfoFresh();
 
+    calRunLink.clear();
+    calRunLink_calStepInfoInit();
+
 }
 
 void FSC_MainWindow::dataInit_calStepInit(void)
@@ -595,6 +598,21 @@ void FSC_MainWindow::calStepInfoFreshOnUI(void)
 
     str += "|\r\n";
     printInfo(str);
+}
+
+void FSC_MainWindow::calRunLink_calStepInfoInit(void)
+{
+    calLink calLinkItem;
+
+    for (int i = 0; i < currentStep.stepTotal; i++)
+    {
+        if (stepCal_dir_type_span(&calLinkItem.direct, &calLinkItem.type, &calLinkItem.spanPercent, &calLinkItem.span, i))
+        {
+            calLinkItem.stepNum = i;
+
+            calRunLink.append(calLinkItem);
+        }
+    }
 }
 
 void FSC_MainWindow::calStepInfoFresh(void)
@@ -804,6 +822,110 @@ void FSC_MainWindow::startSTFM(void)
 
     }
 
+}
+
+int FSC_MainWindow::stepCal_dir_type_span(int *dir, int *type, int *spanPercent, double *span, int stepNum)
+{
+    int step = 0;
+
+    if (dir == nullptr || type == nullptr || spanPercent == nullptr || span == nullptr )
+    {
+        FSCLOG << "err:" << "startCal_dir_type_span" << "nullptr";
+    }
+
+    for(int i = SPAN_NUMBER - 1; i >= 0; i--)
+    {
+        if (currentStep.spanCal[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        {
+            if (stepNum == step)
+            {
+               *dir     =   START_CAL_DIRECT_FORWARD;
+               *type    =   START_CAL_TYPE_CAL;
+               *spanPercent    =   (i + 1) * 10;
+               *span    =   currentStep.span_ml_per_min * (*spanPercent) / 100;
+
+                return true;
+            }
+            step++;
+
+         }
+
+        if (currentStep.spanCorrect[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        {
+            if (stepNum == step)
+            {
+               *dir     =   START_CAL_DIRECT_FORWARD;
+               *type    =   START_CAL_TYPE_CORRECT;
+               *spanPercent    =   (i + 1) * 10;
+               *span    =   currentStep.span_ml_per_min * (*spanPercent) / 100;
+
+                return true;
+            }
+            step++;
+         }
+
+        if (currentStep.spanCheck[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        {
+            if (stepNum == step)
+            {
+               *dir     =   START_CAL_DIRECT_FORWARD;
+               *type    =   START_CAL_TYPE_CHECK;
+               *spanPercent    =   (i + 1) * 10;
+               *span    =   currentStep.span_ml_per_min * (*spanPercent) / 100;
+
+                return true;
+            }
+            step++;
+         }
+    }
+
+    for(int i = SPAN_NUMBER - 1; i >= 0; i--)
+    {
+        if (currentStep.spanCalReverse[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        {
+            if (stepNum  == step)
+            {
+               *dir     =   START_CAL_DIRECT_REVERSE;
+               *type    =   START_CAL_TYPE_CAL;
+               *spanPercent    =   (i + 1) * 10;
+               *span    =   currentStep.span_ml_per_min * (*spanPercent) / 100;
+
+                return true;
+            }
+            step++;
+         }
+
+        if (currentStep.spanCorrect[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        {
+            if (stepNum == step)
+            {
+               *dir     =   START_CAL_DIRECT_REVERSE;
+               *type    =   START_CAL_TYPE_CORRECT;
+               *spanPercent    =   (i + 1) * 10;
+               *span    =   currentStep.span_ml_per_min * (*spanPercent) / 100;
+
+                return true;
+            }
+            step++;
+         }
+
+        if (currentStep.spanCheck[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        {
+            if (stepNum == step)
+            {
+               *dir     =   START_CAL_DIRECT_REVERSE;
+               *type    =   START_CAL_TYPE_CHECK;
+               *spanPercent    =   (i + 1) * 10;
+               *span    =   currentStep.span_ml_per_min * (*spanPercent) / 100;
+
+                return true;
+            }
+            step++;
+         }
+
+    }
+
+    return false;
 }
 
 int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent, double *span)

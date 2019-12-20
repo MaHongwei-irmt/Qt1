@@ -34,7 +34,7 @@ Dialog_showinfo::Dialog_showinfo(QWidget *parent) :
         ui->checkBox_printer->setCheckState(autoPrinter);
 
         printerName = mainWin->printerName;
-        ui->lineEdit_printer->setText(printerName);
+        ui->lineEdit_printer->setText(mainWin->printerName);
 
         autoPrinterBool = mainWin->autoPrinterBool;
 
@@ -92,6 +92,10 @@ void Dialog_showinfo::showCalTable(void)
             QFile::remove(mainWin->calTableName);
         }
     }
+    else
+    {
+        ui->textBrow_calInfo->setText("无报表");
+    }
 }
 
 void Dialog_showinfo::on_pushButton_showCalTable_clicked()
@@ -126,7 +130,7 @@ void Dialog_showinfo::on_pushButton_print_clicked()
         QTextDocument td;
         td.setPlainText(ui->textBrow_calInfo->toPlainText());
 
-        if (td.toPlainText().size() > 0)
+        if (td.toPlainText().size() > 10)
         {
             td.print(&ptr);
         }

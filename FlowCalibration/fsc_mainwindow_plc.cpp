@@ -28,7 +28,7 @@ void FSC_MainWindow::printInfoWithTime(QString str)
 
 void FSC_MainWindow::plcDataInit(void)
 {
-
+    ui->lineEdit_showPidPwm->setVisible(false);
 }
 
 void FSC_MainWindow::openForwardValve1(void)
@@ -285,6 +285,10 @@ bool FSC_MainWindow::parsePLCNoSTFM(int indexSkt)
         plcRWErr = 0;
     }
 
+    ba[0] = (*rev)[17];
+    ba[1] = (*rev)[16];
+    memcpy(&plcPidPWM, ba.data(), sizeof (uint16_t));
+
     (*rev).resize(0);
 
     showPlcFresh();
@@ -355,6 +359,10 @@ bool FSC_MainWindow::parsePLC(int indexSkt)
     showSTDFMFlow = static_cast<double>(f);
 
     (*rev).resize(0);
+
+    ba[0] = (*rev)[16];
+    ba[1] = (*rev)[17];
+    memcpy(&plcPidPWM, ba.data(), sizeof (uint16_t));
 
     showPlcFresh();
 

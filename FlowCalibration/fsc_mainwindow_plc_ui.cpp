@@ -140,6 +140,18 @@ void FSC_MainWindow::showPlcFresh(void)
         plotFMFlowValueY.clear();
     }
 
+    ui->lineEdit_showPidPwm->setText(QString::number(plcPidPWM));
+    ui->lineEdit_showPidPwm_2->setText(QString::number(plcPidPWM));
+
+    if (showSetFlowRate >= 654320 && showSetFlowRate <= 654322)
+    {
+        ui->lineEdit_showPidPwm->setVisible(true);
+    }
+
+    if (showSetFlowRate >= 666665 && showSetFlowRate <= 666667)
+    {
+        ui->lineEdit_showPidPwm->setVisible(false);
+    }
 }
 
 void FSC_MainWindow::on_tbnVOutOpen_clicked()

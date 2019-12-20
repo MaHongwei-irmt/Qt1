@@ -113,9 +113,21 @@ class FSC_MainWindow;
 
 #define RECORD_FILE_TO_BE_CONTINUE  "未完. 后续步骤进行中..."
 
+class calLink
+{
+public:
+    int     stepNum = 0;
+
+    int     direct = 0;
+    int     type = 0;
+    int     spanPercent = 0;
+    double  span = 0;
+
+
+};
+
 class calStep
 {
-
 public:
 
     QString type_name;
@@ -201,8 +213,6 @@ public:
     QTextBrowser    *txtBrow_showInfo = nullptr;
     bool            showCalTable = false;
     QString         calTableName = "";
-    QPrinter        *printer = nullptr;
-    QPrinterInfo    *infoPrinter = nullptr;
     Qt::CheckState  autoPrinter = Qt::Unchecked;
     bool            autoPrinterBool = false;
     QString         printerName = "";
@@ -316,6 +326,8 @@ private:
     void calStepInfoFresh(void);
     void calStepInfoFreshOnUI(void);
 
+    void calRunLink_calStepInfoInit(void);
+    int  stepCal_dir_type_span(int *dir, int *type, int *spanPercent, double *span, int stepNum);
     void SocketDataInit(void);
     void SocketConnect(void);
 
@@ -412,11 +424,11 @@ private:
     QTimer  *startUpTimer = nullptr;
     QTimer  *calTimer = nullptr;
     QTimer  *STFMTimer = nullptr;
-    int    pollCycleSTFM = 250;
+    int     pollCycleSTFM = 250;
 
     bool    socketWellDone  =   false;
 
-    uint sktConCommandTime[SOCKET_NUMBER];
+    uint    sktConCommandTime[SOCKET_NUMBER];
 
     char    stationSTDFM;
     char    stationFM[FLOWMETER_NUMBER];
@@ -467,6 +479,8 @@ private:
 
     bool        calManualDoing   =   false;
 
+    QVector<calLink> calRunLink;
+
     QCheckBox   *checkBox_spanCal[SPAN_NUMBER];
     QCheckBox   *checkBox_spanCheck[SPAN_NUMBER];
     QCheckBox   *checkBox_spanCorrect[SPAN_NUMBER];
@@ -482,6 +496,7 @@ private:
     int         plcRWErr = 0;
     double      plcRevFlowRate;
     uint16_t    plcRevPWM;
+    uint16_t    plcPidPWM = 0;
 };
 
 class fsc_para_ini
