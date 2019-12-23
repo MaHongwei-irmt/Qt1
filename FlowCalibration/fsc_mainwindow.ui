@@ -1091,7 +1091,7 @@ p, li { white-space: pre-wrap; }
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QGroupBox" name="groupBox_2">
+   <widget class="QGroupBox" name="groupBox_config">
     <property name="geometry">
      <rect>
       <x>15</x>
@@ -2787,7 +2787,7 @@ p, li { white-space: pre-wrap; }
      <string>PID</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="pushButton_stepSave">
     <property name="geometry">
      <rect>
       <x>1400</x>
@@ -2800,7 +2800,7 @@ p, li { white-space: pre-wrap; }
      <string>保存</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton">
+   <widget class="QPushButton" name="pushButton_stepDown">
     <property name="geometry">
      <rect>
       <x>1400</x>
@@ -2813,7 +2813,7 @@ p, li { white-space: pre-wrap; }
      <string>后移</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushButton_stepUp">
     <property name="geometry">
      <rect>
       <x>1400</x>
@@ -2826,7 +2826,7 @@ p, li { white-space: pre-wrap; }
      <string>前移</string>
     </property>
    </widget>
-   <zorder>groupBox_2</zorder>
+   <zorder>groupBox_config</zorder>
    <zorder>line_4</zorder>
    <zorder>groupBox</zorder>
    <zorder>MyCustomPlot</zorder>
@@ -2938,9 +2938,9 @@ p, li { white-space: pre-wrap; }
    <zorder>pushButton_showInfo</zorder>
    <zorder>lineEdit_showPidPwm_2</zorder>
    <zorder>label_62</zorder>
-   <zorder>pushButton_2</zorder>
-   <zorder>pushButton</zorder>
-   <zorder>pushButton_3</zorder>
+   <zorder>pushButton_stepSave</zorder>
+   <zorder>pushButton_stepDown</zorder>
+   <zorder>pushButton_stepUp</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">

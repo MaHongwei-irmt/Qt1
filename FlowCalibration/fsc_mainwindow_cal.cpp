@@ -192,14 +192,87 @@ void FSC_MainWindow::startCal(void)
 
 bool FSC_MainWindow::calProc(void)
 {
-    bool ret = fillOneCal(&oneCal);
+    //bool ret = fillOneCal(&oneCal);
+    bool ret = fillOneCalLink(&oneCal);
 
     if (ret)
     {
-        calSingle(&oneCal);
+        //calSingle(&oneCal);
+        calSingleLink(&oneCal);
     }
 
     return ret;
+}
+
+bool FSC_MainWindow::fillOneCalLink(oneCalTag *calTag)
+{
+    if (calTag->state == ONE_CAL_EMPTY)
+    {
+        if ( currentStep.stepTotal == 0 || currentStep.stepCurrent == currentStep.stepTotal)
+        {
+            allCalEnd = true;
+
+            if(allCalNeedToReport)
+            {
+                makeCalRecordPrint(calTag);
+            }
+            else
+            {
+                printInfoWithTime("无数据生成报表");
+            }
+
+            printInfoWithTime("本次全部结束");
+            calOn = CAL_STATE_STOP;
+            return false;
+        }
+
+        if ((calTag->step + 1)  > currentStep.stepTotal)
+        {
+            calTag->step = 0;
+            currentStep.stepCurrent = 0;
+
+            return false;
+        }
+
+        if (calTag->step > 0)
+        {
+            currentStep.stepCurrent++;
+            if (currentStep.stepCurrent > currentStep.stepTotal)
+            {
+                currentStep.stepCurrent = currentStep.stepTotal;
+            }
+
+            curShowStep++;
+            if (curShowStep > calRunLink.size())
+            {
+                curShowStep = calRunLink.size();
+            }
+        }
+
+        calTag->stepNum = calRunLink[curShowStep].stepNum;
+        calTag->calDirect = calRunLink[curShowStep].direct;
+        calTag->calTpye = calRunLink[curShowStep].type;
+        calTag->calSpanPercent = calRunLink[curShowStep].spanPercent;
+        calTag->calSpan = calRunLink[curShowStep].span;
+
+        calTag->step = currentStep.stepCurrent + 1;
+
+        if (calTag->step  > currentStep.stepTotal)
+        {
+            printInfoWithTime("步数错误，重新选择");
+
+            calTag->step = 0;
+            currentStep.stepCurrent = 0;
+
+            return false;
+        }
+
+        calTag->state = ONE_CAL_START;
+
+        calTag->calTime = QDateTime::currentDateTime().toTime_t();
+    }
+
+    return true;
 }
 
 bool FSC_MainWindow::fillOneCal(oneCalTag *calTag)
@@ -261,6 +334,178 @@ bool FSC_MainWindow::fillOneCal(oneCalTag *calTag)
     }
 
     return true;
+}
+
+void FSC_MainWindow::calSingleLink(oneCalTag *calTag)
+{
+    QString str;
+
+    if (calTag->step < 0 || calTag->step > calRunLink.size())
+    {
+        return;
+    }
+
+    if (calTag->state == ONE_CAL_START)
+    {
+        str += QString().sprintf("第(%d)步开始->", calRunLink[calTag->step - 1].stepNum + 1);
+
+        if (calTag->calDirect == START_CAL_DIRECT_FORWARD)
+        {
+            str += "正向->";
+        }
+        else if (calTag->calDirect == START_CAL_DIRECT_REVERSE)
+        {
+            str += "反向->";
+        }
+
+        if (calTag->calTpye == START_CAL_TYPE_CAL)
+        {
+            str += "标定->";
+        }
+        else if (calTag->calTpye == START_CAL_TYPE_CORRECT)
+        {
+            str += "修正->";
+        }
+        else if (calTag->calTpye == START_CAL_TYPE_CHECK)
+        {
+             str += "验证->";
+        }
+
+        str += QString().sprintf("%d", calTag->calSpanPercent);
+        str += "%量程->天平清零->";
+        str += QString().sprintf("%0.3fml/min->", calTag->calSpan);
+        printInfoWithTime(str);
+
+        reqScaleZero();
+
+        calTag->state = ONE_CAL_START_END;
+
+        calTag->calTime = QDateTime::currentDateTime().toTime_t();
+    }
+
+    if (calTag->state == ONE_CAL_START_END)
+    {
+        if(QDateTime::currentDateTime().toTime_t()- calTag->calTime > 2)
+        {
+            //if (showScaleSum > 2)
+            if (showScaleSum < 2)
+            {
+                printInfoWithTime("->天平再次清零");
+                reqScaleZero();
+                calTag->calTime = QDateTime::currentDateTime().toTime_t();
+
+            }
+            else
+            {
+                showSetFlowRate = calTag->calSpan;
+                on_radioButton_setFlowRate_clicked();
+
+                calTag->stepRecord = calTag->step;
+                calGoingInfoLab(calTag);
+
+                if (calTag->calDirect == START_CAL_DIRECT_FORWARD)
+                {
+                    if (showSetFlowRate > MAX_SPAN)
+                    {
+                        printInfoWithTime("->关闭反向进水阀");
+                        closeReverseValveAll();
+                        writePLC();
+                        delayMSec(VALVE_EXCHANGE_DELAY);
+
+                        printInfo("->打开正向进水阀");
+                        openForwardValveAll();
+                        writePLC();
+                        delayMSec(VALVE_EXCHANGE_DELAY);
+
+                        printInfoWithTime("->启动1#泵->启动2#泵");
+
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            pump1On();
+                            pump2On();
+                            writePLC();
+                        }
+                    }
+                    else if (showSetFlowRate > MIN_SPAN)
+                    {
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            on_tbnPump2ForwardOn_clicked();
+                        }
+
+                    }
+                    else
+                    {
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            on_tbnPump1ForwardOn_clicked();
+                        }
+                    }
+
+                }
+                else if (calTag->calDirect == START_CAL_DIRECT_REVERSE)
+                {
+                    if (showSetFlowRate > MAX_SPAN)
+                    {
+                        printInfoWithTime("->关闭正向进水阀");
+                        closeForwardValveAll();
+                        writePLC();
+                        delayMSec(VALVE_EXCHANGE_DELAY);
+
+                        printInfo("->打开反向进水阀");
+                        openReverseValveAll();
+                        writePLC();
+                        delayMSec(VALVE_EXCHANGE_DELAY);
+
+                        printInfoWithTime("->启动1#泵->启动2#泵");
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            pump1On();
+                            pump2On();
+                            writePLC();
+                        }
+
+                    }
+                    else if (showSetFlowRate > MIN_SPAN)
+                    {
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            on_tbnPump2ReverseOn_clicked();
+                        }
+                    }
+                    else
+                    {
+                        if (calOn != CAL_STATE_STOP)
+                        {
+                            on_tbnPump1ReverseOn_clicked();
+                        }
+                    }
+                }
+
+                calTag->state = ONE_CAL_GOING;
+
+                oneCal.plotSelectedFMIndex  = ui->comboBox_PlotSenSel->currentIndex();
+                oneCal.plotSelectedFMStr  = ui->comboBox_PlotSenSel->currentText();
+
+                calTag->calTime = QDateTime::currentDateTime().toTime_t();
+                calTag->calProcStartTime = QDateTime::currentDateTime().toTime_t();
+                calTag->calProcEndTime = QDateTime::currentDateTime().toTime_t();
+
+            }
+        }
+    }
+
+    if (calTag->state == ONE_CAL_GOING)
+    {
+        calGoing(calTag);
+    }
+
+    if(calTag->state == ONE_CAL_POST_PROCESS)
+    {
+        calDoing(calTag);
+
+        calTag->state = ONE_CAL_EMPTY;
+    }
 }
 
 void FSC_MainWindow::calSingle(oneCalTag *calTag)
@@ -411,6 +656,7 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
 
                 calTag->calTime = QDateTime::currentDateTime().toTime_t();
                 calTag->calProcStartTime = QDateTime::currentDateTime().toTime_t();
+                calTag->calProcEndTime = QDateTime::currentDateTime().toTime_t();
 
             }
         }
@@ -589,9 +835,9 @@ void FSC_MainWindow::calStop(oneCalTag *calTag)
     writePLC();
 }
 
-void FSC_MainWindow::makeCalRecordPrint(oneCalTag *calTag)
+void FSC_MainWindow::makeCalRecordPrint(oneCalTag *cal)
 {
-    if (calTag == nullptr) return;
+    if (cal == nullptr) return;
     if (!allCalNeedToReport) return;
 
     QString fileName = "流量标定报表" + QDateTime::currentDateTime().toString("yyyyMMddhhmmss") + ".txt";
@@ -606,93 +852,91 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *calTag)
     QTextStream stream(&file);
 
     QString str =  "报表生成时间：" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "\n";
-
-    str += "型号：" + calTag->stepBak.type_name + "   量程：" + QString::number(calTag->stepBak.span_ml_per_min) + "ml/min   水温：25°C\n" ;
+    str += "型号：" + cal->stepBak.type_name + "   量程：" + QString::number(cal->stepBak.span_ml_per_min) + "ml/min   \
+            水温：25°C    共" + QString::number(cal->stepRecord) + "步\n" ;
     str += "\n";
 
-    oneCalTag *calTagTmp;
     for(int i = 0; i < CAL_MAX_STEP; i++)
     {
-        calTagTmp = calTag + i;
         if (allCalAvailable[i])
         {
-            str += "第(" + QString::number(i + 1) + ")步" + "   " + \
-                    QString::number(calTagTmp->calSpanPercent) + "%量程("\
-                    + QString::number((calTagTmp->calSpanPercent * calTag->stepBak.span_ml_per_min / 100), 'f',3) \
+            str += "第(" + QString::number(allCal[i].stepNum + 1) + ")步" + "   " + \
+                    QString::number(allCal[i].calSpanPercent) + "%量程("\
+                    + QString::number((allCal[i].calSpanPercent * allCal[i].stepBak.span_ml_per_min / 100), 'f',3) \
                     + "ml/min) ";
 
 
-            if (calTagTmp->calDirect == START_CAL_DIRECT_FORWARD)
+            if (allCal[i].calDirect == START_CAL_DIRECT_FORWARD)
             {
                 str += "正向 ";
             }
-            else if (calTagTmp->calDirect == START_CAL_DIRECT_REVERSE)
+            else if (allCal[i].calDirect == START_CAL_DIRECT_REVERSE)
             {
                 str += "反向 ";
             }
 
-            if (calTagTmp->calTpye == START_CAL_TYPE_CAL)
+            if (allCal[i].calTpye == START_CAL_TYPE_CAL)
             {
                 str += "标定 ";
             }
-            else if (calTagTmp->calTpye == START_CAL_TYPE_CORRECT)
+            else if (allCal[i].calTpye == START_CAL_TYPE_CORRECT)
             {
                 str += "修正 ";
             }
-            else if (calTagTmp->calTpye == START_CAL_TYPE_CHECK)
+            else if (allCal[i].calTpye == START_CAL_TYPE_CHECK)
             {
                 str += "验证 ";
             }
 
-            str += "时间：" + calTagTmp->calDateTime.toString("yyyy-MM-dd hh:mm:ss   ");
+            str += "时间：" + allCal[i].calDateTime.toString("yyyy-MM-dd hh:mm:ss   ");
 
-            str += "用时：" + QString::number(calTagTmp->calProcEndTime - calTagTmp->calProcStartTime);
+            str += "用时：" + QString::number(allCal[i].calProcEndTime - allCal[i].calProcStartTime);
 
             str += "s\n";
 
-            str += "天平称重：" + QString::number(calTagTmp->finalScaleSumValue, 'f', 3) + "g\n";
-            str += "标准流量计累计流量：" + QString::number(calTagTmp->finalSTDFMSumValue, 'f', 3) + "ml\n";
-            str += "标准流量计最后流速：" + QString::number(calTagTmp->finalSTDFMRateValue, 'f', 3) + "ml/min\n";
+            str += "天平称重：" + QString::number(allCal[i].finalScaleSumValue, 'f', 3) + "g\n";
+            str += "标准流量计累计流量：" + QString::number(allCal[i].finalSTDFMSumValue, 'f', 3) + "ml\n";
+            str += "标准流量计最后流速：" + QString::number(allCal[i].finalSTDFMRateValue, 'f', 3) + "ml/min\n";
 
             double d = 0;
-            for (int i = 0; i < calTagTmp->plotSTDFMRateValue.size(); i++)
+            for (int i = 0; i < allCal[i].plotSTDFMRateValue.size(); i++)
             {
-                d += calTagTmp->plotSTDFMRateValue[i];
+                d += allCal[i].plotSTDFMRateValue[i];
             }
-            d /= calTagTmp->plotSTDFMRateValue.size();
+            d /= allCal[i].plotSTDFMRateValue.size();
 
             str += "标准流量计平均流速：" + QString::number(d, 'f', 3) + "ml/min\n";
             str += "\n";
 
             for (int i = 0; i < FLOWMETER_NUMBER; i++)
             {
-                if (calTagTmp->finalFMSumValue[i] < 1.0 ||  std::isnan(calTagTmp->finalFMSumValue[i])) continue;
+                if (allCal[i].finalFMSumValue[i] < 1.0 ||  std::isnan(allCal[i].finalFMSumValue[i])) continue;
 
-                str += QString::number(i + 1) + "#流量计累计流量：" + QString::number(calTagTmp->finalFMSumValue[i], 'f', 3) + "ml\n";
-                str += QString::number(i + 1) + "#流量计最后流速：" + QString::number(calTagTmp->finalFMSumValue[i], 'f', 3) + "ml/min\n";
+                str += QString::number(i + 1) + "#流量计累计流量：" + QString::number(allCal[i].finalFMSumValue[i], 'f', 3) + "ml\n";
+                str += QString::number(i + 1) + "#流量计最后流速：" + QString::number(allCal[i].finalFMSumValue[i], 'f', 3) + "ml/min\n";
 
                 d = 0;
-                for (int j = 0; j < calTagTmp->plotFMRateValue[i].size(); j++)
+                for (int j = 0; j < allCal[i].plotFMRateValue[i].size(); j++)
                 {
-                    d += calTagTmp->plotFMRateValue[i][j];
+                    d += allCal[i].plotFMRateValue[i][j];
                 }
-                d /= calTagTmp->plotFMRateValue[i].size();
+                d /= allCal[i].plotFMRateValue[i].size();
 
                 str += QString::number(i + 1) + "#流量计平均流速：" + QString::number(d, 'f', 3) + "ml/min\n";
 
-                d = calTagTmp->finalFMSumValue[i] - calTagTmp->finalScaleSumValue;
+                d = allCal[i].finalFMSumValue[i] - allCal[i].finalScaleSumValue;
                 str += "累计流量与天平误差：" + QString::number(d, 'f', 3) + "ml(g)\n";
-                str += "误差百分比：" + QString::number(d / calTagTmp->finalScaleSumValue * 100, 'f', 3) + "%  已";
+                str += "误差百分比：" + QString::number(d / allCal[i].finalScaleSumValue * 100, 'f', 3) + "%  已";
 
-                if (calTagTmp->calTpye == START_CAL_TYPE_CAL)
+                if (allCal[i].calTpye == START_CAL_TYPE_CAL)
                 {
                     str += "标定";
                 }
-                else if (calTagTmp->calTpye == START_CAL_TYPE_CORRECT)
+                else if (allCal[i].calTpye == START_CAL_TYPE_CORRECT)
                 {
                     str += "修正";
                 }
-                else if (calTagTmp->calTpye == START_CAL_TYPE_CHECK)
+                else if (allCal[i].calTpye == START_CAL_TYPE_CHECK)
                 {
                     str += "验证";
                 }

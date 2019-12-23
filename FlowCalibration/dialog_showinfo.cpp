@@ -48,7 +48,7 @@ Dialog_showinfo::Dialog_showinfo(QWidget *parent) :
 
         freshTimer = new QTimer(this);
         connect(freshTimer, SIGNAL(timeout()), this, SLOT(showInfo()));
-        freshTimer->start(1000);
+        freshTimer->start(800);
     }
 }
 
@@ -70,6 +70,8 @@ void Dialog_showinfo::showInfo(void)
     {
         ui->textBrow_calInfo->setText(mainWin->txtBrow_showInfo->toPlainText());
         mainWin->showInfoUpdata = false;
+
+        ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
     }
 }
 
@@ -100,7 +102,7 @@ void Dialog_showinfo::showCalTable(void)
 
 void Dialog_showinfo::on_pushButton_showCalTable_clicked()
 {
-    QString fileName = QFileDialog::getOpenFileName(this,tr("选择报表文件"),"",tr("TXT(*.txt)"));
+    QString fileName = QFileDialog::getOpenFileName(this,tr("select record file"),"",tr("TXT(*.txt)"));
     if (fileName.isEmpty())
     {
         return;

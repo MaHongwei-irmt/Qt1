@@ -1593,7 +1593,6 @@ debug/moc_dialog_showinfo.cpp: C:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets/
 		C:/Qt/Qt5.9.8/5.9.8/mingw53_32/bin/moc.exe
 	C:\Qt\Qt5.9.8\5.9.8\mingw53_32\bin\moc.exe $(DEFINES) --include debug/moc_predefs.h -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/mkspecs/win32-g++ -ID:/jyWork/QtPro/FlowCalibration -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtPrintSupport -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtWidgets -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtGui -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtANGLE -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtSerialPort -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtNetwork -IC:/Qt/Qt5.9.8/5.9.8/mingw53_32/include/QtCore -IC:/Qt/Qt5.9.8/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include -IC:/Qt/Qt5.9.8/Tools/mingw530_32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed -IC:/Qt/Qt5.9.8/Tools/mingw530_32/i686-w64-mingw32/include -IC:/Qt/Qt5.9.8/Tools/mingw530_32/i686-w64-mingw32/include/c++ -IC:/Qt/Qt5.9.8/Tools/mingw530_32/i686-w64-mingw32/include/c++/i686-w64-mingw32 -IC:/Qt/Qt5.9.8/Tools/mingw530_32/i686-w64-mingw32/include/c++/backward dialog_showinfo.h -o debug\moc_dialog_showinfo.cpp
 
-
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
 compiler_uic_make_all: ui_fsc_mainwindow.h ui_dialog_checkdev.h ui_dialog_sensoraddr.h ui_dialog_showinfo.h ui_dialog_showinfo.h

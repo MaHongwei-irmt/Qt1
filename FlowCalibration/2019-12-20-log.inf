@@ -4764,3 +4764,693 @@ fsc_mainwindow_socket.cpp:65: "2019-12-20 16:32:49:215" "14 socket con"
 fsc_mainwindow_socket.cpp:65: "2019-12-20 16:32:49:221" "7 socket con"
 fsc_mainwindow_socket.cpp:65: "2019-12-20 16:32:49:227" "15 socket con"
 fsc_mainwindow_socket.cpp:65: "2019-12-20 16:32:49:231" "3 socket con"
+main.cpp:12: "2019-12-20 17:18:20:153"   start
+fsc_mainwindow.cpp:107: "2019-12-20 17:18:20:642" 1920 1040
+main.cpp:17: "2019-12-20 17:18:20:804" w.show()
+fsc_mainwindow.cpp:239: "2019-12-20 17:18:20:814" "192.168.1.220"
+fsc_mainwindow.cpp:240: "2019-12-20 17:18:20:819" "192.168.1.221"
+fsc_mainwindow.cpp:261: "2019-12-20 17:18:20:825" pollCycleSTFM= 200
+fsc_mainwindow.cpp:266: "2019-12-20 17:18:20:830" printerName= "Lenovo M7455DNF Printer"
+fsc_mainwindow.cpp:271: "2019-12-20 17:18:20:833" printerName= false
+fsc_thread.cpp:16: "2019-12-20 17:18:20:838" thread start ...
+fsc_mainwindow_socket.cpp:7: "2019-12-20 17:18:20:844" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+fsc_mainwindow.cpp:43: "2019-12-20 17:18:20:898" SocketDataInit
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:20:903" "XY_DD_1"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:20:909" "XY-DD-2"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:20:915" "XY-DD-3"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:20:920" "XY-DD-4"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:20:925" "XY-DD-5"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:20:930" "XY-DD-7"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:20:935" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:20:940" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:20:946" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:20:951" "11"
+fsc_mainwindow.cpp:47: "2019-12-20 17:18:20:956" ParaInit
+fsc_mainwindow.cpp:50: "2019-12-20 17:18:20:963" DataInit
+fsc_mainwindow.cpp:53: "2019-12-20 17:18:20:967" plcDataInit
+fsc_mainwindow.cpp:56: "2019-12-20 17:18:20:997" PlotInit
+fsc_mainwindow_socket.cpp:17: "2019-12-20 17:18:21:066" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:20: "2019-12-20 17:18:21:071" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+socket\qabstractsocket.cpp:1663: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+fsc_mainwindow_socket.cpp:260: "2019-12-20 17:18:21:252" wait socket start up ...
+fsc_mainwindow_socket.cpp:29: "2019-12-20 17:18:21:381" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+fsc_thread.cpp:23: "2019-12-20 17:18:21:386" signal_startScketInit
+fsc_mainwindow_socket.cpp:260: "2019-12-20 17:18:21:502" wait socket start up ...
+fsc_mainwindow_socket.cpp:50: "2019-12-20 17:18:21:586" SocketInit->connectToHost... "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:54: "2019-12-20 17:18:21:593" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:50: "2019-12-20 17:18:21:598" SocketInit->connectToHost... "192.168.1.221" 4001
+fsc_mainwindow_socket.cpp:54: "2019-12-20 17:18:21:604" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:610" "1 socket con"
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:615" "2"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:620" "3"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:624" "4"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:629" "5"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:634" "6"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:640" "7"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:646" "8"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:651" "9"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:657" "10"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:663" "11"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:668" "12"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:674" "13"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:680" "14"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:686" "15"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:21:692" "16"  socket con retry
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:696" "0 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:701" "16 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:706" "10 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:711" "3 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:716" "5 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:721" "2 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:726" "7 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:731" "13 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:736" "4 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:741" "9 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:746" "15 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:751" "11 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:757" "6 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:762" "14 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:767" "12 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:21:772" "8 socket con"
+io\qfsfileengine.cpp:200: QFSFileEngine::open: No file name specified
+main.cpp:12: "2019-12-20 17:18:35:165"   start
+fsc_mainwindow.cpp:107: "2019-12-20 17:18:35:599" 1920 1040
+main.cpp:17: "2019-12-20 17:18:35:756" w.show()
+fsc_mainwindow.cpp:239: "2019-12-20 17:18:35:765" "192.168.1.220"
+fsc_mainwindow.cpp:240: "2019-12-20 17:18:35:770" "192.168.1.221"
+fsc_mainwindow.cpp:261: "2019-12-20 17:18:35:775" pollCycleSTFM= 200
+fsc_mainwindow.cpp:266: "2019-12-20 17:18:35:780" printerName= "Lenovo M7455DNF Printer"
+fsc_mainwindow.cpp:271: "2019-12-20 17:18:35:785" printerName= false
+fsc_thread.cpp:16: "2019-12-20 17:18:35:790" thread start ...
+fsc_mainwindow_socket.cpp:7: "2019-12-20 17:18:35:798" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+fsc_mainwindow.cpp:43: "2019-12-20 17:18:35:853" SocketDataInit
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:35:859" "XY_DD_1"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:35:866" "XY-DD-2"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:35:872" "XY-DD-3"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:35:877" "XY-DD-4"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:35:883" "XY-DD-5"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:35:889" "XY-DD-7"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:35:895" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:35:900" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:35:905" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:35:910" "11"
+fsc_mainwindow.cpp:47: "2019-12-20 17:18:35:915" ParaInit
+fsc_mainwindow.cpp:50: "2019-12-20 17:18:35:922" DataInit
+fsc_mainwindow.cpp:53: "2019-12-20 17:18:35:928" plcDataInit
+fsc_mainwindow.cpp:56: "2019-12-20 17:18:35:960" PlotInit
+fsc_mainwindow_socket.cpp:17: "2019-12-20 17:18:36:022" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:20: "2019-12-20 17:18:36:026" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+socket\qabstractsocket.cpp:1663: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+fsc_mainwindow_socket.cpp:260: "2019-12-20 17:18:36:207" wait socket start up ...
+fsc_mainwindow_socket.cpp:29: "2019-12-20 17:18:36:336" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+fsc_thread.cpp:23: "2019-12-20 17:18:36:341" signal_startScketInit
+fsc_mainwindow_socket.cpp:260: "2019-12-20 17:18:36:459" wait socket start up ...
+fsc_mainwindow_socket.cpp:50: "2019-12-20 17:18:36:541" SocketInit->connectToHost... "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:54: "2019-12-20 17:18:36:549" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:50: "2019-12-20 17:18:36:554" SocketInit->connectToHost... "192.168.1.221" 4001
+fsc_mainwindow_socket.cpp:54: "2019-12-20 17:18:36:559" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:565" "0 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:580" "1 socket con"
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:585" "2"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:590" "3"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:596" "4"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:601" "5"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:607" "6"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:613" "7"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:618" "8"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:624" "9"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:630" "10"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:635" "11"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:646" "12"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:651" "13"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:656" "14"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:662" "15"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:36:668" "16"  socket con retry
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:673" "11 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:680" "3 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:684" "7 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:689" "10 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:695" "14 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:700" "15 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:706" "2 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:712" "6 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:717" "9 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:723" "4 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:729" "13 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:735" "16 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:742" "5 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:749" "8 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:36:754" "12 socket con"
+main.cpp:12: "2019-12-20 17:18:58:441"   start
+fsc_mainwindow.cpp:107: "2019-12-20 17:18:58:861" 1920 1040
+main.cpp:17: "2019-12-20 17:18:59:015" w.show()
+fsc_mainwindow.cpp:239: "2019-12-20 17:18:59:020" "192.168.1.220"
+fsc_mainwindow.cpp:240: "2019-12-20 17:18:59:026" "192.168.1.221"
+fsc_mainwindow.cpp:261: "2019-12-20 17:18:59:032" pollCycleSTFM= 200
+fsc_mainwindow.cpp:266: "2019-12-20 17:18:59:036" printerName= "Lenovo M7455DNF Printer"
+fsc_mainwindow.cpp:271: "2019-12-20 17:18:59:041" printerName= false
+fsc_thread.cpp:16: "2019-12-20 17:18:59:046" thread start ...
+fsc_mainwindow_socket.cpp:7: "2019-12-20 17:18:59:054" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+fsc_mainwindow.cpp:43: "2019-12-20 17:18:59:109" SocketDataInit
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:59:115" "XY_DD_1"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:59:119" "XY-DD-2"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:59:125" "XY-DD-3"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:59:130" "XY-DD-4"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:59:136" "XY-DD-5"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:59:141" "XY-DD-7"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:59:146" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:59:151" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:59:156" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:303: "2019-12-20 17:18:59:162" "11"
+fsc_mainwindow.cpp:47: "2019-12-20 17:18:59:168" ParaInit
+fsc_mainwindow.cpp:50: "2019-12-20 17:18:59:173" DataInit
+fsc_mainwindow.cpp:53: "2019-12-20 17:18:59:178" plcDataInit
+fsc_mainwindow.cpp:56: "2019-12-20 17:18:59:208" PlotInit
+fsc_mainwindow_socket.cpp:17: "2019-12-20 17:18:59:274" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:20: "2019-12-20 17:18:59:279" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+socket\qabstractsocket.cpp:1663: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+fsc_mainwindow_socket.cpp:260: "2019-12-20 17:18:59:456" wait socket start up ...
+fsc_mainwindow_socket.cpp:29: "2019-12-20 17:18:59:589" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+fsc_thread.cpp:23: "2019-12-20 17:18:59:594" signal_startScketInit
+fsc_mainwindow_socket.cpp:260: "2019-12-20 17:18:59:706" wait socket start up ...
+fsc_mainwindow_socket.cpp:50: "2019-12-20 17:18:59:794" SocketInit->connectToHost... "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:54: "2019-12-20 17:18:59:801" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:50: "2019-12-20 17:18:59:806" SocketInit->connectToHost... "192.168.1.221" 4001
+fsc_mainwindow_socket.cpp:54: "2019-12-20 17:18:59:812" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:817" "1 socket con"
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:822" "2"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:827" "3"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:833" "4"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:838" "5"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:846" "6"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:851" "7"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:856" "8"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:862" "9"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:867" "10"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:878" "11"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:883" "12"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:888" "13"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:894" "14"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:899" "15"  socket con retry
+fsc_mainwindow_socket.cpp:84: "2019-12-20 17:18:59:906" "16"  socket con retry
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:913" "0 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:918" "14 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:923" "9 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:929" "11 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:935" "4 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:939" "16 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:945" "10 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:950" "5 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:954" "15 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:960" "12 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:965" "2 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:970" "7 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:974" "13 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:979" "8 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:984" "6 socket con"
+fsc_mainwindow_socket.cpp:65: "2019-12-20 17:18:59:989" "3 socket con"
+:0: "2019-12-20 17:21:33:442"   start
+:0: "2019-12-20 17:21:33:871" 1920 1040
+:0: "2019-12-20 17:21:34:013" w.show()
+:0: "2019-12-20 17:21:34:020" "192.168.1.220"
+:0: "2019-12-20 17:21:34:025" "192.168.1.221"
+:0: "2019-12-20 17:21:34:030" pollCycleSTFM= 200
+:0: "2019-12-20 17:21:34:036" printerName= "Lenovo M7455DNF Printer"
+:0: "2019-12-20 17:21:34:041" printerName= false
+:0: "2019-12-20 17:21:34:046" thread start ...
+:0: "2019-12-20 17:21:34:053" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-20 17:21:34:104" SocketDataInit
+:0: "2019-12-20 17:21:34:109" "XY_DD_1"
+:0: "2019-12-20 17:21:34:114" "XY-DD-2"
+:0: "2019-12-20 17:21:34:119" "XY-DD-3"
+:0: "2019-12-20 17:21:34:124" "XY-DD-4"
+:0: "2019-12-20 17:21:34:129" "XY-DD-5"
+:0: "2019-12-20 17:21:34:135" "XY-DD-7"
+:0: "2019-12-20 17:21:34:140" "XY-DD-FGG-9877"
+:0: "2019-12-20 17:21:34:144" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-20 17:21:34:149" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-20 17:21:34:155" "11"
+:0: "2019-12-20 17:21:34:160" ParaInit
+:0: "2019-12-20 17:21:34:167" DataInit
+:0: "2019-12-20 17:21:34:172" plcDataInit
+:0: "2019-12-20 17:21:34:203" PlotInit
+:0: "2019-12-20 17:21:34:273" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-20 17:21:34:277" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-20 17:21:34:457" wait socket start up ...
+:0: "2019-12-20 17:21:34:586" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-20 17:21:34:592" signal_startScketInit
+:0: "2019-12-20 17:21:34:706" wait socket start up ...
+:0: "2019-12-20 17:21:34:792" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-20 17:21:34:799" SocketInit->connectToHost
+:0: "2019-12-20 17:21:34:804" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-20 17:21:34:810" SocketInit->connectToHost
+:0: "2019-12-20 17:21:34:815" "1 socket con"
+:0: "2019-12-20 17:21:34:821" "2"  socket con retry
+:0: "2019-12-20 17:21:34:826" "3"  socket con retry
+:0: "2019-12-20 17:21:34:831" "4"  socket con retry
+:0: "2019-12-20 17:21:34:836" "5"  socket con retry
+:0: "2019-12-20 17:21:34:842" "6"  socket con retry
+:0: "2019-12-20 17:21:34:849" "7"  socket con retry
+:0: "2019-12-20 17:21:34:854" "8"  socket con retry
+:0: "2019-12-20 17:21:34:859" "9"  socket con retry
+:0: "2019-12-20 17:21:34:865" "10"  socket con retry
+:0: "2019-12-20 17:21:34:869" "11"  socket con retry
+:0: "2019-12-20 17:21:34:875" "12"  socket con retry
+:0: "2019-12-20 17:21:34:880" "13"  socket con retry
+:0: "2019-12-20 17:21:34:885" "14"  socket con retry
+:0: "2019-12-20 17:21:34:890" "15"  socket con retry
+:0: "2019-12-20 17:21:34:895" "16"  socket con retry
+:0: "2019-12-20 17:21:34:900" "0 socket con"
+:0: "2019-12-20 17:21:34:906" "8 socket con"
+:0: "2019-12-20 17:21:34:911" "14 socket con"
+:0: "2019-12-20 17:21:34:916" "3 socket con"
+:0: "2019-12-20 17:21:34:921" "5 socket con"
+:0: "2019-12-20 17:21:34:926" "11 socket con"
+:0: "2019-12-20 17:21:34:931" "6 socket con"
+:0: "2019-12-20 17:21:34:936" "10 socket con"
+:0: "2019-12-20 17:21:34:942" "16 socket con"
+:0: "2019-12-20 17:21:34:946" "7 socket con"
+:0: "2019-12-20 17:21:34:951" "13 socket con"
+:0: "2019-12-20 17:21:34:956" "2 socket con"
+:0: "2019-12-20 17:21:34:961" "4 socket con"
+:0: "2019-12-20 17:21:34:966" "15 socket con"
+:0: "2019-12-20 17:21:34:972" "9 socket con"
+:0: "2019-12-20 17:21:34:977" "12 socket con"
+:0: QFSFileEngine::open: No file name specified
+:0: "2019-12-20 17:22:24:683"   start
+:0: "2019-12-20 17:22:25:118" 1920 1040
+:0: "2019-12-20 17:22:25:259" w.show()
+:0: "2019-12-20 17:22:25:264" "192.168.1.220"
+:0: "2019-12-20 17:22:25:270" "192.168.1.221"
+:0: "2019-12-20 17:22:25:274" pollCycleSTFM= 200
+:0: "2019-12-20 17:22:25:278" printerName= "Lenovo M7455DNF Printer"
+:0: "2019-12-20 17:22:25:283" printerName= false
+:0: "2019-12-20 17:22:25:288" thread start ...
+:0: "2019-12-20 17:22:25:294" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-20 17:22:25:338" SocketDataInit
+:0: "2019-12-20 17:22:25:343" "XY_DD_1"
+:0: "2019-12-20 17:22:25:348" "XY-DD-2"
+:0: "2019-12-20 17:22:25:353" "XY-DD-3"
+:0: "2019-12-20 17:22:25:358" "XY-DD-4"
+:0: "2019-12-20 17:22:25:362" "XY-DD-5"
+:0: "2019-12-20 17:22:25:368" "XY-DD-7"
+:0: "2019-12-20 17:22:25:373" "XY-DD-FGG-9877"
+:0: "2019-12-20 17:22:25:377" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-20 17:22:25:382" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-20 17:22:25:387" "11"
+:0: "2019-12-20 17:22:25:392" ParaInit
+:0: "2019-12-20 17:22:25:397" DataInit
+:0: "2019-12-20 17:22:25:402" plcDataInit
+:0: "2019-12-20 17:22:25:431" PlotInit
+:0: "2019-12-20 17:22:25:511" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-20 17:22:25:515" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-20 17:22:25:680" wait socket start up ...
+:0: "2019-12-20 17:22:25:825" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-20 17:22:25:829" signal_startScketInit
+:0: "2019-12-20 17:22:25:930" wait socket start up ...
+:0: "2019-12-20 17:22:26:029" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-20 17:22:26:036" SocketInit->connectToHost
+:0: "2019-12-20 17:22:26:041" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-20 17:22:26:046" SocketInit->connectToHost
+:0: "2019-12-20 17:22:26:051" "0 socket con"
+:0: "2019-12-20 17:22:26:056" "1 socket con"
+:0: "2019-12-20 17:22:26:061" "2"  socket con retry
+:0: "2019-12-20 17:22:26:066" "3"  socket con retry
+:0: "2019-12-20 17:22:26:072" "4"  socket con retry
+:0: "2019-12-20 17:22:26:076" "5"  socket con retry
+:0: "2019-12-20 17:22:26:081" "6"  socket con retry
+:0: "2019-12-20 17:22:26:086" "7"  socket con retry
+:0: "2019-12-20 17:22:26:092" "8"  socket con retry
+:0: "2019-12-20 17:22:26:097" "9"  socket con retry
+:0: "2019-12-20 17:22:26:102" "10"  socket con retry
+:0: "2019-12-20 17:22:26:109" "11"  socket con retry
+:0: "2019-12-20 17:22:26:114" "12"  socket con retry
+:0: "2019-12-20 17:22:26:120" "13"  socket con retry
+:0: "2019-12-20 17:22:26:127" "14"  socket con retry
+:0: "2019-12-20 17:22:26:143" "15"  socket con retry
+:0: "2019-12-20 17:22:26:149" "16"  socket con retry
+:0: "2019-12-20 17:22:26:154" "8 socket con"
+:0: "2019-12-20 17:22:26:158" "15 socket con"
+:0: "2019-12-20 17:22:26:163" "16 socket con"
+:0: "2019-12-20 17:22:26:168" "12 socket con"
+:0: "2019-12-20 17:22:26:172" "4 socket con"
+:0: "2019-12-20 17:22:26:177" "14 socket con"
+:0: "2019-12-20 17:22:26:182" "11 socket con"
+:0: "2019-12-20 17:22:26:186" "5 socket con"
+:0: "2019-12-20 17:22:26:191" "9 socket con"
+:0: "2019-12-20 17:22:26:195" "6 socket con"
+:0: "2019-12-20 17:22:26:200" "13 socket con"
+:0: "2019-12-20 17:22:26:205" "7 socket con"
+:0: "2019-12-20 17:22:26:210" "3 socket con"
+:0: "2019-12-20 17:22:26:214" "10 socket con"
+:0: "2019-12-20 17:22:26:219" "2 socket con"
+:0: "2019-12-20 17:23:54:540"   start
+:0: "2019-12-20 17:23:54:942" 1920 1040
+:0: "2019-12-20 17:23:55:081" w.show()
+:0: "2019-12-20 17:23:55:087" "192.168.1.220"
+:0: "2019-12-20 17:23:55:091" "192.168.1.221"
+:0: "2019-12-20 17:23:55:096" pollCycleSTFM= 200
+:0: "2019-12-20 17:23:55:100" printerName= "Lenovo M7455DNF Printer"
+:0: "2019-12-20 17:23:55:105" printerName= false
+:0: "2019-12-20 17:23:55:110" thread start ...
+:0: "2019-12-20 17:23:55:116" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-20 17:23:55:164" SocketDataInit
+:0: "2019-12-20 17:23:55:169" "XY_DD_1"
+:0: "2019-12-20 17:23:55:174" "XY-DD-2"
+:0: "2019-12-20 17:23:55:178" "XY-DD-3"
+:0: "2019-12-20 17:23:55:183" "XY-DD-4"
+:0: "2019-12-20 17:23:55:188" "XY-DD-5"
+:0: "2019-12-20 17:23:55:192" "XY-DD-7"
+:0: "2019-12-20 17:23:55:197" "XY-DD-FGG-9877"
+:0: "2019-12-20 17:23:55:202" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-20 17:23:55:207" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-20 17:23:55:211" "11"
+:0: "2019-12-20 17:23:55:216" ParaInit
+:0: "2019-12-20 17:23:55:221" DataInit
+:0: "2019-12-20 17:23:55:226" plcDataInit
+:0: "2019-12-20 17:23:55:255" PlotInit
+:0: "2019-12-20 17:23:55:335" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-20 17:23:55:339" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-20 17:23:55:507" wait socket start up ...
+:0: "2019-12-20 17:23:55:648" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-20 17:23:55:653" signal_startScketInit
+:0: "2019-12-20 17:23:55:752" wait socket start up ...
+:0: "2019-12-20 17:23:55:853" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-20 17:23:55:859" SocketInit->connectToHost
+:0: "2019-12-20 17:23:55:864" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-20 17:23:55:869" SocketInit->connectToHost
+:0: "2019-12-20 17:23:55:874" "0 socket con"
+:0: "2019-12-20 17:23:55:878" "1 socket con"
+:0: "2019-12-20 17:23:55:885" "2"  socket con retry
+:0: "2019-12-20 17:23:55:890" "3"  socket con retry
+:0: "2019-12-20 17:23:55:895" "4"  socket con retry
+:0: "2019-12-20 17:23:55:900" "5"  socket con retry
+:0: "2019-12-20 17:23:55:905" "6"  socket con retry
+:0: "2019-12-20 17:23:55:910" "7"  socket con retry
+:0: "2019-12-20 17:23:55:915" "8"  socket con retry
+:0: "2019-12-20 17:23:55:920" "9"  socket con retry
+:0: "2019-12-20 17:23:55:925" "10"  socket con retry
+:0: "2019-12-20 17:23:55:930" "11"  socket con retry
+:0: "2019-12-20 17:23:55:935" "12"  socket con retry
+:0: "2019-12-20 17:23:55:939" "13"  socket con retry
+:0: "2019-12-20 17:23:55:944" "14"  socket con retry
+:0: "2019-12-20 17:23:55:949" "15"  socket con retry
+:0: "2019-12-20 17:23:55:954" "16"  socket con retry
+:0: "2019-12-20 17:23:55:960" "7 socket con"
+:0: "2019-12-20 17:23:55:964" "10 socket con"
+:0: "2019-12-20 17:23:55:969" "16 socket con"
+:0: "2019-12-20 17:23:55:974" "3 socket con"
+:0: "2019-12-20 17:23:55:978" "6 socket con"
+:0: "2019-12-20 17:23:55:983" "11 socket con"
+:0: "2019-12-20 17:23:55:987" "15 socket con"
+:0: "2019-12-20 17:23:55:992" "5 socket con"
+:0: "2019-12-20 17:23:55:997" "9 socket con"
+:0: "2019-12-20 17:23:56:001" "13 socket con"
+:0: "2019-12-20 17:23:56:006" "2 socket con"
+:0: "2019-12-20 17:23:56:011" "8 socket con"
+:0: "2019-12-20 17:23:56:016" "12 socket con"
+:0: "2019-12-20 17:23:56:021" "14 socket con"
+:0: "2019-12-20 17:23:56:025" "4 socket con"
+:0: QFSFileEngine::open: No file name specified
+:0: QFSFileEngine::open: No file name specified
+:0: "2019-12-20 17:28:18:876"   start
+:0: "2019-12-20 17:28:19:344" 1920 1040
+:0: "2019-12-20 17:28:19:486" w.show()
+:0: "2019-12-20 17:28:19:491" "192.168.1.220"
+:0: "2019-12-20 17:28:19:496" "192.168.1.221"
+:0: "2019-12-20 17:28:19:501" pollCycleSTFM= 200
+:0: "2019-12-20 17:28:19:506" printerName= "Lenovo M7455DNF Printer"
+:0: "2019-12-20 17:28:19:511" printerName= false
+:0: "2019-12-20 17:28:19:516" thread start ...
+:0: "2019-12-20 17:28:19:522" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-20 17:28:19:567" SocketDataInit
+:0: "2019-12-20 17:28:19:573" "XY_DD_1"
+:0: "2019-12-20 17:28:19:578" "XY-DD-2"
+:0: "2019-12-20 17:28:19:582" "XY-DD-3"
+:0: "2019-12-20 17:28:19:587" "XY-DD-4"
+:0: "2019-12-20 17:28:19:592" "XY-DD-5"
+:0: "2019-12-20 17:28:19:597" "XY-DD-7"
+:0: "2019-12-20 17:28:19:601" "XY-DD-FGG-9877"
+:0: "2019-12-20 17:28:19:606" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-20 17:28:19:611" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-20 17:28:19:616" "11"
+:0: "2019-12-20 17:28:19:621" ParaInit
+:0: "2019-12-20 17:28:19:627" DataInit
+:0: "2019-12-20 17:28:19:632" plcDataInit
+:0: "2019-12-20 17:28:19:662" PlotInit
+:0: "2019-12-20 17:28:19:739" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-20 17:28:19:743" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-20 17:28:19:911" wait socket start up ...
+:0: "2019-12-20 17:28:20:053" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-20 17:28:20:058" signal_startScketInit
+:0: "2019-12-20 17:28:20:158" wait socket start up ...
+:0: "2019-12-20 17:28:20:258" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-20 17:28:20:265" SocketInit->connectToHost
+:0: "2019-12-20 17:28:20:269" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-20 17:28:20:275" SocketInit->connectToHost
+:0: "2019-12-20 17:28:20:280" "1 socket con"
+:0: "2019-12-20 17:28:20:285" "2"  socket con retry
+:0: "2019-12-20 17:28:20:291" "3"  socket con retry
+:0: "2019-12-20 17:28:20:296" "4"  socket con retry
+:0: "2019-12-20 17:28:20:301" "5"  socket con retry
+:0: "2019-12-20 17:28:20:306" "6"  socket con retry
+:0: "2019-12-20 17:28:20:311" "7"  socket con retry
+:0: "2019-12-20 17:28:20:316" "8"  socket con retry
+:0: "2019-12-20 17:28:20:322" "9"  socket con retry
+:0: "2019-12-20 17:28:20:327" "10"  socket con retry
+:0: "2019-12-20 17:28:20:332" "11"  socket con retry
+:0: "2019-12-20 17:28:20:337" "12"  socket con retry
+:0: "2019-12-20 17:28:20:342" "13"  socket con retry
+:0: "2019-12-20 17:28:20:347" "14"  socket con retry
+:0: "2019-12-20 17:28:20:352" "15"  socket con retry
+:0: "2019-12-20 17:28:20:359" "16"  socket con retry
+:0: "2019-12-20 17:28:20:364" "0 socket con"
+:0: "2019-12-20 17:28:20:370" "2 socket con"
+:0: "2019-12-20 17:28:20:375" "15 socket con"
+:0: "2019-12-20 17:28:20:380" "4 socket con"
+:0: "2019-12-20 17:28:20:384" "7 socket con"
+:0: "2019-12-20 17:28:20:389" "10 socket con"
+:0: "2019-12-20 17:28:20:394" "13 socket con"
+:0: "2019-12-20 17:28:20:398" "16 socket con"
+:0: "2019-12-20 17:28:20:403" "12 socket con"
+:0: "2019-12-20 17:28:20:408" "6 socket con"
+:0: "2019-12-20 17:28:20:413" "5 socket con"
+:0: "2019-12-20 17:28:20:418" "11 socket con"
+:0: "2019-12-20 17:28:20:423" "8 socket con"
+:0: "2019-12-20 17:28:20:428" "14 socket con"
+:0: "2019-12-20 17:28:20:433" "3 socket con"
+:0: "2019-12-20 17:28:20:438" "9 socket con"
+:0: QFSFileEngine::open: No file name specified
+:0: "2019-12-20 17:30:09:595"   start
+:0: "2019-12-20 17:30:09:987" 1920 1040
+:0: "2019-12-20 17:30:10:131" w.show()
+:0: "2019-12-20 17:30:10:137" "192.168.1.220"
+:0: "2019-12-20 17:30:10:141" "192.168.1.221"
+:0: "2019-12-20 17:30:10:146" pollCycleSTFM= 200
+:0: "2019-12-20 17:30:10:150" printerName= "Lenovo M7455DNF Printer"
+:0: "2019-12-20 17:30:10:155" printerName= false
+:0: "2019-12-20 17:30:10:160" thread start ...
+:0: "2019-12-20 17:30:10:166" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-20 17:30:10:214" SocketDataInit
+:0: "2019-12-20 17:30:10:220" "XY_DD_1"
+:0: "2019-12-20 17:30:10:226" "XY-DD-2"
+:0: "2019-12-20 17:30:10:232" "XY-DD-3"
+:0: "2019-12-20 17:30:10:239" "XY-DD-4"
+:0: "2019-12-20 17:30:10:245" "XY-DD-5"
+:0: "2019-12-20 17:30:10:251" "XY-DD-7"
+:0: "2019-12-20 17:30:10:256" "XY-DD-FGG-9877"
+:0: "2019-12-20 17:30:10:261" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-20 17:30:10:266" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-20 17:30:10:271" "11"
+:0: "2019-12-20 17:30:10:276" ParaInit
+:0: "2019-12-20 17:30:10:282" DataInit
+:0: "2019-12-20 17:30:10:287" plcDataInit
+:0: "2019-12-20 17:30:10:315" PlotInit
+:0: "2019-12-20 17:30:10:383" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-20 17:30:10:388" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-20 17:30:10:565" wait socket start up ...
+:0: "2019-12-20 17:30:10:697" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-20 17:30:10:702" signal_startScketInit
+:0: "2019-12-20 17:30:10:817" wait socket start up ...
+:0: "2019-12-20 17:30:10:902" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-20 17:30:10:909" SocketInit->connectToHost
+:0: "2019-12-20 17:30:10:914" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-20 17:30:10:919" SocketInit->connectToHost
+:0: "2019-12-20 17:30:10:924" "1 socket con"
+:0: "2019-12-20 17:30:10:929" "2"  socket con retry
+:0: "2019-12-20 17:30:10:940" "3"  socket con retry
+:0: "2019-12-20 17:30:10:945" "4"  socket con retry
+:0: "2019-12-20 17:30:10:951" "5"  socket con retry
+:0: "2019-12-20 17:30:10:956" "6"  socket con retry
+:0: "2019-12-20 17:30:10:961" "7"  socket con retry
+:0: "2019-12-20 17:30:10:966" "8"  socket con retry
+:0: "2019-12-20 17:30:10:972" "9"  socket con retry
+:0: "2019-12-20 17:30:10:987" "10"  socket con retry
+:0: "2019-12-20 17:30:10:993" "11"  socket con retry
+:0: "2019-12-20 17:30:10:998" "12"  socket con retry
+:0: "2019-12-20 17:30:11:003" "13"  socket con retry
+:0: "2019-12-20 17:30:11:018" "14"  socket con retry
+:0: "2019-12-20 17:30:11:031" "15"  socket con retry
+:0: "2019-12-20 17:30:11:036" "16"  socket con retry
+:0: "2019-12-20 17:30:11:041" "0 socket con"
+:0: "2019-12-20 17:30:11:046" "5 socket con"
+:0: "2019-12-20 17:30:11:051" "8 socket con"
+:0: "2019-12-20 17:30:11:056" "12 socket con"
+:0: "2019-12-20 17:30:11:061" "2 socket con"
+:0: "2019-12-20 17:30:11:067" "6 socket con"
+:0: "2019-12-20 17:30:11:072" "16 socket con"
+:0: "2019-12-20 17:30:11:077" "7 socket con"
+:0: "2019-12-20 17:30:11:082" "13 socket con"
+:0: "2019-12-20 17:30:11:087" "14 socket con"
+:0: "2019-12-20 17:30:11:092" "9 socket con"
+:0: "2019-12-20 17:30:11:096" "10 socket con"
+:0: "2019-12-20 17:30:11:102" "4 socket con"
+:0: "2019-12-20 17:30:11:107" "15 socket con"
+:0: "2019-12-20 17:30:11:111" "11 socket con"
+:0: "2019-12-20 17:30:11:116" "3 socket con"
+:0: QFSFileEngine::open: No file name specified
+:0: "2019-12-20 17:31:34:613"   start
+:0: "2019-12-20 17:31:35:063" 1920 1040
+:0: "2019-12-20 17:31:35:207" w.show()
+:0: "2019-12-20 17:31:35:213" "192.168.1.220"
+:0: "2019-12-20 17:31:35:218" "192.168.1.221"
+:0: "2019-12-20 17:31:35:222" pollCycleSTFM= 200
+:0: "2019-12-20 17:31:35:227" printerName= "Lenovo M7455DNF Printer"
+:0: "2019-12-20 17:31:35:232" printerName= false
+:0: "2019-12-20 17:31:35:237" thread start ...
+:0: "2019-12-20 17:31:35:244" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-20 17:31:35:295" SocketDataInit
+:0: "2019-12-20 17:31:35:300" "XY_DD_1"
+:0: "2019-12-20 17:31:35:306" "XY-DD-2"
+:0: "2019-12-20 17:31:35:310" "XY-DD-3"
+:0: "2019-12-20 17:31:35:316" "XY-DD-4"
+:0: "2019-12-20 17:31:35:321" "XY-DD-5"
+:0: "2019-12-20 17:31:35:326" "XY-DD-7"
+:0: "2019-12-20 17:31:35:331" "XY-DD-FGG-9877"
+:0: "2019-12-20 17:31:35:337" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-20 17:31:35:342" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-20 17:31:35:346" "11"
+:0: "2019-12-20 17:31:35:351" ParaInit
+:0: "2019-12-20 17:31:35:357" DataInit
+:0: "2019-12-20 17:31:35:362" plcDataInit
+:0: "2019-12-20 17:31:35:391" PlotInit
+:0: "2019-12-20 17:31:35:462" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-20 17:31:35:466" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-20 17:31:35:644" wait socket start up ...
+:0: "2019-12-20 17:31:35:776" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-20 17:31:35:781" signal_startScketInit
+:0: "2019-12-20 17:31:35:893" wait socket start up ...
+:0: "2019-12-20 17:31:35:981" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-20 17:31:35:988" SocketInit->connectToHost
+:0: "2019-12-20 17:31:35:993" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-20 17:31:35:998" SocketInit->connectToHost
+:0: "2019-12-20 17:31:36:004" "1 socket con"
+:0: "2019-12-20 17:31:36:009" "2"  socket con retry
+:0: "2019-12-20 17:31:36:014" "3"  socket con retry
+:0: "2019-12-20 17:31:36:020" "4"  socket con retry
+:0: "2019-12-20 17:31:36:025" "5"  socket con retry
+:0: "2019-12-20 17:31:36:030" "6"  socket con retry
+:0: "2019-12-20 17:31:36:036" "7"  socket con retry
+:0: "2019-12-20 17:31:36:041" "8"  socket con retry
+:0: "2019-12-20 17:31:36:046" "9"  socket con retry
+:0: "2019-12-20 17:31:36:052" "10"  socket con retry
+:0: "2019-12-20 17:31:36:058" "11"  socket con retry
+:0: "2019-12-20 17:31:36:063" "12"  socket con retry
+:0: "2019-12-20 17:31:36:068" "13"  socket con retry
+:0: "2019-12-20 17:31:36:073" "14"  socket con retry
+:0: "2019-12-20 17:31:36:079" "15"  socket con retry
+:0: "2019-12-20 17:31:36:084" "16"  socket con retry
+:0: "2019-12-20 17:31:36:089" "0 socket con"
+:0: "2019-12-20 17:31:36:096" "15 socket con"
+:0: "2019-12-20 17:31:36:100" "11 socket con"
+:0: "2019-12-20 17:31:36:111" "7 socket con"
+:0: "2019-12-20 17:31:36:116" "3 socket con"
+:0: "2019-12-20 17:31:36:121" "16 socket con"
+:0: "2019-12-20 17:31:36:126" "12 socket con"
+:0: "2019-12-20 17:31:36:131" "8 socket con"
+:0: "2019-12-20 17:31:36:136" "4 socket con"
+:0: "2019-12-20 17:31:36:141" "2 socket con"
+:0: "2019-12-20 17:31:36:146" "13 socket con"
+:0: "2019-12-20 17:31:36:151" "9 socket con"
+:0: "2019-12-20 17:31:36:157" "5 socket con"
+:0: "2019-12-20 17:31:36:162" "14 socket con"
+:0: "2019-12-20 17:31:36:166" "10 socket con"
+:0: "2019-12-20 17:31:36:171" "6 socket con"
+:0: QFSFileEngine::open: No file name specified
+:0: QFSFileEngine::open: No file name specified
+:0: "2019-12-20 17:32:24:905"   start
+:0: "2019-12-20 17:32:25:299" 1920 1040
+:0: "2019-12-20 17:32:25:436" w.show()
+:0: "2019-12-20 17:32:25:441" "192.168.1.220"
+:0: "2019-12-20 17:32:25:446" "192.168.1.221"
+:0: "2019-12-20 17:32:25:450" pollCycleSTFM= 200
+:0: "2019-12-20 17:32:25:455" printerName= "Lenovo M7455DNF Printer"
+:0: "2019-12-20 17:32:25:460" printerName= false
+:0: "2019-12-20 17:32:25:465" thread start ...
+:0: "2019-12-20 17:32:25:471" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+:0: "2019-12-20 17:32:25:513" SocketDataInit
+:0: "2019-12-20 17:32:25:519" "XY_DD_1"
+:0: "2019-12-20 17:32:25:524" "XY-DD-2"
+:0: "2019-12-20 17:32:25:529" "XY-DD-3"
+:0: "2019-12-20 17:32:25:534" "XY-DD-4"
+:0: "2019-12-20 17:32:25:539" "XY-DD-5"
+:0: "2019-12-20 17:32:25:544" "XY-DD-7"
+:0: "2019-12-20 17:32:25:549" "XY-DD-FGG-9877"
+:0: "2019-12-20 17:32:25:553" "XY-DD-FGG-9877-ttttttttttrr"
+:0: "2019-12-20 17:32:25:558" "XY-DD-FGG-9877-ttttttttttuuu"
+:0: "2019-12-20 17:32:25:562" "11"
+:0: "2019-12-20 17:32:25:567" ParaInit
+:0: "2019-12-20 17:32:25:573" DataInit
+:0: "2019-12-20 17:32:25:577" plcDataInit
+:0: "2019-12-20 17:32:25:605" PlotInit
+:0: "2019-12-20 17:32:25:688" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+:0: "2019-12-20 17:32:25:692" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+:0: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+:0: "2019-12-20 17:32:25:868" wait socket start up ...
+:0: "2019-12-20 17:32:26:002" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+:0: "2019-12-20 17:32:26:007" signal_startScketInit
+:0: "2019-12-20 17:32:26:111" wait socket start up ...
+:0: "2019-12-20 17:32:26:208" SocketInit->connectToHost... "192.168.1.220" 2100
+:0: "2019-12-20 17:32:26:215" SocketInit->connectToHost
+:0: "2019-12-20 17:32:26:219" SocketInit->connectToHost... "192.168.1.221" 4001
+:0: "2019-12-20 17:32:26:225" SocketInit->connectToHost
+:0: "2019-12-20 17:32:26:230" "0 socket con"
+:0: "2019-12-20 17:32:26:234" "1 socket con"
+:0: "2019-12-20 17:32:26:240" "2"  socket con retry
+:0: "2019-12-20 17:32:26:246" "3"  socket con retry
+:0: "2019-12-20 17:32:26:251" "4"  socket con retry
+:0: "2019-12-20 17:32:26:256" "5"  socket con retry
+:0: "2019-12-20 17:32:26:261" "6"  socket con retry
+:0: "2019-12-20 17:32:26:266" "7"  socket con retry
+:0: "2019-12-20 17:32:26:272" "8"  socket con retry
+:0: "2019-12-20 17:32:26:277" "9"  socket con retry
+:0: "2019-12-20 17:32:26:282" "10"  socket con retry
+:0: "2019-12-20 17:32:26:287" "11"  socket con retry
+:0: "2019-12-20 17:32:26:292" "12"  socket con retry
+:0: "2019-12-20 17:32:26:297" "13"  socket con retry
+:0: "2019-12-20 17:32:26:302" "14"  socket con retry
+:0: "2019-12-20 17:32:26:307" "15"  socket con retry
+:0: "2019-12-20 17:32:26:312" "16"  socket con retry
+:0: "2019-12-20 17:32:26:317" "16 socket con"
+:0: "2019-12-20 17:32:26:322" "4 socket con"
+:0: "2019-12-20 17:32:26:327" "11 socket con"
+:0: "2019-12-20 17:32:26:331" "15 socket con"
+:0: "2019-12-20 17:32:26:336" "7 socket con"
+:0: "2019-12-20 17:32:26:341" "8 socket con"
+:0: "2019-12-20 17:32:26:346" "6 socket con"
+:0: "2019-12-20 17:32:26:352" "14 socket con"
+:0: "2019-12-20 17:32:26:356" "12 socket con"
+:0: "2019-12-20 17:32:26:361" "10 socket con"
+:0: "2019-12-20 17:32:26:366" "3 socket con"
+:0: "2019-12-20 17:32:26:371" "2 socket con"
+:0: "2019-12-20 17:32:26:376" "13 socket con"
+:0: "2019-12-20 17:32:26:381" "5 socket con"
+:0: "2019-12-20 17:32:26:385" "9 socket con"
+:0: QFSFileEngine::open: No file name specified
+:0: QFSFileEngine::open: No file name specified

@@ -437,6 +437,74 @@ void FSC_MainWindow::DataInit(void)
 
     calRunLink.clear();
     calRunLink_calStepInfoInit();
+    calRunLink_listInit();
+    calRunLink_StepInfoFresh();
+
+}
+
+void FSC_MainWindow::calRunLink_listInit(void)
+{
+    QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
+
+    QString str;
+
+    for (int i = 0; i < fsc_global::para_ini.size(); i++)
+    {
+        if (QString::compare(fsc_global::para_ini[i].type_name, currentStep.type_name) == 0)
+        {
+
+            for (int k = 0; k < calRunLink.size(); k++)
+            {
+                str = "sensor_type_" + QString::number(i + 1);
+            }
+            break;
+        }
+    }
+
+    if (str.isEmpty())
+    {
+        return;
+    }
+
+    QVector<int> calLinklist;
+
+    int i = 0;
+    int pos = 0;
+
+    while(true)
+    {
+        i++;
+
+        pos = configIni->value( str + QString().sprintf("/step_%d", i)).toInt();
+
+        if (pos > 0)
+        {
+             calLinklist.append(pos);
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    QVector<calLink> linkTmp;
+
+    for (i = 0; i < calRunLink.size(); i++)
+    {
+        if (i >= calLinklist.size())
+        {
+            break;
+        }
+
+        if (calLinklist[i] > calRunLink.size())
+        {
+            break;
+        }
+
+        linkTmp.append(calRunLink[calLinklist[i] - 1]);
+    }
+
+    calRunLink = linkTmp;
 
 }
 
@@ -604,6 +672,8 @@ void FSC_MainWindow::calRunLink_calStepInfoInit(void)
 {
     calLink calLinkItem;
 
+    calRunLink.clear();
+
     for (int i = 0; i < currentStep.stepTotal; i++)
     {
         if (stepCal_dir_type_span(&calLinkItem.direct, &calLinkItem.type, &calLinkItem.spanPercent, &calLinkItem.span, i))
@@ -613,6 +683,53 @@ void FSC_MainWindow::calRunLink_calStepInfoInit(void)
             calRunLink.append(calLinkItem);
         }
     }
+}
+
+void FSC_MainWindow::calRunLink_StepInfoFresh(void)
+{
+    QString str;
+
+    str = ui->textBrow_calInfo->toPlainText() + "\r\n\r\n" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss:");
+
+    str += " 型号：";
+    str += currentStep.type_name;
+    str += "  ";
+    str += "量程：";
+    str += QString::number(currentStep.span_ml_per_min, 'f', 3);
+    str += QString().sprintf(" 共%d步|-> ", calRunLink.size());
+
+    int size = calRunLink.size();
+
+    for (int i = curShowStep; i < size; i++)
+    {
+        str += "(" + QString::number(calRunLink[i].stepNum + 1) + ")";
+
+        if (calRunLink[i].direct == START_CAL_DIRECT_REVERSE)
+        {
+            str += "反向";
+        }
+
+        str += QString::number(calRunLink[i].spanPercent) + "%量程";
+
+        if (calRunLink[i].type == START_CAL_TYPE_CAL)
+        {
+            str += "标定-> ";
+        }
+        else if (calRunLink[i].type == START_CAL_TYPE_CORRECT)
+        {
+            str += "修正-> ";
+        }
+        else if (calRunLink[i].type == START_CAL_TYPE_CHECK)
+        {
+            str += "验证-> ";
+        }
+
+    }
+
+    str += "|\r\n";
+    ui->textBrow_calInfo->setText(str);
+
+    ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 }
 
 void FSC_MainWindow::calStepInfoFresh(void)
@@ -703,7 +820,7 @@ void FSC_MainWindow::calStepInfoFresh(void)
 
 
     str += "|\r\n";
-    ui->textBrow_calInfo->setText(str);
+//    ui->textBrow_calInfo->setText(str);
 
     ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
 
@@ -895,7 +1012,7 @@ int FSC_MainWindow::stepCal_dir_type_span(int *dir, int *type, int *spanPercent,
             step++;
          }
 
-        if (currentStep.spanCorrect[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        if (currentStep.spanCorrectReverse[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
         {
             if (stepNum == step)
             {
@@ -909,7 +1026,7 @@ int FSC_MainWindow::stepCal_dir_type_span(int *dir, int *type, int *spanPercent,
             step++;
          }
 
-        if (currentStep.spanCheck[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        if (currentStep.spanCheckReverse[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
         {
             if (stepNum == step)
             {
@@ -999,7 +1116,7 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
             step++;
          }
 
-        if (currentStep.spanCorrect[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        if (currentStep.spanCorrectReverse[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
         {
             if (currentStep.stepCurrent == step)
             {
@@ -1013,7 +1130,7 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
             step++;
          }
 
-        if (currentStep.spanCheck[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
+        if (currentStep.spanCheckReverse[i] == CAL_CURRENT_STAT_NEED_EXECUTE)
         {
             if (currentStep.stepCurrent == step)
             {
@@ -1083,7 +1200,8 @@ void FSC_MainWindow::showFresh(void)
 
     if (calOn == CAL_STATE_STOP)
     {
-        ui->tbnModifyFMTypePara->setEnabled(true);
+        ui->groupBox_config->setEnabled(true);
+
         ui->tbnCalStart->setEnabled(sktConed[SOCKET_PLC_INDEX] && revdSketPLC && !std::isnan(showScaleSum));
 
         ui->lineEdit_setFlowRate->setEnabled(revdSketPLC);
@@ -1101,7 +1219,8 @@ void FSC_MainWindow::showFresh(void)
     }
     else
     {
-        ui->tbnModifyFMTypePara->setEnabled(false);
+        ui->groupBox_config->setEnabled(false);
+
         ui->tbnCalStart->setEnabled(false);
 
         ui->lineEdit_setFlowRate->setEnabled(false);
@@ -1193,6 +1312,8 @@ void FSC_MainWindow::on_tbnCalStart_clicked()
     {
         calOn = CAL_START;
     }
+
+    calRunLink_StepInfoFresh();
 }
 
 void FSC_MainWindow::on_tbnCalTermination_clicked()
@@ -1268,6 +1389,13 @@ void FSC_MainWindow::on_tbnCalStepNext_clicked()
     {
         calStepInfoFreshOnUI();
     }
+
+    curShowStep++;
+    if (curShowStep > calRunLink.size())
+    {
+        curShowStep = calRunLink.size();
+    }
+    calRunLink_StepInfoFresh();
 }
 
 void FSC_MainWindow::on_tbnCalStepPre_clicked()
@@ -1296,6 +1424,12 @@ void FSC_MainWindow::on_tbnCalStepPre_clicked()
     {
         calStepInfoFreshOnUI();
     }
+
+    if (curShowStep > 0)
+    {
+        curShowStep--;
+    }
+    calRunLink_StepInfoFresh();
 }
 
 void FSC_MainWindow::on_tbnModifyFMTypePara_clicked()
@@ -1307,11 +1441,18 @@ void FSC_MainWindow::on_tbnModifyFMTypePara_clicked()
         return;
     }
 
-    calStepInfoFresh();
-
     allCalNeedToReport = false;
     oneCal.step = 0;
+
     currentStep.stepCurrent = 0;
+    curShowStep = 0;
+
+    calStepInfoFresh();
+
+
+    calRunLink.clear();
+    calRunLink_calStepInfoInit();
+    calRunLink_StepInfoFresh();
 }
 
 void FSC_MainWindow::on_tbnCalPause_clicked()
@@ -1324,7 +1465,7 @@ void FSC_MainWindow::on_tbnCalPause_clicked()
     oneCal.pause = true;
 }
 
-void FSC_MainWindow::paraWrite(void)
+void FSC_MainWindow::paraIpWrite(void)
 {
     QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
 
@@ -1345,6 +1486,15 @@ void FSC_MainWindow::paraWrite(void)
     {
         configIni->setValue("IP_ADDRESS/RS_SERVER",  fsc_global::ip_RS_Server);
     }
+
+    delete configIni;
+}
+
+void FSC_MainWindow::paraWrite(void)
+{
+    QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
+
+    paraIpWrite();
 
     for (int i = 0; i < fsc_global::para_ini.size(); i++)
     {
@@ -1380,33 +1530,37 @@ void FSC_MainWindow::paraWrite(void)
     delete configIni;
 }
 
+void FSC_MainWindow::paraStepWrite(void)
+{
+    QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
+
+    for (int i = 0; i < fsc_global::para_ini.size(); i++)
+    {
+        if (QString::compare(fsc_global::para_ini[i].type_name, currentStep.type_name) == 0)
+        {
+
+            for (int k = 0; k < calRunLink.size(); k++)
+            {
+                configIni->setValue( "sensor_type_" + QString::number(i + 1) + QString().sprintf("/step_%d", k + 1), calRunLink[k].stepNum + 1);
+            }
+            break;
+
+        }
+
+    }
+
+    delete configIni;
+}
+
 void FSC_MainWindow::on_tbnParaAdd_clicked()
 {
     QSettings *configIni = new QSettings("para.ini", QSettings::IniFormat);
 
-    if (fsc_global::ip_PLC.size() == 0)
-    {
-        configIni->setValue("IP_ADDRESS/PLC",  "192.168.1.220");
-    }
-    else
-    {
-        configIni->setValue("IP_ADDRESS/PLC",  fsc_global::ip_PLC);
-    }
-
-    if (fsc_global::ip_PLC.size() == 0)
-    {
-        configIni->setValue("IP_ADDRESS/RS_SERVER",  "192.168.1.221");
-    }
-    else
-    {
-        configIni->setValue("IP_ADDRESS/RS_SERVER",  fsc_global::ip_RS_Server);
-    }
+    paraIpWrite();
 
     if (ui->leFMTypeName->text().trimmed().size() > 0)
     {
-        int i;
-
-        for (i = 0; i < fsc_global::para_ini.size(); i++)
+        for (int i = 0; i < fsc_global::para_ini.size(); i++)
         {
             if (QString::compare(fsc_global::para_ini[i].type_name, ui->leFMTypeName->text().trimmed()) == 0)
             {
@@ -1470,6 +1624,8 @@ end_return:
 
     delete configIni;
 
+    on_tbnModifyFMTypePara_clicked();
+    paraStepWrite();;
     ParaInit();
 }
 
@@ -1512,4 +1668,68 @@ void FSC_MainWindow::on_pushButton_showInfo_clicked()
 void FSC_MainWindow::on_textBrow_calInfo_textChanged()
 {
     showInfoUpdata = true;
+}
+
+void FSC_MainWindow::on_pushButton_stepUp_clicked()
+{
+    int curPos = currentStep.stepCurrent;
+    calLink tmp;
+
+    if (curPos <= 0)
+    {
+        return;
+    }
+
+    if (calOn != CAL_STATE_STOP ||calOn == CAL_PLOT_START)
+    {
+        return;
+    }
+
+    tmp = calRunLink[curPos];
+
+    calRunLink[curPos] = calRunLink[curPos - 1];
+    calRunLink[curPos - 1] = tmp;
+
+    currentStep.stepCurrent--;
+    curShowStep--;
+    calRunLink_StepInfoFresh();
+}
+
+void FSC_MainWindow::on_pushButton_stepDown_clicked()
+{
+    int curPos = currentStep.stepCurrent;
+    calLink tmp;
+
+    if (curPos >= calRunLink.size())
+    {
+        return;
+    }
+
+    if (calOn != CAL_STATE_STOP ||calOn == CAL_PLOT_START)
+    {
+        return;
+    }
+
+    tmp = calRunLink[curPos];
+
+    calRunLink[curPos] = calRunLink[curPos + 1];
+    calRunLink[curPos + 1] = tmp;
+
+    currentStep.stepCurrent++;
+    curShowStep++;
+    calRunLink_StepInfoFresh();
+}
+
+void FSC_MainWindow::on_pushButton_stepSave_clicked()
+{
+    if (calOn != CAL_STATE_STOP ||calOn == CAL_PLOT_START)
+    {
+        return;
+    }
+
+    currentStep.stepCurrent = 0;
+    curShowStep = 0;
+    calRunLink_StepInfoFresh();
+
+    paraStepWrite();
 }

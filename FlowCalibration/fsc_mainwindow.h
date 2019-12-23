@@ -165,6 +165,7 @@ public:
 
     int     stepRecord = 0;
 
+    int     stepNum = 0;
     double  calSpan = 0;
     int     calSpanPercent = 0;
     int     calDirect = 0;
@@ -314,20 +315,33 @@ private slots:
 
     void on_textBrow_calInfo_textChanged();
 
+    void on_pushButton_stepUp_clicked();
+
+    void on_pushButton_stepDown_clicked();
+
+    void on_pushButton_stepSave_clicked();
+
 private:
     Ui::FSC_MainWindow *ui;
 
     void uiReInit(void);
 
-    void paraWrite(void);
     void PlotInit(void);
     void DataInit(void);
     void dataInit_calStepInit(void);
+
+    void paraWrite(void);
+    void paraStepWrite(void);
+    void paraIpWrite(void);
+
     void calStepInfoFresh(void);
     void calStepInfoFreshOnUI(void);
 
     void calRunLink_calStepInfoInit(void);
     int  stepCal_dir_type_span(int *dir, int *type, int *spanPercent, double *span, int stepNum);
+    void calRunLink_StepInfoFresh(void);
+    void calRunLink_listInit(void);
+
     void SocketDataInit(void);
     void SocketConnect(void);
 
@@ -364,6 +378,9 @@ private:
     void calDoing(oneCalTag *calTag);
     void calStop(oneCalTag *calTag);
     void calFaultStop(oneCalTag *calTag);
+
+    bool fillOneCalLink(oneCalTag *calTag);
+    void calSingleLink(oneCalTag *calTag);
 
     void calGoingInfoLab(oneCalTag *calTag);
     void calGoingInfoLabRemove(void);
@@ -480,6 +497,7 @@ private:
     bool        calManualDoing   =   false;
 
     QVector<calLink> calRunLink;
+    int curShowStep = 0;
 
     QCheckBox   *checkBox_spanCal[SPAN_NUMBER];
     QCheckBox   *checkBox_spanCheck[SPAN_NUMBER];
