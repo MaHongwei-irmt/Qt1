@@ -192,7 +192,7 @@ void FSC_MainWindow::uiReInit(void)
         buttonDebug[i] = new QPushButton(this);
         buttonDebug[i]->setText(QString::number(i));
         buttonDebug[i]->setFixedSize(75,23);
-        buttonDebug[i]->move(1645, 70 + i * 29);
+        buttonDebug[i]->move(1645, 115 + i * 29);
         buttonDebug[i]->show();
 
         connect(buttonDebug[i], SIGNAL(clicked()), buttonDebugMapper, SLOT(map()));

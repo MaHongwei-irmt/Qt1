@@ -35,12 +35,12 @@ SOURCES += \
     dialog_checkdev.cpp \
     dialog_sensoraddr.cpp \
     fsc_mainwindow_plc.cpp \
-    fsc_mainwindow_scale.cpp \
     fsc_mainwindow_socket.cpp \
     fsc_thread.cpp \
     fsc_mainwindow_plc_ui.cpp \
     fsc_mainwindow_cal.cpp \
-    dialog_showinfo.cpp
+    dialog_showinfo.cpp \
+    fsc_mainwindow_scale_fm.cpp
 
 HEADERS += \
     qcustomplot.h \

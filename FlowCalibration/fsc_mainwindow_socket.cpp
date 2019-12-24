@@ -56,50 +56,29 @@ void FSC_MainWindow::SocketConnect(void)
             sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
         }
     }
-
 }
 
 void FSC_MainWindow::skt_connect_suc(int i)
 {
-    sktConed[i] = true;
-    FSCLOG << QString::number(i) + " socket con";
-
-    if ( i == SOCKET_PLC_INDEX)
+    if (i >= SOCKET_NUMBER)
     {
         return;
     }
 
-    for (int i = SOCKET_SCALE_INDEX; i < SOCKET_NUMBER; i++)
-    {
+    sktConed[i] = true;
+    FSCLOG << QString::number(i) + " socket con";
 
-        if (! sktConed[i] &&  (sktConCommandTime[i] + SOCKET_TCP_RETRY_CON_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
-        {
+    sktReqTime[i] = QDateTime::currentDateTime().toTime_t();
 
-            fsc_global::sktTcp[i]->abort();
-
-            fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
-            sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
-
-
-            FSCLOG << QString::number(i) << " socket con retry";
-        }
-
-        if (sktDataState[i] != DATA_WRITE_OK && (sktDataWriteTime[i] + DATA_READ_TIMEOUT) < QDateTime::currentDateTime().toTime_t() )
-        {
-            sktDataState[i] = DATA_TIMEOUT;
-            //sktDataWriteTime[i] = QDateTime::currentDateTime().toTime_t();
-        }
-
-        if (sktConCommandTime[i] == 0)
-        {
-            fsc_global::sktTcp[i]->connectToHost(QHostAddress(fsc_global::ip[i]), fsc_global::port_number[i]);
-            sktConCommandTime[i] = QDateTime::currentDateTime().toTime_t();
-        }
-    }
 }
 
 void FSC_MainWindow::skt_connect_dis(int i)
 {
+    if (i >= SOCKET_NUMBER)
+    {
+        return;
+    }
+
     fsc_global::sktTcp[i]->abort();
     sktConed[i] = false;
 
@@ -139,6 +118,11 @@ void FSC_MainWindow::skt_connect_dis(int i)
 
 void FSC_MainWindow::skt_error(int i)
 {
+    if (i >= SOCKET_NUMBER)
+    {
+        return;
+    }
+
     FSCLOG << "info Socket: " + QString::number(i) + " " + fsc_global::sktTcp[i]->QAbstractSocket::peerAddress().toString()\
               + "  " + fsc_global::sktTcp[i]->errorString();
 }
@@ -210,7 +194,7 @@ void FSC_MainWindow::skt_read(int i)
         {
             baSend->resize(3 + 220 +2);
 
-            (*baSend)[0] = 4;
+            (*baSend)[0] = sktBufRev[i][0];
             (*baSend)[1] = 3;
             (*baSend)[2] = static_cast<char>(220);
 
@@ -248,9 +232,10 @@ void FSC_MainWindow::skt_read(int i)
     }
 
     parsePLCNoSTFM(i);
-    preParseFMMsg(i);
-    parseFMSumRateMsg(i);
-
+    if(preParseFMMsg(i))
+    {
+        parseFMSumRateMsg(i);
+    }
 }
 
 void FSC_MainWindow::socketCommunication(void)

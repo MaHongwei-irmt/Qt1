@@ -5,12 +5,12 @@ INPUT(
 ./release\dialog_checkdev.o
 ./release\dialog_sensoraddr.o
 ./release\fsc_mainwindow_plc.o
-./release\fsc_mainwindow_scale.o
 ./release\fsc_mainwindow_socket.o
 ./release\fsc_thread.o
 ./release\fsc_mainwindow_plc_ui.o
 ./release\fsc_mainwindow_cal.o
 ./release\dialog_showinfo.o
+./release\fsc_mainwindow_scale_fm.o
 ./release\moc_qcustomplot.o
 ./release\moc_fsc_mainwindow.o
 ./release\moc_dialog_checkdev.o

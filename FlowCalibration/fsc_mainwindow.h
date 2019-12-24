@@ -52,7 +52,7 @@ class FSC_MainWindow;
 #define DATA_TIMEOUT      3
 #define DATA_READ_TIMEOUT      3
 
-#define FM_REQ_TIMEOUT      3
+#define FM_REQ_TIMEOUT      1
 
 #define CAL_STATE_STOP          0
 #define CAL_START               1

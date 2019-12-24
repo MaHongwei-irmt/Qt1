@@ -1,4 +1,4 @@
-#include "FSC_MainWindow.h"
+#include "fsc_mainwindow.h"
 #include <QApplication>
 #include "fsc_thread.h"
 
