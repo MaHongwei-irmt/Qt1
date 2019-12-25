@@ -376,8 +376,12 @@ private:
     void calGoing(oneCalTag *calTag);
     void calPlot(oneCalTag *calTag);
     void calDoing(oneCalTag *calTag);
+    void calibration(oneCalTag *calTag);
+    void correct(oneCalTag *calTag);
+    void check(oneCalTag *calTag);
     void calStop(oneCalTag *calTag);
     void calFaultStop(oneCalTag *calTag);
+
 
     bool fillOneCalLink(oneCalTag *calTag);
     void calSingleLink(oneCalTag *calTag);
@@ -456,6 +460,8 @@ private:
     double  showSTDFMFlow;
     double  showFMSum[FLOWMETER_NUMBER];
     double  showFMFlow[FLOWMETER_NUMBER];
+    QByteArray  sktCalMsgSend[FLOWMETER_NUMBER];
+    QByteArray  sktCalMsgRev[FLOWMETER_NUMBER];
 
     double  showSetFlowRate;
     int     showSetPWM;

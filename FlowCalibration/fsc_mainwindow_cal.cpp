@@ -768,6 +768,19 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
     allCalAvailable[calTag->step - 1]  = true;
     allCalEnd = false;
 
+    if (calTag->calTpye == START_CAL_TYPE_CAL)
+    {
+        calibration(calTag);
+    }
+    else if (calTag->calTpye == START_CAL_TYPE_CORRECT)
+    {
+        correct(calTag);
+    }
+    else if (calTag->calTpye == START_CAL_TYPE_CHECK)
+    {
+         check(calTag);
+    }
+
     printInfoWithTime("->打开放水阀");
     on_tbnPoltClear_clicked();
     openOutValve();
@@ -803,6 +816,53 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
         calTag->pause = false;
     }
 
+}
+
+void FSC_MainWindow::calibration(oneCalTag *calTag)
+{
+    double d = 0;
+
+    for (int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        if (calTag->finalFMSumValue[i] < 1.0 ||  std::isnan(calTag->finalFMSumValue[i])) continue;
+
+        d = calTag->finalFMSumValue[i] - calTag->finalScaleSumValue;
+
+        sktCalMsgSend[i].clear();
+        sktCalMsgRev[i].clear();
+
+        /*...*/
+
+    }
+
+    printInfoWithTime("标定结束");
+}
+
+void FSC_MainWindow::correct(oneCalTag *calTag)
+{
+    double d = 0;
+
+    for (int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        if (calTag->finalFMSumValue[i] < 1.0 ||  std::isnan(calTag->finalFMSumValue[i])) continue;
+
+        d = calTag->finalFMSumValue[i] - calTag->finalScaleSumValue;
+
+        sktCalMsgSend[i].clear();
+        sktCalMsgRev[i].clear();
+
+        /*...*/
+
+    }
+
+    printInfoWithTime("修正结束");
+}
+
+void FSC_MainWindow::check(oneCalTag *calTag)
+{
+    (void) calTag;
+
+    printInfoWithTime("验证结束");
 }
 
 void FSC_MainWindow::calStop(oneCalTag *calTag)
@@ -908,12 +968,12 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *cal)
             str += "标准流量计平均流速：" + QString::number(d, 'f', 3) + "ml/min\n";
             str += "\n";
 
-            for (int i = 0; i < FLOWMETER_NUMBER; i++)
+            for (int k = 0; k < FLOWMETER_NUMBER; k++)
             {
-                if (allCal[i].finalFMSumValue[i] < 1.0 ||  std::isnan(allCal[i].finalFMSumValue[i])) continue;
+                if (allCal[i].finalFMSumValue[k] < 1.0 ||  std::isnan(allCal[i].finalFMSumValue[k])) continue;
 
-                str += QString::number(i + 1) + "#流量计累计流量：" + QString::number(allCal[i].finalFMSumValue[i], 'f', 3) + "ml\n";
-                str += QString::number(i + 1) + "#流量计最后流速：" + QString::number(allCal[i].finalFMSumValue[i], 'f', 3) + "ml/min\n";
+                str += QString::number(k + 1) + "#流量计累计流量：" + QString::number(allCal[i].finalFMSumValue[k], 'f', 3) + "ml\n";
+                str += QString::number(k + 1) + "#流量计最后流速：" + QString::number(allCal[i].finalFMSumValue[k], 'f', 3) + "ml/min\n";
 
                 d = 0;
                 for (int j = 0; j < allCal[i].plotFMRateValue[i].size(); j++)
@@ -924,7 +984,7 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *cal)
 
                 str += QString::number(i + 1) + "#流量计平均流速：" + QString::number(d, 'f', 3) + "ml/min\n";
 
-                d = allCal[i].finalFMSumValue[i] - allCal[i].finalScaleSumValue;
+                d = allCal[i].finalFMSumValue[k] - allCal[i].finalScaleSumValue;
                 str += "累计流量与天平误差：" + QString::number(d, 'f', 3) + "ml(g)\n";
                 str += "误差百分比：" + QString::number(d / allCal[i].finalScaleSumValue * 100, 'f', 3) + "%  已";
 

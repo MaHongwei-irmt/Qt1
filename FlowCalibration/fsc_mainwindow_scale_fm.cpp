@@ -161,10 +161,10 @@ bool FSC_MainWindow::parseFMSumRateMsg(int indexSkt)
 
     memcpy(&f, ba.data(), 4);
 
-    ba[0] = sktBufRev[indexSkt][1 + 16 + 3];
-    ba[1] = sktBufRev[indexSkt][0 + 16 + 3];
-    ba[2] = sktBufRev[indexSkt][3 + 16 + 3];
-    ba[3] = sktBufRev[indexSkt][2 + 16 + 3];
+    ba[0] = sktBufRev[indexSkt][1 + 20 + 3];
+    ba[1] = sktBufRev[indexSkt][0 + 20 + 3];
+    ba[2] = sktBufRev[indexSkt][3 + 20 + 3];
+    ba[3] = sktBufRev[indexSkt][2 + 20 + 3];
 
     memcpy(&f1, ba.data(), 4);
 
