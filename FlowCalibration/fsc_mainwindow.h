@@ -113,6 +113,19 @@ class FSC_MainWindow;
 
 #define RECORD_FILE_TO_BE_CONTINUE  "未完. 后续步骤进行中..."
 
+#define PROTOCOL_XUNYIN_MODBUS_READ_FUNCODE             0x03
+#define PROTOCOL_XUNYIN_MODBUS_WRITE_SINGLE_FUNCODE     0x06
+#define PROTOCOL_XUNYIN_MODBUS_WRITE_MULTIPLE_FUNCODE   0x10
+#define PROTOCOL_XUNYIN_MODBUS_ADDR_APP_REQ_DATA        0x97
+#define PROTOCOL_XUNYIN_MODBUS_ADDR_GAIN_CONTROL        0x84
+
+#define TISH_STEP_READ_WRITE        1
+#define TISH_STEP_SUCCEED           2
+#define TISH_STEP_WRITE_FAULT       3
+#define TISH_STEP_READ_FAULT        4
+
+
+
 class calLink
 {
 public:
@@ -195,6 +208,8 @@ public:
     QDateTime   calDateTime;
     uint        calProcStartTime = 0;
     uint        calProcEndTime = 0;
+
+    int     result = 0;
 };
 
 class FSC_MainWindow : public QMainWindow
@@ -228,6 +243,9 @@ private slots:
     void startCal(void);
     void startSTFM(void);
     void startSocketConnect(int i);
+    bool fmReadSerialTimerFun(int fmIdx);
+    bool fmCalibratingTimerFun(int fmIdx);
+    bool fmCorrecttingTimerFun(int fmIdx);
 
     void on_tbnSysDevCheck_clicked();
 
@@ -351,7 +369,10 @@ private:
 
     void socketCommunication(void);
     void reqFMSumRateMsg(QByteArray *buf, int station);
-    bool preParseFMMsg(int indexSkt);
+
+    bool preParseFMMsg(int fmIdx);
+    bool parseFMMsg(int fmIdx);
+    bool preParseFMSumRateMsg(int indexSkt);
     bool parseFMSumRateMsg(int indexSkt);
     bool parsePLC(int indexSkt);
     bool parsePLCNoSTFM(int indexSkt);
@@ -381,7 +402,6 @@ private:
     void check(oneCalTag *calTag);
     void calStop(oneCalTag *calTag);
     void calFaultStop(oneCalTag *calTag);
-
 
     bool fillOneCalLink(oneCalTag *calTag);
     void calSingleLink(oneCalTag *calTag);
@@ -460,8 +480,23 @@ private:
     double  showSTDFMFlow;
     double  showFMSum[FLOWMETER_NUMBER];
     double  showFMFlow[FLOWMETER_NUMBER];
-    QByteArray  sktCalMsgSend[FLOWMETER_NUMBER];
-    QByteArray  sktCalMsgRev[FLOWMETER_NUMBER];
+
+    char    fm_gainControl[FLOWMETER_NUMBER];
+    int     fm_gainControl_valid[FLOWMETER_NUMBER];
+
+    int     fm_write_suced[FLOWMETER_NUMBER];
+
+    QByteArray  fmSendMsg[FLOWMETER_NUMBER];
+    QByteArray  fmRevMsg[FLOWMETER_NUMBER];
+    int     fmReadSerial[FLOWMETER_NUMBER];
+    int     fmCalibrating[FLOWMETER_NUMBER];
+    int     fmCorrectting[FLOWMETER_NUMBER];
+    QTimer  *fmReadSerialTimer[FLOWMETER_NUMBER];
+    QTimer  *fmCalibratingTimer[FLOWMETER_NUMBER];
+    QTimer  *fmCorrecttingTimer[FLOWMETER_NUMBER];
+    QSignalMapper * fmReadSerialTimerMapper;
+    QSignalMapper * fmCalibratingTimerMapper;
+    QSignalMapper * fmCorrecttingTimerMapper;
 
     double  showSetFlowRate;
     int     showSetPWM;

@@ -232,7 +232,16 @@ void FSC_MainWindow::skt_read(int i)
     }
 
     parsePLCNoSTFM(i);
-    if(preParseFMMsg(i))
+
+    if (i >= SOCKET_FLOWM1_INDEX && i <= SOCKET_FLOWM12_INDEX)
+    {
+        if (preParseFMMsg(i - SOCKET_FLOWM1_INDEX))
+        {
+            parseFMMsg(i - SOCKET_FLOWM1_INDEX);
+        }
+    }
+
+    if(preParseFMSumRateMsg(i))
     {
         parseFMSumRateMsg(i);
     }

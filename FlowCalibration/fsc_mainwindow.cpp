@@ -383,14 +383,44 @@ void FSC_MainWindow::DataInit(void)
     showSTDFMSum = static_cast<double>(nanf(""));
     showSTDFMFlow = static_cast<double>(nanf(""));
 
+    fmReadSerialTimerMapper = new QSignalMapper();
+    fmCalibratingTimerMapper = new QSignalMapper();
+    fmCorrecttingTimerMapper = new QSignalMapper();
+
     for (int i = 0; i < FLOWMETER_NUMBER; i++)
     {
         showFMSum[i] = static_cast<double>(nanf(""));
         showFMFlow[i] = static_cast<double>(nanf(""));
 
         stationFM[i] = FM_STATION_ADDRESS;
+
+        fm_gainControl[i] = 0;
+        fm_gainControl_valid[i] = 0;
+
+        fm_write_suced[i] = 0;
+
+        fmSendMsg[i].clear();
+        fmRevMsg[i].clear();
+        fmReadSerial[i] = 0;
+        fmCalibrating[i] = 0;
+        fmCorrectting[i] = 0;
+        fmReadSerialTimer[i] = new QTimer(this);
+        fmCalibratingTimer[i] = new QTimer(this);
+        fmCorrecttingTimer[i] = new QTimer(this);
+
+        connect(fmReadSerialTimer[i], SIGNAL(timeout()), fmReadSerialTimerMapper, SLOT(map()));
+        fmReadSerialTimerMapper->setMapping(fmReadSerialTimer[i], i);
+
+        connect(fmCalibratingTimer[i], SIGNAL(timeout()), fmCalibratingTimerMapper, SLOT(map()));
+        fmCalibratingTimerMapper->setMapping(fmCalibratingTimer[i], i);
+
+        connect(fmCorrecttingTimer[i], SIGNAL(timeout()), fmCorrecttingTimerMapper, SLOT(map()));
+        fmCorrecttingTimerMapper->setMapping(fmCorrecttingTimer[i], i);
      }
     stationSTDFM = FM_STATION_ADDRESS;
+    connect(fmReadSerialTimerMapper, SIGNAL(mapped(int)), this, SLOT(fmReadSerialTimerFun(int)));
+    connect(fmCalibratingTimerMapper, SIGNAL(mapped(int)), this, SLOT(fmCalibratingTimerFun(int)));
+    connect(fmCorrecttingTimerMapper, SIGNAL(mapped(int)), this, SLOT(fmCorrecttingTimerFun(int)));
 
     ui->radioButton_setFlowRate->setChecked(true);
 

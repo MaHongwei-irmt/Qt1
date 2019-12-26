@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_FSC_MainWindow_t {
-    QByteArrayData data[60];
-    char stringdata0[1478];
+    QByteArrayData data[64];
+    char stringdata0[1549];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -43,60 +43,66 @@ QT_MOC_LITERAL(8, 77, 8), // "mainLoop"
 QT_MOC_LITERAL(9, 86, 8), // "startCal"
 QT_MOC_LITERAL(10, 95, 9), // "startSTFM"
 QT_MOC_LITERAL(11, 105, 18), // "startSocketConnect"
-QT_MOC_LITERAL(12, 124, 25), // "on_tbnSysDevCheck_clicked"
-QT_MOC_LITERAL(13, 150, 28), // "on_tbnManualCheckDev_clicked"
-QT_MOC_LITERAL(14, 179, 42), // "on_comboBox_PlotSenSel_curren..."
-QT_MOC_LITERAL(15, 222, 4), // "arg1"
-QT_MOC_LITERAL(16, 227, 46), // "on_comboBox_SensorTypeName_cu..."
-QT_MOC_LITERAL(17, 274, 5), // "index"
-QT_MOC_LITERAL(18, 280, 30), // "on_lineEdit_setPWM_textChanged"
-QT_MOC_LITERAL(19, 311, 35), // "on_lineEdit_setFlowRate_textC..."
-QT_MOC_LITERAL(20, 347, 23), // "on_tbnScaleZero_clicked"
-QT_MOC_LITERAL(21, 371, 22), // "on_tbnCalStart_clicked"
-QT_MOC_LITERAL(22, 394, 28), // "on_tbnCalTermination_clicked"
-QT_MOC_LITERAL(23, 423, 23), // "on_tbnPoltClear_clicked"
-QT_MOC_LITERAL(24, 447, 33), // "on_pushButton_debugReturn_cli..."
-QT_MOC_LITERAL(25, 481, 19), // "buttonDebug_clicked"
-QT_MOC_LITERAL(26, 501, 30), // "on_pushButton_debugOff_clicked"
-QT_MOC_LITERAL(27, 532, 25), // "on_tbnCalStepNext_clicked"
-QT_MOC_LITERAL(28, 558, 30), // "on_tbnModifyFMTypePara_clicked"
-QT_MOC_LITERAL(29, 589, 24), // "on_tbnCalStepPre_clicked"
-QT_MOC_LITERAL(30, 614, 22), // "on_tbnCalPause_clicked"
-QT_MOC_LITERAL(31, 637, 22), // "on_tbnVOutOpen_clicked"
-QT_MOC_LITERAL(32, 660, 29), // "on_tbnVForwardIn1Open_clicked"
-QT_MOC_LITERAL(33, 690, 29), // "on_tbnVForwardIn2Open_clicked"
-QT_MOC_LITERAL(34, 720, 29), // "on_tbnVReverseIn1Open_clicked"
-QT_MOC_LITERAL(35, 750, 29), // "on_tbnVReverseIn2Open_clicked"
-QT_MOC_LITERAL(36, 780, 28), // "on_tbnPump1ForwardOn_clicked"
-QT_MOC_LITERAL(37, 809, 28), // "on_tbnPump1ReverseOn_clicked"
-QT_MOC_LITERAL(38, 838, 23), // "on_tbnVOutClose_clicked"
-QT_MOC_LITERAL(39, 862, 30), // "on_tbnVForwardIn1Close_clicked"
-QT_MOC_LITERAL(40, 893, 30), // "on_tbnVForwardIn2Close_clicked"
-QT_MOC_LITERAL(41, 924, 30), // "on_tbnVReverseIn1Close_clicked"
-QT_MOC_LITERAL(42, 955, 30), // "on_tbnVReverseIn2Close_clicked"
-QT_MOC_LITERAL(43, 986, 29), // "on_tbnPump1ForwardOff_clicked"
-QT_MOC_LITERAL(44, 1016, 29), // "on_tbnPump1ReverseOff_clicked"
-QT_MOC_LITERAL(45, 1046, 21), // "on_tbnParaAdd_clicked"
-QT_MOC_LITERAL(46, 1068, 23), // "on_tbnParaErase_clicked"
-QT_MOC_LITERAL(47, 1092, 28), // "on_tbnPump2ForwardOn_clicked"
-QT_MOC_LITERAL(48, 1121, 28), // "on_tbnPump2ReverseOn_clicked"
-QT_MOC_LITERAL(49, 1150, 29), // "on_tbnPump2ForwardOff_clicked"
-QT_MOC_LITERAL(50, 1180, 29), // "on_tbnPump2ReverseOff_clicked"
-QT_MOC_LITERAL(51, 1210, 34), // "on_radioButton_setFlowRate_cl..."
-QT_MOC_LITERAL(52, 1245, 29), // "on_radioButton_setPWM_clicked"
-QT_MOC_LITERAL(53, 1275, 23), // "on_tbnCalManual_clicked"
-QT_MOC_LITERAL(54, 1299, 24), // "on_tbnFMCalTable_clicked"
-QT_MOC_LITERAL(55, 1324, 30), // "on_pushButton_showInfo_clicked"
-QT_MOC_LITERAL(56, 1355, 31), // "on_textBrow_calInfo_textChanged"
-QT_MOC_LITERAL(57, 1387, 28), // "on_pushButton_stepUp_clicked"
-QT_MOC_LITERAL(58, 1416, 30), // "on_pushButton_stepDown_clicked"
-QT_MOC_LITERAL(59, 1447, 30) // "on_pushButton_stepSave_clicked"
+QT_MOC_LITERAL(12, 124, 20), // "fmReadSerialTimerFun"
+QT_MOC_LITERAL(13, 145, 5), // "fmIdx"
+QT_MOC_LITERAL(14, 151, 21), // "fmCalibratingTimerFun"
+QT_MOC_LITERAL(15, 173, 21), // "fmCorrecttingTimerFun"
+QT_MOC_LITERAL(16, 195, 25), // "on_tbnSysDevCheck_clicked"
+QT_MOC_LITERAL(17, 221, 28), // "on_tbnManualCheckDev_clicked"
+QT_MOC_LITERAL(18, 250, 42), // "on_comboBox_PlotSenSel_curren..."
+QT_MOC_LITERAL(19, 293, 4), // "arg1"
+QT_MOC_LITERAL(20, 298, 46), // "on_comboBox_SensorTypeName_cu..."
+QT_MOC_LITERAL(21, 345, 5), // "index"
+QT_MOC_LITERAL(22, 351, 30), // "on_lineEdit_setPWM_textChanged"
+QT_MOC_LITERAL(23, 382, 35), // "on_lineEdit_setFlowRate_textC..."
+QT_MOC_LITERAL(24, 418, 23), // "on_tbnScaleZero_clicked"
+QT_MOC_LITERAL(25, 442, 22), // "on_tbnCalStart_clicked"
+QT_MOC_LITERAL(26, 465, 28), // "on_tbnCalTermination_clicked"
+QT_MOC_LITERAL(27, 494, 23), // "on_tbnPoltClear_clicked"
+QT_MOC_LITERAL(28, 518, 33), // "on_pushButton_debugReturn_cli..."
+QT_MOC_LITERAL(29, 552, 19), // "buttonDebug_clicked"
+QT_MOC_LITERAL(30, 572, 30), // "on_pushButton_debugOff_clicked"
+QT_MOC_LITERAL(31, 603, 25), // "on_tbnCalStepNext_clicked"
+QT_MOC_LITERAL(32, 629, 30), // "on_tbnModifyFMTypePara_clicked"
+QT_MOC_LITERAL(33, 660, 24), // "on_tbnCalStepPre_clicked"
+QT_MOC_LITERAL(34, 685, 22), // "on_tbnCalPause_clicked"
+QT_MOC_LITERAL(35, 708, 22), // "on_tbnVOutOpen_clicked"
+QT_MOC_LITERAL(36, 731, 29), // "on_tbnVForwardIn1Open_clicked"
+QT_MOC_LITERAL(37, 761, 29), // "on_tbnVForwardIn2Open_clicked"
+QT_MOC_LITERAL(38, 791, 29), // "on_tbnVReverseIn1Open_clicked"
+QT_MOC_LITERAL(39, 821, 29), // "on_tbnVReverseIn2Open_clicked"
+QT_MOC_LITERAL(40, 851, 28), // "on_tbnPump1ForwardOn_clicked"
+QT_MOC_LITERAL(41, 880, 28), // "on_tbnPump1ReverseOn_clicked"
+QT_MOC_LITERAL(42, 909, 23), // "on_tbnVOutClose_clicked"
+QT_MOC_LITERAL(43, 933, 30), // "on_tbnVForwardIn1Close_clicked"
+QT_MOC_LITERAL(44, 964, 30), // "on_tbnVForwardIn2Close_clicked"
+QT_MOC_LITERAL(45, 995, 30), // "on_tbnVReverseIn1Close_clicked"
+QT_MOC_LITERAL(46, 1026, 30), // "on_tbnVReverseIn2Close_clicked"
+QT_MOC_LITERAL(47, 1057, 29), // "on_tbnPump1ForwardOff_clicked"
+QT_MOC_LITERAL(48, 1087, 29), // "on_tbnPump1ReverseOff_clicked"
+QT_MOC_LITERAL(49, 1117, 21), // "on_tbnParaAdd_clicked"
+QT_MOC_LITERAL(50, 1139, 23), // "on_tbnParaErase_clicked"
+QT_MOC_LITERAL(51, 1163, 28), // "on_tbnPump2ForwardOn_clicked"
+QT_MOC_LITERAL(52, 1192, 28), // "on_tbnPump2ReverseOn_clicked"
+QT_MOC_LITERAL(53, 1221, 29), // "on_tbnPump2ForwardOff_clicked"
+QT_MOC_LITERAL(54, 1251, 29), // "on_tbnPump2ReverseOff_clicked"
+QT_MOC_LITERAL(55, 1281, 34), // "on_radioButton_setFlowRate_cl..."
+QT_MOC_LITERAL(56, 1316, 29), // "on_radioButton_setPWM_clicked"
+QT_MOC_LITERAL(57, 1346, 23), // "on_tbnCalManual_clicked"
+QT_MOC_LITERAL(58, 1370, 24), // "on_tbnFMCalTable_clicked"
+QT_MOC_LITERAL(59, 1395, 30), // "on_pushButton_showInfo_clicked"
+QT_MOC_LITERAL(60, 1426, 31), // "on_textBrow_calInfo_textChanged"
+QT_MOC_LITERAL(61, 1458, 28), // "on_pushButton_stepUp_clicked"
+QT_MOC_LITERAL(62, 1487, 30), // "on_pushButton_stepDown_clicked"
+QT_MOC_LITERAL(63, 1518, 30) // "on_pushButton_stepSave_clicked"
 
     },
     "FSC_MainWindow\0skt_connect_suc\0\0i\0"
     "skt_connect_dis\0skt_error\0skt_read\0"
     "startUp\0mainLoop\0startCal\0startSTFM\0"
-    "startSocketConnect\0on_tbnSysDevCheck_clicked\0"
+    "startSocketConnect\0fmReadSerialTimerFun\0"
+    "fmIdx\0fmCalibratingTimerFun\0"
+    "fmCorrecttingTimerFun\0on_tbnSysDevCheck_clicked\0"
     "on_tbnManualCheckDev_clicked\0"
     "on_comboBox_PlotSenSel_currentIndexChanged\0"
     "arg1\0on_comboBox_SensorTypeName_currentIndexChanged\0"
@@ -147,7 +153,7 @@ static const uint qt_meta_data_FSC_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      55,   14, // methods
+      58,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -155,61 +161,64 @@ static const uint qt_meta_data_FSC_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,  289,    2, 0x08 /* Private */,
-       4,    1,  292,    2, 0x08 /* Private */,
-       5,    1,  295,    2, 0x08 /* Private */,
-       6,    1,  298,    2, 0x08 /* Private */,
-       7,    0,  301,    2, 0x08 /* Private */,
-       8,    0,  302,    2, 0x08 /* Private */,
-       9,    0,  303,    2, 0x08 /* Private */,
-      10,    0,  304,    2, 0x08 /* Private */,
-      11,    1,  305,    2, 0x08 /* Private */,
-      12,    0,  308,    2, 0x08 /* Private */,
-      13,    0,  309,    2, 0x08 /* Private */,
-      14,    1,  310,    2, 0x08 /* Private */,
-      16,    1,  313,    2, 0x08 /* Private */,
-      18,    1,  316,    2, 0x08 /* Private */,
-      19,    1,  319,    2, 0x08 /* Private */,
-      20,    0,  322,    2, 0x08 /* Private */,
-      21,    0,  323,    2, 0x08 /* Private */,
-      22,    0,  324,    2, 0x08 /* Private */,
-      23,    0,  325,    2, 0x08 /* Private */,
-      24,    0,  326,    2, 0x08 /* Private */,
-      25,    1,  327,    2, 0x08 /* Private */,
-      26,    0,  330,    2, 0x08 /* Private */,
-      27,    0,  331,    2, 0x08 /* Private */,
-      28,    0,  332,    2, 0x08 /* Private */,
-      29,    0,  333,    2, 0x08 /* Private */,
-      30,    0,  334,    2, 0x08 /* Private */,
-      31,    0,  335,    2, 0x08 /* Private */,
-      32,    0,  336,    2, 0x08 /* Private */,
-      33,    0,  337,    2, 0x08 /* Private */,
-      34,    0,  338,    2, 0x08 /* Private */,
-      35,    0,  339,    2, 0x08 /* Private */,
-      36,    0,  340,    2, 0x08 /* Private */,
-      37,    0,  341,    2, 0x08 /* Private */,
-      38,    0,  342,    2, 0x08 /* Private */,
-      39,    0,  343,    2, 0x08 /* Private */,
-      40,    0,  344,    2, 0x08 /* Private */,
-      41,    0,  345,    2, 0x08 /* Private */,
-      42,    0,  346,    2, 0x08 /* Private */,
-      43,    0,  347,    2, 0x08 /* Private */,
-      44,    0,  348,    2, 0x08 /* Private */,
-      45,    0,  349,    2, 0x08 /* Private */,
-      46,    0,  350,    2, 0x08 /* Private */,
-      47,    0,  351,    2, 0x08 /* Private */,
-      48,    0,  352,    2, 0x08 /* Private */,
-      49,    0,  353,    2, 0x08 /* Private */,
-      50,    0,  354,    2, 0x08 /* Private */,
-      51,    0,  355,    2, 0x08 /* Private */,
-      52,    0,  356,    2, 0x08 /* Private */,
-      53,    0,  357,    2, 0x08 /* Private */,
-      54,    0,  358,    2, 0x08 /* Private */,
-      55,    0,  359,    2, 0x08 /* Private */,
-      56,    0,  360,    2, 0x08 /* Private */,
-      57,    0,  361,    2, 0x08 /* Private */,
-      58,    0,  362,    2, 0x08 /* Private */,
-      59,    0,  363,    2, 0x08 /* Private */,
+       1,    1,  304,    2, 0x08 /* Private */,
+       4,    1,  307,    2, 0x08 /* Private */,
+       5,    1,  310,    2, 0x08 /* Private */,
+       6,    1,  313,    2, 0x08 /* Private */,
+       7,    0,  316,    2, 0x08 /* Private */,
+       8,    0,  317,    2, 0x08 /* Private */,
+       9,    0,  318,    2, 0x08 /* Private */,
+      10,    0,  319,    2, 0x08 /* Private */,
+      11,    1,  320,    2, 0x08 /* Private */,
+      12,    1,  323,    2, 0x08 /* Private */,
+      14,    1,  326,    2, 0x08 /* Private */,
+      15,    1,  329,    2, 0x08 /* Private */,
+      16,    0,  332,    2, 0x08 /* Private */,
+      17,    0,  333,    2, 0x08 /* Private */,
+      18,    1,  334,    2, 0x08 /* Private */,
+      20,    1,  337,    2, 0x08 /* Private */,
+      22,    1,  340,    2, 0x08 /* Private */,
+      23,    1,  343,    2, 0x08 /* Private */,
+      24,    0,  346,    2, 0x08 /* Private */,
+      25,    0,  347,    2, 0x08 /* Private */,
+      26,    0,  348,    2, 0x08 /* Private */,
+      27,    0,  349,    2, 0x08 /* Private */,
+      28,    0,  350,    2, 0x08 /* Private */,
+      29,    1,  351,    2, 0x08 /* Private */,
+      30,    0,  354,    2, 0x08 /* Private */,
+      31,    0,  355,    2, 0x08 /* Private */,
+      32,    0,  356,    2, 0x08 /* Private */,
+      33,    0,  357,    2, 0x08 /* Private */,
+      34,    0,  358,    2, 0x08 /* Private */,
+      35,    0,  359,    2, 0x08 /* Private */,
+      36,    0,  360,    2, 0x08 /* Private */,
+      37,    0,  361,    2, 0x08 /* Private */,
+      38,    0,  362,    2, 0x08 /* Private */,
+      39,    0,  363,    2, 0x08 /* Private */,
+      40,    0,  364,    2, 0x08 /* Private */,
+      41,    0,  365,    2, 0x08 /* Private */,
+      42,    0,  366,    2, 0x08 /* Private */,
+      43,    0,  367,    2, 0x08 /* Private */,
+      44,    0,  368,    2, 0x08 /* Private */,
+      45,    0,  369,    2, 0x08 /* Private */,
+      46,    0,  370,    2, 0x08 /* Private */,
+      47,    0,  371,    2, 0x08 /* Private */,
+      48,    0,  372,    2, 0x08 /* Private */,
+      49,    0,  373,    2, 0x08 /* Private */,
+      50,    0,  374,    2, 0x08 /* Private */,
+      51,    0,  375,    2, 0x08 /* Private */,
+      52,    0,  376,    2, 0x08 /* Private */,
+      53,    0,  377,    2, 0x08 /* Private */,
+      54,    0,  378,    2, 0x08 /* Private */,
+      55,    0,  379,    2, 0x08 /* Private */,
+      56,    0,  380,    2, 0x08 /* Private */,
+      57,    0,  381,    2, 0x08 /* Private */,
+      58,    0,  382,    2, 0x08 /* Private */,
+      59,    0,  383,    2, 0x08 /* Private */,
+      60,    0,  384,    2, 0x08 /* Private */,
+      61,    0,  385,    2, 0x08 /* Private */,
+      62,    0,  386,    2, 0x08 /* Private */,
+      63,    0,  387,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Int,    3,
@@ -221,12 +230,15 @@ static const uint qt_meta_data_FSC_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,    3,
+    QMetaType::Bool, QMetaType::Int,   13,
+    QMetaType::Bool, QMetaType::Int,   13,
+    QMetaType::Bool, QMetaType::Int,   13,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   15,
-    QMetaType::Void, QMetaType::Int,   17,
-    QMetaType::Void, QMetaType::QString,   15,
-    QMetaType::Void, QMetaType::QString,   15,
+    QMetaType::Void, QMetaType::QString,   19,
+    QMetaType::Void, QMetaType::Int,   21,
+    QMetaType::Void, QMetaType::QString,   19,
+    QMetaType::Void, QMetaType::QString,   19,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -286,52 +298,58 @@ void FSC_MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _
         case 6: _t->startCal(); break;
         case 7: _t->startSTFM(); break;
         case 8: _t->startSocketConnect((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 9: _t->on_tbnSysDevCheck_clicked(); break;
-        case 10: _t->on_tbnManualCheckDev_clicked(); break;
-        case 11: _t->on_comboBox_PlotSenSel_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 12: _t->on_comboBox_SensorTypeName_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 13: _t->on_lineEdit_setPWM_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 14: _t->on_lineEdit_setFlowRate_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 15: _t->on_tbnScaleZero_clicked(); break;
-        case 16: _t->on_tbnCalStart_clicked(); break;
-        case 17: _t->on_tbnCalTermination_clicked(); break;
-        case 18: _t->on_tbnPoltClear_clicked(); break;
-        case 19: _t->on_pushButton_debugReturn_clicked(); break;
-        case 20: _t->buttonDebug_clicked((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 21: _t->on_pushButton_debugOff_clicked(); break;
-        case 22: _t->on_tbnCalStepNext_clicked(); break;
-        case 23: _t->on_tbnModifyFMTypePara_clicked(); break;
-        case 24: _t->on_tbnCalStepPre_clicked(); break;
-        case 25: _t->on_tbnCalPause_clicked(); break;
-        case 26: _t->on_tbnVOutOpen_clicked(); break;
-        case 27: _t->on_tbnVForwardIn1Open_clicked(); break;
-        case 28: _t->on_tbnVForwardIn2Open_clicked(); break;
-        case 29: _t->on_tbnVReverseIn1Open_clicked(); break;
-        case 30: _t->on_tbnVReverseIn2Open_clicked(); break;
-        case 31: _t->on_tbnPump1ForwardOn_clicked(); break;
-        case 32: _t->on_tbnPump1ReverseOn_clicked(); break;
-        case 33: _t->on_tbnVOutClose_clicked(); break;
-        case 34: _t->on_tbnVForwardIn1Close_clicked(); break;
-        case 35: _t->on_tbnVForwardIn2Close_clicked(); break;
-        case 36: _t->on_tbnVReverseIn1Close_clicked(); break;
-        case 37: _t->on_tbnVReverseIn2Close_clicked(); break;
-        case 38: _t->on_tbnPump1ForwardOff_clicked(); break;
-        case 39: _t->on_tbnPump1ReverseOff_clicked(); break;
-        case 40: _t->on_tbnParaAdd_clicked(); break;
-        case 41: _t->on_tbnParaErase_clicked(); break;
-        case 42: _t->on_tbnPump2ForwardOn_clicked(); break;
-        case 43: _t->on_tbnPump2ReverseOn_clicked(); break;
-        case 44: _t->on_tbnPump2ForwardOff_clicked(); break;
-        case 45: _t->on_tbnPump2ReverseOff_clicked(); break;
-        case 46: _t->on_radioButton_setFlowRate_clicked(); break;
-        case 47: _t->on_radioButton_setPWM_clicked(); break;
-        case 48: _t->on_tbnCalManual_clicked(); break;
-        case 49: _t->on_tbnFMCalTable_clicked(); break;
-        case 50: _t->on_pushButton_showInfo_clicked(); break;
-        case 51: _t->on_textBrow_calInfo_textChanged(); break;
-        case 52: _t->on_pushButton_stepUp_clicked(); break;
-        case 53: _t->on_pushButton_stepDown_clicked(); break;
-        case 54: _t->on_pushButton_stepSave_clicked(); break;
+        case 9: { bool _r = _t->fmReadSerialTimerFun((*reinterpret_cast< int(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 10: { bool _r = _t->fmCalibratingTimerFun((*reinterpret_cast< int(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 11: { bool _r = _t->fmCorrecttingTimerFun((*reinterpret_cast< int(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
+        case 12: _t->on_tbnSysDevCheck_clicked(); break;
+        case 13: _t->on_tbnManualCheckDev_clicked(); break;
+        case 14: _t->on_comboBox_PlotSenSel_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 15: _t->on_comboBox_SensorTypeName_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 16: _t->on_lineEdit_setPWM_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 17: _t->on_lineEdit_setFlowRate_textChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 18: _t->on_tbnScaleZero_clicked(); break;
+        case 19: _t->on_tbnCalStart_clicked(); break;
+        case 20: _t->on_tbnCalTermination_clicked(); break;
+        case 21: _t->on_tbnPoltClear_clicked(); break;
+        case 22: _t->on_pushButton_debugReturn_clicked(); break;
+        case 23: _t->buttonDebug_clicked((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 24: _t->on_pushButton_debugOff_clicked(); break;
+        case 25: _t->on_tbnCalStepNext_clicked(); break;
+        case 26: _t->on_tbnModifyFMTypePara_clicked(); break;
+        case 27: _t->on_tbnCalStepPre_clicked(); break;
+        case 28: _t->on_tbnCalPause_clicked(); break;
+        case 29: _t->on_tbnVOutOpen_clicked(); break;
+        case 30: _t->on_tbnVForwardIn1Open_clicked(); break;
+        case 31: _t->on_tbnVForwardIn2Open_clicked(); break;
+        case 32: _t->on_tbnVReverseIn1Open_clicked(); break;
+        case 33: _t->on_tbnVReverseIn2Open_clicked(); break;
+        case 34: _t->on_tbnPump1ForwardOn_clicked(); break;
+        case 35: _t->on_tbnPump1ReverseOn_clicked(); break;
+        case 36: _t->on_tbnVOutClose_clicked(); break;
+        case 37: _t->on_tbnVForwardIn1Close_clicked(); break;
+        case 38: _t->on_tbnVForwardIn2Close_clicked(); break;
+        case 39: _t->on_tbnVReverseIn1Close_clicked(); break;
+        case 40: _t->on_tbnVReverseIn2Close_clicked(); break;
+        case 41: _t->on_tbnPump1ForwardOff_clicked(); break;
+        case 42: _t->on_tbnPump1ReverseOff_clicked(); break;
+        case 43: _t->on_tbnParaAdd_clicked(); break;
+        case 44: _t->on_tbnParaErase_clicked(); break;
+        case 45: _t->on_tbnPump2ForwardOn_clicked(); break;
+        case 46: _t->on_tbnPump2ReverseOn_clicked(); break;
+        case 47: _t->on_tbnPump2ForwardOff_clicked(); break;
+        case 48: _t->on_tbnPump2ReverseOff_clicked(); break;
+        case 49: _t->on_radioButton_setFlowRate_clicked(); break;
+        case 50: _t->on_radioButton_setPWM_clicked(); break;
+        case 51: _t->on_tbnCalManual_clicked(); break;
+        case 52: _t->on_tbnFMCalTable_clicked(); break;
+        case 53: _t->on_pushButton_showInfo_clicked(); break;
+        case 54: _t->on_textBrow_calInfo_textChanged(); break;
+        case 55: _t->on_pushButton_stepUp_clicked(); break;
+        case 56: _t->on_pushButton_stepDown_clicked(); break;
+        case 57: _t->on_pushButton_stepSave_clicked(); break;
         default: ;
         }
     }
@@ -362,13 +380,13 @@ int FSC_MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 55)
+        if (_id < 58)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 55;
+        _id -= 58;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 55)
+        if (_id < 58)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 55;
+        _id -= 58;
     }
     return _id;
 }

@@ -828,14 +828,56 @@ void FSC_MainWindow::calibration(oneCalTag *calTag)
 
         d = calTag->finalFMSumValue[i] - calTag->finalScaleSumValue;
 
-        sktCalMsgSend[i].clear();
-        sktCalMsgRev[i].clear();
 
         /*...*/
 
+        fmCalibrating[i] = TISH_STEP_READ_WRITE;
+
+    }
+    printInfoWithTime("流量计标定数据指令开始");
+
+    bool ret = true;
+
+    while(ret)
+    {
+        delayMSec(100);
+
+        ret = false;
+        for (int i = 0; i < FLOWMETER_NUMBER; i++)
+        {
+            if (fmCalibrating[i] == TISH_STEP_SUCCEED)
+            {
+                printInfoWithTime(QString().sprintf("%d#流量计标定数据写入成功", i + 1));
+                calTag->result = TISH_STEP_SUCCEED;
+
+                fmCalibratingTimer[i]->stop();
+            }
+            else if(fmCalibrating[i] == TISH_STEP_READ_FAULT)
+            {
+                printInfoWithTime(QString().sprintf("%d#流量计标定数据读取失败", i + 1));
+                calTag->result = TISH_STEP_READ_FAULT;
+
+                fmCalibratingTimer[i]->stop();
+            }
+            else if(fmCalibrating[i] == TISH_STEP_WRITE_FAULT)
+            {
+                printInfoWithTime(QString().sprintf("%d#流量计标定数据写入失败", i + 1));
+                calTag->result = TISH_STEP_WRITE_FAULT;
+
+                fmCalibratingTimer[i]->stop();
+            }
+            else
+            if (fmCalibrating[i] == TISH_STEP_READ_WRITE)
+            {
+                ret = true;
+            }
+        }
     }
 
-    printInfoWithTime("标定结束");
+
+
+
+
 }
 
 void FSC_MainWindow::correct(oneCalTag *calTag)
@@ -848,8 +890,8 @@ void FSC_MainWindow::correct(oneCalTag *calTag)
 
         d = calTag->finalFMSumValue[i] - calTag->finalScaleSumValue;
 
-        sktCalMsgSend[i].clear();
-        sktCalMsgRev[i].clear();
+        fmSendMsg[i].clear();
+        fmRevMsg[i].clear();
 
         /*...*/
 
