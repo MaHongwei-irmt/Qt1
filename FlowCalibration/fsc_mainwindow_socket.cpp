@@ -239,9 +239,15 @@ void FSC_MainWindow::skt_read(int i)
         {
             parseFMMsg(i - SOCKET_FLOWM1_INDEX);
         }
+        else
+        {
+            if(preParseFMSumRateMsg(i))
+            {
+                parseFMSumRateMsg(i);
+            }
+        }
     }
-
-    if(preParseFMSumRateMsg(i))
+    else if(preParseFMSumRateMsg(i))
     {
         parseFMSumRateMsg(i);
     }

@@ -579,10 +579,24 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
                         writePLC();
                         delayMSec(VALVE_EXCHANGE_DELAY);
 
+                        if (calOn == CAL_STATE_STOP)
+                        {
+                            on_tbnCalTermination_clicked();
+                            return;
+                        }
+
                         printInfo("->打开正向进水阀");
                         openForwardValveAll();
                         writePLC();
                         delayMSec(VALVE_EXCHANGE_DELAY);
+
+
+                        if (calOn == CAL_STATE_STOP)
+                        {
+                            on_tbnCalTermination_clicked();
+                            return;
+                        }
+
 
                         printInfoWithTime("->启动1#泵->启动2#泵");
 
@@ -619,10 +633,24 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
                         writePLC();
                         delayMSec(VALVE_EXCHANGE_DELAY);
 
+
+                        if (calOn == CAL_STATE_STOP)
+                        {
+                            on_tbnCalTermination_clicked();
+                            return;
+                        }
+
+
                         printInfo("->打开反向进水阀");
                         openReverseValveAll();
                         writePLC();
                         delayMSec(VALVE_EXCHANGE_DELAY);
+
+                        if (calOn == CAL_STATE_STOP)
+                        {
+                            on_tbnCalTermination_clicked();
+                            return;
+                        }
 
                         printInfoWithTime("->启动1#泵->启动2#泵");
                         if (calOn != CAL_STATE_STOP)
@@ -753,6 +781,19 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
 
     if (calTag->step < 1) return;
 
+    if (calTag->calTpye == START_CAL_TYPE_CAL)
+    {
+        calibration(calTag);
+    }
+    else if (calTag->calTpye == START_CAL_TYPE_CORRECT)
+    {
+        correct(calTag);
+    }
+    else if (calTag->calTpye == START_CAL_TYPE_CHECK)
+    {
+         check(calTag);
+    }
+
     if (calTag->stepRecord >= 0 && calTag->stepRecord < CAL_MAX_STEP)
     {
         calTag->stepBak = currentStep;
@@ -768,18 +809,6 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
     allCalAvailable[calTag->step - 1]  = true;
     allCalEnd = false;
 
-    if (calTag->calTpye == START_CAL_TYPE_CAL)
-    {
-        calibration(calTag);
-    }
-    else if (calTag->calTpye == START_CAL_TYPE_CORRECT)
-    {
-        correct(calTag);
-    }
-    else if (calTag->calTpye == START_CAL_TYPE_CHECK)
-    {
-         check(calTag);
-    }
 
     printInfoWithTime("->打开放水阀");
     on_tbnPoltClear_clicked();
@@ -832,6 +861,9 @@ void FSC_MainWindow::calibration(oneCalTag *calTag)
         /*...*/
 
         fmCalibrating[i] = TISH_STEP_READ_WRITE;
+        fmRWflag[i] = 1;
+
+        calTag->result[i] = 0;
 
     }
     printInfoWithTime("流量计标定数据指令开始");
@@ -848,23 +880,23 @@ void FSC_MainWindow::calibration(oneCalTag *calTag)
             if (fmCalibrating[i] == TISH_STEP_SUCCEED)
             {
                 printInfoWithTime(QString().sprintf("%d#流量计标定数据写入成功", i + 1));
-                calTag->result = TISH_STEP_SUCCEED;
+                calTag->result[i] = TISH_STEP_SUCCEED;
 
-                fmCalibratingTimer[i]->stop();
+                fmRWTimer[i]->stop();
             }
             else if(fmCalibrating[i] == TISH_STEP_READ_FAULT)
             {
                 printInfoWithTime(QString().sprintf("%d#流量计标定数据读取失败", i + 1));
-                calTag->result = TISH_STEP_READ_FAULT;
+                calTag->result[i] = TISH_STEP_READ_FAULT;
 
-                fmCalibratingTimer[i]->stop();
+                fmRWTimer[i]->stop();
             }
             else if(fmCalibrating[i] == TISH_STEP_WRITE_FAULT)
             {
                 printInfoWithTime(QString().sprintf("%d#流量计标定数据写入失败", i + 1));
-                calTag->result = TISH_STEP_WRITE_FAULT;
+                calTag->result[i] = TISH_STEP_WRITE_FAULT;
 
-                fmCalibratingTimer[i]->stop();
+                fmRWTimer[i]->stop();
             }
             else
             if (fmCalibrating[i] == TISH_STEP_READ_WRITE)
@@ -874,10 +906,11 @@ void FSC_MainWindow::calibration(oneCalTag *calTag)
         }
     }
 
-
-
-
-
+    for (int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        fmCalibrating[i] = 0;
+        fmRWflag[i] = 0;
+    }
 }
 
 void FSC_MainWindow::correct(oneCalTag *calTag)
@@ -890,8 +923,6 @@ void FSC_MainWindow::correct(oneCalTag *calTag)
 
         d = calTag->finalFMSumValue[i] - calTag->finalScaleSumValue;
 
-        fmSendMsg[i].clear();
-        fmRevMsg[i].clear();
 
         /*...*/
 
@@ -909,6 +940,7 @@ void FSC_MainWindow::check(oneCalTag *calTag)
 
 void FSC_MainWindow::calStop(oneCalTag *calTag)
 {
+
     calTag->state = ONE_CAL_EMPTY;
     calTag->plotPos = 0;
     calTag->plotTimeX.clear();
@@ -924,17 +956,24 @@ void FSC_MainWindow::calStop(oneCalTag *calTag)
 
     calTag->step = 0;
     currentStep.stepCurrent = 0;
+    curShowStep = 0;
 
     pump1Off();
     pump2Off();
     writePLC();
     delayMSec(PUMP_START_DELAY);
 
-    calOn = CAL_STATE_STOP;
+
+    pump1Off();
+    pump2Off();
+    writePLC();
+    delayMSec(PUMP_START_DELAY / 2);
 
     closeForwardValveAll();
     closeReverseValveAll();
     writePLC();
+
+    calOn = CAL_STATE_STOP;
 }
 
 void FSC_MainWindow::makeCalRecordPrint(oneCalTag *cal)
@@ -1033,17 +1072,41 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *cal)
                 if (allCal[i].calTpye == START_CAL_TYPE_CAL)
                 {
                     str += "标定";
+                    if (allCal[i].result[k] == TISH_STEP_SUCCEED)
+                    {
+                        str += "成功 ";
+                    }
+                    else if (allCal[i].result[k] == TISH_STEP_READ_FAULT)
+                    {
+                        str += "读取失败 ";
+                    }
+                    else if (allCal[i].result[k] == TISH_STEP_WRITE_FAULT)
+                    {
+                        str += "写入失败 ";
+                    }
                 }
                 else if (allCal[i].calTpye == START_CAL_TYPE_CORRECT)
                 {
                     str += "修正";
+                    if (allCal[i].result[k] == TISH_STEP_SUCCEED)
+                    {
+                        str += "成功 ";
+                    }
+                    else if (allCal[i].result[k] == TISH_STEP_READ_FAULT)
+                    {
+                        str += "读取失败 ";
+                    }
+                    else if (allCal[i].result[k] == TISH_STEP_WRITE_FAULT)
+                    {
+                        str += "写入失败 ";
+                    }
                 }
                 else if (allCal[i].calTpye == START_CAL_TYPE_CHECK)
                 {
-                    str += "验证";
+                    str += "验证完成 ";
                 }
 
-                str += "完成\n\n";
+                str += "\n\n";
             }
         }
     }

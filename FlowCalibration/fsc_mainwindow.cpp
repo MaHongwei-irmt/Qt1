@@ -64,12 +64,6 @@ void FSC_MainWindow::startUp()
 
 void FSC_MainWindow::SocketDataInit(void)
 {
-    for (int i = 0; i < SOCKET_NUMBER; i++)
-    {
-        sktConed[i] = false;
-        sktConCommandTime[i] = 0;
-    }
-
     sktConMapper = new QSignalMapper();
     sktDisconMapper = new QSignalMapper();
     sktErrMapper = new QSignalMapper();
@@ -77,6 +71,11 @@ void FSC_MainWindow::SocketDataInit(void)
 
     for( int i = 0; i < SOCKET_NUMBER; i++)
     {
+        sktConed[i] = false;
+        sktConCommandTime[i] = 0;
+        sktTimeoutNum[i] = 0;
+        sktStationAddr[i] = FM_STATION_ADDRESS;
+
         fsc_global::sktTcp[i] = new QTcpSocket();
 
         connect(fsc_global::sktTcp[i], SIGNAL(connected()), sktConMapper, SLOT(map()));
@@ -383,44 +382,27 @@ void FSC_MainWindow::DataInit(void)
     showSTDFMSum = static_cast<double>(nanf(""));
     showSTDFMFlow = static_cast<double>(nanf(""));
 
-    fmReadSerialTimerMapper = new QSignalMapper();
-    fmCalibratingTimerMapper = new QSignalMapper();
-    fmCorrecttingTimerMapper = new QSignalMapper();
-
+    fmRWMapper = new QSignalMapper();
     for (int i = 0; i < FLOWMETER_NUMBER; i++)
     {
         showFMSum[i] = static_cast<double>(nanf(""));
         showFMFlow[i] = static_cast<double>(nanf(""));
 
-        stationFM[i] = FM_STATION_ADDRESS;
-
-        fm_gainControl[i] = 0;
-        fm_gainControl_valid[i] = 0;
-
+        fm_valueGAIN_CONTROL[i] = 0;
+        fm_valueGAIN_CONTROL_valid[i] = 0;
         fm_write_suced[i] = 0;
 
         fmSendMsg[i].clear();
         fmRevMsg[i].clear();
-        fmReadSerial[i] = 0;
+
         fmCalibrating[i] = 0;
-        fmCorrectting[i] = 0;
-        fmReadSerialTimer[i] = new QTimer(this);
-        fmCalibratingTimer[i] = new QTimer(this);
-        fmCorrecttingTimer[i] = new QTimer(this);
+        fmRWflag[i] = 0;
+        fmRWTimer[i] = new QTimer(this);
 
-        connect(fmReadSerialTimer[i], SIGNAL(timeout()), fmReadSerialTimerMapper, SLOT(map()));
-        fmReadSerialTimerMapper->setMapping(fmReadSerialTimer[i], i);
-
-        connect(fmCalibratingTimer[i], SIGNAL(timeout()), fmCalibratingTimerMapper, SLOT(map()));
-        fmCalibratingTimerMapper->setMapping(fmCalibratingTimer[i], i);
-
-        connect(fmCorrecttingTimer[i], SIGNAL(timeout()), fmCorrecttingTimerMapper, SLOT(map()));
-        fmCorrecttingTimerMapper->setMapping(fmCorrecttingTimer[i], i);
+        connect(fmRWTimer[i], SIGNAL(timeout()), fmRWMapper, SLOT(map()));
+        fmRWMapper->setMapping(fmRWTimer[i], i);
      }
-    stationSTDFM = FM_STATION_ADDRESS;
-    connect(fmReadSerialTimerMapper, SIGNAL(mapped(int)), this, SLOT(fmReadSerialTimerFun(int)));
-    connect(fmCalibratingTimerMapper, SIGNAL(mapped(int)), this, SLOT(fmCalibratingTimerFun(int)));
-    connect(fmCorrecttingTimerMapper, SIGNAL(mapped(int)), this, SLOT(fmCorrecttingTimerFun(int)));
+    connect(fmRWMapper, SIGNAL(mapped(int)), this, SLOT(fmRWTimerOn(int)));
 
     ui->radioButton_setFlowRate->setChecked(true);
 
@@ -1348,6 +1330,10 @@ void FSC_MainWindow::on_tbnCalStart_clicked()
 
 void FSC_MainWindow::on_tbnCalTermination_clicked()
 {
+    calOn = CAL_STATE_STOP;
+    currentStep.stepCurrent = 0;
+    curShowStep = 0;
+
     printInfoWithTime(" 终止");
     calStop(&oneCal);
 
