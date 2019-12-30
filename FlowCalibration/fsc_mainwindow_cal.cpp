@@ -151,6 +151,8 @@ void FSC_MainWindow::startCal(void)
             writePLC();
             delayMSec(VALVE_EXCHANGE_DELAY);
             reqScaleZero();
+            fmResetAll(&oneCal);
+
             delayMSec(VALVE_EXCHANGE_DELAY);
 
             if(calOn)
@@ -377,6 +379,7 @@ void FSC_MainWindow::calSingleLink(oneCalTag *calTag)
         printInfoWithTime(str);
 
         reqScaleZero();
+        fmResetAll(&oneCal);
 
         calTag->state = ONE_CAL_START_END;
 
@@ -392,6 +395,8 @@ void FSC_MainWindow::calSingleLink(oneCalTag *calTag)
             {
                 printInfoWithTime("->天平再次清零");
                 reqScaleZero();
+                fmResetAll(&oneCal);
+
                 calTag->calTime = QDateTime::currentDateTime().toTime_t();
 
             }
@@ -544,6 +549,7 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
         printInfoWithTime(str);
 
         reqScaleZero();
+        fmResetAll(&oneCal);
 
         calTag->state = ONE_CAL_START_END;
 
@@ -559,6 +565,8 @@ void FSC_MainWindow::calSingle(oneCalTag *calTag)
             {
                 printInfoWithTime("->天平再次清零");
                 reqScaleZero();
+                fmResetAll(&oneCal);
+
                 calTag->calTime = QDateTime::currentDateTime().toTime_t();
 
             }
@@ -783,15 +791,15 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
 
     if (calTag->calTpye == START_CAL_TYPE_CAL)
     {
-        calibration(calTag);
+        fmCalibration(calTag);
     }
     else if (calTag->calTpye == START_CAL_TYPE_CORRECT)
     {
-        correct(calTag);
+        fmCorrect(calTag);
     }
     else if (calTag->calTpye == START_CAL_TYPE_CHECK)
     {
-         check(calTag);
+         fmCheck(calTag);
     }
 
     if (calTag->stepRecord >= 0 && calTag->stepRecord < CAL_MAX_STEP)
@@ -847,59 +855,96 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
 
 }
 
-void FSC_MainWindow::calibration(oneCalTag *calTag)
+void FSC_MainWindow::fmResetAll(oneCalTag *calTag)
 {
-    double d = 0;
+    stfmReadWriteSelect = RESET_FM_READ_WRITE;
+    stfmRWflag = 1;
+    calTag->reset_stfm_result = 0;
 
-    for (int i = 0; i < FLOWMETER_NUMBER; i++)
-    {
-        if (calTag->finalFMSumValue[i] < 1.0 ||  std::isnan(calTag->finalFMSumValue[i])) continue;
-
-        d = calTag->finalFMSumValue[i] - calTag->finalScaleSumValue;
-
-
-        /*...*/
-
-        fmCalibrating[i] = TISH_STEP_READ_WRITE;
-        fmRWflag[i] = 1;
-
-        calTag->result[i] = 0;
-
-    }
-    printInfoWithTime("流量计标定数据指令开始");
-
-    bool ret = true;
+    bool    ret = true;
+    int     k = 0;
 
     while(ret)
     {
-        delayMSec(100);
+        delayMSec(FM_PROCESS_WAIT_DELAY);
+
+        ret = false;
+
+        if (k++ > FM_PROCESS_RW_TIMEOUT)
+        {
+            printInfoWithTime("标准流量计Reset失败");
+            calTag->reset_stfm_result = TISH_STEP_FAULT;
+
+            stfmRWTimer->stop();
+        }
+        else if (stfmReadWriteSelect == TISH_STEP_SUCCEED)
+        {
+            calTag->reset_stfm_result = TISH_STEP_SUCCEED;
+
+            stfmRWTimer->stop();
+        }
+        else if(stfmReadWriteSelect == TISH_STEP_WRITE_FAULT)
+        {
+            printInfoWithTime(QString().sprintf("标准流量计Reset写入失败"));
+            calTag->reset_stfm_result = TISH_STEP_WRITE_FAULT;
+
+            stfmRWTimer->stop();
+        }
+        else if (stfmReadWriteSelect == RESET_FM_READ_WRITE)
+        {
+            ret = true;
+        }
+
+    }
+
+    stfmReadWriteSelect = 0;
+    stfmRWflag = 0;
+
+
+    for (int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        if (showFMSum[i] < 1.0 ||  std::isnan(showFMFlow[i]))
+        {
+            continue;
+        }
+
+        fmReadWriteSelect[i] = RESET_FM_READ_WRITE;
+        fmRWflag[i] = 1;
+
+        calTag->reset_result[i] = 0;
+
+    }
+
+    ret = true;
+
+    while(ret)
+    {
+        delayMSec(FM_PROCESS_WAIT_DELAY);
 
         ret = false;
         for (int i = 0; i < FLOWMETER_NUMBER; i++)
         {
-            if (fmCalibrating[i] == TISH_STEP_SUCCEED)
+            if (k++ > FM_PROCESS_RW_TIMEOUT)
             {
-                printInfoWithTime(QString().sprintf("%d#流量计标定数据写入成功", i + 1));
-                calTag->result[i] = TISH_STEP_SUCCEED;
+                printInfoWithTime(QString().sprintf("%d#流量计Reset失败", i + 1));
+                calTag->result[i] = TISH_STEP_FAULT;
 
                 fmRWTimer[i]->stop();
             }
-            else if(fmCalibrating[i] == TISH_STEP_READ_FAULT)
+            else if (fmReadWriteSelect[i] == TISH_STEP_SUCCEED)
             {
-                printInfoWithTime(QString().sprintf("%d#流量计标定数据读取失败", i + 1));
-                calTag->result[i] = TISH_STEP_READ_FAULT;
+                calTag->reset_result[i] = TISH_STEP_SUCCEED;
 
                 fmRWTimer[i]->stop();
             }
-            else if(fmCalibrating[i] == TISH_STEP_WRITE_FAULT)
+            else if(fmReadWriteSelect[i] == TISH_STEP_WRITE_FAULT)
             {
-                printInfoWithTime(QString().sprintf("%d#流量计标定数据写入失败", i + 1));
-                calTag->result[i] = TISH_STEP_WRITE_FAULT;
+                printInfoWithTime(QString().sprintf("%d#流量计Reset写入失败", i + 1));
+                calTag->reset_result[i] = TISH_STEP_WRITE_FAULT;
 
                 fmRWTimer[i]->stop();
             }
-            else
-            if (fmCalibrating[i] == TISH_STEP_READ_WRITE)
+            else if (fmReadWriteSelect[i] == RESET_FM_READ_WRITE)
             {
                 ret = true;
             }
@@ -908,20 +953,98 @@ void FSC_MainWindow::calibration(oneCalTag *calTag)
 
     for (int i = 0; i < FLOWMETER_NUMBER; i++)
     {
-        fmCalibrating[i] = 0;
+        fmReadWriteSelect[i] = 0;
+        fmRWflag[i] = 0;
+    }
+
+}
+
+void FSC_MainWindow::fmCalibration(oneCalTag *calTag)
+{
+    //double d = 0;
+
+    for (int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        if (calTag->finalFMSumValue[i] < 1.0 ||  std::isnan(calTag->finalFMSumValue[i]))
+        {
+            continue;
+        }
+
+        //d = calTag->finalFMSumValue[i] - calTag->finalScaleSumValue;
+
+
+        /*...*/
+
+        fmReadWriteSelect[i] = CALIBRATION_FM_READ_WRITE;
+        fmRWflag[i] = 1;
+
+        calTag->result[i] = 0;
+
+    }
+    printInfoWithTime("流量计标定数据指令开始");
+
+    bool    ret = true;
+    int     k = 0;
+
+    while(ret)
+    {
+        delayMSec(FM_PROCESS_WAIT_DELAY);
+
+        ret = false;
+        for (int i = 0; i < FLOWMETER_NUMBER; i++)
+        {
+            if (k++ > FM_PROCESS_RW_TIMEOUT)
+            {
+                printInfoWithTime(QString().sprintf("%d#流量计标定失败", i + 1));
+                calTag->result[i] = TISH_STEP_FAULT;
+
+                fmRWTimer[i]->stop();
+            }
+            else if (fmReadWriteSelect[i] == TISH_STEP_SUCCEED)
+            {
+                printInfoWithTime(QString().sprintf("%d#流量计标定数据写入成功", i + 1));
+                calTag->result[i] = TISH_STEP_SUCCEED;
+
+                fmRWTimer[i]->stop();
+            }
+            else if(fmReadWriteSelect[i] == TISH_STEP_READ_FAULT)
+            {
+                printInfoWithTime(QString().sprintf("%d#流量计标定数据读取失败", i + 1));
+                calTag->result[i] = TISH_STEP_READ_FAULT;
+
+                fmRWTimer[i]->stop();
+            }
+            else if(fmReadWriteSelect[i] == TISH_STEP_WRITE_FAULT)
+            {
+                printInfoWithTime(QString().sprintf("%d#流量计标定数据写入失败", i + 1));
+                calTag->result[i] = TISH_STEP_WRITE_FAULT;
+
+                fmRWTimer[i]->stop();
+            }
+            else
+            if (fmReadWriteSelect[i] == CALIBRATION_FM_READ_WRITE)
+            {
+                ret = true;
+            }
+        }
+    }
+
+    for (int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        fmReadWriteSelect[i] = 0;
         fmRWflag[i] = 0;
     }
 }
 
-void FSC_MainWindow::correct(oneCalTag *calTag)
+void FSC_MainWindow::fmCorrect(oneCalTag *calTag)
 {
-    double d = 0;
+    //double d = 0;
 
     for (int i = 0; i < FLOWMETER_NUMBER; i++)
     {
         if (calTag->finalFMSumValue[i] < 1.0 ||  std::isnan(calTag->finalFMSumValue[i])) continue;
 
-        d = calTag->finalFMSumValue[i] - calTag->finalScaleSumValue;
+        //d = calTag->finalFMSumValue[i] - calTag->finalScaleSumValue;
 
 
         /*...*/
@@ -931,7 +1054,7 @@ void FSC_MainWindow::correct(oneCalTag *calTag)
     printInfoWithTime("修正结束");
 }
 
-void FSC_MainWindow::check(oneCalTag *calTag)
+void FSC_MainWindow::fmCheck(oneCalTag *calTag)
 {
     (void) calTag;
 
@@ -994,7 +1117,7 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *cal)
 
     QString str =  "报表生成时间：" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + "\n";
     str += "型号：" + cal->stepBak.type_name + "   量程：" + QString::number(cal->stepBak.span_ml_per_min) + "ml/min   \
-            水温：25°C    共" + QString::number(cal->stepRecord) + "步\n" ;
+            水温：25°C    共" + QString::number(currentStep.stepTotal) + "步\n" ;
     str += "\n";
 
     for(int i = 0; i < CAL_MAX_STEP; i++)
@@ -1035,6 +1158,11 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *cal)
 
             str += "s\n";
 
+            if (allCal[i].reset_stfm_result == TISH_STEP_WRITE_FAULT)
+            {
+                str += "标准流量计Reset失败!\n";
+            }
+
             str += "天平称重：" + QString::number(allCal[i].finalScaleSumValue, 'f', 3) + "g\n";
             str += "标准流量计累计流量：" + QString::number(allCal[i].finalSTDFMSumValue, 'f', 3) + "ml\n";
             str += "标准流量计最后流速：" + QString::number(allCal[i].finalSTDFMRateValue, 'f', 3) + "ml/min\n";
@@ -1051,7 +1179,19 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *cal)
 
             for (int k = 0; k < FLOWMETER_NUMBER; k++)
             {
-                if (allCal[i].finalFMSumValue[k] < 1.0 ||  std::isnan(allCal[i].finalFMSumValue[k])) continue;
+                if (allCal[i].finalFMSumValue[k] < 1.0 ||  std::isnan(allCal[i].finalFMSumValue[k]))
+                {
+                    continue;
+                }
+
+                if (allCal[i].reset_result[k] ==  TISH_STEP_WRITE_FAULT)
+                {
+                    str += QString().sprintf("%d#流量计Rese失败!\n", k + 1);
+                }
+                else if (allCal[i].reset_result[k] ==  TISH_STEP_FAULT)
+                {
+                    str += QString().sprintf("%d#流量计Reset 失败!\n", k + 1);
+                }
 
                 str += QString::number(k + 1) + "#流量计累计流量：" + QString::number(allCal[i].finalFMSumValue[k], 'f', 3) + "ml\n";
                 str += QString::number(k + 1) + "#流量计最后流速：" + QString::number(allCal[i].finalFMSumValue[k], 'f', 3) + "ml/min\n";
@@ -1063,11 +1203,11 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *cal)
                 }
                 d /= allCal[i].plotFMRateValue[i].size();
 
-                str += QString::number(i + 1) + "#流量计平均流速：" + QString::number(d, 'f', 3) + "ml/min\n";
+                str += QString::number(k + 1) + "#流量计平均流速：" + QString::number(d, 'f', 3) + "ml/min\n";
 
                 d = allCal[i].finalFMSumValue[k] - allCal[i].finalScaleSumValue;
                 str += "累计流量与天平误差：" + QString::number(d, 'f', 3) + "ml(g)\n";
-                str += "误差百分比：" + QString::number(d / allCal[i].finalScaleSumValue * 100, 'f', 3) + "%  已";
+                str += "误差百分比：" + QString::number(d / allCal[i].finalScaleSumValue * 100, 'f', 3) + "%   ";
 
                 if (allCal[i].calTpye == START_CAL_TYPE_CAL)
                 {
@@ -1078,11 +1218,15 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *cal)
                     }
                     else if (allCal[i].result[k] == TISH_STEP_READ_FAULT)
                     {
-                        str += "读取失败 ";
+                        str += "读取失败! ";
                     }
                     else if (allCal[i].result[k] == TISH_STEP_WRITE_FAULT)
                     {
-                        str += "写入失败 ";
+                        str += "写入失败! ";
+                    }
+                    else if (allCal[i].result[k] == TISH_STEP_FAULT)
+                    {
+                        str += "失败! ";
                     }
                 }
                 else if (allCal[i].calTpye == START_CAL_TYPE_CORRECT)
@@ -1094,11 +1238,15 @@ void FSC_MainWindow::makeCalRecordPrint(oneCalTag *cal)
                     }
                     else if (allCal[i].result[k] == TISH_STEP_READ_FAULT)
                     {
-                        str += "读取失败 ";
+                        str += "读取失败! ";
                     }
                     else if (allCal[i].result[k] == TISH_STEP_WRITE_FAULT)
                     {
-                        str += "写入失败 ";
+                        str += "写入失败! ";
+                    }
+                    else if (allCal[i].result[k] == TISH_STEP_FAULT)
+                    {
+                        str += "失败! ";
                     }
                 }
                 else if (allCal[i].calTpye == START_CAL_TYPE_CHECK)

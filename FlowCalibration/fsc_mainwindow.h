@@ -124,12 +124,18 @@ class FSC_MainWindow;
 #define PROTOCOL_XUNYIN_MODBUS_ADDR_ZERO_CAL            0xEB
 
 
-#define TISH_STEP_READ_WRITE        1
-#define TISH_STEP_SUCCEED           2
-#define TISH_STEP_WRITE_FAULT       3
-#define TISH_STEP_READ_FAULT        4
+#define CALIBRATION_FM_READ_WRITE       1
+#define TISH_STEP_SUCCEED               2
+#define TISH_STEP_WRITE_FAULT           3
+#define TISH_STEP_READ_FAULT            4
+#define RESET_FM_READ_WRITE             5
+#define TISH_STEP_FAULT                 6
 
+#define FM_PROCESS_WAIT_DELAY           (100)
+#define FM_PROCESS_RW_TIMEOUT           (20 * 10)
 
+#define FM_MSG_WAIT_DELAY               (100)
+#define FM_MSG_RW_TIMEOUT               (10)
 
 class calLink
 {
@@ -215,6 +221,9 @@ public:
     uint        calProcEndTime = 0;
 
     int     result[FLOWMETER_NUMBER];
+    int     reset_result[FLOWMETER_NUMBER];
+
+    int     reset_stfm_result = 0;
 };
 
 class FSC_MainWindow : public QMainWindow
@@ -248,8 +257,8 @@ private slots:
     void startCal(void);
     void startSTFM(void);
     void startSocketConnect(int i);
-    bool fmCalibratingSingle(int fmIdx);
     bool fmRWTimerOn(int fmIdx);
+    bool stfmRWTimerOn(void);
 
     void on_tbnSysDevCheck_clicked();
 
@@ -377,22 +386,31 @@ private:
     bool sendMsg_writeGAIN_CONTROL(int fmIdx);
     bool sendMsg_writeUPDATE_REQ(int fmIdx);
     bool sendMsg_writeRESET(int fmIdx);
+    bool sendMsg_writeStfmRESET(void);
 
     bool parseMsg_readGAIN_CONTROL(int fmIdx);
     bool parseMsg_writeSINGLE(int fmIdx);
+    bool parseMsg_writeStfmSINGLE(void);
 
     bool preParseFMMsg(int fmIdx);
     bool parseFMMsg(int fmIdx);
+    bool preParseStfmMsg(void);
+    bool parseStfmMsg(void);
 
+    void reqFMData(int indexFM);
     void reqFMSumRateMsg(QByteArray *buf, int station);
     bool preParseFMSumRateMsg(int indexSkt);
     bool parseFMSumRateMsg(int indexSkt);
+
+    bool fmCalibrationSingle(int fmIdx);
+    bool fmResetSingle(int fmIdx);
+
     bool parsePLC(int indexSkt);
     bool parsePLCNoSTFM(int indexSkt);
 
     void reqScaleShow(void);
     void reqScaleZero(void);
-    void reqFMData(int indexFM);
+
     void reqSetPLC(void);
     void reqSetPLCWithSTFM(void);
     void writePLC(void);
@@ -410,9 +428,12 @@ private:
     void calGoing(oneCalTag *calTag);
     void calPlot(oneCalTag *calTag);
     void calDoing(oneCalTag *calTag);
-    void calibration(oneCalTag *calTag);
-    void correct(oneCalTag *calTag);
-    void check(oneCalTag *calTag);
+
+    void fmCalibration(oneCalTag *calTag);
+    void fmCorrect(oneCalTag *calTag);
+    void fmCheck(oneCalTag *calTag);
+    void fmResetAll(oneCalTag *calTag);
+
     void calStop(oneCalTag *calTag);
     void calFaultStop(oneCalTag *calTag);
 
@@ -502,16 +523,24 @@ private:
     float       fm_valueSET_KF2[FLOWMETER_NUMBER];
     int         fm_valueSET_KF2_valid[FLOWMETER_NUMBER];
 
+    int         stfm_write_suced = 0;
     int         fm_write_suced[FLOWMETER_NUMBER];
 
     QByteArray  fmSendMsg[FLOWMETER_NUMBER];
     QByteArray  fmRevMsg[FLOWMETER_NUMBER];
 
-    int     fmCalibrating[FLOWMETER_NUMBER];
+    QByteArray  stfmSendMsg;
+    QByteArray  stfmRevMsg;
 
+    int     fmReadWriteSelect[FLOWMETER_NUMBER];
     int     fmRWflag[FLOWMETER_NUMBER];
     QTimer  *fmRWTimer[FLOWMETER_NUMBER];
     QSignalMapper * fmRWMapper;
+
+    int     stfmReadWriteSelect = 0;
+    int     stfmRWflag = 0;
+    QTimer  *stfmRWTimer;
+
 
     double  showSetFlowRate;
     int     showSetPWM;

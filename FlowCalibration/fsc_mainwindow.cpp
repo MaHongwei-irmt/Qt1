@@ -395,7 +395,7 @@ void FSC_MainWindow::DataInit(void)
         fmSendMsg[i].clear();
         fmRevMsg[i].clear();
 
-        fmCalibrating[i] = 0;
+        fmReadWriteSelect[i] = 0;
         fmRWflag[i] = 0;
         fmRWTimer[i] = new QTimer(this);
 
@@ -403,6 +403,11 @@ void FSC_MainWindow::DataInit(void)
         fmRWMapper->setMapping(fmRWTimer[i], i);
      }
     connect(fmRWMapper, SIGNAL(mapped(int)), this, SLOT(fmRWTimerOn(int)));
+
+    stfmRWTimer =  new QTimer(this);
+    connect(stfmRWTimer, SIGNAL(timeout()), this, SLOT(stfmRWTimerOn()));
+    stfmSendMsg.clear();
+    stfmRevMsg.clear();
 
     ui->radioButton_setFlowRate->setChecked(true);
 
