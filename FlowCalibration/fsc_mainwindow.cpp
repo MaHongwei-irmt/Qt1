@@ -33,6 +33,7 @@ FSC_MainWindow::FSC_MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui
 
 FSC_MainWindow::~FSC_MainWindow()
 {
+    showInfo->close();
     delete ui;
 }
 
@@ -389,7 +390,7 @@ void FSC_MainWindow::DataInit(void)
         showFMFlow[i] = static_cast<double>(nanf(""));
 
         fm_valueGAIN_CONTROL[i] = 0;
-        fm_valueGAIN_CONTROL_valid[i] = 0;
+        fm_valu_read_valid[i] = 0;
         fm_write_suced[i] = 0;
 
         fmSendMsg[i].clear();
@@ -1676,7 +1677,7 @@ void FSC_MainWindow::on_tbnFMCalTable_clicked()
     }
 
     showCalTable = true;
-    Dialog_showinfo *showInfo = new Dialog_showinfo(this);
+    showInfo = static_cast<QDialog*>(new Dialog_showinfo(this));
     showInfo->show();
 }
 

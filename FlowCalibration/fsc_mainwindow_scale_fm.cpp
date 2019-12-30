@@ -16,12 +16,7 @@ void FSC_MainWindow::reqFMData(int indexFM)
         needToSend = true;
     }
 
-    if (fmIdx >= 0 && (!fmSendMsg[fmIdx].isEmpty() || !fmRevMsg[fmIdx].isEmpty()))
-    {
-        sktReqTime[indexFM] = QDateTime::currentDateTime().toTime_t();
-    }
-
-    if (indexFM == SOCKET_STD_FLOWM_INDEX && (!stfmSendMsg.isEmpty() || !stfmRevMsg.isEmpty()))
+    if(stfmRWflag || (fmIdx >= 0 && fmRWflag[fmIdx]))
     {
         sktReqTime[indexFM] = QDateTime::currentDateTime().toTime_t();
     }
@@ -278,6 +273,10 @@ bool FSC_MainWindow::fmRWTimerOn(int fmIdx)
     {
         fmResetSingle(fmIdx);
     }
+    else if (fmReadWriteSelect[fmIdx] == CORRECT_FM_READ_WRITE)
+    {
+        fmCorrectSingle(fmIdx);
+    }
 
     fmSendMsg[fmIdx].clear();
     fmRevMsg[fmIdx].clear();
@@ -291,7 +290,7 @@ bool FSC_MainWindow::fmRWTimerOn(int fmIdx)
     return true;
 }
 
-bool FSC_MainWindow::fmResetSingle(int fmIdx)
+bool FSC_MainWindow::fmCorrectSingle(int fmIdx)
 {
     if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
     {
@@ -315,7 +314,7 @@ bool FSC_MainWindow::fmResetSingle(int fmIdx)
                 break;
             }
 
-            printInfo(",");
+            printInfo("|");
         }
 
         k++;
@@ -335,9 +334,66 @@ bool FSC_MainWindow::fmResetSingle(int fmIdx)
     return true;
 }
 
-bool FSC_MainWindow::fmCalibrationSingle(int fmIdx)
+bool FSC_MainWindow::writeFM(int fmIdx, int idCode)
 {
+    if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
+    {
+        return false;
+    }
 
+    fm_write_suced[fmIdx] = 0;
+    int k = 0;
+    while(true)
+    {
+        if (idCode == XUNYIN_SINGLE_WRITE_RESET)
+        {
+            sendMsg_writeRESET(fmIdx);
+            printInfo("writeRESET");
+        }
+        else if  (idCode == XUNYIN_SINGLE_WRITE_GAIN_CONTROL)
+        {
+            sendMsg_writeGAIN_CONTROL(fmIdx);
+            printInfo("writeGAIN_CONTROL");
+        }
+        else if  (idCode == XUNYIN_SINGLE_WRITE_UPDATE_REQ)
+        {
+            sendMsg_writeUPDATE_REQ(fmIdx);
+            printInfo("writeUPDATE_REQ");
+        }
+
+
+        int i = 0;
+        while(fm_write_suced[fmIdx] == 0)
+        {
+            delayMSec(FM_MSG_WAIT_DELAY);
+
+            i++;
+            if (i > FM_MSG_RW_TIMEOUT)
+            {
+                break;
+            }
+
+            printInfo(">");
+        }
+
+        k++;
+        if (fm_write_suced[fmIdx] != 0 || k > 1)
+        {
+            break;
+        }
+    }
+    if (fm_write_suced[fmIdx] == 0)
+    {
+        fmReadWriteSelect[fmIdx] = TISH_STEP_WRITE_FAULT;
+        return false;
+    }
+
+    fmReadWriteSelect[fmIdx] = TISH_STEP_SUCCEED;
+    return true;
+}
+
+bool FSC_MainWindow::readFM(int fmIdx, int idCode)
+{
     if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
     {
         return false;
@@ -347,14 +403,18 @@ bool FSC_MainWindow::fmCalibrationSingle(int fmIdx)
     //double delta = 0;
 
 
-    fm_valueGAIN_CONTROL_valid[fmIdx] = 0;
+    fm_valu_read_valid[fmIdx] = 0;
     int k = 0;
     while(true)
     {
-        sendMsg_readGAIN_CONTROL(fmIdx);
+        if (idCode == XUNYIN_READ_GAIN_CONTROL)
+        {
+            sendMsg_readGAIN_CONTROL(fmIdx);
+            printInfo("readGAIN_CONTROL");
+        }
 
         int i = 0;
-        while(fm_valueGAIN_CONTROL_valid[fmIdx] == 0)
+        while(fm_valu_read_valid[fmIdx] == 0)
         {
             delayMSec(FM_MSG_WAIT_DELAY);
 
@@ -364,84 +424,19 @@ bool FSC_MainWindow::fmCalibrationSingle(int fmIdx)
                 break;
             }
 
-            printInfo("-");
+            printInfo("<");
         }
 
         k++;
-        if (fm_valueGAIN_CONTROL_valid[fmIdx] != 0 || k > 1)
+        if (fm_valu_read_valid[fmIdx] != 0 || k > 1)
         {
             break;
         }
 
     }
-    if (fm_valueGAIN_CONTROL_valid[fmIdx] == 0)
+    if (fm_valu_read_valid[fmIdx] == 0)
     {
         fmReadWriteSelect[fmIdx] = TISH_STEP_READ_FAULT;
-        return false;
-    }
-
-    fm_write_suced[fmIdx] = 0;
-    k = 0;
-    while(true)
-    {
-        sendMsg_writeGAIN_CONTROL(fmIdx);
-
-        int i = 0;
-        while(fm_write_suced[fmIdx] == 0)
-        {
-            delayMSec(FM_MSG_WAIT_DELAY);
-
-            i++;
-            if (i > FM_MSG_RW_TIMEOUT)
-            {
-                break;
-            }
-
-            printInfo(".");
-        }
-
-        k++;
-        if (fm_write_suced[fmIdx] != 0 || k > 1)
-        {
-            break;
-        }
-    }
-    if (fm_write_suced[fmIdx] == 0)
-    {
-        fmReadWriteSelect[fmIdx] = TISH_STEP_WRITE_FAULT;
-        return false;
-    }
-
-
-    fm_write_suced[fmIdx] = 0;
-    k = 0;
-    while(true)
-    {
-        sendMsg_writeUPDATE_REQ(fmIdx);
-
-        int i = 0;
-        while(fm_write_suced[fmIdx] == 0)
-        {
-            delayMSec(FM_MSG_WAIT_DELAY);
-
-            i++;
-            if (i > FM_MSG_RW_TIMEOUT)
-            {
-                break;
-            }
-
-            printInfo("+");
-        }
-
-        k++;
-        if (fm_write_suced[fmIdx] != 0 || k > 1)
-        {
-            break;
-        }
-    }
-    if (fm_write_suced[fmIdx] == 0)
-    {
-        fmReadWriteSelect[fmIdx] = TISH_STEP_WRITE_FAULT;
         return false;
     }
 
@@ -449,7 +444,31 @@ bool FSC_MainWindow::fmCalibrationSingle(int fmIdx)
     return true;
 }
 
-bool FSC_MainWindow::sendMsg_readGAIN_CONTROL(int fmIdx)
+bool FSC_MainWindow::fmResetSingle(int fmIdx)
+{
+    return (writeFM(fmIdx, XUNYIN_SINGLE_WRITE_RESET));
+}
+
+bool FSC_MainWindow::fmCalibrationSingle(int fmIdx)
+{
+    bool ret= true;
+
+    ret = readFM(fmIdx, XUNYIN_READ_GAIN_CONTROL);
+
+    //if (ret)
+    {
+       ret =  writeFM(fmIdx, XUNYIN_SINGLE_WRITE_GAIN_CONTROL);
+    }
+
+    //if (ret)
+    {
+       ret =  writeFM(fmIdx, XUNYIN_SINGLE_WRITE_UPDATE_REQ);
+    }
+
+    return ret;
+}
+
+bool FSC_MainWindow::sendMsg_read_byAddr(int fmIdx, uchar addr, char num)
 {
     if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
     {
@@ -464,9 +483,9 @@ bool FSC_MainWindow::sendMsg_readGAIN_CONTROL(int fmIdx)
     (*buf)[0] = sktStationAddr[fmIdx + SOCKET_FLOWM1_INDEX];
     (*buf)[1] = PROTOCOL_XUNYIN_MODBUS_READ_FUNCODE;
     (*buf)[2] = 0;
-    (*buf)[3] = static_cast<char>(PROTOCOL_XUNYIN_MODBUS_ADDR_GAIN_CONTROL);
+    (*buf)[3] = static_cast<char>(addr);
     (*buf)[4] = 0;
-    (*buf)[5] = 1;
+    (*buf)[5] = num;
 
     crc = Checksum_computeChecksum( buf->data(), buf->size() - 2);
 
@@ -477,129 +496,70 @@ bool FSC_MainWindow::sendMsg_readGAIN_CONTROL(int fmIdx)
     flushSendBuf();
 
     return true;
+}
+
+bool FSC_MainWindow::sendMsg_writeSingle_byAddr(int fmIdx, uchar addr, uint16_t value)
+{
+    if (fmIdx < -1 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
+    {
+        return false;
+    }
+
+    QByteArray *buf = &sktBufSend[fmIdx + SOCKET_FLOWM1_INDEX];
+    uint16_t crc = 0;
+
+    buf->resize(8);
+
+    (*buf)[0] = sktStationAddr[fmIdx + SOCKET_FLOWM1_INDEX];
+    (*buf)[1] = PROTOCOL_XUNYIN_MODBUS_WRITE_SINGLE_FUNCODE;
+    (*buf)[2] = 0;
+    (*buf)[3] = static_cast<char>(addr);
+    (*buf)[4] = static_cast<char>(value >> 8);
+    (*buf)[5] = static_cast<char>(value);
+
+    crc = Checksum_computeChecksum( buf->data(), buf->size() - 2);
+
+    (*buf)[6]= static_cast<char>(crc) ;
+    (*buf)[7]= static_cast<char>(crc >> 8);
+
+    if (fmIdx == -1)
+    {
+        stfmSendMsg = *buf;
+    }
+    else
+    {
+        fmSendMsg[fmIdx] = *buf;
+    }
+
+    flushSendBuf();
+
+    return true;
+}
+
+bool FSC_MainWindow::sendMsg_readGAIN_CONTROL(int fmIdx)
+{
+    return(sendMsg_read_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_GAIN_CONTROL, 1));
 }
 
 bool FSC_MainWindow::sendMsg_writeGAIN_CONTROL(int fmIdx)
 {
-    if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
-    {
-        return false;
-    }
-
-    QByteArray *buf = &sktBufSend[fmIdx + SOCKET_FLOWM1_INDEX];
-    uint16_t crc = 0;
-
-    buf->resize(8);
-
-    (*buf)[0] = sktStationAddr[fmIdx + SOCKET_FLOWM1_INDEX];
-    (*buf)[1] = PROTOCOL_XUNYIN_MODBUS_WRITE_SINGLE_FUNCODE;
-    (*buf)[2] = 0;
-    (*buf)[3] = static_cast<char>(PROTOCOL_XUNYIN_MODBUS_ADDR_GAIN_CONTROL);
-    (*buf)[4] = 0;
-    (*buf)[5] = fm_valueGAIN_CONTROL[fmIdx];
-
-    //delta = calTag->finalFMSumValue[fmIdx] - calTag->finalScaleSumValue;
-
-
-    crc = Checksum_computeChecksum( buf->data(), buf->size() - 2);
-
-    (*buf)[6]= static_cast<char>(crc) ;
-    (*buf)[7]= static_cast<char>(crc >> 8);
-
-    //oneCal
-
-    fmSendMsg[fmIdx] = *buf;
-    flushSendBuf();
-
-    return true;
+    return(sendMsg_writeSingle_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_GAIN_CONTROL, \
+                                       static_cast<uint16_t>(fm_valueGAIN_CONTROL[fmIdx])));
 }
 
 bool FSC_MainWindow::sendMsg_writeUPDATE_REQ(int fmIdx)
 {
-    if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
-    {
-        return false;
-    }
-
-    QByteArray *buf = &sktBufSend[fmIdx + SOCKET_FLOWM1_INDEX];
-    uint16_t crc = 0;
-
-    buf->resize(8);
-
-    (*buf)[0] = sktStationAddr[fmIdx + SOCKET_FLOWM1_INDEX];
-    (*buf)[1] = PROTOCOL_XUNYIN_MODBUS_WRITE_SINGLE_FUNCODE;
-    (*buf)[2] = 0;
-    (*buf)[3] = static_cast<char>(PROTOCOL_XUNYIN_MODBUS_ADDR_APP_UPDATE_REQ);
-    (*buf)[4] = 0;
-    (*buf)[5] = 1;
-
-    crc = Checksum_computeChecksum( buf->data(), buf->size() - 2);
-
-    (*buf)[6]= static_cast<char>(crc) ;
-    (*buf)[7]= static_cast<char>(crc >> 8);
-
-
-    fmSendMsg[fmIdx] = *buf;
-    flushSendBuf();
-
-    return true;
+    return(sendMsg_writeSingle_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_APP_UPDATE_REQ, 1));
 }
 
 bool FSC_MainWindow::sendMsg_writeStfmRESET(void)
 {
-    QByteArray *buf = &sktBufSend[SOCKET_STD_FLOWM_INDEX];
-    uint16_t crc = 0;
-
-    buf->resize(8);
-
-    (*buf)[0] = sktStationAddr[SOCKET_STD_FLOWM_INDEX];
-    (*buf)[1] = PROTOCOL_XUNYIN_MODBUS_WRITE_SINGLE_FUNCODE;
-    (*buf)[2] = 0;
-    (*buf)[3] = static_cast<char>(PROTOCOL_XUNYIN_MODBUS_ADDR_RESET);
-    (*buf)[4] = 0;
-    (*buf)[5] = 1;
-
-    crc = Checksum_computeChecksum( buf->data(), buf->size() - 2);
-
-    (*buf)[6]= static_cast<char>(crc) ;
-    (*buf)[7]= static_cast<char>(crc >> 8);
-
-
-    stfmSendMsg = *buf;
-    flushSendBuf();
-
-    return true;
+    return(sendMsg_writeSingle_byAddr(-1, PROTOCOL_XUNYIN_MODBUS_ADDR_RESET, 1));
 }
 
 bool FSC_MainWindow::sendMsg_writeRESET(int fmIdx)
 {
-    if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
-    {
-        return false;
-    }
-
-    QByteArray *buf = &sktBufSend[fmIdx + SOCKET_FLOWM1_INDEX];
-    uint16_t crc = 0;
-
-    buf->resize(8);
-
-    (*buf)[0] = sktStationAddr[fmIdx + SOCKET_FLOWM1_INDEX];
-    (*buf)[1] = PROTOCOL_XUNYIN_MODBUS_WRITE_SINGLE_FUNCODE;
-    (*buf)[2] = 0;
-    (*buf)[3] = static_cast<char>(PROTOCOL_XUNYIN_MODBUS_ADDR_RESET);
-    (*buf)[4] = 0;
-    (*buf)[5] = 1;
-
-    crc = Checksum_computeChecksum( buf->data(), buf->size() - 2);
-
-    (*buf)[6]= static_cast<char>(crc) ;
-    (*buf)[7]= static_cast<char>(crc >> 8);
-
-
-    fmSendMsg[fmIdx] = *buf;
-    flushSendBuf();
-
-    return true;
+    return(sendMsg_writeSingle_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_RESET, 1));
 }
 
 bool FSC_MainWindow::preParseStfmMsg(void)
@@ -698,7 +658,7 @@ bool FSC_MainWindow::parseMsg_readGAIN_CONTROL(int fmIdx)
         }
 
         fm_valueGAIN_CONTROL[fmIdx] = fmRevMsg[fmIdx].data()[4];
-        fm_valueGAIN_CONTROL_valid[fmIdx] = 1;
+        fm_valu_read_valid[fmIdx] = 1;
     }
 
     return true;

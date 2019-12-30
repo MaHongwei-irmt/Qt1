@@ -130,6 +130,12 @@ class FSC_MainWindow;
 #define TISH_STEP_READ_FAULT            4
 #define RESET_FM_READ_WRITE             5
 #define TISH_STEP_FAULT                 6
+#define CORRECT_FM_READ_WRITE           7
+
+#define XUNYIN_SINGLE_WRITE_RESET           1
+#define XUNYIN_SINGLE_WRITE_GAIN_CONTROL    2
+#define XUNYIN_SINGLE_WRITE_UPDATE_REQ      3
+#define XUNYIN_READ_GAIN_CONTROL            4
 
 #define FM_PROCESS_WAIT_DELAY           (100)
 #define FM_PROCESS_RW_TIMEOUT           (20 * 10)
@@ -354,6 +360,7 @@ private slots:
 
 private:
     Ui::FSC_MainWindow *ui;
+    QDialog *showInfo;
 
     void uiReInit(void);
 
@@ -383,6 +390,8 @@ private:
     void socketCommunication(void);
 
     bool sendMsg_readGAIN_CONTROL(int fmIdx);
+    bool sendMsg_read_byAddr(int fmIdx, uchar addr, char num);
+    bool sendMsg_writeSingle_byAddr(int fmIdx, uchar addr, uint16_t value);
     bool sendMsg_writeGAIN_CONTROL(int fmIdx);
     bool sendMsg_writeUPDATE_REQ(int fmIdx);
     bool sendMsg_writeRESET(int fmIdx);
@@ -404,6 +413,10 @@ private:
 
     bool fmCalibrationSingle(int fmIdx);
     bool fmResetSingle(int fmIdx);
+    bool fmCorrectSingle(int fmIdx);
+
+    bool writeFM(int fmIdx, int idCode);
+    bool readFM(int fmIdx, int idCode);
 
     bool parsePLC(int indexSkt);
     bool parsePLCNoSTFM(int indexSkt);
@@ -423,11 +436,12 @@ private:
 
     bool checkWaterEmpty(void);
     bool calProc(void);
-    bool fillOneCal(oneCalTag *calTag);
-    void calSingle(oneCalTag *calTag);
     void calGoing(oneCalTag *calTag);
     void calPlot(oneCalTag *calTag);
     void calDoing(oneCalTag *calTag);
+
+    void waitFmCommuication(oneCalTag *calTag, int idFmProcess);
+    void waitStfmCommuication(oneCalTag *calTag, int idFmProcess);
 
     void fmCalibration(oneCalTag *calTag);
     void fmCorrect(oneCalTag *calTag);
@@ -515,7 +529,7 @@ private:
     double  showFMFlow[FLOWMETER_NUMBER];
 
     char        fm_valueGAIN_CONTROL[FLOWMETER_NUMBER];
-    int         fm_valueGAIN_CONTROL_valid[FLOWMETER_NUMBER];
+    int         fm_valu_read_valid[FLOWMETER_NUMBER];
     float       fm_valueSET_KF[FLOWMETER_NUMBER];
     int         fm_valueSET_KF_valid[FLOWMETER_NUMBER];
     float       fm_valueSET_KF1[FLOWMETER_NUMBER];
