@@ -257,6 +257,34 @@ void FSC_MainWindow::skt_read(int i)
     }
 }
 
+void FSC_MainWindow::flushSendBuf(void)
+{
+    for (int i = 0; i < SOCKET_NUMBER; i++)
+    {
+
+        if (sktConed[i] && sktBufSend[i].size() > 0)
+        {
+
+
+            if (debugSkt[i])
+            {
+                FSCLOG << "Socket write hex: skt-" + QString::number(i) + " " + QString::number(sktBufSend[i].size()) + " " + ByteArrayToHexString(sktBufSend[i]);
+
+                ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" +\
+                                              QDateTime::currentDateTime().toString("hh:mm:ss:zzz->")+ ByteArrayToHexString(sktBufSend[i]));
+                ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
+            }
+
+
+            fsc_global::sktTcp[i]->write(sktBufSend[i]);
+            fsc_global::sktTcp[i]->flush();
+            fsc_global::sktTcp[i]->waitForBytesWritten();
+
+            sktBufSend[i].resize(0);
+        }
+    }
+}
+
 void FSC_MainWindow::socketCommunication(void)
 {
     if (!socketWellDone)

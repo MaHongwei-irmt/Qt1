@@ -272,6 +272,17 @@ bool FSC_MainWindow::fillOneCalLink(oneCalTag *calTag)
         calTag->state = ONE_CAL_START;
 
         calTag->calTime = QDateTime::currentDateTime().toTime_t();
+
+        calTag->plotTimeX.clear();
+        calTag->plotScaleSumValue.clear();
+        calTag->plotSTDFMSumValue.clear();
+        calTag->plotSTDFMRateValue.clear();
+
+        for (int i = 0; i < FLOWMETER_NUMBER; i++)
+        {
+            calTag->plotFMSumValue[i].clear();
+            calTag->plotFMRateValue[i].clear();
+        }
     }
 
     return true;
@@ -577,23 +588,12 @@ void FSC_MainWindow::calDoing(oneCalTag *calTag)
 
     calTag->state = ONE_CAL_EMPTY;
     calTag->plotPos = 0;
-    calTag->plotTimeX.clear();
-    calTag->plotScaleSumValue.clear();
-    calTag->plotSTDFMSumValue.clear();
-    calTag->plotSTDFMRateValue.clear();
-
-    for (int i = 0; i < FLOWMETER_NUMBER; i++)
-    {
-        calTag->plotFMSumValue[i].clear();
-        calTag->plotFMRateValue[i].clear();
-    }
 
     if (calTag->pause)
     {
         calOn = CAL_STATE_STOP;
         calTag->pause = false;
     }
-
 }
 
 void FSC_MainWindow::waitFmCommuication(oneCalTag *calTag, int idFmProcess)
@@ -731,6 +731,8 @@ void FSC_MainWindow::waitFmCommuication(oneCalTag *calTag, int idFmProcess)
         fmReadWriteSelect[i] = 0;
         fmRWflag[i] = 0;
     }
+
+    resetFmCommunicationWithStfm();
 }
 
 void FSC_MainWindow::waitStfmCommuication(oneCalTag *calTag, int idFmProcess)
@@ -777,20 +779,15 @@ void FSC_MainWindow::waitStfmCommuication(oneCalTag *calTag, int idFmProcess)
 
     stfmReadWriteSelect = 0;
     stfmRWflag = 0;
+
+    resetFmCommunicationWithStfm();
 }
 
 void FSC_MainWindow::fmResetAll(oneCalTag *calTag)
 {
     waitStfmCommuication(calTag, RESET_FM_READ_WRITE);
-
-    for (int i = 0; i < FLOWMETER_NUMBER; i++)
-    {
-        sktRespondOk[i + SOCKET_FLOWM1_INDEX] = true;
-        sktReqTime[i + SOCKET_FLOWM1_INDEX] = QDateTime::currentDateTime().toTime_t();
-    }
-
     waitFmCommuication(calTag, RESET_FM_READ_WRITE);
-}
+ }
 
 void FSC_MainWindow::fmCalibration(oneCalTag *calTag)
 {
@@ -859,16 +856,6 @@ void FSC_MainWindow::calStop(oneCalTag *calTag)
 
     calTag->state = ONE_CAL_EMPTY;
     calTag->plotPos = 0;
-    calTag->plotTimeX.clear();
-    calTag->plotScaleSumValue.clear();
-    calTag->plotSTDFMSumValue.clear();
-    calTag->plotSTDFMRateValue.clear();
-
-    for (int i = 0; i < FLOWMETER_NUMBER; i++)
-    {
-        calTag->plotFMSumValue[i].clear();
-        calTag->plotFMRateValue[i].clear();
-    }
 
     calTag->step = 0;
     currentStep.stepCurrent = 0;
@@ -1108,6 +1095,16 @@ bool FSC_MainWindow::checkWaterEmpty(void)
 
 void FSC_MainWindow::on_comboBox_PlotSenSel_currentIndexChanged(const QString &arg1)
 {
+    if (plotFMSumValueY_bak[0].size() > 0)
+    {
+        plotFMSumValueY = plotFMSumValueY_bak[ui->comboBox_PlotSenSel->currentIndex()];
+        plotFMFlowValueY = plotFMFlowValueY_bak[ui->comboBox_PlotSenSel->currentIndex()];
+
+        plotFresh();
+
+        return;
+    }
+
     oneCal.plotSelectedFMIndex  = ui->comboBox_PlotSenSel->currentIndex();
     oneCal.plotSelectedFMStr  = arg1;
 
@@ -1116,19 +1113,26 @@ void FSC_MainWindow::on_comboBox_PlotSenSel_currentIndexChanged(const QString &a
 
 void FSC_MainWindow::on_tbnCalManual_clicked()
 {
+    static uint lastTime = 0;
+
     calGoingInfoLabRemove();
 
     if (!calManualDoing)
     {
-        pump1Off();
-        pump2Off();
-        writePLC();
-        delayMSec(1000);
+        if (lastTime + 6 < QDateTime::currentDateTime().toTime_t())
+        {
+            lastTime = QDateTime::currentDateTime().toTime_t();
+            fmResetAll(&oneCal);
 
-        printInfoWithTime("请放空天平上容器->关闭放水阀->天平去皮清零->在手动控制区设定流量或设定占空比->正向或反向进水启动水泵");
+            pump1Off();
+            pump2Off();
+            writePLC();
+            delayMSec(1000);
 
-        calManualDoing = true;
+            printInfoWithTime("请放空天平上容器->关闭放水阀->天平去皮清零->在手动控制区设定流量或设定占空比->正向或反向进水启动水泵");
 
+            calManualDoing = true;
+        }
     }
 }
 
@@ -1149,6 +1153,15 @@ void FSC_MainWindow::plotAddDataAndFresh(void)
         plotSTDFMFlowValueY.append(showSTDFMFlow);
         plotFMSumValueY.append(showFMSum[0] + 100);
         plotFMFlowValueY.append(showFMFlow[0]);
+
+        for(int i = 0; i < FLOWMETER_NUMBER; i++)
+        {
+            plotFMSumValueY_bak[i].append(showFMSum[i] + 100);
+            plotFMFlowValueY_bak[i].append(showFMFlow[i]);
+        }
+
+        plotFMSumValueY = plotFMSumValueY_bak[ui->comboBox_PlotSenSel->currentIndex()];
+        plotFMFlowValueY = plotFMFlowValueY_bak[ui->comboBox_PlotSenSel->currentIndex()];
 
         plotFresh();
 
@@ -1189,16 +1202,6 @@ void FSC_MainWindow::calFaultStop(oneCalTag *calTag)
 
     calTag->state = ONE_CAL_EMPTY;
     calTag->plotPos = 0;
-    calTag->plotTimeX.clear();
-    calTag->plotScaleSumValue.clear();
-    calTag->plotSTDFMSumValue.clear();
-    calTag->plotSTDFMRateValue.clear();
-
-    for (int i = 0; i < FLOWMETER_NUMBER; i++)
-    {
-        calTag->plotFMSumValue[i].clear();
-        calTag->plotFMRateValue[i].clear();
-    }
 
     if (calTag->step > 0)
     {

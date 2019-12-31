@@ -1,6 +1,22 @@
 #include "fsc_mainwindow.h"
 #include "ui_fsc_mainwindow.h"
 
+void FSC_MainWindow::resetFmCommunicationWithStfm(void)
+{
+    for (int i = SOCKET_STD_FLOWM_INDEX; i <= SOCKET_FLOWM12_INDEX; i++)
+    {
+        sktRespondOk[i] = true;
+        sktReqTime[i] = QDateTime::currentDateTime().toTime_t();
+
+        if (i >= SOCKET_FLOWM1_INDEX)
+        {
+            fmSendMsg[i].clear();
+        }
+    }
+
+    stfmSendMsg.clear();
+}
+
 void FSC_MainWindow::reqFMData(int indexFM)
 {
     if (indexFM < SOCKET_STD_FLOWM_INDEX || indexFM > SOCKET_FLOWM12_INDEX)
@@ -23,17 +39,24 @@ void FSC_MainWindow::reqFMData(int indexFM)
 
     if ((sktReqTime[indexFM] + FM_REQ_TIMEOUT) < QDateTime::currentDateTime().toTime_t())
     {
-        needToSend = true;
-
-        sktTimeoutNum[indexFM]++;
-        if (sktTimeoutNum[indexFM] > 1)
+        if (sktPause[indexFM])
         {
-            sktTimeoutNum[indexFM] = 0;
+             sktReqTime[indexFM] = QDateTime::currentDateTime().toTime_t();
+        }
+        else
+        {
+            needToSend = true;
 
-            sktStationAddr[indexFM]++;
-            if (sktStationAddr[indexFM] > 15)
+            sktTimeoutNum[indexFM]++;
+            if (sktTimeoutNum[indexFM] > 1)
             {
-                sktStationAddr[indexFM] = 0;
+                sktTimeoutNum[indexFM] = 0;
+
+                sktStationAddr[indexFM]++;
+                if (sktStationAddr[indexFM] > 15)
+                {
+                    sktStationAddr[indexFM] = 0;
+                }
             }
         }
     }
@@ -60,10 +83,13 @@ void FSC_MainWindow::reqFMData(int indexFM)
         }
         else
         {
-            reqFMSumRateMsg(&sktBufSend[indexFM], sktStationAddr[indexFM]);
-            flushSendBuf();
+            if (!sktPause[indexFM])
+            {
+                reqFMSumRateMsg(&sktBufSend[indexFM], sktStationAddr[indexFM]);
+                flushSendBuf();
 
-            sktRespondOk[indexFM] = false;
+                sktRespondOk[indexFM] = false;
+            }
             sktReqTime[indexFM] = QDateTime::currentDateTime().toTime_t();
         }
     }
@@ -290,50 +316,6 @@ bool FSC_MainWindow::fmRWTimerOn(int fmIdx)
     return true;
 }
 
-bool FSC_MainWindow::fmCorrectSingle(int fmIdx)
-{
-    if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
-    {
-        return false;
-    }
-
-    fm_write_suced[fmIdx] = 0;
-    int k = 0;
-    while(true)
-    {
-        sendMsg_writeRESET(fmIdx);
-
-        int i = 0;
-        while(fm_write_suced[fmIdx] == 0)
-        {
-            delayMSec(FM_MSG_WAIT_DELAY);
-
-            i++;
-            if (i > FM_MSG_RW_TIMEOUT)
-            {
-                break;
-            }
-
-            printInfo("|");
-        }
-
-        k++;
-        if (fm_write_suced[fmIdx] != 0 || k > 1)
-        {
-            break;
-        }
-    }
-    if (fm_write_suced[fmIdx] == 0)
-    {
-        fmReadWriteSelect[fmIdx] = TISH_STEP_WRITE_FAULT;
-        return false;
-    }
-
-    fmReadWriteSelect[fmIdx] = TISH_STEP_SUCCEED;
-
-    return true;
-}
-
 bool FSC_MainWindow::writeFM(int fmIdx, int idCode)
 {
     if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
@@ -360,7 +342,11 @@ bool FSC_MainWindow::writeFM(int fmIdx, int idCode)
             sendMsg_writeUPDATE_REQ(fmIdx);
             printInfo("writeUPDATE_REQ");
         }
-
+        else if  (idCode == XUNYIN_READ_SET_KF1)
+        {
+            sendMsg_writeSET_KF1(fmIdx);
+            printInfo("writeSET_KF1");
+        }
 
         int i = 0;
         while(fm_write_suced[fmIdx] == 0)
@@ -412,6 +398,11 @@ bool FSC_MainWindow::readFM(int fmIdx, int idCode)
             sendMsg_readGAIN_CONTROL(fmIdx);
             printInfo("readGAIN_CONTROL");
         }
+        else if (idCode == XUNYIN_READ_SET_KF1)
+        {
+            sendMsg_readSET_KF1(fmIdx);
+            printInfo("readSET_KF1");
+        }
 
         int i = 0;
         while(fm_valu_read_valid[fmIdx] == 0)
@@ -442,6 +433,25 @@ bool FSC_MainWindow::readFM(int fmIdx, int idCode)
 
     fmReadWriteSelect[fmIdx] = TISH_STEP_SUCCEED;
     return true;
+}
+
+bool FSC_MainWindow::fmCorrectSingle(int fmIdx)
+{
+    bool ret = true;
+
+    ret = readFM(fmIdx, XUNYIN_READ_SET_KF1);
+
+    //if (ret)
+    {
+       ret =  writeFM(fmIdx, XUNYIN_READ_SET_KF1);
+    }
+
+//    //if (ret)
+//    {
+//       ret =  writeFM(fmIdx, XUNYIN_SINGLE_WRITE_UPDATE_REQ);
+//    }
+
+    return ret;
 }
 
 bool FSC_MainWindow::fmResetSingle(int fmIdx)
@@ -498,6 +508,49 @@ bool FSC_MainWindow::sendMsg_read_byAddr(int fmIdx, uchar addr, char num)
     return true;
 }
 
+bool FSC_MainWindow::sendMsg_writeMulti_byAddr(int fmIdx, uchar addr, uint16_t num, QByteArray *ba)
+{
+    if (fmIdx < -1 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
+    {
+        return false;
+    }
+
+    QByteArray *buf = &sktBufSend[fmIdx + SOCKET_FLOWM1_INDEX];
+    uint16_t crc = 0;
+
+    buf->resize(9 + num * 2);
+
+    (*buf)[0] = sktStationAddr[fmIdx + SOCKET_FLOWM1_INDEX];
+    (*buf)[1] = PROTOCOL_XUNYIN_MODBUS_WRITE_MULTIPLE_FUNCODE;
+    (*buf)[2] = 0;
+    (*buf)[3] = static_cast<char>(addr);
+
+    (*buf)[4] = static_cast<char>(num >> 8);
+    (*buf)[5] = static_cast<char>(num);
+
+    (*buf)[6] = static_cast<char>(num * 2);
+
+    memcpy(&((*buf).data()[7]), ba->data(), num * 2);
+
+    crc = Checksum_computeChecksum( buf->data(), buf->size() - 2);
+
+    (*buf)[7 + num * 2] = static_cast<char>(crc) ;
+    (*buf)[7 + num * 2 + 1] = static_cast<char>(crc >> 8);
+
+    if (fmIdx == -1)
+    {
+        stfmSendMsg = *buf;
+    }
+    else
+    {
+        fmSendMsg[fmIdx] = *buf;
+    }
+
+    flushSendBuf();
+
+    return true;
+}
+
 bool FSC_MainWindow::sendMsg_writeSingle_byAddr(int fmIdx, uchar addr, uint16_t value)
 {
     if (fmIdx < -1 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
@@ -536,6 +589,11 @@ bool FSC_MainWindow::sendMsg_writeSingle_byAddr(int fmIdx, uchar addr, uint16_t 
     return true;
 }
 
+bool FSC_MainWindow::sendMsg_readSET_KF1(int fmIdx)
+{
+    return(sendMsg_read_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF1, 38));
+}
+
 bool FSC_MainWindow::sendMsg_readGAIN_CONTROL(int fmIdx)
 {
     return(sendMsg_read_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_GAIN_CONTROL, 1));
@@ -550,6 +608,26 @@ bool FSC_MainWindow::sendMsg_writeGAIN_CONTROL(int fmIdx)
 bool FSC_MainWindow::sendMsg_writeUPDATE_REQ(int fmIdx)
 {
     return(sendMsg_writeSingle_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_APP_UPDATE_REQ, 1));
+}
+
+bool FSC_MainWindow::sendMsg_writeSET_KF1(int fmIdx)
+{
+    QByteArray ba_kf1;
+
+    ba_fm_tmp.resize(XUNYIN_SET_KF_NUM * 2 * 2);
+    ba_kf1.resize(sizeof (float));
+
+    for (int i = 0; i < XUNYIN_SET_KF_NUM; i++)
+    {
+        memcpy(ba_kf1.data(), &fm_valueSET_KF1[fmIdx][i], sizeof (float));
+
+        ba_fm_tmp[i * 4 + 0] = ba_kf1[1];
+        ba_fm_tmp[i * 4 + 1] = ba_kf1[0];
+        ba_fm_tmp[i * 4 + 2] = ba_kf1[3];
+        ba_fm_tmp[i * 4 + 3] = ba_kf1[2];
+    }
+
+    return(sendMsg_writeMulti_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF1, XUNYIN_SET_KF_NUM * 2, &ba_fm_tmp));
 }
 
 bool FSC_MainWindow::sendMsg_writeStfmRESET(void)
@@ -625,42 +703,87 @@ bool FSC_MainWindow::parseFMMsg(int fmIdx)
 
     if (fmRevMsg[fmIdx].data()[1] == PROTOCOL_XUNYIN_MODBUS_READ_FUNCODE)
     {
-        parseMsg_readGAIN_CONTROL(fmIdx);
+        parseMsg_readFm(fmIdx);
     }
     else if(fmRevMsg[fmIdx].data()[1] == PROTOCOL_XUNYIN_MODBUS_WRITE_SINGLE_FUNCODE)
     {
         parseMsg_writeSINGLE(fmIdx);
     }
-
+    else if(fmRevMsg[fmIdx].data()[1] == PROTOCOL_XUNYIN_MODBUS_WRITE_MULTIPLE_FUNCODE)
+    {
+        parseMsg_writeMUTIL(fmIdx);
+    }
     return true;
 }
 
-bool FSC_MainWindow::parseMsg_readGAIN_CONTROL(int fmIdx)
+bool FSC_MainWindow::parseMsg_readFm(int fmIdx)
 {
     uint16_t    crc     = 0;
     uint16_t    crcRev  = 0;
     uint8_t     len     = 0;
+
+    QByteArray ba;
 
     if (fmRevMsg[fmIdx].size() < 7)
     {
         return false;
     }
 
-    if (static_cast<uchar>(fmSendMsg[fmIdx].data()[3]) == PROTOCOL_XUNYIN_MODBUS_ADDR_APP_REQ_DATA)
-    {
-        len = 7;
+    len = static_cast<uchar>(fmRevMsg[fmIdx].data()[2]) + 5;
 
-        crc = Checksum_computeChecksum( fmRevMsg[fmIdx].data(), len - 2);
-        memcpy(&crcRev, &(fmRevMsg[fmIdx].data()[len - 2]), 2);
-        if ( crcRev != crc    )
+    if (fmRevMsg[fmIdx].size() < len)
+    {
+        return false;
+    }
+
+    crc = Checksum_computeChecksum( fmRevMsg[fmIdx].data(), len - 2);
+    memcpy(&crcRev, &(fmRevMsg[fmIdx].data()[len - 2]), 2);
+    if ( crcRev != crc    )
+    {
+        fmRevMsg[fmIdx].clear();
+        FSCLOG << "crc error.";
+        return false;
+    }
+
+    switch (static_cast<uchar>(fmSendMsg[fmIdx].data()[3]))
+    {
+    case PROTOCOL_XUNYIN_MODBUS_ADDR_GAIN_CONTROL:
+
+        if (len != 5 + 2)
         {
             return false;
         }
 
         fm_valueGAIN_CONTROL[fmIdx] = fmRevMsg[fmIdx].data()[4];
-        fm_valu_read_valid[fmIdx] = 1;
+
+        break;
+
+    case PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF1:
+
+        if (len != 5 + XUNYIN_SET_KF_NUM * sizeof(float))
+        {
+            return false;
+        }
+
+        ba.resize(4);
+        for (int i = 0; i < XUNYIN_SET_KF_NUM; i++)
+        {
+            ba[0] = fmRevMsg[fmIdx].data()[3 + i * 4 + 1];
+            ba[1] = fmRevMsg[fmIdx].data()[3 + i * 4 + 0];
+            ba[2] = fmRevMsg[fmIdx].data()[3 + i * 4 + 3];
+            ba[3] = fmRevMsg[fmIdx].data()[3 + i * 4 + 2];
+
+            memcpy(&fm_valueSET_KF1[fmIdx][i], ba.data(), sizeof (float));
+        }
+
+        break;
+
+    default:
+        break;
+
     }
 
+    fm_valu_read_valid[fmIdx] = 1;
     return true;
 }
 
@@ -692,6 +815,57 @@ bool FSC_MainWindow::parseMsg_writeSINGLE(int fmIdx)
     }
 
     for (int i = 0; i < 8; i++)
+    {
+        if (fmSendMsg[fmIdx].data()[i] != fmRevMsg[fmIdx].data()[i])
+        {
+            return false;
+        }
+    }
+
+    fm_write_suced[fmIdx] = 1;
+
+    return true;
+}
+
+bool FSC_MainWindow::parseMsg_readGAIN_CONTROL(int fmIdx)
+{
+    uint16_t    crc     = 0;
+    uint16_t    crcRev  = 0;
+    uint8_t     len     = 0;
+
+    if (fmRevMsg[fmIdx].size() < 7)
+    {
+        return false;
+    }
+
+    len = static_cast<uchar>(fmSendMsg[fmIdx].data()[2]);
+
+    if (static_cast<uchar>(fmSendMsg[fmIdx].data()[3]) == PROTOCOL_XUNYIN_MODBUS_ADDR_APP_REQ_DATA)
+    {
+        len = 7;
+
+        crc = Checksum_computeChecksum( fmRevMsg[fmIdx].data(), len - 2);
+        memcpy(&crcRev, &(fmRevMsg[fmIdx].data()[len - 2]), 2);
+        if ( crcRev != crc    )
+        {
+            return false;
+        }
+
+        fm_valueGAIN_CONTROL[fmIdx] = fmRevMsg[fmIdx].data()[4];
+        fm_valu_read_valid[fmIdx] = 1;
+    }
+
+    return true;
+}
+
+bool FSC_MainWindow::parseMsg_writeMUTIL(int fmIdx)
+{
+    if (fmRevMsg[fmIdx].size() < 8)
+    {
+        return false;
+    }
+
+    for (int i = 0; i < 6; i++)
     {
         if (fmSendMsg[fmIdx].data()[i] != fmRevMsg[fmIdx].data()[i])
         {

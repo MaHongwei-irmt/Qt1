@@ -184,6 +184,7 @@ void FSC_MainWindow::uiReInit(void)
         sktBufRev[i].resize(0);
         sktBufSend[i].resize(0);
         sktRespondOk[i] = true;
+        sktPause[i] = false;
 
         sktDataState[i] = DATA_READ_OK;
 
@@ -442,6 +443,12 @@ void FSC_MainWindow::DataInit(void)
     plotSTDFMFlowValueY.clear();
     plotFMSumValueY.clear();
     plotFMFlowValueY.clear();
+
+    for(int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        plotFMSumValueY_bak[i].clear();
+        plotFMFlowValueY_bak[i].clear();
+    }
 
     allCalNeedToReport = false;
     for(int i = 0; i < CAL_MAX_STEP; i++)
@@ -1167,34 +1174,6 @@ int FSC_MainWindow::startCal_dir_type_span(int *dir, int *type, int *spanPercent
     return false;
 }
 
-void FSC_MainWindow::flushSendBuf(void)
-{
-    for (int i = 0; i < SOCKET_NUMBER; i++)
-    {
-
-        if (sktConed[i] && sktBufSend[i].size() > 0)
-        {
-
-
-            if (debugSkt[i])
-            {
-                FSCLOG << "Socket write hex: skt-" + QString::number(i) + " " + QString::number(sktBufSend[i].size()) + " " + ByteArrayToHexString(sktBufSend[i]);
-
-                ui->textBrow_calInfo->setText(ui->textBrow_calInfo->toPlainText() + "\r\n" +\
-                                              QDateTime::currentDateTime().toString("hh:mm:ss:zzz->")+ ByteArrayToHexString(sktBufSend[i]));
-                ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
-            }
-
-
-            fsc_global::sktTcp[i]->write(sktBufSend[i]);
-            fsc_global::sktTcp[i]->flush();
-            fsc_global::sktTcp[i]->waitForBytesWritten();
-
-            sktBufSend[i].resize(0);
-        }
-    }
-}
-
 void FSC_MainWindow::showFresh(void)
 {
     ui->lineEdit_scale_show->setEnabled(sktConed[SOCKET_SCALE_INDEX]);
@@ -1332,6 +1311,12 @@ void FSC_MainWindow::on_tbnCalStart_clicked()
     }
 
     calRunLink_StepInfoFresh();
+
+    for(int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        plotFMSumValueY_bak[i].clear();
+        plotFMFlowValueY_bak[i].clear();
+    }
 }
 
 void FSC_MainWindow::on_tbnCalTermination_clicked()
@@ -1364,6 +1349,12 @@ void FSC_MainWindow::on_tbnPoltClear_clicked()
         plotSTDFMFlowValueY.clear();
         plotFMSumValueY.clear();
         plotFMFlowValueY.clear();
+
+        for(int i = 0; i < FLOWMETER_NUMBER; i++)
+        {
+            plotFMSumValueY_bak[i].clear();
+            plotFMFlowValueY_bak[i].clear();
+        }
 
         plotFresh();
 
@@ -1754,4 +1745,66 @@ void FSC_MainWindow::on_pushButton_stepSave_clicked()
     calRunLink_StepInfoFresh();
 
     paraStepWrite();
+}
+
+void FSC_MainWindow::on_tbnCalManualWrite_clicked()
+{
+    static uint lastTime = 0;
+
+    if (lastTime + 6 > QDateTime::currentDateTime().toTime_t())
+    {
+        return;
+    }
+
+    lastTime = QDateTime::currentDateTime().toTime_t();
+
+    int     fmIdx = ui->comboBox_PlotSenSel->currentIndex();
+    double  data = ui->lineEdit_calParameter->text().toDouble();
+
+    if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
+    {
+        return;
+    }
+
+    sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = true;
+    delayMSec(FM_PROCESS_WAIT_DELAY * 20);
+
+    sendMsg_writeSingle_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_GAIN_CONTROL, static_cast<uint16_t>(data));
+    delayMSec(FM_PROCESS_WAIT_DELAY * 20);
+
+    fmSendMsg[fmIdx].clear();
+    fmRevMsg[fmIdx].clear();
+
+    sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = false;
+
+}
+
+void FSC_MainWindow::on_tbnCalManualCorrectWrite_clicked()
+{
+    static uint lastTime = 0;
+    if (lastTime + 6 > QDateTime::currentDateTime().toTime_t())
+    {
+        return;
+    }
+    lastTime = QDateTime::currentDateTime().toTime_t();
+
+
+    int     fmIdx = ui->comboBox_PlotSenSel->currentIndex();
+    //double  data = ui->lineEdit_calParameter->text().toDouble();
+
+    if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
+    {
+        return;
+    }
+
+    sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = true;
+    delayMSec(FM_PROCESS_WAIT_DELAY * 20);
+
+    sendMsg_writeSET_KF1(fmIdx);
+    delayMSec(FM_PROCESS_WAIT_DELAY * 20);
+
+    fmSendMsg[fmIdx].clear();
+    fmRevMsg[fmIdx].clear();
+
+    sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = false;
 }

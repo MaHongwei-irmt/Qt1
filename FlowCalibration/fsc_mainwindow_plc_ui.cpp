@@ -138,6 +138,12 @@ void FSC_MainWindow::showPlcFresh(void)
         plotSTDFMFlowValueY.clear();
         plotFMSumValueY.clear();
         plotFMFlowValueY.clear();
+
+        for(int i = 0; i < FLOWMETER_NUMBER; i++)
+        {
+            plotFMSumValueY_bak[i].clear();
+            plotFMFlowValueY_bak[i].clear();
+        }
     }
 
     ui->lineEdit_showPidPwm->setText(QString::number(plcPidPWM));

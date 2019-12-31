@@ -122,7 +122,7 @@ class FSC_MainWindow;
 #define PROTOCOL_XUNYIN_MODBUS_ADDR_APP_UPDATE_REQ      0x96
 #define PROTOCOL_XUNYIN_MODBUS_ADDR_RESET               0xEA
 #define PROTOCOL_XUNYIN_MODBUS_ADDR_ZERO_CAL            0xEB
-
+#define PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF1             0xE5
 
 #define CALIBRATION_FM_READ_WRITE       1
 #define TISH_STEP_SUCCEED               2
@@ -136,6 +136,9 @@ class FSC_MainWindow;
 #define XUNYIN_SINGLE_WRITE_GAIN_CONTROL    2
 #define XUNYIN_SINGLE_WRITE_UPDATE_REQ      3
 #define XUNYIN_READ_GAIN_CONTROL            4
+#define XUNYIN_READ_SET_KF1                 5
+
+#define XUNYIN_SET_KF_NUM                   19
 
 #define FM_PROCESS_WAIT_DELAY           (100)
 #define FM_PROCESS_RW_TIMEOUT           (20 * 10)
@@ -358,6 +361,10 @@ private slots:
 
     void on_pushButton_stepSave_clicked();
 
+    void on_tbnCalManualWrite_clicked();
+
+    void on_tbnCalManualCorrectWrite_clicked();
+
 private:
     Ui::FSC_MainWindow *ui;
     QDialog *showInfo;
@@ -389,16 +396,24 @@ private:
 
     void socketCommunication(void);
 
+    bool sendMsg_readSET_KF1(int fmIdx);
     bool sendMsg_readGAIN_CONTROL(int fmIdx);
     bool sendMsg_read_byAddr(int fmIdx, uchar addr, char num);
     bool sendMsg_writeSingle_byAddr(int fmIdx, uchar addr, uint16_t value);
+    bool sendMsg_writeMulti_byAddr(int fmIdx, uchar addr, uint16_t num, QByteArray *ba);
+
     bool sendMsg_writeGAIN_CONTROL(int fmIdx);
     bool sendMsg_writeUPDATE_REQ(int fmIdx);
+    bool sendMsg_writeSET_KF1(int fmIdx);
+
     bool sendMsg_writeRESET(int fmIdx);
     bool sendMsg_writeStfmRESET(void);
 
+    bool parseMsg_readFm(int fmIdx);
     bool parseMsg_readGAIN_CONTROL(int fmIdx);
     bool parseMsg_writeSINGLE(int fmIdx);
+    bool parseMsg_writeMUTIL(int fmIdx);
+
     bool parseMsg_writeStfmSINGLE(void);
 
     bool preParseFMMsg(int fmIdx);
@@ -442,6 +457,7 @@ private:
 
     void waitFmCommuication(oneCalTag *calTag, int idFmProcess);
     void waitStfmCommuication(oneCalTag *calTag, int idFmProcess);
+    void resetFmCommunicationWithStfm(void);
 
     void fmCalibration(oneCalTag *calTag);
     void fmCorrect(oneCalTag *calTag);
@@ -495,6 +511,7 @@ private:
     QByteArray  sktBufSend[SOCKET_NUMBER];
     QByteArray  sktBufRev[SOCKET_NUMBER];
     bool        sktRespondOk[SOCKET_NUMBER];
+    bool        sktPause[SOCKET_NUMBER];
     uint        sktReqTime[SOCKET_NUMBER];
     int         sktTimeoutNum[SOCKET_NUMBER];
     char        sktStationAddr[SOCKET_NUMBER];
@@ -532,10 +549,12 @@ private:
     int         fm_valu_read_valid[FLOWMETER_NUMBER];
     float       fm_valueSET_KF[FLOWMETER_NUMBER];
     int         fm_valueSET_KF_valid[FLOWMETER_NUMBER];
-    float       fm_valueSET_KF1[FLOWMETER_NUMBER];
+    float       fm_valueSET_KF1[FLOWMETER_NUMBER][XUNYIN_SET_KF_NUM];
     int         fm_valueSET_KF1_valid[FLOWMETER_NUMBER];
-    float       fm_valueSET_KF2[FLOWMETER_NUMBER];
+    float       fm_valueSET_KF2[FLOWMETER_NUMBER][XUNYIN_SET_KF_NUM];
     int         fm_valueSET_KF2_valid[FLOWMETER_NUMBER];
+
+    QByteArray  ba_fm_tmp;
 
     int         stfm_write_suced = 0;
     int         fm_write_suced[FLOWMETER_NUMBER];
@@ -573,9 +592,11 @@ private:
 
     QVector<double> plotFMSumTimeX;
     QVector<double> plotFMSumValueY;
+    QVector<double> plotFMSumValueY_bak[FLOWMETER_NUMBER];
 
     QVector<double> plotFMFlowTimeX;
     QVector<double> plotFMFlowValueY;
+    QVector<double> plotFMFlowValueY_bak[FLOWMETER_NUMBER];
 
     int     plotPosNumber = PLOT_VALUE_NUMBER;
     int     plotLoop;
