@@ -390,7 +390,6 @@ void FSC_MainWindow::DataInit(void)
         showFMSum[i] = static_cast<double>(nanf(""));
         showFMFlow[i] = static_cast<double>(nanf(""));
 
-        fm_valueGAIN_CONTROL[i] = 0;
         fm_valu_read_valid[i] = 0;
         fm_write_suced[i] = 0;
 
@@ -403,6 +402,17 @@ void FSC_MainWindow::DataInit(void)
 
         connect(fmRWTimer[i], SIGNAL(timeout()), fmRWMapper, SLOT(map()));
         fmRWMapper->setMapping(fmRWTimer[i], i);
+
+        fmData[i].fm_valueGAIN_CONTROL = 0;
+        fmData[i].fm_valu_read_valid = 0;
+        fmData[i].fm_valueSET_KF = 0;
+        fmData[i].fm_valueSET_KF_valid = 0;
+
+        for (int k = 0; k < XUNYIN_SET_KF_NUM; k++)
+        {
+            fmData[i].fm_valueSET_KF1[k] = 0;
+            fmData[i].fm_valueSET_KF2[k] = 0;
+        }
      }
     connect(fmRWMapper, SIGNAL(mapped(int)), this, SLOT(fmRWTimerOn(int)));
 
@@ -1317,6 +1327,9 @@ void FSC_MainWindow::on_tbnCalStart_clicked()
         plotFMSumValueY_bak[i].clear();
         plotFMFlowValueY_bak[i].clear();
     }
+
+    ui->groupBox_manual->setEnabled(true);
+    calManualDoing = false;
 }
 
 void FSC_MainWindow::on_tbnCalTermination_clicked()
@@ -1329,12 +1342,21 @@ void FSC_MainWindow::on_tbnCalTermination_clicked()
     calStop(&oneCal);
 
     allCalEnd = true;
-    makeCalRecordPrint(&oneCal);
+
+    if (ui->groupBox_manual->isEnabled())
+    {
+        makeCalRecordPrint(&oneCal);
+    }
+    else
+    {
+        ui->groupBox_manual->setEnabled(true);
+        calManualDoing = false;
+    }
 }
 
 void FSC_MainWindow::on_tbnPoltClear_clicked()
 {
-    if (calOn == CAL_STATE_STOP)
+    if (calOn == CAL_STATE_STOP && calOn != CAL_PLOT_START )
     {
         plotLoop = 0;
 

@@ -602,7 +602,7 @@ bool FSC_MainWindow::sendMsg_readGAIN_CONTROL(int fmIdx)
 bool FSC_MainWindow::sendMsg_writeGAIN_CONTROL(int fmIdx)
 {
     return(sendMsg_writeSingle_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_GAIN_CONTROL, \
-                                       static_cast<uint16_t>(fm_valueGAIN_CONTROL[fmIdx])));
+                                       static_cast<uint16_t>(fmData[fmIdx].fm_valueGAIN_CONTROL)));
 }
 
 bool FSC_MainWindow::sendMsg_writeUPDATE_REQ(int fmIdx)
@@ -619,7 +619,7 @@ bool FSC_MainWindow::sendMsg_writeSET_KF1(int fmIdx)
 
     for (int i = 0; i < XUNYIN_SET_KF_NUM; i++)
     {
-        memcpy(ba_kf1.data(), &fm_valueSET_KF1[fmIdx][i], sizeof (float));
+        memcpy(ba_kf1.data(), &fmData[fmIdx].fm_valueSET_KF1[i], sizeof (float));
 
         ba_fm_tmp[i * 4 + 0] = ba_kf1[1];
         ba_fm_tmp[i * 4 + 1] = ba_kf1[0];
@@ -754,7 +754,7 @@ bool FSC_MainWindow::parseMsg_readFm(int fmIdx)
             return false;
         }
 
-        fm_valueGAIN_CONTROL[fmIdx] = fmRevMsg[fmIdx].data()[4];
+        fmData[fmIdx].fm_valueGAIN_CONTROL = fmRevMsg[fmIdx].data()[4];
 
         break;
 
@@ -773,7 +773,7 @@ bool FSC_MainWindow::parseMsg_readFm(int fmIdx)
             ba[2] = fmRevMsg[fmIdx].data()[3 + i * 4 + 3];
             ba[3] = fmRevMsg[fmIdx].data()[3 + i * 4 + 2];
 
-            memcpy(&fm_valueSET_KF1[fmIdx][i], ba.data(), sizeof (float));
+            memcpy(&fmData[fmIdx].fm_valueSET_KF1[i], ba.data(), sizeof (float));
         }
 
         break;
@@ -851,7 +851,8 @@ bool FSC_MainWindow::parseMsg_readGAIN_CONTROL(int fmIdx)
             return false;
         }
 
-        fm_valueGAIN_CONTROL[fmIdx] = fmRevMsg[fmIdx].data()[4];
+        fmData[fmIdx].fm_valueGAIN_CONTROL = fmRevMsg[fmIdx].data()[4];
+
         fm_valu_read_valid[fmIdx] = 1;
     }
 

@@ -146,6 +146,18 @@ class FSC_MainWindow;
 #define FM_MSG_WAIT_DELAY               (100)
 #define FM_MSG_RW_TIMEOUT               (10)
 
+
+class cls_fmData
+{
+public:
+    char        fm_valueGAIN_CONTROL;
+    int         fm_valu_read_valid;
+    float       fm_valueSET_KF;
+    int         fm_valueSET_KF_valid;
+    float       fm_valueSET_KF1[XUNYIN_SET_KF_NUM];
+    float       fm_valueSET_KF2[XUNYIN_SET_KF_NUM];
+};
+
 class calLink
 {
 public:
@@ -545,19 +557,14 @@ private:
     double  showFMSum[FLOWMETER_NUMBER];
     double  showFMFlow[FLOWMETER_NUMBER];
 
-    char        fm_valueGAIN_CONTROL[FLOWMETER_NUMBER];
+    cls_fmData  stfmData;
+    cls_fmData  fmData[FLOWMETER_NUMBER];
+
     int         fm_valu_read_valid[FLOWMETER_NUMBER];
-    float       fm_valueSET_KF[FLOWMETER_NUMBER];
-    int         fm_valueSET_KF_valid[FLOWMETER_NUMBER];
-    float       fm_valueSET_KF1[FLOWMETER_NUMBER][XUNYIN_SET_KF_NUM];
-    int         fm_valueSET_KF1_valid[FLOWMETER_NUMBER];
-    float       fm_valueSET_KF2[FLOWMETER_NUMBER][XUNYIN_SET_KF_NUM];
-    int         fm_valueSET_KF2_valid[FLOWMETER_NUMBER];
-
-    QByteArray  ba_fm_tmp;
-
     int         stfm_write_suced = 0;
     int         fm_write_suced[FLOWMETER_NUMBER];
+
+    QByteArray  ba_fm_tmp;
 
     QByteArray  fmSendMsg[FLOWMETER_NUMBER];
     QByteArray  fmRevMsg[FLOWMETER_NUMBER];

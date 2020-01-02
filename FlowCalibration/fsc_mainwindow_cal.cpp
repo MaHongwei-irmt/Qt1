@@ -1115,6 +1115,8 @@ void FSC_MainWindow::on_tbnCalManual_clicked()
 {
     static uint lastTime = 0;
 
+    ui->groupBox_manual->setEnabled(false);
+
     calGoingInfoLabRemove();
 
     if (!calManualDoing)
@@ -1165,7 +1167,7 @@ void FSC_MainWindow::plotAddDataAndFresh(void)
 
         plotFresh();
 
-        if (plotLoop++ > plotPosNumber)
+        if (plotLoop++ > plotPosNumber || showScaleSum > SCALE_MAX_LIMITED)
         {
             calOn = CAL_STATE_STOP;
 
@@ -1174,6 +1176,8 @@ void FSC_MainWindow::plotAddDataAndFresh(void)
             writePLC();
             delayMSec(1000);
             printInfoWithTime("进水过程结束，请手动填入并写入参数值");
+
+            ui->groupBox_manual->setEnabled(true);
         }
     }
 }
