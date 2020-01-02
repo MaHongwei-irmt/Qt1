@@ -2,6 +2,8 @@
 #include <QApplication>
 #include "fsc_thread.h"
 
+#include <QMessageBox>
+
 void outputMessage(QtMsgType type, const QMessageLogContext &context, const QString &msg);
 
 int main(int argc, char *argv[])

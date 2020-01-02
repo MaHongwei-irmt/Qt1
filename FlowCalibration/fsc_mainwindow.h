@@ -1,6 +1,8 @@
 #ifndef FSC_MAINWINDOW_H
 #define FSC_MAINWINDOW_H
 
+#include "fsc_pub.h"
+
 #include <QMainWindow>
 #include "dialog_checkdev.h"
 #include <QtNetwork>
@@ -138,25 +140,12 @@ class FSC_MainWindow;
 #define XUNYIN_READ_GAIN_CONTROL            4
 #define XUNYIN_READ_SET_KF1                 5
 
-#define XUNYIN_SET_KF_NUM                   19
-
 #define FM_PROCESS_WAIT_DELAY           (100)
 #define FM_PROCESS_RW_TIMEOUT           (20 * 10)
 
 #define FM_MSG_WAIT_DELAY               (100)
 #define FM_MSG_RW_TIMEOUT               (10)
 
-
-class cls_fmData
-{
-public:
-    char        fm_valueGAIN_CONTROL;
-    int         fm_valu_read_valid;
-    float       fm_valueSET_KF;
-    int         fm_valueSET_KF_valid;
-    float       fm_valueSET_KF1[XUNYIN_SET_KF_NUM];
-    float       fm_valueSET_KF2[XUNYIN_SET_KF_NUM];
-};
 
 class calLink
 {
@@ -260,6 +249,9 @@ public:
     void delayMSec(int msec);
     void SocketConnectTry(void);
 
+    void dialog_readSET_KF1(int fmIdx);
+    void dialog_writeSET_KF1(int fmIdx);
+
     bool            showInfoUpdata = true;
     QTextBrowser    *txtBrow_showInfo = nullptr;
     bool            showCalTable = false;
@@ -267,6 +259,9 @@ public:
     Qt::CheckState  autoPrinter = Qt::Unchecked;
     bool            autoPrinterBool = false;
     QString         printerName = "";
+
+    cls_fmData      fmData[FLOWMETER_NUMBER];
+
 
 private slots:
     void skt_connect_suc(int i);
@@ -280,6 +275,7 @@ private slots:
     void startSocketConnect(int i);
     bool fmRWTimerOn(int fmIdx);
     bool stfmRWTimerOn(void);
+    void action_rightKeyCorrectMenu(int fmIdx);
 
     void on_tbnSysDevCheck_clicked();
 
@@ -380,6 +376,9 @@ private slots:
 private:
     Ui::FSC_MainWindow *ui;
     QDialog *showInfo;
+    QDialog *dialog_fmData;
+
+    bool checkMessageBoxIsOrNo(QString str);
 
     void uiReInit(void);
 
@@ -540,6 +539,9 @@ private:
     QSignalMapper * sktErrMapper;
     QSignalMapper * sktReadMapper;
 
+    QSignalMapper   *rightKeyCorrectMenuMapper;
+    QAction         *rightKeyCorrectMenu[FLOWMETER_NUMBER];
+
     QTimer  *mainLoopTimer = nullptr;
     QTimer  *startUpTimer = nullptr;
     QTimer  *calTimer = nullptr;
@@ -558,7 +560,6 @@ private:
     double  showFMFlow[FLOWMETER_NUMBER];
 
     cls_fmData  stfmData;
-    cls_fmData  fmData[FLOWMETER_NUMBER];
 
     int         fm_valu_read_valid[FLOWMETER_NUMBER];
     int         stfm_write_suced = 0;

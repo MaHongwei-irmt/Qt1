@@ -11,10 +11,13 @@ INPUT(
 ./debug\fsc_mainwindow_cal.o
 ./debug\dialog_showinfo.o
 ./debug\fsc_mainwindow_scale_fm.o
+./debug\dialog_fmdata.o
+./debug\fsc_mainwindow_cal_manual.o
 ./debug\moc_qcustomplot.o
 ./debug\moc_fsc_mainwindow.o
 ./debug\moc_dialog_checkdev.o
 ./debug\moc_dialog_sensoraddr.o
 ./debug\moc_fsc_thread.o
 ./debug\moc_dialog_showinfo.o
+./debug\moc_dialog_fmdata.o
 );

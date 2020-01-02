@@ -1,6 +1,7 @@
 #include "fsc_mainwindow.h"
 #include "ui_fsc_mainwindow.h"
 #include "dialog_showinfo.h"
+#include "dialog_fmdata.h"
 
 #include <QFile>
 #include <QtCore/QCoreApplication>
@@ -200,6 +201,25 @@ void FSC_MainWindow::uiReInit(void)
         buttonDebugMapper->setMapping(buttonDebug[i], i);
     }
     connect(buttonDebugMapper, SIGNAL(mapped(int)), this, SLOT(buttonDebug_clicked(int)));
+
+
+    rightKeyCorrectMenuMapper =  new QSignalMapper();
+    for (int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        rightKeyCorrectMenu[i] = new QAction(QString().sprintf("%d#传感器", i + 1), ui->tbnCalManualCorrectWrite);
+        ui->tbnCalManualCorrectWrite->addAction(rightKeyCorrectMenu[i]);
+        ui->tbnCalManualCorrectWrite->setContextMenuPolicy(Qt::ActionsContextMenu);
+
+        connect(rightKeyCorrectMenu[i], SIGNAL(triggered()), rightKeyCorrectMenuMapper, SLOT(map()));
+        rightKeyCorrectMenuMapper->setMapping(rightKeyCorrectMenu[i], i);
+
+    }
+    connect(rightKeyCorrectMenuMapper, SIGNAL(mapped(int)), this, SLOT(action_rightKeyCorrectMenu(int)));
+
+
+    showInfo = static_cast<QDialog*>(new Dialog_showinfo(this));
+    dialog_fmData = static_cast<QDialog*>(new Dialog_fmdata(this));
+
 
     ui->tbnSysDevCheck->setVisible(false);
     ui->tbnManualCheckDev->setVisible(false);
@@ -410,7 +430,7 @@ void FSC_MainWindow::DataInit(void)
 
         for (int k = 0; k < XUNYIN_SET_KF_NUM; k++)
         {
-            fmData[i].fm_valueSET_KF1[k] = 0;
+            fmData[i].fm_valueSET_KF1[k] = 111;
             fmData[i].fm_valueSET_KF2[k] = 0;
         }
      }
@@ -1690,7 +1710,7 @@ void FSC_MainWindow::on_tbnFMCalTable_clicked()
     }
 
     showCalTable = true;
-    showInfo = static_cast<QDialog*>(new Dialog_showinfo(this));
+
     showInfo->show();
 }
 
@@ -1767,66 +1787,4 @@ void FSC_MainWindow::on_pushButton_stepSave_clicked()
     calRunLink_StepInfoFresh();
 
     paraStepWrite();
-}
-
-void FSC_MainWindow::on_tbnCalManualWrite_clicked()
-{
-    static uint lastTime = 0;
-
-    if (lastTime + 6 > QDateTime::currentDateTime().toTime_t())
-    {
-        return;
-    }
-
-    lastTime = QDateTime::currentDateTime().toTime_t();
-
-    int     fmIdx = ui->comboBox_PlotSenSel->currentIndex();
-    double  data = ui->lineEdit_calParameter->text().toDouble();
-
-    if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
-    {
-        return;
-    }
-
-    sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = true;
-    delayMSec(FM_PROCESS_WAIT_DELAY * 20);
-
-    sendMsg_writeSingle_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_GAIN_CONTROL, static_cast<uint16_t>(data));
-    delayMSec(FM_PROCESS_WAIT_DELAY * 20);
-
-    fmSendMsg[fmIdx].clear();
-    fmRevMsg[fmIdx].clear();
-
-    sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = false;
-
-}
-
-void FSC_MainWindow::on_tbnCalManualCorrectWrite_clicked()
-{
-    static uint lastTime = 0;
-    if (lastTime + 6 > QDateTime::currentDateTime().toTime_t())
-    {
-        return;
-    }
-    lastTime = QDateTime::currentDateTime().toTime_t();
-
-
-    int     fmIdx = ui->comboBox_PlotSenSel->currentIndex();
-    //double  data = ui->lineEdit_calParameter->text().toDouble();
-
-    if (fmIdx < 0 || fmIdx > SOCKET_FLOWM12_INDEX - SOCKET_FLOWM1_INDEX)
-    {
-        return;
-    }
-
-    sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = true;
-    delayMSec(FM_PROCESS_WAIT_DELAY * 20);
-
-    sendMsg_writeSET_KF1(fmIdx);
-    delayMSec(FM_PROCESS_WAIT_DELAY * 20);
-
-    fmSendMsg[fmIdx].clear();
-    fmRevMsg[fmIdx].clear();
-
-    sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = false;
 }
