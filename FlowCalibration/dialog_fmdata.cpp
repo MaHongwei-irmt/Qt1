@@ -103,3 +103,15 @@ void Dialog_fmdata::on_tbnWrite_clicked()
 
     mainWin->dialog_writeSET_KF1(fmIdx);
 }
+
+void Dialog_fmdata::closeEvent(QCloseEvent *event)
+{
+    (void)(*event);
+
+    FSC_MainWindow *mainWin = static_cast<FSC_MainWindow*>(parentWidget());
+
+    for (int i = 0; i < FLOWMETER_NUMBER; i++)
+    {
+        mainWin->sktPause[i + SOCKET_FLOWM1_INDEX] = false;
+    }
+}

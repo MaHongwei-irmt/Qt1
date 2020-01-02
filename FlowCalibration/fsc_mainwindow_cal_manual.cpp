@@ -192,6 +192,8 @@ void FSC_MainWindow::action_rightKeyCorrectMenu(int fmIdx)
 
     dialog_fmData->show();
     pfmData->setFmName(fmIdx);
+
+    sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = true;
 }
 
 
@@ -215,7 +217,6 @@ void FSC_MainWindow::dialog_readSET_KF1(int fmIdx)
     }
 
     sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = true;
-    delayMSec(FM_PROCESS_WAIT_DELAY * 20);
 
     sendMsg_readSET_KF1(fmIdx);
     delayMSec(FM_PROCESS_WAIT_DELAY * 20);
@@ -223,7 +224,6 @@ void FSC_MainWindow::dialog_readSET_KF1(int fmIdx)
     fmSendMsg[fmIdx].clear();
     fmRevMsg[fmIdx].clear();
 
-    sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = false;
 }
 
 void FSC_MainWindow::dialog_writeSET_KF1(int fmIdx)
@@ -250,7 +250,6 @@ void FSC_MainWindow::dialog_writeSET_KF1(int fmIdx)
     }
 
     sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = true;
-    delayMSec(FM_PROCESS_WAIT_DELAY * 20);
 
     sendMsg_writeSET_KF1(fmIdx);
     delayMSec(FM_PROCESS_WAIT_DELAY * 20);
@@ -258,5 +257,4 @@ void FSC_MainWindow::dialog_writeSET_KF1(int fmIdx)
     fmSendMsg[fmIdx].clear();
     fmRevMsg[fmIdx].clear();
 
-    sktPause[fmIdx + SOCKET_FLOWM1_INDEX] = false;
 }

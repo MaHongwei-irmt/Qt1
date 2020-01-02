@@ -66,7 +66,7 @@ Dialog_showinfo::~Dialog_showinfo()
 void Dialog_showinfo::showInfo(void)
 {
     FSC_MainWindow *mainWin = static_cast<FSC_MainWindow*>(parentWidget());
-    if (mainWin->showInfoUpdata)
+    //if (mainWin->showInfoUpdata)
     {
         ui->textBrow_calInfo->setText(mainWin->txtBrow_showInfo->toPlainText());
         mainWin->showInfoUpdata = false;

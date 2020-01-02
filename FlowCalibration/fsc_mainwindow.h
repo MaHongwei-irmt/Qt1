@@ -261,7 +261,7 @@ public:
     QString         printerName = "";
 
     cls_fmData      fmData[FLOWMETER_NUMBER];
-
+    bool            sktPause[SOCKET_NUMBER];
 
 private slots:
     void skt_connect_suc(int i);
@@ -522,7 +522,7 @@ private:
     QByteArray  sktBufSend[SOCKET_NUMBER];
     QByteArray  sktBufRev[SOCKET_NUMBER];
     bool        sktRespondOk[SOCKET_NUMBER];
-    bool        sktPause[SOCKET_NUMBER];
+
     uint        sktReqTime[SOCKET_NUMBER];
     int         sktTimeoutNum[SOCKET_NUMBER];
     char        sktStationAddr[SOCKET_NUMBER];

@@ -30,8 +30,6 @@ private slots:
 
     void on_tbnWrite_clicked();
 
-    void on_tbnParaAdd_clicked();
-
 private:
     Ui::Dialog_fmdata *ui;
 
@@ -39,6 +37,9 @@ private:
     QLabel              *label_SET_KF1[XUNYIN_SET_KF_NUM];
 
     QDoubleValidator    *pDfValidator[XUNYIN_SET_KF_NUM];
+
+protected:
+     void closeEvent(QCloseEvent *event);
 };
 
 #endif // DIALOG_FMDATA_H
