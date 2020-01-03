@@ -18,6 +18,9 @@ public:
 
 private slots:
     void showInfo(void);
+    void action_rightKeyPauseMenu(void);
+    void action_rightKeyContinueMenu(void);
+
 
     void on_pushButton_showCalTable_clicked();
 
@@ -31,6 +34,8 @@ private:
     Ui::Dialog_showinfo *ui;
 
     QTimer          *freshTimer = nullptr;
+    bool            freshPause = false;
+
     Qt::CheckState  autoPrinter = Qt::Unchecked;
     bool            autoPrinterBool = false;
     QString         printerName = "";

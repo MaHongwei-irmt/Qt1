@@ -48,7 +48,21 @@ Dialog_showinfo::Dialog_showinfo(QWidget *parent) :
 
         freshTimer = new QTimer(this);
         connect(freshTimer, SIGNAL(timeout()), this, SLOT(showInfo()));
-        freshTimer->start(800);
+        freshTimer->start(300);
+
+
+
+        QAction *rightKeyPauseMenu = new QAction("暂停信息刷新", ui->textBrow_calInfo);
+        ui->textBrow_calInfo->addAction(rightKeyPauseMenu);
+        ui->textBrow_calInfo->setContextMenuPolicy(Qt::ActionsContextMenu);
+
+        QAction *rightKeyContinueMenu = new QAction("继续", ui->textBrow_calInfo);
+        ui->textBrow_calInfo->addAction(rightKeyContinueMenu);
+        ui->textBrow_calInfo->setContextMenuPolicy(Qt::ActionsContextMenu);
+
+        connect(rightKeyPauseMenu, SIGNAL(triggered()), this, SLOT(action_rightKeyPauseMenu()));
+        connect(rightKeyContinueMenu, SIGNAL(triggered()), this, SLOT(action_rightKeyContinueMenu()));
+
     }
 }
 
@@ -66,7 +80,8 @@ Dialog_showinfo::~Dialog_showinfo()
 void Dialog_showinfo::showInfo(void)
 {
     FSC_MainWindow *mainWin = static_cast<FSC_MainWindow*>(parentWidget());
-    //if (mainWin->showInfoUpdata)
+
+    if (!freshPause)
     {
         ui->textBrow_calInfo->setText(mainWin->txtBrow_showInfo->toPlainText());
         mainWin->showInfoUpdata = false;
@@ -74,6 +89,18 @@ void Dialog_showinfo::showInfo(void)
         ui->textBrow_calInfo->moveCursor(ui->textBrow_calInfo->textCursor().End);
     }
 }
+
+
+void Dialog_showinfo::action_rightKeyPauseMenu(void)
+{
+    freshPause = true;
+}
+
+void Dialog_showinfo::action_rightKeyContinueMenu(void)
+{
+    freshPause = false;
+}
+
 
 void Dialog_showinfo::showCalTable(void)
 {

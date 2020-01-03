@@ -261,14 +261,17 @@
    <widget class="QToolButton" name="tbnManualCheckDev">
     <property name="geometry">
      <rect>
-      <x>645</x>
-      <y>820</y>
-      <width>71</width>
+      <x>643</x>
+      <y>818</y>
+      <width>76</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
      <string>手动检查</string>
+    </property>
+    <property name="autoRepeat">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QToolButton" name="tbnCalStart">

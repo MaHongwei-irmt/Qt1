@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_Dialog_showinfo_t {
-    QByteArrayData data[8];
-    char stringdata0[163];
+    QByteArrayData data[10];
+    char stringdata0[216];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,14 +34,18 @@ static const qt_meta_stringdata_Dialog_showinfo_t qt_meta_stringdata_Dialog_show
 QT_MOC_LITERAL(0, 0, 15), // "Dialog_showinfo"
 QT_MOC_LITERAL(1, 16, 8), // "showInfo"
 QT_MOC_LITERAL(2, 25, 0), // ""
-QT_MOC_LITERAL(3, 26, 34), // "on_pushButton_showCalTable_cl..."
-QT_MOC_LITERAL(4, 61, 27), // "on_pushButton_print_clicked"
-QT_MOC_LITERAL(5, 89, 32), // "on_checkBox_printer_stateChanged"
-QT_MOC_LITERAL(6, 122, 4), // "arg1"
-QT_MOC_LITERAL(7, 127, 35) // "on_pushButton_printerSelect_c..."
+QT_MOC_LITERAL(3, 26, 24), // "action_rightKeyPauseMenu"
+QT_MOC_LITERAL(4, 51, 27), // "action_rightKeyContinueMenu"
+QT_MOC_LITERAL(5, 79, 34), // "on_pushButton_showCalTable_cl..."
+QT_MOC_LITERAL(6, 114, 27), // "on_pushButton_print_clicked"
+QT_MOC_LITERAL(7, 142, 32), // "on_checkBox_printer_stateChanged"
+QT_MOC_LITERAL(8, 175, 4), // "arg1"
+QT_MOC_LITERAL(9, 180, 35) // "on_pushButton_printerSelect_c..."
 
     },
     "Dialog_showinfo\0showInfo\0\0"
+    "action_rightKeyPauseMenu\0"
+    "action_rightKeyContinueMenu\0"
     "on_pushButton_showCalTable_clicked\0"
     "on_pushButton_print_clicked\0"
     "on_checkBox_printer_stateChanged\0arg1\0"
@@ -55,7 +59,7 @@ static const uint qt_meta_data_Dialog_showinfo[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -63,17 +67,21 @@ static const uint qt_meta_data_Dialog_showinfo[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   39,    2, 0x08 /* Private */,
-       3,    0,   40,    2, 0x08 /* Private */,
-       4,    0,   41,    2, 0x08 /* Private */,
-       5,    1,   42,    2, 0x08 /* Private */,
-       7,    0,   45,    2, 0x08 /* Private */,
+       1,    0,   49,    2, 0x08 /* Private */,
+       3,    0,   50,    2, 0x08 /* Private */,
+       4,    0,   51,    2, 0x08 /* Private */,
+       5,    0,   52,    2, 0x08 /* Private */,
+       6,    0,   53,    2, 0x08 /* Private */,
+       7,    1,   54,    2, 0x08 /* Private */,
+       9,    0,   57,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,    6,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,    8,
     QMetaType::Void,
 
        0        // eod
@@ -86,10 +94,12 @@ void Dialog_showinfo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->showInfo(); break;
-        case 1: _t->on_pushButton_showCalTable_clicked(); break;
-        case 2: _t->on_pushButton_print_clicked(); break;
-        case 3: _t->on_checkBox_printer_stateChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 4: _t->on_pushButton_printerSelect_clicked(); break;
+        case 1: _t->action_rightKeyPauseMenu(); break;
+        case 2: _t->action_rightKeyContinueMenu(); break;
+        case 3: _t->on_pushButton_showCalTable_clicked(); break;
+        case 4: _t->on_pushButton_print_clicked(); break;
+        case 5: _t->on_checkBox_printer_stateChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 6: _t->on_pushButton_printerSelect_clicked(); break;
         default: ;
         }
     }
@@ -120,13 +130,13 @@ int Dialog_showinfo::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 7)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 5;
+        _id -= 7;
     }
     return _id;
 }

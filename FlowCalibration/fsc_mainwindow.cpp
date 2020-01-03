@@ -2,6 +2,7 @@
 #include "ui_fsc_mainwindow.h"
 #include "dialog_showinfo.h"
 #include "dialog_fmdata.h"
+#include "dialog_sensoraddr.h"
 
 #include <QFile>
 #include <QtCore/QCoreApplication>
@@ -221,7 +222,7 @@ void FSC_MainWindow::uiReInit(void)
     dialog_fmData = static_cast<QDialog*>(new Dialog_fmdata(this));
 
 
-    ui->tbnSysDevCheck->setVisible(false);
+    //ui->tbnSysDevCheck->setVisible(false);
     ui->tbnManualCheckDev->setVisible(false);
 
     ui->tbnPump1ReverseOff->setVisible(false);
@@ -1278,7 +1279,8 @@ void FSC_MainWindow::showFresh(void)
 
 void FSC_MainWindow::on_tbnSysDevCheck_clicked()
 {
-
+    Dialog_SensorAddr *ChkDev = new Dialog_SensorAddr();
+    ChkDev->exec();
 }
 
 void FSC_MainWindow::on_tbnManualCheckDev_clicked()

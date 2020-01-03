@@ -301,7 +301,8 @@ public:
         label_11->setGeometry(QRect(39, 282, 41, 16));
         tbnManualCheckDev = new QToolButton(centralwidget);
         tbnManualCheckDev->setObjectName(QStringLiteral("tbnManualCheckDev"));
-        tbnManualCheckDev->setGeometry(QRect(645, 820, 71, 21));
+        tbnManualCheckDev->setGeometry(QRect(643, 818, 76, 21));
+        tbnManualCheckDev->setAutoRepeat(false);
         tbnCalStart = new QToolButton(centralwidget);
         tbnCalStart->setObjectName(QStringLiteral("tbnCalStart"));
         tbnCalStart->setGeometry(QRect(297, 43, 51, 81));
