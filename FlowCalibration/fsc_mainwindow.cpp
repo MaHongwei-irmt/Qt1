@@ -220,9 +220,10 @@ void FSC_MainWindow::uiReInit(void)
 
     showInfo = static_cast<QDialog*>(new Dialog_showinfo(this));
     dialog_fmData = static_cast<QDialog*>(new Dialog_fmdata(this));
+    dialog_fmRegister = static_cast<QDialog*>(new Dialog_SensorAddr(this));
 
 
-    //ui->tbnSysDevCheck->setVisible(false);
+    ui->tbnSysDevCheck->setVisible(false);
     ui->tbnManualCheckDev->setVisible(false);
 
     ui->tbnPump1ReverseOff->setVisible(false);
@@ -427,13 +428,21 @@ void FSC_MainWindow::DataInit(void)
         fmData[i].fm_valueGAIN_CONTROL = 0;
         fmData[i].fm_valu_read_valid = 0;
         fmData[i].fm_valueSET_KF = 0;
-        fmData[i].fm_valueSET_KF_valid = 0;
 
         for (int k = 0; k < XUNYIN_SET_KF_NUM; k++)
         {
-            fmData[i].fm_valueSET_KF1[k] = 111;
+            fmData[i].fm_valueSET_KF1[k] = 0;
             fmData[i].fm_valueSET_KF2[k] = 0;
         }
+        for (int k = 0; k < XUNYIN_SET_FLOW_RANGE_NUM; k++)
+        {
+            fmData[i].fm_valueFLOW_RANGE[k] = 0;
+        }
+        for (int k = 0; k < XUNYIN_SET_ZERO_CAL_NUM; k++)
+        {
+            fmData[i].fm_valueZERO_CAL[k] = 0;
+        }
+
      }
     connect(fmRWMapper, SIGNAL(mapped(int)), this, SLOT(fmRWTimerOn(int)));
 

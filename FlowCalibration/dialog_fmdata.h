@@ -30,6 +30,20 @@ private slots:
 
     void on_tbnWrite_clicked();
 
+    void on_tbnRead_SET_KF2_clicked();
+
+    void on_tbnWrite_SET_KF2_clicked();
+
+    void on_tbnRead_FLOW_RANHE_clicked();
+
+    void on_tbnWrite_FLOW_RANHE_clicked();
+
+    void on_tbnRead_ZERO_CAL_clicked();
+
+    void on_tbnWrite_ZERO_CAL_clicked();
+
+    void on_tbnFMRegister_clicked();
+
 private:
     Ui::Dialog_fmdata *ui;
 
@@ -37,6 +51,17 @@ private:
     QLabel              *label_SET_KF1[XUNYIN_SET_KF_NUM];
 
     QDoubleValidator    *pDfValidator[XUNYIN_SET_KF_NUM];
+
+
+    QLineEdit           *lineEdit_SET_KF2[XUNYIN_SET_KF_NUM];
+    QLabel              *label_SET_KF2[XUNYIN_SET_KF_NUM];
+
+    QLineEdit           *lineEdit_FLOW_RANGE[XUNYIN_SET_FLOW_RANGE_NUM];
+    QLabel              *label_FLOW_RANGE[XUNYIN_SET_FLOW_RANGE_NUM];
+
+    QLineEdit           *lineEdit_ZERO_CAL[XUNYIN_SET_ZERO_CAL_NUM];
+    QLabel              *label_ZERO_CAL[XUNYIN_SET_ZERO_CAL_NUM];
+
 
 protected:
      void closeEvent(QCloseEvent *event);

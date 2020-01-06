@@ -1,0 +1,31 @@
+address_27 = 0x9B
+name_27 = F1_F2
+type_27 = uint16[2]_rw
+description_27 = 
+
+
+address_29 = 0xE1
+name_29 = FLOW_RANGE
+type_29 = float[10]_rw
+description_29 = 
+
+
+address_31 = 0xE3
+name_31 = SET_DAC
+type_31 = uint16[2]_rw
+description_31 = Dac_force+dac_data
+
+
+address_34 = 0xE6
+name_34 = SET_KF2
+type_34 = float[19]_rw
+description_34 = Calibrate point
+
+
+
+
+address_39 = 0xEB
+name_39 = ZERO_CAL
+type_39 = float[2]_rw
+description_39 = Zero_cal+Zero_cal_value
+

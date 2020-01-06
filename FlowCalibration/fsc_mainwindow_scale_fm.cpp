@@ -30,6 +30,8 @@ void FSC_MainWindow::reqFMData(int indexFM)
     if (sktRespondOk[indexFM])
     {
         needToSend = true;
+        sktTimeoutNum[indexFM] = 0;
+
     }
 
     if(stfmRWflag || (fmIdx >= 0 && fmRWflag[fmIdx]))
@@ -58,6 +60,9 @@ void FSC_MainWindow::reqFMData(int indexFM)
                     sktStationAddr[indexFM] = 0;
                 }
             }
+
+            sktRespondOk[indexFM] = true;
+            sktReqTime[indexFM] = QDateTime::currentDateTime().toTime_t();
         }
     }
 
@@ -589,9 +594,62 @@ bool FSC_MainWindow::sendMsg_writeSingle_byAddr(int fmIdx, uchar addr, uint16_t 
     return true;
 }
 
+bool FSC_MainWindow::sendMsg_readZERO_CAL(int fmIdx)
+{
+    return(sendMsg_read_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_ZERO_CAL, XUNYIN_SET_ZERO_CAL_NUM * 2));
+}
+bool FSC_MainWindow::sendMsg_writeZERO_CAL(int fmIdx)
+{
+    QByteArray ba;
+
+    ba_fm_tmp.resize(XUNYIN_SET_FLOW_RANGE_NUM * 2 * 2);
+    ba.resize(sizeof (float));
+
+    for (int i = 0; i < XUNYIN_SET_ZERO_CAL_NUM; i++)
+    {
+        memcpy(ba.data(), &fmData[fmIdx].fm_valueZERO_CAL[i], sizeof (float));
+
+        ba_fm_tmp[i * 4 + 0] = ba[1];
+        ba_fm_tmp[i * 4 + 1] = ba[0];
+        ba_fm_tmp[i * 4 + 2] = ba[3];
+        ba_fm_tmp[i * 4 + 3] = ba[2];
+    }
+
+    return(sendMsg_writeMulti_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_ZERO_CAL, XUNYIN_SET_ZERO_CAL_NUM * 2, &ba_fm_tmp));
+}
+
+bool FSC_MainWindow::sendMsg_readFLOW_RANGE(int fmIdx)
+{
+    return(sendMsg_read_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_FLOW_RANGE, XUNYIN_SET_FLOW_RANGE_NUM * 2));
+}
+bool FSC_MainWindow::sendMsg_writeFLOW_RANGE(int fmIdx)
+{
+    QByteArray ba;
+
+    ba_fm_tmp.resize(XUNYIN_SET_FLOW_RANGE_NUM * 2 * 2);
+    ba.resize(sizeof (float));
+
+    for (int i = 0; i < XUNYIN_SET_FLOW_RANGE_NUM; i++)
+    {
+        memcpy(ba.data(), &fmData[fmIdx].fm_valueFLOW_RANGE[i], sizeof (float));
+
+        ba_fm_tmp[i * 4 + 0] = ba[1];
+        ba_fm_tmp[i * 4 + 1] = ba[0];
+        ba_fm_tmp[i * 4 + 2] = ba[3];
+        ba_fm_tmp[i * 4 + 3] = ba[2];
+    }
+
+    return(sendMsg_writeMulti_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_FLOW_RANGE, XUNYIN_SET_FLOW_RANGE_NUM * 2, &ba_fm_tmp));
+}
+
 bool FSC_MainWindow::sendMsg_readSET_KF1(int fmIdx)
 {
     return(sendMsg_read_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF1, 38));
+}
+
+bool FSC_MainWindow::sendMsg_readSET_KF2(int fmIdx)
+{
+    return(sendMsg_read_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF2, 38));
 }
 
 bool FSC_MainWindow::sendMsg_readGAIN_CONTROL(int fmIdx)
@@ -628,6 +686,26 @@ bool FSC_MainWindow::sendMsg_writeSET_KF1(int fmIdx)
     }
 
     return(sendMsg_writeMulti_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF1, XUNYIN_SET_KF_NUM * 2, &ba_fm_tmp));
+}
+
+bool FSC_MainWindow::sendMsg_writeSET_KF2(int fmIdx)
+{
+    QByteArray ba_kf2;
+
+    ba_fm_tmp.resize(XUNYIN_SET_KF_NUM * 2 * 2);
+    ba_kf2.resize(sizeof (float));
+
+    for (int i = 0; i < XUNYIN_SET_KF_NUM; i++)
+    {
+        memcpy(ba_kf2.data(), &fmData[fmIdx].fm_valueSET_KF2[i], sizeof (float));
+
+        ba_fm_tmp[i * 4 + 0] = ba_kf2[1];
+        ba_fm_tmp[i * 4 + 1] = ba_kf2[0];
+        ba_fm_tmp[i * 4 + 2] = ba_kf2[3];
+        ba_fm_tmp[i * 4 + 3] = ba_kf2[2];
+    }
+
+    return(sendMsg_writeMulti_byAddr(fmIdx, PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF2, XUNYIN_SET_KF_NUM * 2, &ba_fm_tmp));
 }
 
 bool FSC_MainWindow::sendMsg_writeStfmRESET(void)
@@ -756,6 +834,14 @@ bool FSC_MainWindow::parseMsg_readFm(int fmIdx)
 
         fmData[fmIdx].fm_valueGAIN_CONTROL = fmRevMsg[fmIdx].data()[4];
 
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x84_GAIN_CONTROL, ba.data(), sizeof (uint16_t));
+
         break;
 
     case PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF1:
@@ -774,9 +860,642 @@ bool FSC_MainWindow::parseMsg_readFm(int fmIdx)
             ba[3] = fmRevMsg[fmIdx].data()[3 + i * 4 + 2];
 
             memcpy(&fmData[fmIdx].fm_valueSET_KF1[i], ba.data(), sizeof (float));
+
+            fmData[fmIdx].fm_0xe5_SET_KF1[i] = fmData[fmIdx].fm_valueSET_KF1[i];
         }
 
         break;
+
+    case PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF2:
+
+        if (len != 5 + XUNYIN_SET_KF_NUM * sizeof(float))
+        {
+            return false;
+        }
+
+        ba.resize(4);
+        for (int i = 0; i < XUNYIN_SET_KF_NUM; i++)
+        {
+            ba[0] = fmRevMsg[fmIdx].data()[3 + i * 4 + 1];
+            ba[1] = fmRevMsg[fmIdx].data()[3 + i * 4 + 0];
+            ba[2] = fmRevMsg[fmIdx].data()[3 + i * 4 + 3];
+            ba[3] = fmRevMsg[fmIdx].data()[3 + i * 4 + 2];
+
+            memcpy(&fmData[fmIdx].fm_valueSET_KF2[i], ba.data(), sizeof (float));
+
+            fmData[fmIdx].fm_0xe6_SET_KF2[i] = fmData[fmIdx].fm_valueSET_KF2[i];
+        }
+
+        break;
+
+    case PROTOCOL_XUNYIN_MODBUS_ADDR_FLOW_RANGE:
+
+        if (len != 5 + XUNYIN_SET_FLOW_RANGE_NUM * sizeof(float))
+        {
+            return false;
+        }
+
+        ba.resize(4);
+        for (int i = 0; i < XUNYIN_SET_FLOW_RANGE_NUM; i++)
+        {
+            ba[0] = fmRevMsg[fmIdx].data()[3 + i * 4 + 1];
+            ba[1] = fmRevMsg[fmIdx].data()[3 + i * 4 + 0];
+            ba[2] = fmRevMsg[fmIdx].data()[3 + i * 4 + 3];
+            ba[3] = fmRevMsg[fmIdx].data()[3 + i * 4 + 2];
+
+            memcpy(&fmData[fmIdx].fm_valueFLOW_RANGE[i], ba.data(), sizeof (float));
+
+            fmData[fmIdx].fm_0xe1_FLOW_RANGE[i] =  fmData[fmIdx].fm_valueFLOW_RANGE[i];
+        }
+
+
+        break;
+
+    case PROTOCOL_XUNYIN_MODBUS_ADDR_ZERO_CAL:
+
+        if (len != 5 + XUNYIN_SET_ZERO_CAL_NUM * sizeof(float))
+        {
+            return false;
+        }
+
+        ba.resize(4);
+        for (int i = 0; i < XUNYIN_SET_ZERO_CAL_NUM; i++)
+        {
+            ba[0] = fmRevMsg[fmIdx].data()[3 + i * 4 + 1];
+            ba[1] = fmRevMsg[fmIdx].data()[3 + i * 4 + 0];
+            ba[2] = fmRevMsg[fmIdx].data()[3 + i * 4 + 3];
+            ba[3] = fmRevMsg[fmIdx].data()[3 + i * 4 + 2];
+
+            memcpy(&fmData[fmIdx].fm_valueZERO_CAL[i], ba.data(), sizeof (float));
+
+            fmData[fmIdx].fm_0xeB_ZERO_CAL[i] = fmData[fmIdx].fm_valueZERO_CAL[i];
+        }
+
+        break;
+
+    case 0x80:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x80_GAP_PLS_ADC_START, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0x81:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x81_NUM_PLS, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0x82:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x82_GAP_UPS_DNS, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0x83:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x83_GAP_UPS_UPS, ba.data(), sizeof (uint16_t));
+
+        break;
+
+
+    case 0x85:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x85_METER_CONSTANT, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0x86:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x86_XT2_FREQ, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0x87:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x87_ADC_SAMP_FREQ, ba.data(), sizeof (uint16_t));
+
+        break;
+
+
+    case 0x88:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x88_SIG_SAMP_FREQ, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0x89:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x89_ADC_OVERSAMPLING, ba.data(), sizeof (uint16_t));
+
+        break;
+
+
+    case 0x8a:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x88_SIG_SAMP_FREQ, ba.data(), sizeof (uint32_t));
+
+        break;
+
+    case 0x8b:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x89_ADC_OVERSAMPLING, ba.data(), sizeof (float));
+
+        break;
+
+
+    case 0x8c:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x8C_CAPTURE_DURATION, ba.data(), sizeof (uint16_t));
+
+        break;
+
+
+    case 0x8d:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x8D_PARAM1, ba.data(), sizeof (uint32_t));
+
+        break;
+
+    case 0x8e:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x8E_PARAM2, ba.data(), sizeof (uint32_t));
+
+        break;
+
+
+    case 0x8f:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x8F_PARAM3, ba.data(), sizeof (uint32_t));
+
+        break;
+
+    case 0x90:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x90_PARAM4, ba.data(), sizeof (uint32_t));
+
+        break;
+
+
+    case 0x9e:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x9E_PARAM5, ba.data(), sizeof (uint32_t));
+
+        break;
+
+
+    case 0x9f:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x9F_PARAM6, ba.data(), sizeof (uint32_t));
+
+        break;
+
+
+    case 0x91:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x91_PARAM7, ba.data(), sizeof (uint32_t));
+
+        break;
+
+
+    case 0x92:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x92_PARAM8, ba.data(), sizeof (uint32_t));
+
+        break;
+
+
+    case 0x93:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x93_PARAM9, ba.data(), sizeof (uint32_t));
+
+        break;
+
+
+    case 0x94:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[2] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[3] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x94_PARAM10, ba.data(), sizeof (uint32_t));
+
+        break;
+
+
+    case 0x96:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x96_APP_UPDATE_REQ, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0x98:
+
+    {
+        int num = fmRevMsg[fmIdx].data()[2];
+
+        if (num > static_cast<int>(sizeof (fmData[fmIdx].fm_0x98_APP_REQ_CAPTURES1) / sizeof (uint16_t)) )
+        {
+            num =  sizeof (fmData[fmIdx].fm_0x98_APP_REQ_CAPTURES1) / sizeof (uint16_t);
+        }
+
+        ba.resize(2);
+
+        for (int i = 0; i < num; i++)
+        {
+            ba[0] = fmRevMsg[fmIdx].data()[3 + i * 4 + 1];
+            ba[1] = fmRevMsg[fmIdx].data()[3 + i * 4 + 0];
+
+            memcpy(&fmData[fmIdx].fm_0x98_APP_REQ_CAPTURES1[i], ba.data(), static_cast<uint>(num) );
+        }
+    }
+
+        break;
+
+
+    case 0x99:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0x99_APP_VERSION, ba.data(), sizeof (uint16_t));
+
+        break;
+
+
+    case 0x9b:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0x9B_F1_F2, ba.data(), sizeof (uint16_t));
+
+        break;
+
+
+    case 0xe0:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0xe0_AUTO_GAIN_ENABLE, ba.data(), sizeof (uint16_t));
+
+        break;
+
+
+    case 0xe2:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0xe2_RUNNING_AVG, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0xe3:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0xe3_SET_DAC, ba.data(), sizeof (uint32_t));
+
+        break;
+
+    case 0xe4:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0xe4_SET_KF, ba.data(), sizeof (uint32_t));
+
+        break;
+
+    case 0xe7:
+
+        ba.resize(4);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 3];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 2];
+
+        memcpy(&fmData[fmIdx].fm_0xe7_SET_SNSR_TYP, ba.data(), sizeof (uint32_t));
+
+        break;
+
+    case 0xe8:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0xe8_LNCAL_EN, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0xe9:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0xe9_STA_UP, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0xea:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0xeA_RESET, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0xec:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0xeC_AUTO_GAIN_UP, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0xed:
+
+        ba.resize(2);
+
+        ba[0] = fmRevMsg[fmIdx].data()[3 + 1];
+        ba[1] = fmRevMsg[fmIdx].data()[3 + 0];
+
+        memcpy(&fmData[fmIdx].fm_0xeD_ADDR, ba.data(), sizeof (uint16_t));
+
+        break;
+
+    case 0xef:
+
+    {
+        int num = fmRevMsg[fmIdx].data()[2];
+
+        if (num > static_cast<int>(sizeof (fmData[fmIdx].fm_0x98_APP_REQ_CAPTURES1) / sizeof (uint16_t)) )
+        {
+            num =  sizeof (fmData[fmIdx].fm_0x98_APP_REQ_CAPTURES1) / sizeof (uint16_t);
+        }
+
+        ba.resize(4);
+
+        for (int i = 0; i < num; i++)
+        {
+            ba[0] = fmRevMsg[fmIdx].data()[3 + i * 4 + 1];
+            ba[1] = fmRevMsg[fmIdx].data()[3 + i * 4 + 0];
+            ba[2] = fmRevMsg[fmIdx].data()[3 + i * 4 + 3];
+            ba[3] = fmRevMsg[fmIdx].data()[3 + i * 4 + 2];
+
+            memcpy(&fmData[fmIdx].fm_0xef_APP_REQ_CAPTURES2[i], ba.data(), static_cast<uint>(num) );
+        }
+    }
+
+
+        break;
+
+    case 0xf0:
+
+    {
+        int num = fmRevMsg[fmIdx].data()[2];
+
+        if (num > static_cast<int>(sizeof (fmData[fmIdx].fm_0x98_APP_REQ_CAPTURES1) / sizeof (uint16_t)) )
+        {
+            num =  sizeof (fmData[fmIdx].fm_0x98_APP_REQ_CAPTURES1) / sizeof (uint16_t);
+        }
+
+        ba.resize(4);
+
+        for (int i = 0; i < num; i++)
+        {
+            ba[0] = fmRevMsg[fmIdx].data()[3 + i * 4 + 1];
+            ba[1] = fmRevMsg[fmIdx].data()[3 + i * 4 + 0];
+            ba[2] = fmRevMsg[fmIdx].data()[3 + i * 4 + 3];
+            ba[3] = fmRevMsg[fmIdx].data()[3 + i * 4 + 2];
+
+            memcpy(&fmData[fmIdx].fm_0xf0_APP_REQ_CAPTURES3[i], ba.data(), static_cast<uint>(num) );
+        }
+    }
+
+
+    break;
+
+    case 0xf1:
+
+    {
+        int num = fmRevMsg[fmIdx].data()[2];
+
+        if (num > static_cast<int>(sizeof (fmData[fmIdx].fm_0x98_APP_REQ_CAPTURES1) / sizeof (uint16_t)) )
+        {
+            num =  sizeof (fmData[fmIdx].fm_0x98_APP_REQ_CAPTURES1) / sizeof (uint16_t);
+        }
+
+        ba.resize(4);
+
+        for (int i = 0; i < num; i++)
+        {
+            ba[0] = fmRevMsg[fmIdx].data()[3 + i * 4 + 1];
+            ba[1] = fmRevMsg[fmIdx].data()[3 + i * 4 + 0];
+            ba[2] = fmRevMsg[fmIdx].data()[3 + i * 4 + 3];
+            ba[3] = fmRevMsg[fmIdx].data()[3 + i * 4 + 2];
+
+            memcpy(&fmData[fmIdx].fm_0xf1_APP_REQ_CAPTURES4[i], ba.data(), static_cast<uint>(num) );
+        }
+    }
+
+
+        break;
+
+
+    case 0x97:
+
+    {
+        int num = fmRevMsg[fmIdx].data()[2];
+
+        if (num > static_cast<int>(sizeof (fmData[fmIdx].fm_0x98_APP_REQ_CAPTURES1) / sizeof (uint16_t)) )
+        {
+            num =  sizeof (fmData[fmIdx].fm_0x98_APP_REQ_CAPTURES1) / sizeof (uint16_t);
+        }
+
+        ba.resize(4);
+
+        for (int i = 0; i < num; i++)
+        {
+            ba[0] = fmRevMsg[fmIdx].data()[3 + i * 4 + 1];
+            ba[1] = fmRevMsg[fmIdx].data()[3 + i * 4 + 0];
+            ba[2] = fmRevMsg[fmIdx].data()[3 + i * 4 + 3];
+            ba[3] = fmRevMsg[fmIdx].data()[3 + i * 4 + 2];
+
+            memcpy(&fmData[fmIdx].fm_0x97_APP_REQ_DATA[i], ba.data(), static_cast<uint>(num) );
+        }
+    }
+
+
+        break;
+
+
 
     default:
         break;

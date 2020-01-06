@@ -14,40 +14,101 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
-#include <QtWidgets/QDialogButtonBox>
+#include <QtWidgets/QGridLayout>
+#include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QTableView>
+#include <QtWidgets/QVBoxLayout>
+#include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_Dialog_SensorAddr
 {
 public:
-    QDialogButtonBox *buttonBox;
+    QGridLayout *gridLayout_2;
+    QHBoxLayout *horizontalLayout;
+    QWidget *widget;
+    QGridLayout *gridLayout;
+    QLabel *label_fmName;
     QTableView *tableView;
-    QPushButton *pushButton;
+    QWidget *widget_2;
+    QVBoxLayout *verticalLayout;
+    QSpacerItem *verticalSpacer_2;
+    QPushButton *pushButton_readRegister;
+    QPushButton *pushButton_writeRegister;
+    QPushButton *pushButton_freshTable;
+    QSpacerItem *verticalSpacer_3;
+    QSpacerItem *verticalSpacer;
 
     void setupUi(QDialog *Dialog_SensorAddr)
     {
         if (Dialog_SensorAddr->objectName().isEmpty())
             Dialog_SensorAddr->setObjectName(QStringLiteral("Dialog_SensorAddr"));
-        Dialog_SensorAddr->resize(756, 668);
-        buttonBox = new QDialogButtonBox(Dialog_SensorAddr);
-        buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setGeometry(QRect(390, 620, 341, 32));
-        buttonBox->setOrientation(Qt::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
-        tableView = new QTableView(Dialog_SensorAddr);
+        Dialog_SensorAddr->resize(830, 747);
+        gridLayout_2 = new QGridLayout(Dialog_SensorAddr);
+        gridLayout_2->setObjectName(QStringLiteral("gridLayout_2"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        widget = new QWidget(Dialog_SensorAddr);
+        widget->setObjectName(QStringLiteral("widget"));
+        gridLayout = new QGridLayout(widget);
+        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        label_fmName = new QLabel(widget);
+        label_fmName->setObjectName(QStringLiteral("label_fmName"));
+
+        gridLayout->addWidget(label_fmName, 0, 0, 1, 1);
+
+        tableView = new QTableView(widget);
         tableView->setObjectName(QStringLiteral("tableView"));
-        tableView->setGeometry(QRect(60, 41, 561, 551));
-        pushButton = new QPushButton(Dialog_SensorAddr);
-        pushButton->setObjectName(QStringLiteral("pushButton"));
-        pushButton->setGeometry(QRect(650, 120, 75, 23));
+
+        gridLayout->addWidget(tableView, 1, 0, 1, 1);
+
+
+        horizontalLayout->addWidget(widget);
+
+        widget_2 = new QWidget(Dialog_SensorAddr);
+        widget_2->setObjectName(QStringLiteral("widget_2"));
+        verticalLayout = new QVBoxLayout(widget_2);
+        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalSpacer_2 = new QSpacerItem(20, 157, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_2);
+
+        pushButton_readRegister = new QPushButton(widget_2);
+        pushButton_readRegister->setObjectName(QStringLiteral("pushButton_readRegister"));
+
+        verticalLayout->addWidget(pushButton_readRegister);
+
+        pushButton_writeRegister = new QPushButton(widget_2);
+        pushButton_writeRegister->setObjectName(QStringLiteral("pushButton_writeRegister"));
+
+        verticalLayout->addWidget(pushButton_writeRegister);
+
+        pushButton_freshTable = new QPushButton(widget_2);
+        pushButton_freshTable->setObjectName(QStringLiteral("pushButton_freshTable"));
+
+        verticalLayout->addWidget(pushButton_freshTable);
+
+        verticalSpacer_3 = new QSpacerItem(20, 156, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer_3);
+
+        verticalSpacer = new QSpacerItem(20, 288, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
+
+
+        horizontalLayout->addWidget(widget_2);
+
+
+        gridLayout_2->addLayout(horizontalLayout, 0, 0, 1, 1);
+
 
         retranslateUi(Dialog_SensorAddr);
-        QObject::connect(buttonBox, SIGNAL(accepted()), Dialog_SensorAddr, SLOT(accept()));
-        QObject::connect(buttonBox, SIGNAL(rejected()), Dialog_SensorAddr, SLOT(reject()));
 
         QMetaObject::connectSlotsByName(Dialog_SensorAddr);
     } // setupUi
@@ -55,7 +116,10 @@ public:
     void retranslateUi(QDialog *Dialog_SensorAddr)
     {
         Dialog_SensorAddr->setWindowTitle(QApplication::translate("Dialog_SensorAddr", "\344\274\240\346\204\237\345\231\250\345\257\204\345\255\230\345\231\250\350\257\273\345\206\231", Q_NULLPTR));
-        pushButton->setText(QApplication::translate("Dialog_SensorAddr", "\350\257\273\345\217\226", Q_NULLPTR));
+        label_fmName->setText(QApplication::translate("Dialog_SensorAddr", "TextLabel", Q_NULLPTR));
+        pushButton_readRegister->setText(QApplication::translate("Dialog_SensorAddr", "\350\257\273\345\217\226", Q_NULLPTR));
+        pushButton_writeRegister->setText(QApplication::translate("Dialog_SensorAddr", "\345\206\231\345\205\245", Q_NULLPTR));
+        pushButton_freshTable->setText(QApplication::translate("Dialog_SensorAddr", "\346\230\276\347\244\272\345\210\267\346\226\260", Q_NULLPTR));
     } // retranslateUi
 
 };

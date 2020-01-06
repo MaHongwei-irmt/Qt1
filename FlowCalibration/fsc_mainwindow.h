@@ -125,6 +125,10 @@ class FSC_MainWindow;
 #define PROTOCOL_XUNYIN_MODBUS_ADDR_RESET               0xEA
 #define PROTOCOL_XUNYIN_MODBUS_ADDR_ZERO_CAL            0xEB
 #define PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF1             0xE5
+#define PROTOCOL_XUNYIN_MODBUS_ADDR_SET_KF2             0xE6
+
+#define PROTOCOL_XUNYIN_MODBUS_ADDR_FLOW_RANGE          0xE1
+
 
 #define CALIBRATION_FM_READ_WRITE       1
 #define TISH_STEP_SUCCEED               2
@@ -249,8 +253,28 @@ public:
     void delayMSec(int msec);
     void SocketConnectTry(void);
 
+    void dialog_readFLOW_RANGE(int fmIdx);
+    void dialog_writeFLOW_RANGE(int fmIdx);
+    void dialog_readZERO_CAL(int fmIdx);
+    void dialog_writeZERO_CAL(int fmIdx);
+
     void dialog_readSET_KF1(int fmIdx);
+    void dialog_readSET_KF2(int fmIdx);
     void dialog_writeSET_KF1(int fmIdx);
+    void dialog_writeSET_KF2(int fmIdx);
+    void dialog_readByAddressAndNum(int fmIdx, uchar addr, char num);
+
+    void dialog_writeSingleByAddress(int fmIdx, uchar addr, uint16_t data);
+
+    void resetFmCommunicationWithStfm(void);
+
+
+    void printInfoWithTime(QString str);
+    void printInfo(QString str);
+
+
+    bool checkMessageBoxIsOrNo(QString str);
+
 
     bool            showInfoUpdata = true;
     QTextBrowser    *txtBrow_showInfo = nullptr;
@@ -262,6 +286,10 @@ public:
 
     cls_fmData      fmData[FLOWMETER_NUMBER];
     bool            sktPause[SOCKET_NUMBER];
+
+
+    QDialog         *dialog_fmData;
+    QDialog         *dialog_fmRegister;
 
 private slots:
     void skt_connect_suc(int i);
@@ -376,9 +404,8 @@ private slots:
 private:
     Ui::FSC_MainWindow *ui;
     QDialog *showInfo;
-    QDialog *dialog_fmData;
 
-    bool checkMessageBoxIsOrNo(QString str);
+
 
     void uiReInit(void);
 
@@ -407,7 +434,13 @@ private:
 
     void socketCommunication(void);
 
+    bool sendMsg_readFLOW_RANGE(int fmIdx);
+    bool sendMsg_writeFLOW_RANGE(int fmIdx);
+    bool sendMsg_readZERO_CAL(int fmIdx);
+    bool sendMsg_writeZERO_CAL(int fmIdx);
+
     bool sendMsg_readSET_KF1(int fmIdx);
+    bool sendMsg_readSET_KF2(int fmIdx);
     bool sendMsg_readGAIN_CONTROL(int fmIdx);
     bool sendMsg_read_byAddr(int fmIdx, uchar addr, char num);
     bool sendMsg_writeSingle_byAddr(int fmIdx, uchar addr, uint16_t value);
@@ -416,6 +449,7 @@ private:
     bool sendMsg_writeGAIN_CONTROL(int fmIdx);
     bool sendMsg_writeUPDATE_REQ(int fmIdx);
     bool sendMsg_writeSET_KF1(int fmIdx);
+    bool sendMsg_writeSET_KF2(int fmIdx);
 
     bool sendMsg_writeRESET(int fmIdx);
     bool sendMsg_writeStfmRESET(void);
@@ -468,7 +502,7 @@ private:
 
     void waitFmCommuication(oneCalTag *calTag, int idFmProcess);
     void waitStfmCommuication(oneCalTag *calTag, int idFmProcess);
-    void resetFmCommunicationWithStfm(void);
+
 
     void fmCalibration(oneCalTag *calTag);
     void fmCorrect(oneCalTag *calTag);
@@ -489,8 +523,6 @@ private:
     void plotAddDataAndFresh(void);
     void plotFresh(void);
 
-    void printInfo(QString str);
-    void printInfoWithTime(QString str);
 
     void plcDataInit(void);
     void openForwardValveAll(void);

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1292</width>
-    <height>525</height>
+    <height>590</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <property name="geometry">
     <rect>
      <x>50</x>
-     <y>95</y>
+     <y>110</y>
      <width>54</width>
      <height>12</height>
     </rect>
@@ -63,6 +63,136 @@
    </property>
    <property name="text">
     <string>读取</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="tbnRead_SET_KF2">
+   <property name="geometry">
+    <rect>
+     <x>1020</x>
+     <y>260</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>读取</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>200</y>
+     <width>54</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>SET_KF2:</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="tbnWrite_SET_KF2">
+   <property name="geometry">
+    <rect>
+     <x>1110</x>
+     <y>260</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>写入</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="tbnRead_FLOW_RANHE">
+   <property name="geometry">
+    <rect>
+     <x>500</x>
+     <y>350</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>读取</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="tbnWrite_FLOW_RANHE">
+   <property name="geometry">
+    <rect>
+     <x>590</x>
+     <y>350</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>写入</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>289</y>
+     <width>131</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>FLOW_RANGE:</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="tbnWrite_ZERO_CAL">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>440</y>
+     <width>81</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>写入</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="tbnRead_ZERO_CAL">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>440</y>
+     <width>91</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>读取</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>379</y>
+     <width>81</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ZERO_CAL:</string>
+   </property>
+  </widget>
+  <widget class="QToolButton" name="tbnFMRegister">
+   <property name="geometry">
+    <rect>
+     <x>1040</x>
+     <y>520</y>
+     <width>131</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>传感器寄存器</string>
    </property>
   </widget>
  </widget>
