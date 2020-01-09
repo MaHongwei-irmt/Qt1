@@ -2,7 +2,6 @@ INPUT(
 ./release\main.o
 ./release\qcustomplot.o
 ./release\fsc_mainwindow.o
-./release\dialog_checkdev.o
 ./release\dialog_sensoraddr.o
 ./release\fsc_mainwindow_plc.o
 ./release\fsc_mainwindow_socket.o
@@ -15,7 +14,6 @@ INPUT(
 ./release\fsc_mainwindow_cal_manual.o
 ./release\moc_qcustomplot.o
 ./release\moc_fsc_mainwindow.o
-./release\moc_dialog_checkdev.o
 ./release\moc_dialog_sensoraddr.o
 ./release\moc_fsc_thread.o
 ./release\moc_dialog_showinfo.o

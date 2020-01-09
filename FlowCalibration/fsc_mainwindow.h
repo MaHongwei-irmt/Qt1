@@ -4,13 +4,14 @@
 #include "fsc_pub.h"
 
 #include <QMainWindow>
-#include "dialog_checkdev.h"
 #include <QtNetwork>
 #include <QSignalMapper>
 #include <QCheckBox>
 #include <QLineEdit>
 #include <QTextBrowser>
 #include <QPrinter>
+#include <QPushButton>
+
 
 QByteArray  HexStringToByteArray(QString HexString);
 QString     ByteArrayToHexString(QByteArray &ba);
@@ -306,8 +307,6 @@ private slots:
     void action_rightKeyCorrectMenu(int fmIdx);
 
     void on_tbnSysDevCheck_clicked();
-
-    void on_tbnManualCheckDev_clicked();
 
     void on_comboBox_PlotSenSel_currentIndexChanged(const QString &arg1);
 

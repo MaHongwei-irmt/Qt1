@@ -1292,12 +1292,6 @@ void FSC_MainWindow::on_tbnSysDevCheck_clicked()
     ChkDev->exec();
 }
 
-void FSC_MainWindow::on_tbnManualCheckDev_clicked()
-{
-    Dialog_CheckDev *ChkDev = new Dialog_CheckDev();
-    ChkDev->exec();
-}
-
 void FSC_MainWindow::on_comboBox_SensorTypeName_currentIndexChanged(int index)
 {
     if (fsc_global::para_ini.size() <= index || index < 0)

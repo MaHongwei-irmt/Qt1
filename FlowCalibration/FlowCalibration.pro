@@ -32,7 +32,6 @@ SOURCES += \
         main.cpp \
     qcustomplot.cpp \
     fsc_mainwindow.cpp \
-    dialog_checkdev.cpp \
     dialog_sensoraddr.cpp \
     fsc_mainwindow_plc.cpp \
     fsc_mainwindow_socket.cpp \
@@ -47,7 +46,6 @@ SOURCES += \
 HEADERS += \
     qcustomplot.h \
     fsc_mainwindow.h \
-    dialog_checkdev.h \
     dialog_sensoraddr.h \
     fsc_thread.h \
     fsc_plc.h \
@@ -58,7 +56,6 @@ HEADERS += \
 
 FORMS += \
     fsc_mainwindow.ui \
-    dialog_checkdev.ui \
     dialog_sensoraddr.ui \
     dialog_showinfo.ui \
     dialog_showinfo.ui \
