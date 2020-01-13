@@ -1,0 +1,68 @@
+main.cpp:14: "2020-01-10 17:44:38:943"   start
+fsc_mainwindow.cpp:109: "2020-01-10 17:44:39:408" 1920 1040
+main.cpp:19: "2020-01-10 17:44:39:590" w.show()
+fsc_mainwindow.cpp:262: "2020-01-10 17:44:39:597" "192.168.1.220"
+fsc_mainwindow.cpp:263: "2020-01-10 17:44:39:601" "192.168.1.221"
+fsc_mainwindow.cpp:284: "2020-01-10 17:44:39:604" pollCycleSTFM= 200
+fsc_mainwindow.cpp:289: "2020-01-10 17:44:39:608" printerName= "Lenovo M7455DNF Printer"
+fsc_mainwindow.cpp:294: "2020-01-10 17:44:39:611" printerName= false
+fsc_thread.cpp:16: "2020-01-10 17:44:39:614" thread start ...
+fsc_mainwindow_socket.cpp:7: "2020-01-10 17:44:39:619" SocketInit->connectToHostTry1... "192.168.1.220" 2100
+fsc_mainwindow.cpp:46: "2020-01-10 17:44:39:680" SocketDataInit
+fsc_mainwindow.cpp:326: "2020-01-10 17:44:39:685" "XY_DD_1"
+fsc_mainwindow.cpp:326: "2020-01-10 17:44:39:689" "XY-DD-2"
+fsc_mainwindow.cpp:326: "2020-01-10 17:44:39:692" "XY-DD-3"
+fsc_mainwindow.cpp:326: "2020-01-10 17:44:39:696" "XY-DD-4"
+fsc_mainwindow.cpp:326: "2020-01-10 17:44:39:710" "XY-DD-5"
+fsc_mainwindow.cpp:326: "2020-01-10 17:44:39:718" "XY-DD-7"
+fsc_mainwindow.cpp:326: "2020-01-10 17:44:39:726" "XY-DD-FGG-9877"
+fsc_mainwindow.cpp:326: "2020-01-10 17:44:39:732" "XY-DD-FGG-9877-ttttttttttrr"
+fsc_mainwindow.cpp:326: "2020-01-10 17:44:39:737" "XY-DD-FGG-9877-ttttttttttuuu"
+fsc_mainwindow.cpp:326: "2020-01-10 17:44:39:741" "11"
+fsc_mainwindow.cpp:50: "2020-01-10 17:44:39:745" ParaInit
+fsc_mainwindow.cpp:53: "2020-01-10 17:44:39:751" DataInit
+fsc_mainwindow.cpp:56: "2020-01-10 17:44:39:754" plcDataInit
+fsc_mainwindow.cpp:59: "2020-01-10 17:44:39:781" PlotInit
+fsc_mainwindow_socket.cpp:17: "2020-01-10 17:44:39:850" SocketInit->connectToHostTry1 "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:20: "2020-01-10 17:44:39:855" SocketInit->connectToHostTry2... "192.168.1.221" 4001
+socket\qabstractsocket.cpp:1663: QAbstractSocket::connectToHost() called when already looking up or connecting/connected to "192.168.1.221"
+fsc_mainwindow_socket.cpp:292: "2020-01-10 17:44:40:037" wait socket start up ...
+fsc_mainwindow_socket.cpp:29: "2020-01-10 17:44:40:166" SocketInit->connectToHostTry2 "192.168.1.221" 4001
+fsc_thread.cpp:23: "2020-01-10 17:44:40:173" signal_startScketInit
+fsc_mainwindow_socket.cpp:292: "2020-01-10 17:44:40:285" wait socket start up ...
+fsc_mainwindow_socket.cpp:50: "2020-01-10 17:44:40:385" SocketInit->connectToHost... "192.168.1.220" 2100
+fsc_mainwindow_socket.cpp:54: "2020-01-10 17:44:40:391" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:50: "2020-01-10 17:44:40:394" SocketInit->connectToHost... "192.168.1.221" 4001
+fsc_mainwindow_socket.cpp:54: "2020-01-10 17:44:40:398" SocketInit->connectToHost
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:402" "1 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:410" "0 socket con"
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:536" "2"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:542" "3"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:545" "4"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:549" "5"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:554" "6"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:558" "7"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:568" "8"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:572" "9"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:576" "10"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:580" "11"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:597" "12"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:602" "13"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:606" "14"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:610" "15"  socket con retry
+fsc_mainwindow_socket.cpp:331: "2020-01-10 17:44:40:615" "16"  socket con retry
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:623" "6 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:628" "8 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:631" "13 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:635" "9 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:639" "2 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:643" "12 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:647" "16 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:650" "5 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:654" "10 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:658" "14 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:662" "4 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:666" "7 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:670" "3 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:674" "11 socket con"
+fsc_mainwindow_socket.cpp:69: "2020-01-10 17:44:40:678" "15 socket con"

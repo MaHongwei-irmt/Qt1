@@ -77,6 +77,61 @@ Dialog_showinfo::~Dialog_showinfo()
     delete ui;
 }
 
+
+void Dialog_showinfo::on_show(void)
+{
+
+    Qt::WindowFlags flags = this->windowFlags()  | Qt::WindowMaximizeButtonHint;
+    setWindowFlags(flags & ~Qt::WindowContextHelpButtonHint );
+
+    ui->groupBox->setStyleSheet("QGroupBox{border:none;padding:0px;spacing:0;margin:0px;}");
+
+    FSC_MainWindow *mainWin = static_cast<FSC_MainWindow*>(parentWidget());
+
+    if (mainWin->showCalTable)
+    {
+        this->setWindowTitle("报表窗");
+
+        ui->groupBox->setVisible(true);
+
+        autoPrinter = mainWin->autoPrinter;
+        ui->checkBox_printer->setCheckState(autoPrinter);
+
+        printerName = mainWin->printerName;
+        ui->lineEdit_printer->setText(mainWin->printerName);
+
+        autoPrinterBool = mainWin->autoPrinterBool;
+
+        mainWin->showCalTable = false;
+        showCalTable();
+    }
+    else
+    {
+        this->setWindowTitle("信息窗");
+
+        ui->groupBox->setVisible(false);
+        ui->textBrow_calInfo->setText(mainWin->txtBrow_showInfo->toPlainText());
+
+        freshTimer = new QTimer(this);
+        connect(freshTimer, SIGNAL(timeout()), this, SLOT(showInfo()));
+        freshTimer->start(300);
+
+
+
+        QAction *rightKeyPauseMenu = new QAction("暂停信息刷新", ui->textBrow_calInfo);
+        ui->textBrow_calInfo->addAction(rightKeyPauseMenu);
+        ui->textBrow_calInfo->setContextMenuPolicy(Qt::ActionsContextMenu);
+
+        QAction *rightKeyContinueMenu = new QAction("继续", ui->textBrow_calInfo);
+        ui->textBrow_calInfo->addAction(rightKeyContinueMenu);
+        ui->textBrow_calInfo->setContextMenuPolicy(Qt::ActionsContextMenu);
+
+        connect(rightKeyPauseMenu, SIGNAL(triggered()), this, SLOT(action_rightKeyPauseMenu()));
+        connect(rightKeyContinueMenu, SIGNAL(triggered()), this, SLOT(action_rightKeyContinueMenu()));
+
+    }
+}
+
 void Dialog_showinfo::showInfo(void)
 {
     FSC_MainWindow *mainWin = static_cast<FSC_MainWindow*>(parentWidget());

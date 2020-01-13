@@ -16,6 +16,11 @@ public:
     explicit Dialog_showinfo(QWidget *parent = nullptr);
     ~Dialog_showinfo();
 
+
+    void showCalTable(void);
+
+    void on_show(void);
+
 private slots:
     void showInfo(void);
     void action_rightKeyPauseMenu(void);
@@ -40,7 +45,7 @@ private:
     bool            autoPrinterBool = false;
     QString         printerName = "";
 
-    void showCalTable(void);
+
 
 };
 

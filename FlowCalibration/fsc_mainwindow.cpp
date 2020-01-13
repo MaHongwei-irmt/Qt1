@@ -1714,15 +1714,47 @@ void FSC_MainWindow::on_tbnFMCalTable_clicked()
         makeCalRecordPrint(allCal);
     }
 
+    //    showCalTable = true;
+
+    //    showInfo->show();
+
+    //    showInfo->show();
+
+
+//    Dialog_showinfo *winInfo = static_cast<Dialog_showinfo*>(showInfo);
+
+//    showCalTable = true;
+
+//        winInfo->show();
+//    winInfo->on_show();
+
+//    winInfo->showCalTable();
+
+
     showCalTable = true;
 
+    Dialog_showinfo *showInfo = new Dialog_showinfo(this);
     showInfo->show();
+
 }
 
 void FSC_MainWindow::on_pushButton_showInfo_clicked()
 {
+//        Dialog_showinfo *winInfo = static_cast<Dialog_showinfo*>(showInfo);
+
+//    showCalTable = false;
+
+//            winInfo->show();
+//    winInfo->on_show();
+
+//    winInfo->showInfo();
+
+    showCalTable = false;
+
+
     Dialog_showinfo *showInfo = new Dialog_showinfo(this);
     showInfo->show();
+
 }
 
 void FSC_MainWindow::on_textBrow_calInfo_textChanged()
