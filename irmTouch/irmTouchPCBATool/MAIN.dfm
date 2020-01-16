@@ -1,6 +1,7 @@
 object MainForm: TMainForm
   Left = 206
   Top = 113
+  BorderIcons = [biSystemMenu, biMaximize]
   Caption = 'IRMTouch Factory Tools'
   ClientHeight = 598
   ClientWidth = 1072
@@ -27,6 +28,8 @@ object MainForm: TMainForm
     AutoHint = True
     Panels = <>
     SimplePanel = True
+    ExplicitTop = 589
+    ExplicitWidth = 1082
   end
   object ToolBar2: TToolBar
     Left = 0
@@ -393,7 +396,7 @@ object MainForm: TMainForm
     Left = 192
     Top = 144
     Bitmap = {
-      494C01011D0022005C0020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
+      494C01011D002200600020002000FFFFFFFFFF10FFFFFFFFFFFFFFFF424D3600
       0000000000003600000028000000800000000001000001002000000000000000
       0200000000000000000000000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

@@ -17,9 +17,9 @@ USEFORM("DetectTool.cpp", Form1);
 USEFORM("CHILDWIN.CPP", MDIChild);
 USEFORM("Config.cpp", FormConfig);
 USEFORM("ConfigList.cpp", FormConfigList);
- USEFORM("DetectTool.cpp", DetectTool);
+USEFORM("DetectTool.cpp", DetectTool);
 
- // ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
  int WINAPI _tWinMain(HINSTANCE, HINSTANCE, LPTSTR, int) {
 	 Application->Initialize();
 

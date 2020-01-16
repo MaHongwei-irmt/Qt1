@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>2018/03/30 16:04:59.000.323,E:\HidPrj\Simulation\Simulation.cbproj=E:\HidPrj\Simulation\MDIAPP.cbproj</Transaction>
-    <Transaction>2018/04/03 16:04:14.000.918,E:\HidPrj\FactoryTools\FactoryTool.cbproj=E:\HidPrj\FactoryTools\Simulation.cbproj</Transaction>
-    <Transaction>2020/01/15 11:53:35.000.521,D:\jyWork\QtPro\irmTouch\tmp\DetectTool.h=D:\jyWork\QtPro\irmTouch\tmp\Unit1.h</Transaction>
-    <Transaction>2020/01/15 11:53:35.000.521,D:\jyWork\QtPro\irmTouch\tmp\DetectTool.dfm=D:\jyWork\QtPro\irmTouch\tmp\Unit1.dfm</Transaction>
+    <Transaction>2018/03/30 16:04:59.000.323,E:\HidPrj\Simulation\MDIAPP.cbproj=E:\HidPrj\Simulation\Simulation.cbproj</Transaction>
+    <Transaction>2018/04/03 16:04:14.000.918,E:\HidPrj\FactoryTools\Simulation.cbproj=E:\HidPrj\FactoryTools\FactoryTool.cbproj</Transaction>
+    <Transaction>2020/01/15 11:53:35.000.521,D:\jyWork\QtPro\irmTouch\tmp\Unit1.dfm=D:\jyWork\QtPro\irmTouch\tmp\DetectTool.dfm</Transaction>
+    <Transaction>2020/01/15 11:53:35.000.521,D:\jyWork\QtPro\irmTouch\tmp\Unit1.h=D:\jyWork\QtPro\irmTouch\tmp\DetectTool.h</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="-1" SortType="0"/>
 </BorlandProject>

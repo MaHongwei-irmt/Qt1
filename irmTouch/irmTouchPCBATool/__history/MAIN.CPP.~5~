@@ -1,0 +1,1466 @@
+// ---------------------------------------------------------------------------
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Main.h"
+#include "About.h"
+#include "childwin.h"
+#include "stdio.h"
+#include "time.h"
+
+#include "ADProcess.h"
+
+#include "Boundary.h"
+
+#include "image.h"
+#include "iostream.h"
+#include "FirmwareUpdate.h"
+#include "config.h"
+#include <fstream.h>
+#include <Dbt.h>
+#include <objbase.h>
+#include <initguid.h>
+
+#include "Devices.h"
+
+#include "DetectTool.h"
+
+// ---------------------------------------------------------------------------
+#pragma resource "*.dfm"
+
+TMainForm *MainForm;
+
+int FrameNum = 0;
+unsigned long Len = 0;
+unsigned long loglen = 0;
+
+bool __fastcall TMainForm::AppHookFunc(TMessage &Message) {
+	bool handled = false;
+	BOOL Connected = this->HIDSendThread->Connected;
+
+	if (Message.Msg == WM_DEVICECHANGE)
+		// DBT_DEVNODES_CHANGED         DBT_DEVTYP_DEVICEINTERFACE
+	{
+		if ((Message.WParam == DBT_DEVICEREMOVECOMPLETE) ||
+			(Message.WParam == DBT_DEVICEARRIVAL)) {
+			this->HIDSendThread->FindIRMTouchDevice();
+
+			if (Connected != this->HIDSendThread->Connected) {
+				if (this->HIDSendThread->Connected == TRUE) {
+					DeviceConnected();
+				}
+				else {
+					DeviceDisConnected();
+				}
+
+				handled = true;
+			}
+		}
+	}
+
+	return handled;
+}
+
+void __fastcall TMainForm::HandleException(TObject*Sender, Exception*E) {
+	// TForm *pMsgForm = CreateMessageDialog(E->Message.c_str(), mtInformation, TMsgDlgButtons()<<mbOK);
+	//
+	// pMsgForm->Show();
+
+	// Application->MessageBox(E->Message.c_str(),"Exception", MB_OK);
+	// exit(-1);
+}
+
+__fastcall TMainForm::TMainForm(TComponent *Owner) : TForm(Owner) {
+	// Application->OnException = HandleException;
+
+	HIDSendThread = new USBTalk(true);
+	Application->HookMainWindow(AppHookFunc);
+
+	MainForm->Frames = 0;
+	fplogframe = NULL;
+
+	time_t ltime;
+	time(&ltime);
+
+	char c[100];
+
+	sprintf(c, "d:\\logdata-%d.txt", ltime);
+
+	if ((fplogframe = fopen(c, "w")) == NULL) {
+		ShowMessage("log 文件创建失败！");
+		return;
+	}
+
+}
+// ---------------------------------------------------------------------------
+
+TMDIChild *__fastcall TMainForm::CreateMDIChild(String Name) {
+	TMDIChild *Child;
+	//this->Visible = false;
+
+	// --- create a new MDI child window ----
+	Child = new TMDIChild(Application);
+	Child->Caption = Name;
+
+	// if (FileExists (Name))
+	// Child->Memo1->Lines->LoadFromFile(Name);
+
+	return Child;
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::LoadLogFile(String FileName) {
+	LogReplay.open(FileName.c_str(), ios_base::in);
+
+	if (LogReplay.is_open()) {
+		char Version[128];
+
+		LogReplay.clear();
+		LogReplay.seekg(0);
+
+		LogReplay.getline(Version, 128);
+
+		if (strcmp(AnsiString(LogFileMagicStringV1).c_str(), Version) == 0 ||
+			strcmp(AnsiString(LogFileMagicStringV2).c_str(), Version) == 0 ||
+			strcmp(AnsiString(LogFileMagicStringV4).c_str(), Version) == 0 ||
+			strcmp(AnsiString(LogFileMagicStringV5).c_str(), Version) == 0 ||
+			strcmp(AnsiString(LogRealPointFileMagicStringV1).c_str(),
+			Version) == 0) {
+			TimerReplay->Interval = 1000;
+			TimerReplay->Enabled = true;
+			LogVersion = String(Version);
+		}
+		else {
+			LogReplay.close();
+			ShowMessage(L"不支持该格式的记录文件!");
+		}
+	}
+	else {
+		ShowMessage(L"can not open file:\n" + UnicodeString(FileName));
+	}
+}
+
+void __fastcall TMainForm::FileOpen1Execute(TObject *Sender) {
+	StopPlay();
+	StartPausePlay();
+	// DeviceView->Show();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ti(TObject *Sender) {
+
+	WindowState = wsMinimized;
+	DetectTool->mainActive = true;
+
+	if (FrameInfo.Info.YLeds > 0) {
+		CreateMDIChild("Y0");
+	}
+
+	if (FrameInfo.Info.XLeds > 0) {
+		CreateMDIChild("X0");
+	}
+
+	MainForm->Tile();
+	this->DoubleBuffered = true;
+
+	if (MainForm->HIDSendThread->Connected == TRUE) {
+		DeviceConnected();
+	}
+	else {
+		DeviceDisConnected();
+	}
+
+	AboutBox->Registered = 0;
+	AboutBox->UnRegistered = 0;
+
+#ifdef _DEBUG
+	AboutBox->Registered = 0xACFAD597;
+	AboutBox->UnRegistered = 0x2347AEDB ^ AboutBox->Registered;
+#endif
+
+#ifndef _DEBUG
+	if (AboutBox->CheckLic() == false) {
+		// ShowMessage("软件为试用版，存在功能限制！\n请注册！");
+	}
+#endif
+	LogVer1Click(this->LogVer1);
+
+	DetectTool->Show();
+}
+
+// ---------------------------------------------------------------------------
+TMDIChild *__fastcall TMainForm::FindChild(int AxiId) {
+	String Id;
+	String Type;
+	int id;
+
+	if (FrameInfo.Type == ST_Normal) {
+		info_t *st = &FrameInfo.Info;
+
+		for (int i = 0; i < MainForm->MDIChildCount; i += 1) {
+			Type = MainForm->MDIChildren[i]->Caption;
+			Id = Type.SubString0(1, Type.Length() - 1);
+			Type = Type.SubString0(0, 1);
+
+			id = _wtoi(Id.t_str());
+
+			if (Type == L"Y") {
+				id += st->XAxis;
+			}
+			else if (Type == L"C") {
+				Type = MainForm->MDIChildren[i]->Caption;
+				Id = Type.SubString0(2, Type.Length() - 1);
+				Type = Type.SubString0(0, 2);
+
+				id = _wtoi(Id.t_str());
+				if (Type == "CX") {
+					id += st->TotalAxis;
+				}
+				else {
+					id += st->TotalAxis + X_CORNER_AXIS / 2;
+				}
+			}
+
+			if (AxiId == id) {
+				if (MainForm->MDIChildren[i]->Visible == true)
+					return (TMDIChild*)(MainForm->MDIChildren[i]);
+				else
+					return NULL;
+			}
+		}
+	}
+
+	return NULL;
+}
+
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::TimerFpsTimer(TObject *Sender) {
+	static int CountSec = 0;
+	static int FpsTimes = 0;
+	String Msg;
+
+	CountSec += 1;
+
+	Fps = (float)FrameNum / (float)CountSec;
+
+	Msg.sprintf(L"IRMTouch Factory Tools %.1ffps-%d", Fps, Frames);
+	Msg.cat_printf(L" %.2f-%.2f-%.2fms - %d ", (float)ScanT / 1000.0,
+		(float)MTime / 100.0, (float)CTime / 100.0, ClcTimes);
+	/* Msg.cat_printf("Log:%d Pt:%d/%d/%d - ", loglen, MtIdentify.AreaNum, MtTrace.TraceAreas, MtTrace.RealPoints); */
+
+	// for(int i=0; i< MtTrace.RealPoints; i+=1) {
+	// Msg.cat_printf("(%d, %d) ", MtTrace.RealPoint[i].x, MtTrace.RealPoint[i].y);
+	// }
+
+	Msg.cat_printf(L" Cury = %d", MtBound.Cury);
+	MainForm->Caption = Msg;
+
+	if (CountSec >= 3) {
+		CountSec = 0;
+		FrameNum = 0;
+	}
+
+	if ((int)Fps == 0) {
+		FpsTimes += 1;
+
+		if (FpsTimes >= 3) {
+			FpsTimes = 0;
+		}
+	}
+	else {
+		FpsTimes = 0;
+	}
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::StopPlay(void) {
+	LogReplay.close();
+	TimerReplay->Enabled = false;
+
+	// LogReplay.clear();
+	// LogReplay.seekg(0);
+
+	ToolButtonPlayPause->ImageIndex = ImagePlay;
+	ToolButtonStop->Enabled = false;
+	ToolButtonPrev->Enabled = false;
+	ToolButtonNext->Enabled = false;
+	ToolButtonForward->Enabled = false;
+	ToolButtonBackward->Enabled = false;
+	ToolButtonSpdUp->Enabled = false;
+	ToolButtonSpdDown->Enabled = false;
+}
+
+int __fastcall TMainForm::RollOnFrames(int Num) {
+	//
+	return 0;
+}
+
+int __fastcall TMainForm::RollBackFrames(int Num) {
+	//
+	return 0;
+}
+
+int PlayOneFrame_V1V2V4V5(ifstream &LogReplay, uint8_t *Frame,
+	String LogVersion) {
+	uint32_t uTemp;
+	int32_t iTemp;
+	DebugHead *dh = (DebugHead_t*)Frame;
+	DebugHeadV2 *dhV2 = (DebugHeadV2_t*)Frame;
+	uint8_t *Data;
+	uint32_t AdDataLen, i;
+	int FrameLen = 0;
+
+	LogReplay >> uTemp;
+	dh->Type = uTemp;
+
+	LogReplay >> uTemp;
+	dh->FrameNum = uTemp;
+
+	LogReplay >> uTemp;
+	dh->Fps = uTemp;
+
+	LogReplay >> dh->ScanTime;
+
+	LogReplay >> uTemp;
+	dh->XAxis = uTemp;
+
+	LogReplay >> uTemp;
+	dh->YAxis = uTemp;
+
+	LogReplay >> dh->XLeds;
+	LogReplay >> dh->YLeds;
+
+	if (dh->XAxis == 0 || dh->YAxis == 0 || dh->XLeds == 0) {
+		return 0;
+	}
+
+	AdDataLen = dh->XAxis * dh->XLeds + dh->YAxis * dh->YLeds;
+
+	if (LogVersion == LogFileMagicStringV1) {
+		for (i = 0; i < (uint32_t)(dh->XAxis + dh->YAxis); i += 1) {
+			LogReplay >> iTemp;
+			dh->Offsets[i] = iTemp;
+		}
+
+		Data = Frame + 11 + (dh->XAxis + dh->YAxis) * 2;
+
+		FrameLen = AdDataLen + 1 + 11 + (dh->XAxis + dh->YAxis) * 2;
+		for (i = 0; i < AdDataLen + 1; i += 1) {
+			LogReplay >> uTemp;
+			Data[i] = uTemp;
+		}
+	}
+	else if (LogVersion == LogFileMagicStringV2) {
+		for (i = 0; i < (uint32_t)(dh->XAxis + dh->YAxis) * 2; i += 1) {
+			LogReplay >> iTemp;
+			dhV2->Offsets[i] = iTemp;
+		}
+
+		Data = Frame + 11 + (dh->XAxis + dh->YAxis) * 4;
+		FrameLen = AdDataLen + 1 + 11 + (dh->XAxis + dh->YAxis) * 4;
+
+		for (i = 0; i < AdDataLen + 1; i += 1) {
+			LogReplay >> uTemp;
+			Data[i] = uTemp;
+		}
+	}
+	else if (LogVersion == LogFileMagicStringV4) {
+		for (i = 0; i < (uint32_t)(dh->XAxis + dh->YAxis) * 2; i += 1) {
+			LogReplay >> iTemp;
+			dhV2->Offsets[i] = iTemp;
+		}
+
+		if ((dh->Type & 0xF0) == 0x10) { // full scan
+			Data = Frame + 11 + (dh->XAxis + dh->YAxis) * 4;
+			FrameLen = AdDataLen + 1 + 11 + (dh->XAxis + dh->YAxis) * 4;
+
+			for (i = 0; i < AdDataLen + 1; i += 1) {
+				LogReplay >> uTemp;
+				Data[i] = uTemp;
+			}
+		}
+		else if ((dh->Type & 0xF0) == 0x30) { // partial  scan
+			softscan_ctrl_t ssc;
+			int ssclen;
+
+			LogReplay >> uTemp;
+			ssc.Flag = uTemp;
+			LogReplay >> uTemp;
+			ssc.xStart = uTemp;
+			LogReplay >> uTemp;
+			ssc.xEnd = uTemp;
+			LogReplay >> uTemp;
+			ssc.yStart = uTemp;
+			LogReplay >> uTemp;
+			ssc.yEnd = uTemp;
+			LogReplay >> uTemp;
+			ssc.xAxis = uTemp;
+			LogReplay >> uTemp;
+			ssc.yAxis = uTemp;
+
+			for (int i = 0; i < ssc.xAxis + ssc.yAxis; i += 1) {
+				LogReplay >> uTemp;
+				ssc.AxiIds[i] = uTemp;
+			}
+
+			ssclen = 11 + ssc.xAxis + ssc.yAxis;
+
+			AdDataLen = (ssc.xEnd - ssc.xStart + 1) * ssc.xAxis +
+				(ssc.yEnd - ssc.yStart + 1) * ssc.yAxis;
+
+			Data = Frame + 11 + (dh->XAxis + dh->YAxis) * 4;
+			FrameLen = AdDataLen + 1 + 11 + (dh->XAxis + dh->YAxis) * 4 +
+				ssclen;
+
+			memcpy(Data, &ssc, ssclen);
+			Data += ssclen;
+
+			for (i = 0; i < AdDataLen + 1; i += 1) { // include checksum
+				LogReplay >> uTemp;
+				Data[i] = uTemp;
+			}
+		}
+	}
+	else if (LogVersion == LogFileMagicStringV5) {
+		for (i = 0; i < (uint32_t)(dh->XAxis + dh->YAxis) * 2; i += 1) {
+			LogReplay >> iTemp;
+			dhV2->Offsets[i] = iTemp;
+		}
+
+		// if(dh->YLeds != 0) {
+		// AdDataLen += dh->Offsets[dh->XAxis - 1] * 4 + dh->Offsets[dh->XAxis + dh->YAxis - 1] * 4;
+		// Data = Frame + 11 + (dh->XAxis + dh->YAxis) * 4;
+		// FrameLen = AdDataLen + 1 + 11 + (dh->XAxis + dh->YAxis) * 4;
+		// } else {
+		// AdDataLen += dh->Offsets[dh->XAxis - 1] * 12;
+		// Data = Frame + 11 + (dh->XAxis + dh->YAxis) * 4;
+		// FrameLen = AdDataLen + 1 + 11 + (dh->XAxis + dh->YAxis) * 4;
+		// }
+
+		AdDataLen += dh->Offsets[dh->XAxis - 1] * 12 +
+			dh->Offsets[dh->XAxis + dh->YAxis - 1] * 12;
+		Data = Frame + 11 + (dh->XAxis + dh->YAxis) * 4;
+		FrameLen = AdDataLen + 1 + 11 + (dh->XAxis + dh->YAxis) * 4;
+
+		for (i = 0; i < AdDataLen + 1; i += 1) {
+			LogReplay >> uTemp;
+			Data[i] = uTemp;
+		}
+	}
+	else if (LogVersion == LogRealPointFileMagicStringV1) {
+		uint16_t MaxPoints;
+
+		for (i = 0; i < (uint32_t)(dh->XAxis + dh->YAxis) * 2; i += 1) {
+			LogReplay >> iTemp;
+			dhV2->Offsets[i] = iTemp;
+		}
+
+		Data = Frame + 11 + (dh->XAxis + dh->YAxis) * 4;
+
+		LogReplay >> MaxPoints;
+
+		FrameLen = MaxPoints * 10 + 1 + 1 + 11 + (dh->XAxis + dh->YAxis) * 4;
+
+		(*Data++) = MaxPoints;
+
+		for (uint16_t i = 0; i < MaxPoints; i += 1) {
+			LogReplay >> uTemp;
+			(*Data++) = ((uint8_t*)&uTemp)[0]; // x
+			(*Data++) = ((uint8_t*)&uTemp)[1];
+
+			LogReplay >> uTemp;
+			(*Data++) = ((uint8_t*)&uTemp)[0]; // y
+			(*Data++) = ((uint8_t*)&uTemp)[1];
+
+			LogReplay >> uTemp;
+			(*Data++) = ((uint8_t*)&uTemp)[0]; // width
+			(*Data++) = ((uint8_t*)&uTemp)[1];
+
+			LogReplay >> uTemp;
+			(*Data++) = ((uint8_t*)&uTemp)[0]; // height
+			(*Data++) = ((uint8_t*)&uTemp)[1];
+
+			LogReplay >> uTemp;
+			(*Data++) = ((uint8_t*)&uTemp)[0]; // ID
+
+			LogReplay >> uTemp;
+			(*Data++) = ((uint8_t*)&uTemp)[0]; // Sta
+		}
+
+		LogReplay >> uTemp;
+		(*Data++) = ((uint8_t*)&uTemp)[0]; // CheckSum
+
+		*Data = *Data; // avoid warning
+	}
+	else {
+		return 0;
+	}
+
+	return FrameLen;
+}
+
+void __fastcall TMainForm::PlayOneFrame(void) {
+	int FrameLen = 0;
+
+	memset(&FiFoData[FiFoInPtr][0], 0, DEBUG_FRAME_SIZE);
+
+	if (LogReplay.is_open() && LogReplay.peek() == EOF) {
+		StopPlay();
+		return;
+	}
+	else if (!LogReplay.is_open()) {
+		return;
+	}
+
+	if (LogVersion == LogFileMagicStringV1 ||
+		LogVersion == LogFileMagicStringV2 ||
+		LogVersion == LogFileMagicStringV4 ||
+		LogVersion == LogFileMagicStringV5) {
+		FrameLen = PlayOneFrame_V1V2V4V5(LogReplay, &FiFoData[FiFoInPtr][0],
+			LogVersion);
+	}
+
+	FiFoDataLen[FiFoInPtr] = FrameLen;
+
+	if (FrameLen) {
+		FiFoInPtr = (FiFoInPtr + 1) & DEBUG_FIFO_MASK;
+	}
+}
+
+void __fastcall TMainForm::TimerReplayTimer(TObject *Sender) {
+	PlayOneFrame();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButtonRecordClick(TObject *Sender) {
+	ToolButtonRecord->Tag = ToolButtonRecord->Tag + 1;
+
+	if (ToolButtonRecord->Tag & 0x01) {
+		ToolButtonRecord->Down = true;
+		ToolButtonRecord->ImageIndex = ImageRecordOn;
+	}
+	else {
+		ToolButtonRecord->Down = false;
+		ToolButtonRecord->ImageIndex = ImageRecordOff;
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TMainForm::StartPausePlay(void) {
+	if (ToolButtonPlayPause->ImageIndex == ImagePlay) {
+		if (!LogReplay.is_open()) {
+			OpenDialog->Filter = "AD采样值(*.txt)|*.txt|真实点(*.rp)|*.rp";
+			OpenDialog->FilterIndex = 1;
+
+			if (OpenDialog->Execute()) {
+				LoadLogFile(OpenDialog->FileName);
+
+				ADProc.Initial_Algorithm();
+
+				MainForm->Frames = 0;
+			}
+		}
+	}
+
+	if (LogReplay.is_open()) {
+		if (ToolButtonPlayPause->ImageIndex == ImagePlay) {
+			ToolButtonPlayPause->ImageIndex = ImagePause;
+			ToolButtonPrev->Enabled = false;
+			ToolButtonNext->Enabled = false;
+			ToolButtonForward->Enabled = false;
+			ToolButtonBackward->Enabled = false;
+			ToolButtonSpdUp->Enabled = true;
+			ToolButtonSpdDown->Enabled = true;
+
+			TimerReplay->Enabled = true;
+		}
+		else {
+			ToolButtonPlayPause->ImageIndex = ImagePlay;
+			ToolButtonPrev->Enabled = true;
+			ToolButtonNext->Enabled = true;
+			ToolButtonForward->Enabled = true;
+			ToolButtonBackward->Enabled = true;
+			ToolButtonSpdUp->Enabled = false;
+			ToolButtonSpdDown->Enabled = false;
+
+			TimerReplay->Enabled = false;
+		}
+
+		ToolButtonStop->Enabled = true;
+	}
+}
+
+void __fastcall TMainForm::ToolButtonPlayPauseClick(TObject *Sender) {
+	StartPausePlay();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButtonStopClick(TObject *Sender) {
+	StopPlay();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButtonPrevClick(TObject *Sender) {
+	// RollBackFrames(2);
+	// PlayOneFrame();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButtonNextClick(TObject *Sender) {
+	PlayOneFrame();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButtonBackwardClick(TObject *Sender) {
+	// RollBackFrames(11);
+	// PlayOneFrame();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButtonForwardClick(TObject *Sender) {
+	// ToolButtonForward->Enabled = false;
+
+	for (int i = 0; i < 10; i += 1)
+		PlayOneFrame();
+
+	// ToolButtonForward->Enabled = true;
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButtonSpdUpClick(TObject *Sender) {
+	int Times = 1000 / TimerReplay->Interval;
+
+	if (Times < 25) {
+		Times *= 2;
+	}
+	else {
+		Times = 50;
+	}
+
+	TimerReplay->Interval = 1000 / Times;
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButtonSpdDownClick(TObject *Sender) {
+	int Times = 1000 / TimerReplay->Interval;
+
+	Times /= 2;
+
+	if (Times <= 0) {
+		Times = 1;
+	}
+
+	TimerReplay->Interval = 1000 / Times;
+}
+
+void __fastcall TMainForm::ADRecordButtonClick(void) {
+	ToolButtonRecordClick(NULL);
+}
+// ---------------------------------------------------------------------------
+uint8_t UpdateBuf[DEBUG_FRAME_SIZE * 4];
+
+void __fastcall TMainForm::TimerReDrawTimer(TObject *Sender) {
+	int Leds;
+	TMDIChild *Child;
+	static screen_type_t LastType = ST_Normal;
+
+	if (LastType != FrameInfo.Type) {
+		LastType = FrameInfo.Type;
+		this->ToolButton2Click(NULL);
+	}
+
+	if (FrameInfo.Type == ST_Normal) {
+		info_t *st = &FrameInfo.Info;
+		int Offset;
+		int AxiId;
+		int AxiOff;
+		int off;
+
+		for (int i = 0; i < st->TotalAxis; i += 1) {
+			if ((Child = FindChild(i)) != NULL) {
+				AxiId = i;
+
+				if (i < st->XAxis) {
+					Leds = st->XLeds;
+				}
+				else {
+					Leds = st->YLeds;
+				}
+
+				Offset = st->Offsets[i];
+
+				memcpy(UpdateBuf, MtBound.AxisAd[AxiId], Leds);
+				memcpy(UpdateBuf + Leds * 1, MtBound.UsualVolt[AxiId], Leds);
+				memcpy(UpdateBuf + Leds * 2, MtBound.MaxVolt[AxiId], Leds);
+				memcpy(UpdateBuf + Leds * 3, MtBound.NormAd[AxiId], Leds);
+
+				Child->UpdateChart(UpdateBuf, Leds, Offset,
+					MtBound.Intervals[AxiId], &MtBound.SigQ[AxiId]);
+				// memory leak!!!!
+			}
+		}
+
+		for (int i = 0; i < X_CORNER_AXIS / 2 + Y_CORNER_AXIS / 2; i += 1) {
+			AxiId = i + st->TotalAxis;
+
+			if ((Child = FindChild(AxiId)) != NULL) {
+
+				if (i < X_CORNER_AXIS / 2) {
+					Leds = st->XLeds;
+					off = MAX_X_OFF;
+					AxiOff = X_CORNER_AXIS / 4;
+
+					if (i < X_CORNER_AXIS / 4) { // emit
+						AxiId = i + st->TotalAxis;
+					}
+					else {
+						AxiId = i + AxiOff + st->TotalAxis;
+					}
+
+				}
+				else {
+					Leds = st->YLeds;
+					off = MAX_Y_OFF;
+					AxiOff = Y_CORNER_AXIS / 4;
+
+					if (i < X_CORNER_AXIS / 2 + Y_CORNER_AXIS / 4) { // emit
+						AxiId = X_CORNER_AXIS + (i - X_CORNER_AXIS / 2) +
+							st->TotalAxis;
+					}
+					else {
+						AxiId = X_CORNER_AXIS + (i - X_CORNER_AXIS / 2) +
+							AxiOff + st->TotalAxis;
+					}
+				}
+
+				memset(UpdateBuf, 0, Leds*4);
+
+				memcpy(UpdateBuf, MtBound.AxisAd[AxiId], off);
+				memcpy(UpdateBuf + Leds * 1, MtBound.UsualVolt[AxiId], off);
+				memcpy(UpdateBuf + Leds * 2, MtBound.MaxVolt[AxiId], off);
+				memcpy(UpdateBuf + Leds * 3, MtBound.NormAd[AxiId], off);
+
+				AxiId += AxiOff;
+				memcpy(UpdateBuf + Leds - off, MtBound.AxisAd[AxiId], off);
+				memcpy(UpdateBuf + Leds * 1 + Leds - off,
+					MtBound.UsualVolt[AxiId], off);
+				memcpy(UpdateBuf + Leds * 2 + Leds - off,
+					MtBound.MaxVolt[AxiId], off);
+				memcpy(UpdateBuf + Leds * 3 + Leds - off,
+					MtBound.NormAd[AxiId], off);
+
+				Child->UpdateChart(UpdateBuf, Leds, 0, MtBound.Intervals[AxiId],
+					&MtBound.SigQ[AxiId]); // memory leak!!!!
+			}
+		}
+
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TMainForm::ToolButtonShowImageClick(TObject *Sender) {
+	FormPoints->Show();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::CreatChild(int Childs) {
+
+	for (int i = MainForm->MDIChildCount; i < Childs; i += 1) {
+		CreateMDIChild(" ");
+	}
+
+	for (int i = Childs; i < MainForm->MDIChildCount; i += 1) {
+		MainForm->MDIChildren[i]->Close();
+		MainForm->MDIChildren[i]->Release();
+	}
+}
+
+void __fastcall TMainForm::ToolButton2Click(TObject *Sender) {
+	if (FrameInfo.Type == ST_Normal) {
+		if (FrameInfo.Info.YLeds > 0) {
+			CreatChild(2);
+
+			MainForm->MDIChildren[0]->Caption = "X0";
+			MainForm->MDIChildren[1]->Caption = "Y0";
+		}
+		else {
+			CreatChild(1);
+
+			MainForm->MDIChildren[0]->Caption = "X0";
+		}
+	}
+
+	Application->ProcessMessages();
+
+	MainForm->TileMode = tbHorizontal;
+	MainForm->Tile();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButton3Click(TObject *Sender) {
+	if ((AboutBox->Registered ^ AboutBox->UnRegistered) == 0x2347AEDB) {
+		if (FrameInfo.Info.XLeds == 0) {
+			ShowMessage("X无信号！");
+		}
+		else {
+			if (FrameInfo.Type == ST_Normal) {
+				String Cap = "";
+
+				CreatChild(XAXIS);
+
+				for (int i = 0; i < XAXIS; i += 1) {
+					Cap = "X" + String(i);
+
+					MainForm->MDIChildren[i]->Caption = Cap;
+				}
+			}
+
+			Application->ProcessMessages();
+
+			MainForm->TileMode = tbHorizontal;
+			MainForm->Tile();
+		}
+	}
+	else {
+		ToolButton2Click(NULL);
+	}
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButton4Click(TObject *Sender) {
+	if ((AboutBox->Registered ^ AboutBox->UnRegistered) == 0x2347AEDB) {
+		if (FrameInfo.Info.YLeds == 0) {
+			ShowMessage("Y无信号！");
+		}
+		else {
+			if (FrameInfo.Type == ST_Normal) {
+				String Cap = "";
+
+				CreatChild(YAXIS);
+
+				for (int i = 0; i < YAXIS; i += 1) {
+					Cap = "Y" + String(i);
+
+					MainForm->MDIChildren[i]->Caption = Cap;
+				}
+			}
+
+			Application->ProcessMessages();
+
+			MainForm->TileMode = tbHorizontal;
+			MainForm->Tile();
+		}
+	}
+	else {
+		ToolButton2Click(NULL);
+	}
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButton5Click(TObject *Sender) {
+	if ((AboutBox->Registered ^ AboutBox->UnRegistered) == 0x2347AEDB) {
+		if (FrameInfo.Type == ST_Normal) {
+			String Cap = "";
+			int xAxis = 0, yAxis = 0;
+
+			if (FrameInfo.Info.XLeds > 0) {
+				xAxis = XAXIS;
+			}
+
+			if (FrameInfo.Info.YLeds > 0) {
+				yAxis = YAXIS;
+			}
+
+			CreatChild(xAxis + yAxis);
+
+			for (int i = 0; i < xAxis; i += 1) {
+				Cap = "X" + String(i);
+				MainForm->MDIChildren[i]->Caption = Cap;
+			}
+
+			for (int i = 0; i < yAxis; i += 1) {
+				Cap = "Y" + String(i);
+				MainForm->MDIChildren[i + xAxis]->Caption = Cap;
+			}
+		}
+
+		Application->ProcessMessages();
+
+		MainForm->TileMode = tbHorizontal;
+		MainForm->Tile();
+	}
+	else {
+		ToolButton2Click(NULL);
+	}
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButton7Click(TObject *Sender) {
+	AboutBox->ShowModal();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButton16Click(TObject *Sender) {
+	if ((AboutBox->Registered ^ AboutBox->UnRegistered) == 0x2347AEDB) {
+		FormUpdate->ShowModal();
+	}
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButton19Click(TObject *Sender) {
+	if ((AboutBox->Registered ^ AboutBox->UnRegistered) == 0x2347AEDB) {
+		FormConfig->ShowModal();
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TMainForm::Bootloader_Cmd(uint8_t *Data, uint16_t Size) {
+	uint8_t Cmd = Data[0];
+
+	switch (Cmd) {
+	case BOOT_CMD_GET_STA:
+		memcpy(&FormUpdate->BootParam, Data + 2, sizeof(FormUpdate->BootParam));
+		memcpy(&FormConfig->BootParam, Data + 2, sizeof(FormConfig->BootParam));
+
+		FormUpdate->UpdateFlashParam
+			(FormUpdate->BootParam.BootLoaderVersion & 0x7F,
+			FormUpdate->BootParam.FlashSize);
+
+		if (FormUpdate->Active) {
+			FormUpdate->DispSta();
+		}
+
+		if (FormConfig->Active) {
+			FormConfig->DispSta();
+		}
+
+		break;
+
+	case BOOT_CMD_CPUID:
+		FormConfig->DispCPUID(Data + 2, Size);
+		break;
+
+	case BOOT_CMD_READ_SERIAL:
+		FormConfig->ShowShipInfo(Data + 2, Size);
+		break;
+
+	case BOOT_CMD_READ_PARAM:
+		if (FormConfig->UserReq == false)
+			FormConfig->ShowParam(Data + 2, Size);
+		else
+			FormConfig->ShowUserParam(Data + 2, Size);
+		//
+		FormConfig->UserReq = false;
+		break;
+
+	case BOOT_CMD_READ_USER_PARAM:
+		// FormConfig->ShowUserParam(Data + 2, Size);
+		break;
+	}
+}
+
+void __fastcall TMainForm::App_Cmd(uint8_t *Data, uint16_t Size) {
+	App_Cmd_Hid(Data, Size);
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TMainForm::App_Cmd_Hid(uint8_t *Data, uint16_t Size) {
+	uint8_t Cmd = Data[0];
+	uint16_t Add;
+	uint8_t Len = Data[3];
+
+	((uint8_t*)&Add)[0] = Data[1];
+	((uint8_t*)&Add)[1] = Data[2];
+
+	if (Len == 0xFF) { // last Packet
+
+		uint8_t CheckSum = 0;
+
+		for (uint16_t i = 0; i < AppReplyLen; i += 1) {
+			CheckSum += AppReply[i];
+		}
+
+		if (CheckSum == Data[4]) {
+			switch (Cmd) {
+			case APP_CMD_READ_SCAN_PARAM:
+				FormConfig->StatusBar1->SimpleText = "成功读取扫描表参数!";
+				FormConfig->ShowScanParam(AppReply, AppReplyLen);
+				break;
+
+			case APP_CMD_GET_AUTO_GAIN:
+				// FormConfig->StatusBar1->SimpleText = "成功读取自动增益调整结果!";
+				// FormConfig->ShowAutoGainResult(AppReply, AppReplyLen);
+				break;
+			}
+		}
+	}
+	else {
+		if (Add + Len < sizeof(AppReply)) {
+			memcpy(&AppReply[Add], &Data[4], Len);
+		}
+
+		AppReplyLen = Add + Len;
+	}
+
+}
+
+void __fastcall TMainForm::Debug_Data(uint8_t *Data, uint16_t Size) {
+	uint8_t Cmd = Data[0];
+	uint32_t Len = Data[1];
+	uint8_t *FrameData = &FiFoData[FiFoInPtr][0];
+
+	if (fplogframe) {
+		SYSTEMTIME stLocalDebug;
+		GetLocalTime(&stLocalDebug);
+		fprintf(fplogframe, ("Local: %u/%u/%u %u:%u:%u:%u %d\n"),
+			stLocalDebug.wYear, stLocalDebug.wMonth, stLocalDebug.wDay,
+			stLocalDebug.wHour, stLocalDebug.wMinute, stLocalDebug.wSecond,
+			stLocalDebug.wMilliseconds, stLocalDebug.wDayOfWeek);
+
+		fprintf(fplogframe, "Debug Data Command:0x%.2X\n", Cmd);
+		fprintf(fplogframe, "Packet Data Length: %d\n", Len);
+	}
+
+	switch (Cmd & 0x0F) {
+	case 0: // first packet
+		FrameLen = Len;
+		memcpy(FrameData, Data + 2, Len);
+
+		if (fplogframe) {
+
+			fprintf(fplogframe, "Fitst packet\n");
+			fprintf(fplogframe, "Current Received Frame Length: %d\n\n",
+				FrameLen);
+		}
+
+		break;
+
+	case 1: // middle packets
+		if (FrameLen + Len > DEBUG_FRAME_SIZE) { // Currupt Frame
+			FrameLen = 0;
+		}
+		else {
+			memcpy(FrameData + FrameLen, Data + 2, Len);
+			FrameLen += Len;
+		}
+
+		if (fplogframe) {
+			fprintf(fplogframe, "Middle packet\n");
+			fprintf(fplogframe, "Current Received Frame Length: %d\n\n",
+				FrameLen);
+		}
+
+		break;
+
+	case 2: // last packet
+		if (FrameLen + Len <= DEBUG_FRAME_SIZE) {
+			memcpy(FrameData + FrameLen, Data + 2, Len);
+			FiFoDataLen[FiFoInPtr] = FrameLen + Len;
+
+			FiFoInPtr = (FiFoInPtr + 1) & DEBUG_FIFO_MASK; // New Frame Received
+
+			if (FiFoInPtr == FiFoOutPtr) { // Packet lost
+				FiFoOutPtr = (FiFoOutPtr + 1) & DEBUG_FIFO_MASK;
+				FrameLost += 1;
+			}
+		}
+
+		if (fplogframe) {
+			fprintf(fplogframe, "Last packet\n");
+			fprintf(fplogframe, "Total Frame Length: %d\n\n", FrameLen + Len);
+		}
+
+		FrameLen = 0;
+		break;
+
+	case 3: // last packet
+		String Msg;
+		short x, y, w, h;
+
+		Msg.sprintf(L"Sta:%d, ID:%u, ", Data[1], Data[2]);
+
+		((uint8_t*)&x)[0] = Data[3];
+		((uint8_t*)&x)[1] = Data[4];
+		((uint8_t*)&y)[0] = Data[5];
+		((uint8_t*)&y)[1] = Data[6];
+		((uint8_t*)&w)[0] = Data[7];
+		((uint8_t*)&w)[1] = Data[8];
+		((uint8_t*)&h)[0] = Data[9];
+		((uint8_t*)&h)[1] = Data[10];
+
+		Msg.cat_printf(L"x:%d, y:%d, w:%d, h:%d", x, y, w, h);
+
+		StatusBar->SimpleText = Msg;
+
+		break;
+	}
+}
+
+// {
+// if(ReportID == 0x0a)
+// {
+// FiFoData[FiFoInPtr][0] = 0x0a;
+// memcpy(&FiFoData[FiFoInPtr][1], Data, Size);
+// FiFoInPtr = (FiFoInPtr + 1) & DEBUG_FIFO_MASK;  //New Frame Received
+//
+// if(FiFoInPtr == FiFoOutPtr)                      //Packet lost
+// {
+// FiFoOutPtr = (FiFoOutPtr + 1) & DEBUG_FIFO_MASK;
+// FrameLost += 1;
+// }
+// }
+// }
+
+void __fastcall TMainForm::OnDebugData(const void *Data, uint16_t Size) {
+	uint8_t *Ptr = (uint8_t*)Data;
+	uint8_t PacketType = Ptr[0];
+
+	switch (PacketType & 0xF0) {
+	case 0x00: // update command
+		break;
+
+	case 0x10:
+		Bootloader_Cmd(Ptr, Size);
+		break;
+
+	case 0x20:
+		App_Cmd(Ptr, Size);
+		break;
+
+	case 0x30: // debug data
+		Debug_Data(Ptr, Size);
+		break;
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TMainForm::DeviceConnected(void) {
+	uint8_t Mode = REPORT_MODE_POINT;
+
+	FormUpdate->DevConnect();
+	FormConfig->DevConnect();
+
+	HIDSendThread->SubmitCmd(APP_CMD_SW_REPORT, &Mode, 1);
+	HIDSendThread->GetDeviceSta();
+
+	StatusBar->SimpleText = " USB设备已连接！";
+
+	// HIDSendThread->SubmitCmd(BOOT_CMD_SW_MODE, NULL, 0);
+}
+
+void __fastcall TMainForm::DeviceDisConnected(void) {
+	FormUpdate->DevDisConnect();
+	FormConfig->DevDisConnect();
+
+	StatusBar->SimpleText = " USB设备未连接！";
+}
+
+void __fastcall TMainForm::FormClose(TObject *Sender, TCloseAction &Action) {
+	if (!HIDSendThread->Suspended && HIDSendThread->Sta == IDLE) {
+		// sending something?  fix me !!!!!!!!
+	}
+
+	HIDSendThread->Exit = true;
+	HIDSendThread->Resume();
+
+	Application->UnhookMainWindow(AppHookFunc);
+
+	if (fplogframe)
+		fclose(fplogframe);
+
+	fplogframe = NULL;
+
+}
+
+int Make_Partial_Scan_Packet(int16_t xStart, int16_t xEnd, uint8_t xAxis,
+	uint8_t *xAxiId, int16_t yStart, int16_t yEnd, uint8_t yAxis,
+	uint8_t *yAxiId, uint8_t *Packet) {
+	int ptr = 0;
+	uint8_t sum = 0;
+
+	ptr++;
+
+	Packet[ptr++] = ((uint8_t*)&xStart)[0];
+	Packet[ptr++] = ((uint8_t*)&xStart)[1];
+
+	Packet[ptr++] = ((uint8_t*)&xEnd)[0];
+	Packet[ptr++] = ((uint8_t*)&xEnd)[1];
+
+	Packet[ptr++] = ((uint8_t*)&yStart)[0];
+	Packet[ptr++] = ((uint8_t*)&yStart)[1];
+	Packet[ptr++] = ((uint8_t*)&yEnd)[0];
+	Packet[ptr++] = ((uint8_t*)&yEnd)[1];
+	Packet[ptr++] = xAxis;
+	Packet[ptr++] = yAxis;
+
+	for (uint16_t i = 0; i < xAxis + yAxis && i < 48; i += 1)
+	{ // cation no buffer overflow check !!!!!
+		if (i < xAxis) {
+			Packet[ptr++] = xAxiId[i];
+		}
+		else {
+			Packet[ptr++] = yAxiId[i - xAxis];
+		}
+	}
+
+	Packet[0] = ptr + 1;
+
+	for (int i = 0; i < ptr; i += 1) {
+		sum += Packet[i];
+	}
+
+	Packet[ptr++] = sum;
+
+	return ptr;
+}
+
+void __fastcall TMainForm::ChangeAppReportMode(TObject *Sender) {
+	uint8_t Mode[60] = {REPORT_MODE_POINT, 0};
+	TToolButton *tb = (TToolButton*)(Sender);
+
+	tb->Tag = tb->Tag + 1;
+
+	if (tb->Tag & 0x01) {
+		tb->Down = true;
+	}
+	else {
+		tb->Down = false;
+	}
+
+	if (tb->Down == true) {
+		ToolButtonAD->Down = false;
+		ToolButtonAD->Tag = 0;
+		ToolButtonInterval->Down = false;
+		ToolButtonInterval->Tag = 0;
+		ToolButtonPoint->Down = false;
+		ToolButtonPoint->Tag = 0;
+
+		tb->Down = true;
+		tb->Tag = 1;
+
+		if (tb == ToolButtonAD) {
+			// uint8_t AxiIds[] = {0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30};
+			Mode[0] = REPORT_MODE_AD;
+			Mode[1] =
+				DEBUG_SCAN_FLAG_DEBUG | DEBUG_SCAN_FLAG_START |
+				DEBUG_SCAN_FLAG_AUTORESCAN; // full scan + corner scan
+
+			// time_t ltime;
+			// time(&ltime);
+			//
+			// char c[100];
+			//
+			// sprintf(c, "d:\\logdata-%d.txt", ltime);
+			//
+			// if ((fplogframe = fopen(c, "w")) == NULL) {
+			// ShowMessage("log 文件创建失败！");
+			// return;
+			// }
+
+			// Make_Partial_Scan_Packet(0, 1024, 1, AxiIds, 0, 1024, 1, AxiIds, &Mode[2]);
+
+		}
+		else if (tb == ToolButtonInterval) {
+			Mode[0] = REPORT_MODE_INTERVAL;
+		}
+		else {
+			Mode[0] = REPORT_MODE_POINT;
+		}
+
+		ADProc.Initial_Algorithm();
+		MainForm->Frames = 0;
+		MainForm->MTime = 0;
+	}
+	else {
+		Mode[0] = REPORT_MODE_NORMAL;
+
+		// if (fplogframe)
+		// fclose(fplogframe);
+		//
+		// fplogframe = NULL;
+	}
+
+	MainForm->HIDSendThread->SubmitCmd(APP_CMD_SW_REPORT, Mode, sizeof(Mode));
+
+	ADProc.CloseLogFile();
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TMainForm::LogDebugData(FILE *fp, uint8_t *Data, int Len) {
+	static int Packets = 0;
+
+	if (fp) {
+		if (Len == 63) {
+			fprintf(fp, "Packet %d Received:\n", Packets);
+			Packets += 1;
+		}
+
+		for (int i = 0; i < Len; i += 1) {
+			if (i % 10 == 0)
+				fprintf(fp, "%.4d: ", i);
+
+			fprintf(fp, "%.2X ", Data[i] & 0xFF);
+
+			if (i % 10 == 9)
+				fprintf(fp, "\n");
+		}
+
+		fprintf(fp, "\n\n");
+	}
+}
+
+void __fastcall TMainForm::TimerDataTimer(TObject *Sender) {
+	irmtouch_t *Dev = &HIDSendThread->DebugHidDev;
+
+	while (Dev->ReportInPtr != Dev->ReportOutPtr) {
+		LogDebugData(fplogframe, Dev->Reports[Dev->ReportOutPtr], 63);
+
+		if (Dev->Reports[Dev->ReportOutPtr][0]
+			== MainForm->HIDSendThread->ReportInId) {
+
+			OnDebugData(Dev->Reports[Dev->ReportOutPtr] + 1, 62);
+			// skip report id
+		}
+		else {
+			// 0x03 mouse report
+			// 0x0A multitouch report
+		}
+
+		Dev->ReportOutPtr = (Dev->ReportOutPtr + 1) & REPORT_FIFO_MASK;
+
+		while (FiFoInPtr != FiFoOutPtr) {
+			FrameNum += 1;
+
+			if (fplogframe) {
+				fprintf(fplogframe, "-----------------------");
+				fprintf(fplogframe, "Debug frame received:\n");
+				LogDebugData(fplogframe, FiFoData[FiFoOutPtr],
+					FiFoDataLen[FiFoOutPtr]);
+			}
+
+			ADProc.ProcessFrame(FiFoData[FiFoOutPtr], FiFoDataLen[FiFoOutPtr]);
+
+			FiFoOutPtr = (FiFoOutPtr + 1) & DEBUG_FIFO_MASK;
+		}
+	}
+
+	while (FiFoInPtr != FiFoOutPtr) { // from log file!!
+		FrameNum += 1;
+
+		ADProc.ProcessFrame(FiFoData[FiFoOutPtr], FiFoDataLen[FiFoOutPtr]);
+		FiFoOutPtr = (FiFoOutPtr + 1) & DEBUG_FIFO_MASK;
+	}
+
+	rand();
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::SigOrgClick(TObject *Sender) {
+	((TMenuItem*)(Sender))->Checked = !((TMenuItem*)(Sender))->Checked;
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::LogVer1Click(TObject *Sender) {
+	if (LogVer1 == (TMenuItem*)Sender) {
+		LogVer1->Checked = true;
+		LogVer2->Checked = false;
+
+		this->LogVersion = LogFileMagicStringV1;
+	}
+	else {
+		LogVer1->Checked = false;
+		LogVer2->Checked = true;
+
+		this->LogVersion = LogFileMagicStringV2;
+	}
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::FormKeyPress(TObject *Sender, char &Key) {
+	switch (Key) {
+	case 'M':
+	case 'm':
+		ToolButton2Click(NULL);
+		break;
+
+	case 'X':
+	case 'x':
+		ToolButton3Click(NULL);
+		break;
+
+	case 'Y':
+	case 'y':
+		ToolButton4Click(NULL);
+		break;
+
+	case 'A':
+	case 'a':
+		ToolButton5Click(NULL);
+		break;
+
+	case ' ':
+		// ToolButton10Click(NULL);
+
+		break;
+	}
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TMainForm::ToolButton9Click(TObject *Sender) {
+	if ((AboutBox->Registered ^ AboutBox->UnRegistered) == 0x2347AEDB) {
+		if (FrameInfo.Type == ST_Normal) {
+			String Cap = "";
+			int child = 0;
+
+			if (X_CORNER_AXIS / 2 + Y_CORNER_AXIS / 2 <= 12) {
+				CreatChild(X_CORNER_AXIS / 2 + Y_CORNER_AXIS / 2);
+			}
+			else {
+				CreatChild(12);
+			}
+
+			for (int i = 0; i < X_CORNER_AXIS / 2 && i < 6; i += 1) {
+				Cap = "CX" + String(i);
+				MDIChildren[child++]->Caption = Cap;
+			}
+
+			for (int i = 0; i < Y_CORNER_AXIS / 2 && i < 6; i += 1) {
+				Cap = "CY" + String(i);
+				MDIChildren[child++]->Caption = Cap;
+			}
+
+			// if(FrameInfo.Info.YLeds == 0){
+			// CreatChild(12);
+			//
+			// for (int i = 0; i < 12; i += 1) {
+			// Cap = "C" + String(i);
+			// MDIChildren[i]->Caption = Cap;
+			// }
+			// } else {
+			// CreatChild(8);
+			//
+			// for (int i = 0; i < 8; i += 1) {
+			// Cap = "C" + String(i);
+			// MDIChildren[i]->Caption = Cap;
+			// }
+			// }
+		}
+
+		Application->ProcessMessages();
+
+		MainForm->TileMode = tbHorizontal;
+		MainForm->Tile();
+	}
+	else {
+		ToolButton2Click(NULL);
+	}
+}
+// ---------------------------------------------------------------------------
+void __fastcall TMainForm::FormCloseQuery(TObject *Sender, bool &CanClose) {
+	if (DetectTool->mainActive) {
+		CanClose = false;
+		WindowState = wsMinimized;
+	}
+}
+// ---------------------------------------------------------------------------

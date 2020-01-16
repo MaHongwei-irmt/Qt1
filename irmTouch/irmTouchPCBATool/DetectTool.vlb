@@ -1,0 +1,15 @@
+﻿[ctlInfoShow]
+Coordinates=67,10,72,33
+
+[Panel1]
+Coordinates=10,10,47,51
+
+[Timer1]
+Coordinates=66,53,48,33
+
+[]
+Coordinates=157,1,82,33
+
+[RichEdit1]
+Coordinates=76,62,61,33
+

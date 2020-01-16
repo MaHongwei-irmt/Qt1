@@ -1,0 +1,93 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "DetectTool.h"
+
+#include "Main.h"
+#include "About.h"
+#include "childwin.h"
+#include "stdio.h"
+#include "time.h"
+
+#include "ADProcess.h"
+
+#include "Boundary.h"
+
+#include "image.h"
+#include "iostream.h"
+#include "FirmwareUpdate.h"
+#include "config.h"
+#include <fstream.h>
+#include <Dbt.h>
+#include <objbase.h>
+#include <initguid.h>
+
+#include "Devices.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TDetectTool *DetectTool;
+//---------------------------------------------------------------------------
+__fastcall TDetectTool::TDetectTool(TComponent* Owner)
+	: TForm(Owner)
+{
+	mainActive = false;
+}
+
+//---------------------------------------------------------------------------
+void __fastcall TDetectTool::FormClose(TObject *Sender, TCloseAction &Action) {
+
+	if (!MainForm->HIDSendThread->Suspended &&
+		MainForm->HIDSendThread->Sta == IDLE) {
+		// sending something?  fix me !!!!!!!!
+	}
+
+	MainForm->HIDSendThread->Exit = true;
+
+	Application->UnhookMainWindow(MainForm->AppHookFunc);
+
+	if (MainForm->fplogframe)
+		fclose(MainForm->fplogframe);
+
+	MainForm->fplogframe = NULL;
+
+	if (mainActive) {
+		mainActive = false;
+		MainForm->Close();
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TDetectTool::FormDblClick(TObject *Sender) {
+
+	POINT p;
+
+	GetCursorPos(&p);
+
+	if (p.x < 5 && p.y < 5) {
+		MainForm->WindowState = wsNormal;
+	}
+
+}
+
+//---------------------------------------------------------------------------
+
+void __fastcall TDetectTool::Timer1Timer(TObject *Sender)
+{
+	if (DetectTool->ctlInfoShow->Visible) {
+		DetectTool->ctlInfoShow->SetFocus();
+		SendMessage(DetectTool->ctlInfoShow->Handle,   WM_VSCROLL, SB_BOTTOM, 0);// SB_ENDSCROLL       , 0);//SB_LINEDOWN,   0);
+	}
+
+	DetectTool->ctlInfoShow->Lines->Add(" USB设备已连 ");
+
+
+}
+//---------------------------------------------------------------------------
+
+
+
+

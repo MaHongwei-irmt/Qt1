@@ -25,6 +25,41 @@
 #include <initguid.h>
 
 #include "Devices.h"
+#include "math.h"
+
+#include "cstdlib.h"
+ #include <math.h>
+
+
+#include "Config.h"
+#include "stdio.h"
+#include "math.h"
+#include "stdint.h"
+
+#include "main.h"
+#include "firmwareUpdate.h"
+#include "rom.h"
+
+#include "FormAdd.h"
+
+#include <inifiles.hpp>
+
+#include "untBeatCode.h"
+#include "hex.h"
+#include "GenTable.h"
+
+#include "main.h"
+#include "DataBase.h"
+
+#include "Calibrate.h"
+#include "CalibPerformance.h"
+
+#include "ConfigList.h"
+#include "classes.hpp"
+
+#include "BatchSet.h"
+
+#include <math.h>
 
 //---------------------------------------------------------------------------
 #pragma package(smart_init)
@@ -34,9 +69,7 @@ TDetectTool *DetectTool;
 __fastcall TDetectTool::TDetectTool(TComponent* Owner)
 	: TForm(Owner)
 {
-	memset(key, 0, sizeof(key));
 	mainActive = false;
-	keyPress = false;
 }
 
 //---------------------------------------------------------------------------
@@ -63,77 +96,52 @@ void __fastcall TDetectTool::FormClose(TObject *Sender, TCloseAction &Action) {
 }
 
 // ---------------------------------------------------------------------------
-void __fastcall TDetectTool::FormKeyDown(TObject *Sender, WORD &Key,
-	TShiftState Shift)
-
-{
-	keyPress = true;
-
-	if (key[0] == 0) {
-		key[0] = Key;
-	}
-	else if (key[1] == 0) {
-		key[1] = Key;
-	}
-	else if (key[2] == 0) {
-		key[2] = Key;
-	}
-	else if (key[3] == 0) {
-		key[3] = Key;
-	}
-
-	if (key[0] == 37 && key[1] == 38 && key[2] == 39 && key[3] == 40) {
-
-		memset(key, 0, sizeof(key));
-
-		if (!mainActive) {
-			Close();
-		}
-		else {
-
-			try {
-				MainForm->Show();
-			}
-			catch (Exception &exception) {
-
-				 Application->ShowException(&exception);
-			}
-
-		}
-
-	}
-	else if (key[0] != 37) {
-		memset(key, 0, sizeof(key));
-	}
-
-}
-
-// ---------------------------------------------------------------------------
-
-void __fastcall TDetectTool::FormKeyUp(TObject *Sender, WORD &Key,
-	TShiftState Shift)
-
-{
-	keyPress = false;
-}
-
-// ---------------------------------------------------------------------------
 void __fastcall TDetectTool::FormDblClick(TObject *Sender) {
-	if (keyPress) {
-		if (!mainActive) {
-			Close();
-		}
-		else {
 
-			try {
-				MainForm->Show();
-			}
-			catch (Exception &exception) {
+	POINT p;
 
-				 Application->ShowException(&exception);
-			}
+	GetCursorPos(&p);
 
-		}
+	if (p.x > 1000 && p.y > 800 && debug) {
+		MainForm->WindowState = wsNormal;
 	}
+
+}
+
+// ---------------------------------------------------------------------------
+
+void __fastcall TDetectTool::Timer1Timer(TObject *Sender) {
+
+	if (MainForm->WindowState != wsMinimized) {
+
+	}
+	else if (DetectTool->ctlInfoShow->Visible) {
+		SendMessage(DetectTool->ctlInfoShow->Handle, WM_VSCROLL,
+			SB_BOTTOM, 0); // SB_ENDSCROLL       , 0);//SB_LINEDOWN,   0);
+	}
+
+	String Msg;
+	POINT p;
+	GetCursorPos(&p);
+	Msg.sprintf(L"IRMTouch Factory Tools %d-%d  %d", p.x, p.y, debug);
+	DetectTool->ctlInfoShow->Lines->Add(Msg);
+}
+// ---------------------------------------------------------------------------
+
+void __fastcall TDetectTool::FormActivate(TObject *Sender) {
+	if (MainForm->WindowState != wsMinimized) {
+		MainForm->SetFocus();
+	}
+}
+
+// ---------------------------------------------------------------------------
+void __fastcall TDetectTool::FormCreate(TObject *Sender) {
+
+	AnsiString thestring;
+	TIniFile *pIniFile = new TIniFile(ExtractFilePath(Application->ExeName) +
+		"para.ini");
+	thestring = pIniFile->ReadString("debug", "debug", "");
+	debug = atoi(thestring.c_str());
+	delete pIniFile;
 }
 // ---------------------------------------------------------------------------

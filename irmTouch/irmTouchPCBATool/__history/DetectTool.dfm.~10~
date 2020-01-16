@@ -12,6 +12,17 @@ object DetectTool: TDetectTool
   Font.Style = []
   OldCreateOrder = False
   OnClose = FormClose
+  OnDblClick = FormDblClick
+  OnKeyDown = FormKeyDown
+  OnKeyUp = FormKeyUp
   PixelsPerInch = 96
   TextHeight = 13
+  object ctlInfoShow: TEdit
+    Left = 184
+    Top = 72
+    Width = 561
+    Height = 297
+    TabOrder = 0
+    Text = 'ctlInfoShow'
+  end
 end

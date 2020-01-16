@@ -627,18 +627,22 @@ BOOL USBTalk::ReadHid(irmtouch_t *Dev, uint8_t *Data, uint8_t BufLen) {
 	if (bSuccess) {
 		GetLocalTime(&stLocalDebug);
 
-		fprintf(fpDebugMsg, "<-:(%d)", numBytesReturned);
+		if (fpDebugMsg) {
+			fprintf(fpDebugMsg, "<-:(%d)", numBytesReturned);
 
-		fprintf(fpDebugMsg, ("Local: %u/%u/%u %u:%u:%u:%u %d\n"),
-			stLocalDebug.wYear, stLocalDebug.wMonth, stLocalDebug.wDay,
-			stLocalDebug.wHour, stLocalDebug.wMinute, stLocalDebug.wSecond,
-			stLocalDebug.wMilliseconds, stLocalDebug.wDayOfWeek);
+			fprintf(fpDebugMsg, ("Local: %u/%u/%u %u:%u:%u:%u %d\n"),
+				stLocalDebug.wYear, stLocalDebug.wMonth, stLocalDebug.wDay,
+				stLocalDebug.wHour, stLocalDebug.wMinute, stLocalDebug.wSecond,
+				stLocalDebug.wMilliseconds, stLocalDebug.wDayOfWeek);
 
-		for (uint32_t i = 0; i < numBytesReturned; i += 1) {
-			fprintf(fpDebugMsg, "0x%.2X, ", Data[i]);
+			for (uint32_t i = 0; i < numBytesReturned; i += 1) {
+				fprintf(fpDebugMsg, "0x%.2X, ", Data[i]);
+			}
+			fprintf(fpDebugMsg, "\n\n");
+			fflush(fpDebugMsg);
 		}
-		fprintf(fpDebugMsg, "\n\n");
-		fflush(fpDebugMsg);
+
+
 	}
 
 	return bSuccess;
