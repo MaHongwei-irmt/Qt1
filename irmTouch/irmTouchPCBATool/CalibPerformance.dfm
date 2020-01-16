@@ -1,0 +1,29 @@
+object FormCalibPerform: TFormCalibPerform
+  Left = 0
+  Top = 0
+  Caption = #26657#20934#25928#26524
+  ClientHeight = 568
+  ClientWidth = 989
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnResize = FormResize
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Image: TImage
+    Left = 0
+    Top = 0
+    Width = 989
+    Height = 568
+    Align = alClient
+    ExplicitLeft = 552
+    ExplicitTop = 312
+    ExplicitWidth = 105
+    ExplicitHeight = 105
+  end
+end

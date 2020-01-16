@@ -1,0 +1,812 @@
+//--------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "USBTalk.h"
+#include "main.h"
+
+#include <setupapi.h>
+#include <Dbt.h>
+
+#include ".\hid\inc\Hidsdi++.h";
+
+#include "untBeatCode.h"
+
+#include <Initguid.h>
+#include ".\winusb\include\winusb.h"
+
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma link "..\\hid\\lib\\win32\\setupapi.lib"
+#pragma link "..\\hid\\lib\\win32\\hid.lib"
+#pragma link "..\\winusb\\lib\\winusb.lib"
+//#pragma link "setupapi.lib"
+//#pragma link "hid.lib"
+//---------------------------------------------------------------------------
+
+//   Important: Methods and properties of objects in VCL can only be
+//   used in a method called using Synchronize, for example:
+//
+//      Synchronize(&UpdateCaption);
+//
+//   where UpdateCaption could look like:
+//
+//      void __fastcall USBTalk::UpdateCaption()
+//      {
+//        Form1->Caption = "Updated in a thread";
+//      }
+//---------------------------------------------------------------------------
+
+
+//---------------------------------------------------------------------------
+//Function:
+//Param:
+//Return:
+//Note:
+//---------------------------------------------------------------------------
+
+__fastcall USBTalk::USBTalk(bool CreateSuspended)
+	: TThread(CreateSuspended)
+{
+	Len = 0;
+	Sta = IDLE;
+	Exit = false;
+
+	Connected = FALSE;
+	Registered = FALSE;
+	m_usbHandle = NULL;
+	m_devHandle = NULL;
+
+	DebugHidDev.Handle = INVALID_HANDLE_VALUE;
+	DebugHidDev.Event = NULL;
+	DebugHidDev.ReportInPtr = 0;
+	DebugHidDev.ReportOutPtr = 0;
+
+	CmdFifoInPtr = 0;
+	CmdFifoOutPtr = 0;
+
+	FindIRMTouchDevice();
+
+	Resume();
+
+
+	fpDebugMsg = fopen("d:\\irmlog.txt", "w");
+}
+
+void __fastcall USBTalk::SendCmd(void)
+{
+	uint32_t Written;
+	CmdFifo_t *cf;
+
+	if (Connected != TRUE) {
+		return;
+	}
+
+	if(CmdFifoInPtr != CmdFifoOutPtr)
+	{
+		cf = &CmdFifo[CmdFifoOutPtr];
+
+		if (IsHidDevice) {        //interrupt transfer
+			WriteHid(&DebugHidDev, cf->CmdReport, cf->CmdReportLen, Written);
+
+			if (Written == (uint32_t)cf->CmdReportLen) {
+				CmdFifoOutPtr = (CmdFifoOutPtr + 1) & REPORT_FIFO_MASK;
+			} else {
+				cf->CmdTrys += 1;
+
+				if (cf->CmdTrys > 3) {
+					CmdFifoOutPtr = (CmdFifoOutPtr + 1) & REPORT_FIFO_MASK;
+				}
+			}
+		}
+	}
+}
+
+void __fastcall USBTalk::SubmitCmd(uint8_t Cmd, uint8_t *Data, uint8_t Len)
+{
+	CmdFifo_t *cf;
+
+	if(Connected == TRUE) {
+		cf = &CmdFifo[CmdFifoInPtr];
+
+		cf->CmdReportLen = DebugHidDev.Caps.OutputReportByteLength;
+
+		cf->CmdReport[0] = this->ReportOutId;        //out report id
+		cf->CmdReport[1] = Cmd;
+
+		if(Data) {
+			if(Len > cf->CmdReportLen - 2) {
+				Len = cf->CmdReportLen - 2;
+			}
+
+			memcpy(&cf->CmdReport[2], Data, Len);
+			cf->read = false;
+		} else {
+			cf->read = true;
+		}
+
+		cf->CmdTrys = 0;
+		CmdFifoInPtr = (CmdFifoInPtr + 1) & REPORT_FIFO_MASK;
+	}
+}
+
+void __fastcall USBTalk::GetDeviceSta(void)
+{
+	SubmitCmd(BOOT_CMD_GET_STA, NULL, 0);
+	SubmitCmd(BOOT_CMD_READ_SERIAL, NULL, 0);
+
+	if (!(FormUpdate->BootParam.BootLoaderVersion == 0 || FormUpdate->BootParam.BootLoaderVersion == 16 || FormUpdate->BootParam.BootLoaderVersion == 18)) {
+		SubmitCmd(BOOT_CMD_CPUID, NULL, 0);
+	}
+}
+
+void __fastcall USBTalk::DeviceRun(void)
+{
+	SubmitCmd(BOOT_CMD_SW_MODE, NULL, 0);
+	GetDeviceSta();
+	SubmitCmd(BOOT_CMD_SW_MODE, NULL, 0);
+	GetDeviceSta();
+}
+
+//---------------------------------------------------------------------------
+//Function:
+//Param:
+//Return:
+//Note:
+//---------------------------------------------------------------------------
+void __fastcall USBTalk::Execute()
+{
+	uint8_t Report[64];
+	bool NoDelay;
+	int reclen;
+
+	//---- Place thread code here ----
+	while (!Exit) {
+		NoDelay = false;
+
+		SendCmd();
+
+		while (Cancle == false && Len && Len != SendLen) {
+			Sta = BUSY;
+			FormConfig->TimerDownTab->Enabled = true;
+
+			switch (Cmd & 0xF0) {
+			case 0x00:
+				SendUpdateFrame();
+				break;
+			}
+
+			NoDelay = true;
+		}
+
+		Sta = IDLE;
+
+		if(Connected && (ReadHid(&DebugHidDev, Report, 64) == TRUE)) {
+			memcpy(&DebugHidDev.Reports[DebugHidDev.ReportInPtr][0], Report, 64);
+			DebugHidDev.ReportInPtr = (DebugHidDev.ReportInPtr + 1) & REPORT_FIFO_MASK;
+			NoDelay = true;
+		}
+
+		if (!NoDelay) {
+			Sleep(1);
+		}
+
+		//Suspend();
+	}
+
+	/* end HID device plug/unplug notifications */
+	UnregisterDeviceNotification(HidDevNotify);
+
+	//if (DebugHidDev.Handle != INVALID_HANDLE_VALUE)
+	{
+		CancelIo(DebugHidDev.Handle);
+		CloseHandle(DebugHidDev.Handle);
+	//	DebugHidDev.Handle = INVALID_HANDLE_VALUE;
+	}
+}
+
+//---------------------------------------------------------------------------
+//Function:
+//Param:
+//Return:
+//Note:
+//---------------------------------------------------------------------------
+bool __fastcall USBTalk::SendUpdateFrame(void)
+{
+	uint8_t *Report;
+	uint8_t Report_[65];
+	uint32_t Written;
+	uint32_t ReportLen = ReportPacketSize;
+	uint16_t CurSendLen;
+	uint8_t Temp[64];
+	uint8_t Temp2[64];
+	static uint8_t errors = 0;
+
+	Report =  &Report_[1];
+
+	if(!Connected)
+	{
+		return false;
+	}
+
+    memset(Report_, 0x55, sizeof(Report_));
+	if(Len != SendLen && Cancle == false)
+	{
+		Report[0] = this->ReportOutId;
+		Report[1] = Head->MemType;
+		Report[2] = Head->Mode;
+		Report[3] = ((uint8_t *)&Head->StartAdd)[0];
+		Report[4] = ((uint8_t *)&Head->StartAdd)[1];
+		Report[5] = ((uint8_t *)&Head->StartAdd)[2];
+		Report[6] = ((uint8_t *)&Head->StartAdd)[3];
+
+		if (Len - SendLen > ReportLen - sizeof(PROGRAM_HEAD) - 1)
+		{
+			CurSendLen = ReportLen - sizeof(PROGRAM_HEAD) - 1;
+		}
+		else
+		{
+			CurSendLen = Len - SendLen;
+		}
+
+		if (CurSendLen > (uint16_t)(1024 - (Head->StartAdd & 0x3FF)))    	//Across 1024Bytes Boundary
+		{
+			CurSendLen = (uint16_t)(1024 - (Head->StartAdd & 0x3FF));
+		}
+
+		if ((Head->Mode & MODE_ENCODE) != 0)
+		{
+			uint8_t Key[16];
+
+			CurSendLen &= 0xF8;  //8Bytes align
+
+			if (CurSendLen > 40)	CurSendLen = 40;
+
+			//memset(Temp, 0, sizeof(Temp));
+
+			for (int i = 0; i < sizeof(Temp) / 2; i += 1)
+			{
+				((short *)Temp)[i] = rand();
+			}
+
+			for (int i = 0, j = 0; i < sizeof(Temp); i += 1)
+			{
+				if ((i & 0x07) == 0x07)	continue;
+
+				Temp[i] = *(this->DataBuf + SendLen + j) ^ 0xA5;
+
+				j += 1;
+
+				if (j >= CurSendLen)
+					break;
+			}
+
+			//3DES ENCRYPT
+			Des_Go(&Report[8], Temp, 48, this->Key, sizeof(this->Key), ENCRYPT);
+			Des_Go(Temp2, &Report[8], 48, this->Key, sizeof(this->Key), DECRYPT);
+
+			Report[7] = CurSendLen;
+		}
+		else    //
+		{
+			CurSendLen &= 0xFC;  //4Bytes align
+
+			Report[7] = CurSendLen;
+			memcpy(&Report[8], this->DataBuf + SendLen, CurSendLen);
+		}
+
+		if(FormUpdate->IsAPUFirmware && Head->MemType == TYPE_APP) {
+			Report = &Report_[0];
+			Report[0] = Report[1];
+            Report[1] = 0x27;       //forward to APU
+		}
+
+		if (WriteHid(&DebugHidDev, Report, ReportLen, Written) == TRUE) {
+			if (Written == ReportLen) {
+				SendLen += CurSendLen;
+				Head->StartAdd += CurSendLen;
+			}
+		}
+	}
+
+	return true;
+}
+
+//---------------------------------------------------------------------------
+//Function:
+//Param:
+//Return:
+//Note:
+//---------------------------------------------------------------------------
+bool __fastcall USBTalk::SubmitTask(uint8_t Cmd, uint32_t Len, uint8_t *Data, PROGRAM_HEAD *Head)
+{
+	if (Sta != IDLE)
+	{
+		return false;
+	}
+
+	this->Len = Len;
+	this->SendLen = 0;
+	this->DataBuf = Data;
+	this->Cmd = Cmd;
+	this->Head = Head;
+
+	this->Cancle = false;
+
+	Resume();
+
+	return true;
+}
+
+//---------------------------------------------------------------------------
+//Function:
+//Param:
+//Return:
+//Note:
+//---------------------------------------------------------------------------
+BOOL USBTalk::EnumerateHidDevice(USHORT vid, USHORT pid)
+{
+	HANDLE HidDevHandle;
+	static GUID HidGuid;						/* HID Globally Unique ID: windows supplies us with this value */
+	HDEVINFO HidDevInfo;						/* handle to structure containing all attached HID Device information */
+	SP_DEVICE_INTERFACE_DATA devInfoData;		/* Information structure for HID devices */
+	BOOLEAN Result;								/* result of getting next device information structure */
+	DWORD Index;								/* index of HidDevInfo array entry */
+	DWORD DataSize;								/* size of the DeviceInterfaceDetail structure */
+	PSP_DEVICE_INTERFACE_DETAIL_DATA detailData;/* device info data */
+	DWORD RequiredSize;							/* size of device info data structure */
+												// BOOLEAN DIDResult;						/* get device info data result */
+	HIDD_ATTRIBUTES HIDAttrib;					/* HID device attributes */
+	static int times = 0;
+
+	EnumerateMsg = String(times++) + ": ";
+
+	/* 1) Get the HID Globally Unique ID from the OS */
+	HidD_GetHidGuid(&HidGuid);
+
+	EnumerateMsg.cat_printf(L"%.8X-%.4X-%.4X-", HidGuid.Data1, HidGuid.Data2, HidGuid.Data3);
+
+	for (int i = 0; i < 4; i += 1)
+	{
+		EnumerateMsg.cat_printf(L"%.2X", HidGuid.Data4[i]);
+	}
+
+	/* 2) Get an array of structures containing information about
+	all attached and enumerated HIDs */
+	HidDevInfo = SetupDiGetClassDevs(&HidGuid,
+		NULL,
+		NULL,
+		DIGCF_PRESENT | DIGCF_INTERFACEDEVICE);
+
+	/* 3) Step through the attached device list 1 by 1 and examine
+	each of the attached devices.  When there are no more entries in
+	the array of structures, the function will return FALSE. */
+
+	devInfoData.cbSize = sizeof(devInfoData);	/* set to the size of the structure
+												that will contain the device info data */
+
+	for (int Index = 0; Index < 128; Index += 1)
+	{
+		/* Get information about the HID device with the 'Index' array entry */
+		Result = SetupDiEnumDeviceInterfaces(HidDevInfo,
+			0,
+			&HidGuid,
+			Index,
+			&devInfoData);
+
+		/* If we run into this condition, then there are no more entries
+		to examine, we might as well return FALSE at point */
+		if (Result == FALSE)
+		{
+			/* free HID device info list resources */
+			SetupDiDestroyDeviceInfoList(HidDevInfo);
+			return FALSE;
+		}
+
+		/* 3) Get the size of the DEVICE_INTERFACE_DETAIL_DATA
+		structure.  The first call will return an error condition,
+		but we'll get the size of the strucure */
+		SetupDiGetDeviceInterfaceDetail(HidDevInfo,
+			&devInfoData,
+			NULL,
+			0,
+			&DataSize,
+			NULL);
+
+		/* allocate memory for the HidDevInfo structure */
+		detailData = (PSP_DEVICE_INTERFACE_DETAIL_DATA)malloc(DataSize);
+
+		/* set the size parameter of the structure */
+		detailData->cbSize = sizeof(SP_DEVICE_INTERFACE_DETAIL_DATA);
+
+
+		/* 4) Now call the function with the correct size parameter.  This
+		function will return data from one of the array members that
+		Step #2 pointed to.  This way we can start to identify the
+		attributes of particular HID devices.  */
+		SetupDiGetDeviceInterfaceDetail(HidDevInfo,
+			&devInfoData,
+			detailData,
+			DataSize,
+			&RequiredSize,
+			NULL);
+
+
+		/* 5) Open a file handle to the device.  Make sure the
+		attibutes specify overlapped transactions or the IN
+		transaction may block the input thread. */
+		HidDevHandle = CreateFile(detailData->DevicePath,
+			GENERIC_READ | GENERIC_WRITE,
+			FILE_SHARE_READ | FILE_SHARE_WRITE,
+			(LPSECURITY_ATTRIBUTES)NULL,
+			OPEN_EXISTING,
+			FILE_FLAG_OVERLAPPED,
+			NULL);
+
+		free(detailData);
+
+		/* 6) Get the Device VID & PID to see if it's the device we want */
+		if (HidDevHandle != INVALID_HANDLE_VALUE)
+		{
+			HIDAttrib.Size = sizeof(HIDAttrib);
+			HidD_GetAttributes(HidDevHandle, &HIDAttrib);
+
+			EnumerateMsg.cat_printf(L"%.4x:%.4x, ", HIDAttrib.VendorID, HIDAttrib.ProductID);
+			if( HIDAttrib.VendorID == vid &&
+				HIDAttrib.ProductID == pid )
+			{
+				PHIDP_PREPARSED_DATA	HidParsedData;
+				HIDP_CAPS Capabilities;
+				//HIDD_CONFIGURATION Config;
+
+				HidD_GetPreparsedData(HidDevHandle, &HidParsedData);
+
+				/* extract the capabilities info */
+				HidP_GetCaps( HidParsedData ,&Capabilities);
+
+				/* Free the memory allocated when getting the preparsed data */
+				HidD_FreePreparsedData(HidParsedData);
+
+//				HidD_GetConfiguration(HidDevHandle, &Config, sizeof(HIDD_CONFIGURATION));
+//
+//				if(Config.RingBufferSize < 16*1024)
+//				{
+//					Config.RingBufferSize = 16*1024;
+//					HidD_SetConfiguration(HidDevHandle, &Config, sizeof(HIDD_CONFIGURATION));
+//				}
+//
+//				Config.RingBufferSize = 0;
+//
+//				HidD_GetConfiguration(HidDevHandle, &Config, sizeof(HIDD_CONFIGURATION));
+
+//				if(Capabilities.InputReportByteLength == 62)
+//				{
+//					DigitizerHidDev.Handle = HidDevHandle;
+//					DigitizerHidDev.Caps = Capabilities;
+//					//DigitizerHidDev.Config = Config;
+//				}
+//				if(Capabilities.InputReportByteLength == 62-4*6)
+//				{
+//					DigitizerHidDev.Handle = HidDevHandle;
+//					DigitizerHidDev.Caps = Capabilities;
+//					//DigitizerHidDev.Config = Config;
+//				}
+//				else
+				if(Capabilities.OutputReportByteLength == 63)
+				{
+					DebugHidDev.Handle = HidDevHandle;
+					DebugHidDev.Caps = Capabilities;
+				}
+
+				if( //(DigitizerHidDev.Handle != INVALID_HANDLE_VALUE) &&
+					(DebugHidDev.Handle != INVALID_HANDLE_VALUE))
+				{
+					/* free HID device info list resources */
+					SetupDiDestroyDeviceInfoList(HidDevInfo);
+
+					return TRUE;	/* found HID device */
+				}
+
+				continue;
+			}
+
+			/* 7) Close the Device Handle because we didn't find the device
+			with the correct VID and PID */
+			CloseHandle(HidDevHandle);
+		}
+		else
+		{
+			EnumerateMsg.cat_printf(L"-%d", GetLastError());
+		}
+	}
+
+	/* free HID device info list resources */
+	SetupDiDestroyDeviceInfoList(HidDevInfo);
+
+	return FALSE;
+
+}
+
+//---------------------------------------------------------------------------
+//Function:
+//Param:
+//Return:
+//Note:
+//---------------------------------------------------------------------------
+BOOL USBTalk::RegisterHidDeviceNotify(void)
+{
+	GUID HidGuid;										/* temporarily stores Windows HID Class GUID */
+	DEV_BROADCAST_DEVICEINTERFACE NotificationFilter;	/* un/plug notification filter */
+
+														/* Set up device notification (i.e. plug or unplug of HID Devices) */
+
+														/* 1) get the HID GUID */
+	HidD_GetHidGuid(&HidGuid);
+
+	/* 2) clear the notification filter */
+	ZeroMemory(&NotificationFilter, sizeof(NotificationFilter));
+
+	/* 3) assign the previously cleared structure with the correct data
+	so that the application is notified of HID device un/plug events */
+	NotificationFilter.dbcc_size = sizeof(DEV_BROADCAST_DEVICEINTERFACE);
+	NotificationFilter.dbcc_devicetype = DBT_DEVTYP_DEVICEINTERFACE;
+	NotificationFilter.dbcc_classguid = HidGuid;
+
+	/* 4) register device notifications for this application */
+	HidDevNotify = RegisterDeviceNotification(Application->Handle,
+		&NotificationFilter,
+		DEVICE_NOTIFY_WINDOW_HANDLE);
+
+	/* 5) notify the calling procedure if the HID device will not be recognized */
+
+	EnumerateMsg = "";
+
+	if (!HidDevNotify) {
+		return FALSE;
+	}
+
+	//this->EnumerateMsg += " R, ";
+	return TRUE;
+}
+
+//---------------------------------------------------------------------------
+//Function:
+//Param:
+//Return:
+//Note:
+//---------------------------------------------------------------------------
+BOOL USBTalk::ReadHid(irmtouch_t *Dev, uint8_t *Data, uint8_t BufLen)
+{
+	unsigned long	numBytesReturned;
+	unsigned char	inbuffer[128];		/* input buffer*/
+	BOOL			bResult;
+	BOOL			bSuccess = FALSE;
+
+	 if (!Connected)
+		return	FALSE;
+
+	/* get a temperature report from the HID device.  Note that
+	this call to ReadFile only kicks off the reading of the report.
+	If the input buffer is full then this routine will cause an
+	event to happen and data will be presented immediately.  If not
+	the event will occur when the HID decide provides a HID report
+	on the IN endpoint. */
+	bResult = ReadFile(Dev->Handle,							/* handle to device */
+		&inbuffer[0],						/* IN report buffer to fill */
+		Dev->Caps.InputReportByteLength,	/* input buffer size */
+		&numBytesReturned,					/* returned buffer size */
+		(LPOVERLAPPED)&Dev->Overlapped);	/* long pointer to an OVERLAPPED structure */
+
+											/* wait for IN report event.  Note that if a report does not occur
+											in the time set by the 'dwMilliseconds' parameter, then this function
+											returns with a FALSE result and the HID device did not provide a
+											report.  If the function returns TRUE, then a report did occur and the
+											data is ready to be read from the buffer specified in the ReadFile
+											function call.*/
+
+	if (bResult) {
+		if (numBytesReturned <= (unsigned long)BufLen) {
+			memcpy(Data, inbuffer, numBytesReturned);
+		} else {
+			memcpy(Data, inbuffer, BufLen);
+		}
+
+		bSuccess = TRUE;
+	} else if (GetLastError() == ERROR_IO_PENDING) {
+		bResult = WaitForSingleObject(Dev->Event, 10);
+		//ResetEvent(Dev->Event);
+
+		if (bResult == WAIT_TIMEOUT || bResult == WAIT_ABANDONED) {
+			CancelIo(Dev->Handle);
+		} else if(bResult == WAIT_OBJECT_0) {
+			GetOverlappedResult(Dev->Handle, &Dev->Overlapped, &numBytesReturned, TRUE);
+
+			if (numBytesReturned <= (unsigned long)BufLen) {
+				memcpy(Data, inbuffer, numBytesReturned);
+			} else {
+				memcpy(Data, inbuffer, BufLen);
+			}
+
+			bSuccess = TRUE;
+		}
+	}
+
+	if (bSuccess) {
+		GetLocalTime(&stLocalDebug);
+
+		fprintf(fpDebugMsg, "<-:(%d)", numBytesReturned);
+
+		fprintf(fpDebugMsg, ("Local: %u/%u/%u %u:%u:%u:%u %d\n"),
+			stLocalDebug.wYear, stLocalDebug.wMonth, stLocalDebug.wDay,
+			stLocalDebug.wHour, stLocalDebug.wMinute, stLocalDebug.wSecond,
+			stLocalDebug.wMilliseconds, stLocalDebug.wDayOfWeek);
+
+		for (uint32_t i = 0; i < numBytesReturned; i += 1) {
+			fprintf(fpDebugMsg, "0x%.2X, ", Data[i]);
+		}
+		fprintf(fpDebugMsg, "\n\n");
+		fflush(fpDebugMsg);
+	}
+
+	return	bSuccess;
+}
+
+//---------------------------------------------------------------------------
+//Function:
+//Param:
+//Return:
+//Note:
+//---------------------------------------------------------------------------
+BOOL USBTalk::WriteHid(irmtouch_t *Dev, uint8_t *Data, uint8_t Len, uint32_t &Written)
+{
+	BOOL	 bResult;
+
+	if (!Connected)
+		return FALSE;
+
+	bResult = WriteFile(Dev->Handle,
+		Data,
+		Dev->Caps.OutputReportByteLength,
+		(unsigned long *)&Written,
+		(LPOVERLAPPED)&Dev->Overlapped);
+
+	if (bResult) {
+
+	} else if (GetLastError() == ERROR_IO_PENDING) {
+		bResult = WaitForSingleObject(Dev->Event, 100);
+
+		/* if the transaction timed out, then we have to manually cancel
+		the request */
+		if (bResult == WAIT_TIMEOUT || bResult == WAIT_ABANDONED) {
+			CancelIo(Dev->Handle);
+			return FALSE;
+		} else {
+			GetOverlappedResult(Dev->Handle, &Dev->Overlapped, (unsigned long *)&Written, TRUE);
+		}
+	}
+
+	fprintf(fpDebugMsg, "->:(%d)", Dev->Caps.OutputReportByteLength);
+
+	GetLocalTime(&stLocalDebug);
+	fprintf(fpDebugMsg, ("Local: %u/%u/%u %u:%u:%u:%u %d\n"),
+		stLocalDebug.wYear, stLocalDebug.wMonth, stLocalDebug.wDay,
+		stLocalDebug.wHour, stLocalDebug.wMinute, stLocalDebug.wSecond,
+		stLocalDebug.wMilliseconds, stLocalDebug.wDayOfWeek);
+
+	for (uint32_t i = 0; i < Dev->Caps.OutputReportByteLength; i += 1) {
+		fprintf(fpDebugMsg, "0x%.2X, ", Data[i]);
+	}
+	fprintf(fpDebugMsg, "\n\n");
+	fflush(fpDebugMsg);
+
+	return TRUE;
+}
+
+//---------------------------------------------------------------------------
+//Function:
+//Param:
+//Return:
+//Note:
+//---------------------------------------------------------------------------
+USHORT PIDVID[][5] = {
+	{0x23c9, 0x5666, 1, 2, 63},
+	{0x23c9, 0x5667, 1, 2, 63},
+	{0x23c9, 0x5668, 1, 2, 63},
+
+	{0x000B, 0x3C00, 1, 2, 63},
+	{0x0717, 0x3C00, 1, 2, 63},
+	{0x0368, 0x3C00, 1, 2, 63},
+
+	{0x227d, 0x0709, 1, 2, 63},
+	{0x23c9, 0x5800, 1, 2, 63},
+	{0x0B8C, 0x3200, 7, 7, 63},
+	{0x6100, 0x285A, 1, 2, 63},
+	{0x285A, 0x6100, 1, 2, 63},
+	{0x04B4, 0xC001, 1, 2, 63},
+	{0, 0, 0, 0, 0},
+};
+
+BOOL USBTalk::FindHid(void)
+{
+	uint8_t ids = 0;
+
+	do{
+		usVid = PIDVID[ids][0];
+		usPid = PIDVID[ids][1];
+
+		if(usVid == 0)	return FALSE;
+
+		BOOL bFindHid = EnumerateHidDevice(usVid, usPid);
+
+		if(bFindHid) {
+			ReadyForWR(&DebugHidDev);
+			//ReadyForWR(&DigitizerHidDev);
+			//ReadyForWR(&MouseHidDev);
+			ReportInId = PIDVID[ids][2];
+			ReportOutId = PIDVID[ids][3];
+			ReportPacketSize = PIDVID[ids][4];
+
+			Connected = TRUE;
+			return TRUE;
+		} else {
+			CloseHandle(DebugHidDev.Handle);	//未找到指定设备，故设备指针没有用，可以释放
+			//CloseHandle(DigitizerHidDev.Handle);
+			//CloseHandle(MouseHidDev.Handle);
+
+			DebugHidDev.Handle = INVALID_HANDLE_VALUE;
+			//DigitizerHidDev.Handle = INVALID_HANDLE_VALUE;
+			//MouseHidDev.Handle = INVALID_HANDLE_VALUE;
+
+			Connected = FALSE;
+		}
+
+		ids += 1;
+	}while(1);
+}
+
+//---------------------------------------------------------------------------
+//Function:
+//Param:
+//Return:
+//Note:
+//---------------------------------------------------------------------------
+BOOL USBTalk::FindIRMTouchDevice(void)
+{
+	BOOL ret = FALSE;
+
+	if(!Registered)
+	{
+		RegisterHidDeviceNotify();
+		Registered = TRUE;
+	}
+
+
+	if(FindHid() == TRUE) {
+		ret = TRUE;
+		IsHidDevice = true;
+	}
+
+	return ret;
+}
+
+//---------------------------------------------------------------------------
+//Function:
+//Param:
+//Return:
+//Note:
+//---------------------------------------------------------------------------
+void USBTalk::ReadyForWR(irmtouch_t *Dev)
+{
+	if(Dev->Handle != INVALID_HANDLE_VALUE)
+	{
+		/* Create a new event for report capture */
+		Dev->Event = CreateEvent(NULL, TRUE, FALSE, NULL);
+
+		/* fill the HidOverlapped structure so that Windows knows which
+		event to cause when the device sends an IN report */
+		Dev->Overlapped.hEvent = Dev->Event;
+		Dev->Overlapped.Offset = 0;
+		Dev->Overlapped.OffsetHigh = 0;
+	}
+}
